@@ -9,4 +9,4 @@ module.exports = function() {
 
     return weakset.has(obj1);
   
-}
+};

@@ -15,4 +15,4 @@ module.exports = function() {
     view.setFloat64(0, 0.1);       passed &= view.getFloat64(0)=== 0.1;
     return passed;
   
-}
+};

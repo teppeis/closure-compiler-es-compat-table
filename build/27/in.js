@@ -8,4 +8,4 @@ module.exports = function() {
 
     return weakmap.has(key1) && weakmap.get(key1) === 123;
   
-}
+};

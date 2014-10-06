@@ -7,4 +7,4 @@ module.exports = function() {
       return foo === 1 && typeof bar === "undefined";
     }
   
-}
+};

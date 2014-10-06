@@ -5,4 +5,4 @@ module.exports = function() {
     for (var item of arr)
       return item === 5;
   
-}
+};

@@ -20,11 +20,11 @@ function generateTestJsSrc(fn) {
     if (!match) {
       if (/\beval\('.*'\)/.test(expr)) {
         expr = expr.replace(/\beval\('(.*)'\)/, '$1');
-        return 'module.exports = function() {\n' + expr + '\n}';
+        return 'module.exports = function() {\n' + expr + '\n};';
       }
-      return 'module.exports = function() {return false;}';
+      return 'module.exports = function() {return false;};';
     } else {
-      return 'module.exports = function() {\n' + match[1] + '\n}';
+      return 'module.exports = function() {\n' + match[1] + '\n};';
     }
   } else {
     // TODO: it's an array of objects like the following:
@@ -37,6 +37,6 @@ function generateTestJsSrc(fn) {
     //     ' data-source="' + expr.replace(/"/g,'&quot;') + '">' +
     //     expr + '</script>\n';
     // },'');
-    return 'module.exports = function() {return false;}';
+    return 'module.exports = function() {return false;};';
   }
 }

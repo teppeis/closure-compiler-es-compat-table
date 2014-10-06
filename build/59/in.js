@@ -16,4 +16,4 @@ module.exports = function() {
     for (c of b) {}
     return c === 0;
   
-}
+};

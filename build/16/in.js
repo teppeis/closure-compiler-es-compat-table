@@ -15,4 +15,4 @@ module.exports = function() {
     passed    &= item.value === undefined && item.done === true;
     return passed;
   
-}
+};

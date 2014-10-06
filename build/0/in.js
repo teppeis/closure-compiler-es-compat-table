@@ -9,4 +9,4 @@ module.exports = function() {
       return f(n - 1);
     }(1e6)) === "foo";
   
-}
+};

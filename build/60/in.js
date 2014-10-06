@@ -12,4 +12,4 @@ module.exports = function() {
     c == 0;
     return passed === 3;
   
-}
+};

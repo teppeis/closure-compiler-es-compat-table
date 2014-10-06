@@ -5,4 +5,4 @@ module.exports = function() {
     return Symbol.for('foo') === symbol &&
            Symbol.keyFor(symbol) === 'foo';
   
-}
+};

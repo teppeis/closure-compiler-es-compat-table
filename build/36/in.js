@@ -6,4 +6,4 @@ module.exports = function() {
     return a === 3 && b instanceof Array && (b + "") === "4,5" &&
            c === 6 && d instanceof Array && d.length === 0;
   
-}
+};

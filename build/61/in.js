@@ -5,4 +5,4 @@ module.exports = function() {
     a[Symbol.toStringTag] = "foo";
     return (a + "") === "[object foo]";
   
-}
+};

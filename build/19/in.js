@@ -5,4 +5,4 @@ module.exports = function() {
     return `foo bar
 ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
   
-}
+};

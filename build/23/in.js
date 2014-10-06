@@ -27,4 +27,4 @@ module.exports = function() {
     passed &= view[0] === 0.1;
     return passed;
   
-}
+};

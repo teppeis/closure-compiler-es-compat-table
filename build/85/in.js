@@ -1,2 +1,2 @@
 // Math.imul
-module.exports = function() {return false;}
+module.exports = function() {return false;};

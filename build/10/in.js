@@ -28,4 +28,4 @@ module.exports = function() {
     obj.foo("YZ");
     return passed;
   
-}
+};

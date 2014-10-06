@@ -9,4 +9,4 @@ module.exports = function() {
 
     return set.has(123) && set.size === 1;
   
-}
+};

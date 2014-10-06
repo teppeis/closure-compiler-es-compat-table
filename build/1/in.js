@@ -8,4 +8,4 @@ function () {
     }
     return true;
   }
-}
+};

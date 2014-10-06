@@ -12,4 +12,4 @@ module.exports = function() {
            d === 8 && e === 9 && f === 10 &&
            g === undefined && h === undefined && i === undefined;
   
-}
+};

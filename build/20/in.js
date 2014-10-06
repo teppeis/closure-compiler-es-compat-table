@@ -14,4 +14,4 @@ module.exports = function() {
     }
     return fn `foo${123}bar\n${456}` && called;
   
-}
+};

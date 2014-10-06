@@ -8,4 +8,4 @@ module.exports = function() {
     }
     return C.d && new C().a && new C().b && new C() instanceof Array;
   
-}
+};

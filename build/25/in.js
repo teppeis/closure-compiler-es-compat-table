@@ -9,4 +9,4 @@ module.exports = function() {
     return map.has(key) && map.get(key) === 123 &&
            map.size === 1;
   
-}
+};

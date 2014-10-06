@@ -7,4 +7,4 @@ module.exports = function() {
     if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
     return passed;
   
-}
+};

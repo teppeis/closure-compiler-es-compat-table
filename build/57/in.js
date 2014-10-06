@@ -6,4 +6,4 @@ module.exports = function() {
     a = a.concat(b);
     return a[0] === b;
   
-}
+};
