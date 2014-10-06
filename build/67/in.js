@@ -1,2 +1,4 @@
 // Array.from
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Array.from === 'function';
+  }

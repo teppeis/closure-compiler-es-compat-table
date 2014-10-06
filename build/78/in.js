@@ -1,2 +1,4 @@
 // Number.isInteger
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Number.isInteger === 'function';
+  }

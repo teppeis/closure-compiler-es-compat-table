@@ -6,13 +6,13 @@ var mkdirp = require('mkdirp');
 var data = require('./compat-table/data-es6');
 
 data.tests.forEach(function(test, i) {
-  var src = generateTestJsSrc(test.exec);
+  var src = generateTestJsSrc(test.exec, test.name);
   var dir = path.join(__dirname, 'build', String(i));
   mkdirp.sync(dir);
   fs.writeFileSync(path.join(dir, 'in.js'), '// ' + test.name + '\n' + src);
 });
 
-function generateTestJsSrc(fn) {
+function generateTestJsSrc(fn, name) {
   var expr, match;
   if (typeof fn === 'function') {
     expr = fn.toString();
@@ -20,11 +20,15 @@ function generateTestJsSrc(fn) {
 
     if (!match) {
       if (/\beval\('.*'\)/.test(expr)) {
+        // eval
         expr = expr.replace(/\beval\('(.*)'\)/, '$1');
         return 'module.exports = ' + expr;
+      } else {
+        // normal
+        return 'module.exports = ' + expr;
       }
-      return 'module.exports = function() {return false;};';
     } else {
+      // in comment
       return 'module.exports = function() {\n' + match[1] + '\n};';
     }
   } else if (fn.length > 0) {
@@ -41,5 +45,5 @@ function generateTestJsSrc(fn) {
     }
   }
 
-  return 'module.exports = function() {return false;};';
+  console.error('Unsupported', name);
 }

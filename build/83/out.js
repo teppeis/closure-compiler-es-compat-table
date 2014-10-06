@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return!1;
+  return "number" === typeof Number.MAX_SAFE_INTEGER;
 };
 

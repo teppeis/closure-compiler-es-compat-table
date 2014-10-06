@@ -37,6 +37,16 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
+  if ("function" === typeof Symbol && "symbol" === typeof Symbol.create) {
+    var a = 2, b = function() {
+    };
+    Object.defineProperty(b, Symbol.create, {value:function() {
+      a = 4;
+      return{};
+    }});
+    new b;
+    return 4 === a;
+  }
   return!1;
 };
 

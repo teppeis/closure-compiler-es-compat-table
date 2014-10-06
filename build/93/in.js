@@ -1,2 +1,4 @@
 // Math.tanh
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Math.tanh === 'function';
+  }

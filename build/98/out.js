@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return!1;
+  return "function" === typeof Math.trunc;
 };
 

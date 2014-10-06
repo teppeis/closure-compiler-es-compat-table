@@ -1,2 +1,4 @@
 // Math.fround
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Math.fround === 'function';
+  }

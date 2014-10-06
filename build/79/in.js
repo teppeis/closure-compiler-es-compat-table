@@ -1,2 +1,4 @@
 // Number.isSafeInteger
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Number.isSafeInteger === 'function';
+  }

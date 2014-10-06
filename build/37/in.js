@@ -1,2 +1,5 @@
 // Promise
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Promise !== 'undefined' &&
+           typeof Promise.all === 'function';
+  }

@@ -37,6 +37,15 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return!1;
+  var a, b = "define delete entries get global has import keys load module newModule realm set values normalize locate fetch translate instantiate".split(" ");
+  if ("object" !== typeof Reflect || "function" !== typeof Reflect.Loader || "object" !== typeof Reflect.Loader.prototype) {
+    return!1;
+  }
+  for (a = 0;a < b.length;a++) {
+    if (!(b[a] in Reflect.Loader.prototype)) {
+      return!1;
+    }
+  }
+  return!0;
 };
 

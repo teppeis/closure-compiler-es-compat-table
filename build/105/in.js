@@ -1,2 +1,4 @@
 // RegExp.prototype.compile
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof RegExp.prototype.compile === 'function';
+  }

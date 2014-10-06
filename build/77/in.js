@@ -1,2 +1,4 @@
 // Number.isFinite
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Number.isFinite === 'function';
+  }

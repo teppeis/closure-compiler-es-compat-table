@@ -1,2 +1,4 @@
 // Number.EPSILON
-module.exports = function() {return false;};
+module.exports = function () {
+    return typeof Number.EPSILON === 'number';
+  }
