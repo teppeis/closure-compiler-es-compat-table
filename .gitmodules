@@ -1,0 +1,3 @@
+[submodule "compat-table"]
+	path = compat-table
+	url = git@github.com:kangax/compat-table.git
