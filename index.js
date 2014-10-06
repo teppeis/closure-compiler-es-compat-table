@@ -20,7 +20,7 @@ function generateTestJsSrc(fn) {
     if (!match) {
       if (/\beval\('.*'\)/.test(expr)) {
         expr = expr.replace(/\beval\('(.*)'\)/, '$1');
-        return 'module.exports = function() {\n' + expr + '\n};';
+        return 'module.exports = ' + expr;
       }
       return 'module.exports = function() {return false;};';
     } else {

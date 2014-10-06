@@ -1,6 +1,5 @@
 // arrow functions
-module.exports = function() {
-function () {
+module.exports = function () {
     try {
       var a = () => 5;;
     } catch (e) {
@@ -8,4 +7,3 @@ function () {
     }
     return true;
   }
-};
