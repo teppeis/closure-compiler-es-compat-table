@@ -13,9 +13,10 @@ data.tests.forEach(function(test, i) {
 });
 
 function generateTestJsSrc(fn) {
+  var expr, match;
   if (typeof fn === 'function') {
-    var expr = fn.toString();
-    var match = expr.match(/[^]*\/\*([^]*)\*\/\}$/);
+    expr = fn.toString();
+    match = expr.match(/[^]*\/\*([^]*)\*\/\}$/);
 
     if (!match) {
       if (/\beval\('.*'\)/.test(expr)) {
@@ -26,17 +27,19 @@ function generateTestJsSrc(fn) {
     } else {
       return 'module.exports = function() {\n' + match[1] + '\n};';
     }
-  } else {
-    // TODO: it's an array of objects like the following:
+  } else if (fn.length > 0) {
+    // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    // return fn.reduce(function(text, script) {
-    //   var expr = deindentFunc(
-    //       (script.script+'').replace(/^function \(\) \{\s*|\s*\}$/g, '')
-    //     );
-    //   return text + '<script' + (script.type ? ' type="' + script.type + '"' : '') +
-    //     ' data-source="' + expr.replace(/"/g,'&quot;') + '">' +
-    //     expr + '</script>\n';
-    // },'');
-    return 'module.exports = function() {return false;};';
+    var f = fn[1];
+    match = f.script.toString().match(/test\(\(function \(\) {([\s\S]*)}\(\)\)\);/); 
+    if (match) {
+      expr = match[1];
+      if (/\beval\('.*'\)/.test(expr)) {
+        expr = expr.replace(/\beval\('(.*)'\)/, '$1');
+        return 'module.exports = function() {\n' + expr + '\n};';
+      }
+    }
   }
+
+  return 'module.exports = function() {return false;};';
 }
