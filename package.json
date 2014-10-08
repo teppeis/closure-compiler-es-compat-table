@@ -9,7 +9,8 @@
   "author": "Teppei Sato",
   "license": "MIT",
   "dependencies": {
+    "fast-closure-compiler": "teppeis/fast-closure-compiler#update-closure-compiler-and-nailgun",
     "mkdirp": "^0.5.0",
-    "fast-closure-compiler": "teppeis/fast-closure-compiler#update-closure-compiler-and-nailgun"
+    "rimraf": "^2.2.8"
   }
 }

@@ -3,7 +3,10 @@
 var fs = require('fs');
 var path = require('path');
 var mkdirp = require('mkdirp');
+var rimraf = require('rimraf');
 var data = require('./compat-table/data-es6');
+
+rimraf.sync('./build');
 
 data.tests.forEach(function(test, i) {
   var src = generateTestJsSrc(test.exec, test.name);
