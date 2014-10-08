@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "node generate-inputs.js && ./compile.sh && node check.js"
   },
   "author": "Teppei Sato",
   "license": "MIT",

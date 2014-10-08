@@ -7,3 +7,5 @@ for DIR in $(ls ./build); do
     echo "- $DIR"
     $JAVA --language_in ECMASCRIPT6 --language_out ECMASCRIPT3 --formatting PRETTY_PRINT -O SIMPLE --js "$DIR/in.js" > $DIR/out.js
 done
+
+exit 0
