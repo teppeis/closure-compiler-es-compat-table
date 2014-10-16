@@ -1,6 +1,19 @@
-// Symbol.isRegExp
+// Symbol.iterator
 module.exports = function() {
 
-    return RegExp.prototype[Symbol.isRegExp] === true;
+    var a = 0, b = {};
+    b[Symbol.iterator] = function() {
+      return {
+        next: function() {
+          return {
+            done: a === 1,
+            value: a++
+          };
+        }
+      };
+    };
+    var c;
+    for (c of b) {}
+    return c === 0;
   
 };

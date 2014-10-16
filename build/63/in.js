@@ -1,4 +1,4 @@
-// RegExp.prototype.match
+// RegExp.prototype.replace
 module.exports = function () {
-    return typeof RegExp.prototype.match === 'function';
+    return typeof RegExp.prototype.replace === 'function';
   }

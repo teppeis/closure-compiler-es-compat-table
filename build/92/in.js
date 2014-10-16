@@ -1,4 +1,4 @@
-// Math.sinh
+// Math.tanh
 module.exports = function () {
-    return typeof Math.sinh === 'function';
+    return typeof Math.tanh === 'function';
   }

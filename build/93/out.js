@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Math.tanh;
+  return "function" === typeof Math.acosh;
 };
 

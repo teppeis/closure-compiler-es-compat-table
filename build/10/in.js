@@ -16,10 +16,7 @@ module.exports = function() {
         passed &= super.foo(a) === 'CDAB';
       }
       foo(a) {
-        // "super" in methods calls the
-        // superclass's same-named method on "this".
-        passed &= super(a) === 'YZEF';
-        passed &= super(a) === super.foo(a);
+        passed &= super.foo(a) === 'YZEF';
       }
     }
     var b = new B("CD");

@@ -1,4 +1,4 @@
-// Number.isInteger
+// Number.isSafeInteger
 module.exports = function () {
-    return typeof Number.isInteger === 'function';
+    return typeof Number.isSafeInteger === 'function';
   }

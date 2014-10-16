@@ -1,4 +1,4 @@
-// Math.expm1
+// Math.cosh
 module.exports = function () {
-    return typeof Math.expm1 === 'function';
+    return typeof Math.cosh === 'function';
   }

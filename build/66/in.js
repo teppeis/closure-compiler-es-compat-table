@@ -1,4 +1,4 @@
-// RegExp.prototype.split
+// Array.from
 module.exports = function () {
-    return typeof RegExp.prototype.split === 'function';
+    return typeof Array.from === 'function';
   }

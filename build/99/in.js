@@ -1,4 +1,4 @@
-// Math.fround
+// Math.cbrt
 module.exports = function () {
-    return typeof Math.fround === 'function';
+    return typeof Math.cbrt === 'function';
   }

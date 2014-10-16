@@ -1,4 +1,4 @@
-// Math.log1p
+// Math.expm1
 module.exports = function () {
-    return typeof Math.log1p === 'function';
+    return typeof Math.expm1 === 'function';
   }

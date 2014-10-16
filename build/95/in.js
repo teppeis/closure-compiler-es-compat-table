@@ -1,4 +1,4 @@
-// Math.asinh
+// Math.atanh
 module.exports = function () {
-    return typeof Math.asinh === 'function';
+    return typeof Math.atanh === 'function';
   }

@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Number.isFinite;
+  return "function" === typeof Number.isInteger;
 };
 

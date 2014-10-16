@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Math.imul;
+  return "function" === typeof Math.sign;
 };
 

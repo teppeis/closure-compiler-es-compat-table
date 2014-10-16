@@ -1,4 +1,4 @@
-// Math.log2
+// Math.log1p
 module.exports = function () {
-    return typeof Math.log2 === 'function';
+    return typeof Math.log1p === 'function';
   }

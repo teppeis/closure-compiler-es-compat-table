@@ -1,4 +1,4 @@
-// RegExp.prototype.search
+// RegExp.prototype.split
 module.exports = function () {
-    return typeof RegExp.prototype.search === 'function';
+    return typeof RegExp.prototype.split === 'function';
   }

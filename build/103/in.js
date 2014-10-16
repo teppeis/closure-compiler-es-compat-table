@@ -1,12 +1,11 @@
-// Object.prototype.__proto__
+// String.prototype HTML methods
 module.exports = function () {
-    var a = {},
-        desc = Object.getOwnPropertyDescriptor
-            && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    return !!(desc
-        && "get" in desc
-        && "set" in desc
-        && desc.configurable
-        && !desc.enumerable
-        && Object.create(a).__proto__ === a);
+    var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
+      "italics", "link", "small", "strike", "sub", "sup"];
+    for (i = 0; i < names.length; i++) {
+      if (typeof String.prototype[names[i]] !== 'function') {
+        return false;
+      }
+    }
+    return true;
   }

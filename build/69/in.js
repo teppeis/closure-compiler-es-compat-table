@@ -1,4 +1,4 @@
-// Array.prototype.copyWithin
+// Array.prototype.find
 module.exports = function () {
-    return typeof Array.prototype.copyWithin === 'function';
+    return typeof Array.prototype.find === 'function';
   }

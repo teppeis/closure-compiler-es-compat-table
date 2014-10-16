@@ -1,4 +1,4 @@
-// Math.clz32
+// Math.imul
 module.exports = function () {
-    return typeof Math.clz32 === 'function';
+    return typeof Math.imul === 'function';
   }

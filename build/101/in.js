@@ -1,14 +1,10 @@
-// __proto__ in object literals
-module.exports = function () {
-    var passed = { __proto__ : [] } instanceof Array
-      && !({ __proto__ : null } instanceof Object);
+// hoisted block-level function declaration
+module.exports = function() {
 
-    // If computed properties are supported, the following
-    // check must also be passed.
-    var a = "__proto__";
-    try {
-      eval("passed &= !({ [a] : [] } instanceof Array)");
-    }
-    catch(e) {}
+    // Note: only available outside of strict mode.
+    var passed = f() === 2 && g() === 4;
+    if (true) { function f(){ return 1; } } else { function f(){ return 2; } }
+    if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
     return passed;
-  }
+  
+};

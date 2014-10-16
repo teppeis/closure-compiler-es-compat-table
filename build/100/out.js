@@ -37,6 +37,11 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Math.cbrt;
+  var a = {__proto__:[]} instanceof Array && !1;
+  try {
+    eval("passed &= !({ [a] : [] } instanceof Array)");
+  } catch (b) {
+  }
+  return a;
 };
 

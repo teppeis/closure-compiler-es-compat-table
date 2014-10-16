@@ -37,11 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {__proto__:[]} instanceof Array && !1;
-  try {
-    eval("passed &= !({ [a] : [] } instanceof Array)");
-  } catch (b) {
-  }
-  return a;
+  return 2 === f() && 4 === g();
 };
 

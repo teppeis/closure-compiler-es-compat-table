@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof RegExp.prototype.replace;
+  return "function" === typeof RegExp.prototype.search;
 };
 

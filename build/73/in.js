@@ -1,4 +1,4 @@
-// Array.prototype.keys
+// Array.prototype.values
 module.exports = function () {
-    return typeof Array.prototype.keys === 'function';
+    return typeof Array.prototype.values === 'function';
   }

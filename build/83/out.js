@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "number" === typeof Number.MAX_SAFE_INTEGER;
+  return "function" === typeof Math.clz32;
 };
 

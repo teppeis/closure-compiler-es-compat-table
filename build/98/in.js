@@ -1,4 +1,4 @@
-// Math.trunc
+// Math.fround
 module.exports = function () {
-    return typeof Math.trunc === 'function';
+    return typeof Math.fround === 'function';
   }

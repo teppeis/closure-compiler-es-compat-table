@@ -1,4 +1,4 @@
-// Number.EPSILON
+// Number.MIN_SAFE_INTEGER
 module.exports = function () {
-    return typeof Number.EPSILON === 'number';
+    return typeof Number.MIN_SAFE_INTEGER === 'number';
   }

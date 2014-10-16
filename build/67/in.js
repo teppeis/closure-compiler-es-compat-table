@@ -1,4 +1,4 @@
-// Array.from
+// Array.of
 module.exports = function () {
-    return typeof Array.from === 'function';
+    return typeof Array.of === 'function';
   }

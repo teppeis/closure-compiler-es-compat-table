@@ -1,4 +1,4 @@
-// Math.acosh
+// Math.asinh
 module.exports = function () {
-    return typeof Math.acosh === 'function';
+    return typeof Math.asinh === 'function';
   }

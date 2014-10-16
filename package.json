@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "check": "node generate-inputs.js && ./compile.sh && node check.js"
+    "check": "rm -rf build && node generate-inputs.js && ./compile.sh && node check.js"
   },
   "author": "Teppei Sato",
   "license": "MIT",

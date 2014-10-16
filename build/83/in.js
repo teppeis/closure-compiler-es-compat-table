@@ -1,4 +1,4 @@
-// Number.MAX_SAFE_INTEGER
+// Math.clz32
 module.exports = function () {
-    return typeof Number.MAX_SAFE_INTEGER === 'number';
+    return typeof Math.clz32 === 'function';
   }

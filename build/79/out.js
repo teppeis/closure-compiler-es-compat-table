@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Number.isSafeInteger;
+  return "function" === typeof Number.isNaN;
 };
 

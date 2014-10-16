@@ -37,6 +37,7 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return 2 === f() && 4 === g();
+  var a = {}, b = Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
+  return!(!(b && "get" in b && "set" in b && b.configurable) || b.enumerable || Object.create(a).__proto__ !== a);
 };
 

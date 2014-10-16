@@ -37,16 +37,13 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  if ("function" === typeof Symbol && "symbol" === typeof Symbol.create) {
-    var a = 2, b = function() {
-    };
-    Object.defineProperty(b, Symbol.create, {value:function() {
-      a = 4;
-      return{};
-    }});
-    new b;
-    return 4 === a;
-  }
-  return!1;
+  var a = !1, b = function() {
+  };
+  b[Symbol.hasInstance] = function(b) {
+    a = b.foo;
+    return!1;
+  };
+  ({foo:!0}) instanceof b;
+  return a;
 };
 

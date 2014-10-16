@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "number" === typeof Number.EPSILON;
+  return "number" === typeof Number.MIN_SAFE_INTEGER;
 };
 

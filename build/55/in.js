@@ -1,10 +1,11 @@
-// Symbol.create
-module.exports = function () {
-    if (typeof Symbol === "function" && typeof Symbol.create === "symbol") {
-      var a = 2, b = function(){};
-      Object.defineProperty(b, Symbol.create, { value: function() { a = 4; return {};} });
-      new b();
-      return a === 4;
-    }
-    return false;
-  }
+// Symbol.hasInstance
+module.exports = function() {
+
+    var passed = false;
+    var obj = { foo: true };
+    var C = function(){};
+    C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
+    obj instanceof C;
+    return passed;
+  
+};

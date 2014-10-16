@@ -1,4 +1,4 @@
-// Number.isSafeInteger
+// Number.isNaN
 module.exports = function () {
-    return typeof Number.isSafeInteger === 'function';
+    return typeof Number.isNaN === 'function';
   }

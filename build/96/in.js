@@ -1,4 +1,4 @@
-// Math.atanh
+// Math.hypot
 module.exports = function () {
-    return typeof Math.atanh === 'function';
+    return typeof Math.hypot === 'function';
   }

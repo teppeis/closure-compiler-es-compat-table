@@ -1,11 +1,9 @@
-// Symbol.hasInstance
+// Symbol.isConcatSpreadable
 module.exports = function() {
 
-    var passed = false;
-    var obj = { foo: true };
-    var C = function(){};
-    C[Symbol.hasInstance] = function(inst) { passed = inst.foo; return false; };
-    obj instanceof C;
-    return passed;
+    var a = [], b = [];
+    b[Symbol.isConcatSpreadable] = false;
+    a = a.concat(b);
+    return a[0] === b;
   
 };

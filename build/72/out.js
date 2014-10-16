@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Array.prototype.fill;
+  return "function" === typeof Array.prototype.keys;
 };
 

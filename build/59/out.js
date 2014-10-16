@@ -37,15 +37,22 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = 0, b = {};
-  b[Symbol.iterator] = function() {
-    return{next:function() {
-      return{done:1 === a, value:a++};
-    }};
+  var a = {}, b = {}, c = {}, d = 0;
+  a[Symbol.toPrimitive] = function(a) {
+    d += "number" === a;
+    return 0;
   };
-  for (var c, b = $jscomp.makeIterator(b), d = b.next();!d.done;d = b.next()) {
-    c = d.value;
-  }
-  return 0 === c;
+  b[Symbol.toPrimitive] = function(a) {
+    d += "string" === a;
+    return 0;
+  };
+  c[Symbol.toPrimitive] = function(a) {
+    d += "default" === a;
+    return 0;
+  };
+  0 <= a;
+  b in {};
+  0 == c;
+  return 3 === d;
 };
 

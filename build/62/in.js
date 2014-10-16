@@ -1,10 +1,4 @@
-// Symbol.unscopables
-module.exports = function() {
-
-    var a = { foo: 1, bar: 2 };
-    a[Symbol.unscopables] = { bar: true };
-    with (a) {
-      return foo === 1 && typeof bar === "undefined";
-    }
-  
-};
+// RegExp.prototype.match
+module.exports = function () {
+    return typeof RegExp.prototype.match === 'function';
+  }

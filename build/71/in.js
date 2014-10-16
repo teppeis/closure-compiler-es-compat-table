@@ -1,4 +1,4 @@
-// Array.prototype.findIndex
+// Array.prototype.fill
 module.exports = function () {
-    return typeof Array.prototype.findIndex === 'function';
+    return typeof Array.prototype.fill === 'function';
   }

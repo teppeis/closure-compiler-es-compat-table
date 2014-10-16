@@ -1,4 +1,4 @@
-// Math.imul
+// Math.sign
 module.exports = function () {
-    return typeof Math.imul === 'function';
+    return typeof Math.sign === 'function';
   }

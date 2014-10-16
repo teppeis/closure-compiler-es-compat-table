@@ -31,12 +31,21 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
+  a.base = function(a, c, f) {
+    var e = Array.prototype.slice.call(arguments, 2);
+    return b.prototype[c].apply(a, e);
   };
 };
 module.exports = function() {
-  return!0 === RegExp.prototype[Symbol.isRegExp];
+  var a = 0, b = {};
+  b[Symbol.iterator] = function() {
+    return{next:function() {
+      return{done:1 === a, value:a++};
+    }};
+  };
+  for (var c, b = $jscomp.makeIterator(b), d = b.next();!d.done;d = b.next()) {
+    c = d.value;
+  }
+  return 0 === c;
 };
 

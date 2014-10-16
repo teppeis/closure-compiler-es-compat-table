@@ -1,9 +1,6 @@
-// Symbol.isConcatSpreadable
+// Symbol.isRegExp
 module.exports = function() {
 
-    var a = [], b = [];
-    b[Symbol.isConcatSpreadable] = false;
-    a = a.concat(b);
-    return a[0] === b;
+    return RegExp.prototype[Symbol.isRegExp] === true;
   
 };

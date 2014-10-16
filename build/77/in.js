@@ -1,4 +1,4 @@
-// Number.isFinite
+// Number.isInteger
 module.exports = function () {
-    return typeof Number.isFinite === 'function';
+    return typeof Number.isInteger === 'function';
   }
