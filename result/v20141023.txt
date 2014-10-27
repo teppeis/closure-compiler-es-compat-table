@@ -1,0 +1,30 @@
+arrow functions
+const
+let
+default function parameters
+rest parameters
+spread call (...) operator
+spread array (...) operator
+class
+computed properties
+shorthand properties
+shorthand methods
+for..of loops
+generators (yield)
+octal literals
+binary literals
+template strings
+tagged template strings
+typed arrays
+typed arrays (DataView)
+block-level function declaration
+destructuring
+destructuring parameters
+destructuring defaults
+destructuring rest
+Object.is
+Unicode code point escapes
+Number.isFinite
+Number.isNaN
+String.prototype HTML methods
+RegExp.prototype.compile
