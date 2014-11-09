@@ -9,6 +9,8 @@ var data = require('./compat-table/data-es6');
 rimraf.sync('./build');
 
 var fileno = 0;
+var files = [];
+var basedir = path.join(__dirname, 'build');
 data.tests.forEach(function(test) {
   if (test.subtests) {
     for (var subtestName in test.subtests) {
@@ -19,9 +21,12 @@ data.tests.forEach(function(test) {
   }
 });
 
+fs.writeFileSync(path.join(basedir, 'filelist.json'), JSON.stringify(files));
+
 function writeInputSrcFile(fn, name) {
+  files.push(name);
   var src = generateTestJsSrc(fn, name);
-  var dir = path.join(__dirname, 'build', String(fileno++));
+  var dir = path.join(basedir, String(fileno++));
   mkdirp.sync(dir);
   fs.writeFileSync(path.join(dir, 'in.js'), '// ' + name + '\n' + src);
 }

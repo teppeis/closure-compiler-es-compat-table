@@ -2,19 +2,13 @@
 
 var fs = require('fs');
 var path = require('path');
-var data = require('./compat-table/data-es6');
+var files = require('./build/filelist.json');
 
 var results = [];
 
 var fileno = 0;
-data.tests.forEach(function(test) {
-  if (test.subtests) {
-    for (var subtestName in test.subtests) {
-      check(test.name + ': ' + subtestName, fileno++);
-    }
-  } else {
-    check(test.name, fileno++);
-  }
+files.forEach(function(name) {
+  check(name, fileno++);
 });
 
 function check(name, i) {
@@ -23,7 +17,7 @@ function check(name, i) {
     try {
       var res = require(outFile)();
       if (res) {
-        console.log('build/' + fileno + '/out.js: ' + name);
+        console.log('build/' + i + '/out.js: ' + name);
       }
     } catch (ignore) {
     }
