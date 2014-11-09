@@ -1,10 +1,17 @@
-// RegExp "y" flag
+// let: for-loop iteration scope
 module.exports = function() {
 
-    var re = new RegExp('\\w');
-    var re2 = new RegExp('\\w', 'y');
-    re.exec('xy');
-    re2.exec('xy');
-    return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
-  
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+        
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
+        return passed;
+      
 };

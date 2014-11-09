@@ -37,8 +37,17 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {}, b = new Map;
-  b.set(a, 123);
-  return b.has(a) && 123 === b.get(a) && 1 === b.size;
+  var a;
+  a: {
+    try {
+      c;
+    } catch (b) {
+      a = !0;
+      break a;
+    }
+    a = void 0;
+  }
+  var c = 456;
+  return a;
 };
 

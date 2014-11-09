@@ -1,6 +1,6 @@
-// Symbol.isRegExp
+// RegExp "y" and "u" flags: "u" flag
 module.exports = function() {
 
-    return RegExp.prototype[Symbol.isRegExp] === true;
-  
+        return "𠮷".match(/./u)[0].length === 2;
+      
 };

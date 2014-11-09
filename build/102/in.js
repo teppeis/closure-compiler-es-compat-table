@@ -1,12 +1,12 @@
-// Object.prototype.__proto__
-module.exports = function () {
-    var a = {},
-        desc = Object.getOwnPropertyDescriptor
-            && Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-    return !!(desc
-        && "get" in desc
-        && "set" in desc
-        && desc.configurable
-        && !desc.enumerable
-        && Object.create(a).__proto__ === a);
-  }
+// Proxy: "get" handler
+module.exports = function() {
+
+        var proxied = { };
+        var proxy = new Proxy(proxied, {
+          get: function (t, k, r) {
+            return t === proxied && k === "foo" && r === proxy && 5;
+          }
+        });
+        return proxy.foo === 5;
+      
+};

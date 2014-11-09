@@ -1,4 +1,11 @@
-// Object.getOwnPropertySymbols
-module.exports = function () {
-    return typeof Object.getOwnPropertySymbols === 'function';
-  }
+// class: static methods
+module.exports = function() {
+
+        class C {
+          constructor() {}
+          static method() { return 3; }
+        }
+        return typeof C.method === "function"
+          && C.method() === 3;
+      
+};

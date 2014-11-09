@@ -1,19 +1,8 @@
-// Symbol.iterator
+// typed arrays: Int8Array
 module.exports = function() {
 
-    var a = 0, b = {};
-    b[Symbol.iterator] = function() {
-      return {
-        next: function() {
-          return {
-            done: a === 1,
-            value: a++
-          };
-        }
-      };
-    };
-    var c;
-    for (c of b) {}
-    return c === 0;
-  
+        var buffer = new ArrayBuffer(64);
+        var view = new Int8Array(buffer);         view[0] = 0x80;
+        return view[0] === -0x80;
+      
 };

@@ -11,6 +11,7 @@
   "dependencies": {
     "fast-closure-compiler": "teppeis/fast-closure-compiler#update-closure-compiler-and-nailgun",
     "mkdirp": "^0.5.0",
+    "object-assign": "~1.0.0",
     "rimraf": "^2.2.8"
   }
 }

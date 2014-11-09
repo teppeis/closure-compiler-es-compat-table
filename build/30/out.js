@@ -31,21 +31,26 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, e) {
+  a.base = function(a, c, f) {
     var d = Array.prototype.slice.call(arguments, 2);
     return b.prototype[c].apply(a, d);
   };
 };
 module.exports = function() {
-  var a, b = "apply construct defineProperty deleteProperty getOwnPropertyDescriptor getPrototypeOf has isExtensible set setPrototypeOf".split(" ");
-  if ("object" !== typeof Reflect) {
-    return!1;
-  }
-  for (a = 0;a < b.length;a++) {
-    if (!(b[a] in Reflect)) {
-      return!1;
+  return function(a) {
+    try {
+      return eval("(function(a=a){}())"), !1;
+    } catch (b) {
     }
-  }
-  return!0;
+    try {
+      return eval("(function(a=b,b){}())"), !1;
+    } catch (c) {
+    }
+    try {
+      return eval("(function(a=function(){ return b; }){ var b = 1;}())"), !1;
+    } catch (e) {
+    }
+    return!0;
+  }();
 };
 

@@ -31,13 +31,12 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, g) {
+  a.base = function(a, c, e) {
     var d = Array.prototype.slice.call(arguments, 2);
     return b.prototype[c].apply(a, d);
   };
 };
 module.exports = function() {
-  var a = [5, null, [6]], b = a[2][0], c = a[3], e = {c:7, x:8}, h = e.c, g = e.x, e = e.h, d = [9, {x:10}], k = d[0], f = d[1], d = f.x, f = f.i;
-  return 5 === a[0] && 6 === b && 7 === h && 8 === g && 9 === k && 10 === d && void 0 === c && void 0 === e && void 0 === f;
+  return 3 === [].concat([1, 2, 3])[2];
 };
 

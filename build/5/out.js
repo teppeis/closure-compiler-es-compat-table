@@ -37,9 +37,11 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return function(a) {
-    a = [].slice.call(arguments, 0);
-    return "undefined" !== typeof a;
-  }();
+  return "barley" === {x:"bar", y:function() {
+    var a = this;
+    return function(b) {
+      return a.x + b;
+    };
+  }}.y().bind({x:"baz"}, "ley")();
 };
 

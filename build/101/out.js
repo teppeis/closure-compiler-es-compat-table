@@ -37,6 +37,9 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return 2 === f() && 4 === g();
+  var a = {}, b = new WeakSet;
+  b.add(a);
+  b.add(a);
+  return b.has(a);
 };
 

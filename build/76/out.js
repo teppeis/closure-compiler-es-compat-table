@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Number.isFinite;
+  return "function" === typeof Int8Array.of && "function" === typeof Uint8Array.of && "function" === typeof Uint8ClampedArray.of && "function" === typeof Int16Array.of && "function" === typeof Uint16Array.of && "function" === typeof Int32Array.of && "function" === typeof Uint32Array.of && "function" === typeof Float32Array.of && "function" === typeof Float64Array.of;
 };
 

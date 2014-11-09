@@ -1,9 +1,10 @@
-// Symbol.isConcatSpreadable
+// RegExp "y" and "u" flags: "y" flag
 module.exports = function() {
 
-    var a = [], b = [];
-    b[Symbol.isConcatSpreadable] = false;
-    a = a.concat(b);
-    return a[0] === b;
-  
+        var re = new RegExp('\\w');
+        var re2 = new RegExp('\\w', 'y');
+        re.exec('xy');
+        re2.exec('xy');
+        return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
+      
 };

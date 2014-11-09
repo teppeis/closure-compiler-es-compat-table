@@ -37,7 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = [3, 4], b = a[1];
-  return 3 === a[0] && 4 === b;
+  return 4 === Math.max.apply(Math, [].concat("1234"));
 };
 

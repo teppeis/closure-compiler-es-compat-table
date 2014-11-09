@@ -37,6 +37,11 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Object.getOwnPropertySymbols;
+  var a = function() {
+  };
+  a.method = function() {
+    return 3;
+  };
+  return "function" === typeof a.method && 3 === a.method();
 };
 

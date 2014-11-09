@@ -1,8 +1,8 @@
-// Global symbol registry
+// template strings: basic functionality
 module.exports = function() {
 
-    var symbol = Symbol.for('foo');
-    return Symbol.for('foo') === symbol &&
-           Symbol.keyFor(symbol) === 'foo';
-  
+        var a = "ba", b = "QUX";
+        return `foo bar
+        ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
+      
 };

@@ -1,4 +1,6 @@
-// String.prototype.endsWith
-module.exports = function () {
-    return typeof String.prototype.endsWith === 'function';
-  }
+// octal and binary literals: octal literals
+module.exports = function() {
+
+        return 0o10 === 8 && 0O10 === 8;
+      
+};

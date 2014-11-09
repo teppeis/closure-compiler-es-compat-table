@@ -1,6 +1,7 @@
-// spread call (...) operator
+// arrow functions: lexical "arguments" binding
 module.exports = function() {
 
-    return Math.max(...[1, 2, 3]) === 3
-  
+        var f = (function() { return z => arguments[0]; }(5));
+        return f(6) === 5;
+      
 };

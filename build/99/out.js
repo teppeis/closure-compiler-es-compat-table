@@ -37,6 +37,9 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Math.cbrt;
+  var a = new Set;
+  a.add(123);
+  a.add(123);
+  return a.has(123) && 1 === a.size;
 };
 

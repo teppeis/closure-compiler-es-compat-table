@@ -31,18 +31,12 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, f) {
+  a.base = function(a, c, e) {
     var d = Array.prototype.slice.call(arguments, 2);
     return b.prototype[c].apply(a, d);
   };
 };
 module.exports = function() {
-  try {
-    var a = {}, b = Symbol(), c = Math.random();
-    a[b] = c;
-    return "symbol" === typeof b && a[b] === c && 0 === Object.keys(a).length && 0 === Object.getOwnPropertyNames(a).length;
-  } catch (e) {
-    return!1;
-  }
+  return 1 === Number("0b1");
 };
 

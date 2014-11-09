@@ -1,10 +1,7 @@
-// let
+// arrow functions: multiple parameters
 module.exports = function() {
 
-            try {
-              return (function () { "use strict"; __let_script_executed = true; let foobarbaz2 = 123; return foobarbaz2 == 123; }());
-            } catch (e) {
-              return false;
-            }
-          
+        var c = (v, w, x, y, z) => "" + v + w + x + y + z;
+        return (c(6, 5, 4, 3, 2) === "65432");
+      
 };

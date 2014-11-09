@@ -37,8 +37,10 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  for (var a = $jscomp.makeIterator([5]).next();!a.done;) {
-    return 5 === a.value;
+  try {
+    Function("'use strict'; const foo = 1; foo = 2;")();
+  } catch (a) {
+    return!0;
   }
 };
 

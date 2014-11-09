@@ -37,6 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof String.prototype.codePointAt;
+  for (var a = $jscomp.makeIterator([5]).next();!a.done;) {
+    return 5 === a.value;
+  }
 };
 

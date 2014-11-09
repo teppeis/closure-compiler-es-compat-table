@@ -1,6 +1,7 @@
-// octal literals
+// let: basic support
 module.exports = function() {
 
-    return 0o10 === 8 && 0O10 === 8;
-  
+        let foo = 123;
+        return (foo === 123);
+      
 };

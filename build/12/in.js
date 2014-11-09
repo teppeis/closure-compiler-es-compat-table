@@ -1,7 +1,8 @@
-// shorthand properties
+// const: temporal dead zone
 module.exports = function() {
 
-    var a = 7, b = 8, c = {a,b};
-    return c.a === 7 && c.b === 8;
-  
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      
 };

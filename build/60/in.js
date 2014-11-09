@@ -1,8 +1,8 @@
-// Symbol.toStringTag
+// typed arrays: Uint8ClampedArray
 module.exports = function() {
 
-    var a = {};
-    a[Symbol.toStringTag] = "foo";
-    return (a + "") === "[object foo]";
-  
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+        return view[0] === 0xFF;
+      
 };

@@ -1,7 +1,8 @@
-// modules
+// const: is block-scoped (strict mode)
 module.exports = function() {
 
-    export var foo = 1;
-    return true;
-  
+        'use strict';
+        { const bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      
 };

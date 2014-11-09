@@ -37,6 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Math.fround;
+  var a = {}, b = new Map;
+  b.set(a, 123);
+  return b.has(a) && 123 === b.get(a) && 1 === b.size;
 };
 

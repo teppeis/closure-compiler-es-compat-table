@@ -1,30 +1,74 @@
-arrow functions
-const
-let
-default function parameters
-rest parameters
-spread call (...) operator
-spread array (...) operator
-class
-computed properties
-shorthand properties
-shorthand methods
-for..of loops
-generators (yield)
-octal literals
-binary literals
-template strings
-tagged template strings
-typed arrays
-typed arrays (DataView)
-block-level function declaration
-destructuring
-destructuring parameters
-destructuring defaults
-destructuring rest
-Object.is
-Unicode code point escapes
-Number.isFinite
-Number.isNaN
-String.prototype HTML methods
-RegExp.prototype.compile
+build/2/out.js: arrow functions: 0 parameters
+build/3/out.js: arrow functions: 1 parameter, no brackets
+build/4/out.js: arrow functions: multiple parameters
+build/5/out.js: arrow functions: lexical "this" binding
+build/6/out.js: arrow functions: can't be bound, can be curried
+build/7/out.js: arrow functions: lexical "arguments" binding
+build/10/out.js: const: basic support
+build/11/out.js: const: is block-scoped
+build/14/out.js: const: basic support (strict mode)
+build/15/out.js: const: is block-scoped (strict mode)
+build/16/out.js: const: redefining a const (strict mode)
+build/18/out.js: let: basic support
+build/19/out.js: let: is block-scoped
+build/20/out.js: let: for-loop statement scope
+build/22/out.js: let: for-loop iteration scope
+build/23/out.js: let: basic support (strict mode)
+build/24/out.js: let: is block-scoped (strict mode)
+build/25/out.js: let: for-loop statement scope (strict mode)
+build/27/out.js: let: for-loop iteration scope (strict mode)
+build/28/out.js: default function parameters: basic functionality
+build/29/out.js: default function parameters: explicit undefined defers to the default
+build/30/out.js: default function parameters: defaults can refer to previous params
+build/31/out.js: default function parameters: temporal dead zone
+build/32/out.js: rest parameters
+build/33/out.js: spread (...) operator: with arrays, in function calls
+build/34/out.js: spread (...) operator: with arrays, in array literals
+build/37/out.js: class: class statement
+build/39/out.js: class: constructor
+build/40/out.js: class: prototype methods
+build/41/out.js: class: static methods
+build/44/out.js: object literal extensions: computed properties
+build/45/out.js: object literal extensions: shorthand properties
+build/46/out.js: object literal extensions: shorthand methods
+build/47/out.js: for..of loops
+build/48/out.js: generators: basic functionality
+build/49/out.js: generators: yield *
+build/50/out.js: generators: shorthand generator methods
+build/51/out.js: octal and binary literals: octal literals
+build/52/out.js: octal and binary literals: binary literals
+build/56/out.js: template strings: tagged template strings
+build/59/out.js: typed arrays: Int8Array
+build/60/out.js: typed arrays: Uint8Array
+build/61/out.js: typed arrays: Uint8ClampedArray
+build/62/out.js: typed arrays: Int16Array
+build/63/out.js: typed arrays: Uint16Array
+build/64/out.js: typed arrays: Int32Array
+build/65/out.js: typed arrays: Uint32Array
+build/66/out.js: typed arrays: Float32Array
+build/67/out.js: typed arrays: Float64Array
+build/68/out.js: typed arrays: DataView (Int8)
+build/69/out.js: typed arrays: DataView (Uint8)
+build/70/out.js: typed arrays: DataView (Int16)
+build/71/out.js: typed arrays: DataView (Uint16)
+build/72/out.js: typed arrays: DataView (Int32)
+build/73/out.js: typed arrays: DataView (Uint32)
+build/74/out.js: typed arrays: DataView (Float32)
+build/75/out.js: typed arrays: DataView (Float64)
+build/128/out.js: block-level function declaration
+build/129/out.js: destructuring: array destructuring
+build/130/out.js: destructuring: object destructuring
+build/131/out.js: destructuring: combined destructuring
+build/132/out.js: destructuring: destructuring parameters
+build/133/out.js: destructuring: destructuring rest
+build/134/out.js: destructuring: destructuring defaults
+build/135/out.js: destructuring: defaults in parameters
+build/137/out.js: Object static methods: Object.assign
+build/138/out.js: Object static methods: Object.is
+build/166/out.js: Unicode code point escapes
+build/197/out.js: Number properties: Number.isFinite
+build/200/out.js: Number properties: Number.isNaN
+build/227/out.js: Object.prototype.__proto__: get prototype
+build/228/out.js: Object.prototype.__proto__: set prototype
+build/230/out.js: String.prototype HTML methods
+build/231/out.js: RegExp.prototype.compile

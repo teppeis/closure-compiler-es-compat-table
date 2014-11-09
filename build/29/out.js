@@ -37,12 +37,7 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  try {
-    return "undefined" !== typeof Proxy && 5 === (new Proxy({}, {get:function() {
-      return 5;
-    }})).foo;
-  } catch (a) {
-  }
-  return!1;
+  var a = void 0;
+  return 5 === (void 0 === a ? 5 : a);
 };
 

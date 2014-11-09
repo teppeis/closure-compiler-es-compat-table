@@ -37,10 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  try {
-    return __let_script_executed = !0;
-  } catch (a) {
-    return!1;
-  }
+  return!0;
 };
 

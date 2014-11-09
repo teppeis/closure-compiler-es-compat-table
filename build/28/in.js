@@ -1,12 +1,6 @@
-// WeakSet
+// default function parameters: explicit undefined defers to the default
 module.exports = function() {
 
-    var obj1 = {}, obj2 = {};
-    var weakset = new WeakSet();
-
-    weakset.add(obj1);
-    weakset.add(obj1);
-
-    return weakset.has(obj1);
-  
+        return (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
+      
 };

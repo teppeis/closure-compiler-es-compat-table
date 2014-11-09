@@ -1,6 +1,7 @@
-// binary literals
+// let: is block-scoped
 module.exports = function() {
 
-    return 0b10 === 2 && 0B10 === 2;
-  
+        { let bar = 456; }
+        return (function(){ try { bar; } catch(e) { return true; }}());
+      
 };

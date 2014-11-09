@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "undefined" === typeof f;
+  return 3 === Math.max.apply(Math, [].concat([1, 2, 3]));
 };
 

@@ -37,6 +37,9 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Object.assign;
+  var a = function() {
+    this.x = 1;
+  };
+  return a.prototype.constructor === a && 1 === (new a).x;
 };
 

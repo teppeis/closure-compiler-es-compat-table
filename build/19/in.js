@@ -1,8 +1,7 @@
-// template strings
+// let: for-loop statement scope
 module.exports = function() {
 
-    var a = "ba", b = "QUX";
-    return `foo bar
-${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
-  
+        for(let baz = 0; false;) {}
+        return (function(){ try { baz; } catch(e) { return true; }}());
+      
 };

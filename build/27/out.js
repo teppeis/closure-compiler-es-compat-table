@@ -37,8 +37,7 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {}, b = new WeakMap;
-  b.set(a, 123);
-  return b.has(a) && 123 === b.get(a);
+  var a = 3, b = void 0;
+  return 3 === (void 0 === a ? 1 : a) && 2 === (void 0 === b ? 2 : b);
 };
 

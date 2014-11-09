@@ -37,10 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {foo:1, bar:2};
-  a[Symbol.unscopables] = {bar:!0};
-  with(a) {
-    return 1 === foo && "undefined" === typeof bar;
-  }
+  var a = new ArrayBuffer(64), a = new Int16Array(a);
+  a[0] = 32768;
+  return-32768 === a[0];
 };
 

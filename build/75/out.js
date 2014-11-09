@@ -37,11 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  for (var a = Array.prototype[Symbol.unscopables], b = "find findIndex fill copyWithin entries keys values".split(" "), c = 0;c < b.length;c++) {
-    if (!a[b[c]]) {
-      return!1;
-    }
-  }
-  return!0;
+  return "function" === typeof Int8Array.from && "function" === typeof Uint8Array.from && "function" === typeof Uint8ClampedArray.from && "function" === typeof Int16Array.from && "function" === typeof Uint16Array.from && "function" === typeof Int32Array.from && "function" === typeof Uint32Array.from && "function" === typeof Float32Array.from && "function" === typeof Float64Array.from;
 };
 

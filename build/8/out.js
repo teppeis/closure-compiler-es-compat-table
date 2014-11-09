@@ -37,6 +37,9 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "d" === [].concat(["a"], "bcd", ["e"])[3] && 4 === Math.max.apply(Math, [].concat("1234"));
+  var a = function() {
+    return 5;
+  };
+  return!a.hasOwnProperty("prototype") && "" === a.name;
 };
 

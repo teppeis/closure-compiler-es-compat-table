@@ -1,11 +1,14 @@
-// String.prototype HTML methods
-module.exports = function () {
-    var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
-      "italics", "link", "small", "strike", "sub", "sup"];
-    for (i = 0; i < names.length; i++) {
-      if (typeof String.prototype[names[i]] !== 'function') {
-        return false;
-      }
-    }
-    return true;
-  }
+// Proxy: "set" handler
+module.exports = function() {
+
+        var proxied = { };
+        var passed = false;
+        var proxy = new Proxy(proxied, {
+          set: function (t, k, v, r) {
+            passed = t === proxied && k + v === "foobar" && r === proxy;
+          }
+        });
+        proxy.foo = "bar";
+        return passed;
+      
+};

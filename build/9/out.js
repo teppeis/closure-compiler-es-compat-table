@@ -37,15 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = function() {
-    this.b = !0;
-  };
-  $jscomp.copyProperties(a, Array);
-  $jscomp.inherits(a, Array);
-  a.prototype.a = function() {
-  };
-  a.d = function() {
-  };
-  return a.d && (new a).a && (new a).b && new a instanceof Array;
+  return!0;
 };
 

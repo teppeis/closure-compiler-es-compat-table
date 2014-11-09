@@ -37,7 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {b:2, c:void 0}, b = void 0 === a.b ? 1 : a.b, c = void 0 === a.c ? 3 : a.c;
-  return 1 === (void 0 === a.a ? 1 : a.a) && 2 === b && 3 === c;
+  return "d" === [].concat(["a"], "bcd", ["e"])[3];
 };
 

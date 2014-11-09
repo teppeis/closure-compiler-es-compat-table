@@ -37,6 +37,6 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return!0;
+  return 1 === Number("0o1");
 };
 

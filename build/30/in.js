@@ -1,16 +1,20 @@
-// Reflect
-module.exports = function () {
-    var i, names =
-      ["apply","construct","defineProperty","deleteProperty","getOwnPropertyDescriptor",
-      "getPrototypeOf","has","isExtensible","set","setPrototypeOf"];
+// default function parameters: temporal dead zone
+module.exports = function() {
 
-    if (typeof Reflect !== "object") {
-      return false;
-    }
-    for (i = 0; i < names.length; i++) {
-      if (!(names[i] in Reflect)) {
-        return false;
-      }
-    }
-    return true;
-  }
+        return (function(x = 1) {
+          try {
+            eval("(function(a=a){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=b,b){}())"); 
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=function(){ return b; }){ var b = 1;}())"); 
+            return false;
+          } catch(e) {}
+          return true;
+        }());
+      
+};

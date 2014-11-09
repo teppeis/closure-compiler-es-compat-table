@@ -14,30 +14,29 @@ $jscomp.makeIterator = function(a) {
   if (!(a instanceof Array)) {
     throw Error();
   }
-  var c = 0;
+  var b = 0;
   return{next:function() {
-    return c == a.length ? {done:!0} : {done:!1, value:a[c++]};
+    return b == a.length ? {done:!0} : {done:!1, value:a[b++]};
   }};
 };
-$jscomp.copyProperties = function(a, c) {
-  for (var b in c) {
-    a[b] = c[b];
+$jscomp.copyProperties = function(a, b) {
+  for (var c in b) {
+    a[c] = b[c];
   }
 };
-$jscomp.inherits = function(a, c) {
-  function b() {
+$jscomp.inherits = function(a, b) {
+  function c() {
   }
-  b.prototype = c.prototype;
-  a.superClass_ = c.prototype;
-  a.prototype = new b;
+  c.prototype = b.prototype;
+  a.superClass_ = b.prototype;
+  a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, b, f) {
-    var e = Array.prototype.slice.call(arguments, 2);
-    return c.prototype[b].apply(a, e);
+  a.base = function(a, c, e) {
+    var d = Array.prototype.slice.call(arguments, 2);
+    return b.prototype[c].apply(a, d);
   };
 };
 module.exports = function() {
-  var a = [3, 4, 5], c = a[0], a = [].slice.call(a, 1), b = [6], d = b[0], b = [].slice.call(b, 1);
-  return 3 === c && a instanceof Array && "4,5" === a + "" && 6 === d && b instanceof Array && 0 === b.length;
+  return!0;
 };
 

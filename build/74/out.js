@@ -37,6 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Array.prototype.entries;
+  var a = new ArrayBuffer(64), a = new DataView(a);
+  a.setFloat64(0, .1);
+  return.1 === a.getFloat64(0);
 };
 

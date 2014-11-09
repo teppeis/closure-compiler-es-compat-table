@@ -1,6 +1,16 @@
-// String.prototype.normalize
-module.exports = function () {
-    return typeof String.prototype.normalize === "function"
-      && "c\u0327\u0301".normalize("NFC") === "\u1e09"
-      && "\u1e09".normalize("NFD") === "c\u0327\u0301";
-  }
+// generators: basic functionality
+module.exports = function() {
+
+        function* generator(){
+          yield 5; yield 6;
+        };
+        var iterator = generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      
+};

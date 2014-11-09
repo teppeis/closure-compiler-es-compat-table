@@ -1,18 +1,9 @@
-// generators (yield)
+// const: temporal dead zone (strict mode)
 module.exports = function() {
 
-    var generator = (function* () {
-      yield* (function* () {
-        yield 5; yield 6;
-      }());
-    }());
-
-    var item = generator.next();
-    var passed = item.value === 5 && item.done === false;
-    item = generator.next();
-    passed    &= item.value === 6 && item.done === false;
-    item = generator.next();
-    passed    &= item.value === undefined && item.done === true;
-    return passed;
-  
+        'use strict';
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        const qux = 456;
+        return passed;
+      
 };

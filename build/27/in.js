@@ -1,11 +1,6 @@
-// WeakMap
+// default function parameters: basic functionality
 module.exports = function() {
 
-    var key1 = {};
-    var weakmap = new WeakMap();
-
-    weakmap.set(key1, 123);
-
-    return weakmap.has(key1) && weakmap.get(key1) === 123;
-  
+        return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
+      
 };

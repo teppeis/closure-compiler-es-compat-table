@@ -37,6 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof RegExp.prototype.replace;
+  var a = new ArrayBuffer(64), a = new Int32Array(a);
+  a[0] = 2147483648;
+  return-2147483648 === a[0];
 };
 

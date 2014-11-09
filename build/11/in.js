@@ -1,7 +1,11 @@
-// computed properties
+// const: redefining a const is a syntax error
 module.exports = function() {
 
-    var x = 'y';
-    return ({ [x]: 1 }).y === 1;
-  
+        const baz = 1;
+        try {
+          Function("const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
+      
 };

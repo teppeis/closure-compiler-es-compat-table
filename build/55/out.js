@@ -36,14 +36,10 @@ $jscomp.inherits = function(a, b) {
     return b.prototype[c].apply(a, d);
   };
 };
+var $jscomp$templatelit$0 = ["foo", "bar\n", ""];
+$jscomp$templatelit$0.raw = ["foo", "bar\\n", ""];
 module.exports = function() {
-  var a = !1, b = function() {
-  };
-  b[Symbol.hasInstance] = function(b) {
-    a = b.foo;
-    return!1;
-  };
-  ({foo:!0}) instanceof b;
-  return a;
+  var a = $jscomp$templatelit$0;
+  return a instanceof Array && "foo" === a[0] && "bar\n" === a[1] && "foo" === a.raw[0] && "bar\\n" === a.raw[1] && !0 && !0 && !0;
 };
 

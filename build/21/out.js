@@ -31,15 +31,27 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
+  a.base = function(a, c, f) {
+    var e = Array.prototype.slice.call(arguments, 2);
+    return b.prototype[c].apply(a, e);
   };
 };
 module.exports = function() {
-  var a = /\w/, b = RegExp("\\w", "y");
-  a.exec("xy");
-  b.exec("xy");
-  return "x" === a.exec("xy")[0] && "y" === b.exec("xy")[0];
+  for (var a = [], b = {i:0};2 > b.i;b = {i:b.i}, b.i++) {
+    a.push(function(a) {
+      return function() {
+        return a.i;
+      };
+    }(b));
+  }
+  var b = 0 === a[0]() && 1 === a[1](), a = [], c = {i$0:void 0}, d;
+  for (d in{a:1, b:1}) {
+    c.i$0 = d, a.push(function(a) {
+      return function() {
+        return a.i$0;
+      };
+    }(c)), c = {i$0:c.i$0};
+  }
+  return b &= "a" === a[0]() && "b" === a[1]();
 };
 

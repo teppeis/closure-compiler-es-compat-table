@@ -37,6 +37,16 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return!0;
+  var a;
+  a: {
+    try {
+      bar;
+    } catch (b) {
+      a = !0;
+      break a;
+    }
+    a = void 0;
+  }
+  return a;
 };
 

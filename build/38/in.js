@@ -1,4 +1,10 @@
-// Object.assign
-module.exports = function () {
-    return typeof Object.assign === 'function';
-  }
+// class: constructor
+module.exports = function() {
+
+        class C {
+          constructor() { this.x = 1; }
+        }
+        return C.prototype.constructor === C
+          && new C().x === 1;
+      
+};

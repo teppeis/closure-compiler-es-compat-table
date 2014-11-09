@@ -37,6 +37,7 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Function.prototype.toMethod;
+  var a = {};
+  return 1 === (a.y = 1, a).y;
 };
 

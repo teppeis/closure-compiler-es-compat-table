@@ -1,6 +1,7 @@
-// string spreading
+// arrow functions: no "prototype" and "name" properties
 module.exports = function() {
 
-    return ["a", ..."bcd", "e"][3] === "d" && Math.max(..."1234") === 4;
-  
+        var a = () => 5;
+        return !a.hasOwnProperty("prototype") && a.name === ""; 
+      
 };

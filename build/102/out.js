@@ -31,13 +31,15 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
+  a.base = function(a, c, g) {
+    var f = Array.prototype.slice.call(arguments, 2);
+    return b.prototype[c].apply(a, f);
   };
 };
 module.exports = function() {
-  var a = {}, b = Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
-  return!(!(b && "get" in b && "set" in b && b.configurable) || b.enumerable || Object.create(a).__proto__ !== a);
+  var a = {}, b = new Proxy(a, {get:function(c, d, e) {
+    return c === a && "foo" === d && e === b && 5;
+  }});
+  return 5 === b.foo;
 };
 

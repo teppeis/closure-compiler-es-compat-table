@@ -1,5 +1,6 @@
-// Promise
-module.exports = function () {
-    return typeof Promise !== 'undefined' &&
-           typeof Promise.all === 'function';
-  }
+// class: class expression
+module.exports = function() {
+
+        return typeof class C {} === "function";
+      
+};

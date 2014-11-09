@@ -37,11 +37,8 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  var a = {__proto__:[]} instanceof Array && !1;
-  try {
-    eval("passed &= !({ [a] : [] } instanceof Array)");
-  } catch (b) {
-  }
-  return a;
+  var a = {}, b = new WeakMap;
+  b.set(a, 123);
+  return b.has(a) && 123 === b.get(a);
 };
 

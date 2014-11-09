@@ -37,6 +37,11 @@ $jscomp.inherits = function(a, b) {
   };
 };
 module.exports = function() {
-  return "function" === typeof Object.setPrototypeOf;
+  var a = function() {
+    a.base(this, "constructor");
+  };
+  $jscomp.copyProperties(a, Array);
+  $jscomp.inherits(a, Array);
+  return Array.isPrototypeOf(a) && Array.prototype.isPrototypeOf(a.prototype);
 };
 

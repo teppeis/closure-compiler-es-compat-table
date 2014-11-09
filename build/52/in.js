@@ -1,6 +1,6 @@
-// Unicode code point escapes
+// octal and binary literals: octal supported by Number()
 module.exports = function() {
 
-    return '\u{1d306}' == '\ud834\udf06';
-  
+        return Number('0o1') === 1;
+      
 };

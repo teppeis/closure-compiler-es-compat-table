@@ -1,6 +1,8 @@
-// shorthand methods
+// const: basic support (strict mode)
 module.exports = function() {
 
-    return ({ y() { return 2; } }).y() === 2;
-  
+        "use strict";
+        const foo = 123;
+        return (foo === 123);
+      
 };

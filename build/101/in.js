@@ -1,10 +1,12 @@
-// hoisted block-level function declaration
+// WeakSet
 module.exports = function() {
 
-    // Note: only available outside of strict mode.
-    var passed = f() === 2 && g() === 4;
-    if (true) { function f(){ return 1; } } else { function f(){ return 2; } }
-    if (false){ function g(){ return 3; } } else { function g(){ return 4; } }
-    return passed;
+    var obj1 = {}, obj2 = {};
+    var weakset = new WeakSet();
+
+    weakset.add(obj1);
+    weakset.add(obj1);
+
+    return weakset.has(obj1);
   
 };

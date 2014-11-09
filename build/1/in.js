@@ -1,9 +1,6 @@
-// arrow functions
-module.exports = function () {
-    try {
-      var a = () => 5;;
-    } catch (e) {
-      return false;
-    }
-    return true;
-  }
+// arrow functions: 0 parameters
+module.exports = function() {
+
+        return (() => 5)() === 5;
+      
+};

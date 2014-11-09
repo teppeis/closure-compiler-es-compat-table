@@ -8,12 +8,23 @@ var data = require('./compat-table/data-es6');
 
 rimraf.sync('./build');
 
-data.tests.forEach(function(test, i) {
-  var src = generateTestJsSrc(test.exec, test.name);
-  var dir = path.join(__dirname, 'build', String(i));
-  mkdirp.sync(dir);
-  fs.writeFileSync(path.join(dir, 'in.js'), '// ' + test.name + '\n' + src);
+var fileno = 0;
+data.tests.forEach(function(test) {
+  if (test.subtests) {
+    for (var subtestName in test.subtests) {
+      writeInputSrcFile(test.subtests[subtestName].exec, test.name + ': ' + subtestName);
+    }
+  } else {
+    writeInputSrcFile(test.exec, test.name);
+  }
 });
+
+function writeInputSrcFile(fn, name) {
+  var src = generateTestJsSrc(fn, name);
+  var dir = path.join(__dirname, 'build', String(fileno++));
+  mkdirp.sync(dir);
+  fs.writeFileSync(path.join(dir, 'in.js'), '// ' + name + '\n' + src);
+}
 
 function generateTestJsSrc(fn, name) {
   var expr, match;

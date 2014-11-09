@@ -31,28 +31,14 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
   a.prototype = new c;
   a.prototype.constructor = a;
-  a.base = function(a, c, f) {
-    var e = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, e);
+  a.base = function(a, c, e) {
+    var d = Array.prototype.slice.call(arguments, 2);
+    return b.prototype[c].apply(a, d);
   };
 };
 module.exports = function() {
-  var a = {}, b = {}, c = {}, d = 0;
-  a[Symbol.toPrimitive] = function(a) {
-    d += "number" === a;
-    return 0;
-  };
-  b[Symbol.toPrimitive] = function(a) {
-    d += "string" === a;
-    return 0;
-  };
-  c[Symbol.toPrimitive] = function(a) {
-    d += "default" === a;
-    return 0;
-  };
-  0 <= a;
-  b in {};
-  0 == c;
-  return 3 === d;
+  var a = new ArrayBuffer(64), a = new Uint8Array(a);
+  a[0] = 256;
+  return 0 === a[0];
 };
 

@@ -1,4 +1,7 @@
-// Function.prototype.toMethod
-module.exports = function () {
-    return typeof Function.prototype.toMethod === "function";
-  }
+// object literal extensions: computed properties
+module.exports = function() {
+
+        var x = 'y';
+        return ({ [x]: 1 }).y === 1;
+      
+};

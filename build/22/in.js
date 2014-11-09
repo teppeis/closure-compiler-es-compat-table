@@ -1,6 +1,8 @@
-// RegExp "u" flag
+// let: basic support (strict mode)
 module.exports = function() {
 
-    return "𠮷".match(/./u)[0].length === 2;
-  
+        'use strict';
+        let foo = 123;
+        return (foo === 123);
+      
 };
