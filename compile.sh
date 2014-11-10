@@ -5,7 +5,7 @@ JAVA=./node_modules/fast-closure-compiler/bin/closure
 VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
 echo $VERSION
 ERRORLOG=./result/$VERSION.error.txt
-rm $ERRORLOG
+rm -f $ERRORLOG
 
 for DIR in $(ls -I filelist.json -v ./build); do
     DIR=./build/$DIR
@@ -23,6 +23,6 @@ for DIR in $(ls -I filelist.json -v ./build); do
     fi
 done
 
-rm error
+rm -f error
 
 exit 0
