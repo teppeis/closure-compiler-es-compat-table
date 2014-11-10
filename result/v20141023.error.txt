@@ -11,7 +11,7 @@ module.exports = function() {
          ^
 
 1 error(s), 0 warning(s)
-
+--------------------------------------------------------------------------------
 // const: is block-scoped
 module.exports = function() {
 
@@ -24,7 +24,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // const: temporal dead zone
 module.exports = function() {
 
@@ -38,7 +38,7 @@ module.exports = function() {
                                         ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // const: is block-scoped (strict mode)
 module.exports = function() {
 
@@ -52,7 +52,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // const: temporal dead zone (strict mode)
 module.exports = function() {
 
@@ -67,7 +67,7 @@ module.exports = function() {
                                         ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // let: is block-scoped
 module.exports = function() {
 
@@ -80,7 +80,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // let: for-loop statement scope
 module.exports = function() {
 
@@ -97,7 +97,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 2 warning(s)
-
+--------------------------------------------------------------------------------
 // let: temporal dead zone
 module.exports = function() {
 
@@ -111,7 +111,7 @@ module.exports = function() {
                                          ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // let: is block-scoped (strict mode)
 module.exports = function() {
 
@@ -125,7 +125,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // let: for-loop statement scope (strict mode)
 module.exports = function() {
 
@@ -143,7 +143,7 @@ module.exports = function() {
                                   ^
 
 0 error(s), 2 warning(s)
-
+--------------------------------------------------------------------------------
 // let: temporal dead zone (strict mode)
 module.exports = function() {
 
@@ -158,7 +158,7 @@ module.exports = function() {
                                          ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // class: class expression
 module.exports = function() {
 
@@ -170,7 +170,7 @@ module.exports = function() {
                ^
 
 1 error(s), 0 warning(s)
-
+--------------------------------------------------------------------------------
 // super
 module.exports = function() {
 
@@ -281,7 +281,7 @@ null
 	... 48 more
 Caused by: java.lang.NullPointerException
 	... 48 more
-
+--------------------------------------------------------------------------------
 // for..of loops
 module.exports = function() {
 
@@ -295,7 +295,7 @@ module.exports = function() {
     ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // RegExp "y" and "u" flags: "y" flag
 module.exports = function() {
 
@@ -311,7 +311,7 @@ module.exports = function() {
                                     ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // Proxy: "isExtensible" handler
 module.exports = function() {
 
@@ -332,7 +332,7 @@ module.exports = function() {
         ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // Proxy: "ownKeys" handler
 module.exports = function() {
 
@@ -353,7 +353,7 @@ module.exports = function() {
         ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // Proxy: Proxy.revocable
 module.exports = function() {
 
@@ -373,7 +373,7 @@ module.exports = function() {
           ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // function "name" property: accessor properties
 module.exports = function() {
 
@@ -388,7 +388,7 @@ module.exports = function() {
                                        ^
 
 1 error(s), 0 warning(s)
-
+--------------------------------------------------------------------------------
 // function "name" property: class expressions
 module.exports = function() {
 
@@ -405,7 +405,7 @@ module.exports = function() {
                  ^
 
 2 error(s), 0 warning(s)
-
+--------------------------------------------------------------------------------
 // function "name" property: variables (class)
 module.exports = function() {
 
@@ -422,7 +422,7 @@ module.exports = function() {
                   ^
 
 1 error(s), 0 warning(s)
-
+--------------------------------------------------------------------------------
 // function "name" property: object methods (class)
 module.exports = function() {
 
@@ -502,7 +502,7 @@ null
 	... 40 more
 Caused by: java.lang.NullPointerException
 	... 40 more
-
+--------------------------------------------------------------------------------
 // Symbol: cannot coerce to string or number
 module.exports = function() {
 
@@ -531,7 +531,7 @@ module.exports = function() {
           ^
 
 0 error(s), 2 warning(s)
-
+--------------------------------------------------------------------------------
 // well-known symbols: Symbol.hasInstance
 module.exports = function() {
 
@@ -548,7 +548,7 @@ module.exports = function() {
         ^
 
 0 error(s), 1 warning(s)
-
+--------------------------------------------------------------------------------
 // well-known symbols: Symbol.toPrimitive
 module.exports = function() {
 
@@ -577,7 +577,7 @@ module.exports = function() {
         ^
 
 0 error(s), 3 warning(s)
-
+--------------------------------------------------------------------------------
 // hoisted block-level function declaration
 module.exports = function() {
 
@@ -597,4 +597,4 @@ module.exports = function() {
               ^
 
 0 error(s), 2 warning(s)
-
+--------------------------------------------------------------------------------

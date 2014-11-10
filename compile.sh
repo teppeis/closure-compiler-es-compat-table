@@ -17,7 +17,7 @@ for DIR in $(ls -I filelist.json -v ./build); do
         cat $DIR/in.js >> $ERRORLOG
         echo "" >> $ERRORLOG
         cat ./error >> $ERRORLOG
-        echo "" >> $ERRORLOG
+        echo "--------------------------------------------------------------------------------" >> $ERRORLOG
     else
         echo "- $DIR: OK"
     fi
