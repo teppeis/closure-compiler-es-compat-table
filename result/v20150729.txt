@@ -18,10 +18,7 @@ build/36/out.js: for..of loops: with strings
 build/38/out.js: for..of loops: with generator instances
 build/43/out.js: octal and binary literals: octal literals
 build/44/out.js: octal and binary literals: binary literals
-build/45/out.js: octal and binary literals: octal supported by Number()
-build/46/out.js: octal and binary literals: binary supported by Number()
 build/49/out.js: template strings: tagged template strings
-build/50/out.js: template strings: line break normalisation
 build/53/out.js: destructuring: with arrays
 build/54/out.js: destructuring: with sparse arrays
 build/55/out.js: destructuring: with strings
@@ -112,111 +109,20 @@ build/191/out.js: typed arrays: DataView (Int32)
 build/192/out.js: typed arrays: DataView (Uint32)
 build/193/out.js: typed arrays: DataView (Float32)
 build/194/out.js: typed arrays: DataView (Float64)
-build/196/out.js: typed arrays: constructors require new
-build/200/out.js: typed arrays: %TypedArray%.prototype.subarray
-build/218/out.js: typed arrays: %TypedArray%.prototype.keys
-build/219/out.js: typed arrays: %TypedArray%.prototype.values
-build/220/out.js: typed arrays: %TypedArray%.prototype.entries
-build/223/out.js: Map: basic functionality
-build/224/out.js: Map: constructor arguments
-build/225/out.js: Map: constructor requires new
-build/226/out.js: Map: constructor accepts null
-build/227/out.js: Map: constructor invokes set
-build/229/out.js: Map: Map.prototype.set returns this
-build/230/out.js: Map: -0 key converts to +0
-build/231/out.js: Map: Map.prototype.size
-build/232/out.js: Map: Map.prototype.delete
-build/233/out.js: Map: Map.prototype.clear
-build/234/out.js: Map: Map.prototype.forEach
-build/235/out.js: Map: Map.prototype.keys
-build/236/out.js: Map: Map.prototype.values
-build/237/out.js: Map: Map.prototype.entries
-build/241/out.js: Set: basic functionality
-build/242/out.js: Set: constructor arguments
-build/243/out.js: Set: constructor requires new
-build/244/out.js: Set: constructor accepts null
-build/245/out.js: Set: constructor invokes add
-build/247/out.js: Set: Set.prototype.add returns this
-build/248/out.js: Set: -0 key converts to +0
-build/249/out.js: Set: Set.prototype.size
-build/250/out.js: Set: Set.prototype.delete
-build/251/out.js: Set: Set.prototype.clear
-build/252/out.js: Set: Set.prototype.forEach
-build/253/out.js: Set: Set.prototype.keys
-build/254/out.js: Set: Set.prototype.values
-build/255/out.js: Set: Set.prototype.entries
-build/259/out.js: WeakMap: basic functionality
-build/260/out.js: WeakMap: constructor arguments
-build/261/out.js: WeakMap: constructor requires new
-build/262/out.js: WeakMap: constructor accepts null
-build/263/out.js: WeakMap: constructor invokes set
-build/264/out.js: WeakMap: frozen objects as keys
-build/266/out.js: WeakMap: WeakMap.prototype.set returns this
-build/267/out.js: WeakMap: WeakMap.prototype.delete
-build/268/out.js: WeakMap: no WeakMap.prototype.clear method
-build/269/out.js: WeakSet: basic functionality
-build/270/out.js: WeakSet: constructor arguments
-build/271/out.js: WeakSet: constructor requires new
-build/272/out.js: WeakSet: constructor accepts null
-build/273/out.js: WeakSet: constructor invokes add
-build/275/out.js: WeakSet: WeakSet.prototype.add returns this
-build/276/out.js: WeakSet: WeakSet.prototype.delete
-build/277/out.js: WeakSet: no WeakSet.prototype.clear method
-build/316/out.js: Promise: constructor requires new
 build/333/out.js: well-known symbols: Symbol.iterator, existence
 build/351/out.js: Object static methods: Object.is
-build/353/out.js: Object static methods: Object.setPrototypeOf
 build/362/out.js: function "name" property: shorthand methods (no lexical binding)
-build/371/out.js: String static methods: String.raw
-build/372/out.js: String static methods: String.fromCodePoint
-build/373/out.js: String.prototype methods: String.prototype.codePointAt
-build/375/out.js: String.prototype methods: String.prototype.repeat
-build/376/out.js: String.prototype methods: String.prototype.startsWith
-build/377/out.js: String.prototype methods: String.prototype.endsWith
-build/378/out.js: String.prototype methods: String.prototype.includes
-build/402/out.js: Array.prototype methods: Array.prototype.keys
-build/404/out.js: Array.prototype methods: Array.prototype.entries
 build/408/out.js: Number properties: Number.isFinite
-build/409/out.js: Number properties: Number.isInteger
-build/410/out.js: Number properties: Number.isSafeInteger
 build/411/out.js: Number properties: Number.isNaN
-build/412/out.js: Number properties: Number.EPSILON
-build/413/out.js: Number properties: Number.MIN_SAFE_INTEGER
-build/414/out.js: Number properties: Number.MAX_SAFE_INTEGER
-build/415/out.js: Math methods: Math.clz32
-build/416/out.js: Math methods: Math.imul
-build/417/out.js: Math methods: Math.sign
-build/418/out.js: Math methods: Math.log10
-build/419/out.js: Math methods: Math.log2
-build/420/out.js: Math methods: Math.log1p
-build/421/out.js: Math methods: Math.expm1
-build/422/out.js: Math methods: Math.cosh
-build/423/out.js: Math methods: Math.sinh
-build/424/out.js: Math methods: Math.tanh
-build/425/out.js: Math methods: Math.acosh
-build/426/out.js: Math methods: Math.asinh
-build/427/out.js: Math methods: Math.atanh
-build/428/out.js: Math methods: Math.trunc
-build/429/out.js: Math methods: Math.fround
-build/430/out.js: Math methods: Math.cbrt
-build/431/out.js: Math methods: Math.hypot
-build/530/out.js: Object static methods accept primitives: Object.getOwnPropertyNames
-build/537/out.js: Object static methods accept primitives: Object.keys
 build/538/out.js: own property order: for..in
 build/539/out.js: own property order: Object.keys
-build/540/out.js: own property order: Object.getOwnPropertyNames
 build/542/out.js: own property order: JSON.stringify
 build/543/out.js: own property order: JSON.parse
 build/546/out.js: miscellaneous: no semicolon needed after do-while
 build/549/out.js: miscellaneous: Invalid Date
 build/554/out.js: non-strict function semantics: labeled function statements
-build/557/out.js: __proto__ in object literals: multiple __proto__ is an error
 build/561/out.js: Object.prototype.__proto__: get prototype
 build/562/out.js: Object.prototype.__proto__: set prototype
-build/563/out.js: Object.prototype.__proto__: absent from Object.create(null)
-build/564/out.js: Object.prototype.__proto__: present in hasOwnProperty()
-build/565/out.js: Object.prototype.__proto__: correct property descriptor
-build/566/out.js: Object.prototype.__proto__: present in Object.getOwnPropertyNames()
 build/567/out.js: String.prototype HTML methods: existence
 build/568/out.js: String.prototype HTML methods: tags' names are lowercase
 build/569/out.js: String.prototype HTML methods: quotes in arguments are escaped
