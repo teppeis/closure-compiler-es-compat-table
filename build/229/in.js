@@ -1,11 +1,7 @@
-// String.prototype HTML methods
-module.exports = function () {
-    var i, names = ["anchor", "big", "bold", "fixed", "fontcolor", "fontsize",
-      "italics", "link", "small", "strike", "sub", "sup"];
-    for (i = 0; i < names.length; i++) {
-      if (typeof String.prototype[names[i]] !== 'function') {
-        return false;
-      }
-    }
-    return true;
-  }
+// Map: Map.prototype.set returns this
+module.exports = function() {
+
+        var map = new Map();
+        return map.set(0, 0) === map;
+      
+};

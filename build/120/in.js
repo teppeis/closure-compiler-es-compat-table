@@ -1,6 +1,8 @@
-// Reflect: Reflect.deleteProperty
+// arrow functions: correct precedence
 module.exports = function() {
 
-  return typeof Reflect.deleteProperty === "function";
-
+        return (() => {
+          try { Function("0 || () => 2")(); } catch(e) { return true; }
+        })();
+      
 };

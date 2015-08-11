@@ -1,4 +1,8 @@
-// RegExp.prototype methods: RegExp.prototype.split
-module.exports = function () {
-        return typeof RegExp.prototype.split === 'function';
-      }
+// typed arrays: Uint32Array
+module.exports = function() {
+
+        var buffer = new ArrayBuffer(64);
+        var view = new Uint32Array(buffer);       view[0] = 0x100000000;
+        return view[0] === 0;
+      
+};

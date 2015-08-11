@@ -1,14 +1,13 @@
-// typed arrays: %TypedArray%.prototype.copyWithin
+// new.target: in constructors
 module.exports = function() {
 
-  return typeof Int8Array.prototype.copyWithin === "function" &&
-    typeof Uint8Array.prototype.copyWithin === "function" &&
-    typeof Uint8ClampedArray.prototype.copyWithin === "function" &&
-    typeof Int16Array.prototype.copyWithin === "function" &&
-    typeof Uint16Array.prototype.copyWithin === "function" &&
-    typeof Int32Array.prototype.copyWithin === "function" &&
-    typeof Uint32Array.prototype.copyWithin === "function" &&
-    typeof Float32Array.prototype.copyWithin === "function" &&
-    typeof Float64Array.prototype.copyWithin === "function";
-
+        var passed = false;
+        new function f() {
+          passed = (new.target === f);
+        }();
+        (function() {
+          passed &= (new.target === undefined);
+        }());
+        return passed;
+      
 };

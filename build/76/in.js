@@ -1,14 +1,9 @@
-// typed arrays: %TypedArray%.of
+// destructuring: in parameters, new Function() support
 module.exports = function() {
 
-  return typeof Int8Array.of === "function" &&
-    typeof Uint8Array.of === "function" &&
-    typeof Uint8ClampedArray.of === "function" &&
-    typeof Int16Array.of === "function" &&
-    typeof Uint16Array.of === "function" &&
-    typeof Int32Array.of === "function" &&
-    typeof Uint32Array.of === "function" &&
-    typeof Float32Array.of === "function" &&
-    typeof Float64Array.of === "function";
-
+        return new Function("{a, x:b, y:e}","[c, d]",
+          "return a === 1 && b === 2 && c === 3 && "
+          + "d === 4 && e === undefined;"
+        )({a:1, x:2}, [3, 4]);
+      
 };

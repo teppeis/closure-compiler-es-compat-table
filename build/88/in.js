@@ -1,14 +1,8 @@
-// typed arrays: %TypedArray%.prototype.reverse
+// destructuring: defaults in parameters, new Function() support
 module.exports = function() {
 
-  return typeof Int8Array.prototype.reverse === "function" &&
-    typeof Uint8Array.prototype.reverse === "function" &&
-    typeof Uint8ClampedArray.prototype.reverse === "function" &&
-    typeof Int16Array.prototype.reverse === "function" &&
-    typeof Uint16Array.prototype.reverse === "function" &&
-    typeof Int32Array.prototype.reverse === "function" &&
-    typeof Uint32Array.prototype.reverse === "function" &&
-    typeof Float32Array.prototype.reverse === "function" &&
-    typeof Float64Array.prototype.reverse === "function";
-
+        return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
+          "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
+        )({b:2, c:undefined, x:4});
+      
 };

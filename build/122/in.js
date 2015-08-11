@@ -1,6 +1,17 @@
-// Reflect: Reflect.getPrototypeOf
+// arrow functions: lexical "super" binding
 module.exports = function() {
 
-  return typeof Reflect.getPrototypeOf === "function";
-
+        class B {
+          qux() {
+            return "quux";
+          }
+        }
+        class C extends B {
+          baz() {
+            return x => super.qux();
+          }
+        }
+        var arrow = new C().baz();
+        return arrow() === "quux";
+      
 };

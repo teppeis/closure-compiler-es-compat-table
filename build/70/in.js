@@ -1,9 +1,14 @@
-// typed arrays: DataView (Uint16)
+// destructuring: throws on null and undefined
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new DataView(buffer);
-        view.setUint16(0, 0x10000); 
-        return view.getUint16(0) === 0;
+        try {
+          var {a} = null;
+          return false;
+        } catch(e) {}
+        try {
+          var {b} = undefined;
+          return false;
+        } catch(e) {}
+        return true;
       
 };

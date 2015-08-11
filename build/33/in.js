@@ -1,6 +1,13 @@
-// spread (...) operator: with arrays, in array literals
+// object literal extensions: computed accessors
 module.exports = function() {
 
-       return [...[1, 2, 3]][2] === 3;
+        var x = 'y',
+            valueSet,
+            obj = {
+              get [x] () { return 1 },
+              set [x] (value) { valueSet = value }
+            };
+        obj.y = 'foo';
+        return obj.y === 1 && valueSet === 'foo';
       
 };

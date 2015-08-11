@@ -1,10 +1,14 @@
-// function "name" property: object methods (class)
+// super: constructor calls use correct "new.target" binding
 module.exports = function() {
 
-        var o = { foo: class {}, bar: class baz {}};
-        o.qux = class {};
-        return o.foo.name === "foo" &&
-               o.bar.name === "baz" &&
-               o.qux.name === "qux";
+        var passed;
+        class B {
+          constructor() { passed = (new.target === C); }
+        }
+        class C extends B {
+          constructor() { super(); }
+        }
+        new C();
+        return passed;
       
 };

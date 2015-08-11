@@ -1,10 +1,10 @@
-// function "name" property: object methods (function)
+// class: extends null
 module.exports = function() {
 
-        var o = { foo: function(){}, bar: function baz(){}};
-        o.qux = function(){};
-        return o.foo.name === "foo" &&
-               o.bar.name === "baz" &&
-               o.qux.name === "qux";
+        class C extends null {
+          constructor() { return Object.create(null); }
+        }
+        return Function.prototype.isPrototypeOf(C)
+          && Object.getPrototypeOf(C.prototype) === null;
       
 };

@@ -1,9 +1,18 @@
-// well-known symbols: Symbol.isConcatSpreadable
+// generators: shorthand generator methods, classes
 module.exports = function() {
 
-        var a = [], b = [];
-        b[Symbol.isConcatSpreadable] = false;
-        a = a.concat(b);
-        return a[0] === b;
+        class C {
+          * generator() {
+            yield 5; yield 6;
+          }
+        };
+        var iterator = new C().generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
       
 };

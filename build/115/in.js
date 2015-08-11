@@ -1,14 +1,8 @@
-// Proxy: "construct" handler
+// arrow functions: lexical "this" binding
 module.exports = function() {
 
-        var proxied = function(){};
-        var passed = false;
-        new new Proxy(proxied, {
-          construct: function (t, args) {
-            passed = t === proxied && args + "" === "foo,bar";
-            return {};
-          }
-        })("foo","bar");
-        return passed;
+        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+        var e = { x : "baz", y : d };
+        return d("ley") === "barley" && e.y("ley") === "barley";
       
 };

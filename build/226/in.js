@@ -1,7 +1,7 @@
-// Object.prototype.__proto__: get prototype
+// Map: constructor accepts null
 module.exports = function() {
 
-        var A = function(){};
-        return (new A()).__proto__ === A.prototype;
+        new Map(null);
+        return true;
       
 };

@@ -1,7 +1,6 @@
-// let: basic support
+// spread (...) operator: with strings, in function calls
 module.exports = function() {
 
-        let foo = 123;
-        return (foo === 123);
+       return Math.max(..."1234") === 4;
       
 };

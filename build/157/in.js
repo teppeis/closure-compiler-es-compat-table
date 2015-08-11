@@ -1,6 +1,14 @@
-// String static methods: String.raw
+// generators: can't use "this" with new
 module.exports = function() {
 
-        return typeof String.raw === 'function';
+        function * generator(){
+          yield this.x; yield this.y;
+        };
+        try {
+          (new generator()).next();
+        }
+        catch (e) {
+          return true;
+        }
       
 };

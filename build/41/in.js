@@ -1,8 +1,11 @@
-// class: extends
+// for..of loops: iterator closing, break
 module.exports = function() {
 
-        class C extends Array {}
-        return Array.isPrototypeOf(C)
-          && Array.prototype.isPrototypeOf(C.prototype);
+        var closed = false;
+        var iter = __createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
+        for (var it of iter) break;
+        return closed;
       
 };

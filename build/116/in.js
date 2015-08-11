@@ -1,14 +1,8 @@
-// Proxy: Proxy.revocable
+// arrow functions: "this" unchanged by call or apply
 module.exports = function() {
 
-        var obj = Proxy.revocable({}, { get: function() { return 5; } });
-        var passed = (obj.proxy.foo === 5);
-        obj.revoke();
-        try {
-          obj.proxy.foo;
-        } catch(e) {
-          passed &= e instanceof TypeError;
-        }
-        return passed;
+        var d = { x : "foo", y : function() { return () => this.x; }};
+        var e = { x : "bar" };
+        return d.y().call(e) === "foo" && d.y().apply(e) === "foo";
       
 };

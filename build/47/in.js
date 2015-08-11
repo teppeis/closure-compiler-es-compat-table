@@ -1,16 +1,8 @@
-// generators: basic functionality
+// template strings: basic functionality
 module.exports = function() {
 
-        function* generator(){
-          yield 5; yield 6;
-        };
-        var iterator = generator();
-        var item = iterator.next();
-        var passed = item.value === 5 && item.done === false;
-        item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
-        item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
-        return passed;
+        var a = "ba", b = "QUX";
+        return `foo bar
+        ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
       
 };

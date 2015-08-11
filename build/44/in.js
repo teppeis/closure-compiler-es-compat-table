@@ -1,7 +1,6 @@
-// object literal extensions: shorthand properties
+// octal and binary literals: binary literals
 module.exports = function() {
 
-        var a = 7, b = 8, c = {a,b};
-        return c.a === 7 && c.b === 8;
+        return 0b10 === 2 && 0B10 === 2;
       
 };

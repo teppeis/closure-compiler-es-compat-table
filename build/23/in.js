@@ -1,8 +1,7 @@
-// let: is block-scoped (strict mode)
+// spread (...) operator: with generic iterables, in calls
 module.exports = function() {
 
-        'use strict';
-        { let bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+        var iterable = global.__createIterableObject([1, 2, 3]);
+        return Math.max(...iterable) === 3;
       
 };

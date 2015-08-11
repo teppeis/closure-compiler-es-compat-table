@@ -1,9 +1,11 @@
-// Object static methods: Object.getOwnPropertySymbols
+// class: class name is lexically scoped
 module.exports = function() {
 
-        var o = {};
-        var sym = Symbol();
-        o[sym] = "foo";
-        return Object.getOwnPropertySymbols(o)[0] === sym;
+        class C {
+          method() { return typeof C === "function"; }
+        }
+        var M = C.prototype.method;
+        C = undefined;
+        return C === undefined && M();
       
 };

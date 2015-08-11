@@ -1,14 +1,9 @@
-// typed arrays: %TypedArray%.from
+// destructuring: in parameters, 'arguments' interaction
 module.exports = function() {
 
-  return typeof Int8Array.from === "function" &&
-    typeof Uint8Array.from === "function" &&
-    typeof Uint8ClampedArray.from === "function" &&
-    typeof Int16Array.from === "function" &&
-    typeof Uint16Array.from === "function" &&
-    typeof Int32Array.from === "function" &&
-    typeof Uint32Array.from === "function" &&
-    typeof Float32Array.from === "function" &&
-    typeof Float64Array.from === "function";
-
+        return (function({a, x:b, y:e}, [c, d]) {
+          return arguments[0].a === 1 && arguments[0].x === 2
+            && !("y" in arguments[0]) && arguments[1] + '' === "3,4";
+        }({a:1, x:2}, [3, 4]));
+      
 };

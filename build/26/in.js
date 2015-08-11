@@ -1,18 +1,7 @@
-// let: for-loop iteration scope (strict mode)
+// spread (...) operator: with instances of iterables, in arrays
 module.exports = function() {
 
-        'use strict';
-        let scopes = [];
-        for(let i = 0; i < 2; i++) {
-          scopes.push(function(){ return i; });
-        }
-        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
-        
-        scopes = [];
-        for(let i in { a:1, b:1 }) {
-          scopes.push(function(){ return i; });
-        }
-        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
-        return passed;
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
+        return ["a", ...Object.create(iterable), "e"][3] === "d";
       
 };

@@ -1,8 +1,10 @@
-// typed arrays: Uint32Array
+// destructuring: with objects
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Uint32Array(buffer);       view[0] = 0x100000000;
-        return view[0] === 0;
+        var {c, x:d, e} = {c:7, x:8};
+        var f, g;
+        ({f,g} = {f:9,g:10});
+        return c === 7 && d === 8 && e === undefined
+          && f === 9 && g === 10;
       
 };

@@ -1,20 +1,6 @@
-// default function parameters: temporal dead zone
+// object literal extensions: shorthand methods
 module.exports = function() {
 
-        return (function(x = 1) {
-          try {
-            eval("(function(a=a){}())"); 
-            return false;
-          } catch(e) {}
-          try {
-            eval("(function(a=b,b){}())"); 
-            return false;
-          } catch(e) {}
-          try {
-            eval("(function(a=function(){ return b; }){ var b = 1;}())"); 
-            return false;
-          } catch(e) {}
-          return true;
-        }());
+        return ({ y() { return 2; } }).y() === 2;
       
 };

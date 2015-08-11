@@ -1,8 +1,10 @@
-// function "name" property: function statements
+// class: methods aren't enumerable
 module.exports = function() {
 
-        function foo(){};
-        return foo.name === 'foo' &&
-          (function(){}).name === '';
+        class C {
+          foo() {}
+          static bar() {}
+        }
+        return !C.prototype.propertyIsEnumerable("foo") && !C.propertyIsEnumerable("bar");
       
 };

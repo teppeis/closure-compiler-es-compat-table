@@ -1,19 +1,18 @@
-// Symbol: cannot coerce to string or number
+// generators: yield * on non-iterables is a runtime error
 module.exports = function() {
 
-        var symbol = Symbol();
-        
+        var iterator = (function * generator() {
+          yield * [5];
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        iterator = (function * generator() {
+          yield * 5;
+        }());
         try {
-          symbol + "";
-          return false;
+          iterator.next();
+        } catch (e) {
+          return passed;
         }
-        catch(e) {}
-        
-        try {
-          symbol + 0;
-          return false;
-        } catch(e) {}
-        
-        return true;
       
 };

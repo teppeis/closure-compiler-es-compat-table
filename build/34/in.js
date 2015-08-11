@@ -1,6 +1,8 @@
-// spread (...) operator: with strings, in function calls
+// for..of loops: with arrays
 module.exports = function() {
 
-       return Math.max(..."1234") === 4;
+        var arr = [5];
+        for (var item of arr)
+          return item === 5;
       
 };

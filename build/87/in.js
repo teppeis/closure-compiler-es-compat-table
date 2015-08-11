@@ -1,14 +1,11 @@
-// typed arrays: %TypedArray%.prototype.reduceRight
+// destructuring: defaults in parameters, separate scope
 module.exports = function() {
 
-  return typeof Int8Array.prototype.reduceRight === "function" &&
-    typeof Uint8Array.prototype.reduceRight === "function" &&
-    typeof Uint8ClampedArray.prototype.reduceRight === "function" &&
-    typeof Int16Array.prototype.reduceRight === "function" &&
-    typeof Uint16Array.prototype.reduceRight === "function" &&
-    typeof Int32Array.prototype.reduceRight === "function" &&
-    typeof Uint32Array.prototype.reduceRight === "function" &&
-    typeof Float32Array.prototype.reduceRight === "function" &&
-    typeof Float64Array.prototype.reduceRight === "function";
-
+        return (function({a=function(){
+          return typeof b === 'undefined';
+        }}){
+          var b = 1;
+          return a();
+        }({}));
+      
 };

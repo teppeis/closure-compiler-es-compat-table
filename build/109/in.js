@@ -1,17 +1,11 @@
-// Proxy: "setPrototypeOf" handler
+// let: temporal dead zone (strict mode)
 module.exports = function() {
 
-        var proxied = {};
-        var newProto = {};
-        var passed = false;
-        Object.setPrototypeOf(
-          new Proxy(proxied, {
-            setPrototypeOf: function (t, p) {
-              passed = t === proxied && p === newProto;
-            }
-          }),
-          newProto
-        );
+        'use strict';
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
+        let qux = 456;
+        fn();
         return passed;
       
 };

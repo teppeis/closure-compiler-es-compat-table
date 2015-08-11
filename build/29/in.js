@@ -1,6 +1,7 @@
-// default function parameters: defaults can refer to previous params
+// object literal extensions: shorthand properties
 module.exports = function() {
 
-        return (function (a, b = a) { return b === 5; }(5));
+        var a = 7, b = 8, c = {a,b};
+        return c.a === 7 && c.b === 8;
       
 };

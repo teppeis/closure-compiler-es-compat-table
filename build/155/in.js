@@ -1,9 +1,16 @@
-// function "name" property: isn't writable, is configurable
+// generators: generator function expressions
 module.exports = function() {
 
-        var descriptor = Object.getOwnPropertyDescriptor(function(){},"name");
-        return descriptor.enumerable   === false &&
-               descriptor.writable     === false &&
-               descriptor.configurable === true;
+        var generator = function * (){
+          yield 5; yield 6;
+        };
+        var iterator = generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
       
 };

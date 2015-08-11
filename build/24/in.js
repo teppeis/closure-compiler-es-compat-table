@@ -1,8 +1,7 @@
-// let: for-loop statement scope (strict mode)
+// spread (...) operator: with generic iterables, in arrays
 module.exports = function() {
 
-        'use strict';
-        for(let baz = 0; false;) {}
-        return (function(){ try { baz; } catch(e) { return true; }}());
+        var iterable = global.__createIterableObject(["b", "c", "d"]);
+        return ["a", ...iterable, "e"][3] === "d";
       
 };

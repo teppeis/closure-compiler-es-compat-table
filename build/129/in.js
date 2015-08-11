@@ -1,7 +1,10 @@
-// destructuring: object destructuring
+// class: prototype methods
 module.exports = function() {
 
-        var {c, x:d, e} = {c:7, x:8};
-        return c === 7 && d === 8 && e === undefined;
+        class C {
+          method() { return 2; }
+        }
+        return typeof C.prototype.method === "function"
+          && new C().method() === 2;
       
 };

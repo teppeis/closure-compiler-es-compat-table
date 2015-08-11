@@ -1,7 +1,6 @@
-// object literal extensions: computed properties
+// octal and binary literals: octal literals
 module.exports = function() {
 
-        var x = 'y';
-        return ({ [x]: 1 }).y === 1;
+        return 0o10 === 8 && 0O10 === 8;
       
 };

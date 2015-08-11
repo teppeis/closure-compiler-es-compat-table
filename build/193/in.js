@@ -1,6 +1,9 @@
-// Array.prototype methods: Array.prototype.values
+// typed arrays: DataView (Float32)
 module.exports = function() {
 
-        return typeof Array.prototype.values === 'function';
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setFloat32(0, 0.1);
+        return view.getFloat32(0) === 0.10000000149011612;
       
 };

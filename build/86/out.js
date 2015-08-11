@@ -1,42 +1,13 @@
-var $jscomp = {scope:{}}, $jscomp = $jscomp || {};
-$jscomp.IteratorResult = function() {
-};
-$jscomp.Iterator = function() {
-};
-$jscomp.Iterable = function() {
-};
-$jscomp.Iterable.prototype.$$iterator = function() {
-};
-$jscomp.makeIterator = function(a) {
-  if (a.$$iterator) {
-    return a.$$iterator();
-  }
-  if (!(a instanceof Array)) {
-    throw Error();
-  }
-  var b = 0;
-  return{next:function() {
-    return b == a.length ? {done:!0} : {done:!1, value:a[b++]};
-  }};
-};
-$jscomp.copyProperties = function(a, b) {
-  for (var c in b) {
-    a[c] = b[c];
-  }
-};
-$jscomp.inherits = function(a, b) {
-  function c() {
-  }
-  c.prototype = b.prototype;
-  a.superClass_ = b.prototype;
-  a.prototype = new c;
-  a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
-  };
-};
 module.exports = function() {
-  return "function" === typeof Int8Array.prototype.reduce && "function" === typeof Uint8Array.prototype.reduce && "function" === typeof Uint8ClampedArray.prototype.reduce && "function" === typeof Int16Array.prototype.reduce && "function" === typeof Uint16Array.prototype.reduce && "function" === typeof Int32Array.prototype.reduce && "function" === typeof Uint32Array.prototype.reduce && "function" === typeof Float32Array.prototype.reduce && "function" === typeof Float64Array.prototype.reduce;
+  var a = {a:1}, b = a.a, a = void 0 === a.b ? 2 : a.b;
+  try {
+    return eval("let {c = c} = {};"), !1;
+  } catch (c) {
+  }
+  try {
+    return eval("let {c = d, d} = {d:1};"), !1;
+  } catch (d) {
+  }
+  return 1 === b && 2 === a;
 };
 

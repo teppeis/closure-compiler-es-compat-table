@@ -1,9 +1,9 @@
-// typed arrays: DataView (Float64)
+// destructuring: in parameters
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new DataView(buffer);
-        view.setFloat64(0, 0.1); 
-        return view.getFloat64(0) === 0.1;
+        return (function({a, x:b, y:e}, [c, d]) {
+          return a === 1 && b === 2 && c === 3 &&
+            d === 4 && e === undefined;
+        }({a:1, x:2}, [3, 4]));
       
 };

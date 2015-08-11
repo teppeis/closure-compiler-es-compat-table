@@ -1,8 +1,8 @@
-// typed arrays: Uint16Array
+// destructuring: chained iterable destructuring
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Uint16Array(buffer);       view[0] = 0x10000;
-        return view[0] === 0;
+        var a,b,c,d;
+        [a,b] = [c,d] = [1,2];
+        return a === 1 && b === 2 && c === 1 && d === 2;
       
 };

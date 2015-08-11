@@ -1,6 +1,7 @@
-// Reflect: Reflect.construct
+// arrow functions: lexical "arguments" binding
 module.exports = function() {
 
-  return typeof Reflect.construct === "function";
-
+        var f = (function() { return z => arguments[0]; }(5));
+        return f(6) === 5;
+      
 };

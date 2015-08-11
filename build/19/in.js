@@ -1,7 +1,6 @@
-// let: for-loop statement scope
+// spread (...) operator: with astral plane strings, in function calls
 module.exports = function() {
 
-        for(let baz = 0; false;) {}
-        return (function(){ try { baz; } catch(e) { return true; }}());
+       return Array(..."𠮷𠮶")[0] === "𠮷";
       
 };

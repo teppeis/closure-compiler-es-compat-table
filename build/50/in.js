@@ -1,6 +1,11 @@
-// octal and binary literals: octal literals
+// template strings: line break normalisation
 module.exports = function() {
 
-        return 0o10 === 8 && 0O10 === 8;
+        var cr   = eval("`x" + String.fromCharCode(13)    + "y`");
+        var lf   = eval("`x" + String.fromCharCode(10)    + "y`");
+        var crlf = eval("`x" + String.fromCharCode(13,10) + "y`");
+
+        return cr.length === 3 && lf.length === 3 && crlf.length === 3
+          && cr[1] === lf[1] && lf[1] === crlf[1] && crlf[1] === '\n';
       
 };

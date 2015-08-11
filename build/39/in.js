@@ -1,11 +1,11 @@
-// class: prototype methods
+// for..of loops: with generic iterables
 module.exports = function() {
 
-        class C {
-          constructor() {}
-          method() { return 2; }
+        var result = "";
+        var iterable = global.__createIterableObject([1, 2, 3]);
+        for (var item of iterable) {
+          result += item;
         }
-        return typeof C.prototype.method === "function"
-          && new C().method() === 2;
+        return result === "123";
       
 };

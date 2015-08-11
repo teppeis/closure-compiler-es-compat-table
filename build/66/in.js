@@ -1,8 +1,7 @@
-// typed arrays: Float64Array
+// destructuring: trailing commas in object patterns
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Float64Array(buffer);       view[0] = 0.1;
-        return view[0] === 0.1;
+        var {a,} = {a:1};
+        return a === 1;
       
 };

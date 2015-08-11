@@ -1,6 +1,7 @@
-// Reflect: Reflect.isExtensible
+// class: class statement
 module.exports = function() {
 
-  return typeof Reflect.isExtensible === "function";
-
+        class C {}
+        return typeof C === "function";
+      
 };

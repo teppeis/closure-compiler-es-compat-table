@@ -1,7 +1,8 @@
-// arrow functions: no "prototype" and "name" properties
+// rest parameters: basic functionality
 module.exports = function() {
 
-        var a = () => 5;
-        return !a.hasOwnProperty("prototype") && a.name === ""; 
+        return (function (foo, ...args) {
+          return args instanceof Array && args + "" === "bar,baz";
+        }("foo", "bar", "baz"));
       
 };

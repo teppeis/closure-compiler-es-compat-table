@@ -1,11 +1,14 @@
-// __proto__ in object literals: multiple __proto__ is an error
+// typed arrays: %TypedArray%.prototype[Symbol.iterator]
 module.exports = function() {
 
-        try {
-          eval("({ __proto__ : [], __proto__: {} })");
-        }
-        catch(e) {
-          return true;
-        }
-      
+  return typeof Int8Array.prototype[Symbol.iterator] === "function" &&
+    typeof Uint8Array.prototype[Symbol.iterator] === "function" &&
+    typeof Uint8ClampedArray.prototype[Symbol.iterator] === "function" &&
+    typeof Int16Array.prototype[Symbol.iterator] === "function" &&
+    typeof Uint16Array.prototype[Symbol.iterator] === "function" &&
+    typeof Int32Array.prototype[Symbol.iterator] === "function" &&
+    typeof Uint32Array.prototype[Symbol.iterator] === "function" &&
+    typeof Float32Array.prototype[Symbol.iterator] === "function" &&
+    typeof Float64Array.prototype[Symbol.iterator] === "function";
+
 };

@@ -1,8 +1,6 @@
-// for..of loops
+// octal and binary literals: binary supported by Number()
 module.exports = function() {
 
-    var arr = [5];
-    for (var item of arr)
-      return item === 5;
-  
+        return Number('0b1') === 1;
+      
 };

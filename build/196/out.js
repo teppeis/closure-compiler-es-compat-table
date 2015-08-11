@@ -1,42 +1,13 @@
-var $jscomp = {scope:{}}, $jscomp = $jscomp || {};
-$jscomp.IteratorResult = function() {
-};
-$jscomp.Iterator = function() {
-};
-$jscomp.Iterable = function() {
-};
-$jscomp.Iterable.prototype.$$iterator = function() {
-};
-$jscomp.makeIterator = function(a) {
-  if (a.$$iterator) {
-    return a.$$iterator();
-  }
-  if (!(a instanceof Array)) {
-    throw Error();
-  }
-  var b = 0;
-  return{next:function() {
-    return b == a.length ? {done:!0} : {done:!1, value:a[b++]};
-  }};
-};
-$jscomp.copyProperties = function(a, b) {
-  for (var c in b) {
-    a[c] = b[c];
-  }
-};
-$jscomp.inherits = function(a, b) {
-  function c() {
-  }
-  c.prototype = b.prototype;
-  a.superClass_ = b.prototype;
-  a.prototype = new c;
-  a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
-  };
-};
 module.exports = function() {
-  return "function" === typeof Number.isFinite;
+  for (var c = new ArrayBuffer(64), b = "ArrayBuffer DataView Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), a = 0;a < b.length;a += 1) {
+    try {
+      if (b[a] in global) {
+        global[b[a]]("ArrayBuffer" === b[a] ? 64 : c);
+      }
+      return !1;
+    } catch (d) {
+    }
+  }
+  return !0;
 };
 

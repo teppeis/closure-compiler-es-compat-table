@@ -1,6 +1,6 @@
-// Reflect: Reflect.setPrototypeOf
+// class: class expression
 module.exports = function() {
 
-  return typeof Reflect.setPrototypeOf === "function";
-
+        return typeof class C {} === "function";
+      
 };

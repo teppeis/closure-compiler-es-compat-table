@@ -1,7 +1,6 @@
-// arrow functions: 1 parameter, no brackets
+// default function parameters: basic functionality
 module.exports = function() {
 
-        var b = x => x + "foo";
-        return (b("fee fie foe ") === "fee fie foe foo");
+        return (function (a = 1, b = 2) { return a === 3 && b === 2; }(3));
       
 };

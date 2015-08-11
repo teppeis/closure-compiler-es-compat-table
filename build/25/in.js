@@ -1,9 +1,7 @@
-// let: temporal dead zone (strict mode)
+// spread (...) operator: with instances of iterables, in calls
 module.exports = function() {
 
-        'use strict';
-        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
-        let qux = 456;
-        return passed;
+        var iterable = global.__createIterableObject([1, 2, 3]);
+        return Math.max(...Object.create(iterable)) === 3;
       
 };

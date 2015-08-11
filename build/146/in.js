@@ -1,9 +1,18 @@
-// function "name" property: accessor properties
+// class: new.target
 module.exports = function() {
 
-        var o = { get foo(){}, set foo(){} };
-        var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
-        return descriptor.get.name === "get foo" &&
-               descriptor.get.name === "set foo";
+        var passed = false;
+        new function f() {
+          passed = new.target === f;
+        }();
+
+        class A {
+          constructor() {
+            passed &= new.target === B;
+          }
+        }
+        class B extends A {}
+        new B();
+        return passed;
       
 };

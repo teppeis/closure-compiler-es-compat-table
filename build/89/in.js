@@ -1,14 +1,6 @@
-// typed arrays: %TypedArray%.prototype.some
+// Unicode code point escapes: in strings
 module.exports = function() {
 
-  return typeof Int8Array.prototype.some === "function" &&
-    typeof Uint8Array.prototype.some === "function" &&
-    typeof Uint8ClampedArray.prototype.some === "function" &&
-    typeof Int16Array.prototype.some === "function" &&
-    typeof Uint16Array.prototype.some === "function" &&
-    typeof Int32Array.prototype.some === "function" &&
-    typeof Uint32Array.prototype.some === "function" &&
-    typeof Float32Array.prototype.some === "function" &&
-    typeof Float64Array.prototype.some === "function";
-
+        return '\u{1d306}' == '\ud834\udf06';
+      
 };

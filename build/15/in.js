@@ -1,12 +1,7 @@
-// const: redefining a const (strict mode)
+// spread (...) operator: with sparse arrays, in function calls
 module.exports = function() {
 
-        'use strict';
-        const baz = 1;
-        try {
-          Function("'use strict'; const foo = 1; foo = 2;")();
-        } catch(e) {
-          return true;
-        }
+        var a = Array(...[,,]);
+        return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
       
 };

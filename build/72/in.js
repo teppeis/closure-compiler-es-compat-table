@@ -1,9 +1,7 @@
-// typed arrays: DataView (Uint32)
+// destructuring: multiples in a single var statement
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new DataView(buffer);
-        view.setUint32(0, 0x100000000); 
-        return view.getUint32(0) === 0;
+        var [a,b] = [5,6], {c,d} = {c:7,d:8};
+        return a === 5 && b === 6 && c === 7 && d === 8;
       
 };

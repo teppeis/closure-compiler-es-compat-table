@@ -1,13 +1,9 @@
-// Proxy: "getPrototypeOf" handler
+// let: for-loop statement scope (strict mode)
 module.exports = function() {
 
-        var proxied = {};
-        var fakeProto = {};
-        var proxy = new Proxy(proxied, {
-          getPrototypeOf: function (t) {
-            return t === proxied && fakeProto;
-          }
-        });
-        return Object.getPrototypeOf(proxy) === fakeProto;
+        'use strict';
+        let baz = 1;
+        for(let baz = 0; false; false) {}
+        return baz === 1;
       
 };

@@ -1,6 +1,12 @@
-// function "name" property: new Function
+// class: constructor requires new
 module.exports = function() {
 
-        return (new Function).name === "anonymous";
+        class C {}
+        try {
+          C();
+        }
+        catch(e) {
+          return true;
+        }
       
 };

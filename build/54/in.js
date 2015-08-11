@@ -1,8 +1,7 @@
-// template strings: basic functionality
+// destructuring: with sparse arrays
 module.exports = function() {
 
-        var a = "ba", b = "QUX";
-        return `foo bar
-        ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
+        var [a, b] = [,,];
+        return a === undefined && b === undefined;
       
 };

@@ -1,18 +1,17 @@
-// Symbol: symbol keys are hidden to pre-ES6 code
+// generators: yield *, generic iterables
 module.exports = function() {
 
-        var object = {};
-        var symbol = Symbol();
-        object[symbol] = 1;
-        
-        for (var x in object){}
-        var passed = (x !== symbol);
-        
-        if (Object.keys && Object.getOwnPropertyNames) {
-          passed &= Object.keys(object).length === 0
-            && Object.getOwnPropertyNames(object).length === 0;
-        }
-        
+        var iterator = (function * generator() {
+          yield * global.__createIterableObject([5, 6, 7]);
+        }());
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 7 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
         return passed;
       
 };

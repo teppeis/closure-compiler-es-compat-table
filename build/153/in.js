@@ -1,7 +1,16 @@
-// function "name" property: class prototype methods
+// super: is statically bound
 module.exports = function() {
 
-        class C { foo(){} };
-        return (new C).foo.name === "foo";
+        class B {
+          qux() { return "bar"; }
+        }
+        class C extends B {
+          qux() { return super.qux() + this.corge; }
+        }
+        var obj = {
+          qux: C.prototype.qux,
+          corge: "ley"
+        };
+        return obj.qux() === "barley";
       
 };

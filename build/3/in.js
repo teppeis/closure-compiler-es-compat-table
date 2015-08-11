@@ -1,7 +1,6 @@
-// arrow functions: multiple parameters
+// default function parameters: explicit undefined defers to the default
 module.exports = function() {
 
-        var c = (v, w, x, y, z) => "" + v + w + x + y + z;
-        return (c(6, 5, 4, 3, 2) === "65432");
+        return (function (a = 1, b = 2) { return a === 1 && b === 3; }(undefined, 3));
       
 };

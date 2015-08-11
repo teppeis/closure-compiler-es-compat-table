@@ -1,8 +1,6 @@
-// const: is block-scoped (strict mode)
+// spread (...) operator: with arrays, in array literals
 module.exports = function() {
 
-        'use strict';
-        { const bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+       return [...[1, 2, 3]][2] === 3;
       
 };

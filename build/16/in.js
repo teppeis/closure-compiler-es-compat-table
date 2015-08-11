@@ -1,9 +1,7 @@
-// const: temporal dead zone (strict mode)
+// spread (...) operator: with sparse arrays, in array literals
 module.exports = function() {
 
-        'use strict';
-        var passed = (function(){ try { qux; } catch(e) { return true; }}());
-        const qux = 456;
-        return passed;
+        var a = [...[,,]];
+        return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
       
 };

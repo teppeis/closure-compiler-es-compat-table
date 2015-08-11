@@ -1,7 +1,6 @@
-// const: basic support
+// rest parameters: function 'length' property
 module.exports = function() {
 
-        const foo = 123;
-        return (foo === 123);
+        return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
       
 };

@@ -1,8 +1,12 @@
-// Object static methods: Object.is
+// class: computed static accessor properties
 module.exports = function() {
 
-        return typeof Object.is === 'function' &&
-          Object.is(NaN, NaN) &&
-         !Object.is(Math.round(-0.1), Math.round(0.1));
+        var garply = "foo", grault = "bar", baz = false;
+        class C {
+          static get [garply]() { return "foo"; }
+          static set [grault](x) { baz = x; }
+        }
+        C.bar = true;
+        return C.foo === "foo" && baz;
       
 };

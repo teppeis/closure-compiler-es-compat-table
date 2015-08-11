@@ -1,8 +1,9 @@
-// function "name" property: variables (function)
+// class: extends expressions
 module.exports = function() {
 
-        var foo = function() {};
-        var bar = function baz() {};
-        return foo.name === "foo" && bar.name === "baz";
+        var B;
+        class C extends (B = class {}) {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C);
       
 };

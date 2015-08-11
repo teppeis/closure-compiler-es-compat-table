@@ -1,14 +1,15 @@
-// typed arrays: %TypedArray%.prototype.reduce
+// destructuring: defaults, let temporal dead zone
 module.exports = function() {
 
-  return typeof Int8Array.prototype.reduce === "function" &&
-    typeof Uint8Array.prototype.reduce === "function" &&
-    typeof Uint8ClampedArray.prototype.reduce === "function" &&
-    typeof Int16Array.prototype.reduce === "function" &&
-    typeof Uint16Array.prototype.reduce === "function" &&
-    typeof Int32Array.prototype.reduce === "function" &&
-    typeof Uint32Array.prototype.reduce === "function" &&
-    typeof Float32Array.prototype.reduce === "function" &&
-    typeof Float64Array.prototype.reduce === "function";
-
+        var {a, b = 2} = {a:1};
+        try {
+          eval("let {c = c} = {};");
+          return false;
+        } catch(e){}
+        try {
+          eval("let {c = d, d} = {d:1};");
+          return false;
+        } catch(e){}
+        return a === 1 && b === 2;
+      
 };

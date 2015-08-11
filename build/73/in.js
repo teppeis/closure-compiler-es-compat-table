@@ -1,9 +1,9 @@
-// typed arrays: DataView (Float32)
+// destructuring: nested
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new DataView(buffer);
-        view.setFloat32(0, 0.1); 
-        return view.getFloat32(0) === 0.10000000149011612;
+        var [e, {x:f, g}] = [9, {x:10}];
+        var {h, x:[i]} = {h:11, x:[12]};
+        return e === 9 && f === 10 && g === undefined
+          && h === 11 && i === 12;
       
 };

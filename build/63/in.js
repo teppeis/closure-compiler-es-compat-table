@@ -1,8 +1,7 @@
-// typed arrays: Int32Array
+// destructuring: trailing commas in iterable patterns
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Int32Array(buffer);        view[0] = 0x80000000;
-        return view[0] === -0x80000000;
+        var [a,] = [1];
+        return a === 1;
       
 };

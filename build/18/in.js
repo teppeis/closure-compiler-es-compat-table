@@ -1,7 +1,6 @@
-// let: is block-scoped
+// spread (...) operator: with strings, in array literals
 module.exports = function() {
 
-        { let bar = 456; }
-        return (function(){ try { bar; } catch(e) { return true; }}());
+       return ["a", ..."bcd", "e"][3] === "d";
       
 };

@@ -1,9 +1,11 @@
-// destructuring: destructuring parameters
+// class: computed prototype methods
 module.exports = function() {
 
-        return (function({a, x:b, y:e}, [c, d]) {
-          return a === 1 && b === 2 && c === 3 &&
-            d === 4 && e === undefined;
-        }({a:1, x:2},[3, 4]));
+        var foo = "method";
+        class C {
+          [foo]() { return 2; }
+        }
+        return typeof C.prototype.method === "function"
+          && new C().method() === 2;
       
 };

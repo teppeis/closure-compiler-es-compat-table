@@ -1,8 +1,17 @@
-// String.prototype methods: String.prototype.normalize
+// generators: %GeneratorPrototype%.throw
 module.exports = function() {
 
-        return typeof String.prototype.normalize === "function"
-          && "c\u0327\u0301".normalize("NFC") === "\u1e09"
-          && "\u1e09".normalize("NFD") === "c\u0327\u0301";
+        var passed = false;
+        function * generator(){
+          try {
+            yield 5; yield 6;
+          } catch(e) {
+            passed = (e === "foo");
+          }
+        };
+        var iterator = generator();
+        iterator.next();
+        iterator.throw("foo");
+        return passed;
       
 };

@@ -1,47 +1,19 @@
-var $jscomp = {scope:{}}, $jscomp = $jscomp || {};
-$jscomp.IteratorResult = function() {
-};
-$jscomp.Iterator = function() {
-};
-$jscomp.Iterable = function() {
-};
-$jscomp.Iterable.prototype.$$iterator = function() {
-};
-$jscomp.makeIterator = function(a) {
-  if (a.$$iterator) {
-    return a.$$iterator();
-  }
-  if (!(a instanceof Array)) {
-    throw Error();
-  }
-  var b = 0;
-  return{next:function() {
-    return b == a.length ? {done:!0} : {done:!1, value:a[b++]};
-  }};
-};
-$jscomp.copyProperties = function(a, b) {
-  for (var c in b) {
-    a[c] = b[c];
-  }
-};
-$jscomp.inherits = function(a, b) {
-  function c() {
-  }
-  c.prototype = b.prototype;
-  a.superClass_ = b.prototype;
-  a.prototype = new c;
-  a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
-  };
-};
 module.exports = function() {
-  var a = {}, b = !1;
-  Object.isExtensible(new Proxy(a, {isExtensible:function(c) {
-    b = c === a;
-    return!0;
-  }}));
-  return b;
+  for (var b = [], a = {i:0};2 > a.i;a = {i:a.i}, a.i++) {
+    b.push(function(a) {
+      return function() {
+        return a.i;
+      };
+    }(a));
+  }
+  var a = 0 === b[0]() && 1 === b[1](), b = [], c = {i$0:void 0}, d;
+  for (d in{a:1, b:1}) {
+    c.i$0 = d, b.push(function(a) {
+      return function() {
+        return a.i$0;
+      };
+    }(c)), c = {i$0:c.i$0};
+  }
+  return a &= "a" === b[0]() && "b" === b[1]();
 };
 

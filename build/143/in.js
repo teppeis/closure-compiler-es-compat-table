@@ -1,8 +1,9 @@
-// function "name" property: bound functions
+// class: extends
 module.exports = function() {
 
-        function foo() {};
-        return foo.bind({}).name === "bound foo" &&
-          (function(){}).bind({}).name === "bound ";
+        class B {}
+        class C extends B {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C);
       
 };

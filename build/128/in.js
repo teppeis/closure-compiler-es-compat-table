@@ -1,7 +1,10 @@
-// destructuring: array destructuring
+// class: constructor
 module.exports = function() {
 
-        var [a, , [b], c] = [5, null, [6]];
-        return a === 5 && b === 6 && c === undefined;
+        class C {
+          constructor() { this.x = 1; }
+        }
+        return C.prototype.constructor === C
+          && new C().x === 1;
       
 };

@@ -1,6 +1,9 @@
-// Reflect: Reflect.has
+// arrow functions: lexical "new.target" binding
 module.exports = function() {
 
-  return typeof Reflect.has === "function";
-
+        function C() {
+          return x => new.target;
+        }
+        return new C()() === C && C()() === undefined;
+      
 };

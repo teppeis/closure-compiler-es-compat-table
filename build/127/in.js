@@ -1,10 +1,6 @@
-// block-level function declaration
+// class: anonymous class
 module.exports = function() {
 
-    'use strict';
-    {
-      function f(){}
-    }
-    return typeof f === "undefined";
-  
+        return typeof class {} === "function";
+      
 };

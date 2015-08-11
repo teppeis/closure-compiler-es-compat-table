@@ -1,8 +1,10 @@
-// typed arrays: Uint8Array
+// destructuring: with instances of generic iterables
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Uint8Array(buffer);        view[0] = 0x100;
-        return view[0] === 0;
+        var [a, b, c] = Object.create(global.__createIterableObject([1, 2]))
+        var d, e;
+        [d, e] = Object.create(global.__createIterableObject([3, 4]));
+        return a === 1 && b === 2 && c === undefined
+          && d === 3 && e === 4;
       
 };

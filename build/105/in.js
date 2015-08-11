@@ -1,13 +1,17 @@
-// Proxy: "deleteProperty" handler
+// let: for-loop iteration scope
 module.exports = function() {
 
-      var proxied = {};
-        var passed = false;
-        delete new Proxy(proxied, {
-          deleteProperty: function (t, k) {
-            passed = t === proxied && k === "foo";
-          }
-        }).foo;
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
         return passed;
       
 };

@@ -1,6 +1,10 @@
-// spread (...) operator: with strings, in array literals
+// for..of loops: with sparse arrays
 module.exports = function() {
 
-       return ["a", ..."bcd", "e"][3] === "d";
+        var arr = [,,];
+        var count = 0;
+        for (var item of arr)
+          count += (item === undefined);
+        return count === 2;
       
 };

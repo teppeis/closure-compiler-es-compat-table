@@ -1,13 +1,10 @@
-// Proxy: "has" handler
+// let: temporal dead zone
 module.exports = function() {
 
-        var proxied = {};
-        var passed = false;
-        "foo" in new Proxy(proxied, {
-          has: function (t, k) {
-            passed = t === proxied && k === "foo";
-          }
-        });
+        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
+        let qux = 456;
+        fn();
         return passed;
       
 };

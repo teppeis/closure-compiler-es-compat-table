@@ -1,6 +1,15 @@
-// Unicode code point escapes
+// generators: yield *, strings
 module.exports = function() {
 
-    return '\u{1d306}' == '\ud834\udf06';
-  
+        var iterator = (function * generator() {
+          yield * "56";
+        }());
+        var item = iterator.next();
+        var passed = item.value === "5" && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === "6" && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      
 };

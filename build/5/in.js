@@ -1,8 +1,16 @@
-// arrow functions: can't be bound, can be curried
+// default function parameters: temporal dead zone
 module.exports = function() {
 
-        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
-        var e = { x : "baz" };
-        return d.bind(e, "ley")() === "barley";
+        return (function(x = 1) {
+          try {
+            eval("(function(a=a){}())");
+            return false;
+          } catch(e) {}
+          try {
+            eval("(function(a=b,b){}())");
+            return false;
+          } catch(e) {}
+          return true;
+        }());
       
 };

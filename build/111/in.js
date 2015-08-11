@@ -1,16 +1,11 @@
-// Proxy: "preventExtensions" handler
+// block-level function declaration
 module.exports = function() {
 
-        var proxied = {};
-        var passed = false;
-        Object.preventExtensions(
-          new Proxy(proxied, {
-            preventExtensions: function (t) {
-              passed = t === proxied;
-              return Object.preventExtensions(proxied);
-            }
-          })
-        );
-        return passed;
-      
+    'use strict';
+    function f() { return 1; }
+    {
+      function f() { return 2; }
+    }
+    return f() === 1;
+  
 };

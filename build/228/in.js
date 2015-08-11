@@ -1,13 +1,13 @@
-// Object.prototype.__proto__: correct property descriptor
+// Map: iterator closing
 module.exports = function() {
 
-        var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
-        var A = function(){};
-    
-        return (desc
-          && "get" in desc
-          && "set" in desc
-          && desc.configurable
-          && !desc.enumerable);
+        var closed = false;
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
+        try {
+          new Map(iter);
+        } catch(e){}
+        return closed;
       
 };

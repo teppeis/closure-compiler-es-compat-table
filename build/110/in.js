@@ -1,15 +1,18 @@
-// Proxy: "isExtensible" handler
+// let: for-loop iteration scope (strict mode)
 module.exports = function() {
 
-        var proxied = {};
-        var passed = false;
-        Object.isExtensible(
-          new Proxy(proxied, {
-            isExtensible: function (t) {
-              passed = t === proxied; return true;
-            }
-          })
-        );
+        'use strict';
+        let scopes = [];
+        for(let i = 0; i < 2; i++) {
+          scopes.push(function(){ return i; });
+        }
+        let passed = (scopes[0]() === 0 && scopes[1]() === 1);
+
+        scopes = [];
+        for(let i in { a:1, b:1 }) {
+          scopes.push(function(){ return i; });
+        }
+        passed &= (scopes[0]() === "a" && scopes[1]() === "b");
         return passed;
       
 };

@@ -1,6 +1,7 @@
-// Reflect: Reflect.getOwnPropertyDescriptor
+// arrow functions: no "prototype" property
 module.exports = function() {
 
-  return typeof Reflect.getOwnPropertyDescriptor === "function";
-
+        var a = () => 5;
+        return !a.hasOwnProperty("prototype");
+      
 };

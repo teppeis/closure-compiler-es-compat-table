@@ -1,8 +1,8 @@
-// const: temporal dead zone
+// rest parameters: new Function() support
 module.exports = function() {
 
-        var passed = (function(){ try { qux; } catch(e) { return true; }}());
-        const qux = 456;
-        return passed;
+        return new Function("a", "...b",
+          "return b instanceof Array && a+b === 'foobar,baz';"
+        )('foo','bar','baz');
       
 };

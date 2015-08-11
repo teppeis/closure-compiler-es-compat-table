@@ -1,11 +1,11 @@
-// class: static methods
+// for..of loops: with instances of generic iterables
 module.exports = function() {
 
-        class C {
-          constructor() {}
-          static method() { return 3; }
+        var result = "";
+        var iterable = global.__createIterableObject([1, 2, 3]);
+        for (var item of Object.create(iterable)) {
+          result += item;
         }
-        return typeof C.method === "function"
-          && C.method() === 3;
+        return result === "123";
       
 };

@@ -1,8 +1,7 @@
-// typed arrays: Int16Array
+// destructuring: iterable destructuring expression
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Int16Array(buffer);        view[0] = 0x8000;
-        return view[0] === -0x8000;
+        var a, b, iterable = [1,2];
+        return ([a, b] = iterable) === iterable;
       
 };

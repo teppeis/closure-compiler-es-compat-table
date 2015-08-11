@@ -1,42 +1,77 @@
-var $jscomp = {scope:{}}, $jscomp = $jscomp || {};
-$jscomp.IteratorResult = function() {
-};
-$jscomp.Iterator = function() {
-};
-$jscomp.Iterable = function() {
-};
-$jscomp.Iterable.prototype.$$iterator = function() {
-};
-$jscomp.makeIterator = function(a) {
-  if (a.$$iterator) {
-    return a.$$iterator();
+var $jscomp = {scope:{}, global:this, initSymbolIterator:function() {
+  Symbol = $jscomp.global.Symbol || {};
+  Symbol.iterator || (Symbol.iterator = "$jscomp$iterator");
+  $jscomp.initSymbolIterator = function() {
+  };
+}, makeIterator:function(b) {
+  $jscomp.initSymbolIterator();
+  if (b[Symbol.iterator]) {
+    return b[Symbol.iterator]();
   }
-  if (!(a instanceof Array)) {
+  if (!(b instanceof Array) && "string" != typeof b) {
     throw Error();
   }
-  var b = 0;
-  return{next:function() {
-    return b == a.length ? {done:!0} : {done:!1, value:a[b++]};
+  var a = 0;
+  return {next:function() {
+    return a == b.length ? {done:!0} : {done:!1, value:b[a++]};
   }};
-};
-$jscomp.copyProperties = function(a, b) {
-  for (var c in b) {
-    a[c] = b[c];
-  }
-};
-$jscomp.inherits = function(a, b) {
+}, inherits:function(b, a) {
   function c() {
   }
-  c.prototype = b.prototype;
-  a.superClass_ = b.prototype;
-  a.prototype = new c;
-  a.prototype.constructor = a;
-  a.base = function(a, c, e) {
-    var d = Array.prototype.slice.call(arguments, 2);
-    return b.prototype[c].apply(a, d);
-  };
-};
+  c.prototype = a.prototype;
+  b.prototype = new c;
+  b.prototype.constructor = b;
+  for (var d in a) {
+    if ($jscomp.global.Object.defineProperties) {
+      var e = $jscomp.global.Object.getOwnPropertyDescriptor(a, d);
+      void 0 !== e && $jscomp.global.Object.defineProperty(b, d, e);
+    } else {
+      b[d] = a[d];
+    }
+  }
+}};
 module.exports = function() {
-  return "function" === typeof String.prototype.endsWith && "foobar".endsWith("bar");
+  var b = function() {
+    function b(h, d) {
+      for (;;) {
+        switch(a) {
+          case 0:
+            f = $jscomp.makeIterator([5, 6]);
+          case 1:
+            if ((c = f.next(h)).done) {
+              a = 2;
+              break;
+            }
+            a = 3;
+            return {value:c.value, done:!1};
+          case 3:
+            if (void 0 === d) {
+              a = 4;
+              break;
+            }
+            a = -1;
+            throw d;;
+          case 4:
+            a = 1;
+            break;
+          case 2:
+            a = -1;
+          default:
+            return {value:void 0, done:!0};
+        }
+      }
+    }
+    var a = 0, c, f, g = {next:function(a) {
+      return b(a, void 0);
+    }, "throw":function(a) {
+      return b(void 0, a);
+    }};
+    $jscomp.initSymbolIterator();
+    g[Symbol.iterator] = function() {
+      return this;
+    };
+    return g;
+  }(), a = b.next(), c = 5 === a.value && !1 === a.done, a = b.next(), c = c & (6 === a.value && !1 === a.done), a = b.next();
+  return c &= void 0 === a.value && !0 === a.done;
 };
 

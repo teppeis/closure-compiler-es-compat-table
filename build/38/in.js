@@ -1,10 +1,11 @@
-// class: constructor
+// for..of loops: with generator instances
 module.exports = function() {
 
-        class C {
-          constructor() { this.x = 1; }
+        var result = "";
+        var iterable = (function*(){ yield 1; yield 2; yield 3; }());
+        for (var item of iterable) {
+          result += item;
         }
-        return C.prototype.constructor === C
-          && new C().x === 1;
+        return result === "123";
       
 };

@@ -1,9 +1,8 @@
-// typed arrays: DataView (Int16)
+// destructuring: chained object destructuring
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new DataView(buffer);
-        view.setInt16(0, 0x8000); 
-        return view.getInt16(0) === -0x8000;
+        var a,b,c,d;
+        ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
+        return a === 1 && b === 2 && c === 3 && d === 4;
       
 };

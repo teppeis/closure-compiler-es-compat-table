@@ -1,11 +1,11 @@
-// WeakMap
+// const: temporal dead zone (strict mode)
 module.exports = function() {
 
-    var key1 = {};
-    var weakmap = new WeakMap();
-
-    weakmap.set(key1, 123);
-
-    return weakmap.has(key1) && weakmap.get(key1) === 123;
-  
+        'use strict';
+        var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
+        const qux = 456;
+        fn();
+        return passed;
+      
 };

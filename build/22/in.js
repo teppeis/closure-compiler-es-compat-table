@@ -1,8 +1,7 @@
-// let: basic support (strict mode)
+// spread (...) operator: with generator instances, in arrays
 module.exports = function() {
 
-        'use strict';
-        let foo = 123;
-        return (foo === 123);
+        var iterable = (function*(){ yield "b"; yield "c"; yield "d"; }());
+        return ["a", ...iterable, "e"][3] === "d";
       
 };

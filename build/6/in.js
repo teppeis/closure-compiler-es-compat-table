@@ -1,7 +1,11 @@
-// arrow functions: lexical "arguments" binding
+// default function parameters: separate scope
 module.exports = function() {
 
-        var f = (function() { return z => arguments[0]; }(5));
-        return f(6) === 5;
+        return (function(a=function(){
+          return typeof b === 'undefined';
+        }){
+          var b = 1;
+          return a();
+        }());
       
 };

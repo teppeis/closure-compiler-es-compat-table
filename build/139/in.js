@@ -1,6 +1,12 @@
-// Object static methods: Object.setPrototypeOf
+// class: computed names, temporal dead zone
 module.exports = function() {
 
-        return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
+        try {
+          var B = class C {
+            [C](){}
+          }
+        } catch(e) {
+          return true;
+        }
       
 };

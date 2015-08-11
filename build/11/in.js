@@ -1,11 +1,12 @@
-// const: redefining a const is a syntax error
+// rest parameters: can't be used in setters
 module.exports = function() {
 
-        const baz = 1;
-        try {
-          Function("const foo = 1; foo = 2;")();
-        } catch(e) {
-          return true;
-        }
+        return (function (...args) {
+          try {
+            eval("({set e(...args){}})");
+          } catch(e) {
+            return true;
+          }
+        }());
       
 };

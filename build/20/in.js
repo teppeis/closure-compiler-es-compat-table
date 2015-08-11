@@ -1,8 +1,6 @@
-// let: temporal dead zone
+// spread (...) operator: with astral plane strings, in array literals
 module.exports = function() {
 
-        var passed = (function(){ try {  qux; } catch(e) { return true; }}());
-        let qux = 456;
-        return passed;
+       return [..."𠮷𠮶"][0] === "𠮷";
       
 };

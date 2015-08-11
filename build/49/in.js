@@ -1,18 +1,17 @@
-// generators: shorthand generator methods
+// template strings: tagged template strings
 module.exports = function() {
 
-        var o = {
-          * generator() {
-            yield 5; yield 6;
-          },
-        };
-        var iterator = o.generator();
-        var item = iterator.next();
-        var passed = item.value === 5 && item.done === false;
-        item = iterator.next();
-        passed    &= item.value === 6 && item.done === false;
-        item = iterator.next();
-        passed    &= item.value === undefined && item.done === true;
-        return passed;
+        var called = false;
+        function fn(parts, a, b) {
+          called = true;
+          return parts instanceof Array &&
+            parts[0]     === "foo"      &&
+            parts[1]     === "bar\n"    &&
+            parts.raw[0] === "foo"      &&
+            parts.raw[1] === "bar\\n"   &&
+            a === 123                   &&
+            b === 456;
+        }
+        return fn `foo${123}bar\n${456}` && called;
       
 };

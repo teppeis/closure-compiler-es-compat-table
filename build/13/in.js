@@ -1,8 +1,6 @@
-// const: basic support (strict mode)
+// spread (...) operator: with arrays, in function calls
 module.exports = function() {
 
-        "use strict";
-        const foo = 123;
-        return (foo === 123);
+        return Math.max(...[1, 2, 3]) === 3
       
 };

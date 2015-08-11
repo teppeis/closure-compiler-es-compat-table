@@ -1,8 +1,11 @@
-// typed arrays: Uint8ClampedArray
+// destructuring: iterator closing
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
-        return view[0] === 0xFF;
+        var closed = false;
+        var iter = global.__createIterableObject([1, 2, 3], {
+          'return': function(){ closed = true; return {}; }
+        });
+        var [a, b] = iter;
+        return closed;
       
 };

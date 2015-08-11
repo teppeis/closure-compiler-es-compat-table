@@ -1,12 +1,12 @@
-// Set
+// const: redefining a const (strict mode)
 module.exports = function() {
 
-    var obj = {};
-    var set = new Set();
-
-    set.add(123);
-    set.add(123);
-
-    return set.has(123) && set.size === 1;
-  
+        'use strict';
+        const baz = 1;
+        try {
+          Function("'use strict'; const foo = 1; foo = 2;")();
+        } catch(e) {
+          return true;
+        }
+      
 };

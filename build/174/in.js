@@ -1,8 +1,18 @@
-// global symbol registry
+// generators: string-keyed shorthand generator methods
 module.exports = function() {
 
-    var symbol = Symbol.for('foo');
-    return Symbol.for('foo') === symbol &&
-           Symbol.keyFor(symbol) === 'foo';
-  
+        var o = {
+          * "foo bar"() {
+            yield 5; yield 6;
+          },
+        };
+        var iterator = o["foo bar"]();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
+      
 };

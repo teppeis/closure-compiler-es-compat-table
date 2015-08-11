@@ -1,7 +1,11 @@
-// __proto__ in object literals: not a shorthand property
+// Map: basic functionality
 module.exports = function() {
 
-        var __proto__ = [];
-        return !({ __proto__ } instanceof Array);
+        var key = {};
+        var map = new Map();
+
+        map.set(key, 123);
+
+        return map.has(key) && map.get(key) === 123;
       
 };

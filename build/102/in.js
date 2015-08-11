@@ -1,12 +1,8 @@
-// Proxy: "get" handler
+// let: is block-scoped
 module.exports = function() {
 
-        var proxied = { };
-        var proxy = new Proxy(proxied, {
-          get: function (t, k, r) {
-            return t === proxied && k === "foo" && r === proxy && 5;
-          }
-        });
-        return proxy.foo === 5;
+        let bar = 123;
+        { let bar = 456; }
+        return bar === 123;
       
 };

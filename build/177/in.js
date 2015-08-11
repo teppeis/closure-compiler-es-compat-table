@@ -1,6 +1,19 @@
-// well-known symbols: Symbol.isRegExp
+// generators: computed shorthand generators, classes
 module.exports = function() {
 
-        return RegExp.prototype[Symbol.isRegExp] === true;
+        var garply = "generator";
+        class C {
+          * [garply] () {
+            yield 5; yield 6;
+          }
+        }
+        var iterator = new C().generator();
+        var item = iterator.next();
+        var passed = item.value === 5 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === 6 && item.done === false;
+        item = iterator.next();
+        passed    &= item.value === undefined && item.done === true;
+        return passed;
       
 };

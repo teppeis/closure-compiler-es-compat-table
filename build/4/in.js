@@ -1,8 +1,6 @@
-// arrow functions: lexical "this" binding
+// default function parameters: defaults can refer to previous params
 module.exports = function() {
 
-        var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
-        var e = { x : "baz", y : d };
-        return d("ley") === "barley" && e.y("ley") === "barley";
+        return (function (a, b = a) { return b === 5; }(5));
       
 };

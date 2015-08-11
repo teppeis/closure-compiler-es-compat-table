@@ -1,7 +1,10 @@
-// destructuring: combined destructuring
+// class: string-keyed methods
 module.exports = function() {
 
-        var [e, {x:f, g}] = [9, {x:10}];
-        return e === 9 && f === 10 && g === undefined;
+        class C {
+          "foo bar"() { return 2; }
+        }
+        return typeof C.prototype["foo bar"] === "function"
+          && new C()["foo bar"]() === 2;
       
 };

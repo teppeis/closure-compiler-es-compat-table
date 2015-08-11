@@ -1,6 +1,6 @@
-// octal and binary literals: octal supported by Number()
+// RegExp "y" and "u" flags: "u" flag
 module.exports = function() {
 
-        return Number('0o1') === 1;
+        return "𠮷".match(/^.$/u)[0].length === 2;
       
 };

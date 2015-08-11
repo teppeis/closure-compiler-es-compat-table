@@ -1,14 +1,10 @@
-// typed arrays: %TypedArray%.prototype.map
+// destructuring: defaults in parameters
 module.exports = function() {
 
-  return typeof Int8Array.prototype.map === "function" &&
-    typeof Uint8Array.prototype.map === "function" &&
-    typeof Uint8ClampedArray.prototype.map === "function" &&
-    typeof Int16Array.prototype.map === "function" &&
-    typeof Uint16Array.prototype.map === "function" &&
-    typeof Int32Array.prototype.map === "function" &&
-    typeof Uint32Array.prototype.map === "function" &&
-    typeof Float32Array.prototype.map === "function" &&
-    typeof Float64Array.prototype.map === "function";
-
+        return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
+            [f = 6, g = 0, h = 8]) {
+          return a === 1 && b === 2 && c === 3 && d === 4 &&
+            e === 5 && f === 6 && g === 7 && h === 8;
+        }({b:2, c:undefined, x:4},[, 7, undefined]));
+      
 };

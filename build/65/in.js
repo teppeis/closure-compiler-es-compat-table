@@ -1,8 +1,14 @@
-// typed arrays: Float32Array
+// destructuring: object destructuring with primitives
 module.exports = function() {
 
-        var buffer = new ArrayBuffer(64);
-        var view = new Float32Array(buffer);       view[0] = 0.1;
-        return view[0] === 0.10000000149011612;
+        var {toFixed} = 2;
+        var {slice} = '';
+        var toString, match;
+        ({toString} = 2);
+        ({match} = '');
+        return toFixed === Number.prototype.toFixed
+          && toString === Number.prototype.toString
+          && slice === String.prototype.slice
+          && match === String.prototype.match;
       
 };

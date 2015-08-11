@@ -1,7 +1,11 @@
-// destructuring: destructuring defaults
+// class: computed static methods
 module.exports = function() {
 
-        var {a = 1, b = 0, c = 3} = {b:2, c:undefined};
-        return a === 1 && b === 2 && c === 3;
+        var foo = "method";
+        class C {
+          static [foo]() { return 3; }
+        }
+        return typeof C.method === "function"
+          && C.method() === 3;
       
 };

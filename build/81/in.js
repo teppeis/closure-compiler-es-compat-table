@@ -1,14 +1,8 @@
-// typed arrays: %TypedArray%.prototype.slice
+// destructuring: nested rest
 module.exports = function() {
 
-  return typeof Int8Array.prototype.slice === "function" &&
-    typeof Uint8Array.prototype.slice === "function" &&
-    typeof Uint8ClampedArray.prototype.slice === "function" &&
-    typeof Int16Array.prototype.slice === "function" &&
-    typeof Uint16Array.prototype.slice === "function" &&
-    typeof Int32Array.prototype.slice === "function" &&
-    typeof Uint32Array.prototype.slice === "function" &&
-    typeof Float32Array.prototype.slice === "function" &&
-    typeof Float64Array.prototype.slice === "function";
-
+        var a = [1, 2, 3], first, last;
+        [first, ...[a[2], last]] = a;
+        return first === 1 && last === 3 && (a + "") === "1,2,2";
+      
 };

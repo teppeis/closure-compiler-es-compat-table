@@ -1,6 +1,10 @@
-// octal and binary literals: binary literals
+// RegExp "y" and "u" flags: "y" flag
 module.exports = function() {
 
-        return 0b10 === 2 && 0B10 === 2;
+        var re = new RegExp('\\w');
+        var re2 = new RegExp('\\w', 'y');
+        re.exec('xy');
+        re2.exec('xy');
+        return (re.exec('xy')[0] === 'x' && re2.exec('xy')[0] === 'y');
       
 };

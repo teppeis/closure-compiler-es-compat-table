@@ -1,6 +1,6 @@
-// rest parameters
+// object literal extensions: string-keyed shorthand methods
 module.exports = function() {
 
-    return (function (...args) { return typeof args !== "undefined"; }())
-  
+        return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
+      
 };

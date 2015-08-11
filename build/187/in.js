@@ -1,7 +1,9 @@
-// Array static methods: Array.of
+// typed arrays: DataView (Int8)
 module.exports = function() {
 
-        return typeof Array.of === 'function' &&
-          Array.of(2)[0] === 2;
+        var buffer = new ArrayBuffer(64);
+        var view = new DataView(buffer);
+        view.setInt8 (0, 0x80);
+        return view.getInt8(0) === -0x80;
       
 };
