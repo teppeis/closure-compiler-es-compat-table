@@ -1,7 +1,6 @@
 build/2/out.js: default function parameters: basic functionality
 build/3/out.js: default function parameters: explicit undefined defers to the default
 build/4/out.js: default function parameters: defaults can refer to previous params
-build/5/out.js: default function parameters: temporal dead zone
 build/6/out.js: default function parameters: separate scope
 build/8/out.js: rest parameters: basic functionality
 build/11/out.js: rest parameters: can't be used in setters
