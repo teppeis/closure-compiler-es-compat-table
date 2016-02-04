@@ -13,9 +13,9 @@ var files = [];
 var basedir = path.join(__dirname, 'build');
 data.tests.forEach(function(test) {
   if (test.subtests) {
-    for (var subtestName in test.subtests) {
-      writeInputSrcFile(test.subtests[subtestName].exec, test.name + ': ' + subtestName);
-    }
+    test.subtests.forEach(function(subtest) {
+      writeInputSrcFile(subtest.exec, test.name + ': ' + subtest.name);
+    });
   } else {
     writeInputSrcFile(test.exec, test.name);
   }

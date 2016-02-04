@@ -9,7 +9,7 @@ rm -f $ERRORLOG
 
 for DIR in $(ls ./build|grep -v filelist.json|sort -n); do
     DIR=./build/$DIR
-    $JAVA --language_in ECMASCRIPT6 --language_out ECMASCRIPT3 --formatting PRETTY_PRINT -O SIMPLE --js "$DIR/in.js" > $DIR/out.js 2> ./error
+    $JAVA --language_in ECMASCRIPT6 --language_out ECMASCRIPT5 --formatting PRETTY_PRINT -O SIMPLE --js "$DIR/in.js" > $DIR/out.js 2> ./error
     # exit code of JNI is wrong
     if [ "$(cat ./error)" != "" ]; then
         echo "- $DIR: NG"

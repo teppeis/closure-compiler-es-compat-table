@@ -1,157 +1,185 @@
 build/2/out.js: default function parameters: basic functionality
 build/3/out.js: default function parameters: explicit undefined defers to the default
 build/4/out.js: default function parameters: defaults can refer to previous params
-build/5/out.js: default function parameters: temporal dead zone
-build/6/out.js: default function parameters: separate scope
-build/8/out.js: rest parameters: basic functionality
-build/11/out.js: rest parameters: can't be used in setters
-build/13/out.js: spread (...) operator: with arrays, in function calls
-build/14/out.js: spread (...) operator: with arrays, in array literals
-build/15/out.js: spread (...) operator: with sparse arrays, in function calls
-build/17/out.js: spread (...) operator: with strings, in function calls
-build/18/out.js: spread (...) operator: with strings, in array literals
-build/21/out.js: spread (...) operator: with generator instances, in calls
-build/22/out.js: spread (...) operator: with generator instances, in arrays
-build/23/out.js: spread (...) operator: with generic iterables, in calls
-build/24/out.js: spread (...) operator: with generic iterables, in arrays
-build/25/out.js: spread (...) operator: with instances of iterables, in calls
-build/26/out.js: spread (...) operator: with instances of iterables, in arrays
-build/27/out.js: spread (...) operator: spreading non-iterables is a runtime error
-build/28/out.js: object literal extensions: computed properties
-build/29/out.js: object literal extensions: shorthand properties
-build/30/out.js: object literal extensions: shorthand methods
-build/32/out.js: object literal extensions: computed shorthand methods
-build/34/out.js: for..of loops: with arrays
-build/35/out.js: for..of loops: with sparse arrays
-build/36/out.js: for..of loops: with strings
-build/38/out.js: for..of loops: with generator instances
-build/39/out.js: for..of loops: with generic iterables
-build/40/out.js: for..of loops: with instances of generic iterables
-build/43/out.js: octal and binary literals: octal literals
-build/44/out.js: octal and binary literals: binary literals
-build/49/out.js: template strings: tagged template strings
-build/53/out.js: destructuring: with arrays
-build/54/out.js: destructuring: with sparse arrays
-build/55/out.js: destructuring: with strings
-build/57/out.js: destructuring: with generator instances
-build/58/out.js: destructuring: with generic iterables
-build/59/out.js: destructuring: with instances of generic iterables
-build/64/out.js: destructuring: with objects
-build/65/out.js: destructuring: object destructuring with primitives
-build/66/out.js: destructuring: trailing commas in object patterns
-build/68/out.js: destructuring: parenthesised left-hand-side is a syntax error
-build/71/out.js: destructuring: computed properties
-build/72/out.js: destructuring: multiples in a single var statement
-build/73/out.js: destructuring: nested
-build/74/out.js: destructuring: in parameters
-build/75/out.js: destructuring: in parameters, 'arguments' interaction
-build/77/out.js: destructuring: in parameters, function 'length' property
-build/78/out.js: destructuring: in for-in loop heads
-build/79/out.js: destructuring: in for-of loop heads
-build/80/out.js: destructuring: rest
-build/82/out.js: destructuring: empty patterns
-build/83/out.js: destructuring: empty patterns in parameters
-build/84/out.js: destructuring: defaults
-build/85/out.js: destructuring: defaults in parameters
-build/86/out.js: destructuring: defaults, let temporal dead zone
-build/87/out.js: destructuring: defaults in parameters, separate scope
-build/89/out.js: Unicode code point escapes: in strings
-build/93/out.js: const: basic support
-build/94/out.js: const: is block-scoped
-build/97/out.js: const: basic support (strict mode)
-build/98/out.js: const: is block-scoped (strict mode)
-build/99/out.js: const: redefining a const (strict mode)
-build/101/out.js: let: basic support
-build/102/out.js: let: is block-scoped
-build/103/out.js: let: for-loop statement scope
-build/105/out.js: let: for-loop iteration scope
-build/106/out.js: let: basic support (strict mode)
-build/107/out.js: let: is block-scoped (strict mode)
-build/108/out.js: let: for-loop statement scope (strict mode)
-build/110/out.js: let: for-loop iteration scope (strict mode)
-build/111/out.js: block-level function declaration
-build/112/out.js: arrow functions: 0 parameters
-build/113/out.js: arrow functions: 1 parameter, no brackets
-build/114/out.js: arrow functions: multiple parameters
-build/115/out.js: arrow functions: lexical "this" binding
-build/116/out.js: arrow functions: "this" unchanged by call or apply
-build/117/out.js: arrow functions: can't be bound, can be curried
-build/118/out.js: arrow functions: lexical "arguments" binding
-build/119/out.js: arrow functions: no line break between params and <code>=></code>
-build/120/out.js: arrow functions: correct precedence
-build/122/out.js: arrow functions: lexical "super" binding
-build/124/out.js: class: class statement
-build/125/out.js: class: is block-scoped
-build/128/out.js: class: constructor
-build/129/out.js: class: prototype methods
-build/131/out.js: class: computed prototype methods
-build/132/out.js: class: static methods
-build/133/out.js: class: computed static methods
-build/135/out.js: class: computed accessor properties
-build/147/out.js: super: statement in constructors
-build/148/out.js: super: expression in constructors
-build/150/out.js: super: in methods, method calls
-build/151/out.js: super: method calls use correct "this" binding
-build/154/out.js: generators: basic functionality
-build/155/out.js: generators: generator function expressions
-build/156/out.js: generators: correct "this" binding
-build/158/out.js: generators: sending
-build/160/out.js: generators: %GeneratorPrototype%.throw
-build/162/out.js: generators: yield operator precedence
-build/163/out.js: generators: yield *, arrays
-build/164/out.js: generators: yield *, sparse arrays
-build/165/out.js: generators: yield *, strings
-build/167/out.js: generators: yield *, generator instances
-build/168/out.js: generators: yield *, generic iterables
-build/169/out.js: generators: yield *, instances of iterables
-build/170/out.js: generators: yield * on non-iterables is a runtime error
-build/173/out.js: generators: shorthand generator methods
-build/175/out.js: generators: computed shorthand generators
-build/176/out.js: generators: shorthand generator methods, classes
-build/177/out.js: generators: computed shorthand generators, classes
-build/178/out.js: typed arrays: Int8Array
-build/179/out.js: typed arrays: Uint8Array
-build/180/out.js: typed arrays: Uint8ClampedArray
-build/181/out.js: typed arrays: Int16Array
-build/182/out.js: typed arrays: Uint16Array
-build/183/out.js: typed arrays: Int32Array
-build/184/out.js: typed arrays: Uint32Array
-build/185/out.js: typed arrays: Float32Array
-build/186/out.js: typed arrays: Float64Array
-build/187/out.js: typed arrays: DataView (Int8)
-build/188/out.js: typed arrays: DataView (Uint8)
-build/189/out.js: typed arrays: DataView (Int16)
-build/190/out.js: typed arrays: DataView (Uint16)
-build/191/out.js: typed arrays: DataView (Int32)
-build/192/out.js: typed arrays: DataView (Uint32)
-build/193/out.js: typed arrays: DataView (Float32)
-build/194/out.js: typed arrays: DataView (Float64)
-build/322/out.js: Symbol: basic functionality
-build/325/out.js: Symbol: Object.defineProperty support
-build/329/out.js: Symbol: Object(symbol)
-build/333/out.js: well-known symbols: Symbol.iterator, existence
-build/351/out.js: Object static methods: Object.is
-build/362/out.js: function "name" property: shorthand methods (no lexical binding)
-build/408/out.js: Number properties: Number.isFinite
-build/411/out.js: Number properties: Number.isNaN
-build/538/out.js: own property order: for..in
-build/539/out.js: own property order: Object.keys
-build/542/out.js: own property order: JSON.stringify
-build/543/out.js: own property order: JSON.parse
-build/546/out.js: miscellaneous: no semicolon needed after do-while
-build/549/out.js: miscellaneous: Invalid Date
-build/554/out.js: non-strict function semantics: labeled function statements
-build/561/out.js: Object.prototype.__proto__: get prototype
-build/562/out.js: Object.prototype.__proto__: set prototype
-build/567/out.js: String.prototype HTML methods: existence
-build/568/out.js: String.prototype HTML methods: tags' names are lowercase
-build/569/out.js: String.prototype HTML methods: quotes in arguments are escaped
-build/570/out.js: RegExp.prototype.compile
-build/571/out.js: RegExp syntax extensions: hyphens in character sets
-build/572/out.js: RegExp syntax extensions: invalid character escapes
-build/573/out.js: RegExp syntax extensions: invalid control-character escapes
-build/574/out.js: RegExp syntax extensions: invalid unicode escapes
-build/575/out.js: RegExp syntax extensions: invalid hexadecimal escapes
-build/576/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
-build/577/out.js: RegExp syntax extensions: octal escape sequences
-build/578/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
+build/6/out.js: default function parameters: temporal dead zone
+build/7/out.js: default function parameters: separate scope
+build/9/out.js: rest parameters: basic functionality
+build/12/out.js: rest parameters: can't be used in setters
+build/14/out.js: spread (...) operator: with arrays, in function calls
+build/15/out.js: spread (...) operator: with arrays, in array literals
+build/16/out.js: spread (...) operator: with sparse arrays, in function calls
+build/18/out.js: spread (...) operator: with strings, in function calls
+build/19/out.js: spread (...) operator: with strings, in array literals
+build/22/out.js: spread (...) operator: with generator instances, in calls
+build/23/out.js: spread (...) operator: with generator instances, in arrays
+build/24/out.js: spread (...) operator: with generic iterables, in calls
+build/25/out.js: spread (...) operator: with generic iterables, in arrays
+build/26/out.js: spread (...) operator: with instances of iterables, in calls
+build/27/out.js: spread (...) operator: with instances of iterables, in arrays
+build/28/out.js: spread (...) operator: spreading non-iterables is a runtime error
+build/29/out.js: object literal extensions: computed properties
+build/30/out.js: object literal extensions: shorthand properties
+build/31/out.js: object literal extensions: shorthand methods
+build/33/out.js: object literal extensions: computed shorthand methods
+build/35/out.js: for..of loops: with arrays
+build/36/out.js: for..of loops: with sparse arrays
+build/37/out.js: for..of loops: with strings
+build/39/out.js: for..of loops: with generator instances
+build/40/out.js: for..of loops: with generic iterables
+build/41/out.js: for..of loops: with instances of generic iterables
+build/44/out.js: octal and binary literals: octal literals
+build/45/out.js: octal and binary literals: binary literals
+build/50/out.js: template strings: tagged template strings
+build/57/out.js: destructuring, declarations: with arrays
+build/58/out.js: destructuring, declarations: with sparse arrays
+build/59/out.js: destructuring, declarations: with strings
+build/61/out.js: destructuring, declarations: with generator instances
+build/62/out.js: destructuring, declarations: with generic iterables
+build/63/out.js: destructuring, declarations: with instances of generic iterables
+build/66/out.js: destructuring, declarations: with objects
+build/67/out.js: destructuring, declarations: object destructuring with primitives
+build/68/out.js: destructuring, declarations: trailing commas in object patterns
+build/70/out.js: destructuring, declarations: computed properties
+build/71/out.js: destructuring, declarations: multiples in a single var statement
+build/72/out.js: destructuring, declarations: nested
+build/73/out.js: destructuring, declarations: in for-in loop heads
+build/74/out.js: destructuring, declarations: in for-of loop heads
+build/75/out.js: destructuring, declarations: in catch heads
+build/76/out.js: destructuring, declarations: rest
+build/77/out.js: destructuring, declarations: defaults
+build/78/out.js: destructuring, declarations: defaults, let temporal dead zone
+build/79/out.js: destructuring, assignment: with arrays
+build/80/out.js: destructuring, assignment: with sparse arrays
+build/81/out.js: destructuring, assignment: with strings
+build/83/out.js: destructuring, assignment: with generator instances
+build/84/out.js: destructuring, assignment: with generic iterables
+build/85/out.js: destructuring, assignment: with instances of generic iterables
+build/90/out.js: destructuring, assignment: with objects
+build/91/out.js: destructuring, assignment: object destructuring with primitives
+build/92/out.js: destructuring, assignment: trailing commas in object patterns
+build/94/out.js: destructuring, assignment: parenthesised left-hand-side is a syntax error
+build/97/out.js: destructuring, assignment: computed properties
+build/98/out.js: destructuring, assignment: nested
+build/99/out.js: destructuring, assignment: rest
+build/101/out.js: destructuring, assignment: empty patterns
+build/102/out.js: destructuring, assignment: defaults
+build/103/out.js: destructuring, parameters: with arrays
+build/104/out.js: destructuring, parameters: with sparse arrays
+build/105/out.js: destructuring, parameters: with strings
+build/107/out.js: destructuring, parameters: with generator instances
+build/108/out.js: destructuring, parameters: with generic iterables
+build/109/out.js: destructuring, parameters: with instances of generic iterables
+build/112/out.js: destructuring, parameters: with objects
+build/113/out.js: destructuring, parameters: object destructuring with primitives
+build/114/out.js: destructuring, parameters: trailing commas in object patterns
+build/116/out.js: destructuring, parameters: computed properties
+build/117/out.js: destructuring, parameters: nested
+build/118/out.js: destructuring, parameters: 'arguments' interaction
+build/120/out.js: destructuring, parameters: in parameters, function 'length' property
+build/121/out.js: destructuring, parameters: rest
+build/122/out.js: destructuring, parameters: empty patterns
+build/123/out.js: destructuring, parameters: defaults
+build/124/out.js: destructuring, parameters: defaults, separate scope
+build/126/out.js: Unicode code point escapes: in strings
+build/130/out.js: const: basic support
+build/131/out.js: const: is block-scoped
+build/134/out.js: const: basic support (strict mode)
+build/135/out.js: const: is block-scoped (strict mode)
+build/136/out.js: const: redefining a const (strict mode)
+build/138/out.js: let: basic support
+build/139/out.js: let: is block-scoped
+build/140/out.js: let: for-loop statement scope
+build/142/out.js: let: for-loop iteration scope
+build/143/out.js: let: basic support (strict mode)
+build/144/out.js: let: is block-scoped (strict mode)
+build/145/out.js: let: for-loop statement scope (strict mode)
+build/147/out.js: let: for-loop iteration scope (strict mode)
+build/148/out.js: block-level function declaration
+build/149/out.js: arrow functions: 0 parameters
+build/150/out.js: arrow functions: 1 parameter, no brackets
+build/151/out.js: arrow functions: multiple parameters
+build/152/out.js: arrow functions: lexical "this" binding
+build/153/out.js: arrow functions: "this" unchanged by call or apply
+build/154/out.js: arrow functions: can't be bound, can be curried
+build/155/out.js: arrow functions: lexical "arguments" binding
+build/156/out.js: arrow functions: no line break between params and <code>=></code>
+build/157/out.js: arrow functions: correct precedence
+build/159/out.js: arrow functions: lexical "super" binding in constructors
+build/160/out.js: arrow functions: lexical "super" binding in methods
+build/162/out.js: class: class statement
+build/163/out.js: class: is block-scoped
+build/166/out.js: class: constructor
+build/167/out.js: class: prototype methods
+build/169/out.js: class: computed prototype methods
+build/170/out.js: class: static methods
+build/171/out.js: class: computed static methods
+build/173/out.js: class: computed accessor properties
+build/185/out.js: super: statement in constructors
+build/186/out.js: super: expression in constructors
+build/188/out.js: super: in methods, method calls
+build/189/out.js: super: method calls use correct "this" binding
+build/192/out.js: super: super() invokes the correct constructor
+build/193/out.js: generators: basic functionality
+build/194/out.js: generators: generator function expressions
+build/195/out.js: generators: correct "this" binding
+build/197/out.js: generators: sending
+build/200/out.js: generators: %GeneratorPrototype%.throw
+build/202/out.js: generators: yield operator precedence
+build/203/out.js: generators: yield *, arrays
+build/204/out.js: generators: yield *, sparse arrays
+build/205/out.js: generators: yield *, strings
+build/207/out.js: generators: yield *, generator instances
+build/208/out.js: generators: yield *, generic iterables
+build/209/out.js: generators: yield *, instances of iterables
+build/210/out.js: generators: yield * on non-iterables is a runtime error
+build/213/out.js: generators: shorthand generator methods
+build/215/out.js: generators: computed shorthand generators
+build/216/out.js: generators: shorthand generator methods, classes
+build/217/out.js: generators: computed shorthand generators, classes
+build/218/out.js: typed arrays: Int8Array
+build/219/out.js: typed arrays: Uint8Array
+build/220/out.js: typed arrays: Uint8ClampedArray
+build/221/out.js: typed arrays: Int16Array
+build/222/out.js: typed arrays: Uint16Array
+build/223/out.js: typed arrays: Int32Array
+build/224/out.js: typed arrays: Uint32Array
+build/225/out.js: typed arrays: Float32Array
+build/226/out.js: typed arrays: Float64Array
+build/227/out.js: typed arrays: DataView (Int8)
+build/228/out.js: typed arrays: DataView (Uint8)
+build/229/out.js: typed arrays: DataView (Int16)
+build/230/out.js: typed arrays: DataView (Uint16)
+build/231/out.js: typed arrays: DataView (Int32)
+build/232/out.js: typed arrays: DataView (Uint32)
+build/233/out.js: typed arrays: DataView (Float32)
+build/234/out.js: typed arrays: DataView (Float64)
+build/364/out.js: Symbol: basic functionality
+build/367/out.js: Symbol: Object.defineProperty support
+build/376/out.js: well-known symbols: Symbol.iterator, existence
+build/398/out.js: Object static methods: Object.is
+build/409/out.js: function "name" property: shorthand methods (no lexical binding)
+build/455/out.js: Number properties: Number.isFinite
+build/458/out.js: Number properties: Number.isNaN
+build/585/out.js: own property order: for..in
+build/586/out.js: own property order: Object.keys
+build/589/out.js: own property order: JSON.stringify
+build/590/out.js: own property order: JSON.parse
+build/595/out.js: miscellaneous: no semicolon needed after do-while
+build/598/out.js: miscellaneous: Invalid Date
+build/602/out.js: miscellaneous: String.prototype case methods, Unicode support
+build/604/out.js: non-strict function semantics: labeled function statements
+build/611/out.js: Object.prototype.__proto__: get prototype
+build/612/out.js: Object.prototype.__proto__: set prototype
+build/617/out.js: String.prototype HTML methods: existence
+build/618/out.js: String.prototype HTML methods: tags' names are lowercase
+build/619/out.js: String.prototype HTML methods: quotes in arguments are escaped
+build/620/out.js: RegExp.prototype.compile
+build/621/out.js: RegExp syntax extensions: hyphens in character sets
+build/622/out.js: RegExp syntax extensions: invalid character escapes
+build/623/out.js: RegExp syntax extensions: invalid control-character escapes
+build/624/out.js: RegExp syntax extensions: invalid Unicode escapes
+build/625/out.js: RegExp syntax extensions: invalid hexadecimal escapes
+build/626/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
+build/627/out.js: RegExp syntax extensions: octal escape sequences
+build/628/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
+build/629/out.js: HTML-style comments
