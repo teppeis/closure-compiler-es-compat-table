@@ -1,20 +1,3 @@
-// spread (...) operator: with arrays, in function calls
-module.exports = function() {
-
-        return Math.max(...[1, 2, 3]) === 3
-      
-};
-Traceback (most recent call last):
-  File "./node_modules/.bin/closure-gun", line 27, in <module>
-    if subprocess.check_output(['ps', 'x']).find(' '.join(server)) < 0:
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 567, in check_output
-    output, unused_err = process.communicate()
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 791, in communicate
-    stdout = _eintr_retry_call(self.stdout.read)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 476, in _eintr_retry_call
-    return func(*args)
-KeyboardInterrupt
---------------------------------------------------------------------------------
 // spread (...) operator: spreading non-iterables is a runtime error
 module.exports = function() {
 
@@ -144,9 +127,9 @@ null
   Parent(ASSIGN): ./build/61/in.js:5:16
         return ([a, b] = iterable) === iterable;
 
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:158)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitArrayPattern(Es6RewriteDestructuring.java:268)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:68)
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:159)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitArrayPattern(Es6RewriteDestructuring.java:275)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:69)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
@@ -161,14 +144,14 @@ null
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:297)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:564)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:43)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:44)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:285)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:217)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:777)
-	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:693)
-	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:89)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:651)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:648)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:771)
+	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:687)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:83)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:645)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:642)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:93)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
@@ -194,9 +177,9 @@ null
   Parent(ASSIGN): ./build/62/in.js:5:16
         [a,b] = [c,d] = [1,2];
 
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:158)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitArrayPattern(Es6RewriteDestructuring.java:268)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:68)
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:159)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitArrayPattern(Es6RewriteDestructuring.java:275)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:69)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
@@ -211,14 +194,14 @@ null
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:297)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:564)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:43)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:44)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:285)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:217)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:777)
-	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:693)
-	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:89)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:651)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:648)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:771)
+	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:687)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:83)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:645)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:642)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:93)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
@@ -256,8 +239,8 @@ Unexpected OBJECT_PATTERN parent: ASSIGN 5 [source_file: ./build/67/in.js]
   Parent(ASSIGN): ./build/67/in.js:5:16
         return ({a,b} = obj) === obj;
 
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitObjectPattern(Es6RewriteDestructuring.java:173)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:71)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitObjectPattern(Es6RewriteDestructuring.java:174)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:72)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
@@ -272,14 +255,14 @@ Unexpected OBJECT_PATTERN parent: ASSIGN 5 [source_file: ./build/67/in.js]
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:297)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:564)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:43)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:44)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:285)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:217)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:777)
-	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:693)
-	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:89)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:651)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:648)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:771)
+	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:687)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:83)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:645)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:642)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:93)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
@@ -305,8 +288,8 @@ Unexpected OBJECT_PATTERN parent: ASSIGN 5 [source_file: ./build/69/in.js]
   Parent(ASSIGN): ./build/69/in.js:5:17
         ({a,b} = {c,d} = {a:1,b:2,c:3,d:4});
 
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitObjectPattern(Es6RewriteDestructuring.java:173)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:71)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitObjectPattern(Es6RewriteDestructuring.java:174)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:72)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
@@ -321,14 +304,14 @@ Unexpected OBJECT_PATTERN parent: ASSIGN 5 [source_file: ./build/69/in.js]
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:297)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:564)
-	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:43)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:44)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:285)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:217)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:777)
-	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:693)
-	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:89)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:651)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:648)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:771)
+	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:687)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:83)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:645)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:642)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:93)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
@@ -1013,7 +996,7 @@ null
   Parent(STRING_KEY foo): ./build/367/in.js:4:18
         var o = { foo: class {}, bar: class baz {}};
 
-	at com.google.javascript.jscomp.Es6ToEs3Converter$CheckClassAssignments.visit(Es6ToEs3Converter.java:896)
+	at com.google.javascript.jscomp.Es6ToEs3Converter$CheckClassAssignments.visit(Es6ToEs3Converter.java:914)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:664)
@@ -1023,7 +1006,7 @@ null
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:297)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:564)
 	at com.google.javascript.jscomp.Es6ToEs3Converter.checkClassReassignment(Es6ToEs3Converter.java:293)
-	at com.google.javascript.jscomp.Es6ToEs3Converter.visitClass(Es6ToEs3Converter.java:520)
+	at com.google.javascript.jscomp.Es6ToEs3Converter.visitClass(Es6ToEs3Converter.java:527)
 	at com.google.javascript.jscomp.Es6ToEs3Converter.visit(Es6ToEs3Converter.java:157)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:621)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:615)
@@ -1043,11 +1026,11 @@ null
 	at com.google.javascript.jscomp.Es6ToEs3Converter.process(Es6ToEs3Converter.java:99)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:285)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:217)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:777)
-	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:693)
-	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:89)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:651)
-	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:648)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:771)
+	at com.google.javascript.jscomp.Compiler.compileInternal(Compiler.java:687)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:83)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:645)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:642)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:93)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
