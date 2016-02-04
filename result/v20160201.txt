@@ -1,7 +1,6 @@
 build/2/out.js: default function parameters: basic functionality
 build/3/out.js: default function parameters: explicit undefined defers to the default
 build/4/out.js: default function parameters: defaults can refer to previous params
-build/6/out.js: default function parameters: temporal dead zone
 build/7/out.js: default function parameters: separate scope
 build/9/out.js: rest parameters: basic functionality
 build/12/out.js: rest parameters: can't be used in setters
@@ -29,7 +28,9 @@ build/40/out.js: for..of loops: with generic iterables
 build/41/out.js: for..of loops: with instances of generic iterables
 build/44/out.js: octal and binary literals: octal literals
 build/45/out.js: octal and binary literals: binary literals
+build/48/out.js: template strings: basic functionality
 build/50/out.js: template strings: tagged template strings
+build/52/out.js: template strings: line break normalisation (eval)
 build/57/out.js: destructuring, declarations: with arrays
 build/58/out.js: destructuring, declarations: with sparse arrays
 build/59/out.js: destructuring, declarations: with strings
@@ -47,7 +48,6 @@ build/74/out.js: destructuring, declarations: in for-of loop heads
 build/75/out.js: destructuring, declarations: in catch heads
 build/76/out.js: destructuring, declarations: rest
 build/77/out.js: destructuring, declarations: defaults
-build/78/out.js: destructuring, declarations: defaults, let temporal dead zone
 build/79/out.js: destructuring, assignment: with arrays
 build/80/out.js: destructuring, assignment: with sparse arrays
 build/81/out.js: destructuring, assignment: with strings
@@ -118,7 +118,6 @@ build/185/out.js: super: statement in constructors
 build/186/out.js: super: expression in constructors
 build/188/out.js: super: in methods, method calls
 build/189/out.js: super: method calls use correct "this" binding
-build/192/out.js: super: super() invokes the correct constructor
 build/193/out.js: generators: basic functionality
 build/194/out.js: generators: generator function expressions
 build/195/out.js: generators: correct "this" binding
@@ -136,30 +135,10 @@ build/213/out.js: generators: shorthand generator methods
 build/215/out.js: generators: computed shorthand generators
 build/216/out.js: generators: shorthand generator methods, classes
 build/217/out.js: generators: computed shorthand generators, classes
-build/218/out.js: typed arrays: Int8Array
-build/219/out.js: typed arrays: Uint8Array
-build/220/out.js: typed arrays: Uint8ClampedArray
-build/221/out.js: typed arrays: Int16Array
-build/222/out.js: typed arrays: Uint16Array
-build/223/out.js: typed arrays: Int32Array
-build/224/out.js: typed arrays: Uint32Array
-build/225/out.js: typed arrays: Float32Array
-build/226/out.js: typed arrays: Float64Array
-build/227/out.js: typed arrays: DataView (Int8)
-build/228/out.js: typed arrays: DataView (Uint8)
-build/229/out.js: typed arrays: DataView (Int16)
-build/230/out.js: typed arrays: DataView (Uint16)
-build/231/out.js: typed arrays: DataView (Int32)
-build/232/out.js: typed arrays: DataView (Uint32)
-build/233/out.js: typed arrays: DataView (Float32)
-build/234/out.js: typed arrays: DataView (Float64)
 build/364/out.js: Symbol: basic functionality
 build/367/out.js: Symbol: Object.defineProperty support
 build/376/out.js: well-known symbols: Symbol.iterator, existence
-build/398/out.js: Object static methods: Object.is
-build/409/out.js: function "name" property: shorthand methods (no lexical binding)
-build/455/out.js: Number properties: Number.isFinite
-build/458/out.js: Number properties: Number.isNaN
+
 build/585/out.js: own property order: for..in
 build/586/out.js: own property order: Object.keys
 build/589/out.js: own property order: JSON.stringify
