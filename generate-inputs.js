@@ -48,7 +48,8 @@ function generateTestJsSrc(fn, name) {
       }
     } else {
       // in comment
-      return 'module.exports = function() {\n' + match[1] + '\n};';
+      var body = match[1].replace(/^\s+/g, '');
+      return 'module.exports = function() {\n' + body + '\n};';
     }
   } else if (fn.length > 0) {
     // it's an array of objects like the following:
