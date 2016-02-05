@@ -1,6 +1,6 @@
 'use strict';
 
-require('./polyfill');
+// require('./polyfill');
 
 var fs = require('fs');
 var path = require('path');
