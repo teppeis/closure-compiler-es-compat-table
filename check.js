@@ -1,5 +1,7 @@
 'use strict';
 
+require('./polyfill');
+
 var fs = require('fs');
 var path = require('path');
 var files = require('./build/filelist.json');
