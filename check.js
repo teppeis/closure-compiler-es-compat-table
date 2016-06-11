@@ -32,6 +32,8 @@ files.forEach(function(name) {
 });
 
 function check(name, i) {
+  // exclude: spread (...) operator: spreading non-iterables is a runtime error
+  if (i === 28) return;
   var outFile = path.join(__dirname, 'build', String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
