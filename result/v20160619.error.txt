@@ -2612,34 +2612,6 @@ return typeof String.raw === 'function';
 
 0 error(s), 1 warning(s)
 --------------------------------------------------------------------------------
-// String.prototype methods: String.prototype.startsWith throws on RegExp
-module.exports = function() {
-try {
-          "a".startsWith(/./);
-        } catch(e) {
-          return typeof String.prototype.startsWith === 'function';
-      
-};
-./build/465/in.js:8: ERROR - Parse error. '}' expected
-};
-  ^
-
-1 error(s), 0 warning(s)
---------------------------------------------------------------------------------
-// String.prototype methods: String.prototype.endsWith throws on RegExp
-module.exports = function() {
-try {
-          "a".endsWith(/./);
-        } catch(e) {
-          return typeof String.prototype.endsWith === 'function';
-      
-};
-./build/467/in.js:8: ERROR - Parse error. '}' expected
-};
-  ^
-
-1 error(s), 0 warning(s)
---------------------------------------------------------------------------------
 // prototype of bound functions: basic functions
 module.exports = function() {
 function correctProtoBound(proto) {

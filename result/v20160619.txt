@@ -203,7 +203,9 @@ build/460/out.js: String static methods: String.fromCodePoint
 build/461/out.js: String.prototype methods: String.prototype.codePointAt
 build/463/out.js: String.prototype methods: String.prototype.repeat
 build/464/out.js: String.prototype methods: String.prototype.startsWith
+build/465/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
 build/466/out.js: String.prototype methods: String.prototype.endsWith
+build/467/out.js: String.prototype methods: String.prototype.endsWith throws on RegExp
 build/468/out.js: String.prototype methods: String.prototype.includes
 build/477/out.js: Array static methods: Array.from, array-like objects
 build/478/out.js: Array static methods: Array.from, generator instances
