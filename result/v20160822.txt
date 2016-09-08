@@ -228,76 +228,76 @@ build/386/out.js: Reflect: Reflect.construct
 build/388/out.js: Reflect: Reflect.construct creates instances from third argument
 build/401/out.js: Symbol: basic functionality
 build/404/out.js: Symbol: Object.defineProperty support
-build/414/out.js: well-known symbols: Symbol.iterator, existence
-build/438/out.js: Object static methods: Object.assign
-build/439/out.js: Object static methods: Object.is
-build/441/out.js: Object static methods: Object.setPrototypeOf
-build/450/out.js: function "name" property: shorthand methods (no lexical binding)
-build/460/out.js: String static methods: String.fromCodePoint
-build/461/out.js: String.prototype methods: String.prototype.codePointAt
-build/463/out.js: String.prototype methods: String.prototype.repeat
-build/464/out.js: String.prototype methods: String.prototype.startsWith
-build/465/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
-build/466/out.js: String.prototype methods: String.prototype.endsWith
-build/467/out.js: String.prototype methods: String.prototype.endsWith throws on RegExp
-build/468/out.js: String.prototype methods: String.prototype.includes
-build/477/out.js: Array static methods: Array.from, array-like objects
-build/478/out.js: Array static methods: Array.from, generator instances
-build/479/out.js: Array static methods: Array.from, generic iterables
-build/480/out.js: Array static methods: Array.from, instances of generic iterables
-build/486/out.js: Array static methods: Array.of
-build/488/out.js: Array.prototype methods: Array.prototype.copyWithin
-build/489/out.js: Array.prototype methods: Array.prototype.find
-build/490/out.js: Array.prototype methods: Array.prototype.findIndex
-build/491/out.js: Array.prototype methods: Array.prototype.fill
-build/492/out.js: Array.prototype methods: Array.prototype.keys
-build/493/out.js: Array.prototype methods: Array.prototype.values
-build/494/out.js: Array.prototype methods: Array.prototype.entries
-build/495/out.js: Array.prototype methods: Array.prototype[Symbol.iterator]
-build/498/out.js: Number properties: Number.isFinite
-build/499/out.js: Number properties: Number.isInteger
-build/500/out.js: Number properties: Number.isSafeInteger
-build/501/out.js: Number properties: Number.isNaN
-build/502/out.js: Number properties: Number.EPSILON
-build/503/out.js: Number properties: Number.MIN_SAFE_INTEGER
-build/504/out.js: Number properties: Number.MAX_SAFE_INTEGER
-build/505/out.js: Math methods: Math.clz32
-build/506/out.js: Math methods: Math.imul
-build/507/out.js: Math methods: Math.sign
-build/508/out.js: Math methods: Math.log10
-build/509/out.js: Math methods: Math.log2
-build/510/out.js: Math methods: Math.log1p
-build/511/out.js: Math methods: Math.expm1
-build/512/out.js: Math methods: Math.cosh
-build/513/out.js: Math methods: Math.sinh
-build/514/out.js: Math methods: Math.tanh
-build/515/out.js: Math methods: Math.acosh
-build/516/out.js: Math methods: Math.asinh
-build/517/out.js: Math methods: Math.atanh
-build/518/out.js: Math methods: Math.trunc
-build/520/out.js: Math methods: Math.cbrt
-build/552/out.js: miscellaneous subclassables: Map is subclassable
-build/553/out.js: miscellaneous subclassables: Set is subclassable
-build/631/out.js: own property order: Object.keys
-build/633/out.js: own property order: Object.assign
-build/634/out.js: own property order: JSON.stringify
-build/635/out.js: own property order: JSON.parse
-build/637/out.js: own property order: Reflect.ownKeys, symbol key order
-build/640/out.js: miscellaneous: no semicolon needed after do-while
-build/643/out.js: miscellaneous: Invalid Date
-build/649/out.js: non-strict function semantics: labeled function statements
-build/656/out.js: Object.prototype.__proto__: get prototype
-build/657/out.js: Object.prototype.__proto__: set prototype
-build/662/out.js: String.prototype HTML methods: existence
-build/663/out.js: String.prototype HTML methods: tags' names are lowercase
-build/664/out.js: String.prototype HTML methods: quotes in arguments are escaped
-build/665/out.js: RegExp.prototype.compile
-build/666/out.js: RegExp syntax extensions: hyphens in character sets
-build/667/out.js: RegExp syntax extensions: invalid character escapes
-build/668/out.js: RegExp syntax extensions: invalid control-character escapes
-build/669/out.js: RegExp syntax extensions: invalid Unicode escapes
-build/670/out.js: RegExp syntax extensions: invalid hexadecimal escapes
-build/671/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
-build/672/out.js: RegExp syntax extensions: octal escape sequences
-build/673/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
-build/674/out.js: HTML-style comments
+build/415/out.js: well-known symbols: Symbol.iterator, existence
+build/439/out.js: Object static methods: Object.assign
+build/440/out.js: Object static methods: Object.is
+build/442/out.js: Object static methods: Object.setPrototypeOf
+build/451/out.js: function "name" property: shorthand methods (no lexical binding)
+build/461/out.js: String static methods: String.fromCodePoint
+build/462/out.js: String.prototype methods: String.prototype.codePointAt
+build/464/out.js: String.prototype methods: String.prototype.repeat
+build/465/out.js: String.prototype methods: String.prototype.startsWith
+build/466/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
+build/467/out.js: String.prototype methods: String.prototype.endsWith
+build/468/out.js: String.prototype methods: String.prototype.endsWith throws on RegExp
+build/469/out.js: String.prototype methods: String.prototype.includes
+build/478/out.js: Array static methods: Array.from, array-like objects
+build/479/out.js: Array static methods: Array.from, generator instances
+build/480/out.js: Array static methods: Array.from, generic iterables
+build/481/out.js: Array static methods: Array.from, instances of generic iterables
+build/487/out.js: Array static methods: Array.of
+build/489/out.js: Array.prototype methods: Array.prototype.copyWithin
+build/490/out.js: Array.prototype methods: Array.prototype.find
+build/491/out.js: Array.prototype methods: Array.prototype.findIndex
+build/492/out.js: Array.prototype methods: Array.prototype.fill
+build/493/out.js: Array.prototype methods: Array.prototype.keys
+build/494/out.js: Array.prototype methods: Array.prototype.values
+build/495/out.js: Array.prototype methods: Array.prototype.entries
+build/496/out.js: Array.prototype methods: Array.prototype[Symbol.iterator]
+build/499/out.js: Number properties: Number.isFinite
+build/500/out.js: Number properties: Number.isInteger
+build/501/out.js: Number properties: Number.isSafeInteger
+build/502/out.js: Number properties: Number.isNaN
+build/503/out.js: Number properties: Number.EPSILON
+build/504/out.js: Number properties: Number.MIN_SAFE_INTEGER
+build/505/out.js: Number properties: Number.MAX_SAFE_INTEGER
+build/506/out.js: Math methods: Math.clz32
+build/507/out.js: Math methods: Math.imul
+build/508/out.js: Math methods: Math.sign
+build/509/out.js: Math methods: Math.log10
+build/510/out.js: Math methods: Math.log2
+build/511/out.js: Math methods: Math.log1p
+build/512/out.js: Math methods: Math.expm1
+build/513/out.js: Math methods: Math.cosh
+build/514/out.js: Math methods: Math.sinh
+build/515/out.js: Math methods: Math.tanh
+build/516/out.js: Math methods: Math.acosh
+build/517/out.js: Math methods: Math.asinh
+build/518/out.js: Math methods: Math.atanh
+build/519/out.js: Math methods: Math.trunc
+build/521/out.js: Math methods: Math.cbrt
+build/553/out.js: miscellaneous subclassables: Map is subclassable
+build/554/out.js: miscellaneous subclassables: Set is subclassable
+build/632/out.js: own property order: Object.keys
+build/634/out.js: own property order: Object.assign
+build/635/out.js: own property order: JSON.stringify
+build/636/out.js: own property order: JSON.parse
+build/638/out.js: own property order: Reflect.ownKeys, symbol key order
+build/641/out.js: miscellaneous: no semicolon needed after do-while
+build/644/out.js: miscellaneous: Invalid Date
+build/650/out.js: non-strict function semantics: labeled function statements
+build/657/out.js: Object.prototype.__proto__: get prototype
+build/658/out.js: Object.prototype.__proto__: set prototype
+build/663/out.js: String.prototype HTML methods: existence
+build/664/out.js: String.prototype HTML methods: tags' names are lowercase
+build/665/out.js: String.prototype HTML methods: quotes in arguments are escaped
+build/666/out.js: RegExp.prototype.compile: basic functionality
+build/668/out.js: RegExp syntax extensions: hyphens in character sets
+build/669/out.js: RegExp syntax extensions: invalid character escapes
+build/670/out.js: RegExp syntax extensions: invalid control-character escapes
+build/671/out.js: RegExp syntax extensions: invalid Unicode escapes
+build/672/out.js: RegExp syntax extensions: invalid hexadecimal escapes
+build/673/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
+build/674/out.js: RegExp syntax extensions: octal escape sequences
+build/675/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
+build/676/out.js: HTML-style comments

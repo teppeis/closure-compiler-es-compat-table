@@ -1861,7 +1861,7 @@ var passed = false;
         return passed;
       
 };
-./build/412/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+./build/413/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
         obj instanceof C;
         ^
 
@@ -1881,15 +1881,15 @@ var a = {}, b = {}, c = {};
         return passed === 3;
       
 };
-./build/432/in.js:9: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
+./build/433/in.js:9: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
         a >= 0;
         ^
 
-./build/432/in.js:10: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./build/433/in.js:10: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         b in {};
         ^
 
-./build/432/in.js:11: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
+./build/433/in.js:11: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
         c == 0;
         ^
 
@@ -1901,7 +1901,7 @@ return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
       
 };
-./build/453/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+./build/454/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
           typeof class bar { static name() {} }.name === "function";
                  ^
 
@@ -1912,7 +1912,7 @@ module.exports = function() {
 return typeof String.raw === 'function';
       
 };
-./build/459/in.js:3: WARNING - Built-in 'String.raw' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/460/in.js:3: WARNING - Built-in 'String.raw' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
 return typeof String.raw === 'function';
               ^
 
@@ -1934,7 +1934,7 @@ function correctProtoBound(superclass) {
             && correctProtoBound(null);
       
 };
-./build/558/in.js:5: ERROR - constructor is missing a call to super()
+./build/559/in.js:5: ERROR - constructor is missing a call to super()
               constructor() {
               ^
 
@@ -1949,11 +1949,11 @@ module.exports = function() {
         return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
       
 };
-./build/559/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/560/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({toString:Function()}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
-./build/559/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+./build/560/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
         p + 3;
         ^
 
@@ -1968,7 +1968,7 @@ module.exports = function() {
         return get + '' === "length,0,1";
       
 };
-./build/560/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/561/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({length:2, 0:0, 1:0}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -1984,11 +1984,11 @@ module.exports = function() {
         return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
       
 };
-./build/561/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/562/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
-./build/561/in.js:7: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+./build/562/in.js:7: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
         ({}) instanceof p;
         ^
 
@@ -2006,11 +2006,11 @@ module.exports = function() {
         return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
       
 };
-./build/562/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/563/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
-./build/562/in.js:8: WARNING - Suspicious code. The result of the 'typeof' operator is not being used.
+./build/563/in.js:8: WARNING - Suspicious code. The result of the 'typeof' operator is not being used.
           typeof foo;
           ^
 
@@ -2025,7 +2025,7 @@ module.exports = function() {
         return get + '' === "prototype";
       
 };
-./build/563/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/564/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Function, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2040,7 +2040,7 @@ module.exports = function() {
         return get + '' === "prototype";
       
 };
-./build/564/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/565/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2066,7 +2066,7 @@ module.exports = function() {
         return get + '' === "done,value,done,value";
       
 };
-./build/565/in.js:10: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/566/in.js:10: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
               return new Proxy({ value: 2, done: false }, { get: function(o, k) { get.push(k); return o[k]; }});
                          ^
 
@@ -2089,7 +2089,7 @@ module.exports = function() {
         }
       
 };
-./build/566/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/567/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({
                     ^
 
@@ -2104,7 +2104,7 @@ module.exports = function() {
         return get + '' === "foo,bar";
       
 };
-./build/567/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/568/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1, bar:2}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2119,7 +2119,7 @@ module.exports = function() {
         return get + '' === "foo,bar";
       
 };
-./build/568/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/569/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:{}, bar:{}}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2134,7 +2134,7 @@ module.exports = function() {
         return get + '' === "length,name";
       
 };
-./build/569/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/570/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2149,7 +2149,7 @@ module.exports = function() {
         return get + '' === "name,message";
       
 };
-./build/570/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/571/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2165,15 +2165,15 @@ module.exports = function() {
         return get + '' === "raw,length,0,1";
       
 };
-./build/571/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/572/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var raw = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
                       ^
 
-./build/571/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/572/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({raw: raw}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
-./build/571/in.js:7: WARNING - Built-in 'String.raw' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/572/in.js:7: WARNING - Built-in 'String.raw' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         String.raw(p);
         ^
 
@@ -2190,11 +2190,11 @@ module.exports = function() {
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       
 };
-./build/572/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/573/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(re, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
-./build/572/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./build/573/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         RegExp(p);
         ^
 
@@ -2209,7 +2209,7 @@ module.exports = function() {
         return get + '' === "global,ignoreCase,multiline,unicode,sticky";
       
 };
-./build/573/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/574/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2224,7 +2224,7 @@ module.exports = function() {
         return get + '' === "exec";
       
 };
-./build/574/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/575/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2239,7 +2239,7 @@ module.exports = function() {
         return get + '' === "source,flags";
       
 };
-./build/575/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/576/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2256,7 +2256,7 @@ module.exports = function() {
         return get + '' === "global,exec,global,unicode,exec";
       
 };
-./build/576/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/577/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2273,7 +2273,7 @@ module.exports = function() {
         return get + '' === "global,exec,global,unicode,exec";
       
 };
-./build/577/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/578/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2288,7 +2288,7 @@ module.exports = function() {
         return get + '' === "lastIndex,exec";
       
 };
-./build/578/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/579/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2305,7 +2305,7 @@ module.exports = function() {
         return get + '' === "constructor,flags,exec";
       
 };
-./build/579/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/580/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ constructor: constructor, flags: '', exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2320,7 +2320,7 @@ module.exports = function() {
         return get[0] === Symbol.iterator && get.slice(1) + '' === "length,0,1";
       
 };
-./build/580/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/581/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2342,7 +2342,7 @@ module.exports = function() {
           && get.length === 7;
       
 };
-./build/581/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/582/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(arr, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2370,7 +2370,7 @@ module.exports = function() {
         return true;
       
 };
-./build/582/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/583/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2385,7 +2385,7 @@ module.exports = function() {
         return get + '' === "length,3";
       
 };
-./build/583/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/584/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2400,7 +2400,7 @@ module.exports = function() {
         return get + '' === "length,0,4,2";
       
 };
-./build/584/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/585/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,,2,,4,,], { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2415,7 +2415,7 @@ module.exports = function() {
         return get + '' === "length,0,1,2,3";
       
 };
-./build/585/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/586/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2431,7 +2431,7 @@ module.exports = function() {
         return get + '' === "length,constructor,1,2,3,length,constructor,2,1";
       
 };
-./build/586/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/587/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2446,7 +2446,7 @@ module.exports = function() {
         return get + '' === "join";
       
 };
-./build/587/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/588/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({ join:Function() }, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2461,7 +2461,7 @@ module.exports = function() {
         return get + '' === "toJSON";
       
 };
-./build/588/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/589/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2476,7 +2476,7 @@ module.exports = function() {
         return get + '' === "then";
       
 };
-./build/589/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/590/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2493,7 +2493,7 @@ module.exports = function() {
         return get[0] === Symbol.match && get[1] === Symbol.toPrimitive && get.length === 2;
       
 };
-./build/590/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/591/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2510,7 +2510,7 @@ module.exports = function() {
         return get[0] === Symbol.replace && get[1] === Symbol.toPrimitive && get.length === 2;
       
 };
-./build/591/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/592/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2527,7 +2527,7 @@ module.exports = function() {
         return get[0] === Symbol.search && get[1] === Symbol.toPrimitive && get.length === 2;
       
 };
-./build/592/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/593/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2544,7 +2544,7 @@ module.exports = function() {
         return get[0] === Symbol.split && get[1] === Symbol.toPrimitive && get.length === 2;
       
 };
-./build/593/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/594/in.js:7: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2560,7 +2560,7 @@ module.exports = function() {
         return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString,toISOString";
       
 };
-./build/594/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/595/in.js:6: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({toString:Function(),toISOString:Function()}, { get: function(o, k) { get.push(k); return o[k]; }});
                     ^
 
@@ -2575,7 +2575,7 @@ module.exports = function() {
         return set + '' === "foo,bar";
       
 };
-./build/595/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/596/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2590,7 +2590,7 @@ module.exports = function() {
         return set + '' === "length";
       
 };
-./build/596/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/597/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2605,7 +2605,7 @@ module.exports = function() {
         return set + '' === "length";
       
 };
-./build/597/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/598/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2620,7 +2620,7 @@ module.exports = function() {
         return set + '' === "0,1,2";
       
 };
-./build/598/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/599/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([1,2,3,4,5,6], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2635,7 +2635,7 @@ module.exports = function() {
         return set + '' === "3,4,5";
       
 };
-./build/599/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/600/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([1,2,3,4,5,6], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2650,7 +2650,7 @@ module.exports = function() {
         return set + '' === "length";
       
 };
-./build/600/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/601/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2665,7 +2665,7 @@ module.exports = function() {
         return set + '' === "0,1,2,length";
       
 };
-./build/601/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/602/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2680,7 +2680,7 @@ module.exports = function() {
         return set + '' === "3,1,2";
       
 };
-./build/602/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/603/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,0,,], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2695,7 +2695,7 @@ module.exports = function() {
         return set + '' === "0,2,length";
       
 };
-./build/603/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/604/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2710,7 +2710,7 @@ module.exports = function() {
         return set + '' === "3,2,1,length";
       
 };
-./build/604/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/605/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([1,2,3], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2725,7 +2725,7 @@ module.exports = function() {
         return set + '' === "5,3,2,0,1,length";
       
 };
-./build/605/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/606/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
                     ^
 
@@ -2740,7 +2740,7 @@ module.exports = function() {
         return def + '' === "foo,bar";
       
 };
-./build/606/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/607/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
                     ^
 
@@ -2755,7 +2755,7 @@ module.exports = function() {
         return def + '' === "foo,bar";
       
 };
-./build/607/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/608/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
                     ^
 
@@ -2770,7 +2770,7 @@ module.exports = function() {
         return del + '' === "0,1,2";
       
 };
-./build/608/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/609/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,0,,,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2785,7 +2785,7 @@ module.exports = function() {
         return del + '' === "2";
       
 };
-./build/609/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/610/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2800,7 +2800,7 @@ module.exports = function() {
         return del + '' === "0,4,2";
       
 };
-./build/610/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/611/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,,2,,4,,], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2815,7 +2815,7 @@ module.exports = function() {
         return del + '' === "0,2,5";
       
 };
-./build/611/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/612/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,,0,,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2830,7 +2830,7 @@ module.exports = function() {
         return del + '' === "3,5";
       
 };
-./build/612/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/613/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,0,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2845,7 +2845,7 @@ module.exports = function() {
         return del + '' === "5,3";
       
 };
-./build/613/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/614/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy([0,0,,0,,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
                     ^
 
@@ -2861,7 +2861,7 @@ module.exports = function() {
         return gopd + '' === "foo,bar";
       
 };
-./build/614/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/615/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({},
                     ^
 
@@ -2877,7 +2877,7 @@ module.exports = function() {
         return gopd + '' === "foo,bar";
       
 };
-./build/615/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/616/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1, bar:2},
                     ^
 
@@ -2893,7 +2893,7 @@ module.exports = function() {
         return gopd + '' === "garply";
       
 };
-./build/616/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/617/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({foo:1, bar:2},
                     ^
 
@@ -2909,7 +2909,7 @@ module.exports = function() {
         return gopd + '' === "length";
       
 };
-./build/617/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/618/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Function(),
                     ^
 
@@ -2924,7 +2924,7 @@ module.exports = function() {
         return ownKeysCalled === 1;
       
 };
-./build/618/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/619/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
                     ^
 
@@ -2939,11 +2939,11 @@ module.exports = function() {
         return ownKeysCalled === 1;
       
 };
-./build/619/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/620/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
                     ^
 
-./build/619/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
+./build/620/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
         Object.isFrozen(p);
         ^
 
@@ -2958,7 +2958,7 @@ module.exports = function() {
         return ownKeysCalled === 2;
       
 };
-./build/620/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
+./build/621/in.js:5: WARNING - Built-in 'Proxy' not supported in output version ECMASCRIPT5: set --language_out to at least ECMASCRIPT6
         var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
                     ^
 
@@ -2982,7 +2982,7 @@ try {
         return true;
       
 };
-./build/646/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./build/647/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
           Date.prototype.valueOf(); return false;
           ^
 
@@ -3000,23 +3000,23 @@ module.exports = function() {
         return foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;
       
 };
-./build/650/in.js:6: ERROR - Block-scoped declaration not directly within block: foo
+./build/651/in.js:6: ERROR - Block-scoped declaration not directly within block: foo
         if(true) function foo() { return 2; }
                           ^
 
-./build/650/in.js:7: ERROR - Block-scoped declaration not directly within block: bar
+./build/651/in.js:7: ERROR - Block-scoped declaration not directly within block: bar
         if(false) {} else function bar() { return 3; }
                                    ^
 
-./build/650/in.js:8: ERROR - Block-scoped declaration not directly within block: baz
+./build/651/in.js:8: ERROR - Block-scoped declaration not directly within block: baz
         if(true) function baz() { return 4; } else {}
                           ^
 
-./build/650/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
+./build/651/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
         if(false) function qux() { return 5; } else function qux() { return 6; }
                            ^
 
-./build/650/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
+./build/651/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
         if(false) function qux() { return 5; } else function qux() { return 6; }
                                                              ^
 
@@ -3030,15 +3030,15 @@ module.exports = function() {
     return a === 3;
   
 };
-./build/674/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./build/676/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
 --> A comment
 ^
 
-./build/674/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./build/676/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
     <!-- Another comment
     ^
 
-./build/674/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./build/676/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
     var a = 3; <!-- Another comment
                ^
 
