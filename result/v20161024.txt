@@ -226,6 +226,7 @@ build/384/out.js: Reflect: Reflect.ownKeys, symbol keys
 build/385/out.js: Reflect: Reflect.apply
 build/386/out.js: Reflect: Reflect.construct
 build/388/out.js: Reflect: Reflect.construct creates instances from third argument
+build/394/out.js: Promise: constructor requires new
 build/401/out.js: Symbol: basic functionality
 build/404/out.js: Symbol: Object.defineProperty support
 build/415/out.js: well-known symbols: Symbol.iterator, existence
