@@ -1,5 +1,7 @@
 'use strict';
 
+// TEST_DIR=44 if you want to run only specified test
+
 // require('./polyfill');
 
 var fs = require('fs');
@@ -24,6 +26,10 @@ global.__createIterableObject = function(arr, methods) {
   return iterable;
 }
 
+global.asyncTestPassed = function() {
+  console.trace('asyncTestPassed');
+}
+
 var results = [];
 
 var fileno = 0;
@@ -32,8 +38,14 @@ files.forEach(function(name) {
 });
 
 function check(name, i) {
-  // exclude: spread (...) operator: spreading non-iterables is a runtime error
-  if (i === 28) return;
+  if (process.env.TEST_DIR && process.env.TEST_DIR != i) {
+    return;
+  }
+
+  delete global.$jscomp;
+  delete global.Promise;
+  delete global.Symbol;
+
   var outFile = path.join(__dirname, 'build', String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
