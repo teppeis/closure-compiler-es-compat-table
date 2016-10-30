@@ -6,4 +6,4 @@ VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
 echo $VERSION
 LOG=./result/$VERSION.txt
 rm -f $LOG
-node ./check.js > $LOG
+nodebrew exec 0.10 -- node ./check.js > $LOG
