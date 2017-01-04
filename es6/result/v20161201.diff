@@ -1,0 +1,71 @@
+--- result/v20161024.txt	2017-01-04 16:16:42.000000000 +0900
++++ result/v20161201.txt	2017-01-05 00:44:58.000000000 +0900
+@@ -35,6 +35,7 @@
+ build/62/out.js: destructuring, declarations: with generator instances
+ build/63/out.js: destructuring, declarations: with generic iterables
+ build/64/out.js: destructuring, declarations: with instances of generic iterables
++build/66/out.js: destructuring, declarations: trailing commas in iterable patterns
+ build/67/out.js: destructuring, declarations: with objects
+ build/68/out.js: destructuring, declarations: object destructuring with primitives
+ build/69/out.js: destructuring, declarations: trailing commas in object patterns
+@@ -53,6 +54,7 @@
+ build/84/out.js: destructuring, assignment: with generator instances
+ build/85/out.js: destructuring, assignment: with generic iterables
+ build/86/out.js: destructuring, assignment: with instances of generic iterables
++build/90/out.js: destructuring, assignment: trailing commas in iterable patterns
+ build/91/out.js: destructuring, assignment: with objects
+ build/92/out.js: destructuring, assignment: object destructuring with primitives
+ build/93/out.js: destructuring, assignment: trailing commas in object patterns
+@@ -69,6 +71,7 @@
+ build/108/out.js: destructuring, parameters: with generator instances
+ build/109/out.js: destructuring, parameters: with generic iterables
+ build/110/out.js: destructuring, parameters: with instances of generic iterables
++build/112/out.js: destructuring, parameters: trailing commas in iterable patterns
+ build/113/out.js: destructuring, parameters: with objects
+ build/114/out.js: destructuring, parameters: object destructuring with primitives
+ build/115/out.js: destructuring, parameters: trailing commas in object patterns
+@@ -222,14 +225,10 @@
+ build/381/out.js: Reflect: Reflect.isExtensible
+ build/382/out.js: Reflect: Reflect.preventExtensions
+ build/383/out.js: Reflect: Reflect.ownKeys, string keys
+build/384/out.js: Reflect: Reflect.ownKeys, symbol keys
+ build/385/out.js: Reflect: Reflect.apply
+ build/386/out.js: Reflect: Reflect.construct
+ build/388/out.js: Reflect: Reflect.construct creates instances from third argument
+ build/394/out.js: Promise: constructor requires new
+-build/401/out.js: Symbol: basic functionality
+-build/404/out.js: Symbol: Object.defineProperty support
+-build/415/out.js: well-known symbols: Symbol.iterator, existence
+ build/439/out.js: Object static methods: Object.assign
+ build/440/out.js: Object static methods: Object.is
+ build/442/out.js: Object static methods: Object.setPrototypeOf
+@@ -246,7 +245,6 @@
+ build/479/out.js: Array static methods: Array.from, generator instances
+ build/480/out.js: Array static methods: Array.from, generic iterables
+ build/481/out.js: Array static methods: Array.from, instances of generic iterables
+-build/487/out.js: Array static methods: Array.of
+ build/489/out.js: Array.prototype methods: Array.prototype.copyWithin
+ build/490/out.js: Array.prototype methods: Array.prototype.find
+ build/491/out.js: Array.prototype methods: Array.prototype.findIndex
+@@ -254,7 +252,6 @@
+ build/493/out.js: Array.prototype methods: Array.prototype.keys
+ build/494/out.js: Array.prototype methods: Array.prototype.values
+ build/495/out.js: Array.prototype methods: Array.prototype.entries
+-build/496/out.js: Array.prototype methods: Array.prototype[Symbol.iterator]
+ build/499/out.js: Number properties: Number.isFinite
+ build/500/out.js: Number properties: Number.isInteger
+ build/501/out.js: Number properties: Number.isSafeInteger
+@@ -277,13 +274,10 @@
+ build/518/out.js: Math methods: Math.atanh
+ build/519/out.js: Math methods: Math.trunc
+ build/521/out.js: Math methods: Math.cbrt
+-build/553/out.js: miscellaneous subclassables: Map is subclassable
+-build/554/out.js: miscellaneous subclassables: Set is subclassable
+ build/632/out.js: own property order: Object.keys
+ build/634/out.js: own property order: Object.assign
+ build/635/out.js: own property order: JSON.stringify
+ build/636/out.js: own property order: JSON.parse
+-build/638/out.js: own property order: Reflect.ownKeys, symbol key order
+ build/641/out.js: miscellaneous: no semicolon needed after do-while
+ build/644/out.js: miscellaneous: Invalid Date
+ build/650/out.js: non-strict function semantics: labeled function statements
