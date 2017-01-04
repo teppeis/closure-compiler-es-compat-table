@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TEST_DIR=44 if you want to run only specified test
+
 JAVA=./node_modules/.bin/closure-gun
 
 VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
@@ -8,6 +10,11 @@ ERRORLOG=./result/$VERSION.error.txt
 rm -f $ERRORLOG
 
 for DIR in $(ls ./build|grep -v filelist.json|sort -n); do
+
+    if [ -n "$TEST_DIR" ] && [ $DIR != $TEST_DIR ]; then
+        continue
+    fi
+
     DIR=./build/$DIR
 
     $JAVA \
