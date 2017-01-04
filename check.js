@@ -46,11 +46,8 @@ function check(name, i) {
   delete global.Promise;
   delete global.Symbol;
 
-  // Reflect: Reflect.construct, Promise subclassing
-  // Promise: basic functionality
-  // Promise: constructor requires new
   // Promise: Promise.prototype isn't an instance
-  if (i >= 392 && i <= 395) return;
+  if (i === 395) return;
   var outFile = path.join(__dirname, 'build', String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
