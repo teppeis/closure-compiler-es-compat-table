@@ -32,6 +32,14 @@ function writeInputSrcFile(fn, name) {
 }
 
 function generateTestJsSrc(fn, name) {
+  var src = generateTestJsSrc_(fn, name);
+  if (/global.__createIterableObject\(/.test(src)) {
+    src = src + '\n$jscomp.initSymbolIterator();';
+  }
+  return src;
+}
+
+function generateTestJsSrc_(fn, name) {
   var expr, match;
   if (typeof fn === 'function') {
     expr = fn.toString();

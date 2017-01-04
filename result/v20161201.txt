@@ -12,6 +12,10 @@ build/18/out.js: spread (...) operator: with strings, in function calls
 build/19/out.js: spread (...) operator: with strings, in array literals
 build/22/out.js: spread (...) operator: with generator instances, in calls
 build/23/out.js: spread (...) operator: with generator instances, in arrays
+build/24/out.js: spread (...) operator: with generic iterables, in calls
+build/25/out.js: spread (...) operator: with generic iterables, in arrays
+build/26/out.js: spread (...) operator: with instances of iterables, in calls
+build/27/out.js: spread (...) operator: with instances of iterables, in arrays
 build/29/out.js: object literal extensions: computed properties
 build/30/out.js: object literal extensions: shorthand properties
 build/31/out.js: object literal extensions: shorthand methods
@@ -20,6 +24,8 @@ build/35/out.js: for..of loops: with arrays
 build/36/out.js: for..of loops: with sparse arrays
 build/37/out.js: for..of loops: with strings
 build/39/out.js: for..of loops: with generator instances
+build/40/out.js: for..of loops: with generic iterables
+build/41/out.js: for..of loops: with instances of generic iterables
 build/44/out.js: octal and binary literals: octal literals
 build/45/out.js: octal and binary literals: binary literals
 build/50/out.js: template literals: tagged template literals
@@ -27,6 +33,8 @@ build/58/out.js: destructuring, declarations: with arrays
 build/59/out.js: destructuring, declarations: with sparse arrays
 build/60/out.js: destructuring, declarations: with strings
 build/62/out.js: destructuring, declarations: with generator instances
+build/63/out.js: destructuring, declarations: with generic iterables
+build/64/out.js: destructuring, declarations: with instances of generic iterables
 build/66/out.js: destructuring, declarations: trailing commas in iterable patterns
 build/67/out.js: destructuring, declarations: with objects
 build/68/out.js: destructuring, declarations: object destructuring with primitives
@@ -44,6 +52,8 @@ build/80/out.js: destructuring, assignment: with arrays
 build/81/out.js: destructuring, assignment: with sparse arrays
 build/82/out.js: destructuring, assignment: with strings
 build/84/out.js: destructuring, assignment: with generator instances
+build/85/out.js: destructuring, assignment: with generic iterables
+build/86/out.js: destructuring, assignment: with instances of generic iterables
 build/90/out.js: destructuring, assignment: trailing commas in iterable patterns
 build/91/out.js: destructuring, assignment: with objects
 build/92/out.js: destructuring, assignment: object destructuring with primitives
@@ -59,6 +69,8 @@ build/104/out.js: destructuring, parameters: with arrays
 build/105/out.js: destructuring, parameters: with sparse arrays
 build/106/out.js: destructuring, parameters: with strings
 build/108/out.js: destructuring, parameters: with generator instances
+build/109/out.js: destructuring, parameters: with generic iterables
+build/110/out.js: destructuring, parameters: with instances of generic iterables
 build/112/out.js: destructuring, parameters: trailing commas in iterable patterns
 build/113/out.js: destructuring, parameters: with objects
 build/114/out.js: destructuring, parameters: object destructuring with primitives
@@ -231,6 +243,8 @@ build/468/out.js: String.prototype methods: String.prototype.endsWith throws on 
 build/469/out.js: String.prototype methods: String.prototype.includes
 build/478/out.js: Array static methods: Array.from, array-like objects
 build/479/out.js: Array static methods: Array.from, generator instances
+build/480/out.js: Array static methods: Array.from, generic iterables
+build/481/out.js: Array static methods: Array.from, instances of generic iterables
 build/489/out.js: Array.prototype methods: Array.prototype.copyWithin
 build/490/out.js: Array.prototype methods: Array.prototype.find
 build/491/out.js: Array.prototype methods: Array.prototype.findIndex
