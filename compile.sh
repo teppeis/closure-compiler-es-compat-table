@@ -6,16 +6,16 @@ JAVA=./node_modules/.bin/closure-gun
 
 VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
 echo $VERSION
-ERRORLOG=./result/$VERSION.error.txt
+ERRORLOG=./$ES_VERSION/result/$VERSION.error.txt
 rm -f $ERRORLOG
 
-for DIR in $(ls ./build|grep -v filelist.json|sort -n); do
+for DIR in $(ls ./$ES_VERSION/build|grep -v filelist.json|sort -n); do
 
     if [ -n "$TEST_DIR" ] && [ $DIR != $TEST_DIR ]; then
         continue
     fi
 
-    DIR=./build/$DIR
+    DIR=./$ES_VERSION/build/$DIR
 
     $JAVA \
         --language_in ECMASCRIPT6 \

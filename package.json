@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "check": "rm -rf build && node generate-inputs.js && ./compile.sh && ./check.sh"
+    "es6": "ES_VERSION=es6 node generate-inputs.js && ES_VERSION=es6 ./compile.sh && ES_VERSION=es6 ./check.sh",
+    "es2016plus": "ES_VERSION=es2016plus node generate-inputs.js && ES_VERSION=es2016plus ./compile.sh && ES_VERSION=es2016plus ./check.sh"
   },
   "author": "Teppei Sato",
   "license": "MIT",
