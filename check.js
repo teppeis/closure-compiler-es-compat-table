@@ -6,7 +6,8 @@
 
 var fs = require('fs');
 var path = require('path');
-var files = require('./build/filelist.json');
+var esVersion = process.env.ES_VERSION;
+var files = require('./' + esVersion + '/build/filelist.json');
 
 global.__createIterableObject = function(arr, methods) {
   methods = methods || {};
@@ -48,12 +49,12 @@ function check(name, i) {
 
   // Promise: Promise.prototype isn't an instance
   if (i === 395) return;
-  var outFile = path.join(__dirname, 'build', String(i), 'out.js');
+  var outFile = path.join(__dirname, esVersion, 'build', String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
       var res = require(outFile)();
       if (res) {
-        console.log('build/' + i + '/out.js: ' + name);
+        console.log( esVersion + '/build/' + i + '/out.js: ' + name);
       }
     } catch (ignore) {
     }

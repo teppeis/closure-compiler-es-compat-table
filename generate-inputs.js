@@ -4,13 +4,22 @@ var fs = require('fs');
 var path = require('path');
 var mkdirp = require('mkdirp');
 var rimraf = require('rimraf');
-var data = require('./compat-table/data-es6');
 
-rimraf.sync('./build');
+var versionToDir = new Map([
+  ['es6', 'es6'],
+  ['es2016plus', 'es2016plus'],
+]);
+var esVersion = versionToDir.get(process.env.ES_VERSION);
+if (!esVersion) {
+  throw new Error('ES_VERSION is invalid: ' + process.env.ES_VERSION);
+}
+
+var data = require('./compat-table/data-' + esVersion);
 
 var fileno = 0;
 var files = [];
-var basedir = path.join(__dirname, 'build');
+var basedir = path.join(__dirname, esVersion, 'build');
+rimraf.sync(basedir);
 data.tests.forEach(function(test) {
   if (test.subtests) {
     test.subtests.forEach(function(subtest) {
