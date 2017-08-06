@@ -255,21 +255,21 @@ es6/build/632/out.js: own property order: Object.keys
 es6/build/634/out.js: own property order: Object.assign
 es6/build/635/out.js: own property order: JSON.stringify
 es6/build/636/out.js: own property order: JSON.parse
-es6/build/641/out.js: miscellaneous: no semicolon needed after do-while
-es6/build/644/out.js: miscellaneous: Invalid Date
-es6/build/650/out.js: non-strict function semantics: labeled function statements
-es6/build/657/out.js: Object.prototype.__proto__: get prototype
-es6/build/658/out.js: Object.prototype.__proto__: set prototype
-es6/build/663/out.js: String.prototype HTML methods: existence
-es6/build/664/out.js: String.prototype HTML methods: tags' names are lowercase
-es6/build/665/out.js: String.prototype HTML methods: quotes in arguments are escaped
-es6/build/666/out.js: RegExp.prototype.compile: basic functionality
-es6/build/668/out.js: RegExp syntax extensions: hyphens in character sets
-es6/build/669/out.js: RegExp syntax extensions: invalid character escapes
-es6/build/670/out.js: RegExp syntax extensions: invalid control-character escapes
-es6/build/671/out.js: RegExp syntax extensions: invalid Unicode escapes
-es6/build/672/out.js: RegExp syntax extensions: invalid hexadecimal escapes
-es6/build/673/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
-es6/build/674/out.js: RegExp syntax extensions: octal escape sequences
-es6/build/675/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
-es6/build/676/out.js: HTML-style comments
+es6/build/643/out.js: miscellaneous: no semicolon needed after do-while
+es6/build/646/out.js: miscellaneous: Invalid Date
+es6/build/652/out.js: non-strict function semantics: labeled function statements
+es6/build/659/out.js: Object.prototype.__proto__: get prototype
+es6/build/660/out.js: Object.prototype.__proto__: set prototype
+es6/build/665/out.js: String.prototype HTML methods: existence
+es6/build/666/out.js: String.prototype HTML methods: tags' names are lowercase
+es6/build/667/out.js: String.prototype HTML methods: quotes in arguments are escaped
+es6/build/668/out.js: RegExp.prototype.compile: basic functionality
+es6/build/670/out.js: RegExp syntax extensions: hyphens in character sets
+es6/build/671/out.js: RegExp syntax extensions: invalid character escapes
+es6/build/672/out.js: RegExp syntax extensions: invalid control-character escapes
+es6/build/673/out.js: RegExp syntax extensions: invalid Unicode escapes
+es6/build/674/out.js: RegExp syntax extensions: invalid hexadecimal escapes
+es6/build/675/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
+es6/build/676/out.js: RegExp syntax extensions: octal escape sequences
+es6/build/677/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
+es6/build/678/out.js: HTML-style comments
