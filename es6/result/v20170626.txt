@@ -35,6 +35,7 @@ es6/build/60/out.js: destructuring, declarations: with strings
 es6/build/62/out.js: destructuring, declarations: with generator instances
 es6/build/63/out.js: destructuring, declarations: with generic iterables
 es6/build/64/out.js: destructuring, declarations: with instances of generic iterables
+es6/build/66/out.js: destructuring, declarations: trailing commas in iterable patterns
 es6/build/67/out.js: destructuring, declarations: with objects
 es6/build/68/out.js: destructuring, declarations: object destructuring with primitives
 es6/build/69/out.js: destructuring, declarations: trailing commas in object patterns
@@ -53,10 +54,15 @@ es6/build/82/out.js: destructuring, assignment: with strings
 es6/build/84/out.js: destructuring, assignment: with generator instances
 es6/build/85/out.js: destructuring, assignment: with generic iterables
 es6/build/86/out.js: destructuring, assignment: with instances of generic iterables
+es6/build/88/out.js: destructuring, assignment: iterable destructuring expression
+es6/build/89/out.js: destructuring, assignment: chained iterable destructuring
+es6/build/90/out.js: destructuring, assignment: trailing commas in iterable patterns
 es6/build/91/out.js: destructuring, assignment: with objects
 es6/build/92/out.js: destructuring, assignment: object destructuring with primitives
 es6/build/93/out.js: destructuring, assignment: trailing commas in object patterns
+es6/build/94/out.js: destructuring, assignment: object destructuring expression
 es6/build/95/out.js: destructuring, assignment: parenthesised left-hand-side is a syntax error
+es6/build/96/out.js: destructuring, assignment: chained object destructuring
 es6/build/98/out.js: destructuring, assignment: computed properties
 es6/build/99/out.js: destructuring, assignment: nested
 es6/build/100/out.js: destructuring, assignment: rest
@@ -69,6 +75,7 @@ es6/build/106/out.js: destructuring, parameters: with strings
 es6/build/108/out.js: destructuring, parameters: with generator instances
 es6/build/109/out.js: destructuring, parameters: with generic iterables
 es6/build/110/out.js: destructuring, parameters: with instances of generic iterables
+es6/build/112/out.js: destructuring, parameters: trailing commas in iterable patterns
 es6/build/113/out.js: destructuring, parameters: with objects
 es6/build/114/out.js: destructuring, parameters: object destructuring with primitives
 es6/build/115/out.js: destructuring, parameters: trailing commas in object patterns
@@ -129,6 +136,7 @@ es6/build/185/out.js: class: computed accessor properties
 es6/build/186/out.js: class: static accessor properties
 es6/build/197/out.js: super: statement in constructors
 es6/build/198/out.js: super: expression in constructors
+es6/build/199/out.js: super: in methods, property access
 es6/build/200/out.js: super: in methods, method calls
 es6/build/201/out.js: super: method calls use correct "this" binding
 es6/build/204/out.js: super: super() invokes the correct constructor
@@ -189,6 +197,7 @@ es6/build/305/out.js: Set: Set.prototype.size
 es6/build/306/out.js: Set: Set.prototype.delete
 es6/build/307/out.js: Set: Set.prototype.clear
 es6/build/308/out.js: Set: Set.prototype.forEach
+es6/build/309/out.js: Set: Set.prototype.keys
 es6/build/310/out.js: Set: Set.prototype.values
 es6/build/311/out.js: Set: Set.prototype.entries
 es6/build/312/out.js: Set: Set.prototype[Symbol.iterator]
@@ -222,21 +231,14 @@ es6/build/380/out.js: Reflect: Reflect.setPrototypeOf
 es6/build/381/out.js: Reflect: Reflect.isExtensible
 es6/build/382/out.js: Reflect: Reflect.preventExtensions
 es6/build/383/out.js: Reflect: Reflect.ownKeys, string keys
-es6/build/384/out.js: Reflect: Reflect.ownKeys, symbol keys
 es6/build/385/out.js: Reflect: Reflect.apply
 es6/build/386/out.js: Reflect: Reflect.construct
 es6/build/388/out.js: Reflect: Reflect.construct creates instances from third argument
 es6/build/394/out.js: Promise: constructor requires new
-es6/build/401/out.js: Symbol: basic functionality
-es6/build/404/out.js: Symbol: Object.defineProperty support
-es6/build/415/out.js: well-known symbols: Symbol.iterator, existence
 es6/build/439/out.js: Object static methods: Object.assign
 es6/build/440/out.js: Object static methods: Object.is
 es6/build/442/out.js: Object static methods: Object.setPrototypeOf
 es6/build/451/out.js: function "name" property: shorthand methods (no lexical binding)
-es6/build/461/out.js: String static methods: String.fromCodePoint
-es6/build/462/out.js: String.prototype methods: String.prototype.codePointAt
-es6/build/464/out.js: String.prototype methods: String.prototype.repeat
 es6/build/465/out.js: String.prototype methods: String.prototype.startsWith
 es6/build/466/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
 es6/build/467/out.js: String.prototype methods: String.prototype.endsWith
@@ -246,44 +248,13 @@ es6/build/478/out.js: Array static methods: Array.from, array-like objects
 es6/build/479/out.js: Array static methods: Array.from, generator instances
 es6/build/480/out.js: Array static methods: Array.from, generic iterables
 es6/build/481/out.js: Array static methods: Array.from, instances of generic iterables
-es6/build/487/out.js: Array static methods: Array.of
-es6/build/489/out.js: Array.prototype methods: Array.prototype.copyWithin
-es6/build/490/out.js: Array.prototype methods: Array.prototype.find
-es6/build/491/out.js: Array.prototype methods: Array.prototype.findIndex
-es6/build/492/out.js: Array.prototype methods: Array.prototype.fill
 es6/build/493/out.js: Array.prototype methods: Array.prototype.keys
-es6/build/494/out.js: Array.prototype methods: Array.prototype.values
-es6/build/495/out.js: Array.prototype methods: Array.prototype.entries
-es6/build/496/out.js: Array.prototype methods: Array.prototype[Symbol.iterator]
 es6/build/499/out.js: Number properties: Number.isFinite
-es6/build/500/out.js: Number properties: Number.isInteger
-es6/build/501/out.js: Number properties: Number.isSafeInteger
 es6/build/502/out.js: Number properties: Number.isNaN
-es6/build/503/out.js: Number properties: Number.EPSILON
-es6/build/504/out.js: Number properties: Number.MIN_SAFE_INTEGER
-es6/build/505/out.js: Number properties: Number.MAX_SAFE_INTEGER
-es6/build/506/out.js: Math methods: Math.clz32
-es6/build/507/out.js: Math methods: Math.imul
-es6/build/508/out.js: Math methods: Math.sign
-es6/build/509/out.js: Math methods: Math.log10
-es6/build/510/out.js: Math methods: Math.log2
-es6/build/511/out.js: Math methods: Math.log1p
-es6/build/512/out.js: Math methods: Math.expm1
-es6/build/513/out.js: Math methods: Math.cosh
-es6/build/514/out.js: Math methods: Math.sinh
-es6/build/515/out.js: Math methods: Math.tanh
-es6/build/516/out.js: Math methods: Math.acosh
-es6/build/517/out.js: Math methods: Math.asinh
-es6/build/518/out.js: Math methods: Math.atanh
-es6/build/519/out.js: Math methods: Math.trunc
-es6/build/521/out.js: Math methods: Math.cbrt
-es6/build/553/out.js: miscellaneous subclassables: Map is subclassable
-es6/build/554/out.js: miscellaneous subclassables: Set is subclassable
 es6/build/632/out.js: own property order: Object.keys
 es6/build/634/out.js: own property order: Object.assign
 es6/build/635/out.js: own property order: JSON.stringify
 es6/build/636/out.js: own property order: JSON.parse
-es6/build/638/out.js: own property order: Reflect.ownKeys, symbol key order
 es6/build/641/out.js: miscellaneous: no semicolon needed after do-while
 es6/build/644/out.js: miscellaneous: Invalid Date
 es6/build/650/out.js: non-strict function semantics: labeled function statements
