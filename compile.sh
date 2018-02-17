@@ -4,23 +4,21 @@
 
 JAVA=./node_modules/.bin/closure-gun
 
-VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
-echo $VERSION
-ERRORLOG=./$ES_VERSION/result/$VERSION.error.txt
+CL_VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
+echo $CL_VERSION
+ERRORLOG=./$ES_VERSION/result/$CL_VERSION.error.txt
+BUILD_DIR=./$ES_VERSION/$CL_VERSION/build
 rm -f $ERRORLOG
 
-for DIR in $(ls ./$ES_VERSION/build|grep -v filelist.json|sort -n); do
+for DIR in $(ls $BUILD_DIR | grep -v filelist.json | sort -n); do
 
     if [ -n "$TEST_DIR" ] && [ $DIR != $TEST_DIR ]; then
         continue
     fi
 
-    DIR=./$ES_VERSION/build/$DIR
+    DIR=$BUILD_DIR/$DIR
 
     $JAVA \
-        --language_in ECMASCRIPT6 \
-        --language_out ECMASCRIPT5 \
-        --rewrite_polyfills \
         --formatting PRETTY_PRINT \
         -O SIMPLE \
         --js "$DIR/in.js" \
