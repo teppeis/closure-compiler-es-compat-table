@@ -87,190 +87,190 @@ es6/build/122/out.js: destructuring, parameters: rest
 es6/build/123/out.js: destructuring, parameters: empty patterns
 es6/build/124/out.js: destructuring, parameters: defaults
 es6/build/125/out.js: destructuring, parameters: defaults, separate scope
-es6/build/127/out.js: Unicode code point escapes: in strings
-es6/build/131/out.js: const: basic support
-es6/build/132/out.js: const: is block-scoped
-es6/build/135/out.js: const: for loop statement scope
-es6/build/136/out.js: const: for-in loop iteration scope
-es6/build/137/out.js: const: for-of loop iteration scope
-es6/build/139/out.js: const: basic support (strict mode)
-es6/build/140/out.js: const: is block-scoped (strict mode)
-es6/build/141/out.js: const: cannot be in statements (strict mode)
-es6/build/142/out.js: const: redefining a const (strict mode)
-es6/build/143/out.js: const: for loop statement scope (strict mode)
-es6/build/144/out.js: const: for-in loop iteration scope (strict mode)
-es6/build/145/out.js: const: for-of loop iteration scope (strict mode)
-es6/build/147/out.js: let: basic support
-es6/build/148/out.js: let: is block-scoped
-es6/build/149/out.js: let: cannot be in statements
-es6/build/150/out.js: let: for loop statement scope
-es6/build/152/out.js: let: for/for-in loop iteration scope
-es6/build/153/out.js: let: basic support (strict mode)
-es6/build/154/out.js: let: is block-scoped (strict mode)
-es6/build/155/out.js: let: cannot be in statements (strict mode)
-es6/build/156/out.js: let: for loop statement scope (strict mode)
-es6/build/158/out.js: let: for/for-in loop iteration scope (strict mode)
-es6/build/159/out.js: block-level function declaration
-es6/build/160/out.js: arrow functions: 0 parameters
-es6/build/161/out.js: arrow functions: 1 parameter, no brackets
-es6/build/162/out.js: arrow functions: multiple parameters
-es6/build/163/out.js: arrow functions: lexical "this" binding
-es6/build/164/out.js: arrow functions: "this" unchanged by call or apply
-es6/build/165/out.js: arrow functions: can't be bound, can be curried
-es6/build/166/out.js: arrow functions: lexical "arguments" binding
-es6/build/167/out.js: arrow functions: no line break between params and <code>=></code>
-es6/build/168/out.js: arrow functions: correct precedence
-es6/build/171/out.js: arrow functions: lexical "super" binding in methods
-es6/build/173/out.js: class: class statement
-es6/build/174/out.js: class: is block-scoped
-es6/build/175/out.js: class: class expression
-es6/build/176/out.js: class: anonymous class
-es6/build/177/out.js: class: constructor
-es6/build/178/out.js: class: prototype methods
-es6/build/180/out.js: class: computed prototype methods
-es6/build/181/out.js: class: optional semicolons
-es6/build/182/out.js: class: static methods
-es6/build/183/out.js: class: computed static methods
-es6/build/184/out.js: class: accessor properties
-es6/build/185/out.js: class: computed accessor properties
-es6/build/186/out.js: class: static accessor properties
-es6/build/193/out.js: class: extends
-es6/build/197/out.js: super: statement in constructors
-es6/build/198/out.js: super: expression in constructors
-es6/build/199/out.js: super: in methods, property access
-es6/build/200/out.js: super: in methods, method calls
-es6/build/201/out.js: super: method calls use correct "this" binding
-es6/build/204/out.js: super: super() invokes the correct constructor
-es6/build/205/out.js: generators: basic functionality
-es6/build/206/out.js: generators: generator function expressions
-es6/build/207/out.js: generators: correct "this" binding
-es6/build/209/out.js: generators: sending
-es6/build/213/out.js: generators: %GeneratorPrototype%.throw
-es6/build/215/out.js: generators: yield operator precedence
-es6/build/216/out.js: generators: yield *, arrays
-es6/build/217/out.js: generators: yield *, sparse arrays
-es6/build/218/out.js: generators: yield *, strings
-es6/build/220/out.js: generators: yield *, generator instances
-es6/build/221/out.js: generators: yield *, generic iterables
-es6/build/222/out.js: generators: yield *, instances of iterables
-es6/build/226/out.js: generators: shorthand generator methods
-es6/build/228/out.js: generators: computed shorthand generators
-es6/build/229/out.js: generators: shorthand generator methods, classes
-es6/build/230/out.js: generators: computed shorthand generators, classes
-es6/build/231/out.js: generators: shorthand generators can't be constructors
-es6/build/232/out.js: typed arrays: Int8Array
-es6/build/233/out.js: typed arrays: Uint8Array
-es6/build/234/out.js: typed arrays: Uint8ClampedArray
-es6/build/235/out.js: typed arrays: Int16Array
-es6/build/236/out.js: typed arrays: Uint16Array
-es6/build/237/out.js: typed arrays: Int32Array
-es6/build/238/out.js: typed arrays: Uint32Array
-es6/build/239/out.js: typed arrays: Float32Array
-es6/build/240/out.js: typed arrays: Float64Array
-es6/build/241/out.js: typed arrays: DataView (Int8)
-es6/build/242/out.js: typed arrays: DataView (Uint8)
-es6/build/243/out.js: typed arrays: DataView (Int16)
-es6/build/244/out.js: typed arrays: DataView (Uint16)
-es6/build/245/out.js: typed arrays: DataView (Int32)
-es6/build/246/out.js: typed arrays: DataView (Uint32)
-es6/build/247/out.js: typed arrays: DataView (Float32)
-es6/build/248/out.js: typed arrays: DataView (Float64)
-es6/build/278/out.js: Map: basic functionality
-es6/build/279/out.js: Map: constructor arguments
-es6/build/281/out.js: Map: constructor accepts null
-es6/build/282/out.js: Map: constructor invokes set
-es6/build/284/out.js: Map: Map.prototype.set returns this
-es6/build/286/out.js: Map: Map.prototype.size
-es6/build/287/out.js: Map: Map.prototype.delete
-es6/build/288/out.js: Map: Map.prototype.clear
-es6/build/289/out.js: Map: Map.prototype.forEach
-es6/build/290/out.js: Map: Map.prototype.keys
-es6/build/291/out.js: Map: Map.prototype.values
-es6/build/292/out.js: Map: Map.prototype.entries
-es6/build/293/out.js: Map: Map.prototype[Symbol.iterator]
-es6/build/294/out.js: Map: Map.prototype isn't an instance
-es6/build/297/out.js: Set: basic functionality
-es6/build/298/out.js: Set: constructor arguments
-es6/build/300/out.js: Set: constructor accepts null
-es6/build/301/out.js: Set: constructor invokes add
-es6/build/303/out.js: Set: Set.prototype.add returns this
-es6/build/305/out.js: Set: Set.prototype.size
-es6/build/306/out.js: Set: Set.prototype.delete
-es6/build/307/out.js: Set: Set.prototype.clear
-es6/build/308/out.js: Set: Set.prototype.forEach
-es6/build/309/out.js: Set: Set.prototype.keys
-es6/build/310/out.js: Set: Set.prototype.values
-es6/build/311/out.js: Set: Set.prototype.entries
-es6/build/312/out.js: Set: Set.prototype[Symbol.iterator]
-es6/build/313/out.js: Set: Set.prototype isn't an instance
-es6/build/316/out.js: WeakMap: basic functionality
-es6/build/317/out.js: WeakMap: constructor arguments
-es6/build/319/out.js: WeakMap: constructor accepts null
-es6/build/320/out.js: WeakMap: constructor invokes set
-es6/build/321/out.js: WeakMap: frozen objects as keys
-es6/build/323/out.js: WeakMap: WeakMap.prototype.set returns this
-es6/build/324/out.js: WeakMap: WeakMap.prototype.delete
-es6/build/325/out.js: WeakMap: no WeakMap.prototype.clear method
-es6/build/326/out.js: WeakMap: .has, .get and .delete methods accept primitives
-es6/build/328/out.js: WeakSet: basic functionality
-es6/build/329/out.js: WeakSet: constructor arguments
-es6/build/331/out.js: WeakSet: constructor accepts null
-es6/build/332/out.js: WeakSet: constructor invokes add
-es6/build/334/out.js: WeakSet: WeakSet.prototype.add returns this
-es6/build/335/out.js: WeakSet: WeakSet.prototype.delete
-es6/build/336/out.js: WeakSet: no WeakSet.prototype.clear method
-es6/build/337/out.js: WeakSet: .has and .delete methods accept primitives
-es6/build/338/out.js: WeakSet: WeakSet.prototype isn't an instance
-es6/build/373/out.js: Reflect: Reflect.get
-es6/build/374/out.js: Reflect: Reflect.set
-es6/build/375/out.js: Reflect: Reflect.has
-es6/build/376/out.js: Reflect: Reflect.deleteProperty
-es6/build/377/out.js: Reflect: Reflect.getOwnPropertyDescriptor
-es6/build/378/out.js: Reflect: Reflect.defineProperty
-es6/build/379/out.js: Reflect: Reflect.getPrototypeOf
-es6/build/380/out.js: Reflect: Reflect.setPrototypeOf
-es6/build/381/out.js: Reflect: Reflect.isExtensible
-es6/build/382/out.js: Reflect: Reflect.preventExtensions
-es6/build/383/out.js: Reflect: Reflect.ownKeys, string keys
-es6/build/385/out.js: Reflect: Reflect.apply
-es6/build/386/out.js: Reflect: Reflect.construct
-es6/build/388/out.js: Reflect: Reflect.construct creates instances from third argument
-es6/build/394/out.js: Promise: constructor requires new
-es6/build/439/out.js: Object static methods: Object.assign
-es6/build/440/out.js: Object static methods: Object.is
-es6/build/442/out.js: Object static methods: Object.setPrototypeOf
-es6/build/451/out.js: function "name" property: shorthand methods (no lexical binding)
-es6/build/465/out.js: String.prototype methods: String.prototype.startsWith
-es6/build/466/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
-es6/build/467/out.js: String.prototype methods: String.prototype.endsWith
-es6/build/468/out.js: String.prototype methods: String.prototype.endsWith throws on RegExp
-es6/build/469/out.js: String.prototype methods: String.prototype.includes
-es6/build/478/out.js: Array static methods: Array.from, array-like objects
-es6/build/479/out.js: Array static methods: Array.from, generator instances
-es6/build/480/out.js: Array static methods: Array.from, generic iterables
-es6/build/481/out.js: Array static methods: Array.from, instances of generic iterables
-es6/build/493/out.js: Array.prototype methods: Array.prototype.keys
-es6/build/499/out.js: Number properties: Number.isFinite
-es6/build/502/out.js: Number properties: Number.isNaN
-es6/build/634/out.js: own property order: Object.keys
-es6/build/636/out.js: own property order: Object.assign
-es6/build/637/out.js: own property order: JSON.stringify
-es6/build/638/out.js: own property order: JSON.parse
-es6/build/645/out.js: miscellaneous: no semicolon needed after do-while
-es6/build/648/out.js: miscellaneous: Invalid Date
-es6/build/654/out.js: non-strict function semantics: labeled function statements
-es6/build/661/out.js: Object.prototype.__proto__: get prototype
-es6/build/662/out.js: Object.prototype.__proto__: set prototype
-es6/build/667/out.js: String.prototype HTML methods: existence
-es6/build/668/out.js: String.prototype HTML methods: tags' names are lowercase
-es6/build/669/out.js: String.prototype HTML methods: quotes in arguments are escaped
-es6/build/670/out.js: RegExp.prototype.compile: basic functionality
-es6/build/672/out.js: RegExp syntax extensions: hyphens in character sets
-es6/build/673/out.js: RegExp syntax extensions: invalid character escapes
-es6/build/674/out.js: RegExp syntax extensions: invalid control-character escapes
-es6/build/675/out.js: RegExp syntax extensions: invalid Unicode escapes
-es6/build/676/out.js: RegExp syntax extensions: invalid hexadecimal escapes
-es6/build/677/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
-es6/build/678/out.js: RegExp syntax extensions: octal escape sequences
-es6/build/679/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
-es6/build/680/out.js: HTML-style comments
+es6/build/127/out.js: destructuring, parameters: defaults, arrow function
+es6/build/128/out.js: Unicode code point escapes: in strings
+es6/build/132/out.js: const: basic support
+es6/build/133/out.js: const: is block-scoped
+es6/build/136/out.js: const: for loop statement scope
+es6/build/137/out.js: const: for-in loop iteration scope
+es6/build/138/out.js: const: for-of loop iteration scope
+es6/build/140/out.js: const: basic support (strict mode)
+es6/build/141/out.js: const: is block-scoped (strict mode)
+es6/build/142/out.js: const: cannot be in statements (strict mode)
+es6/build/143/out.js: const: redefining a const (strict mode)
+es6/build/144/out.js: const: for loop statement scope (strict mode)
+es6/build/145/out.js: const: for-in loop iteration scope (strict mode)
+es6/build/146/out.js: const: for-of loop iteration scope (strict mode)
+es6/build/148/out.js: let: basic support
+es6/build/149/out.js: let: is block-scoped
+es6/build/150/out.js: let: cannot be in statements
+es6/build/151/out.js: let: for loop statement scope
+es6/build/153/out.js: let: for/for-in loop iteration scope
+es6/build/154/out.js: let: basic support (strict mode)
+es6/build/155/out.js: let: is block-scoped (strict mode)
+es6/build/156/out.js: let: cannot be in statements (strict mode)
+es6/build/157/out.js: let: for loop statement scope (strict mode)
+es6/build/159/out.js: let: for/for-in loop iteration scope (strict mode)
+es6/build/160/out.js: block-level function declaration
+es6/build/161/out.js: arrow functions: 0 parameters
+es6/build/162/out.js: arrow functions: 1 parameter, no brackets
+es6/build/163/out.js: arrow functions: multiple parameters
+es6/build/164/out.js: arrow functions: lexical "this" binding
+es6/build/165/out.js: arrow functions: "this" unchanged by call or apply
+es6/build/166/out.js: arrow functions: can't be bound, can be curried
+es6/build/167/out.js: arrow functions: lexical "arguments" binding
+es6/build/168/out.js: arrow functions: no line break between params and <code>=></code>
+es6/build/169/out.js: arrow functions: correct precedence
+es6/build/172/out.js: arrow functions: lexical "super" binding in methods
+es6/build/174/out.js: class: class statement
+es6/build/175/out.js: class: is block-scoped
+es6/build/176/out.js: class: class expression
+es6/build/177/out.js: class: anonymous class
+es6/build/178/out.js: class: constructor
+es6/build/179/out.js: class: prototype methods
+es6/build/181/out.js: class: computed prototype methods
+es6/build/182/out.js: class: optional semicolons
+es6/build/183/out.js: class: static methods
+es6/build/184/out.js: class: computed static methods
+es6/build/185/out.js: class: accessor properties
+es6/build/186/out.js: class: computed accessor properties
+es6/build/187/out.js: class: static accessor properties
+es6/build/194/out.js: class: extends
+es6/build/198/out.js: super: statement in constructors
+es6/build/199/out.js: super: expression in constructors
+es6/build/200/out.js: super: in methods, property access
+es6/build/201/out.js: super: in methods, method calls
+es6/build/202/out.js: super: method calls use correct "this" binding
+es6/build/205/out.js: super: super() invokes the correct constructor
+es6/build/206/out.js: generators: basic functionality
+es6/build/207/out.js: generators: generator function expressions
+es6/build/208/out.js: generators: correct "this" binding
+es6/build/210/out.js: generators: sending
+es6/build/214/out.js: generators: %GeneratorPrototype%.throw
+es6/build/216/out.js: generators: yield operator precedence
+es6/build/217/out.js: generators: yield *, arrays
+es6/build/218/out.js: generators: yield *, sparse arrays
+es6/build/219/out.js: generators: yield *, strings
+es6/build/221/out.js: generators: yield *, generator instances
+es6/build/222/out.js: generators: yield *, generic iterables
+es6/build/223/out.js: generators: yield *, instances of iterables
+es6/build/227/out.js: generators: shorthand generator methods
+es6/build/229/out.js: generators: computed shorthand generators
+es6/build/230/out.js: generators: shorthand generator methods, classes
+es6/build/231/out.js: generators: computed shorthand generators, classes
+es6/build/232/out.js: generators: shorthand generators can't be constructors
+es6/build/233/out.js: typed arrays: Int8Array
+es6/build/234/out.js: typed arrays: Uint8Array
+es6/build/235/out.js: typed arrays: Uint8ClampedArray
+es6/build/236/out.js: typed arrays: Int16Array
+es6/build/237/out.js: typed arrays: Uint16Array
+es6/build/238/out.js: typed arrays: Int32Array
+es6/build/239/out.js: typed arrays: Uint32Array
+es6/build/240/out.js: typed arrays: Float32Array
+es6/build/241/out.js: typed arrays: Float64Array
+es6/build/242/out.js: typed arrays: DataView (Int8)
+es6/build/243/out.js: typed arrays: DataView (Uint8)
+es6/build/244/out.js: typed arrays: DataView (Int16)
+es6/build/245/out.js: typed arrays: DataView (Uint16)
+es6/build/246/out.js: typed arrays: DataView (Int32)
+es6/build/247/out.js: typed arrays: DataView (Uint32)
+es6/build/248/out.js: typed arrays: DataView (Float32)
+es6/build/249/out.js: typed arrays: DataView (Float64)
+es6/build/279/out.js: Map: basic functionality
+es6/build/280/out.js: Map: constructor arguments
+es6/build/282/out.js: Map: constructor accepts null
+es6/build/283/out.js: Map: constructor invokes set
+es6/build/285/out.js: Map: Map.prototype.set returns this
+es6/build/287/out.js: Map: Map.prototype.size
+es6/build/288/out.js: Map: Map.prototype.delete
+es6/build/289/out.js: Map: Map.prototype.clear
+es6/build/290/out.js: Map: Map.prototype.forEach
+es6/build/291/out.js: Map: Map.prototype.keys
+es6/build/292/out.js: Map: Map.prototype.values
+es6/build/293/out.js: Map: Map.prototype.entries
+es6/build/294/out.js: Map: Map.prototype[Symbol.iterator]
+es6/build/295/out.js: Map: Map.prototype isn't an instance
+es6/build/298/out.js: Set: basic functionality
+es6/build/299/out.js: Set: constructor arguments
+es6/build/301/out.js: Set: constructor accepts null
+es6/build/302/out.js: Set: constructor invokes add
+es6/build/304/out.js: Set: Set.prototype.add returns this
+es6/build/306/out.js: Set: Set.prototype.size
+es6/build/307/out.js: Set: Set.prototype.delete
+es6/build/308/out.js: Set: Set.prototype.clear
+es6/build/309/out.js: Set: Set.prototype.forEach
+es6/build/310/out.js: Set: Set.prototype.keys
+es6/build/311/out.js: Set: Set.prototype.values
+es6/build/312/out.js: Set: Set.prototype.entries
+es6/build/313/out.js: Set: Set.prototype[Symbol.iterator]
+es6/build/314/out.js: Set: Set.prototype isn't an instance
+es6/build/317/out.js: WeakMap: basic functionality
+es6/build/318/out.js: WeakMap: constructor arguments
+es6/build/320/out.js: WeakMap: constructor accepts null
+es6/build/321/out.js: WeakMap: constructor invokes set
+es6/build/322/out.js: WeakMap: frozen objects as keys
+es6/build/324/out.js: WeakMap: WeakMap.prototype.set returns this
+es6/build/325/out.js: WeakMap: WeakMap.prototype.delete
+es6/build/326/out.js: WeakMap: no WeakMap.prototype.clear method
+es6/build/327/out.js: WeakMap: .has, .get and .delete methods accept primitives
+es6/build/329/out.js: WeakSet: basic functionality
+es6/build/330/out.js: WeakSet: constructor arguments
+es6/build/332/out.js: WeakSet: constructor accepts null
+es6/build/333/out.js: WeakSet: constructor invokes add
+es6/build/335/out.js: WeakSet: WeakSet.prototype.add returns this
+es6/build/336/out.js: WeakSet: WeakSet.prototype.delete
+es6/build/337/out.js: WeakSet: no WeakSet.prototype.clear method
+es6/build/338/out.js: WeakSet: .has and .delete methods accept primitives
+es6/build/339/out.js: WeakSet: WeakSet.prototype isn't an instance
+es6/build/374/out.js: Reflect: Reflect.get
+es6/build/375/out.js: Reflect: Reflect.set
+es6/build/376/out.js: Reflect: Reflect.has
+es6/build/377/out.js: Reflect: Reflect.deleteProperty
+es6/build/378/out.js: Reflect: Reflect.getOwnPropertyDescriptor
+es6/build/379/out.js: Reflect: Reflect.defineProperty
+es6/build/380/out.js: Reflect: Reflect.getPrototypeOf
+es6/build/381/out.js: Reflect: Reflect.setPrototypeOf
+es6/build/382/out.js: Reflect: Reflect.isExtensible
+es6/build/383/out.js: Reflect: Reflect.preventExtensions
+es6/build/384/out.js: Reflect: Reflect.ownKeys, string keys
+es6/build/386/out.js: Reflect: Reflect.apply
+es6/build/387/out.js: Reflect: Reflect.construct
+es6/build/389/out.js: Reflect: Reflect.construct creates instances from third argument
+es6/build/440/out.js: Object static methods: Object.assign
+es6/build/441/out.js: Object static methods: Object.is
+es6/build/443/out.js: Object static methods: Object.setPrototypeOf
+es6/build/452/out.js: function "name" property: shorthand methods (no lexical binding)
+es6/build/466/out.js: String.prototype methods: String.prototype.startsWith
+es6/build/467/out.js: String.prototype methods: String.prototype.startsWith throws on RegExp
+es6/build/468/out.js: String.prototype methods: String.prototype.endsWith
+es6/build/469/out.js: String.prototype methods: String.prototype.endsWith throws on RegExp
+es6/build/470/out.js: String.prototype methods: String.prototype.includes
+es6/build/479/out.js: Array static methods: Array.from, array-like objects
+es6/build/480/out.js: Array static methods: Array.from, generator instances
+es6/build/481/out.js: Array static methods: Array.from, generic iterables
+es6/build/482/out.js: Array static methods: Array.from, instances of generic iterables
+es6/build/494/out.js: Array.prototype methods: Array.prototype.keys
+es6/build/500/out.js: Number properties: Number.isFinite
+es6/build/503/out.js: Number properties: Number.isNaN
+es6/build/635/out.js: own property order: Object.keys
+es6/build/637/out.js: own property order: Object.assign
+es6/build/638/out.js: own property order: JSON.stringify
+es6/build/639/out.js: own property order: JSON.parse
+es6/build/646/out.js: miscellaneous: no semicolon needed after do-while
+es6/build/649/out.js: miscellaneous: Invalid Date
+es6/build/655/out.js: non-strict function semantics: labeled function statements
+es6/build/662/out.js: Object.prototype.__proto__: get prototype
+es6/build/663/out.js: Object.prototype.__proto__: set prototype
+es6/build/668/out.js: String.prototype HTML methods: existence
+es6/build/669/out.js: String.prototype HTML methods: tags' names are lowercase
+es6/build/670/out.js: String.prototype HTML methods: quotes in arguments are escaped
+es6/build/671/out.js: RegExp.prototype.compile: basic functionality
+es6/build/673/out.js: RegExp syntax extensions: hyphens in character sets
+es6/build/674/out.js: RegExp syntax extensions: invalid character escapes
+es6/build/675/out.js: RegExp syntax extensions: invalid control-character escapes
+es6/build/676/out.js: RegExp syntax extensions: invalid Unicode escapes
+es6/build/677/out.js: RegExp syntax extensions: invalid hexadecimal escapes
+es6/build/678/out.js: RegExp syntax extensions: incomplete patterns and quantifiers
+es6/build/679/out.js: RegExp syntax extensions: octal escape sequences
+es6/build/680/out.js: RegExp syntax extensions: invalid backreferences become octal escapes
+es6/build/681/out.js: HTML-style comments

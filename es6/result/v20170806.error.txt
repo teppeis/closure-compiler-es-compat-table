@@ -141,11 +141,11 @@ var passed = false;
         return passed;
       
 };
-./es6/build/129/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/130/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           passed = (new.target === f);
                     ^^^^^^^^^^
 
-./es6/build/129/in.js:8: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/130/in.js:8: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           passed &= (new.target === undefined);
                      ^^^^^^^^^^
 
@@ -165,7 +165,7 @@ var passed = false;
         }
       
 };
-./es6/build/130/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/131/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           passed = (new.target === f);
                     ^^^^^^^^^^
 
@@ -178,7 +178,7 @@ const baz = 1;
        return baz === 1;
        
 };
-./es6/build/135/in.js:4: WARNING - unreachable code
+./es6/build/136/in.js:4: WARNING - unreachable code
        for(const baz = 0; false;) {}
                                   ^^
 
@@ -193,7 +193,7 @@ var passed = (function(){ try { qux; } catch(e) { return true; }}());
         return passed;
       
 };
-./es6/build/138/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/139/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
 var passed = (function(){ try { qux; } catch(e) { return true; }}());
                                 ^^^
 
@@ -207,7 +207,7 @@ module.exports = function() {
         return baz === 1;
       
 };
-./es6/build/143/in.js:5: WARNING - unreachable code
+./es6/build/144/in.js:5: WARNING - unreachable code
         for(const baz = 0; false;) {}
                                    ^^
 
@@ -223,7 +223,7 @@ module.exports = function() {
         return passed;
       
 };
-./es6/build/146/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/147/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         var passed = (function(){ try { qux; } catch(e) { return true; }}());
                                         ^^^
 
@@ -236,7 +236,7 @@ let baz = 1;
         return baz === 1;
       
 };
-./es6/build/150/in.js:4: WARNING - unreachable code
+./es6/build/151/in.js:4: WARNING - unreachable code
         for(let baz = 0; false;) {}
                                  ^^
 
@@ -251,7 +251,7 @@ var passed = (function(){ try {  qux; } catch(e) { return true; }}());
         return passed;
       
 };
-./es6/build/151/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/152/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
 var passed = (function(){ try {  qux; } catch(e) { return true; }}());
                                  ^^^
 
@@ -265,7 +265,7 @@ module.exports = function() {
         return baz === 1;
       
 };
-./es6/build/156/in.js:5: WARNING - unreachable code
+./es6/build/157/in.js:5: WARNING - unreachable code
         for(let baz = 0; false;) {}
                                  ^^
 
@@ -281,7 +281,7 @@ module.exports = function() {
         return passed;
       
 };
-./es6/build/157/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/158/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         var passed = (function(){ try {  qux; } catch(e) { return true; }}());
                                          ^^^
 
@@ -305,7 +305,7 @@ var received;
         return new C instanceof C && received === 'foo'
       
 };
-./es6/build/170/in.js:11: ERROR - constructor is missing a call to super()
+./es6/build/171/in.js:11: ERROR - constructor is missing a call to super()
           constructor () {
           ^^^^^^^^^^^^^^^^
 
@@ -323,9 +323,9 @@ java.lang.RuntimeException: INTERNAL COMPILER ERROR.
 Please report this problem.
 
 null
-  Node(FUNCTION ): ./es6/build/172/in.js:4:17
+  Node(FUNCTION ): ./es6/build/173/in.js:4:17
           return x => new.target;
-  Parent(RETURN): ./es6/build/172/in.js:4:10
+  Parent(RETURN): ./es6/build/173/in.js:4:10
           return x => new.target;
 
 	at com.google.common.base.Preconditions.checkState(Preconditions.java:429)
@@ -368,9 +368,9 @@ null
 	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:805)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.IllegalStateException
 	... 43 more
 --------------------------------------------------------------------------------
@@ -383,7 +383,7 @@ class C {
           && new C()["foo bar"]() === 2;
       
 };
-./es6/build/179/in.js:4: ERROR - Parse error. '}' expected
+./es6/build/180/in.js:4: ERROR - Parse error. '}' expected
           "foo bar"() { return 2; }
           ^
 
@@ -400,11 +400,11 @@ var garply = "foo", grault = "bar", baz = false;
         return C.foo === "foo" && baz;
       
 };
-./es6/build/187/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+./es6/build/188/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
           static get [garply]() { return "foo"; }
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/187/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+./es6/build/188/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
           static set [grault](x) { baz = x; }
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -420,7 +420,7 @@ class C {
         return C === undefined && M();
       
 };
-./es6/build/188/in.js:7: ERROR - Class names defined inside a function cannot be reassigned.
+./es6/build/189/in.js:7: ERROR - Class names defined inside a function cannot be reassigned.
         C = undefined;
         ^^^^^^^^^^^^^
 
@@ -434,7 +434,7 @@ class C {
         return (0,C.method)();
       
 };
-./es6/build/191/in.js:6: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/192/in.js:6: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         return (0,C.method)();
                 ^
 
@@ -448,7 +448,7 @@ var B;
           && B.isPrototypeOf(C);
       
 };
-./es6/build/194/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+./es6/build/195/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
         class C extends (B = class {}) {}
                              ^^^^^^^^
 
@@ -463,7 +463,7 @@ class C extends null {
           && Object.getPrototypeOf(C.prototype) === null;
       
 };
-./es6/build/195/in.js:4: ERROR - constructor is missing a call to super()
+./es6/build/196/in.js:4: ERROR - constructor is missing a call to super()
           constructor() { return Object.create(null); }
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -486,11 +486,11 @@ var passed = false;
         return passed;
       
 };
-./es6/build/196/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/197/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           passed = new.target === f;
                    ^^^^^^^^^^
 
-./es6/build/196/in.js:10: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/197/in.js:10: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
             passed &= new.target === B;
                       ^^^^^^^^^^
 
@@ -509,7 +509,7 @@ var passed;
         return passed;
       
 };
-./es6/build/202/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/203/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           constructor() { passed = (new.target === C); }
                                     ^^^^^^^^^^
 
@@ -532,7 +532,7 @@ var o = {
         return passed;
       
 };
-./es6/build/227/in.js:4: ERROR - Parse error. '[' expected
+./es6/build/228/in.js:4: ERROR - Parse error. '[' expected
           * "foo bar"() {
             ^
 
@@ -549,7 +549,7 @@ new Map();
         }
       
 };
-./es6/build/280/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
+./es6/build/281/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
           Map();
           ^^^^^
 
@@ -566,7 +566,7 @@ new Set();
         }
       
 };
-./es6/build/299/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Set' is not being used.
+./es6/build/300/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Set' is not being used.
           Set();
           ^^^^^
 
@@ -583,7 +583,7 @@ new WeakMap();
         }
       
 };
-./es6/build/318/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakMap' is not being used.
+./es6/build/319/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakMap' is not being used.
           WeakMap();
           ^^^^^^^^^
 
@@ -600,7 +600,7 @@ new WeakSet();
         }
       
 };
-./es6/build/330/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakSet' is not being used.
+./es6/build/331/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakSet' is not being used.
           WeakSet();
           ^^^^^^^^^
 
@@ -638,11 +638,11 @@ var passed = false;
         return passed;
       
 };
-./es6/build/343/in.js:16: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+./es6/build/344/in.js:16: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
           proxy.foo;
           ^^^^^^^^^
 
-./es6/build/343/in.js:26: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+./es6/build/344/in.js:26: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
           proxy.bar;
           ^^^^^^^^^
 
@@ -677,11 +677,11 @@ var passed = false;
         return passed;
       
 };
-./es6/build/349/in.js:16: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/350/in.js:16: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
           'foo' in proxy;
           ^^^^^^^^^^^^^^
 
-./es6/build/349/in.js:24: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/350/in.js:24: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
           'bar' in proxy;
           ^^^^^^^^^^^^^^
 
@@ -742,23 +742,23 @@ var passed = false;
         return passed;
       
 };
-./es6/build/353/in.js:16: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+./es6/build/354/in.js:16: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
           Object.getOwnPropertyDescriptor(proxy, "foo");
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/353/in.js:24: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+./es6/build/354/in.js:24: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
           Object.getOwnPropertyDescriptor(proxy, "bar");
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/353/in.js:30: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+./es6/build/354/in.js:30: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
           Object.getOwnPropertyDescriptor(new Proxy(proxied, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/353/in.js:40: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+./es6/build/354/in.js:40: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
           Object.getOwnPropertyDescriptor(new Proxy({}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/353/in.js:47: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+./es6/build/354/in.js:47: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
           Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -782,7 +782,7 @@ var passed = false;
         return passed;
       
 };
-./es6/build/357/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
+./es6/build/358/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
           Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -802,7 +802,7 @@ var proxied = {};
         return passed;
       
 };
-./es6/build/360/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+./es6/build/361/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
         Object.isExtensible(
         ^^^^^^^^^^^^^^^^^^^^
 
@@ -834,11 +834,11 @@ var passed = false;
         return true;
       
 };
-./es6/build/361/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+./es6/build/362/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
           Object.isExtensible(new Proxy({}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/361/in.js:17: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+./es6/build/362/in.js:17: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
           Object.isExtensible(new Proxy(Object.preventExtensions({}), {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -858,7 +858,7 @@ var proxied = {};
         return passed;
       
 };
-./es6/build/364/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+./es6/build/365/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
         Object.keys(
         ^^^^^^^^^^^^
 
@@ -899,15 +899,15 @@ var passed = false;
         return passed;
       
 };
-./es6/build/365/in.js:7: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+./es6/build/366/in.js:7: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
           Object.keys(new Proxy({}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/365/in.js:18: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+./es6/build/366/in.js:18: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
           Object.keys(new Proxy(proxied, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-./es6/build/365/in.js:27: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+./es6/build/366/in.js:27: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
           Object.keys(new Proxy(Object.preventExtensions({b:1}), {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -926,7 +926,7 @@ var obj = Proxy.revocable({}, { get: function() { return 5; } });
         return passed;
       
 };
-./es6/build/370/in.js:7: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+./es6/build/371/in.js:7: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
           obj.proxy.foo;
           ^^^^^^^^^^^^^
 
@@ -941,7 +941,7 @@ return Reflect.construct(function(a, b, c) {
         }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
       
 };
-./es6/build/387/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+./es6/build/388/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
           if (new.target === Object) {
               ^^^^^^^^^^
 
@@ -965,11 +965,11 @@ var symbol = Symbol();
         return true;
       
 };
-./es6/build/406/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+./es6/build/407/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
           symbol + "";
           ^^^^^^^^^^^
 
-./es6/build/406/in.js:12: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+./es6/build/407/in.js:12: WARNING - Suspicious code. The result of the 'add' operator is not being used.
           symbol + 0;
           ^^^^^^^^^^
 
@@ -987,7 +987,7 @@ var passed = false;
         return passed;
       
 };
-./es6/build/413/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+./es6/build/414/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
         obj instanceof C;
         ^^^^^^^^^^^^^^^^
 
@@ -1007,15 +1007,15 @@ var a = {}, b = {}, c = {};
         return passed === 3;
       
 };
-./es6/build/433/in.js:9: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
+./es6/build/434/in.js:9: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
         a >= 0;
         ^^^^^^
 
-./es6/build/433/in.js:10: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/434/in.js:10: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         b in {};
         ^^^^^^^
 
-./es6/build/433/in.js:11: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
+./es6/build/434/in.js:11: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
         c == 0;
         ^^^^^^
 
@@ -1030,7 +1030,7 @@ var a = { foo: 1, bar: 2 };
         }
       
 };
-./es6/build/438/in.js:5: ERROR - The with statement cannot be used in strict mode.
+./es6/build/439/in.js:5: ERROR - The with statement cannot be used in strict mode.
         with (a) {
         ^^^^^^^^^^
 
@@ -1042,7 +1042,7 @@ return class foo {}.name === "foo" &&
           typeof class bar { static name() {} }.name === "function";
       
 };
-./es6/build/454/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+./es6/build/455/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
           typeof class bar { static name() {} }.name === "function";
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1058,7 +1058,7 @@ class C extends Array {}
         return len1 === 0 && len2 === 3;
       
 };
-./es6/build/526/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/527/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1073,7 +1073,7 @@ class C extends Array {}
         return c.length === 1 && !(2 in c);
       
 };
-./es6/build/527/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/528/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1086,7 +1086,7 @@ class C extends Array {}
         return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
       
 };
-./es6/build/528/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/529/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1098,7 +1098,7 @@ class C extends Array {}
         return Array.isArray(new C());
       
 };
-./es6/build/529/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/530/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1111,7 +1111,7 @@ class C extends Array {}
         return c.concat(1) instanceof C;
       
 };
-./es6/build/530/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/531/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1124,7 +1124,7 @@ class C extends Array {}
         return c.filter(Boolean) instanceof C;
       
 };
-./es6/build/531/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/532/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1137,7 +1137,7 @@ class C extends Array {}
         return c.map(Boolean) instanceof C;
       
 };
-./es6/build/532/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/533/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1151,7 +1151,7 @@ class C extends Array {}
         return c.slice(1,2) instanceof C;
       
 };
-./es6/build/533/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/534/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1165,7 +1165,7 @@ class C extends Array {}
         return c.splice(1,2) instanceof C;
       
 };
-./es6/build/534/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/535/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1177,7 +1177,7 @@ class C extends Array {}
         return C.from({ length: 0 }) instanceof C;
       
 };
-./es6/build/535/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/536/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1189,7 +1189,7 @@ class C extends Array {}
         return C.of(0) instanceof C;
       
 };
-./es6/build/536/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+./es6/build/537/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
 class C extends Array {}
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1202,7 +1202,7 @@ class R extends RegExp {}
         return r.global && r.source === "baz";
       
 };
-./es6/build/537/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+./es6/build/538/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
 class R extends RegExp {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1215,7 +1215,7 @@ class R extends RegExp {}
         return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
       
 };
-./es6/build/538/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+./es6/build/539/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
 class R extends RegExp {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1228,7 +1228,7 @@ class R extends RegExp {}
         return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
       
 };
-./es6/build/539/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+./es6/build/540/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
 class R extends RegExp {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1241,7 +1241,7 @@ class R extends RegExp {}
         return r.test("foobarbaz");
       
 };
-./es6/build/540/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+./es6/build/541/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
 class R extends RegExp {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1254,7 +1254,7 @@ class C extends Function {}
         return c() === 'foo';
       
 };
-./es6/build/541/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/542/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1267,7 +1267,7 @@ class C extends Function {}
         return c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;
       
 };
-./es6/build/542/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/543/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1281,7 +1281,7 @@ class C extends Function {}
         return new c().bar === 2 && new c().baz === 3;
       
 };
-./es6/build/543/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/544/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1294,7 +1294,7 @@ class C extends Function {}
         return c.call({bar:1}, 2) === 3;
       
 };
-./es6/build/544/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/545/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1307,7 +1307,7 @@ class C extends Function {}
         return c.apply({bar:1}, [2]) === 3;
       
 };
-./es6/build/545/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/546/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1320,7 +1320,7 @@ class C extends Function {}
         return c(6) === 9 && c instanceof C;
       
 };
-./es6/build/546/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+./es6/build/547/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
 class C extends Function {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1353,7 +1353,7 @@ class P extends Promise {}
         }
       
 };
-./es6/build/547/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+./es6/build/548/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
 class P extends Promise {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1366,7 +1366,7 @@ class C extends Promise {}
         return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
       
 };
-./es6/build/548/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+./es6/build/549/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
 class C extends Promise {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1392,7 +1392,7 @@ class P extends Promise {}
         }
       
 };
-./es6/build/549/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+./es6/build/550/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
 class P extends Promise {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1418,7 +1418,7 @@ class P extends Promise {}
         }
       
 };
-./es6/build/550/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+./es6/build/551/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
 class P extends Promise {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1433,7 +1433,7 @@ class C extends Boolean {}
           && c == true;
       
 };
-./es6/build/551/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Boolean
+./es6/build/552/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Boolean
 class C extends Boolean {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1448,7 +1448,7 @@ class C extends Number {}
           && +c === 6;
       
 };
-./es6/build/552/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
+./es6/build/553/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
 class C extends Number {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1465,7 +1465,7 @@ class C extends String {}
           && c.length === 5;
       
 };
-./es6/build/553/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: String
+./es6/build/554/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: String
 class C extends String {}
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1482,7 +1482,7 @@ var key = {};
         return map instanceof M && map.has(key) && map.get(key) === 123;
       
 };
-./es6/build/555/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Map
+./es6/build/556/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Map
         class M extends Map {}
         ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1500,7 +1500,7 @@ var obj = {};
         return set instanceof S && set.has(123);
       
 };
-./es6/build/556/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Set
+./es6/build/557/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Set
         class S extends Set {}
         ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1522,7 +1522,7 @@ function correctProtoBound(superclass) {
             && correctProtoBound(null);
       
 };
-./es6/build/561/in.js:5: ERROR - constructor is missing a call to super()
+./es6/build/562/in.js:5: ERROR - constructor is missing a call to super()
               constructor() {
               ^^^^^^^^^^^^^^^
 
@@ -1537,7 +1537,7 @@ module.exports = function() {
         return get[0] === Symbol.toPrimitive && get.slice(1) + '' === "valueOf,toString";
       
 };
-./es6/build/562/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+./es6/build/563/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
         p + 3;
         ^^^^^
 
@@ -1553,7 +1553,7 @@ module.exports = function() {
         return get[0] === Symbol.hasInstance && get.slice(1) + '' === "prototype";
       
 };
-./es6/build/564/in.js:7: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+./es6/build/565/in.js:7: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
         ({}) instanceof p;
         ^^^^^^^^^^^^^^^^^
 
@@ -1571,7 +1571,7 @@ module.exports = function() {
         return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
       
 };
-./es6/build/565/in.js:7: ERROR - The with statement cannot be used in strict mode.
+./es6/build/566/in.js:7: ERROR - The with statement cannot be used in strict mode.
         with(p) {
         ^^^^^^^^^
 
@@ -1588,7 +1588,7 @@ module.exports = function() {
         return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
       
 };
-./es6/build/575/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/576/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
         RegExp(p);
         ^^^^^^^^^
 
@@ -1603,7 +1603,7 @@ module.exports = function() {
         return ownKeysCalled === 1;
       
 };
-./es6/build/622/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
+./es6/build/623/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
         Object.isFrozen(p);
         ^^^^^^^^^^^^^^^^^^
 
@@ -1615,7 +1615,7 @@ var 𐋀;
         return true;
       
 };
-./es6/build/642/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
+./es6/build/643/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
 var 𐋀;
     ^
 
@@ -1627,7 +1627,7 @@ module.exports = function() {
         return this === undefined && ({ a:1, a:1 }).a === 1;
       
 };
-./es6/build/644/in.js:4: ERROR - Object literal contains illegal duplicate key "a", disallowed in strict mode
+./es6/build/645/in.js:4: ERROR - Object literal contains illegal duplicate key "a", disallowed in strict mode
         return this === undefined && ({ a:1, a:1 }).a === 1;
                                              ^
 
@@ -1651,7 +1651,7 @@ try {
         return true;
       
 };
-./es6/build/651/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+./es6/build/652/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
           Date.prototype.valueOf(); return false;
           ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1669,23 +1669,23 @@ module.exports = function() {
         return foo() === 2 && bar() === 3 && baz() === 4 && qux() === 6;
       
 };
-./es6/build/655/in.js:6: ERROR - Block-scoped declaration not directly within block: foo
+./es6/build/656/in.js:6: ERROR - Block-scoped declaration not directly within block: foo
         if(true) function foo() { return 2; }
                           ^^^
 
-./es6/build/655/in.js:7: ERROR - Block-scoped declaration not directly within block: bar
+./es6/build/656/in.js:7: ERROR - Block-scoped declaration not directly within block: bar
         if(false) {} else function bar() { return 3; }
                                    ^^^
 
-./es6/build/655/in.js:8: ERROR - Block-scoped declaration not directly within block: baz
+./es6/build/656/in.js:8: ERROR - Block-scoped declaration not directly within block: baz
         if(true) function baz() { return 4; } else {}
                           ^^^
 
-./es6/build/655/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
+./es6/build/656/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
         if(false) function qux() { return 5; } else function qux() { return 6; }
                            ^^^
 
-./es6/build/655/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
+./es6/build/656/in.js:9: ERROR - Block-scoped declaration not directly within block: qux
         if(false) function qux() { return 5; } else function qux() { return 6; }
                                                              ^^^
 
@@ -1699,15 +1699,15 @@ module.exports = function() {
     return a === 3;
   
 };
-./es6/build/680/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./es6/build/681/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
 --> A comment
 ^
 
-./es6/build/680/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./es6/build/681/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
     <!-- Another comment
     ^
 
-./es6/build/680/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+./es6/build/681/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
     var a = 3; <!-- Another comment
                ^
 
