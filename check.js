@@ -50,16 +50,19 @@ function check(name, i) {
   delete global.Symbol;
 
   // Promise: Promise.prototype isn't an instance
-  if (i === 396) return;
+  if (i === 396) {
+    console.error('Skipped: ', i, name);
+    return;
+  }
   var outFile = path.join(buildDir, String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
       var res = require(outFile)();
       if (res) {
-        console.log(path.relative(__dirnam, buildDir) + ': ' + name);
+        console.log(path.relative(__dirname, outFile) + ': ' + name);
       }
     } catch (ignore) {
-      console.error(ignore);
+      console.error(i, name, ignore);
     }
   }
 }

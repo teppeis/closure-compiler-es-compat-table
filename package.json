@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "es6": "ES_VERSION=es6 node generate-inputs.js && ES_VERSION=es6 ./compile.sh && ES_VERSION=es6 ./check.sh",
-    "es2016plus": "ES_VERSION=es2016plus node generate-inputs.js && ES_VERSION=es2016plus ./compile.sh && ES_VERSION=es2016plus ./check.sh"
+    "es6": "CL_VERSION=$(./version.sh) ES_VERSION=es6 node generate-inputs.js && ES_VERSION=es6 ./compile.sh && ES_VERSION=es6 ./check.sh",
+    "es2016plus": "CL_VERSION=$(./version.sh) ES_VERSION=es2016plus node generate-inputs.js && ES_VERSION=es2016plus ./compile.sh && ES_VERSION=es2016plus ./check.sh",
+    "stop": "./node_modules/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop"
   },
   "author": "Teppei Sato",
   "license": "MIT",
   "dependencies": {
     "closure-gun": "^0.1.8",
-    "google-closure-compiler": "^20170806.0.0",
+    "google-closure-compiler": "^20180204.0.0",
     "mkdirp": "^0.5.0",
     "object-assign": "~1.0.0",
     "rimraf": "^2.2.8"

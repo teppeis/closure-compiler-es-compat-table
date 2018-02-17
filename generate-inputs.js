@@ -13,12 +13,16 @@ var esVersion = versionToDir.get(process.env.ES_VERSION);
 if (!esVersion) {
   throw new Error('ES_VERSION is invalid: ' + process.env.ES_VERSION);
 }
+var clVersion = process.env.CL_VERSION;
+if (!clVersion) {
+  throw new Error('CL_VERSION is required');
+}
 
 var data = require('./compat-table/data-' + esVersion);
 
 var fileno = 0;
 var files = [];
-var basedir = path.join(__dirname, esVersion, 'build');
+var basedir = path.join(__dirname, esVersion, clVersion, 'build');
 rimraf.sync(basedir);
 data.tests.forEach(function(test) {
   if (test.subtests) {
