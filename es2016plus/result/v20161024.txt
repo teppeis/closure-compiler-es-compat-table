@@ -1,0 +1,21 @@
+es2016plus/build/0/out.js: exponentiation (**) operator: basic support
+es2016plus/build/1/out.js: exponentiation (**) operator: assignment
+es2016plus/build/2/out.js: exponentiation (**) operator: early syntax error for unary negation without parens
+es2016plus/build/7/out.js: generator throw() caught by inner generator
+es2016plus/build/8/out.js: strict fn w/ non-strict non-simple params is error
+es2016plus/build/9/out.js: nested rest destructuring, declarations
+es2016plus/build/10/out.js: nested rest destructuring, parameters
+es2016plus/build/21/out.js: async functions: basic support
+es2016plus/build/22/out.js: async functions: await support
+es2016plus/build/23/out.js: async functions: arrow async functions
+es2016plus/build/28/out.js: arguments.caller removed
+es2016plus/build/29/out.js: Object.prototype getter/setter methods: __defineGetter__
+es2016plus/build/30/out.js: Object.prototype getter/setter methods: __defineGetter__, symbols
+es2016plus/build/32/out.js: Object.prototype getter/setter methods: __defineSetter__
+es2016plus/build/33/out.js: Object.prototype getter/setter methods: __defineSetter__, symbols
+es2016plus/build/35/out.js: Object.prototype getter/setter methods: __lookupGetter__
+es2016plus/build/36/out.js: Object.prototype getter/setter methods: __lookupGetter__, prototype chain
+es2016plus/build/37/out.js: Object.prototype getter/setter methods: __lookupGetter__, symbols
+es2016plus/build/40/out.js: Object.prototype getter/setter methods: __lookupSetter__
+es2016plus/build/41/out.js: Object.prototype getter/setter methods: __lookupSetter__, prototype chain
+es2016plus/build/42/out.js: Object.prototype getter/setter methods: __lookupSetter__, symbols
