@@ -7,7 +7,9 @@
 var fs = require('fs');
 var path = require('path');
 var esVersion = process.env.ES_VERSION;
-var files = require('./' + esVersion + '/build/filelist.json');
+var clVersion = process.env.CL_VERSION;
+var buildDir = path.join(__dirname, esVersion, clVersion, 'build');
+var files = require(buildDir + '/filelist.json');
 
 global.__createIterableObject = function(arr, methods) {
   methods = methods || {};
@@ -48,15 +50,16 @@ function check(name, i) {
   delete global.Symbol;
 
   // Promise: Promise.prototype isn't an instance
-  if (i === 395) return;
-  var outFile = path.join(__dirname, esVersion, 'build', String(i), 'out.js');
+  if (i === 396) return;
+  var outFile = path.join(buildDir, String(i), 'out.js');
   if (fs.existsSync(outFile)) {
     try {
       var res = require(outFile)();
       if (res) {
-        console.log( esVersion + '/build/' + i + '/out.js: ' + name);
+        console.log(path.relative(__dirnam, buildDir) + ': ' + name);
       }
     } catch (ignore) {
+      console.error(ignore);
     }
   }
 }
