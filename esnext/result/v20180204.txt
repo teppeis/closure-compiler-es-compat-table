@@ -1,0 +1,4 @@
+esnext/v20180204/build/0/out.js: string trimming: String.prototype.trimLeft
+esnext/v20180204/build/1/out.js: string trimming: String.prototype.trimRight
+esnext/v20180204/build/4/out.js: global: "global" global property is global object
+esnext/v20180204/build/12/out.js: Function.prototype.toString revision: [native code]

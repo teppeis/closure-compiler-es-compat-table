@@ -6,6 +6,7 @@ JAVA=./node_modules/.bin/closure-gun
 
 CL_VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
 echo $CL_VERSION
+mkdir -p ./$ES_VERSION/result
 ERRORLOG=./$ES_VERSION/result/$CL_VERSION.error.txt
 BUILD_DIR=./$ES_VERSION/$CL_VERSION/build
 rm -f $ERRORLOG

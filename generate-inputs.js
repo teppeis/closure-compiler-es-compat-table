@@ -8,6 +8,7 @@ var rimraf = require('rimraf');
 var versionToDir = new Map([
   ['es6', 'es6'],
   ['es2016plus', 'es2016plus'],
+  ['esnext', 'esnext'],
 ]);
 var esVersion = versionToDir.get(process.env.ES_VERSION);
 if (!esVersion) {

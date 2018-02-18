@@ -1,0 +1,868 @@
+// instance class fields: public instance class fields
+module.exports = function() {
+class C {
+          x = 'x';
+        }
+        return new C().x === 'x';
+      
+};
+./esnext/v20180204/build/7/in.js:4: ERROR - Parse error. '(' expected
+          x = 'x';
+            ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// instance class fields: private instance class fields basic support
+module.exports = function() {
+class C {
+          #x;
+          constructor(x){
+            this.#x = x;
+          }
+          x(){
+            return this.#x;
+          }
+        }
+        return new C(42).x() === 42;
+      
+};
+./esnext/v20180204/build/8/in.js:4: ERROR - Parse error. '}' expected
+          #x;
+          ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// instance class fields: private instance class fields initializers
+module.exports = function() {
+class C {
+          #x = 42;
+          x(){
+            return this.#x;
+          }
+        }
+        return new C().x() === 42;
+      
+};
+./esnext/v20180204/build/9/in.js:4: ERROR - Parse error. '}' expected
+          #x = 42;
+          ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional catch binding: basic
+module.exports = function() {
+try {
+          throw new Error();
+        }
+        catch {
+          return true;
+        }
+        return false;
+      
+};
+./esnext/v20180204/build/19/in.js:6: ERROR - Parse error. '(' expected
+        catch {
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional catch binding: await
+module.exports = function() {
+(async function (){
+          try {
+            await Promise.reject();
+          }
+          catch {
+            asyncTestPassed();
+          }
+        })();
+      
+};
+./esnext/v20180204/build/20/in.js:7: ERROR - Parse error. '(' expected
+          catch {
+                ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional catch binding: yield
+module.exports = function() {
+function *foo() {
+          try {
+            yield;
+            throw new Error();
+          }
+          catch {
+            return true;
+          }
+        }
+
+        var it = foo();
+        it.next();
+        return it.next().value;
+      
+};
+./esnext/v20180204/build/21/in.js:8: ERROR - Parse error. '(' expected
+          catch {
+                ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// numeric separators
+module.exports = function() {
+return 1_000_000.000_001 === 1000000.000001 &&
+      0b1010_0001_1000_0101 === 0b1010000110000101;
+  
+};
+./esnext/v20180204/build/22/in.js:3: ERROR - Parse error. Semi-colon expected
+return 1_000_000.000_001 === 1000000.000001 &&
+        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Generator function.sent Meta Property
+module.exports = function() {
+var result;
+    function* generator() {
+      result = function.sent;
+    }
+    var iter = generator();
+    iter.next('tromple');
+    return result === 'tromple';
+  
+};
+./esnext/v20180204/build/23/in.js:5: ERROR - Parse error. '(' expected
+      result = function.sent;
+                       ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Class and Property Decorators: class decorators
+module.exports = function() {
+class A {
+          @nonconf
+          get B() {}
+        }
+        function nonconf(target, name, descriptor) {
+          descriptor.configurable = false;
+          return descriptor;
+        }
+        return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
+      
+};
+./esnext/v20180204/build/24/in.js:4: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+          @nonconf
+          ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// static class fields: public static class fields
+module.exports = function() {
+class C {
+          static x = 'x';
+        }
+        return C.x === 'x';
+      
+};
+./esnext/v20180204/build/25/in.js:4: ERROR - Parse error. '(' expected
+          static x = 'x';
+                   ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// static class fields: private static class fields
+module.exports = function() {
+class C {
+          static #x = 42;
+          x(){
+            return C.#x;
+          }
+        }
+        return new C().x() === 42;
+      
+};
+./esnext/v20180204/build/26/in.js:4: ERROR - Parse error. '[' expected
+          static #x = 42;
+                 ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// throw expressions: logical
+module.exports = function() {
+var a, b;
+        try {
+          a = 19 || throw 77;
+          b = 88 && throw 23;
+        } catch (e) {
+          return a + e === 42;
+        }
+      
+};
+./esnext/v20180204/build/27/in.js:5: ERROR - Parse error. primary expression expected
+          a = 19 || throw 77;
+                         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// throw expressions: parameter initializers
+module.exports = function() {
+function fn (arg = throw 42) {
+          return arg;
+        }
+
+        if (fn(21) !== 21) return false;
+
+        try {
+          fn();
+        } catch (e) {
+          return e === 42;
+        }
+      
+};
+./esnext/v20180204/build/28/in.js:3: ERROR - Parse error. primary expression expected
+function fn (arg = throw 42) {
+                        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// throw expressions: arrow function bodies
+module.exports = function() {
+var fn = () => throw 42;
+        try {
+          fn();
+        } catch (e) {
+          return e === 42;
+        }
+      
+};
+./esnext/v20180204/build/29/in.js:3: ERROR - Parse error. primary expression expected
+var fn = () => throw 42;
+                    ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// throw expressions: conditionals
+module.exports = function() {
+true ? 42 : throw 21;
+        try {
+          false ? 42 : throw 21;
+        } catch (e) {
+          return e === 21;
+        }
+      
+};
+./esnext/v20180204/build/30/in.js:3: ERROR - Parse error. primary expression expected
+true ? 42 : throw 21;
+                 ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// do expressions
+module.exports = function() {
+return do {
+      let x = 23;
+      x + 19;
+    } === 42;
+  
+};
+./esnext/v20180204/build/32/in.js:3: ERROR - Parse error. primary expression expected
+return do {
+         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// the pipeline operator
+module.exports = function() {
+function doubleSay (str) {
+      return str + ', ' + str;
+    }
+    function capitalize (str) {
+      return str[0].toUpperCase() + str.slice(1);
+    }
+
+    var result = 'hello'
+      |> doubleSay
+      |> capitalize
+      |> _ => _ + '!';
+
+    return result === 'Hello, hello!';
+  
+};
+./esnext/v20180204/build/123/in.js:11: ERROR - Parse error. primary expression expected
+      |> doubleSay
+        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// extensible numeric literals
+module.exports = function() {
+function i (str, num) {
+      return typeof str + str + typeof num + num;
+    }
+
+    return 123i === 'string123number123';
+  
+};
+./esnext/v20180204/build/124/in.js:7: ERROR - Parse error. Semi-colon expected
+    return 123i === 'string123number123';
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional chaining operator (?.): optional property access
+module.exports = function() {
+var foo = { baz: 42 };
+        var bar = null;
+        return foo?.baz === 42 && bar?.baz === undefined;
+      
+};
+./esnext/v20180204/build/125/in.js:5: ERROR - Parse error. primary expression expected
+        return foo?.baz === 42 && bar?.baz === undefined;
+                    ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional chaining operator (?.): optional bracket access
+module.exports = function() {
+var foo = { baz: 42 };
+        var bar = null;
+        return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+      
+};
+./esnext/v20180204/build/126/in.js:5: ERROR - Parse error. primary expression expected
+        return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+                    ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// optional chaining operator (?.): optional method call
+module.exports = function() {
+var foo = { baz: function () { return 42; } };
+        var bar = null;
+        return foo?.baz() === 42 && bar?.baz() === undefined;
+      
+};
+./esnext/v20180204/build/127/in.js:5: ERROR - Parse error. primary expression expected
+        return foo?.baz() === 42 && bar?.baz() === undefined;
+                    ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// nullish coalescing operator (??)
+module.exports = function() {
+return null ?? 42 === 42 &&
+      undefined ?? 42 === 42 &&
+      false ?? 42 === false &&
+      '' ?? 42 === '' &&
+      0 ?? 42 === 0;
+  
+};
+./esnext/v20180204/build/128/in.js:3: ERROR - Parse error. primary expression expected
+return null ?? 42 === 42 &&
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application from left
+module.exports = function() {
+function f(a, b) {
+          return a + b;
+        };
+        var p = f('a', ?);
+        return p('b') === 'ab';
+      
+};
+./esnext/v20180204/build/129/in.js:6: ERROR - Parse error. ')' expected
+        var p = f('a', ?);
+                       ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application from right
+module.exports = function() {
+function f(a, b) {
+          return a + b;
+        };
+        var p = f(?, 'b');
+        return p('a') === 'ab';
+      
+};
+./esnext/v20180204/build/130/in.js:6: ERROR - Parse error. ')' expected
+        var p = f(?, 'b');
+                  ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application for any arg
+module.exports = function() {
+function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f(?, 'b', ?);
+        return p('a', 'c') === 'abc';
+      
+};
+./esnext/v20180204/build/131/in.js:6: ERROR - Parse error. ')' expected
+        var p = f(?, 'b', ?);
+                  ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application from left with rest
+module.exports = function() {
+function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f('a', ...);
+        return p('b', 'c') === 'abc';
+      
+};
+./esnext/v20180204/build/132/in.js:6: ERROR - Parse error. primary expression expected
+        var p = f('a', ...);
+                           ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application from right with rest
+module.exports = function() {
+function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f(..., 'c');
+        return p('a', 'b') === 'abc';
+      
+};
+./esnext/v20180204/build/133/in.js:6: ERROR - Parse error. primary expression expected
+        var p = f(..., 'c');
+                      ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: partial application for any arg with rest
+module.exports = function() {
+function f(a, b, c, d, e) {
+          return a + b + c + d + e;
+        };
+        var p = f(..., 'c', ...);
+        return p('a', 'b') === 'abcab';
+      
+};
+./esnext/v20180204/build/134/in.js:6: ERROR - Parse error. primary expression expected
+        var p = f(..., 'c', ...);
+                      ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: mixed partial application
+module.exports = function() {
+function f(a, b, c, d) {
+          return a + b + c;
+        };
+        var p = f(?, 'b', ...);
+        return p('a', 'c', 'd') === 'abcd';
+      
+};
+./esnext/v20180204/build/135/in.js:6: ERROR - Parse error. ')' expected
+        var p = f(?, 'b', ...);
+                  ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: runtime evaluation
+module.exports = function() {
+var f = function() {
+          throw new Error();
+        };
+        var p = f(?, 'b');
+        f = function(a, b) {
+          return a + b;
+        };
+        return p('a') === 'ab';
+      
+};
+./esnext/v20180204/build/136/in.js:6: ERROR - Parse error. ')' expected
+        var p = f(?, 'b');
+                  ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: runtime evaluation of property access
+module.exports = function() {
+var o = {};
+        var p = o.f(?, 'b');
+        o = { x: 'c', f: function(a, b) {
+          return a + b + this.x;
+        } };
+        return p('a') === 'abc';
+      
+};
+./esnext/v20180204/build/137/in.js:4: ERROR - Parse error. ')' expected
+        var p = o.f(?, 'b');
+                    ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: lexical `this`
+module.exports = function() {
+function f(a, b) {
+          return a + b + (this === o);
+        }
+        var o = { f: f(?, 'b') };
+        return o.f('a') === 'abfalse';
+      
+};
+./esnext/v20180204/build/138/in.js:6: ERROR - Parse error. ')' expected
+        var o = { f: f(?, 'b') };
+                       ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: constructor partial application
+module.exports = function() {
+function F(a, b) {
+          this.x = a + b;
+        }
+        var p = new F(?, 'b');
+        return p('a').x === 'ab';
+      
+};
+./esnext/v20180204/build/139/in.js:6: ERROR - Parse error. ')' expected
+        var p = new F(?, 'b');
+                      ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// partial application syntax: constructor partial application with rest
+module.exports = function() {
+function F(a, b, c) {
+          this.x = a + b + c;
+        }
+        var p = new F('a', ...);
+        return p('b', 'c').x === 'abc';
+      
+};
+./esnext/v20180204/build/140/in.js:6: ERROR - Parse error. primary expression expected
+        var p = new F('a', ...);
+                               ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Object.freeze syntax
+module.exports = function() {
+return Object.isFrozen({# foo: 42 #});
+      
+};
+./esnext/v20180204/build/141/in.js:3: ERROR - Parse error. '}' expected
+return Object.isFrozen({# foo: 42 #});
+                        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Object.freeze syntax with array literal
+module.exports = function() {
+return Object.isFrozen([# 42 #]);
+      
+};
+./esnext/v20180204/build/142/in.js:3: ERROR - Parse error. ']' expected
+return Object.isFrozen([# 42 #]);
+                        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Object.seal syntax
+module.exports = function() {
+return Object.isSealed({| foo: 42 |});
+      
+};
+./esnext/v20180204/build/143/in.js:3: ERROR - Parse error. '}' expected
+return Object.isSealed({| foo: 42 |});
+                        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Object.seal syntax with array literal
+module.exports = function() {
+return Object.isSealed([| 42 |]);
+      
+};
+./esnext/v20180204/build/144/in.js:3: ERROR - Parse error. ']' expected
+return Object.isSealed([| 42 |]);
+                        ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Sealing, function destructuring
+module.exports = function() {
+function foo({| bar, baz |}) {
+          return bar + baz;
+        }
+        if (foo({ bar: 1, baz: 2 }) !== 3) return;
+        try {
+          foo({ bar: 1, fuz: 2 });
+        } catch (e) {
+          return true;
+        }
+      
+};
+./esnext/v20180204/build/145/in.js:3: ERROR - Parse error. '}' expected
+function foo({| bar, baz |}) {
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Freezing, function destructuring
+module.exports = function() {
+function foo({# bar, baz #}) {
+          if (baz === 42) bar = 27;
+          return bar + baz;
+        }
+        if (foo({ bar: 1, baz: 2 }) !== 3) return;
+        try {
+          foo({ bar: 1, baz: 42 });
+        } catch (e) {
+          return true;
+        }
+      
+};
+./esnext/v20180204/build/146/in.js:3: ERROR - Parse error. '}' expected
+function foo({# bar, baz #}) {
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Sealing, function arguments
+module.exports = function() {
+function foo(| bar, baz |) {
+          return bar + baz;
+        }
+        if (foo(1, 2) !== 3) return;
+        try {
+          foo(1, 2, 3);
+        } catch (e) {
+          return true;
+        }
+      
+};
+./esnext/v20180204/build/147/in.js:3: ERROR - Parse error. ')' expected
+function foo(| bar, baz |) {
+             ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Object.freeze and Object.seal syntax: Freezing, function arguments
+module.exports = function() {
+function foo(# bar, baz #) {
+          if (baz === 42) bar = 27;
+          return bar + baz;
+        }
+        if (foo(1, 2) !== 3) return;
+        try {
+          foo(1, 42);
+        } catch (e) {
+          return true;
+        }
+      
+};
+./esnext/v20180204/build/148/in.js:3: ERROR - Parse error. ')' expected
+function foo(# bar, baz #) {
+             ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// bind (::) operator: binary form
+module.exports = function() {
+function foo() { this.garply += "foo"; return this; }
+        var obj = { garply: "bar" };
+        return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+      
+};
+./esnext/v20180204/build/151/in.js:5: ERROR - Parse error. Semi-colon expected
+        return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+                         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// bind (::) operator: unary form
+module.exports = function() {
+var obj = { garply: "bar", foo: function() { this.garply += "foo"; return this; } };
+        return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+      
+};
+./esnext/v20180204/build/152/in.js:4: ERROR - Parse error. primary expression expected
+        return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+                       ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// additional meta properties: function.callee
+module.exports = function() {
+var f = _ => function.callee === f;
+        return f();
+      
+};
+./esnext/v20180204/build/154/in.js:3: ERROR - Parse error. '(' expected
+var f = _ => function.callee === f;
+                     ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// additional meta properties: function.count
+module.exports = function() {
+return (_ => function.count)(1, 2, 3) === 3;
+      
+};
+./esnext/v20180204/build/155/in.js:3: ERROR - Parse error. '(' expected
+return (_ => function.count)(1, 2, 3) === 3;
+                     ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// additional meta properties: function.arguments
+module.exports = function() {
+var arr =  (_ => function.arguments)(1, 2, 3);
+        return Array.isArray(arr)
+          && arr.length === 3
+          && arr[0] === 1
+          && arr[1] === 2
+          && arr[2] === 3;
+      
+};
+./esnext/v20180204/build/156/in.js:3: ERROR - Parse error. '(' expected
+var arr =  (_ => function.arguments)(1, 2, 3);
+                         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// method parameter decorators
+module.exports = function() {
+var target, key, index;
+    function decorator(_target, _key, _index){
+      target = _target;
+      key    = _key;
+      index  = _index;
+    }
+    class C {
+      method(@decorator foo){ }
+    }
+    return target === C.prototype
+      && key === 'method'
+      && index === 0;
+  
+};
+./esnext/v20180204/build/157/in.js:10: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+      method(@decorator foo){ }
+             ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// function expression decorators
+module.exports = function() {
+function inverse(f){
+      return function(){
+        return !f.apply(this, arguments);
+      };
+    }
+    return (@inverse function(it){
+      return it % 2;
+    })(2);
+  
+};
+./esnext/v20180204/build/158/in.js:8: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+    return (@inverse function(it){
+            ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Reflect.isCallable / Reflect.isConstructor: Reflect.isCallable
+module.exports = function() {
+return Reflect.isCallable(function(){})
+          && Reflect.isCallable(_ => _)
+          && !Reflect.isCallable(class {});
+      
+};
+./esnext/v20180204/build/159/in.js:5: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+          && !Reflect.isCallable(class {});
+                                 ^^^^^^^^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Reflect.isCallable / Reflect.isConstructor: Reflect.isConstructor
+module.exports = function() {
+return Reflect.isConstructor(function(){})
+          && !Reflect.isConstructor(_ => _)
+          && Reflect.isConstructor(class {});
+      
+};
+./esnext/v20180204/build/160/in.js:5: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+          && Reflect.isConstructor(class {});
+                                   ^^^^^^^^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// syntactic tail calls: direct recursion
+module.exports = function() {
+"use strict";
+        return (function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return continue f(n - 1);
+        }(1e6)) === "foo";
+      
+};
+./esnext/v20180204/build/169/in.js:8: ERROR - Parse error. primary expression expected
+          return continue f(n - 1);
+                         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// syntactic tail calls: mutual recursion
+module.exports = function() {
+"use strict";
+        function f(n){
+          if (n <= 0) {
+            return  "foo";
+          }
+          return continue g(n - 1);
+        }
+        function g(n){
+          if (n <= 0) {
+            return  "bar";
+          }
+          return continue f(n - 1);
+        }
+        return f(1e6) === "foo" && f(1e6+1) === "bar";
+      
+};
+./esnext/v20180204/build/170/in.js:8: ERROR - Parse error. primary expression expected
+          return continue g(n - 1);
+                         ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// object shorthand improvements: object initializers
+module.exports = function() {
+var foo = { bar: 42, baz: 33 };
+        var fuz = { foo.bar, foo['baz'] };
+        return fuz.bar === 42 && fuz.baz === 33;
+      
+};
+./esnext/v20180204/build/171/in.js:4: ERROR - Parse error. '}' expected
+        var fuz = { foo.bar, foo['baz'] };
+                       ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// object shorthand improvements: destructuring assignments
+module.exports = function() {
+var foo = { bar: 42, baz: 33 };
+        var fuz = {};
+        ({ fuz.bar, fuz['baz'] } = foo);
+        return fuz.bar === 42 && fuz.baz === 33;
+      
+};
+./esnext/v20180204/build/172/in.js:5: ERROR - Parse error. '}' expected
+        ({ fuz.bar, fuz['baz'] } = foo);
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
