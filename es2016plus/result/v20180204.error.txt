@@ -1,0 +1,239 @@
+// Proxy, "enumerate" handler removed
+module.exports = function() {
+var passed = true;
+     var proxy = new Proxy({}, {
+     enumerate: function() {
+     passed = false;
+     }
+     });
+     for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+     return passed;
+     
+};
+./es2016plus/v20180204/build/11/in.js:9: WARNING - If this if/for/while really shouldn't have a body, use {}
+     for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+                          ^
+
+0 error(s), 1 warning(s)
+--------------------------------------------------------------------------------
+// async functions: correct prototype chain
+module.exports = function() {
+var asyncFunctionProto = Object.getPrototypeOf(async function (){});
+          return asyncFunctionProto !== function(){}.prototype
+            && Object.getPrototypeOf(asyncFunctionProto) === Function.prototype;
+          return passed;
+        
+};
+./es2016plus/v20180204/build/33/in.js:6: WARNING - unreachable code
+          return passed;
+          ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
+--------------------------------------------------------------------------------
+// assignments allowed in for-in head in non-strict mode
+module.exports = function() {
+for (var i = 0 in {}) {}
+     return i === 0;
+     
+};
+./es2016plus/v20180204/build/76/in.js:3: ERROR - Parse error. for-in statement may not have initializer
+for (var i = 0 in {}) {}
+               ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// object rest/spread properties: object rest properties
+module.exports = function() {
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+          return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
+          
+};
+./es2016plus/v20180204/build/77/in.js:3: WARNING - Parse error. this language feature is only supported for ES_NEXT mode or better: object pattern rest
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+        ^
+
+0 error(s), 1 warning(s)
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+unexpected child
+  Node(OBJECT_PATTERN): ./es2016plus/v20180204/build/77/in.js:3:4
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+  Parent(DESTRUCTURING_LHS): ./es2016plus/v20180204/build/77/in.js:3:4
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.replaceObjectPattern(Es6RewriteDestructuring.java:327)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.replacePattern(Es6RewriteDestructuring.java:253)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitPattern(Es6RewriteDestructuring.java:225)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:85)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:772)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:858)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:766)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:802)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:736)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:724)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:749)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:305)
+	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:680)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:471)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:51)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1080)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:873)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:101)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:807)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:804)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: unexpected child
+	... 38 more
+--------------------------------------------------------------------------------
+// object rest/spread properties: object spread properties
+module.exports = function() {
+var spread = {b: 2, c: 3};
+          var O = {a: 1, ...spread};
+          return O !== spread && (O.a + O.b + O.c) === 6;
+          
+};
+./es2016plus/v20180204/build/78/in.js:4: WARNING - Parse error. this language feature is only supported for ES_NEXT mode or better: object literals with spread
+          var O = {a: 1, ...spread};
+                         ^
+
+0 error(s), 1 warning(s)
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+SPREAD 4 [length: 9] [source_file: ./es2016plus/v20180204/build/78/in.js] is not a string node
+  Node(RETURN): ./es2016plus/v20180204/build/78/in.js:5:10
+          return O !== spread && (O.a + O.b + O.c) === 6;
+  Parent(BLOCK): ./es2016plus/v20180204/build/78/in.js:2:28
+module.exports = function() {
+
+	at com.google.javascript.rhino.Node.getString(Node.java:1115)
+	at com.google.javascript.jscomp.InlineObjectLiterals$InliningBehavior.isInlinableObject(InlineObjectLiterals.java:233)
+	at com.google.javascript.jscomp.InlineObjectLiterals$InliningBehavior.afterExitScope(InlineObjectLiterals.java:91)
+	at com.google.javascript.jscomp.ReferenceCollectingCallback.exitScope(ReferenceCollectingCallback.java:264)
+	at com.google.javascript.jscomp.NodeTraversal.popScope(NodeTraversal.java:916)
+	at com.google.javascript.jscomp.NodeTraversal.popScope(NodeTraversal.java:907)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:859)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:766)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:802)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:736)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:724)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:749)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:323)
+	at com.google.javascript.jscomp.ReferenceCollectingCallback.process(ReferenceCollectingCallback.java:113)
+	at com.google.javascript.jscomp.InlineObjectLiterals.process(InlineObjectLiterals.java:66)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
+	at com.google.javascript.jscomp.PhaseOptimizer$Loop.process(PhaseOptimizer.java:448)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2541)
+	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:833)
+	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:829)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.UnsupportedOperationException: SPREAD 4 [length: 9] [source_file: ./es2016plus/v20180204/build/78/in.js] is not a string node
+	... 34 more
+--------------------------------------------------------------------------------
+// template literal revision
+module.exports = function() {
+function tag(strings, a) {
+     return strings[0] === void 0 &&
+     strings.raw[0] === "\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}" &&
+     strings[1] === "\0" &&
+     strings.raw[1] === "\\0" &&
+     a === 0;
+     }
+     return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
+     
+};
+./es2016plus/v20180204/build/82/in.js:10: ERROR - Parse error. Invalid escape sequence
+     return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
+                     ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// s (dotAll) flag for regular expressions
+module.exports = function() {
+const regex = /foo.bar/s;
+    return regex.test('foo\nbar');
+  
+};
+./es2016plus/v20180204/build/83/in.js:3: ERROR - Parse error. Invalid RegExp flag 's'
+const regex = /foo.bar/s;
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Asynchronous Iterators: async generators
+module.exports = function() {
+async function*generator(){
+            yield 42;
+          }
+
+          var iterator = generator();
+          iterator.next().then(function(step){
+            if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();
+          });
+        
+};
+./es2016plus/v20180204/build/87/in.js:3: ERROR - Parse error. async functions cannot be generators
+async function*generator(){
+              ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------
+// Asynchronous Iterators: for-await-of loops
+module.exports = function() {
+var asyncIterable = {};
+          asyncIterable[Symbol.asyncIterator] = function(){
+            var i = 0;
+            return {
+              next: function(){
+                switch(++i){
+                  case 1: return Promise.resolve({done: false, value: 'a'});
+                  case 2: return Promise.resolve({done: false, value: 'b'});
+                } return Promise.resolve({done: true});
+              }
+            };
+          };
+
+          (async function(){
+            var result = '';
+            for await(var value of asyncIterable)result += value;
+            if(result === 'ab')asyncTestPassed();
+          })();
+        
+};
+./es2016plus/v20180204/build/88/in.js:18: ERROR - Parse error. '(' expected
+            for await(var value of asyncIterable)result += value;
+                ^
+
+1 error(s), 0 warning(s)
+--------------------------------------------------------------------------------

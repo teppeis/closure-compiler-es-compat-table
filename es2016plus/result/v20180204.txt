@@ -1,0 +1,23 @@
+es2016plus/v20180204/build/0/out.js: exponentiation (**) operator: basic support
+es2016plus/v20180204/build/1/out.js: exponentiation (**) operator: assignment
+es2016plus/v20180204/build/3/out.js: Array.prototype.includes: Array.prototype.includes
+es2016plus/v20180204/build/8/out.js: strict fn w/ non-strict non-simple params is error
+es2016plus/v20180204/build/9/out.js: nested rest destructuring, declarations
+es2016plus/v20180204/build/10/out.js: nested rest destructuring, parameters
+es2016plus/v20180204/build/13/out.js: Object static methods: Object.values
+es2016plus/v20180204/build/14/out.js: Object static methods: Object.entries
+es2016plus/v20180204/build/15/out.js: Object static methods: Object.getOwnPropertyDescriptors
+es2016plus/v20180204/build/17/out.js: String padding: String.prototype.padStart
+es2016plus/v20180204/build/18/out.js: String padding: String.prototype.padEnd
+es2016plus/v20180204/build/19/out.js: trailing commas in function syntax: in parameter lists
+es2016plus/v20180204/build/20/out.js: trailing commas in function syntax: in argument lists
+es2016plus/v20180204/build/23/out.js: async functions: no line break between async and function
+es2016plus/v20180204/build/27/out.js: async functions: must await a value
+es2016plus/v20180204/build/29/out.js: async functions: cannot await in parameters
+es2016plus/v20180204/build/55/out.js: arguments.caller removed
+es2016plus/v20180204/build/56/out.js: Object.prototype getter/setter methods: __defineGetter__
+es2016plus/v20180204/build/59/out.js: Object.prototype getter/setter methods: __defineSetter__
+es2016plus/v20180204/build/62/out.js: Object.prototype getter/setter methods: __lookupGetter__
+es2016plus/v20180204/build/63/out.js: Object.prototype getter/setter methods: __lookupGetter__, prototype chain
+es2016plus/v20180204/build/67/out.js: Object.prototype getter/setter methods: __lookupSetter__
+es2016plus/v20180204/build/68/out.js: Object.prototype getter/setter methods: __lookupSetter__, prototype chain
