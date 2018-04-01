@@ -1,0 +1,15 @@
+// bindings / const / temporal dead zone
+module.exports = function() {
+var passed = (function(){ try { qux; } catch(e) { return true; }}());
+        function fn() { passed &= qux === 456; }
+        const qux = 456;
+        fn();
+        return passed;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/bindings/const/temporal_dead_zone/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+var passed = (function(){ try { qux; } catch(e) { return true; }}());
+                                ^^^
+
+0 error(s), 1 warning(s)

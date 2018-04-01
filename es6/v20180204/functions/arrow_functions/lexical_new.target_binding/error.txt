@@ -1,0 +1,63 @@
+// functions / arrow functions / lexical "new.target" binding
+module.exports = function() {
+function C() {
+          return x => new.target;
+        }
+        return new C()() === C && C()() === undefined;
+      
+};
+----------------------------------------------------------
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+null
+  Node(FUNCTION ): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:17
+          return x => new.target;
+  Parent(RETURN): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:10
+          return x => new.target;
+
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:441)
+	at com.google.javascript.rhino.IR.returnNode(IR.java:215)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitFunction(Es6RewriteDestructuring.java:99)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.shouldTraverse(Es6RewriteDestructuring.java:63)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:735)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:858)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:766)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:802)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:736)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:858)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:766)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:802)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:736)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:724)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:749)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:305)
+	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:680)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:471)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:51)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1080)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:873)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:101)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:807)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:804)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException
+	... 43 more

@@ -1,0 +1,16 @@
+// functions / class / class name is lexically scoped
+module.exports = function() {
+class C {
+          method() { return typeof C === "function"; }
+        }
+        var M = C.prototype.method;
+        C = undefined;
+        return C === undefined && M();
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/functions/class/class_name_is_lexically_scoped/in.js:7: ERROR - Class names defined inside a function cannot be reassigned.
+        C = undefined;
+        ^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

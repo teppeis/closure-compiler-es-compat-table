@@ -1,0 +1,22 @@
+// annex b / HTML-style comments
+module.exports = function() {
+--> A comment
+    <!-- Another comment
+    var a = 3; <!-- Another comment
+    return a === 3;
+  
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/annex_b/HTML-style_comments/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+--> A comment
+^
+
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/annex_b/HTML-style_comments/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+    <!-- Another comment
+    ^
+
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/annex_b/HTML-style_comments/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+    var a = 3; <!-- Another comment
+               ^
+
+0 error(s), 3 warning(s)

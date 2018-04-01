@@ -1,0 +1,61 @@
+// 2018 features / object rest/spread properties / object rest properties
+module.exports = function() {
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+          return a === 1 && rest.a === undefined && rest.b === 2 && rest.c === 3;
+          
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es2016plus/v20180204/2018_features/object_rest_spread_properties/object_rest_properties/in.js:3: WARNING - Parse error. this language feature is only supported for ES_NEXT mode or better: object pattern rest
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+        ^
+
+0 error(s), 1 warning(s)
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+unexpected child
+  Node(OBJECT_PATTERN): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es2016plus/v20180204/2018_features/object_rest_spread_properties/object_rest_properties/in.js:3:4
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+  Parent(DESTRUCTURING_LHS): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es2016plus/v20180204/2018_features/object_rest_spread_properties/object_rest_properties/in.js:3:4
+var {a, ...rest} = {a: 1, b: 2, c: 3};
+
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.replaceObjectPattern(Es6RewriteDestructuring.java:327)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.replacePattern(Es6RewriteDestructuring.java:253)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visitPattern(Es6RewriteDestructuring.java:225)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.visit(Es6RewriteDestructuring.java:85)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:772)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:858)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:766)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:802)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:736)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:752)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:768)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:724)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:749)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:305)
+	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:680)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:471)
+	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:51)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1080)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:873)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:101)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:807)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:804)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: unexpected child
+	... 38 more
