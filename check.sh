@@ -10,7 +10,7 @@ basedir=$(cd "$(dirname "$0")" && pwd)
 closureVer=$("$basedir/version.sh")
 echo "$closureVer"
 
-LOG="$basedir/$ES_VERSION/$closureVer/result.txt"
+LOG="$basedir/$ES_VERSION/$closureVer/pass.txt"
 ERROR="$basedir/$ES_VERSION/$closureVer/runtime_error.txt"
 rm -f "$LOG"
 nodebrew exec 0.10 -- ES_VERSION="$ES_VERSION" CL_VERSION="$closureVer" node "$basedir/legacy/check.js" > "$LOG" 2> "$ERROR"
