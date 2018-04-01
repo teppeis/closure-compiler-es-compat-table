@@ -1,20 +1,26 @@
 {
   "name": "closure-compiler-es6-compat-table",
   "version": "1.0.0",
-  "description": "",
+  "author": "Teppei Sato",
   "main": "index.js",
   "scripts": {
-    "es6": "CL_VERSION=$(./version.sh) ES_VERSION=es6 node generate-inputs.js && ES_VERSION=es6 ./compile.sh && ES_VERSION=es6 ./check.sh",
-    "es2016plus": "CL_VERSION=$(./version.sh) ES_VERSION=es2016plus node generate-inputs.js && ES_VERSION=es2016plus ./compile.sh && ES_VERSION=es2016plus ./check.sh",
-    "esnext": "CL_VERSION=$(./version.sh) ES_VERSION=esnext node generate-inputs.js && ES_VERSION=esnext ./compile.sh && ES_VERSION=esnext ./check.sh",
-    "stop": "./node_modules/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop"
+    "es2016plus": "./run.sh es2016plus",
+    "es6": "./run.sh es6",
+    "esnext": "./run.sh esnext",
+    "stop": "./node_modules/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop",
+    "test": "eslint *.js legacy/*.js"
   },
-  "author": "Teppei Sato",
-  "license": "MIT",
   "dependencies": {
     "closure-gun": "^0.1.8",
+    "fs-readdir-recursive": "^1.1.0",
     "google-closure-compiler": "^20180319.0.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.6.2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-teppeis": "^6.7.0",
+    "prettier": "1.11.1"
   }
 }

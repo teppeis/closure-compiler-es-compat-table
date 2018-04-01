@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 
-java -jar ./node_modules/google-closure-compiler/compiler.jar --version | grep Version | sed -e 's/Version: //g'
+basedir=$(cd "$(dirname "$0")" && pwd)
+"$basedir"/node_modules/.bin/closure-gun --version | grep Version | sed -e 's/Version: //g'

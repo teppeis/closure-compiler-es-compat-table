@@ -1,43 +1,55 @@
-#!/bin/sh
+#!/bin/bash -e
 
 # TEST_DIR=44 if you want to run only specified test
 
-JAVA=./node_modules/.bin/closure-gun
+if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+    echo "Usage: compile.sh ES_VERSION [TEST_DIR]" 1>&2
+    exit 1
+fi
+ES_VERSION=$1
+TEST_DIR=$2
 
-CL_VERSION=$($JAVA --version|grep Version|sed -e 's/Version: //g')
-echo $CL_VERSION
-mkdir -p ./$ES_VERSION/result
-ERRORLOG=./$ES_VERSION/result/$CL_VERSION.error.txt
-BUILD_DIR=./$ES_VERSION/$CL_VERSION/build
-rm -f $ERRORLOG
+basedir=$(cd "$(dirname "$0")" && pwd)
+closure="$basedir/node_modules/.bin/closure-gun"
+closureVer=$("$basedir/version.sh")
+echo "$closureVer"
 
-for DIR in $(ls $BUILD_DIR | grep -v filelist.json | sort -n); do
+BUILD_DIR="$basedir/$ES_VERSION/$closureVer"
 
-    if [ -n "$TEST_DIR" ] && [ $DIR != $TEST_DIR ]; then
+for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
+    # TODO: TEST_DIR
+    if [ -n "$TEST_DIR" ] && [ "$DIR" != "$TEST_DIR" ]; then
         continue
     fi
 
-    DIR=$BUILD_DIR/$DIR
-
-    $JAVA \
+    DIR=$(dirname "$FILE")
+    DIR_DISPLAY="${DIR//*$closureVer\//}"
+    OUT="$DIR/out.js"
+    $closure \
         --formatting PRETTY_PRINT \
         -O SIMPLE \
-        --js "$DIR/in.js" \
-        > $DIR/out.js 2> ./error
+        --js "$FILE" \
+        > "$OUT" 2> ./error || true
 
     # exit code of JNI is wrong
     if [ "$(cat ./error)" != "" ]; then
-        echo "- $DIR: NG"
+        echo "- $DIR_DISPLAY: NG"
 
-        cat $DIR/in.js >> $ERRORLOG
-        echo "" >> $ERRORLOG
-        cat ./error >> $ERRORLOG
-        echo "--------------------------------------------------------------------------------" >> $ERRORLOG
+        if [ "$(cat "$OUT")" = "" ]; then
+            rm "$OUT"
+        fi
+
+        ERRORLOG="$DIR/error.txt"
+        # shellcheck disable=SC2129
+        {
+            cat "$DIR/in.js" 
+            echo ""
+            echo "----------------------------------------------------------"
+            cat ./error
+        } > "$ERRORLOG"
     else
-        echo "- $DIR: OK"
+        echo "- $DIR_DISPLAY: OK"
     fi
 done
 
-rm -f error
-
-exit 0
+rm -f ./error

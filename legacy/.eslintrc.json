@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": ["teppeis/node", "teppeis/prettier"],
+  "rules": {
+    "node/no-unsupported-features": [2, {"version": 0.1}]
+  }
+}
