@@ -1,7 +1,6 @@
 // built-ins / Reflect / Reflect.deleteProperty
 module.exports = function() {
-var obj = { bar: 456 };
-        Reflect.deleteProperty(obj, "bar");
-        return !("bar" in obj);
-      
+  var obj = { bar: 456 };
+  Reflect.deleteProperty(obj, "bar");
+  return !("bar" in obj);
 };

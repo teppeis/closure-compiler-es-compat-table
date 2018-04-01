@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const rimraf = require('rimraf');
+const prettier = require('prettier');
 
 const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
 const esVersion = versionToDir.get(process.env.ES_VERSION);
@@ -46,7 +47,12 @@ function writeInputSrcFile(fn, category, test, sub) {
     name = `${name} / ${sub}`;
   }
   mkdirp.sync(dir);
-  const src = generateTestJsSrc(fn, name);
+  let src = generateTestJsSrc(fn, name);
+  try {
+    src = prettier.format(src);
+  } catch (ignore) {
+    // ignore
+  }
   fs.writeFileSync(path.join(dir, 'in.js'), `// ${name}\n${src}`);
 }
 

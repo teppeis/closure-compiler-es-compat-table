@@ -1,8 +1,18 @@
 // proposal (stage 1) / Realms
 module.exports = function() {
-return typeof Realm === "function"
-      && ["eval", "global", "intrinsics", "stdlib", "directEval", "indirectEval", "initGlobal", "nonEval"].every(function(key){
-        return key in Realm.prototype;
-      });
-  
+  return (
+    typeof Realm === "function" &&
+    [
+      "eval",
+      "global",
+      "intrinsics",
+      "stdlib",
+      "directEval",
+      "indirectEval",
+      "initGlobal",
+      "nonEval"
+    ].every(function(key) {
+      return key in Realm.prototype;
+    })
+  );
 };
