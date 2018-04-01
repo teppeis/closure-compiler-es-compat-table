@@ -1,0 +1,12 @@
+// subclassing / Array is subclassable / Array.from
+module.exports = function() {
+class C extends Array {}
+        return C.from({ length: 0 }) instanceof C;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/subclassing/Array_is_subclassable/Array.from/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+class C extends Array {}
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

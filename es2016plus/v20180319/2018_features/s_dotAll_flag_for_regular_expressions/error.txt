@@ -1,0 +1,12 @@
+// 2018 features / s (dotAll) flag for regular expressions
+module.exports = function() {
+const regex = /foo.bar/s;
+    return regex.test('foo\nbar');
+  
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es2016plus/v20180319/2018_features/s_dotAll_flag_for_regular_expressions/in.js:3: ERROR - Parse error. Invalid RegExp flag 's'
+const regex = /foo.bar/s;
+              ^
+
+1 error(s), 0 warning(s)

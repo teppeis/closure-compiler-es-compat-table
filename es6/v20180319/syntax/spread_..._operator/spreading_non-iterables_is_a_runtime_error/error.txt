@@ -1,0 +1,15 @@
+// syntax / spread (...) operator / spreading non-iterables is a runtime error
+module.exports = function() {
+try {
+          Math.max(...2);
+        } catch(e) {
+          return Math.max(...[1, 2, 3]) === 3;
+        }
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/syntax/spread_..._operator/spreading_non-iterables_is_a_runtime_error/in.js:4: WARNING - Suspicious code. The result of the extern function call 'Math.max' is not being used.
+          Math.max(...2);
+          ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

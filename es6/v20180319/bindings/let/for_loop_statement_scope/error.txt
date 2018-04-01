@@ -1,0 +1,13 @@
+// bindings / let / for loop statement scope
+module.exports = function() {
+let baz = 1;
+        for(let baz = 0; false;) {}
+        return baz === 1;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/bindings/let/for_loop_statement_scope/in.js:4: WARNING - unreachable code
+        for(let baz = 0; false;) {}
+                                 ^^
+
+0 error(s), 1 warning(s)

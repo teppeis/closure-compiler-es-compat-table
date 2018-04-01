@@ -1,0 +1,13 @@
+// 2018 features / object rest/spread properties / object spread properties
+module.exports = function() {
+var spread = {b: 2, c: 3};
+          var O = {a: 1, ...spread};
+          return O !== spread && (O.a + O.b + O.c) === 6;
+          
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es2016plus/v20180319/2018_features/object_rest_spread_properties/object_spread_properties/in.js:4: ERROR - This language feature is only supported for ECMASCRIPT2018 mode or better: object literals with spread.
+          var O = {a: 1, ...spread};
+                         ^
+
+1 error(s), 0 warning(s)

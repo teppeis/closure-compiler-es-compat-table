@@ -1,0 +1,14 @@
+// functions / class / extends expressions
+module.exports = function() {
+var B;
+        class C extends (B = class {}) {}
+        return new C() instanceof B
+          && B.isPrototypeOf(C);
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/functions/class/extends_expressions/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+        class C extends (B = class {}) {}
+                             ^^^^^^^^
+
+1 error(s), 0 warning(s)

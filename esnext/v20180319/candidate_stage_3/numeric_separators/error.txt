@@ -1,0 +1,12 @@
+// candidate (stage 3) / numeric separators
+module.exports = function() {
+return 1_000_000.000_001 === 1000000.000001 &&
+      0b1010_0001_1000_0101 === 0b1010000110000101;
+  
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/esnext/v20180319/candidate_stage_3/numeric_separators/in.js:3: ERROR - Parse error. Semi-colon expected
+return 1_000_000.000_001 === 1000000.000001 &&
+        ^
+
+1 error(s), 0 warning(s)

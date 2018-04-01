@@ -1,0 +1,17 @@
+// misc / Proxy, internal 'get' calls / RegExp constructor
+module.exports = function() {
+// RegExp -> Get -> [[Get]]
+        var get = [];
+        var re = { constructor: null };
+        re[Symbol.match] = true;
+        var p = new Proxy(re, { get: function(o, k) { get.push(k); return o[k]; }});
+        RegExp(p);
+        return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/misc/Proxy,_internal_get_calls/RegExp_constructor/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+        RegExp(p);
+        ^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,14 @@
+// syntax / RegExp "y" and "u" flags / "y" flag, lastIndex
+module.exports = function() {
+var re = new RegExp('yy', 'y');
+        re.lastIndex = 3;
+        var result = re.exec('xxxyyxx')[0];
+        return result === 'yy' && re.lastIndex === 5;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js:3: WARNING - Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js]
+var re = new RegExp('yy', 'y');
+                          ^^^
+
+0 error(s), 1 warning(s)

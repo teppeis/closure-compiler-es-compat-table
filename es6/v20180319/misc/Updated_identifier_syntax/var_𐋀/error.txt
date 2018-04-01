@@ -1,0 +1,12 @@
+// misc / Updated identifier syntax / var 𐋀;
+module.exports = function() {
+var 𐋀;
+        return true;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/misc/Updated_identifier_syntax/var_𐋀/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
+var 𐋀;
+    ^
+
+1 error(s), 0 warning(s)

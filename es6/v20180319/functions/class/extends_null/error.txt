@@ -1,0 +1,15 @@
+// functions / class / extends null
+module.exports = function() {
+class C extends null {
+          constructor() { return Object.create(null); }
+        }
+        return Function.prototype.isPrototypeOf(C)
+          && Object.getPrototypeOf(C.prototype) === null;
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/functions/class/extends_null/in.js:4: ERROR - constructor is missing a call to super()
+          constructor() { return Object.create(null); }
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,13 @@
+// syntax / destructuring, declarations / in for-of loop heads
+module.exports = function() {
+for(var [i, j, k] of [[1,2,3]]) {
+          return i === 1 && j === 2 && k === 3;
+        }
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/syntax/destructuring,_declarations/in_for-of_loop_heads/in.js:3: WARNING - unreachable code
+for(var [i, j, k] of [[1,2,3]]) {
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
