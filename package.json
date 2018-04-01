@@ -13,9 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "closure-gun": "^0.1.8",
-    "google-closure-compiler": "^20180204.0.0",
+    "google-closure-compiler": "^20180319.0.0",
     "mkdirp": "^0.5.0",
-    "object-assign": "~1.0.0",
-    "rimraf": "^2.2.8"
+    "rimraf": "^2.6.2"
   }
 }
