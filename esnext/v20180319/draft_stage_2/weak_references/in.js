@@ -1,4 +1,4 @@
-// proposal (stage 1) / weak references
+// draft (stage 2) / weak references
 module.exports = function() {
 var O = {};
     var weakref = System.makeWeakRef(O);
