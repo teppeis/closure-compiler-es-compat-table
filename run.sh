@@ -1,15 +1,19 @@
 #!/bin/bash -e
 
-if [ $# -ne 1 ]; then
-    echo "Usage: run.sh ES_VERSION" 1>&2
+if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+    {
+        echo "Usage: run.sh ES_VERSION [TEST_DIR]"
+        echo "  - ES_VERSION: ex. 'es2016plus'"
+        echo "  - TEST_DIR  : ex. '2016_features/exponentiation_operator/basic_support'"
+    } 1>&2
     exit 1
 fi
-export ES_VERSION=$1
+ES_VERSION=$1
+TEST_DIR=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 CL_VERSION=$("$basedir"/version.sh)
-export CL_VERSION
 
-node generate-inputs.js
-"$basedir/compile.sh" "$ES_VERSION"
-"$basedir/check.sh" "$ES_VERSION"
+ES_VERSION=$ES_VERSION CL_VERSION=$CL_VERSION node generate-inputs.js
+"$basedir/compile.sh" "$ES_VERSION" "$TEST_DIR"
+"$basedir/check.sh" "$ES_VERSION" "$TEST_DIR"

@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
-const rimraf = require('rimraf');
 const prettier = require('prettier');
 
 const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
@@ -19,7 +18,6 @@ if (!clVersion) {
 const data = require(`./compat-table/data-${esVersion}`);
 
 const basedir = path.join(__dirname, esVersion, clVersion);
-rimraf.sync(basedir);
 data.tests.forEach(test => {
   if (test.subtests) {
     test.subtests.forEach(subtest => {

@@ -1,6 +1,6 @@
 'use strict';
 
-// Run in Node.js v0.10
+// Run in Node.js v0.10, so don't use ES6 features.
 // TEST_DIR=44 if you want to run only specified test
 
 // require('./polyfill');
@@ -11,6 +11,7 @@ var readdir = require('fs-readdir-recursive');
 
 var esVersion = process.env.ES_VERSION;
 var clVersion = process.env.CL_VERSION;
+var testDir = process.env.TEST_DIR;
 var buildDir = path.join(path.dirname(__dirname), esVersion, clVersion);
 
 global.__createIterableObject = function(arr, methods) {
@@ -49,8 +50,7 @@ readdir(buildDir)
   });
 
 function check(file) {
-  // TODO: TEST_DIR
-  if (process.env.TEST_DIR && process.env.TEST_DIR !== file) {
+  if (testDir && testDir !== file) {
     return;
   }
 

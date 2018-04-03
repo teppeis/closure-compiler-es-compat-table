@@ -1,9 +1,11 @@
 #!/bin/bash -e
 
-# TEST_DIR=44 if you want to run only specified test
-
 if [ $# -lt 1 ] || [ $# -gt 2 ]; then
-    echo "Usage: compile.sh ES_VERSION [TEST_DIR]" 1>&2
+    {
+        echo "Usage: compile.sh ES_VERSION [TEST_DIR]"
+        echo "  - ES_VERSION: ex. 'es2016plus'"
+        echo "  - TEST_DIR  : ex. '2016_features/exponentiation_operator/basic_support'"
+    } 1>&2
     exit 1
 fi
 ES_VERSION=$1
@@ -16,12 +18,11 @@ echo "$closureVer"
 
 BUILD_DIR="$basedir/$ES_VERSION/$closureVer"
 
-for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
-    # TODO: TEST_DIR
-    if [ -n "$TEST_DIR" ] && [ "$DIR" != "$TEST_DIR" ]; then
-        continue
-    fi
+if [ -n "$TEST_DIR" ]; then
+    BUILD_DIR="$BUILD_DIR/$TEST_DIR"
+fi
 
+for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
     DIR=$(dirname "$FILE")
     DIR_DISPLAY="${DIR//*$closureVer\//}"
     OUT="$DIR/out.js"
