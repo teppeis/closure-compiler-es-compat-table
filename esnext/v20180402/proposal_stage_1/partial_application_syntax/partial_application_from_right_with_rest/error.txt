@@ -1,0 +1,15 @@
+// proposal (stage 1) / partial application syntax / partial application from right with rest
+module.exports = function() {
+function f(a, b, c) {
+          return a + b + c;
+        };
+        var p = f(..., 'c');
+        return p('a', 'b') === 'abc';
+      
+};
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/esnext/v20180402/proposal_stage_1/partial_application_syntax/partial_application_from_right_with_rest/in.js:6: ERROR - Parse error. primary expression expected
+        var p = f(..., 'c');
+                      ^
+
+1 error(s), 0 warning(s)

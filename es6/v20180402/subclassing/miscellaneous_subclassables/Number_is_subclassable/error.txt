@@ -1,0 +1,13 @@
+// subclassing / miscellaneous subclassables / Number is subclassable
+module.exports = function() {
+  class C extends Number {}
+  var c = new C(6);
+  return c instanceof Number && c instanceof C && +c === 6;
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/subclassing/miscellaneous_subclassables/Number_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
+  class C extends Number {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

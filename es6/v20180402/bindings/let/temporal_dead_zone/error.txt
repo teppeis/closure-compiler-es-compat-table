@@ -1,0 +1,23 @@
+// bindings / let / temporal dead zone
+module.exports = function() {
+  var passed = (function() {
+    try {
+      qux;
+    } catch (e) {
+      return true;
+    }
+  })();
+  function fn() {
+    passed &= qux === 456;
+  }
+  let qux = 456;
+  fn();
+  return passed;
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/bindings/let/temporal_dead_zone/in.js:5: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+      qux;
+      ^^^
+
+0 error(s), 1 warning(s)

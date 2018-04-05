@@ -1,0 +1,16 @@
+// strawman (stage 0) / bind (::) operator / binary form
+module.exports = function() {
+  function foo() {
+    this.garply += "foo";
+    return this;
+  }
+  var obj = { garply: "bar" };
+  return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/esnext/v20180402/strawman_stage_0/bind_operator/binary_form/in.js:8: ERROR - Parse error. Semi-colon expected
+  return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
+                   ^
+
+1 error(s), 0 warning(s)

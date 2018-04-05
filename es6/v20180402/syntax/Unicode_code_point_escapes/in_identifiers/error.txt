@@ -1,0 +1,12 @@
+// syntax / Unicode code point escapes / in identifiers
+module.exports = function() {
+  var 𐋀 = { 𐋀: 2 };
+  return 𐋀["\ud800\udec0"] === 2;
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/syntax/Unicode_code_point_escapes/in_identifiers/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
+  var 𐋀 = { 𐋀: 2 };
+      ^
+
+1 error(s), 0 warning(s)

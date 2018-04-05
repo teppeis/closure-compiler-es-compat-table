@@ -1,0 +1,211 @@
+candidate_stage_3/Array.prototype._flatten,_flatMap/Array.prototype.flatMap/out.js [TypeError: Object [object Object],[object Object] has no method 'flatMap']
+candidate_stage_3/Array.prototype._flatten,_flatMap/Array.prototype.flatten/out.js [TypeError: Object 1,2,3,4,5,6 has no method 'flatten']
+candidate_stage_3/Function.prototype.toString_revision/arrows/out.js [SyntaxError: Unexpected token >]
+candidate_stage_3/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js [SyntaxError: Unexpected reserved word]
+candidate_stage_3/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js [SyntaxError: Unexpected reserved word]
+candidate_stage_3/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js [SyntaxError: Unexpected token ;]
+candidate_stage_3/Function.prototype.toString_revision/methods_and_computed_property_names/out.js [SyntaxError: Unexpected token []
+candidate_stage_3/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js [SyntaxError: Unexpected token ILLEGAL]
+candidate_stage_3/String.prototype.matchAll/out.js [TypeError: Object 11a2bb has no method 'matchAll']
+candidate_stage_3/string_trimming/String.prototype.trimEnd/out.js [TypeError: Object  	 
+ abc   	
+ has no method 'trimEnd']
+candidate_stage_3/string_trimming/String.prototype.trimStart/out.js [TypeError: Object  	 
+ abc   	
+ has no method 'trimStart']
+draft_stage_2/Symbol.prototype.description/out.js [ReferenceError: Symbol is not defined]
+draft_stage_2/weak_references/out.js [ReferenceError: System is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js [ReferenceError: Reflect is not defined]
+pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js [ReferenceError: Reflect is not defined]
+proposal_stage_1/Collections_methods/Map.groupBy/out.js [TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'groupBy']
+proposal_stage_1/Collections_methods/Map.keyBy/out.js [TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'keyBy']
+proposal_stage_1/Collections_methods/Map.prototype.filter/out.js [TypeError: Object [object Object] has no method 'filter']
+proposal_stage_1/Collections_methods/Map.prototype.mapKeys/out.js [TypeError: Object [object Object] has no method 'mapKeys']
+proposal_stage_1/Collections_methods/Map.prototype.mapValues/out.js [TypeError: Object [object Object] has no method 'mapValues']
+proposal_stage_1/Collections_methods/Map.prototype.merge/out.js [TypeError: Object [object Object] has no method 'merge']
+proposal_stage_1/Collections_methods/Set.prototype.addAll/out.js [TypeError: Object [object Object] has no method 'addAll']
+proposal_stage_1/Collections_methods/Set.prototype.deleteAll/out.js [TypeError: Object [object Object] has no method 'deleteAll']
+proposal_stage_1/Collections_methods/Set.prototype.every/out.js [TypeError: Object [object Object] has no method 'every']
+proposal_stage_1/Collections_methods/Set.prototype.filter/out.js [TypeError: Object [object Object] has no method 'filter']
+proposal_stage_1/Collections_methods/Set.prototype.find/out.js [TypeError: Object [object Object] has no method 'find']
+proposal_stage_1/Collections_methods/Set.prototype.join/out.js [TypeError: Object [object Object] has no method 'join']
+proposal_stage_1/Collections_methods/Set.prototype.map/out.js [TypeError: Object [object Object] has no method 'map']
+proposal_stage_1/Collections_methods/Set.prototype.reduce/out.js [TypeError: Object [object Object] has no method 'reduce']
+proposal_stage_1/Collections_methods/Set.prototype.some/out.js [TypeError: Object [object Object] has no method 'some']
+proposal_stage_1/Frozen_Realms_API/out.js [ReferenceError: Reflect is not defined]
+proposal_stage_1/Math.signbit/out.js [TypeError: Object #<Object> has no method 'signbit']
+proposal_stage_1/Math_extensions_proposal/Math.clamp/out.js [TypeError: Object #<Object> has no method 'clamp']
+proposal_stage_1/Math_extensions_proposal/Math.degrees/out.js [TypeError: Object #<Object> has no method 'degrees']
+proposal_stage_1/Math_extensions_proposal/Math.fscale/out.js [TypeError: Object #<Object> has no method 'fscale']
+proposal_stage_1/Math_extensions_proposal/Math.radians/out.js [TypeError: Object #<Object> has no method 'radians']
+proposal_stage_1/Math_extensions_proposal/Math.scale/out.js [TypeError: Object #<Object> has no method 'scale']
+proposal_stage_1/Object.fromEntries/out.js [TypeError: Object function Object() { [native code] } has no method 'fromEntries']
+proposal_stage_1/Observable/Observable.from/out.js [ReferenceError: Observable is not defined]
+proposal_stage_1/Observable/Observable.of/out.js [ReferenceError: Observable is not defined]
+proposal_stage_1/Observable/Observable.prototype.subscribe/out.js [ReferenceError: Observable is not defined]
+proposal_stage_1/Observable/Observable.prototype_Symbol.observable/out.js [ReferenceError: Observable is not defined]
+proposal_stage_1/Observable/Observable_constructor_behavior/out.js [ReferenceError: Observable is not defined]
+proposal_stage_1/Observable/Symbol.observable_well_known_symbol/out.js [ReferenceError: Symbol is not defined]
+proposal_stage_1/Promise.try/call_function_synchronously/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/Promise.try/function_returns_fulfilled_Promise/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/Promise.try/function_returns_rejected_Promise/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/Promise.try/function_returns_value/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/Promise.try/function_throws_exception/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/Promise.try/returns_instance_of_Promise/out.js [TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try']
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Bool16x8/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Bool32x4/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Bool8x16/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Float32x4/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Int16x8/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Int32x4/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Int8x16/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%booleanType%.allTrue/out.js [ReferenceError: simdBoolTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%booleanType%.anyTrue/out.js [ReferenceError: simdBoolTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.abs/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.div/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.max/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.maxNum/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.min/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.minNum/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.reciprocalApproximation/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.reciprocalSqrtApproximation/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%floatType%.sqrt/out.js [ReferenceError: simdFloatTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%integerType%.addSaturate/out.js [ReferenceError: simdSmallIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%integerType%.shiftLeftByScalar/out.js [ReferenceError: simdIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%integerType%.shiftRightByScalar/out.js [ReferenceError: simdIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%integerType%.subSaturate/out.js [ReferenceError: simdSmallIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.add/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.and/out.js [ReferenceError: simdBoolIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.check/out.js [ReferenceError: simdAllTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.equal/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.extractLane/out.js [ReferenceError: simdAllTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.fromTIMD/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.fromTIMDBits/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.greaterThan/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.greaterThanOrEqual/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.lessThan/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.lessThanOrEqual/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.load/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.load1/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.load2/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.load3/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.mul/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.neg/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.not/out.js [ReferenceError: simdBoolTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.notEqual/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.or/out.js [ReferenceError: simdBoolIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.replaceLane/out.js [ReferenceError: simdAllTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.select/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.shuffle/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.splat/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.store/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.store1/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.store2/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.store3/out.js [ReferenceError: simd32bitFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.sub/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.swizzle/out.js [ReferenceError: simdFloatIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/SIMD.%type%.xor/out.js [ReferenceError: simdBoolIntTypes is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Uint16x8/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Uint32x4/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/SIMD_Single_Instruction,_Multiple_Data/Uint8x16/out.js [ReferenceError: SIMD is not defined]
+proposal_stage_1/Set_methods/Set.prototype.except/out.js [TypeError: Object [object Object] has no method 'except']
+proposal_stage_1/Set_methods/Set.prototype.intersect/out.js [TypeError: Object [object Object] has no method 'intersect']
+proposal_stage_1/Set_methods/Set.prototype.union/out.js [TypeError: Object [object Object] has no method 'union']
+proposal_stage_1/Set_methods/Set.prototype.xor/out.js [TypeError: Object [object Object] has no method 'xor']
+proposal_stage_1/String.prototype.codePoints/out.js [TypeError: Object a𠮷b has no method 'codePoints']
+proposal_stage_1/String.prototype.replaceAll/out.js [TypeError: Object q=query+string+parameters has no method 'replaceAll']
+strawman_stage_0/String.prototype.at/out.js [TypeError: Object a𠮷b has no method 'at']
+strawman_stage_0/asap/out.js [ReferenceError: asap is not defined]
+strawman_stage_0/zones/Zone.current/out.js [ReferenceError: Zone is not defined]
+strawman_stage_0/zones/Zone.prototype.fork/out.js [ReferenceError: Zone is not defined]
+strawman_stage_0/zones/Zone.prototype.name/out.js [ReferenceError: Zone is not defined]
+strawman_stage_0/zones/Zone.prototype.parent/out.js [ReferenceError: Zone is not defined]
+strawman_stage_0/zones/Zone.prototype.run/out.js [ReferenceError: Zone is not defined]
+strawman_stage_0/zones/Zone.prototype.wrap/out.js [ReferenceError: Zone is not defined]

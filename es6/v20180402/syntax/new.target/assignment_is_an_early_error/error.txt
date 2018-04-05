@@ -1,0 +1,20 @@
+// syntax / new.target / assignment is an early error
+module.exports = function() {
+  var passed = false;
+  new function f() {
+    passed = new.target === f;
+  }();
+
+  try {
+    Function("new.target = function(){};");
+  } catch (e) {
+    return passed;
+  }
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/syntax/new.target/assignment_is_an_early_error/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed = new.target === f;
+             ^^^^^^^^^^
+
+1 error(s), 0 warning(s)

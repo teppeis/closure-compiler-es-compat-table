@@ -1,0 +1,18 @@
+// proposal (stage 1) / nullish coalescing operator (??)
+module.exports = function() {
+  return (
+    null ??
+    (42 === 42 && undefined) ??
+    (42 === 42 && false) ??
+    (42 === false && "") ??
+    (42 === "" && 0) ??
+    42 === 0
+  );
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/esnext/v20180402/proposal_stage_1/nullish_coalescing_operator/in.js:4: ERROR - Parse error. primary expression expected
+    null ??
+           ^
+
+1 error(s), 0 warning(s)

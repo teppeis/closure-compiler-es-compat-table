@@ -1,0 +1,40 @@
+// subclassing / Promise is subclassable / Promise.all
+module.exports = function() {
+  class P extends Promise {}
+  var fulfills = P.all([
+    new Promise(function(resolve) {
+      setTimeout(resolve, 2000, "foo");
+    }),
+    new Promise(function(resolve) {
+      setTimeout(resolve, 1000, "bar");
+    })
+  ]);
+  var rejects = P.all([
+    new Promise(function(_, reject) {
+      setTimeout(reject, 2000, "baz");
+    }),
+    new Promise(function(_, reject) {
+      setTimeout(reject, 1000, "qux");
+    })
+  ]);
+  var score = +(fulfills instanceof P);
+  fulfills.then(function(result) {
+    score += result + "" === "foo,bar";
+    check();
+  });
+  rejects.catch(function(result) {
+    score += result === "qux";
+    check();
+  });
+
+  function check() {
+    if (score === 3) asyncTestPassed();
+  }
+};
+
+----------------------------------------------------------
+/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/subclassing/Promise_is_subclassable/Promise.all/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+  class P extends Promise {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
