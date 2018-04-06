@@ -7,4 +7,5 @@ module.exports = function() {
   set.add(123);
 
   return set.has(123);
+
 };

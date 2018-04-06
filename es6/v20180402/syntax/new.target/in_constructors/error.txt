@@ -2,21 +2,21 @@
 module.exports = function() {
   var passed = false;
   new function f() {
-    passed = new.target === f;
+    passed = (new.target === f);
   }();
   (function() {
-    passed &= new.target === undefined;
-  })();
+    passed &= (new.target === undefined);
+  }());
   return passed;
+
 };
-
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/syntax/new.target/in_constructors/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
-    passed = new.target === f;
-             ^^^^^^^^^^
-
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/syntax/new.target/in_constructors/in.js:8: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
-    passed &= new.target === undefined;
+es6/v20180402/syntax/new.target/in_constructors/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed = (new.target === f);
               ^^^^^^^^^^
+
+es6/v20180402/syntax/new.target/in_constructors/in.js:8: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed &= (new.target === undefined);
+               ^^^^^^^^^^
 
 2 error(s), 0 warning(s)

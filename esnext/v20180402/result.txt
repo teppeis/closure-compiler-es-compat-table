@@ -1,0 +1,366 @@
+candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
+candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
+candidate__stage_3_/string_trimming/String.prototype.trimStart/out.js: TypeError: Object  	 
+ abc   	
+ has no method 'trimStart'
+candidate__stage_3_/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object  	 
+ abc   	
+ has no method 'trimEnd'
+candidate__stage_3_/global/global_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/global/global_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/String.prototype.matchAll/out.js: TypeError: Object 11a2bb has no method 'matchAll'
+candidate__stage_3_/instance_class_fields/public_instance_class_fields/out.js: [CompileError]
+candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/out.js: [CompileError]
+candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/out.js: [CompileError]
+candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Function.prototype.toString_revision/_native_code_/out.js: [Pass]
+candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatten/out.js: TypeError: Object 1,2,3,4,5,6 has no method 'flatten'
+candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatMap/out.js: TypeError: Object [object Object],[object Object] has no method 'flatMap'
+candidate__stage_3_/optional_catch_binding/basic/out.js: [CompileError]
+candidate__stage_3_/optional_catch_binding/await/out.js: [CompileError]
+candidate__stage_3_/optional_catch_binding/yield/out.js: [CompileError]
+candidate__stage_3_/numeric_separators/out.js: [CompileError]
+draft__stage_2_/Generator_function.sent_Meta_Property/out.js: [CompileError]
+draft__stage_2_/Class_and_Property_Decorators/class_decorators/out.js: [CompileError]
+draft__stage_2_/weak_references/out.js: ReferenceError: System is not defined
+draft__stage_2_/static_class_fields/public_static_class_fields/out.js: [CompileError]
+draft__stage_2_/static_class_fields/private_static_class_fields/out.js: [CompileError]
+draft__stage_2_/throw_expressions/logical/out.js: [CompileError]
+draft__stage_2_/throw_expressions/parameter_initializers/out.js: [CompileError]
+draft__stage_2_/throw_expressions/arrow_function_bodies/out.js: [CompileError]
+draft__stage_2_/throw_expressions/conditionals/out.js: [CompileError]
+draft__stage_2_/Symbol.prototype.description/out.js: ReferenceError: Symbol is not defined
+proposal__stage_1_/do_expressions/out.js: [CompileError]
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/basic_support/out.js: [InvalidResult: false]
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Float32x4/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int32x4/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int16x8/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int8x16/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint32x4/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint16x8/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint8x16/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool32x4/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool16x8/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool8x16/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.abs/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.add/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.addSaturate/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.and/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.anyTrue/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.allTrue/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.check/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.equal/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.extractLane/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThan/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThanOrEqual/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThan/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThanOrEqual/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.mul/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.div/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load1/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load2/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load3/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.max/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.maxNum/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.min/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.minNum/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.neg/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.not/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.notEqual/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.or/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalApproximation/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalSqrtApproximation/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.replaceLane/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.select/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftLeftByScalar/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftRightByScalar/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.shuffle/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.splat/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.sqrt/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store1/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store2/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store3/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.sub/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.subSaturate/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.swizzle/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.xor/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMDBits/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMD/out.js: ReferenceError: SIMD is not defined
+proposal__stage_1_/Realms/out.js: [InvalidResult: false]
+proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
+proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: ReferenceError: Symbol is not defined
+proposal__stage_1_/Observable/Observable.prototype.subscribe/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable_constructor_behavior/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.prototype_Symbol.observable_/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.of/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.from/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Frozen_Realms_API/out.js: ReferenceError: Reflect is not defined
+proposal__stage_1_/Math.signbit/out.js: TypeError: Object #<Object> has no method 'signbit'
+proposal__stage_1_/Math_extensions_proposal/Math.clamp/out.js: TypeError: Object #<Object> has no method 'clamp'
+proposal__stage_1_/Math_extensions_proposal/Math.DEG_PER_RAD/out.js: [InvalidResult: false]
+proposal__stage_1_/Math_extensions_proposal/Math.degrees/out.js: TypeError: Object #<Object> has no method 'degrees'
+proposal__stage_1_/Math_extensions_proposal/Math.fscale/out.js: TypeError: Object #<Object> has no method 'fscale'
+proposal__stage_1_/Math_extensions_proposal/Math.RAD_PER_DEG/out.js: [InvalidResult: false]
+proposal__stage_1_/Math_extensions_proposal/Math.radians/out.js: TypeError: Object #<Object> has no method 'radians'
+proposal__stage_1_/Math_extensions_proposal/Math.scale/out.js: TypeError: Object #<Object> has no method 'scale'
+proposal__stage_1_/Promise.try/basic_support/out.js: [InvalidResult: false]
+proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeError: Object function (b) {
+    this.state_ = 0;
+    this.result_ = void 0;
+    this.onSettledCallbacks_ = [];
+    var a = this.createResolveAndReject_();
+    try {
+      b(a.resolve, a.reject);
+    } catch (h) {
+      a.reject(h);
+    }
+  } has no method 'try'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of/out.js: TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.from/out.js: TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.of/out.js: TypeError: Object function (a) {
+    this.map_ = new Map;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var c; !(c = a.next()).done;) {
+        this.add(c.value);
+      }
+    }
+    this.size = this.map_.size;
+  } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.from/out.js: TypeError: Object function (a) {
+    this.map_ = new Map;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var c; !(c = a.next()).done;) {
+        this.add(c.value);
+      }
+    }
+    this.size = this.map_.size;
+  } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.of/out.js: TypeError: Object function (a) {
+    this.id_ = (h += Math.random() + 1).toString();
+    if (a) {
+      $jscomp.initSymbol();
+      $jscomp.initSymbolIterator();
+      a = $jscomp.makeIterator(a);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
+      }
+    }
+  } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.from/out.js: TypeError: Object function (a) {
+    this.id_ = (h += Math.random() + 1).toString();
+    if (a) {
+      $jscomp.initSymbol();
+      $jscomp.initSymbolIterator();
+      a = $jscomp.makeIterator(a);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
+      }
+    }
+  } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.of/out.js: TypeError: Object function (a) {
+    this.map_ = new WeakMap;
+    if (a) {
+      $jscomp.initSymbol();
+      $jscomp.initSymbolIterator();
+      a = $jscomp.makeIterator(a);
+      for (var b; !(b = a.next()).done;) {
+        this.add(b.value);
+      }
+    }
+  } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.from/out.js: TypeError: Object function (a) {
+    this.map_ = new WeakMap;
+    if (a) {
+      $jscomp.initSymbol();
+      $jscomp.initSymbolIterator();
+      a = $jscomp.makeIterator(a);
+      for (var b; !(b = a.next()).done;) {
+        this.add(b.value);
+      }
+    }
+  } has no method 'from'
+proposal__stage_1_/the_pipeline_operator/out.js: [CompileError]
+proposal__stage_1_/extensible_numeric_literals/out.js: [CompileError]
+proposal__stage_1_/optional_chaining_operator___._/optional_property_access/out.js: [CompileError]
+proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access/out.js: [CompileError]
+proposal__stage_1_/optional_chaining_operator___._/optional_method_call/out.js: [CompileError]
+proposal__stage_1_/nullish_coalescing_operator_____/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_left/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_right/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/mixed_partial_application/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/runtime_evaluation/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/lexical__this_/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/constructor_partial_application/out.js: [CompileError]
+proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_destructuring/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_destructuring/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_arguments/out.js: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments/out.js: [CompileError]
+proposal__stage_1_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
+proposal__stage_1_/String.prototype.codePoints/out.js: TypeError: Object a𠮷b has no method 'codePoints'
+proposal__stage_1_/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
+proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem/out.js: [InvalidResult: false]
+proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex/out.js: [InvalidResult: false]
+proposal__stage_1_/Set_methods/Set.prototype.intersect/out.js: TypeError: Object [object Object] has no method 'intersect'
+proposal__stage_1_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
+proposal__stage_1_/Set_methods/Set.prototype.except/out.js: TypeError: Object [object Object] has no method 'except'
+proposal__stage_1_/Set_methods/Set.prototype.xor/out.js: TypeError: Object [object Object] has no method 'xor'
+proposal__stage_1_/Collections_methods/Map.groupBy/out.js: TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'groupBy'
+proposal__stage_1_/Collections_methods/Map.keyBy/out.js: TypeError: Object function (a) {
+    this.data_ = {};
+    this.head_ = g();
+    this.size = 0;
+    if (a) {
+      a = $jscomp.makeIterator(a);
+      for (var e; !(e = a.next()).done;) {
+        e = e.value, this.set(e[0], e[1]);
+      }
+    }
+  } has no method 'keyBy'
+proposal__stage_1_/Collections_methods/Map.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+proposal__stage_1_/Collections_methods/Map.prototype.mapKeys/out.js: TypeError: Object [object Object] has no method 'mapKeys'
+proposal__stage_1_/Collections_methods/Map.prototype.mapValues/out.js: TypeError: Object [object Object] has no method 'mapValues'
+proposal__stage_1_/Collections_methods/Map.prototype.merge/out.js: TypeError: Object [object Object] has no method 'merge'
+proposal__stage_1_/Collections_methods/Set.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
+proposal__stage_1_/Collections_methods/Set.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/Set.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+proposal__stage_1_/Collections_methods/Set.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+proposal__stage_1_/Collections_methods/Set.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+proposal__stage_1_/Collections_methods/Set.prototype.join/out.js: TypeError: Object [object Object] has no method 'join'
+proposal__stage_1_/Collections_methods/Set.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
+proposal__stage_1_/Collections_methods/Set.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+proposal__stage_1_/Collections_methods/Set.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+strawman__stage_0_/bind______operator/binary_form/out.js: [CompileError]
+strawman__stage_0_/bind______operator/unary_form/out.js: [CompileError]
+strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
+strawman__stage_0_/additional_meta_properties/function.callee/out.js: [CompileError]
+strawman__stage_0_/additional_meta_properties/function.count/out.js: [CompileError]
+strawman__stage_0_/additional_meta_properties/function.arguments/out.js: [CompileError]
+strawman__stage_0_/method_parameter_decorators/out.js: [CompileError]
+strawman__stage_0_/function_expression_decorators/out.js: [CompileError]
+strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/out.js: [CompileError]
+strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/out.js: [CompileError]
+strawman__stage_0_/zones/Zone/out.js: [InvalidResult: false]
+strawman__stage_0_/zones/Zone.current/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.name/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.parent/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.fork/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.run/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.wrap/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/asap/out.js: ReferenceError: asap is not defined
+strawman__stage_0_/syntactic_tail_calls/direct_recursion/out.js: [CompileError]
+strawman__stage_0_/syntactic_tail_calls/mutual_recursion/out.js: [CompileError]
+strawman__stage_0_/object_shorthand_improvements/object_initializers/out.js: [CompileError]
+strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/out.js: [CompileError]
+pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js: ReferenceError: Reflect is not defined

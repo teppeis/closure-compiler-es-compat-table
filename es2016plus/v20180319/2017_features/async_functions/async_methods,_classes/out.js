@@ -493,12 +493,12 @@ $jscomp.generator.createGenerator = function(a, b) {
   $jscomp.generator.Generator_.prototype = a.prototype;
   return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
-module.exports = function() {
-  var a = function() {
+module.exports = function(a) {
+  var b = function() {
   };
-  a.prototype.a = function() {
-    return $jscomp.asyncExecutePromiseGeneratorFunction(function d() {
-      return $jscomp.generator.createGenerator(d, function(a) {
+  b.prototype.a = function() {
+    return $jscomp.asyncExecutePromiseGeneratorFunction(function e() {
+      return $jscomp.generator.createGenerator(e, function(a) {
         switch(a.nextAddress) {
           case 1:
             return a.yield(Promise.resolve("foo"), 2);
@@ -508,12 +508,12 @@ module.exports = function() {
       });
     });
   };
-  a = (new a).a();
-  if (!(a instanceof Promise)) {
+  b = (new b).a();
+  if (!(b instanceof Promise)) {
     return !1;
   }
-  a.then(function(a) {
-    "foo" === a && asyncTestPassed();
+  b.then(function(b) {
+    "foo" === b && a();
   });
 };
 

@@ -4,7 +4,8 @@ module.exports = function() {
   try {
     Map();
     return false;
-  } catch (e) {
+  } catch(e) {
     return true;
   }
+
 };

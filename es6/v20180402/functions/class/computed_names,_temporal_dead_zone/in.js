@@ -2,9 +2,10 @@
 module.exports = function() {
   try {
     var B = class C {
-      [C]() {}
-    };
-  } catch (e) {
+      [C](){}
+    }
+  } catch(e) {
     return true;
   }
+
 };

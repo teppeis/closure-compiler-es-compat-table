@@ -12,4 +12,5 @@ module.exports = function() {
   }
   var arrow = new C().baz();
   return arrow() === "quux";
+
 };

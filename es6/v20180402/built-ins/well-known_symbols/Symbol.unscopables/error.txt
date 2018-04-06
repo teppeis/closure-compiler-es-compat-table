@@ -5,10 +5,10 @@ module.exports = function() {
   with (a) {
     return foo === 1 && typeof bar === "undefined";
   }
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - The with statement cannot be used in strict mode.
+es6/v20180402/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - The with statement cannot be used in strict mode.
   with (a) {
   ^^^^^^^^^^
 

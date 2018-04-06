@@ -4,7 +4,7 @@ module.exports = function() {
   var passed = false;
   Object.defineProperty(
     new Proxy(proxied, {
-      defineProperty: function(t, k, d) {
+      defineProperty: function (t, k, d) {
         passed = t === proxied && k === "foo" && d.value === 5;
         return true;
       }
@@ -13,4 +13,5 @@ module.exports = function() {
     { value: 5, configurable: true }
   );
   return passed;
+
 };

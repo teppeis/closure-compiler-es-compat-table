@@ -1,0 +1,18 @@
+// strawman (stage 0) / function expression decorators
+module.exports = function() {
+function inverse(f){
+return function(){
+return !f.apply(this, arguments);
+};
+}
+return (@inverse function(it){
+return it % 2;
+})(2);
+
+};
+----------------------------------------------------------
+esnext/v20180402/strawman__stage_0_/function_expression_decorators/in.js:8: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+return (@inverse function(it){
+        ^
+
+1 error(s), 0 warning(s)

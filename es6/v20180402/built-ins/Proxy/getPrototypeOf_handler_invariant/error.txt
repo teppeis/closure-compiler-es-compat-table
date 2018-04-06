@@ -1,26 +1,24 @@
 // built-ins / Proxy / "getPrototypeOf" handler invariant
 module.exports = function() {
   var passed = false;
-  new Proxy({}, {});
+  new Proxy({},{});
   // If the target object is not extensible, [[GetPrototypeOf]] applied to the proxy object
   // must return the same value as [[GetPrototypeOf]] applied to the proxy object's target object.
   try {
-    Object.getPrototypeOf(
-      new Proxy(Object.preventExtensions({}), {
-        getPrototypeOf: function() {
-          passed = true;
-          return {};
-        }
-      })
-    );
+    Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+      getPrototypeOf: function () {
+        passed = true;
+        return {};
+      }
+    }));
     return false;
-  } catch (e) {}
+  } catch(e) {}
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/getPrototypeOf_handler_invariant/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
-    Object.getPrototypeOf(
-    ^^^^^^^^^^^^^^^^^^^^^^
+es6/v20180402/built-ins/Proxy/getPrototypeOf_handler_invariant/in.js:8: WARNING - Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
+    Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

@@ -2,7 +2,8 @@
 module.exports = function() {
   try {
     "a".endsWith(/./);
-  } catch (e) {
-    return typeof String.prototype.endsWith === "function";
+  } catch(e) {
+    return typeof String.prototype.endsWith === 'function';
   }
+
 };

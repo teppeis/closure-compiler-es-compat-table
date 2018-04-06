@@ -8,4 +8,5 @@ module.exports = function() {
   s.add(key);
   s.clear();
   return s.has(key);
+
 };

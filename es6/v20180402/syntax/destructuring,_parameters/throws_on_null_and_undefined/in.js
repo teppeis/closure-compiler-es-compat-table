@@ -1,12 +1,13 @@
 // syntax / destructuring, parameters / throws on null and undefined
 module.exports = function() {
   try {
-    (function({ a }) {})(null);
+    (function({a}){}(null));
     return false;
-  } catch (e) {}
+  } catch(e) {}
   try {
-    (function({ b }) {})(undefined);
+    (function({b}){}(undefined));
     return false;
-  } catch (e) {}
+  } catch(e) {}
   return true;
+
 };

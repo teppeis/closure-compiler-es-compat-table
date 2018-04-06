@@ -7,4 +7,5 @@ module.exports = function() {
   weakset.add(obj1);
 
   return weakset.has(obj1);
+
 };

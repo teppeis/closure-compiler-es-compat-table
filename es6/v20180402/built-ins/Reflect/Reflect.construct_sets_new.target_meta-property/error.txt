@@ -1,21 +1,15 @@
 // built-ins / Reflect / Reflect.construct sets new.target meta-property
 module.exports = function() {
-  return (
-    Reflect.construct(
-      function(a, b, c) {
-        if (new.target === Object) {
-          this.qux = a + b + c;
-        }
-      },
-      ["foo", "bar", "baz"],
-      Object
-    ).qux === "foobarbaz"
-  );
-};
+  return Reflect.construct(function(a, b, c) {
+    if (new.target === Object) {
+      this.qux = a + b + c;
+    }
+  }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:6: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
-        if (new.target === Object) {
-            ^^^^^^^^^^
+es6/v20180402/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    if (new.target === Object) {
+        ^^^^^^^^^^
 
 1 error(s), 0 warning(s)

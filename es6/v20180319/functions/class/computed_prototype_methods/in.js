@@ -2,9 +2,9 @@
 module.exports = function() {
   var foo = "method";
   class C {
-    [foo]() {
-      return 2;
-    }
+    [foo]() { return 2; }
   }
-  return typeof C.prototype.method === "function" && new C().method() === 2;
+  return typeof C.prototype.method === "function"
+&& new C().method() === 2;
+
 };

@@ -1,14 +1,9 @@
 // syntax / default function parameters / temporal dead zone
 module.exports = function() {
-  return (function(x = 1) {
-    try {
-      eval("(function(a=a){}())");
-      return false;
-    } catch (e) {}
-    try {
-      eval("(function(a=b,b){}())");
-      return false;
-    } catch (e) {}
-    return true;
-  })();
+  (function(a=a){}());
+  (function(a=b,b){}());
+  return false;
 };
+
+// EXPECT: 3: ERROR - Illegal variable reference before declaration: a
+// EXPECT: 4: ERROR - Illegal variable reference before declaration: b

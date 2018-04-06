@@ -1,10 +1,11 @@
 // built-ins / Promise / constructor requires new
 module.exports = function() {
-  new Promise(function() {});
+  new Promise(function(){});
   try {
-    Promise(function() {});
+    Promise(function(){});
     return false;
-  } catch (e) {
+  } catch(e) {
     return true;
   }
+
 };

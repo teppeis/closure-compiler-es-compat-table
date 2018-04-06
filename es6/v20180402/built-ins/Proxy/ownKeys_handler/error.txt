@@ -4,17 +4,16 @@ module.exports = function() {
   var passed = false;
   Object.keys(
     new Proxy(proxied, {
-      ownKeys: function(t) {
-        passed = t === proxied;
-        return [];
+      ownKeys: function (t) {
+        passed = t === proxied; return [];
       }
     })
   );
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/ownKeys_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20180402/built-ins/Proxy/ownKeys_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
   Object.keys(
   ^^^^^^^^^^^^
 

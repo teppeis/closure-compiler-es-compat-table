@@ -13,4 +13,5 @@ module.exports = function() {
   class B extends A {}
   new B();
   return passed;
+
 };

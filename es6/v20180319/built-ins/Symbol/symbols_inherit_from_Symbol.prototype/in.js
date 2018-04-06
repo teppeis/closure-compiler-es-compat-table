@@ -6,4 +6,5 @@ module.exports = function() {
   passed &= symbol.foo === 2;
   delete Symbol.prototype.foo;
   return passed;
+
 };

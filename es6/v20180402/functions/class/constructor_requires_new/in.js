@@ -3,7 +3,9 @@ module.exports = function() {
   class C {}
   try {
     C();
-  } catch (e) {
+  }
+  catch(e) {
     return true;
   }
+
 };

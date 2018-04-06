@@ -8,4 +8,5 @@ module.exports = function() {
   set.add(123);
 
   return set instanceof S && set.has(123);
+
 };

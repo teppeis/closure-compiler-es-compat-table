@@ -345,7 +345,7 @@ $jscomp.polyfill("Set", function(a) {
   return f;
 }, "es6", "es3");
 module.exports = function() {
-  var a = !1, d = global.__createIterableObject([1, 2, 3], {return:function() {
+  var a = !1, d = global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
   }}), f = Set.prototype.add;

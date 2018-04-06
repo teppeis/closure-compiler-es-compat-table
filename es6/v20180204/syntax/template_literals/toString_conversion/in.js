@@ -1,9 +1,9 @@
 // syntax / template literals / toString conversion
 module.exports = function() {
-var a = {
-          toString: function() { return "foo"; },
-          valueOf: function() { return "bar"; },
-        };
-        return `${a}` === "foo";
-      
+  var a = {
+    toString: function() { return "foo"; },
+    valueOf: function() { return "bar"; },
+  };
+  return `${a}` === "foo";
+
 };

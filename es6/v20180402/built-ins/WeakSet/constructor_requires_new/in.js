@@ -4,7 +4,8 @@ module.exports = function() {
   try {
     WeakSet();
     return false;
-  } catch (e) {
+  } catch(e) {
     return true;
   }
+
 };

@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "gim" === /./gim.flags && "" === /./.flags;
+  return "gim" === /./igm.flags && "" === /./.flags;
 };
 

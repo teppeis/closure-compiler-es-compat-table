@@ -1,17 +1,17 @@
 // built-ins / Map / constructor requires new
 module.exports = function() {
-new Map();
-        try {
-          Map();
-          return false;
-        } catch(e) {
-          return true;
-        }
-      
+  new Map();
+  try {
+    Map();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
 };
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/built-ins/Map/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
-          Map();
-          ^^^^^
+es6/v20180319/built-ins/Map/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
+    Map();
+    ^^^^^
 
 0 error(s), 1 warning(s)

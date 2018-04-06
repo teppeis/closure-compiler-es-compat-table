@@ -1,10 +1,9 @@
 // functions / arrow functions / correct precedence
 module.exports = function() {
   return (() => {
-    try {
-      Function("0 || () => 2")();
-    } catch (e) {
-      return true;
-    }
+    0 || () => 2";
+    return false;
   })();
 };
+
+// EXPECT: 4: ERROR - Parse error. invalid arrow function parameters

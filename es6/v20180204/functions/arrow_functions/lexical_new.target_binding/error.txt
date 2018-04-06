@@ -1,20 +1,20 @@
 // functions / arrow functions / lexical "new.target" binding
 module.exports = function() {
-function C() {
-          return x => new.target;
-        }
-        return new C()() === C && C()() === undefined;
-      
+  function C() {
+    return x => new.target;
+  }
+  return new C()() === C && C()() === undefined;
+
 };
 ----------------------------------------------------------
 java.lang.RuntimeException: INTERNAL COMPILER ERROR.
 Please report this problem.
 
 null
-  Node(FUNCTION ): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:17
-          return x => new.target;
-  Parent(RETURN): /Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:10
-          return x => new.target;
+  Node(FUNCTION ): es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:11
+    return x => new.target;
+  Parent(RETURN): es6/v20180204/functions/arrow_functions/lexical_new.target_binding/in.js:4:4
+    return x => new.target;
 
 	at com.google.common.base.Preconditions.checkState(Preconditions.java:441)
 	at com.google.javascript.rhino.IR.returnNode(IR.java:215)

@@ -1,25 +1,13 @@
 // subclassing / Promise is subclassable / basic functionality
-module.exports = function() {
+module.exports = function(asyncTestPassed) {
   class P extends Promise {}
-  var p1 = new P(function(resolve, reject) {
-    resolve("foo");
-  });
-  var p2 = new P(function(resolve, reject) {
-    reject("quux");
-  });
+  var p1 = new P(function(resolve, reject) { resolve("foo"); });
+  var p2 = new P(function(resolve, reject) { reject("quux"); });
   var score = +(p1 instanceof P);
 
-  function thenFn(result) {
-    score += result === "foo";
-    check();
-  }
-  function catchFn(result) {
-    score += result === "quux";
-    check();
-  }
-  function shouldNotRun(result) {
-    score = -Infinity;
-  }
+  function thenFn(result)  { score += (result === "foo");  check(); }
+  function catchFn(result) { score += (result === "quux"); check(); }
+  function shouldNotRun(result)  { score = -Infinity;   }
 
   p1.then(thenFn, shouldNotRun);
   p2.then(shouldNotRun, catchFn);
@@ -35,4 +23,5 @@ module.exports = function() {
   function check() {
     if (score === 5) asyncTestPassed();
   }
+
 };

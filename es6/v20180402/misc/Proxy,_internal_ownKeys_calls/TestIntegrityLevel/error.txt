@@ -1,19 +1,14 @@
 // misc / Proxy, internal 'ownKeys' calls / TestIntegrityLevel
 module.exports = function() {
-  // TestIntegrityLevel -> [[OwnPropertyKeys]]
+// TestIntegrityLevel -> [[OwnPropertyKeys]]
   var ownKeysCalled = 0;
-  var p = new Proxy(Object.preventExtensions({}), {
-    ownKeys: function(o) {
-      ownKeysCalled++;
-      return Object.keys(o);
-    }
-  });
+  var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
   Object.isFrozen(p);
   return ownKeysCalled === 1;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel/in.js:11: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
+es6/v20180402/misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
   Object.isFrozen(p);
   ^^^^^^^^^^^^^^^^^^
 

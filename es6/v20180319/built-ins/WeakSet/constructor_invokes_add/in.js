@@ -7,8 +7,9 @@ module.exports = function() {
     passed = true;
   };
 
-  new WeakSet([{}]);
+  new WeakSet([ { } ]);
   WeakSet.prototype.add = _add;
 
   return passed;
+
 };

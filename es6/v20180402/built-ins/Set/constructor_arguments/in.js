@@ -5,4 +5,5 @@ module.exports = function() {
   var set = new Set([obj1, obj2]);
 
   return set.has(obj1) && set.has(obj2);
+
 };

@@ -5,22 +5,23 @@ module.exports = function() {
   try {
     symbol + "";
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
 
   try {
     symbol + 0;
     return false;
-  } catch (e) {}
+  } catch(e) {}
 
   return true;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+es6/v20180402/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:6: WARNING - Suspicious code. The result of the 'add' operator is not being used.
     symbol + "";
     ^^^^^^^^^^^
 
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:11: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+es6/v20180402/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:12: WARNING - Suspicious code. The result of the 'add' operator is not being used.
     symbol + 0;
     ^^^^^^^^^^
 

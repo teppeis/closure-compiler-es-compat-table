@@ -1,4 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype.entries
 module.exports = function() {
-  return typeof Array.prototype.entries === "function";
+  return typeof Array.prototype.entries === 'function';
+
 };

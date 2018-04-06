@@ -1,14 +1,12 @@
 // subclassing / RegExp is subclassable / correct prototype chain
 module.exports = function() {
   class R extends RegExp {}
-  var r = new R("baz", "g");
-  return (
-    r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp
-  );
-};
+  var r = new R("baz","g");
+  return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/subclassing/RegExp_is_subclassable/correct_prototype_chain/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+es6/v20180402/subclassing/RegExp_is_subclassable/correct_prototype_chain/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
   class R extends RegExp {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^
 

@@ -1,25 +1,18 @@
 // built-ins / Proxy / Proxy.revocable
 module.exports = function() {
-  var obj = Proxy.revocable(
-    {},
-    {
-      get: function() {
-        return 5;
-      }
-    }
-  );
-  var passed = obj.proxy.foo === 5;
+  var obj = Proxy.revocable({}, { get: function() { return 5; } });
+  var passed = (obj.proxy.foo === 5);
   obj.revoke();
   try {
     obj.proxy.foo;
-  } catch (e) {
+  } catch(e) {
     passed &= e instanceof TypeError;
   }
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/Proxy.revocable/in.js:14: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20180402/built-ins/Proxy/Proxy.revocable/in.js:7: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
     obj.proxy.foo;
     ^^^^^^^^^^^^^
 

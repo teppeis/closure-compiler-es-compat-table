@@ -2,4 +2,5 @@
 module.exports = function() {
   new WeakMap(null);
   return true;
+
 };

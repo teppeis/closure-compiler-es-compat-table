@@ -6,4 +6,5 @@ module.exports = function() {
   map.set(key, 123);
 
   return map.size === 1;
+
 };

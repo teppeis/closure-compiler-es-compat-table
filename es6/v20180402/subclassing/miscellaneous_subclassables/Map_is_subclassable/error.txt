@@ -7,10 +7,10 @@ module.exports = function() {
   map.set(key, 123);
 
   return map instanceof M && map.has(key) && map.get(key) === 123;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/subclassing/miscellaneous_subclassables/Map_is_subclassable/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Map
+es6/v20180402/subclassing/miscellaneous_subclassables/Map_is_subclassable/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Map
   class M extends Map {}
   ^^^^^^^^^^^^^^^^^^^^^^
 

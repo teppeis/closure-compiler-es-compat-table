@@ -1,18 +1,18 @@
 // 2018 features / Promise.prototype.finally / basic support
-module.exports = function() {
+module.exports = function(asyncTestPassed) {
   var p1 = Promise.resolve("foo");
   var p2 = Promise.reject("bar");
   var score = 0;
-  function thenFn(result) {
-    score += result === "foo";
+  function thenFn(result)  {
+    score += (result === "foo");
     check();
   }
   function catchFn(result) {
-    score += result === "bar";
+    score += (result === "bar");
     check();
   }
   function finallyFn() {
-    score += arguments.length === 0;
+    score += (arguments.length === 0);
     check();
   }
   p1.then(thenFn);
@@ -27,4 +27,5 @@ module.exports = function() {
   function check() {
     if (score === 5) asyncTestPassed();
   }
+
 };

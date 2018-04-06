@@ -6,5 +6,6 @@ module.exports = function() {
     result += item;
   }
   return result === "123";
+
 };
 $jscomp.initSymbolIterator();

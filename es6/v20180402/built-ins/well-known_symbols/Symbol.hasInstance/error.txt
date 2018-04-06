@@ -2,19 +2,16 @@
 module.exports = function() {
   var passed = false;
   var obj = { foo: true };
-  var C = function() {};
+  var C = function(){};
   Object.defineProperty(C, Symbol.hasInstance, {
-    value: function(inst) {
-      passed = inst.foo;
-      return false;
-    }
+    value: function(inst) { passed = inst.foo; return false; }
   });
   obj instanceof C;
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/well-known_symbols/Symbol.hasInstance/in.js:12: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+es6/v20180402/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
   obj instanceof C;
   ^^^^^^^^^^^^^^^^
 

@@ -7,8 +7,9 @@ module.exports = function() {
     passed = true;
   };
 
-  new Map([[1, 2]]);
+  new Map([ [1, 2] ]);
   Map.prototype.set = _set;
 
   return passed;
+
 };

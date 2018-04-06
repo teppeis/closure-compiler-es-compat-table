@@ -1,7 +1,7 @@
 // built-ins / Proxy / "defineProperty" handler invariants
 module.exports = function() {
   var passed = false;
-  new Proxy({}, {});
+  new Proxy({},{});
   // A property cannot be added, if the target object is not extensible.
   var proxied = Object.preventExtensions({});
   var proxy = new Proxy(proxied, {
@@ -13,23 +13,21 @@ module.exports = function() {
   try {
     Object.defineProperty(proxy, "foo", { value: 2 });
     return false;
-  } catch (e) {}
+  } catch(e) {}
   // A property cannot be non-configurable, unless there exists a corresponding
   // non-configurable own property of the target object.
   try {
     Object.defineProperty(
-      new Proxy(
-        { bar: true },
-        {
-          defineProperty: function() {
-            return true;
-          }
+      new Proxy({ bar: true }, {
+        defineProperty: function () {
+          return true;
         }
-      ),
+      }),
       "bar",
       { value: 5, configurable: false, writable: true, enumerable: true }
     );
     return false;
-  } catch (e) {}
+  } catch(e) {}
   return passed;
+
 };

@@ -82,7 +82,7 @@ $jscomp.polyfill("Array.from", function(a) {
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = !1, b = global.__createIterableObject([1, 2, 3], {return:function() {
+  var a = !1, b = global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
   }});

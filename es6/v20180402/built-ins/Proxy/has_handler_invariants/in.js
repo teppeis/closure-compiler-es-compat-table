@@ -1,32 +1,29 @@
 // built-ins / Proxy / "has" handler invariants
 module.exports = function() {
   var passed = false;
-  new Proxy({}, {});
+  new Proxy({},{});
   // A property cannot be reported as non-existent, if it exists as a
   // non-configurable own property of the target object.
   var proxied = {};
   var proxy = new Proxy(proxied, {
-    has: function() {
+    has: function () {
       passed = true;
       return false;
     }
   });
-  Object.defineProperty(proxied, "foo", {
-    value: 2,
-    writable: true,
-    enumerable: true
-  });
+  Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
   try {
-    "foo" in proxy;
+    'foo' in proxy;
     return false;
-  } catch (e) {}
+  } catch(e) {}
   // A property cannot be reported as non-existent, if it exists as an
   // own property of the target object and the target object is not extensible.
   proxied.bar = 2;
   Object.preventExtensions(proxied);
   try {
-    "bar" in proxy;
+    'bar' in proxy;
     return false;
-  } catch (e) {}
+  } catch(e) {}
   return passed;
+
 };

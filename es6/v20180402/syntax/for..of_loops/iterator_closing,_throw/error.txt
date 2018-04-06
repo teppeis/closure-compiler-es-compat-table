@@ -2,19 +2,16 @@
 module.exports = function() {
   var closed = false;
   var iter = __createIterableObject([1, 2, 3], {
-    return: function() {
-      closed = true;
-      return {};
-    }
+    'return': function(){ closed = true; return {}; }
   });
   try {
     for (var it of iter) throw 0;
-  } catch (e) {}
+  } catch(e){}
   return closed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/syntax/for..of_loops/iterator_closing,_throw/in.js:11: WARNING - unreachable code
+es6/v20180402/syntax/for..of_loops/iterator_closing,_throw/in.js:8: WARNING - unreachable code
     for (var it of iter) throw 0;
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

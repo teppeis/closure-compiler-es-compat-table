@@ -58,9 +58,9 @@ $jscomp.polyfill = function(a, d, f, e) {
     f = $jscomp.global;
     a = a.split(".");
     for (e = 0; e < a.length - 1; e++) {
-      var c = a[e];
-      c in f || (f[c] = {});
-      f = f[c];
+      var b = a[e];
+      b in f || (f[b] = {});
+      f = f[b];
     }
     a = a[a.length - 1];
     e = f[a];
@@ -73,38 +73,38 @@ $jscomp.polyfill("Promise", function(a) {
   function d() {
     this.batch_ = null;
   }
-  function f(b) {
-    return b instanceof c ? b : new c(function(a, c) {
-      a(b);
+  function f(c) {
+    return c instanceof b ? c : new b(function(a, b) {
+      a(c);
     });
   }
   if (a && !$jscomp.FORCE_POLYFILL_PROMISE) {
     return a;
   }
-  d.prototype.asyncExecute = function(b) {
+  d.prototype.asyncExecute = function(c) {
     null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
-    this.batch_.push(b);
+    this.batch_.push(c);
     return this;
   };
   d.prototype.asyncExecuteBatch_ = function() {
-    var b = this;
+    var c = this;
     this.asyncExecuteFunction(function() {
-      b.executeBatch_();
+      c.executeBatch_();
     });
   };
   var e = $jscomp.global.setTimeout;
-  d.prototype.asyncExecuteFunction = function(b) {
-    e(b, 0);
+  d.prototype.asyncExecuteFunction = function(c) {
+    e(c, 0);
   };
   d.prototype.executeBatch_ = function() {
     for (; this.batch_ && this.batch_.length;) {
-      var b = this.batch_;
+      var c = this.batch_;
       this.batch_ = [];
-      for (var a = 0; a < b.length; ++a) {
-        var c = b[a];
-        delete b[a];
+      for (var a = 0; a < c.length; ++a) {
+        var b = c[a];
+        delete c[a];
         try {
-          c();
+          b();
         } catch (k) {
           this.asyncThrow_(k);
         }
@@ -112,42 +112,42 @@ $jscomp.polyfill("Promise", function(a) {
     }
     this.batch_ = null;
   };
-  d.prototype.asyncThrow_ = function(b) {
+  d.prototype.asyncThrow_ = function(c) {
     this.asyncExecuteFunction(function() {
-      throw b;
+      throw c;
     });
   };
-  var c = function(b) {
+  var b = function(c) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
     var a = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
+      c(a.resolve, a.reject);
     } catch (h) {
       a.reject(h);
     }
   };
-  c.prototype.createResolveAndReject_ = function() {
-    function b(b) {
-      return function(d) {
-        c || (c = !0, b.call(a, d));
+  b.prototype.createResolveAndReject_ = function() {
+    function c(c) {
+      return function(l) {
+        b || (b = !0, c.call(a, l));
       };
     }
-    var a = this, c = !1;
-    return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
+    var a = this, b = !1;
+    return {resolve:c(this.resolveTo_), reject:c(this.reject_)};
   };
-  c.prototype.resolveTo_ = function(b) {
-    if (b === this) {
+  b.prototype.resolveTo_ = function(c) {
+    if (c === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (b instanceof c) {
-        this.settleSameAsPromise_(b);
+      if (c instanceof b) {
+        this.settleSameAsPromise_(c);
       } else {
         a: {
-          switch(typeof b) {
+          switch(typeof c) {
             case "object":
-              var a = null != b;
+              var a = null != c;
               break a;
             case "function":
               a = !0;
@@ -156,123 +156,123 @@ $jscomp.polyfill("Promise", function(a) {
               a = !1;
           }
         }
-        a ? this.resolveToNonPromiseObj_(b) : this.fulfill_(b);
+        a ? this.resolveToNonPromiseObj_(c) : this.fulfill_(c);
       }
     }
   };
-  c.prototype.resolveToNonPromiseObj_ = function(b) {
+  b.prototype.resolveToNonPromiseObj_ = function(c) {
     var a = void 0;
     try {
-      a = b.then;
+      a = c.then;
     } catch (h) {
       this.reject_(h);
       return;
     }
-    "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
+    "function" == typeof a ? this.settleSameAsThenable_(a, c) : this.fulfill_(c);
   };
-  c.prototype.reject_ = function(a) {
+  b.prototype.reject_ = function(a) {
     this.settle_(2, a);
   };
-  c.prototype.fulfill_ = function(a) {
+  b.prototype.fulfill_ = function(a) {
     this.settle_(1, a);
   };
-  c.prototype.settle_ = function(a, c) {
+  b.prototype.settle_ = function(a, b) {
     if (0 != this.state_) {
-      throw Error("Cannot settle(" + a + ", " + c | "): Promise already settled in state" + this.state_);
+      throw Error("Cannot settle(" + a + ", " + b | "): Promise already settled in state" + this.state_);
     }
     this.state_ = a;
-    this.result_ = c;
+    this.result_ = b;
     this.executeOnSettledCallbacks_();
   };
-  c.prototype.executeOnSettledCallbacks_ = function() {
+  b.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var a = this.onSettledCallbacks_, c = 0; c < a.length; ++c) {
-        a[c].call(), a[c] = null;
+      for (var a = this.onSettledCallbacks_, b = 0; b < a.length; ++b) {
+        a[b].call(), a[b] = null;
       }
       this.onSettledCallbacks_ = null;
     }
   };
   var g = new d;
-  c.prototype.settleSameAsPromise_ = function(a) {
-    var b = this.createResolveAndReject_();
-    a.callWhenSettled_(b.resolve, b.reject);
+  b.prototype.settleSameAsPromise_ = function(a) {
+    var c = this.createResolveAndReject_();
+    a.callWhenSettled_(c.resolve, c.reject);
   };
-  c.prototype.settleSameAsThenable_ = function(a, c) {
-    var b = this.createResolveAndReject_();
+  b.prototype.settleSameAsThenable_ = function(a, b) {
+    var c = this.createResolveAndReject_();
     try {
-      a.call(c, b.resolve, b.reject);
+      a.call(b, c.resolve, c.reject);
     } catch (k) {
-      b.reject(k);
+      c.reject(k);
     }
   };
-  c.prototype.then = function(a, d) {
-    function b(a, b) {
-      return "function" == typeof a ? function(b) {
+  b.prototype.then = function(a, d) {
+    function c(a, c) {
+      return "function" == typeof a ? function(c) {
         try {
-          f(a(b));
+          f(a(c));
         } catch (m) {
           e(m);
         }
-      } : b;
+      } : c;
     }
-    var f, e, l = new c(function(a, b) {
+    var f, e, g = new b(function(a, c) {
       f = a;
-      e = b;
+      e = c;
     });
-    this.callWhenSettled_(b(a, f), b(d, e));
-    return l;
+    this.callWhenSettled_(c(a, f), c(d, e));
+    return g;
   };
-  c.prototype.catch = function(a) {
+  b.prototype.catch = function(a) {
     return this.then(void 0, a);
   };
-  c.prototype.callWhenSettled_ = function(a, c) {
-    function b() {
+  b.prototype.callWhenSettled_ = function(a, b) {
+    function c() {
       switch(d.state_) {
         case 1:
           a(d.result_);
           break;
         case 2:
-          c(d.result_);
+          b(d.result_);
           break;
         default:
           throw Error("Unexpected state: " + d.state_);
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? g.asyncExecute(b) : this.onSettledCallbacks_.push(function() {
-      g.asyncExecute(b);
+    null == this.onSettledCallbacks_ ? g.asyncExecute(c) : this.onSettledCallbacks_.push(function() {
+      g.asyncExecute(c);
     });
   };
-  c.resolve = f;
-  c.reject = function(a) {
-    return new c(function(b, c) {
-      c(a);
+  b.resolve = f;
+  b.reject = function(a) {
+    return new b(function(c, b) {
+      b(a);
     });
   };
-  c.race = function(a) {
-    return new c(function(b, c) {
+  b.race = function(a) {
+    return new b(function(c, b) {
       for (var d = $jscomp.makeIterator(a), e = d.next(); !e.done; e = d.next()) {
-        f(e.value).callWhenSettled_(b, c);
+        f(e.value).callWhenSettled_(c, b);
       }
     });
   };
-  c.all = function(a) {
-    var b = $jscomp.makeIterator(a), d = b.next();
-    return d.done ? f([]) : new c(function(a, c) {
-      function e(b) {
-        return function(c) {
-          g[b] = c;
+  b.all = function(a) {
+    var c = $jscomp.makeIterator(a), d = c.next();
+    return d.done ? f([]) : new b(function(a, b) {
+      function e(c) {
+        return function(b) {
+          g[c] = b;
           h--;
           0 == h && a(g);
         };
       }
       var g = [], h = 0;
       do {
-        g.push(void 0), h++, f(d.value).callWhenSettled_(e(g.length - 1), c), d = b.next();
+        g.push(void 0), h++, f(d.value).callWhenSettled_(e(g.length - 1), b), d = c.next();
       } while (!d.done);
     });
   };
-  return c;
+  return b;
 }, "es6", "es3");
 $jscomp.executeAsyncGenerator = function(a) {
   function d(d) {
@@ -281,45 +281,45 @@ $jscomp.executeAsyncGenerator = function(a) {
   function f(d) {
     return a.throw(d);
   }
-  return new Promise(function(e, c) {
+  return new Promise(function(e, b) {
     function g(a) {
-      a.done ? e(a.value) : Promise.resolve(a.value).then(d, f).then(g, c);
+      a.done ? e(a.value) : Promise.resolve(a.value).then(d, f).then(g, b);
     }
     g(a.next());
   });
 };
-module.exports = function() {
-  var a = function() {
+module.exports = function(a) {
+  var d = function() {
     return $jscomp.executeAsyncGenerator(function() {
-      function a(a, d, b) {
+      function a(a, c, b) {
         for (;;) {
-          switch(f) {
+          switch(d) {
             case 0:
-              throw f = -1, "foo";
+              throw d = -1, "foo";
             default:
               return {value:void 0, done:!0};
           }
         }
       }
-      var f = 0, e = {next:function(c) {
-        return a(0.0, c, void 0);
-      }, throw:function(c) {
-        return a(1.0, void 0, c);
+      var d = 0, b = {next:function(b) {
+        return a(0.0, b, void 0);
+      }, throw:function(b) {
+        return a(1.0, void 0, b);
       }, return:function(a) {
         throw Error("Not yet implemented");
       }};
       $jscomp.initSymbolIterator();
-      e[Symbol.iterator] = function() {
+      b[Symbol.iterator] = function() {
         return this;
       };
-      return e;
+      return b;
     }());
   }();
-  if (!(a instanceof Promise)) {
+  if (!(d instanceof Promise)) {
     return !1;
   }
-  a.catch(function(a) {
-    "foo" === a && asyncTestPassed();
+  d.catch(function(d) {
+    "foo" === d && a();
   });
 };
 

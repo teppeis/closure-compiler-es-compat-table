@@ -2,9 +2,10 @@
 module.exports = function() {
   var re = /./;
   try {
-    "/./".startsWith(re);
-  } catch (e) {
+    '/./'.startsWith(re);
+  } catch(e){
     re[Symbol.match] = false;
-    return "/./".startsWith(re);
+    return '/./'.startsWith(re);
   }
+
 };

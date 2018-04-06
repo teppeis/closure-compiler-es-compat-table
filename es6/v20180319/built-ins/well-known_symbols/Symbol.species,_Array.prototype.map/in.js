@@ -6,4 +6,5 @@ module.exports = function() {
     return { foo: 1 };
   };
   return Array.prototype.map.call(obj, Boolean).foo === 1;
+
 };

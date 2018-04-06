@@ -10,4 +10,5 @@ module.exports = function() {
   }
 
   return passed;
+
 };

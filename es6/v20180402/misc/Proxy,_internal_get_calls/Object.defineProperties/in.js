@@ -1,16 +1,9 @@
 // misc / Proxy, internal 'get' calls / Object.defineProperties
 module.exports = function() {
-  // Object.defineProperties -> Get -> [[Get]]
+// Object.defineProperties -> Get -> [[Get]]
   var get = [];
-  var p = new Proxy(
-    { foo: {}, bar: {} },
-    {
-      get: function(o, k) {
-        get.push(k);
-        return o[k];
-      }
-    }
-  );
+  var p = new Proxy({foo:{}, bar:{}}, { get: function(o, k) { get.push(k); return o[k]; }});
   Object.defineProperties({}, p);
-  return get + "" === "foo,bar";
+  return get + '' === "foo,bar";
+
 };

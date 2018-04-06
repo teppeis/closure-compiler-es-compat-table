@@ -1,9 +1,9 @@
 // built-ins / Proxy / "get" handler invariants
 module.exports = function() {
   var passed = false;
-  var proxied = {};
+  var proxied = { };
   var proxy = new Proxy(proxied, {
-    get: function() {
+    get: function () {
       passed = true;
       return 4;
     }
@@ -15,27 +15,27 @@ module.exports = function() {
   try {
     proxy.foo;
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
   // The value reported for a property must be undefined if the corresponding target
   // object property is a non-configurable own accessor property that has undefined
   // as its [[Get]] attribute.
-  Object.defineProperty(proxied, "bar", {
-    set: function() {},
-    enumerable: true
-  });
+  Object.defineProperty(proxied, "bar",
+    { set: function(){}, enumerable: true });
   try {
     proxy.bar;
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/get_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20180402/built-ins/Proxy/get_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
     proxy.foo;
     ^^^^^^^^^
 
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/get_handler_invariants/in.js:27: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20180402/built-ins/Proxy/get_handler_invariants/in.js:26: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
     proxy.bar;
     ^^^^^^^^^
 

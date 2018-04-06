@@ -7,4 +7,5 @@ module.exports = function() {
   map.set(key, 123);
 
   return map instanceof M && map.has(key) && map.get(key) === 123;
+
 };

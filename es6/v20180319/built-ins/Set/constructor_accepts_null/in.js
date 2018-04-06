@@ -2,4 +2,5 @@
 module.exports = function() {
   new Set(null);
   return true;
+
 };

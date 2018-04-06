@@ -7,8 +7,9 @@ module.exports = function() {
     passed = true;
   };
 
-  new WeakMap([[{}, 42]]);
+  new WeakMap([ [{ }, 42] ]);
   WeakMap.prototype.set = _set;
 
   return passed;
+
 };

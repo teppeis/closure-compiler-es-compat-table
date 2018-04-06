@@ -5,12 +5,14 @@ module.exports = function() {
   try {
     symbol + "";
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
 
   try {
     symbol + 0;
     return false;
-  } catch (e) {}
+  } catch(e) {}
 
   return true;
+
 };

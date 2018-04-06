@@ -1,20 +1,20 @@
 // built-ins / Proxy / "isExtensible" handler
 module.exports = function() {
-var proxied = {};
-        var passed = false;
-        Object.isExtensible(
-          new Proxy(proxied, {
-            isExtensible: function (t) {
-              passed = t === proxied; return true;
-            }
-          })
-        );
-        return passed;
-      
+  var proxied = {};
+  var passed = false;
+  Object.isExtensible(
+    new Proxy(proxied, {
+      isExtensible: function (t) {
+        passed = t === proxied; return true;
+      }
+    })
+  );
+  return passed;
+
 };
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180319/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
-        Object.isExtensible(
-        ^^^^^^^^^^^^^^^^^^^^
+es6/v20180319/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+  Object.isExtensible(
+  ^^^^^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

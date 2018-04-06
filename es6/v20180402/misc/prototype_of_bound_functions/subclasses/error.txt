@@ -9,15 +9,13 @@ module.exports = function() {
     var boundF = Function.prototype.bind.call(C, null);
     return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);
   }
-  return (
-    correctProtoBound(function() {}) &&
-    correctProtoBound(Array) &&
-    correctProtoBound(null)
-  );
-};
+  return correctProtoBound(function(){})
+&& correctProtoBound(Array)
+&& correctProtoBound(null);
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/misc/prototype_of_bound_functions/subclasses/in.js:5: ERROR - constructor is missing a call to super()
+es6/v20180402/misc/prototype_of_bound_functions/subclasses/in.js:5: ERROR - constructor is missing a call to super()
       constructor() {
       ^^^^^^^^^^^^^^^
 

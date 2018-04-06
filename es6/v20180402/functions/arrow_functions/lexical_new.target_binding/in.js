@@ -4,4 +4,5 @@ module.exports = function() {
     return x => new.target;
   }
   return new C()() === C && C()() === undefined;
+
 };

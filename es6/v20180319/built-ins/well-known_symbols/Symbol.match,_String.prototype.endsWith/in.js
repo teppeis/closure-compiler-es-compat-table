@@ -2,9 +2,10 @@
 module.exports = function() {
   var re = /./;
   try {
-    "/./".endsWith(re);
-  } catch (e) {
+    '/./'.endsWith(re);
+  } catch(e){
     re[Symbol.match] = false;
-    return "/./".endsWith(re);
+    return '/./'.endsWith(re);
   }
+
 };

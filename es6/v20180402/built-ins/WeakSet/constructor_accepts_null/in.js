@@ -2,4 +2,5 @@
 module.exports = function() {
   new WeakSet(null);
   return true;
+
 };

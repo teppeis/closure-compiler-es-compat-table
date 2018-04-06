@@ -1,27 +1,21 @@
 // functions / class / computed static accessor properties
 module.exports = function() {
-  var garply = "foo",
-    grault = "bar",
-    baz = false;
+  var garply = "foo", grault = "bar", baz = false;
   class C {
-    static get [garply]() {
-      return "foo";
-    }
-    static set [grault](x) {
-      baz = x;
-    }
+    static get [garply]() { return "foo"; }
+    static set [grault](x) { baz = x; }
   }
   C.bar = true;
   return C.foo === "foo" && baz;
+
 };
-
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/functions/class/computed_static_accessor_properties/in.js:7: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
-    static get [garply]() {
-    ^^^^^^^^^^^^^^^^^^^^^^^
+es6/v20180402/functions/class/computed_static_accessor_properties/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+    static get [garply]() { return "foo"; }
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/functions/class/computed_static_accessor_properties/in.js:10: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
-    static set [grault](x) {
-    ^^^^^^^^^^^^^^^^^^^^^^^^
+es6/v20180402/functions/class/computed_static_accessor_properties/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+    static set [grault](x) { baz = x; }
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 2 error(s), 0 warning(s)

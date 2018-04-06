@@ -2,7 +2,8 @@
 module.exports = function() {
   var obj = Object.create({ C: true });
   obj.A = true;
-  Object.defineProperty(obj, "B", { value: true, enumerable: false });
+  Object.defineProperty(obj, 'B', { value: true, enumerable: false });
 
-  return Reflect.ownKeys(obj).sort() + "" === "A,B";
+  return Reflect.ownKeys(obj).sort() + '' === "A,B";
+
 };

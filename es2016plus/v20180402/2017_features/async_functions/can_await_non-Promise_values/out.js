@@ -491,18 +491,18 @@ $jscomp.generator.createGenerator = function(a, b) {
   $jscomp.generator.Generator_.prototype = a.prototype;
   return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
-module.exports = function() {
+module.exports = function(a) {
   (function() {
-    return $jscomp.asyncExecutePromiseGeneratorFunction(function b() {
-      var d;
-      return $jscomp.generator.createGenerator(b, function(b) {
-        switch(b.nextAddress) {
+    return $jscomp.asyncExecutePromiseGeneratorFunction(function d() {
+      var e;
+      return $jscomp.generator.createGenerator(d, function(c) {
+        switch(c.nextAddress) {
           case 1:
-            return b.yield(Promise.resolve(), 2);
+            return c.yield(Promise.resolve(), 2);
           case 2:
-            return b.yield("foo", 3);
+            return c.yield("foo", 3);
           case 3:
-            d = b.yieldResult, "foo" === d && asyncTestPassed(), b.jumpToEnd();
+            e = c.yieldResult, "foo" === e && a(), c.jumpToEnd();
         }
       });
     });

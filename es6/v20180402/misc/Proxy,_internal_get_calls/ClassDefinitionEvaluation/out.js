@@ -45,13 +45,6 @@ $jscomp.inherits = function(a, b) {
   a.superClass_ = b.prototype;
 };
 module.exports = function() {
-  var a = [], b = new Proxy(Function(), {get:function(b, c) {
-    a.push(c);
-    return b[c];
-  }}), c = function(a) {
-    return b.apply(this, arguments) || this;
-  };
-  $jscomp.inherits(c, b);
-  return "prototype" === a + "";
+  throw Error("eval() and Function() cannot be transpiled");
 };
 

@@ -3,15 +3,16 @@ module.exports = function() {
   var received;
 
   class B {
-    constructor(arg) {
+    constructor (arg) {
       received = arg;
     }
   }
   class C extends B {
-    constructor() {
-      var callSuper = () => super("foo");
+    constructor () {
+      var callSuper = () => super('foo');
       callSuper();
     }
   }
-  return new C() instanceof C && received === "foo";
+  return new C instanceof C && received === 'foo'
+
 };

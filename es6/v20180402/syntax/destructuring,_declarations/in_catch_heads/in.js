@@ -1,12 +1,13 @@
 // syntax / destructuring, declarations / in catch heads
 module.exports = function() {
   try {
-    throw [1, 2];
-  } catch ([i, j]) {
+    throw [1,2];
+  } catch([i,j]) {
     try {
       throw { k: 3, l: 4 };
-    } catch ({ k, l }) {
+    } catch({k, l}) {
       return i === 1 && j === 2 && k === 3 && l === 4;
     }
   }
+
 };

@@ -1,24 +1,12 @@
 // built-ins / Promise / basic functionality
-module.exports = function() {
-  var p1 = new Promise(function(resolve, reject) {
-    resolve("foo");
-  });
-  var p2 = new Promise(function(resolve, reject) {
-    reject("quux");
-  });
+module.exports = function(asyncTestPassed) {
+  var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
+  var p2 = new Promise(function(resolve, reject) { reject("quux"); });
   var score = 0;
 
-  function thenFn(result) {
-    score += result === "foo";
-    check();
-  }
-  function catchFn(result) {
-    score += result === "quux";
-    check();
-  }
-  function shouldNotRun(result) {
-    score = -Infinity;
-  }
+  function thenFn(result)  { score += (result === "foo");  check(); }
+  function catchFn(result) { score += (result === "quux"); check(); }
+  function shouldNotRun(result)  { score = -Infinity;   }
 
   p1.then(thenFn, shouldNotRun);
   p2.then(shouldNotRun, catchFn);
@@ -34,4 +22,5 @@ module.exports = function() {
   function check() {
     if (score === 4) asyncTestPassed();
   }
+
 };

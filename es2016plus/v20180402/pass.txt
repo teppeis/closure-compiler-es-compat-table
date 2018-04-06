@@ -1,26 +1,36 @@
-2016_features/Array.prototype.includes/Array.prototype.includes/out.js
-2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js
-2016_features/exponentiation_operator/assignment/out.js
-2016_features/exponentiation_operator/basic_support/out.js
-2016_features/exponentiation_operator/early_syntax_error_for_unary_negation_without_parens/out.js
-2016_misc/generator_throw_caught_by_inner_generator/out.js
-2016_misc/nested_rest_destructuring,_declarations/out.js
-2016_misc/nested_rest_destructuring,_parameters/out.js
-2016_misc/strict_fn_w_non-strict_non-simple_params_is_error/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/defineGetter_/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/defineSetter_/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/lookupGetter_,_prototype_chain/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/lookupGetter_/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/lookupSetter_,_prototype_chain/out.js
-2017_annex_b/Object.prototype_getter_setter_methods/lookupSetter_/out.js
-2017_features/Object_static_methods/Object.entries/out.js
-2017_features/Object_static_methods/Object.getOwnPropertyDescriptors/out.js
-2017_features/Object_static_methods/Object.values/out.js
-2017_features/String_padding/String.prototype.padEnd/out.js
-2017_features/String_padding/String.prototype.padStart/out.js
-2017_features/async_functions/cannot_await_in_parameters/out.js
-2017_features/async_functions/must_await_a_value/out.js
-2017_features/async_functions/no_line_break_between_async_and_function/out.js
-2017_features/trailing_commas_in_function_syntax/in_argument_lists/out.js
-2017_features/trailing_commas_in_function_syntax/in_parameter_lists/out.js
-2017_misc/arguments.caller_removed/out.js
+2016_features/exponentiation______operator/basic_support/out.js: [Pass]
+2016_features/exponentiation______operator/assignment/out.js: [Pass]
+2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/out.js: [Pass]
+2016_features/Array.prototype.includes/Array.prototype.includes/out.js: [Pass]
+2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [Pass]
+2016_misc/generator_throw___caught_by_inner_generator/out.js: [Pass]
+2016_misc/nested_rest_destructuring,_declarations/out.js: [Pass]
+2016_misc/nested_rest_destructuring,_parameters/out.js: [Pass]
+2017_features/Object_static_methods/Object.values/out.js: [Pass]
+2017_features/Object_static_methods/Object.entries/out.js: [Pass]
+2017_features/Object_static_methods/Object.getOwnPropertyDescriptors/out.js: [Pass]
+2017_features/String_padding/String.prototype.padStart/out.js: [Pass]
+2017_features/String_padding/String.prototype.padEnd/out.js: [Pass]
+2017_features/trailing_commas_in_function_syntax/in_parameter_lists/out.js: [Pass]
+2017_features/trailing_commas_in_function_syntax/in_argument_lists/out.js: [Pass]
+2017_features/async_functions/return/out.js: [Pass]
+2017_features/async_functions/throw/out.js: [Pass]
+2017_features/async_functions/await/out.js: [Pass]
+2017_features/async_functions/await,_rejection/out.js: [Pass]
+2017_features/async_functions/must_await_a_value/out.js: [Pass]
+2017_features/async_functions/can_await_non-Promise_values/out.js: [Pass]
+2017_features/async_functions/async_methods,_object_literals/out.js: [Pass]
+2017_features/async_functions/async_methods,_classes/out.js: [Pass]
+2017_features/async_functions/async_arrow_functions/out.js: [Pass]
+2017_misc/arguments.caller_removed/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_prototype_chain/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__/out.js: [Pass]
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_prototype_chain/out.js: [Pass]
+2018_features/object_rest_spread_properties/object_rest_properties/out.js: [Pass]
+2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
+2018_features/Promise.prototype.finally/basic_support/out.js: [Pass]
+2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
+2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]

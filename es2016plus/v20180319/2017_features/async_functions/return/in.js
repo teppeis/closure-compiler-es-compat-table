@@ -1,6 +1,6 @@
 // 2017 features / async functions / return
-module.exports = function() {
-  async function a() {
+module.exports = function(asyncTestPassed) {
+  async function a(){
     return "foo";
   }
   var p = a();
@@ -12,4 +12,5 @@ module.exports = function() {
       asyncTestPassed();
     }
   });
+
 };

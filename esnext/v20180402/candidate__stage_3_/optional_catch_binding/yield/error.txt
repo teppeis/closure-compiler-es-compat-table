@@ -1,0 +1,23 @@
+// candidate (stage 3) / optional catch binding / yield
+module.exports = function() {
+function *foo() {
+try {
+yield;
+throw new Error();
+}
+catch {
+return true;
+}
+}
+
+var it = foo();
+it.next();
+return it.next().value;
+
+};
+----------------------------------------------------------
+esnext/v20180402/candidate__stage_3_/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
+catch {
+      ^
+
+1 error(s), 0 warning(s)

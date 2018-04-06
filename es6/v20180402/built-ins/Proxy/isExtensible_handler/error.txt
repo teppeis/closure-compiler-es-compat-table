@@ -4,17 +4,16 @@ module.exports = function() {
   var passed = false;
   Object.isExtensible(
     new Proxy(proxied, {
-      isExtensible: function(t) {
-        passed = t === proxied;
-        return true;
+      isExtensible: function (t) {
+        passed = t === proxied; return true;
       }
     })
   );
   return passed;
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+es6/v20180402/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
   Object.isExtensible(
   ^^^^^^^^^^^^^^^^^^^^
 

@@ -4,13 +4,13 @@ module.exports = function() {
   try {
     WeakSet();
     return false;
-  } catch (e) {
+  } catch(e) {
     return true;
   }
-};
 
+};
 ----------------------------------------------------------
-/Users/teppeis/src/github.com/teppeis/closure-compiler-es6-compat-table/es6/v20180402/built-ins/WeakSet/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakSet' is not being used.
+es6/v20180402/built-ins/WeakSet/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakSet' is not being used.
     WeakSet();
     ^^^^^^^^^
 

@@ -1,4 +1,3 @@
-candidate_stage_3/Function.prototype.toString_revision/native_code_/out.js
-candidate_stage_3/global/global_global_property_is_global_object/out.js
-candidate_stage_3/string_trimming/String.prototype.trimLeft/out.js
-candidate_stage_3/string_trimming/String.prototype.trimRight/out.js
+candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
+candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
+candidate__stage_3_/Function.prototype.toString_revision/_native_code_/out.js: [Pass]

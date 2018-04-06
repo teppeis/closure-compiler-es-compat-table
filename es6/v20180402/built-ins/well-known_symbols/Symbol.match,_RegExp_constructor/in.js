@@ -2,7 +2,8 @@
 module.exports = function() {
   var re = /./;
   re[Symbol.match] = false;
-  var foo = { constructor: RegExp };
+  var foo = {constructor: RegExp};
   foo[Symbol.match] = true;
   return RegExp(re) !== re && RegExp(foo) === foo;
+
 };

@@ -1,9 +1,7 @@
 // 2017 features / async functions / async methods, object literals
-module.exports = function() {
+module.exports = function(asyncTestPassed) {
   var o = {
-    async a() {
-      return await Promise.resolve("foo");
-    }
+    async a(){ return await Promise.resolve("foo"); }
   };
   var p = o.a();
   if (!(p instanceof Promise)) {
@@ -14,4 +12,5 @@ module.exports = function() {
       asyncTestPassed();
     }
   });
+
 };

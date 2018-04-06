@@ -59,7 +59,7 @@ module.exports = function() {
     a = $jscomp.makeIterator(a);
     a.next();
     a.next();
-  })(global.__createIterableObject([1, 2, 3], {return:function() {
+  })(global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
   }}));

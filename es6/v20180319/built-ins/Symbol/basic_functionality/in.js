@@ -5,4 +5,5 @@ module.exports = function() {
   var value = {};
   object[symbol] = value;
   return object[symbol] === value;
+
 };

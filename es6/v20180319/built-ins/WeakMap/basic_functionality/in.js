@@ -6,4 +6,5 @@ module.exports = function() {
   weakmap.set(key, 123);
 
   return weakmap.has(key) && weakmap.get(key) === 123;
+
 };

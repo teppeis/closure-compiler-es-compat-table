@@ -1,4 +1,5 @@
 // misc / Object static methods accept primitives / Object.freeze
 module.exports = function() {
-  return Object.freeze("a") === "a";
+  return Object.freeze('a') === 'a';
+
 };

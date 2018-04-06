@@ -494,10 +494,7 @@ $jscomp.generator.createGenerator = function(a, b) {
   return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
 module.exports = function() {
-  try {
-    Function("async\n function a(){}")();
-  } catch (a) {
-    return !0;
-  }
+  async;
+  return !1;
 };
 

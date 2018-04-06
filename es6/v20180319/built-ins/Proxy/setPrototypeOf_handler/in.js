@@ -5,7 +5,7 @@ module.exports = function() {
   var passed = false;
   Object.setPrototypeOf(
     new Proxy(proxied, {
-      setPrototypeOf: function(t, p) {
+      setPrototypeOf: function (t, p) {
         passed = t === proxied && p === newProto;
         return true;
       }
@@ -13,4 +13,5 @@ module.exports = function() {
     newProto
   );
   return passed;
+
 };

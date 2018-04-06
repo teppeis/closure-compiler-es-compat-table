@@ -2,7 +2,6 @@
 module.exports = function() {
   class C extends Array {}
   var c = new C();
-  return (
-    c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array
-  );
+  return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
+
 };

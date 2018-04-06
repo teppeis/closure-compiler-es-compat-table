@@ -1,5 +1,5 @@
 // 2017 features / async functions / async arrow functions
-module.exports = function() {
+module.exports = function(asyncTestPassed) {
   var a = async () => await Promise.resolve("foo");
   var p = a();
   if (!(p instanceof Promise)) {
@@ -10,4 +10,5 @@ module.exports = function() {
       asyncTestPassed();
     }
   });
+
 };

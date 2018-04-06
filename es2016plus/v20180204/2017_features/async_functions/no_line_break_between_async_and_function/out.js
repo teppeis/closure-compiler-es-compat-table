@@ -170,18 +170,18 @@ $jscomp.polyfill("Promise", function(a) {
     }
     "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
   };
-  c.prototype.reject_ = function(a) {
-    this.settle_(2, a);
+  c.prototype.reject_ = function(b) {
+    this.settle_(2, b);
   };
-  c.prototype.fulfill_ = function(a) {
-    this.settle_(1, a);
+  c.prototype.fulfill_ = function(b) {
+    this.settle_(1, b);
   };
-  c.prototype.settle_ = function(a, c) {
+  c.prototype.settle_ = function(b, a) {
     if (0 != this.state_) {
-      throw Error("Cannot settle(" + a + ", " + c | "): Promise already settled in state" + this.state_);
+      throw Error("Cannot settle(" + b + ", " + a | "): Promise already settled in state" + this.state_);
     }
-    this.state_ = a;
-    this.result_ = c;
+    this.state_ = b;
+    this.result_ = a;
     this.executeOnSettledCallbacks_();
   };
   c.prototype.executeOnSettledCallbacks_ = function() {
@@ -289,10 +289,7 @@ $jscomp.executeAsyncGenerator = function(a) {
   });
 };
 module.exports = function() {
-  try {
-    Function("async\n function a(){}")();
-  } catch (a) {
-    return !0;
-  }
+  async;
+  return !1;
 };
 

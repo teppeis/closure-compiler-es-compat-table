@@ -98,11 +98,11 @@ $jscomp.polyfill("Promise", function(a) {
     for (; this.batch_ && this.batch_.length;) {
       var b = this.batch_;
       this.batch_ = [];
-      for (var a = 0; a < b.length; ++a) {
-        var c = b[a];
-        delete b[a];
+      for (var g = 0; g < b.length; ++g) {
+        var a = b[g];
+        delete b[g];
         try {
-          c();
+          a();
         } catch (l) {
           this.asyncThrow_(l);
         }
@@ -168,24 +168,24 @@ $jscomp.polyfill("Promise", function(a) {
     }
     "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
   };
-  c.prototype.reject_ = function(a) {
-    this.settle_(2, a);
+  c.prototype.reject_ = function(b) {
+    this.settle_(2, b);
   };
-  c.prototype.fulfill_ = function(a) {
-    this.settle_(1, a);
+  c.prototype.fulfill_ = function(b) {
+    this.settle_(1, b);
   };
-  c.prototype.settle_ = function(a, c) {
+  c.prototype.settle_ = function(b, a) {
     if (0 != this.state_) {
-      throw Error("Cannot settle(" + a + ", " + c + "): Promise already settled in state" + this.state_);
+      throw Error("Cannot settle(" + b + ", " + a + "): Promise already settled in state" + this.state_);
     }
-    this.state_ = a;
-    this.result_ = c;
+    this.state_ = b;
+    this.result_ = a;
     this.executeOnSettledCallbacks_();
   };
   c.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var a = this.onSettledCallbacks_, c = 0; c < a.length; ++c) {
-        a[c].call(), a[c] = null;
+      for (var b = this.onSettledCallbacks_, a = 0; a < b.length; ++a) {
+        b[a].call(), b[a] = null;
       }
       this.onSettledCallbacks_ = null;
     }
@@ -209,16 +209,16 @@ $jscomp.polyfill("Promise", function(a) {
         try {
           e(a(b));
         } catch (m) {
-          f(m);
+          g(m);
         }
       } : b;
     }
-    var e, f, g = new c(function(a, b) {
+    var e, g, f = new c(function(a, b) {
       e = a;
-      f = b;
+      g = b;
     });
-    this.callWhenSettled_(b(a, e), b(d, f));
-    return g;
+    this.callWhenSettled_(b(a, e), b(d, g));
+    return f;
   };
   c.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -259,41 +259,41 @@ $jscomp.polyfill("Promise", function(a) {
     return d.done ? e([]) : new c(function(a, c) {
       function f(b) {
         return function(c) {
-          h[b] = c;
-          g--;
-          0 == g && a(h);
+          g[b] = c;
+          h--;
+          0 == h && a(g);
         };
       }
-      var h = [], g = 0;
+      var g = [], h = 0;
       do {
-        h.push(void 0), g++, e(d.value).callWhenSettled_(f(h.length - 1), c), d = b.next();
+        g.push(void 0), h++, e(d.value).callWhenSettled_(f(g.length - 1), c), d = b.next();
       } while (!d.done);
     });
   };
   return c;
 }, "es6", "es3");
-module.exports = function() {
-  function a() {
-    c += 0 === arguments.length;
-    d();
-  }
+module.exports = function(a) {
   function d() {
-    5 === c && asyncTestPassed();
+    h += 0 === arguments.length;
+    e();
   }
-  var e = Promise.resolve("foo"), f = Promise.reject("bar"), c = 0;
-  e.then(function(a) {
-    c += "foo" === a;
-    d();
+  function e() {
+    5 === h && a();
+  }
+  var f = Promise.resolve("foo"), c = Promise.reject("bar"), h = 0;
+  f.then(function(a) {
+    h += "foo" === a;
+    e();
   });
-  e.finally(a);
-  e.finally(function() {
-    c += e.finally() !== e;
-    d();
+  f.finally(d);
+  f.finally(function() {
+    h += f.finally() !== f;
+    e();
   });
-  f.catch(function(a) {
-    c += "bar" === a;
-    d();
+  c.catch(function(a) {
+    h += "bar" === a;
+    e();
   });
-  f.finally(a);
+  c.finally(d);
 };
 

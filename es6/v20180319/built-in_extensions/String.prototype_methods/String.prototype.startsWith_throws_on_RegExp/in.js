@@ -2,7 +2,8 @@
 module.exports = function() {
   try {
     "a".startsWith(/./);
-  } catch (e) {
-    return typeof String.prototype.startsWith === "function";
+  } catch(e) {
+    return typeof String.prototype.startsWith === 'function';
   }
+
 };

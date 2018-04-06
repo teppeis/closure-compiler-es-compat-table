@@ -1,0 +1,16 @@
+// functions / arrow functions / correct precedence
+module.exports = function() {
+  return (() => {
+    0 || () => 2";
+    return false;
+  })();
+};
+
+// EXPECT: 4: ERROR - Parse error. invalid arrow function parameters
+
+----------------------------------------------------------
+es6/v20180204/functions/arrow_functions/correct_precedence/in.js:4: ERROR - Parse error. invalid arrow function parameters
+    0 || () => 2";
+    ^
+
+1 error(s), 0 warning(s)

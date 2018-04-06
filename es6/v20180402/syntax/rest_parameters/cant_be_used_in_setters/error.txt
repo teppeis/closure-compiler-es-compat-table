@@ -1,0 +1,18 @@
+// syntax / rest parameters / can't be used in setters
+module.exports = function() {
+  return (function (...args) {
+    var obj = {
+      set e(...args) {}
+    };
+    return true;
+  }());
+};
+
+// EXPECT: 5: ERROR - Parse error. 'identifier' expected
+
+----------------------------------------------------------
+es6/v20180402/syntax/rest_parameters/cant_be_used_in_setters/in.js:5: ERROR - Parse error. 'identifier' expected
+      set e(...args) {}
+            ^
+
+1 error(s), 0 warning(s)

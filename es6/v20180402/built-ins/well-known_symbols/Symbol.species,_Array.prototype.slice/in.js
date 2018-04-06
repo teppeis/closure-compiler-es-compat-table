@@ -6,4 +6,5 @@ module.exports = function() {
     return { foo: 1 };
   };
   return Array.prototype.slice.call(obj, 0).foo === 1;
+
 };

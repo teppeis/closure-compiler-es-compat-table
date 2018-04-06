@@ -8,4 +8,5 @@ module.exports = function() {
   set.add(456);
 
   return set.size === 2;
+
 };

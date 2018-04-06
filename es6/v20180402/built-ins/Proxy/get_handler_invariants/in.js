@@ -1,9 +1,9 @@
 // built-ins / Proxy / "get" handler invariants
 module.exports = function() {
   var passed = false;
-  var proxied = {};
+  var proxied = { };
   var proxy = new Proxy(proxied, {
-    get: function() {
+    get: function () {
       passed = true;
       return 4;
     }
@@ -15,17 +15,18 @@ module.exports = function() {
   try {
     proxy.foo;
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
   // The value reported for a property must be undefined if the corresponding target
   // object property is a non-configurable own accessor property that has undefined
   // as its [[Get]] attribute.
-  Object.defineProperty(proxied, "bar", {
-    set: function() {},
-    enumerable: true
-  });
+  Object.defineProperty(proxied, "bar",
+    { set: function(){}, enumerable: true });
   try {
     proxy.bar;
     return false;
-  } catch (e) {}
+  }
+  catch(e) {}
   return passed;
+
 };

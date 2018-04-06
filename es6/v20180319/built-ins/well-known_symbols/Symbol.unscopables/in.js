@@ -5,4 +5,5 @@ module.exports = function() {
   with (a) {
     return foo === 1 && typeof bar === "undefined";
   }
+
 };

@@ -7,4 +7,5 @@ module.exports = function() {
     var c2 = C;
   }
   return C === c1;
+
 };

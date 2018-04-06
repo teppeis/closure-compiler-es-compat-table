@@ -1,0 +1,17 @@
+// functions / arrow functions / no line break between params and <code>=></code>
+module.exports = function() {
+  return (() => {
+    x
+      => 2;
+    return false;
+  })();
+};
+
+// EXPECT: 5: ERROR - Parse error. No newline allowed before '=>'
+
+----------------------------------------------------------
+es6/v20180204/functions/arrow_functions/no_line_break_between_params_and_arrow/in.js:5: ERROR - Parse error. No newline allowed before '=>'
+      => 2;
+      ^
+
+1 error(s), 0 warning(s)
