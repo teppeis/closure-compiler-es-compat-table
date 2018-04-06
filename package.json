@@ -4,18 +4,20 @@
   "author": "Teppei Sato",
   "main": "index.js",
   "scripts": {
-    "es2016plus": "./run.sh es2016plus",
-    "es6": "./run.sh es6",
-    "esnext": "./run.sh esnext",
+    "es2016plus": "./run.js es2016plus",
+    "es6": "./run.js es6",
+    "esnext": "./run.js esnext",
     "stop": "./node_modules/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop",
     "test": "eslint *.js legacy/*.js"
   },
   "dependencies": {
-    "closure-gun": "^0.1.8",
+    "async": "^2.6.0",
+    "closure-gun": "^0.1.12",
+    "execa": "^0.10.0",
     "fs-readdir-recursive": "^1.1.0",
     "google-closure-compiler": "^20180402.0.0",
+    "meow": "^4.0.0",
     "mkdirp": "^0.5.0",
-    "prettier": "1.11.1",
     "rimraf": "^2.6.2"
   },
   "license": "MIT",

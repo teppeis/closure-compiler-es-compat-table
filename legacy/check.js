@@ -8,6 +8,7 @@
 var fs = require('fs');
 var path = require('path');
 var readdir = require('fs-readdir-recursive');
+var async = require('async');
 
 var esVersion = process.env.ES_VERSION;
 var clVersion = process.env.CL_VERSION;
@@ -36,43 +37,64 @@ global.__createIterableObject = function(arr, methods) {
   return iterable;
 };
 
-global.asyncTestPassed = function() {
-  console.trace('asyncTestPassed');
-};
-
-readdir(buildDir)
-  .sort()
-  .filter(function(file) {
-    return /\/out\.js$/.test(file);
+var dirs = require(path.join(buildDir, 'files.json'));
+var files = dirs.map(function(dir) {
+    return path.join(dir, 'out.js');
   })
-  .forEach(function(file) {
-    check(file);
+  .filter(function(file) {
+    return !testDir || file.indexOf(testDir) > -1;
   });
 
-function check(file) {
-  if (testDir && testDir !== file) {
-    return;
+async.map(files, checkTimeout, function(err, results) {
+  if (err) {
+    return console.error('check.js', err);
   }
+  console.log(results.join('\n'));
+});
 
+function checkTimeout(file, cb) {
+  async.timeout(check, 5000)(file, function(err, msg) {
+    if (err) {
+      if (err.code === 'ETIMEDOUT') {
+        return cb(null, file + ': [Timeout: asyncTestPassed() is not called for 5s]');
+      } else {
+        return cb(err);
+      }
+    }
+    cb(null, msg);
+  });
+}
+
+function check(file, cb) {
   delete global.$jscomp;
   delete global.Promise;
   delete global.Symbol;
 
   // Promise: Promise.prototype isn't an instance
-  if (file === 'built-ins/Promise/Promise.prototype_isn_t_an_instance/out.js') {
-    console.error('Skipped: ' + file);
-    return;
+  if (file === 'built-ins/Promise/Promise.prototype_isnt_an_instance/out.js') {
+    return cb(null, file + ': [Skip]');
   }
   var fileAbs = path.join(buildDir, file);
-  if (fs.existsSync(fileAbs)) {
-    try {
-      var res = require(fileAbs)();
+  if (!fs.existsSync(fileAbs)) {
+    return cb(null, file + ': [CompileError]');
+  }
 
+  try {
+    var test = require(fileAbs);
+    if (test.length) {
+      // async
+      return test(function() {
+        return cb(null, file + ': [Pass]');
+      });
+    } else {
+      // sync
+      var res = test();
       if (res) {
-        console.log(file);
+        return cb(null, file + ': [Pass]');
       }
-    } catch (ignore) {
-      console.error(file, ignore);
+      return cb(null, file + ': [InvalidResult: ' + res + ']');
     }
+  } catch (err) {
+    return cb(null, file + ': ' + err);
   }
 }

@@ -12,14 +12,22 @@ ES_VERSION=$1
 TEST_DIR=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
-closureVer=$("$basedir/version.sh")
-echo "$closureVer"
+closureVer=$("$basedir/get-closure-version.sh")
 
-LOG="$basedir/$ES_VERSION/$closureVer/pass.txt"
-ERROR="$basedir/$ES_VERSION/$closureVer/runtime_error.txt"
+resultDir="$basedir/$ES_VERSION/$closureVer"
+resultTmp=$(mktemp closure-compat-check-result.XXXXX)
+resultFile="$resultDir/result.txt"
 rm -f "$LOG"
 nodebrew exec 0.10 -- \
     ES_VERSION="$ES_VERSION" \
     CL_VERSION="$closureVer" \
     TEST_DIR="$TEST_DIR" \
-    node "$basedir/legacy/check.js" > "$LOG" 2> "$ERROR"
+    node "$basedir/legacy/check.js" > "$resultTmp"
+
+if [ -z "$TEST_DIR" ]; then
+    cp "$resultTmp" "$resultFile"
+    grep ': \[Pass\]$' "$resultFile" > "$resultDir/pass.txt" || true
+else
+    cat "$resultTmp"
+fi
+rm "$resultTmp"

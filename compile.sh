@@ -13,8 +13,7 @@ TEST_DIR=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 closure="$basedir/node_modules/.bin/closure-gun"
-closureVer=$("$basedir/version.sh")
-echo "$closureVer"
+closureVer=$("$basedir/get-closure-version.sh")
 
 BUILD_DIR="$basedir/$ES_VERSION/$closureVer"
 
@@ -29,6 +28,8 @@ for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
     $closure \
         --formatting PRETTY_PRINT \
         -O SIMPLE \
+        --language_in ECMASCRIPT_NEXT \
+        --language_out ECMASCRIPT5 \
         --js "$FILE" \
         > "$OUT" 2> ./error || true
 
