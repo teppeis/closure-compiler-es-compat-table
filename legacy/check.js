@@ -45,7 +45,7 @@ var files = dirs.map(function(dir) {
     return !testDir || file.indexOf(testDir) > -1;
   });
 
-async.map(files, checkTimeout, function(err, results) {
+async.mapSeries(files, checkTimeout, function(err, results) {
   if (err) {
     return console.error('check.js', err);
   }
@@ -65,6 +65,39 @@ function checkTimeout(file, cb) {
   });
 }
 
+// TODO: check unexpected error
+function checkExpectedError(fileAbs, cb) {
+  var dir = path.dirname(fileAbs);
+  var fileRelative = path.relative(buildDir, fileAbs);
+  var errorFile = path.join(dir, 'error.txt');
+  var errorRelative = path.relative(buildDir, errorFile);
+  var inputFile = path.join(dir, 'in.js');
+  try {
+    var error = fs.readFileSync(errorFile, 'utf8');
+    var input = fs.readFileSync(inputFile, 'utf8');
+    // `EXPECT: [LINE]: [ERROR_MESSAGE]`
+    // ex) EXPECT: 4: ERROR - Illegal variable reference before declaration: a
+    var regex = /^\/\/ EXPECT: (\d.*)/gm;
+    var match;
+    var expectError = false;
+    while ((match = regex.exec(input)) !== null) {
+      expectError = true;
+      var expect = ':' + match[1];
+      if (error.indexOf(expect) === -1) {
+        return cb(null, errorRelative + ': [NotExpectedCompileError]');
+      }
+    }
+    if (expectError) {
+      return cb(null, fileRelative + ': [Pass]');
+    } else {
+      return cb(null, errorRelative + ': [CompileError]');
+    }
+  } catch (e) {
+    console.error('both out.js and error.txt are nothing', fileRelative);
+    return cb(e);
+  }
+}
+
 function check(file, cb) {
   delete global.$jscomp;
   delete global.Promise;
@@ -76,7 +109,7 @@ function check(file, cb) {
   }
   var fileAbs = path.join(buildDir, file);
   if (!fs.existsSync(fileAbs)) {
-    return cb(null, file + ': [CompileError]');
+    return checkExpectedError(fileAbs, cb);
   }
 
   try {

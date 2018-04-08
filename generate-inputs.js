@@ -21,6 +21,7 @@ const fileList = [];
 const linter = new Linter();
 
 const basedir = path.join(__dirname, esVersion, clVersion);
+const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
 data.tests.forEach(test => {
   if (test.subtests) {
     test.subtests.forEach(subtest => {
@@ -37,11 +38,15 @@ if (!testDir) {
 
 function escapePath(str) {
   // valid: #$%=~-,_.+
-  // invalid: [](){}`^~|@;:`*?"
+  // invalid: [](){}`^~|@;:`*?"<>
   return str
+    .replace('\u{2e2f}', 'U+2E2F')
+    .replace('\u{102c0}', 'U+102C0')
     .replace(/['"]/g, '')
+    .replace(/<\/?code>/g, '')
+    .replace(/=>/g, 'arrow')
     .replace(/ \(([^)]+)\)]/g, ' $1')
-    .replace(/[ [\](){}`^~|@;:`*?/]/g, '_');
+    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, '_');
 }
 
 function writeInputSrcFile(fn, category, test, sub) {
@@ -55,7 +60,7 @@ function writeInputSrcFile(fn, category, test, sub) {
     return;
   }
   mkdirp.sync(dir);
-  let src = generateTestJsSrc(fn, name);
+  let src = generateTestJsSrc(fn, name, dir);
   src = format(src);
   fs.writeFileSync(path.join(dir, 'in.js'), `// ${name}\n${src}`);
   fileList.push(path.relative(basedir, dir));
@@ -79,8 +84,8 @@ function format(src) {
   }
 }
 
-function generateTestJsSrc(fn, name) {
-  let src = generateTestJsSrc_(fn, name);
+function generateTestJsSrc(fn, name, dir) {
+  let src = generateTestJsSrc_(fn, name, dir);
   if (/global.__createIterableObject\(/.test(src)) {
     // TODO: should inject automatically
     src += '\n$jscomp.initSymbolIterator();';
@@ -88,7 +93,7 @@ function generateTestJsSrc(fn, name) {
   return src;
 }
 
-function generateTestJsSrc_(fn, name) {
+function generateTestJsSrc_(fn, name, dir) {
   if (typeof fn === 'function') {
     let expr = fn.toString();
     const match = expr.match(/[^]*\/\*([^]*)\*\/\}$/);
@@ -98,14 +103,35 @@ function generateTestJsSrc_(fn, name) {
     }
     // remove indent for template literal test code
     expr = expr.replace(/^ */gm, '');
-    let param = '';
-    if (/\beval\(/.test(expr) || /\bFunction\(/.test(expr)) {
-      expr = "throw new Error('eval() and Function() cannot be transpiled');\n" + expr;
+    const param = /\basyncTestPassed\(/.test(expr) ? 'asyncTestPassed' : '';
+    let result = `module.exports = function(${param}) {\n${expr}\n};`;
+    const useEval = /\beval\(/.test(expr) || /\bFunction\(/.test(expr);
+    if (!useEval) {
+      return result;
     }
-    if (/asyncTestPassed/.test(expr)) {
-      param = 'asyncTestPassed';
+
+    let alter;
+    const altDir = path.join(alterTestDir, path.relative(basedir, dir));
+    try {
+      const origSrc = fs.readFileSync(path.join(altDir, 'orig.js'), 'utf8');
+      if (origSrc === result) {
+        alter = fs.readFileSync(path.join(altDir, 'alter.js'), 'utf8');
+      } else {
+        console.error('changed eval test:', name);
+      }
+    } catch (ignore) {}
+
+    if (alter) {
+      result = alter;
+    } else {
+      mkdirp.sync(altDir);
+      fs.writeFileSync(path.join(altDir, 'orig.js'), result);
+      result = `module.exports = function(${param}) {
+throw new Error('eval() and Function() cannot be transpiled');
+${expr}
+};`;
     }
-    return `module.exports = function(${param}) {\n${expr}\n};`;
+    return result;
   } else if (Array.isArray(fn) && fn.length > 0) {
     // NOTE: not used now
     // it's an array of objects like the following:
