@@ -10,6 +10,7 @@ if [ $# -lt 1 ] || [ $# -gt 2 ]; then
 fi
 ES_VERSION=$1
 TEST_DIR=$2
+COMPILATION_LEVEL=${COMPILATION_LEVEL:-SIMPLE}
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 closure="$basedir/node_modules/.bin/closure-gun"
@@ -27,7 +28,7 @@ for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
     OUT="$DIR/out.js"
     $closure \
         --formatting PRETTY_PRINT \
-        -O SIMPLE \
+        -O "$COMPILATION_LEVEL" \
         --language_in ECMASCRIPT_NEXT \
         --language_out ECMASCRIPT5 \
         --js "$FILE" \
