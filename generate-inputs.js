@@ -5,23 +5,33 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const Linter = require('eslint').Linter;
 
-const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
-const esVersion = versionToDir.get(process.env.ES_VERSION);
-if (!esVersion) {
-  throw new Error(`ES_VERSION is invalid: ${process.env.ES_VERSION}`);
-}
-const clVersion = process.env.CL_VERSION;
-if (!clVersion) {
-  throw new Error('CL_VERSION is required');
-}
-const testDir = process.env.TEST_DIR;
-
-const data = require(`./compat-table/data-${esVersion}`);
+const {basedir, testDir, alterTestDir, data} = init();
 const fileList = [];
 const linter = new Linter();
 
-const basedir = path.join(__dirname, esVersion, clVersion);
-const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
+class TestCode {
+  constructor(expr, name) {
+    this.expr = expr;
+    this.name = name;
+    this.isAsync = /\basyncTestPassed\(/.test(expr);
+    this.useEval = /\beval\(/.test(expr) || /\bFunction\(/.test(expr);
+    // TODO: should inject automatically
+    this.useCreateIterable = /global.__createIterableObject\(/.test(expr);
+  }
+
+  toString(ignoreEval = false) {
+    const param = this.isAsync ? 'asyncTestPassed' : '';
+    const throws = this.useEval && !ignoreEval ?
+      `throw new Error('eval() and Function() cannot be transpiled');\n` : '';
+    const initIterator = this.useCreateIterable ? '\n$jscomp.initSymbolIterator();' : '';
+    const src = `// ${this.name}
+module.exports = function(${param}) {
+${throws}${this.expr}
+};${initIterator}`;
+    return format(src);
+  }
+}
+
 data.tests.forEach(test => {
   if (test.subtests) {
     test.subtests.forEach(subtest => {
@@ -36,17 +46,21 @@ if (!testDir) {
   fs.writeFileSync(path.join(basedir, 'files.json'), JSON.stringify(fileList, null, 2));
 }
 
-function escapePath(str) {
-  // valid: #$%=~-,_.+
-  // invalid: [](){}`^~|@;:`*?"<>
-  return str
-    .replace('\u{2e2f}', 'U+2E2F')
-    .replace('\u{102c0}', 'U+102C0')
-    .replace(/['"]/g, '')
-    .replace(/<\/?code>/g, '')
-    .replace(/=>/g, 'arrow')
-    .replace(/ \(([^)]+)\)]/g, ' $1')
-    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, '_');
+function init() {
+  const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
+  const esVersion = versionToDir.get(process.env.ES_VERSION);
+  if (!esVersion) {
+    throw new Error(`ES_VERSION is invalid: ${process.env.ES_VERSION}`);
+  }
+  const clVersion = process.env.CL_VERSION;
+  if (!clVersion) {
+    throw new Error('CL_VERSION is required');
+  }
+  const basedir = path.join(__dirname, esVersion, clVersion);
+  const testDir = process.env.TEST_DIR;
+  const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
+  const data = require(`./compat-table/data-${esVersion}`);
+  return {basedir, testDir, alterTestDir, data};
 }
 
 function writeInputSrcFile(fn, category, test, sub) {
@@ -60,10 +74,22 @@ function writeInputSrcFile(fn, category, test, sub) {
     return;
   }
   mkdirp.sync(dir);
-  let src = generateTestJsSrc(fn, name, dir);
-  src = format(src);
-  fs.writeFileSync(path.join(dir, 'in.js'), `// ${name}\n${src}`);
+  const src = generateTestJsSrc(fn, name, dir);
+  fs.writeFileSync(path.join(dir, 'in.js'), src);
   fileList.push(path.relative(basedir, dir));
+}
+
+function escapePath(str) {
+  // valid: #$%=~-,_.+
+  // invalid: [](){}`^~|@;:`*?"<>
+  return str
+    .replace('\u{2e2f}', 'U+2E2F')
+    .replace('\u{102c0}', 'U+102C0')
+    .replace(/<\/?code>/g, '')
+    .replace(/=>/g, 'arrow')
+    .replace(/['"]/g, '')
+    .replace(/ \(([^)]+)\)]/g, ' $1')
+    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, '_');
 }
 
 function format(src) {
@@ -85,53 +111,16 @@ function format(src) {
 }
 
 function generateTestJsSrc(fn, name, dir) {
-  let src = generateTestJsSrc_(fn, name, dir);
-  if (/global.__createIterableObject\(/.test(src)) {
-    // TODO: should inject automatically
-    src += '\n$jscomp.initSymbolIterator();';
-  }
-  return src;
-}
-
-function generateTestJsSrc_(fn, name, dir) {
   if (typeof fn === 'function') {
-    let expr = fn.toString();
-    const match = expr.match(/[^]*\/\*([^]*)\*\/\}$/);
-    if (match) {
-      // extract source in comment style
-      expr = match[1].replace(/^\s+/g, '');
+    let testCode = createTestCode(fn, name);
+    const alterSrc = getAlterSrc(testCode, dir);
+    if (alterSrc) {
+      return alterSrc;
     }
-    // remove indent for template literal test code
-    expr = expr.replace(/^ */gm, '');
-    const param = /\basyncTestPassed\(/.test(expr) ? 'asyncTestPassed' : '';
-    let result = `module.exports = function(${param}) {\n${expr}\n};`;
-    const useEval = /\beval\(/.test(expr) || /\bFunction\(/.test(expr);
-    if (!useEval) {
-      return result;
+    if (testCode.useEval) {
+      saveOriginalSrcInAlterTests(testCode, dir);
     }
-
-    let alter;
-    const altDir = path.join(alterTestDir, path.relative(basedir, dir));
-    try {
-      const origSrc = fs.readFileSync(path.join(altDir, 'orig.js'), 'utf8');
-      if (origSrc === result) {
-        alter = fs.readFileSync(path.join(altDir, 'alter.js'), 'utf8');
-      } else {
-        console.error('changed eval test:', name);
-      }
-    } catch (ignore) {}
-
-    if (alter) {
-      result = alter;
-    } else {
-      mkdirp.sync(altDir);
-      fs.writeFileSync(path.join(altDir, 'orig.js'), result);
-      result = `module.exports = function(${param}) {
-throw new Error('eval() and Function() cannot be transpiled');
-${expr}
-};`;
-    }
-    return result;
+    return testCode.toString();
   } else if (Array.isArray(fn) && fn.length > 0) {
     // NOTE: not used now
     // it's an array of objects like the following:
@@ -140,4 +129,37 @@ ${expr}
   } else {
     throw new Error(name + ': unknown test type :' + fn);
   }
+}
+
+function createTestCode(fn, name) {
+  let expr = fn.toString();
+  const match = expr.match(/[^]*\/\*([^]*)\*\/\}$/);
+  if (match) {
+    // extract source in comment style
+    expr = match[1];
+  }
+  // remove indent for template literal test code
+  expr = expr.replace(/^\s*/gm, '');
+  return new TestCode(expr, name);
+}
+
+function getAlterSrc(testCode, dir) {
+  let alter = null;
+  const altDir = path.join(alterTestDir, path.relative(basedir, dir));
+  try {
+    const origSrc = fs.readFileSync(path.join(altDir, 'orig.js'), 'utf8');
+    if (origSrc === testCode.toString(true)) {
+      alter = fs.readFileSync(path.join(altDir, 'alter.js'), 'utf8');
+    } else {
+      console.error('changed eval test:', name);
+    }
+  } catch (ignore) {}
+
+  return  alter;
+}
+
+function saveOriginalSrcInAlterTests(testCode, dir) {
+  const altDir = path.join(alterTestDir, path.relative(basedir, dir));
+  mkdirp.sync(altDir);
+  fs.writeFileSync(path.join(altDir, 'orig.js'), testCode.toString(true));
 }
