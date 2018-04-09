@@ -1,3 +1,4 @@
+// bindings / const / redefining a const is an error
 module.exports = function() {
   const baz = 1;
   const foo = 1;

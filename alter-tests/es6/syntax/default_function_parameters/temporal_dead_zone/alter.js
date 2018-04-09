@@ -1,3 +1,4 @@
+// syntax / default function parameters / temporal dead zone
 module.exports = function() {
   (function(a=a){}());
   (function(a=b,b){}());

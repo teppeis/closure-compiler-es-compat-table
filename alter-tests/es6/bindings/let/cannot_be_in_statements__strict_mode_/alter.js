@@ -1,3 +1,4 @@
+// bindings / let / cannot be in statements (strict mode)
 module.exports = function() {
   'use strict';
   let bar = 1;

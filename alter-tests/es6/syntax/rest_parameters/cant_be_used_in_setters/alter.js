@@ -1,3 +1,4 @@
+// syntax / rest parameters / can't be used in setters
 module.exports = function() {
   return (function (...args) {
     var obj = {

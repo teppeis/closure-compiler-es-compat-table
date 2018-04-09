@@ -1,3 +1,4 @@
+// bindings / const / redefining a const (strict mode)
 module.exports = function() {
   'use strict';
   const baz = 1;

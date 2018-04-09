@@ -1,3 +1,4 @@
+// functions / arrow functions / no line break between params and <code>=></code>
 module.exports = function() {
   return (() => {
     x

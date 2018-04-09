@@ -1,3 +1,4 @@
+// functions / arrow functions / correct precedence
 module.exports = function() {
   return (() => {
     0 || () => 2";

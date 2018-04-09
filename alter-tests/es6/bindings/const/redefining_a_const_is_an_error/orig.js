@@ -1,9 +1,10 @@
+// bindings / const / redefining a const is an error
 module.exports = function() {
-const baz = 1;
-try {
-Function("const foo = 1; foo = 2;")();
-} catch(e) {
-return true;
-}
+  const baz = 1;
+  try {
+    Function("const foo = 1; foo = 2;")();
+  } catch(e) {
+    return true;
+  }
 
 };

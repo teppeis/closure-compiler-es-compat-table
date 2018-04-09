@@ -1,3 +1,4 @@
+// bindings / const / cannot be in statements
 module.exports = function() {
   const bar = 1;
   if (true) const baz = 1;

@@ -4,10 +4,8 @@ module.exports = function() {
   new function f() {
     passed = (new.target === f);
   }();
-  try {
-    Function("new.target = function(){};");
-  } catch(e) {
-    return passed;
-  }
-
+  new.target = function(){};
+  return false;
 };
+
+// EXPECT: 7: Error
