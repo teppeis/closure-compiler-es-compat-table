@@ -28,10 +28,8 @@ module.exports = function() {
   // Deleting and reinserting a property doesn't preserve its position
   delete obj[2];
   obj[2] = true;
-
   var forInOrder = '';
   for(var key in obj)forInOrder += key;
-
   return Object.keys(obj).join('') === forInOrder;
 
 };

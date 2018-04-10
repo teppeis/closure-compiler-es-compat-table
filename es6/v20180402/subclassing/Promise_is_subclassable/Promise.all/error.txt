@@ -12,7 +12,6 @@ module.exports = function(asyncTestPassed) {
   var score = +(fulfills instanceof P);
   fulfills.then(function(result) { score += (result + "" === "foo,bar"); check(); });
   rejects.catch(function(result) { score += (result === "qux"); check(); });
-
   function check() {
     if (score === 3) asyncTestPassed();
   }

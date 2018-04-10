@@ -1,7 +1,6 @@
 // functions / arrow functions / lexical "super" binding in constructors
 module.exports = function() {
   var received;
-
   class B {
     constructor (arg) {
       received = arg;

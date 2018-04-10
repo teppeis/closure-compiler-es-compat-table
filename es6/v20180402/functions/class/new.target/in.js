@@ -4,7 +4,6 @@ module.exports = function() {
   new function f() {
     passed = new.target === f;
   }();
-
   class A {
     constructor() {
       passed &= new.target === B;

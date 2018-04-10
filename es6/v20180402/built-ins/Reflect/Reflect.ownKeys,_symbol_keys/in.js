@@ -6,7 +6,6 @@ module.exports = function() {
   var obj = Object.create(proto);
   obj[s2] = true;
   Object.defineProperty(obj, s3, { value: true, enumerable: false });
-
   var keys = Reflect.ownKeys(obj);
   return keys.indexOf(s2) >-1 && keys.indexOf(s3) >-1 && keys.length === 2;
 

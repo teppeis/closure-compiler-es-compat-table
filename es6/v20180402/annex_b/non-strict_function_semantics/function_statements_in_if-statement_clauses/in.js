@@ -2,7 +2,6 @@
 module.exports = function() {
 // Note: only available outside of strict mode.
   if (!this) return false;
-
   if(true) function foo() { return 2; }
   if(false) {} else function bar() { return 3; }
   if(true) function baz() { return 4; } else {}
