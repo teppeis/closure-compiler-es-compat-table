@@ -45,7 +45,7 @@ const opts = {
   targetDir = targetDir || '';
   console.log(`Target: ${esVer}/${closureVer}${targetDir ? `/${targetDir}` : ''}`);
   console.log('Generate inputs');
-  await execa('node', ['generate-inputs.js'], {
+  await execa('./generate-inputs.js', [], {
     ...opts,
     env: {
       ES_VERSION: esVer,
