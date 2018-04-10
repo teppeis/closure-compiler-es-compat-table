@@ -5,7 +5,6 @@ module.exports = function() {
   var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
   Array.prototype.includes.call(p, {});
   if (get + '' !== "length,0,1,2") return;
-
   get = [];
   p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
   Array.prototype.includes.call(p, NaN, 1);

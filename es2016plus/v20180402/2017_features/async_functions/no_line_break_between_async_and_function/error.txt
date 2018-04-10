@@ -2,7 +2,7 @@
 module.exports = function() {
   async function a() {}
   async
-  function b() {}
+    function b() {}
   return false;
 };
 
