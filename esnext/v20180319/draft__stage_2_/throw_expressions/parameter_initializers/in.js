@@ -3,9 +3,7 @@ module.exports = function() {
 function fn (arg = throw 42) {
 return arg;
 }
-
 if (fn(21) !== 21) return false;
-
 try {
 fn();
 } catch (e) {

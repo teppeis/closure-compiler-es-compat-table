@@ -9,7 +9,6 @@ catch {
 return true;
 }
 }
-
 var it = foo();
 it.next();
 return it.next().value;
