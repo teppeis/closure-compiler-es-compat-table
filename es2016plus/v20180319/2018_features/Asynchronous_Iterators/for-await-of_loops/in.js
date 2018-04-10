@@ -12,7 +12,6 @@ module.exports = function(asyncTestPassed) {
       }
     };
   };
-
   (async function(){
     var result = '';
     for await(var value of asyncIterable)result += value;
