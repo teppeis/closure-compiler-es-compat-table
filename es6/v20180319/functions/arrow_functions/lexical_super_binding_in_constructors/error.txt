@@ -1,7 +1,6 @@
 // functions / arrow functions / lexical "super" binding in constructors
 module.exports = function() {
   var received;
-
   class B {
     constructor (arg) {
       received = arg;
@@ -17,7 +16,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:11: ERROR - constructor is missing a call to super()
+es6/v20180319/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:10: ERROR - constructor is missing a call to super()
     constructor () {
     ^^^^^^^^^^^^^^^^
 

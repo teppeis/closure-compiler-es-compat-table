@@ -19,7 +19,6 @@ module.exports = function() {
   Object.defineProperty(obj, '4', { value: true, enumerable: true });
   delete obj[2];
   obj[2] = true;
-
   return Reflect.ownKeys(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
 
 };

@@ -5,7 +5,6 @@ module.exports = function() {
   a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
   b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
   c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
-
   a >= 0;
   b in {};
   c == 0;
@@ -13,15 +12,15 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
+es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8: WARNING - Suspicious code. The result of the 'ge' operator is not being used.
   a >= 0;
   ^^^^^^
 
-es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10: WARNING - Suspicious code. The result of the 'in' operator is not being used.
+es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9: WARNING - Suspicious code. The result of the 'in' operator is not being used.
   b in {};
   ^^^^^^^
 
-es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:11: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
+es6/v20180319/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10: WARNING - Suspicious code. The result of the 'eq' operator is not being used.
   c == 0;
   ^^^^^^
 

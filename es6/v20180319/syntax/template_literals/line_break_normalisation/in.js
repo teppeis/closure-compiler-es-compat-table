@@ -1,6 +1,6 @@
 // syntax / template literals / line break normalisation
-// NOTE: Edit in binary mode. This code includes various line breaks (CR, LF, CRLF).
 module.exports = function() {
+  // NOTE: Edit carefully! This code includes various line breaks (CR, LF and CRLF).
   var cr   = `xy`;
   var lf   = `x
 y`;
