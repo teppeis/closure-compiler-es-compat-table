@@ -6,7 +6,6 @@ module.exports = function() {
     scopes.push(function(){ return i; });
   }
   let passed = (scopes[0]() === 0 && scopes[1]() === 1);
-
   scopes = [];
   for(let i in { a:1, b:1 }) {
     scopes.push(function(){ return i; });

@@ -1,6 +1,6 @@
 // syntax / destructuring, assignment / throws on null and undefined
 module.exports = function() {
-  var a,b;
+  var a = 'pass a', b = 'pass b';
   try {
     ({a} = null);
     return false;
@@ -15,6 +15,5 @@ module.exports = function() {
     if (!(e instanceof TypeError))
       return false;
   }
-  return true;
-
+  return a === 'pass a' && b === 'pass b';
 };

@@ -10,7 +10,6 @@ module.exports = function() {
   passed    &= item.value === 7 && item.done === false;
   item = iterator.next();
   passed    &= item.value === undefined && item.done === true;
-
   passed &= g.constructor === (function*(){}).constructor;
   return passed;
 

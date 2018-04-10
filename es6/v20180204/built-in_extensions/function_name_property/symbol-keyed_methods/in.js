@@ -6,7 +6,6 @@ module.exports = function() {
     [sym1]: function(){},
     [sym2]: function(){}
   };
-
   return o[sym1].name === "[foo]" &&
 o[sym2].name === "";
 
