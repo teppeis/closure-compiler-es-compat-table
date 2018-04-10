@@ -1,6 +1,7 @@
 // misc / Proxy, internal 'get' calls / String.prototype.split
 module.exports = function() {
-// String.prototype.split functions -> Get -> [[Get]]
+  throw new Error('eval() and Function() cannot be transpiled');
+  // String.prototype.split functions -> Get -> [[Get]]
   var get = [];
   var proxied = {};
   proxied[Symbol.toPrimitive] = Function();

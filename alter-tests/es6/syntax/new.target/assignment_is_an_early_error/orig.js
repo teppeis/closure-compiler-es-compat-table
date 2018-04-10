@@ -1,5 +1,6 @@
 // syntax / new.target / assignment is an early error
 module.exports = function() {
+  throw new Error('eval() and Function() cannot be transpiled');
   var passed = false;
   new function f() {
     passed = (new.target === f);

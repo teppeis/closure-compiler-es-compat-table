@@ -1,6 +1,7 @@
 // misc / Proxy, internal 'get' calls / Array.prototype iteration methods
 module.exports = function() {
-// Array.prototype methods -> Get -> [[Get]]
+  throw new Error('eval() and Function() cannot be transpiled');
+  // Array.prototype methods -> Get -> [[Get]]
   var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
     'indexOf', 'join', 'lastIndexOf', 'map', 'reduce', 'reduceRight', 'some'];
   var get;

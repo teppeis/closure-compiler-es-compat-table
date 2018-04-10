@@ -1,5 +1,6 @@
 // syntax / template literals / line break normalisation
 module.exports = function() {
+  throw new Error('eval() and Function() cannot be transpiled');
   var cr   = eval("`x" + String.fromCharCode(13)    + "y`");
   var lf   = eval("`x" + String.fromCharCode(10)    + "y`");
   var crlf = eval("`x" + String.fromCharCode(13,10) + "y`");

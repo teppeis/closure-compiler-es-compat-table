@@ -1,6 +1,7 @@
 // misc / Proxy, internal 'get' calls / ToPrimitive
 module.exports = function() {
-// ToPrimitive -> Get -> [[Get]]
+  throw new Error('eval() and Function() cannot be transpiled');
+  // ToPrimitive -> Get -> [[Get]]
   var get = [];
   var p = new Proxy({toString:Function()}, { get: function(o, k) { get.push(k); return o[k]; }});
   p + 3;

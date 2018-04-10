@@ -1,5 +1,6 @@
 // syntax / destructuring, declarations / defaults, let temporal dead zone
 module.exports = function() {
+  throw new Error('eval() and Function() cannot be transpiled');
   var {a, b = 2} = {a:1};
   try {
     eval("let {c = c} = {};");

@@ -1,6 +1,7 @@
 // misc / Proxy, internal 'get' calls / ToPropertyDescriptor
 module.exports = function() {
-// ToPropertyDescriptor -> Get -> [[Get]]
+  throw new Error('eval() and Function() cannot be transpiled');
+  // ToPropertyDescriptor -> Get -> [[Get]]
   var get = [];
   var p = new Proxy({
     enumerable: true, configurable: true, value: true,
