@@ -28,9 +28,12 @@ case "$O" in
   3 ) COMPILATION_LEVEL="ADVANCED" ;;
 esac
 
-RUNTIME=${RUNTIME:-0}
 if [ "$RUNTIME" = 1 ]; then
     forceInject="--force_inject_library es6_runtime"
+fi
+# shellcheck disable=SC2153
+if [ "$DEBUG" = 1 ]; then
+    debug="--debug"
 fi
 
 errorTmp=$(mktemp)
@@ -41,7 +44,7 @@ for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
     ERRORLOG="$DIR/error.txt"
     rm -rf "$ERRORLOG"
     # shellcheck disable=SC2086
-    $closure $forceInject \
+    $closure $forceInject $debug \
         --formatting PRETTY_PRINT \
         -O "$COMPILATION_LEVEL" \
         --language_in ECMASCRIPT_NEXT \
