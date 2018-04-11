@@ -54,6 +54,7 @@ $jscomp.makeIterator = function(a) {
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = !1;
   (function(a) {
     a = $jscomp.makeIterator(a);
@@ -65,5 +66,4 @@ module.exports = function() {
   }}));
   return a;
 };
-$jscomp.initSymbolIterator();
 

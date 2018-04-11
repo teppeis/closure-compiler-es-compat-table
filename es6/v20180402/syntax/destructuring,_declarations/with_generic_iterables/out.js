@@ -54,9 +54,9 @@ $jscomp.makeIterator = function(a) {
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = $jscomp.makeIterator(global.__createIterableObject([1, 2])), b = a.next().value, c = a.next().value;
   a = a.next().value;
   return 1 === b && 2 === c && void 0 === a;
 };
-$jscomp.initSymbolIterator();
 

@@ -1,5 +1,6 @@
 // syntax / for..of loops / iterator closing, break
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var closed = false;
   var iter = __createIterableObject([1, 2, 3], {
     'return': function(){ closed = true; return {}; }
@@ -9,7 +10,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180402/syntax/for..of_loops/iterator_closing,_break/in.js:7: WARNING - unreachable code
+es6/v20180402/syntax/for..of_loops/iterator_closing,_break/in.js:8: WARNING - unreachable code
   for (var it of iter) break;
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

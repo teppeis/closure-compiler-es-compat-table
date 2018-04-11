@@ -271,6 +271,7 @@ $jscomp.polyfill("Promise", function(a) {
   return c;
 }, "es6", "es3");
 module.exports = function(a) {
+  $jscomp.initSymbolIterator();
   var d = Promise.all(global.__createIterableObject([new Promise(function(a) {
     setTimeout(a, 2000, "foo");
   }), new Promise(function(a) {
@@ -289,5 +290,4 @@ module.exports = function(a) {
     2 === e && a();
   });
 };
-$jscomp.initSymbolIterator();
 

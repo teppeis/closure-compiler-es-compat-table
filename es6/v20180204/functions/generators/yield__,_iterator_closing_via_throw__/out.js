@@ -52,6 +52,7 @@ $jscomp.makeIterator = function(a) {
   return c ? c.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = !1, c = global.__createIterableObject([1, 2, 3], {"throw":void 0, "return":function() {
     a = !0;
     return {done:!0};
@@ -131,5 +132,4 @@ module.exports = function() {
   d["throw"]();
   return a;
 };
-$jscomp.initSymbolIterator();
 

@@ -61,8 +61,8 @@ $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = global.__createIterableObject(["b", "c", "d"]);
   return "d" === ["a"].concat($jscomp.arrayFromIterable(a), ["e"])[3];
 };
-$jscomp.initSymbolIterator();
 

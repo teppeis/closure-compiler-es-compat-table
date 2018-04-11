@@ -52,6 +52,7 @@ $jscomp.makeIterator = function(a) {
   return c ? c.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = "", c = __createIterableObject([1, 2, 3], {"return":function() {
     a += "a";
     return {done:!0};

@@ -1,5 +1,6 @@
 // built-ins / typed arrays / constructors accept generic iterables
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var constructors = [
     'Int8Array',
     'Uint8Array',

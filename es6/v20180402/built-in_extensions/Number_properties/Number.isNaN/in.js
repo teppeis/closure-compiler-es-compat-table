@@ -1,5 +1,8 @@
 // built-in extensions / Number properties / Number.isNaN
 module.exports = function() {
-  return typeof Number.isNaN === 'function';
-
+  return Number.isNaN(NaN) === true
+    &&  Number.isNaN(0) === false
+    &&  Number.isNaN(null) === false
+    &&  Number.isNaN(undefined) === false
+    &&  Number.isNaN('') === false;
 };

@@ -254,6 +254,7 @@ $jscomp.generator.createGenerator = function(a, b) {
   return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = !1, b = global.__createIterableObject([1, 2, 3], {"throw":void 0, "return":function() {
     a = !0;
     return {done:!0};
@@ -274,5 +275,4 @@ module.exports = function() {
   c["throw"]();
   return a;
 };
-$jscomp.initSymbolIterator();
 

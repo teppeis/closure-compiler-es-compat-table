@@ -1,5 +1,6 @@
 // functions / generators / yield *, generic iterables
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var iterator = (function * generator() {
     yield * global.__createIterableObject([5, 6, 7]);
   }());
@@ -14,4 +15,3 @@ module.exports = function() {
   return passed;
 
 };
-$jscomp.initSymbolIterator();

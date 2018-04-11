@@ -1,7 +1,8 @@
 // built-in extensions / Number properties / Number.parseInt
 module.exports = function() {
-  var actualGlobal = Function('return this')();
-  return typeof Number.parseInt === 'function'
-&& Number.parseInt === actualGlobal.parseInt;
-
+  return Number.parseInt('015', 10) === 15
+    && Number.parseInt('015') === 15
+    && Number.parseInt('015', 8) === 13
+    && Number.parseInt('015', 16) === 21
+    && Number.parseInt('0x15') === 21;
 };

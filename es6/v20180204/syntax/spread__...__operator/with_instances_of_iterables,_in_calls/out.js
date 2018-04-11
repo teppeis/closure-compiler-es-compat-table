@@ -61,8 +61,8 @@ $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = global.__createIterableObject([1, 2, 3]);
   return 3 === Math.max.apply(Math, [].concat($jscomp.arrayFromIterable(Object.create(a))));
 };
-$jscomp.initSymbolIterator();
 

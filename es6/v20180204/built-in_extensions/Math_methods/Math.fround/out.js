@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" === typeof Math.fround;
+  return 1.4 !== Math.fround(1.4);
 };
 

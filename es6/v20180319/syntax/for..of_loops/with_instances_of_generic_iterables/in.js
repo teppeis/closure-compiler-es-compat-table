@@ -1,5 +1,6 @@
 // syntax / for..of loops / with instances of generic iterables
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var result = "";
   var iterable = global.__createIterableObject([1, 2, 3]);
   for (var item of Object.create(iterable)) {
@@ -8,4 +9,3 @@ module.exports = function() {
   return result === "123";
 
 };
-$jscomp.initSymbolIterator();

@@ -82,10 +82,10 @@ $jscomp.polyfill("Array.from", function(a) {
   };
 }, "es6", "es3");
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = global.__createIterableObject(["foo", "bar", "bal"]);
   return "food0,bard1,bald2" === Array.from(a, function(a, c) {
     return a + this.baz + c;
   }, {baz:"d"}) + "";
 };
-$jscomp.initSymbolIterator();
 

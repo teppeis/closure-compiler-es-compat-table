@@ -201,6 +201,7 @@ $jscomp.polyfill("WeakSet", function(a) {
   return d;
 }, "es6", "es3");
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = !1, b = global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
@@ -211,5 +212,4 @@ module.exports = function() {
   }
   return a;
 };
-$jscomp.initSymbolIterator();
 

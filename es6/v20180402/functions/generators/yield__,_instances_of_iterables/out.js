@@ -254,6 +254,7 @@ $jscomp.generator.createGenerator = function(a, b) {
   return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = function e() {
     return $jscomp.generator.createGenerator(e, function(a) {
       switch(a.nextAddress) {

@@ -82,8 +82,8 @@ $jscomp.polyfill("Array.from", function(a) {
   };
 }, "es6", "es3");
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var a = global.__createIterableObject([1, 2, 3]);
   return "1,2,3" === Array.from(a) + "";
 };
-$jscomp.initSymbolIterator();
 

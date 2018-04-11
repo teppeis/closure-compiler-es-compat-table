@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "number" === typeof Number.MIN_SAFE_INTEGER;
+  return Number.MIN_SAFE_INTEGER === -(Math.pow(2, 53) - 1);
 };
 

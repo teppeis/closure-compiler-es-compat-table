@@ -52,7 +52,7 @@ module.exports = function() {
   try {
     "a".startsWith(/./);
   } catch (a) {
-    return "function" === typeof String.prototype.startsWith;
+    return "foobar".startsWith("foo");
   }
 };
 
