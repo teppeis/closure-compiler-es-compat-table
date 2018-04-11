@@ -14,6 +14,7 @@ TEST_DIR=$2
 basedir=$(cd "$(dirname "$0")" && pwd)
 closure="$basedir/node_modules/.bin/closure-gun"
 closureVer=$("$basedir/get-closure-version.sh")
+pkgname=$(basename "$basedir")
 
 BUILD_DIR="$basedir/$ES_VERSION/$closureVer"
 
@@ -50,7 +51,8 @@ for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
         --language_in ECMASCRIPT_NEXT \
         --language_out ECMASCRIPT5 \
         --js "$FILE" \
-        > "$OUT" 2> "$errorTmp" || true
+        2> "$errorTmp" \
+        | sed -e "s%[^ (]*/$pkgname/%%g" > "$OUT" || true
 
     # exit code of JNI is wrong
     if [ "$(cat "$errorTmp")" != "" ]; then
@@ -66,7 +68,8 @@ for FILE in $(find "$BUILD_DIR" -type f -name in.js | sort); do
             echo ""
             echo "----------------------------------------------------------"
             cat "$errorTmp"
-        } > "$ERRORLOG"
+        } | sed -e "s%[^ (]*/$pkgname/%%g" \
+            > "$ERRORLOG"
     else
         echo "- $DIR_DISPLAY: OK"
     fi

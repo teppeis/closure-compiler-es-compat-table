@@ -57,6 +57,6 @@ const opts = {
   await execa('./compile.sh', [esVer, targetDir], opts);
   console.log('Check');
   await execa('./check.sh', [esVer, targetDir], opts);
-  console.log('Cleanup');
-  await execa('./clean-path.sh', [esVer], opts);
+  // console.log('Cleanup');
+  // await execa('./clean-path.sh', [esVer], opts);
 })();
