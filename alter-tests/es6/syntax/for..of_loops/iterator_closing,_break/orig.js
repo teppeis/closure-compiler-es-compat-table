@@ -1,5 +1,6 @@
 // syntax / for..of loops / iterator closing, break
 module.exports = function() {
+  $jscomp.initSymbolIterator();
   var closed = false;
   var iter = __createIterableObject([1, 2, 3], {
     'return': function(){ closed = true; return {}; }

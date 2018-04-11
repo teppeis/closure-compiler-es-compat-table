@@ -1,5 +1,6 @@
 // built-ins / Promise / Promise.race, generic iterables
 module.exports = function(asyncTestPassed) {
+  $jscomp.initSymbolIterator();
   var fulfills = Promise.race(global.__createIterableObject([
     new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
     new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
@@ -16,4 +17,3 @@ module.exports = function(asyncTestPassed) {
   }
 
 };
-$jscomp.initSymbolIterator();
