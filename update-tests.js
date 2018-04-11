@@ -18,18 +18,18 @@ class TestCode {
     this.isAsync = /\basyncTestPassed\(/.test(expr);
     this.useEval = /\beval\(/.test(expr) || /\bFunction\(/.test(expr);
     // TODO: should inject automatically
-    this.useCreateIterable = /global.__createIterableObject\(/.test(expr);
+    this.useCreateIterable = /__createIterableObject\(/.test(expr);
   }
 
   toString(ignoreEval = false) {
     const param = this.isAsync ? 'asyncTestPassed' : '';
     const throws = this.useEval && !ignoreEval ?
       `throw new Error('eval() and Function() cannot be transpiled');\n` : '';
-    const initIterator = this.useCreateIterable ? '\n$jscomp.initSymbolIterator();' : '';
+    const initIterator = this.useCreateIterable ? '$jscomp.initSymbolIterator();\n' : '';
     const src = `// ${this.name}
 module.exports = function(${param}) {
-${throws}${this.expr}
-};${initIterator}`;
+${throws}${initIterator}${this.expr}
+};`;
     return format(src);
   }
 }
