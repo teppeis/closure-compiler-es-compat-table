@@ -34,7 +34,7 @@ draft__stage_2_/throw_expressions/logical/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/conditionals/error.txt: [CompileError]
-draft__stage_2_/Symbol.prototype.description/out.js: ReferenceError: Symbol is not defined
+draft__stage_2_/Symbol.prototype.description/out.js: [InvalidResult: false]
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
 proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Float32x4/out.js: ReferenceError: SIMD is not defined
@@ -95,13 +95,13 @@ proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMD
 proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMD/out.js: ReferenceError: SIMD is not defined
 proposal__stage_1_/Realms/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
-proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: ReferenceError: Symbol is not defined
+proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Observable.prototype.subscribe/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable_constructor_behavior/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable.prototype_Symbol.observable_/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable.of/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable.from/out.js: ReferenceError: Observable is not defined
-proposal__stage_1_/Frozen_Realms_API/out.js: ReferenceError: Reflect is not defined
+proposal__stage_1_/Frozen_Realms_API/out.js: TypeError: Cannot read property 'immutableRoot' of undefined
 proposal__stage_1_/Math.signbit/out.js: TypeError: Object #<Object> has no method 'signbit'
 proposal__stage_1_/Math_extensions_proposal/Math.clamp/out.js: TypeError: Object #<Object> has no method 'clamp'
 proposal__stage_1_/Math_extensions_proposal/Math.DEG_PER_RAD/out.js: [InvalidResult: false]
@@ -111,70 +111,70 @@ proposal__stage_1_/Math_extensions_proposal/Math.RAD_PER_DEG/out.js: [InvalidRes
 proposal__stage_1_/Math_extensions_proposal/Math.radians/out.js: TypeError: Object #<Object> has no method 'radians'
 proposal__stage_1_/Math_extensions_proposal/Math.scale/out.js: TypeError: Object #<Object> has no method 'scale'
 proposal__stage_1_/Promise.try/basic_support/out.js: [InvalidResult: false]
-proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var e = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(e.resolve, e.reject);
+      a(b.resolve, b.reject);
     } catch (h) {
-      e.reject(h);
+      b.reject(h);
     }
   } has no method 'try'
-proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+      a(b.resolve, b.reject);
+    } catch (h) {
+      b.reject(h);
     }
   } has no method 'try'
-proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+      a(b.resolve, b.reject);
+    } catch (h) {
+      b.reject(h);
     }
   } has no method 'try'
-proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+      a(b.resolve, b.reject);
+    } catch (h) {
+      b.reject(h);
     }
   } has no method 'try'
-proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+      a(b.resolve, b.reject);
+    } catch (h) {
+      b.reject(h);
     }
   } has no method 'try'
-proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeError: Object function (b) {
+proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeError: Object function (a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var b = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+      a(b.resolve, b.reject);
+    } catch (h) {
+      b.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of/out.js: TypeError: Object function (a) {
@@ -183,8 +183,8 @@ proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of/out.js: T
     this.size = 0;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var e; !(e = a.next()).done;) {
-        e = e.value, this.set(e[0], e[1]);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
       }
     }
   } has no method 'of'
@@ -194,8 +194,8 @@ proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.from/out.js:
     this.size = 0;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var e; !(e = a.next()).done;) {
-        e = e.value, this.set(e[0], e[1]);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
       }
     }
   } has no method 'from'
@@ -203,8 +203,8 @@ proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.of/out.js: T
     this.map_ = new Map;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var c; !(c = a.next()).done;) {
-        this.add(c.value);
+      for (var b; !(b = a.next()).done;) {
+        this.add(b.value);
       }
     }
     this.size = this.map_.size;
@@ -213,14 +213,14 @@ proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.from/out.js:
     this.map_ = new Map;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var c; !(c = a.next()).done;) {
-        this.add(c.value);
+      for (var b; !(b = a.next()).done;) {
+        this.add(b.value);
       }
     }
     this.size = this.map_.size;
   } has no method 'from'
 proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.of/out.js: TypeError: Object function (a) {
-    this.id_ = (h += Math.random() + 1).toString();
+    this.id_ = (f += Math.random() + 1).toString();
     if (a) {
       $jscomp.initSymbol();
       $jscomp.initSymbolIterator();
@@ -231,7 +231,7 @@ proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.of/out.j
     }
   } has no method 'of'
 proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.from/out.js: TypeError: Object function (a) {
-    this.id_ = (h += Math.random() + 1).toString();
+    this.id_ = (f += Math.random() + 1).toString();
     if (a) {
       $jscomp.initSymbol();
       $jscomp.initSymbolIterator();
@@ -304,8 +304,8 @@ proposal__stage_1_/Collections_methods/Map.groupBy/out.js: TypeError: Object fun
     this.size = 0;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var e; !(e = a.next()).done;) {
-        e = e.value, this.set(e[0], e[1]);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
       }
     }
   } has no method 'groupBy'
@@ -315,8 +315,8 @@ proposal__stage_1_/Collections_methods/Map.keyBy/out.js: TypeError: Object funct
     this.size = 0;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var e; !(e = a.next()).done;) {
-        e = e.value, this.set(e[0], e[1]);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
       }
     }
   } has no method 'keyBy'
@@ -355,12 +355,12 @@ strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileErro
 strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt: [CompileError]
-pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js: [InvalidResult: false]
+pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js: [InvalidResult: false]
