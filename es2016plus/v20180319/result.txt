@@ -27,7 +27,7 @@
 2017_features/async_functions/await,_rejection/out.js: [Pass]
 2017_features/async_functions/must_await_a_value/out.js: [Pass]
 2017_features/async_functions/can_await_non-Promise_values/out.js: [Pass]
-2017_features/async_functions/cannot_await_in_parameters/error.txt: [NotExpectedCompileError]
+2017_features/async_functions/cannot_await_in_parameters/out.js: SyntaxError: Unexpected identifier
 2017_features/async_functions/async_methods,_object_literals/out.js: [Pass]
 2017_features/async_functions/async_methods,_classes/out.js: [Pass]
 2017_features/async_functions/async_arrow_functions/out.js: [Pass]

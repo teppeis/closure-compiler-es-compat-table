@@ -202,11 +202,11 @@ functions/super/in_methods,_property_access/out.js: [Pass]
 functions/super/in_methods,_method_calls/out.js: [Pass]
 functions/super/method_calls_use_correct_this_binding/out.js: [Pass]
 functions/super/constructor_calls_use_correct_new.target_binding/error.txt: [CompileError]
-functions/super/is_statically_bound/out.js: [InvalidResult: false]
+functions/super/is_statically_bound/out.js: [Pass]
 functions/super/super___invokes_the_correct_constructor/out.js: [Pass]
 functions/generators/basic_functionality/out.js: [Pass]
 functions/generators/generator_function_expressions/out.js: [Pass]
-functions/generators/correct_this_binding/out.js: [InvalidResult: 0]
+functions/generators/correct_this_binding/out.js: [Pass]
 functions/generators/cant_use_this_with_new/out.js: [InvalidResult: undefined]
 functions/generators/sending/out.js: [Pass]
 functions/generators/%GeneratorPrototype%/out.js: [InvalidResult: 0]
@@ -391,7 +391,7 @@ built-ins/Reflect/Reflect.construct_creates_instances_from_third_argument/out.js
 built-ins/Reflect/Reflect.construct,_Array_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_RegExp_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_Function_subclassing/out.js: [InvalidResult: false]
-built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<b> has no method 'createResolveAndReject_'
+built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<F> has no method 'createResolveAndReject_'
 built-ins/Promise/basic_functionality/out.js: [Pass]
 built-ins/Promise/constructor_requires_new/out.js: [Pass]
 built-ins/Promise/Promise.prototype_isnt_an_instance/out.js: [Skip]
@@ -411,8 +411,8 @@ built-ins/Symbol/new_Symbol___throws/out.js: [InvalidResult: undefined]
 built-ins/Symbol/Object_symbol_/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_primitives/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_objects/out.js: [InvalidResult: false]
-built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (b) {
-    return $jscomp.SYMBOL_PREFIX + (b || "") + a++;
+built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function Symbol(opt_description) {
+    return $jscomp.SYMBOL_PREFIX + (opt_description || "") + counter++;
   } has no method 'for'
 built-ins/well-known_symbols/Symbol.hasInstance/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.isConcatSpreadable/out.js: [InvalidResult: false]
@@ -439,13 +439,13 @@ built-ins/well-known_symbols/Symbol.toStringTag/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins/out.js: [InvalidResult: 0]
 built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins/out.js: TypeError: Property 'jscomp_symbol_iterator0' of object  is not a function
 built-ins/well-known_symbols/Symbol.toStringTag,_misc._built-ins/out.js: [InvalidResult: false]
-built-ins/well-known_symbols/Symbol.unscopables/error.txt: [CompileError]
+built-ins/well-known_symbols/Symbol.unscopables/out.js: [InvalidResult: false]
 built-in_extensions/Object_static_methods/Object.assign/out.js: [Pass]
 built-in_extensions/Object_static_methods/Object.is/out.js: [Pass]
 built-in_extensions/Object_static_methods/Object.getOwnPropertySymbols/out.js: [InvalidResult: false]
 built-in_extensions/Object_static_methods/Object.setPrototypeOf/out.js: [Pass]
-built-in_extensions/function_name_property/function_statements/out.js: [InvalidResult: false]
-built-in_extensions/function_name_property/function_expressions/out.js: [InvalidResult: false]
+built-in_extensions/function_name_property/function_statements/out.js: [Pass]
+built-in_extensions/function_name_property/function_expressions/out.js: [Pass]
 built-in_extensions/function_name_property/new_Function/out.js: [InvalidResult: false]
 built-in_extensions/function_name_property/bound_functions/out.js: [InvalidResult: false]
 built-in_extensions/function_name_property/variables__function_/out.js: [InvalidResult: false]
@@ -507,7 +507,7 @@ built-in_extensions/Number_properties/Number.isNaN/out.js: [Pass]
 built-in_extensions/Number_properties/Number.parseFloat/out.js: [Pass]
 built-in_extensions/Number_properties/Number.parseInt/out.js: [Pass]
 built-in_extensions/Number_properties/Number.EPSILON/out.js: [Pass]
-built-in_extensions/Number_properties/Number.MIN_SAFE_INTEGER/out.js: [InvalidResult: false]
+built-in_extensions/Number_properties/Number.MIN_SAFE_INTEGER/out.js: [Pass]
 built-in_extensions/Number_properties/Number.MAX_SAFE_INTEGER/out.js: [Pass]
 built-in_extensions/Math_methods/Math.clz32/out.js: [Pass]
 built-in_extensions/Math_methods/Math.imul/out.js: [Pass]
@@ -566,7 +566,7 @@ misc/prototype_of_bound_functions/subclasses/error.txt: [CompileError]
 misc/Proxy,_internal_get_calls/ToPrimitive/out.js: Error: eval() and Function() cannot be transpiled
 misc/Proxy,_internal_get_calls/CreateListFromArrayLike/out.js: ReferenceError: Proxy is not defined
 misc/Proxy,_internal_get_calls/instanceof_operator/out.js: Error: eval() and Function() cannot be transpiled
-misc/Proxy,_internal_get_calls/HasBinding/error.txt: [CompileError]
+misc/Proxy,_internal_get_calls/HasBinding/out.js: ReferenceError: Proxy is not defined
 misc/Proxy,_internal_get_calls/CreateDynamicFunction/out.js: ReferenceError: Proxy is not defined
 misc/Proxy,_internal_get_calls/ClassDefinitionEvaluation/out.js: Error: eval() and Function() cannot be transpiled
 misc/Proxy,_internal_get_calls/IteratorComplete,_IteratorValue/out.js: ReferenceError: Proxy is not defined
@@ -645,7 +645,7 @@ misc/own_property_order/Reflect.ownKeys,_symbol_key_order/out.js: [Pass]
 misc/Updated_identifier_syntax/var_U+2E2F_/out.js: [InvalidResult: false]
 misc/Updated_identifier_syntax/var_U+102C0_/error.txt: [CompileError]
 misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/out.js: [Pass]
-misc/miscellaneous/duplicate_property_names_in_strict_mode/error.txt: [CompileError]
+misc/miscellaneous/duplicate_property_names_in_strict_mode/out.js: [InvalidResult: false]
 misc/miscellaneous/no_semicolon_needed_after_do-while/out.js: [Pass]
 misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/out.js: [Pass]
 misc/miscellaneous/accessors_arent_constructors/out.js: [InvalidResult: undefined]
@@ -657,7 +657,7 @@ misc/miscellaneous/function_length_is_configurable/out.js: [InvalidResult: false
 annex_b/non-strict_function_semantics/hoisted_block-level_function_declaration/out.js: ReferenceError: g is not defined
 annex_b/non-strict_function_semantics/labeled_function_statements/error.txt: [CompileError]
 annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/error.txt: [CompileError]
-annex_b/__proto___in_object_literals/basic_support/out.js: [InvalidResult: false]
+annex_b/__proto___in_object_literals/basic_support/out.js: [Pass]
 annex_b/__proto___in_object_literals/multiple___proto___is_an_error/out.js: Error: eval() and Function() cannot be transpiled
 annex_b/__proto___in_object_literals/not_a_computed_property/out.js: [InvalidResult: false]
 annex_b/__proto___in_object_literals/not_a_shorthand_property/out.js: [InvalidResult: false]

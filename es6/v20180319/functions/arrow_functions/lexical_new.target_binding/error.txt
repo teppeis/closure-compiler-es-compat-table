@@ -47,10 +47,8 @@ null
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:680)
 	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:435)
 	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:51)
-	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
-	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1081)
-	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:874)
+	at com.google.javascript.jscomp.Compiler.transpileAndDontCheck(Compiler.java:1055)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:871)
 	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:103)
 	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:808)
 	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:805)
@@ -60,4 +58,4 @@ null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.IllegalStateException
-	... 43 more
+	... 41 more
