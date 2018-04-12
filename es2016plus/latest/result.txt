@@ -2,7 +2,7 @@
 2016_features/exponentiation______operator/assignment/out.js: [Pass]
 2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes/out.js: [Pass]
-2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [InvalidResult: false]
+2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [Pass]
 2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: TypeError: Object #<Int8Array> has no method 'includes'
 2016_misc/generator_functions_cant_be_used_with_new/out.js: [InvalidResult: undefined]
 2016_misc/generator_throw___caught_by_inner_generator/out.js: [Pass]
@@ -77,9 +77,9 @@
 2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/error.txt: [CompileError]
 2018_features/object_rest_spread_properties/object_rest_properties/out.js: [Pass]
 2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
-2018_features/Promise.prototype.finally/basic_support/out.js: TypeError: Object [object Object] has no method 'finally'
-2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: TypeError: Object [object Object] has no method 'finally'
-2018_features/Promise.prototype.finally/change_rejection_value/out.js: TypeError: Object [object Object] has no method 'finally'
+2018_features/Promise.prototype.finally/basic_support/out.js: [Pass]
+2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
+2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]
 2018_features/template_literal_revision/error.txt: [CompileError]
 2018_features/s__dotAll__flag_for_regular_expressions/error.txt: [CompileError]
 2018_features/RegExp_named_capture_groups/out.js: SyntaxError: Invalid regular expression: /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/: Invalid group

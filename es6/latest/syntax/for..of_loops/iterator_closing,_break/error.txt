@@ -10,7 +10,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/syntax/for..of_loops/iterator_closing,_break/in.js:8: WARNING - unreachable code
+es6/v20180402/syntax/for..of_loops/iterator_closing,_break/in.js:8: WARNING - unreachable code
   for (var it of iter) break;
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

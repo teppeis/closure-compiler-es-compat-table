@@ -28,11 +28,11 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/built-ins/Proxy/has_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the 'in' operator is not being used.
+es6/v20180402/built-ins/Proxy/has_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the 'in' operator is not being used.
     'foo' in proxy;
     ^^^^^^^^^^^^^^
 
-es6/v20180319/built-ins/Proxy/has_handler_invariants/in.js:24: WARNING - Suspicious code. The result of the 'in' operator is not being used.
+es6/v20180402/built-ins/Proxy/has_handler_invariants/in.js:24: WARNING - Suspicious code. The result of the 'in' operator is not being used.
     'bar' in proxy;
     ^^^^^^^^^^^^^^
 

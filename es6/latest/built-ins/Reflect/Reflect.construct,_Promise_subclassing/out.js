@@ -135,7 +135,7 @@ $jscomp.polyfill("Promise", function(a) {
       this.batch_ = [];
       for (var a = 0; a < c.length; ++a) {
         var b = c[a];
-        delete c[a];
+        c[a] = null;
         try {
           b();
         } catch (l) {
@@ -219,8 +219,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   b.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var a = this.onSettledCallbacks_, b = 0; b < a.length; ++b) {
-        a[b].call(), a[b] = null;
+      for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
+        g.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
@@ -272,9 +272,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? g.asyncExecute(c) : this.onSettledCallbacks_.push(function() {
-      g.asyncExecute(c);
-    });
+    null == this.onSettledCallbacks_ ? g.asyncExecute(c) : this.onSettledCallbacks_.push(c);
   };
   b.resolve = f;
   b.reject = function(a) {

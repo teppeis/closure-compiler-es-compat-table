@@ -11,9 +11,9 @@ java.lang.RuntimeException: INTERNAL COMPILER ERROR.
 Please report this problem.
 
 null
-  Node(FUNCTION ): es6/v20180319/functions/arrow_functions/lexical_new.target_binding/in.js:4:11
+  Node(FUNCTION ): es6/v20180402/functions/arrow_functions/lexical_new.target_binding/in.js:4:11
     return x => new.target;
-  Parent(RETURN): es6/v20180319/functions/arrow_functions/lexical_new.target_binding/in.js:4:4
+  Parent(RETURN): es6/v20180402/functions/arrow_functions/lexical_new.target_binding/in.js:4:4
     return x => new.target;
 
 	at com.google.common.base.Preconditions.checkState(Preconditions.java:441)
@@ -45,7 +45,7 @@ null
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:749)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:305)
 	at com.google.javascript.jscomp.NodeTraversal.traverseEs6(NodeTraversal.java:680)
-	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:435)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:448)
 	at com.google.javascript.jscomp.Es6RewriteDestructuring.process(Es6RewriteDestructuring.java:51)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
@@ -54,7 +54,7 @@ null
 	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:103)
 	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:808)
 	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:805)
-	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)

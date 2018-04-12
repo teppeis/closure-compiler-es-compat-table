@@ -35,8 +35,10 @@ $jscomp.polyfill("Array.prototype.includes", function(a) {
     var c = this;
     c instanceof String && (c = String(c));
     var e = c.length;
-    for (b = b || 0; b < e; b++) {
-      if (c[b] == a || Object.is(c[b], a)) {
+    b = b || 0;
+    for (0 > b && (b = Math.max(b + e, 0)); b < e; b++) {
+      var f = c[b];
+      if (f === a || Object.is(f, a)) {
         return !0;
       }
     }

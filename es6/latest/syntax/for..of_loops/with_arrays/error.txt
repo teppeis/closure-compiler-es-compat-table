@@ -6,7 +6,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/syntax/for..of_loops/with_arrays/in.js:4: WARNING - unreachable code
+es6/v20180402/syntax/for..of_loops/with_arrays/in.js:4: WARNING - unreachable code
   for (var item of arr)
   ^^^^^^^^^^^^^^^^^^^^^
 

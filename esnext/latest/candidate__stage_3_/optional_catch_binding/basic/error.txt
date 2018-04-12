@@ -10,7 +10,7 @@ return false;
 
 };
 ----------------------------------------------------------
-esnext/v20180319/candidate__stage_3_/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
+esnext/v20180402/candidate__stage_3_/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
 catch {
       ^
 

@@ -72,8 +72,8 @@ $jscomp.polyfill("Promise", function(a) {
     this.batch_ = null;
   }
   function e(b) {
-    return b instanceof d ? b : new d(function(g, a) {
-      g(b);
+    return b instanceof d ? b : new d(function(a, c) {
+      a(b);
     });
   }
   if (a && !$jscomp.FORCE_POLYFILL_PROMISE) {
@@ -100,7 +100,7 @@ $jscomp.polyfill("Promise", function(a) {
       this.batch_ = [];
       for (var a = 0; a < b.length; ++a) {
         var c = b[a];
-        delete b[a];
+        b[a] = null;
         try {
           c();
         } catch (k) {
@@ -122,14 +122,14 @@ $jscomp.polyfill("Promise", function(a) {
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (h) {
-      a.reject(h);
+    } catch (g) {
+      a.reject(g);
     }
   };
   d.prototype.createResolveAndReject_ = function() {
     function b(b) {
-      return function(g) {
-        c || (c = !0, b.call(a, g));
+      return function(d) {
+        c || (c = !0, b.call(a, d));
       };
     }
     var a = this, c = !1;
@@ -158,15 +158,15 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
   };
-  d.prototype.resolveToNonPromiseObj_ = function(b) {
-    var a = void 0;
+  d.prototype.resolveToNonPromiseObj_ = function(a) {
+    var b = void 0;
     try {
-      a = b.then;
-    } catch (h) {
-      this.reject_(h);
+      b = a.then;
+    } catch (g) {
+      this.reject_(g);
       return;
     }
-    "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
+    "function" == typeof b ? this.settleSameAsThenable_(b, a) : this.fulfill_(a);
   };
   d.prototype.reject_ = function(a) {
     this.settle_(2, a);
@@ -184,8 +184,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   d.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var a = this.onSettledCallbacks_, c = 0; c < a.length; ++c) {
-        a[c].call(), a[c] = null;
+      for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
+        l.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
@@ -208,17 +208,17 @@ $jscomp.polyfill("Promise", function(a) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
-        } catch (m) {
-          g(m);
+        } catch (n) {
+          f(n);
         }
       } : b;
     }
-    var e, g, f = new d(function(a, b) {
+    var e, f, m = new d(function(a, b) {
       e = a;
-      g = b;
+      f = b;
     });
-    this.callWhenSettled_(b(a, e), b(c, g));
-    return f;
+    this.callWhenSettled_(b(a, e), b(c, f));
+    return m;
   };
   d.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -237,9 +237,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? l.asyncExecute(b) : this.onSettledCallbacks_.push(function() {
-      l.asyncExecute(b);
-    });
+    null == this.onSettledCallbacks_ ? l.asyncExecute(b) : this.onSettledCallbacks_.push(b);
   };
   d.resolve = e;
   d.reject = function(a) {
@@ -259,19 +257,32 @@ $jscomp.polyfill("Promise", function(a) {
     return c.done ? e([]) : new d(function(a, d) {
       function f(b) {
         return function(c) {
-          g[b] = c;
-          h--;
-          0 == h && a(g);
+          h[b] = c;
+          g--;
+          0 == g && a(h);
         };
       }
-      var g = [], h = 0;
+      var h = [], g = 0;
       do {
-        g.push(void 0), h++, e(c.value).callWhenSettled_(f(g.length - 1), d), c = b.next();
+        h.push(void 0), g++, e(c.value).callWhenSettled_(f(h.length - 1), d), c = b.next();
       } while (!c.done);
     });
   };
   return d;
 }, "es6", "es3");
+$jscomp.polyfill("Promise.prototype.finally", function(a) {
+  return a ? a : function(a) {
+    return this.then(function(c) {
+      return Promise.resolve(a()).then(function() {
+        return c;
+      });
+    }, function(c) {
+      return Promise.resolve(a()).then(function() {
+        throw c;
+      });
+    });
+  };
+}, "es8", "es3");
 module.exports = function(a) {
   var c = 0;
   Promise.reject("foobar").finally(function() {

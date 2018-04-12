@@ -11,7 +11,7 @@ a === 0;
 
 };
 ----------------------------------------------------------
-es2016plus/v20180319/2018_features/template_literal_revision/in.js:10: ERROR - Parse error. Invalid escape sequence
+es2016plus/v20180402/2018_features/template_literal_revision/in.js:10: ERROR - Parse error. Invalid escape sequence
   return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;
                   ^
 

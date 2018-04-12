@@ -11,7 +11,7 @@ asyncTestPassed();
 
 };
 ----------------------------------------------------------
-esnext/v20180319/candidate__stage_3_/optional_catch_binding/await/in.js:7: ERROR - Parse error. '(' expected
+esnext/v20180402/candidate__stage_3_/optional_catch_binding/await/in.js:7: ERROR - Parse error. '(' expected
 catch {
       ^
 

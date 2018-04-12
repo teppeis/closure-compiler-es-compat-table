@@ -11,7 +11,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/syntax/object_literal_extensions/computed_accessors/in.js:6: ERROR - ES6 transpilation of 'computed getter/setter in an object literal' is not yet implemented.
+es6/v20180402/syntax/object_literal_extensions/computed_accessors/in.js:6: ERROR - ES6 transpilation of 'computed getter/setter in an object literal' is not yet implemented.
       get [x] () { return 1 },
       ^^^^^^^^^^^^^^^^^^^^^^^
 

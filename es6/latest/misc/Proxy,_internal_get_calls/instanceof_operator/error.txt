@@ -10,11 +10,11 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:6: WARNING - unreachable code
+es6/v20180402/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:6: WARNING - unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 
-es6/v20180319/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:8: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+es6/v20180402/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:8: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
   ({}) instanceof p;
   ^^^^^^^^^^^^^^^^^
 

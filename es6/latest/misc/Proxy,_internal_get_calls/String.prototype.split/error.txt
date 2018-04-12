@@ -11,7 +11,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/misc/Proxy,_internal_get_calls/String.prototype.split/in.js:5: WARNING - unreachable code
+es6/v20180402/misc/Proxy,_internal_get_calls/String.prototype.split/in.js:5: WARNING - unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 

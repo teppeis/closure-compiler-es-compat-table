@@ -13,7 +13,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180319/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+es6/v20180402/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
   Object.isExtensible(
   ^^^^^^^^^^^^^^^^^^^^
 

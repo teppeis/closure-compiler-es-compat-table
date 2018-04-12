@@ -115,11 +115,11 @@ proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Ob
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var e = this.createResolveAndReject_();
+    var a = this.createResolveAndReject_();
     try {
-      b(e.resolve, e.reject);
+      b(a.resolve, a.reject);
     } catch (h) {
-      e.reject(h);
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (b) {
@@ -129,8 +129,8 @@ proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Ob
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+    } catch (h) {
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (b) {
@@ -140,8 +140,8 @@ proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object 
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+    } catch (h) {
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (b) {
@@ -151,8 +151,8 @@ proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Obje
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+    } catch (h) {
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (b) {
@@ -162,8 +162,8 @@ proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeEr
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+    } catch (h) {
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeError: Object function (b) {
@@ -173,8 +173,8 @@ proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeErr
     var a = this.createResolveAndReject_();
     try {
       b(a.resolve, a.reject);
-    } catch (k) {
-      a.reject(k);
+    } catch (h) {
+      a.reject(h);
     }
   } has no method 'try'
 proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of/out.js: TypeError: Object function (a) {
