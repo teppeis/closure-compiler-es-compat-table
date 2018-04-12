@@ -11,7 +11,7 @@ return it % 2;
 
 };
 ----------------------------------------------------------
-esnext/v20180204/strawman__stage_0_/function_expression_decorators/in.js:8: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+esnext/v20180319/strawman__stage_0_/function_expression_decorators/in.js:8: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
 return (@inverse function(it){
         ^
 

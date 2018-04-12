@@ -3,8 +3,8 @@ $jscomp.scope = {};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
-  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
   return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
@@ -18,8 +18,8 @@ $jscomp.initSymbol = function() {
 };
 $jscomp.Symbol = function() {
   var a = 0;
-  return function(c) {
-    return $jscomp.SYMBOL_PREFIX + (c || "") + a++;
+  return function(b) {
+    return $jscomp.SYMBOL_PREFIX + (b || "") + a++;
   };
 }();
 $jscomp.initSymbolIterator = function() {
@@ -33,9 +33,9 @@ $jscomp.initSymbolIterator = function() {
   };
 };
 $jscomp.arrayIterator = function(a) {
-  var c = 0;
+  var b = 0;
   return $jscomp.iteratorPrototype(function() {
-    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
   });
 };
 $jscomp.iteratorPrototype = function(a) {
@@ -48,70 +48,233 @@ $jscomp.iteratorPrototype = function(a) {
 };
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
-  var c = a[Symbol.iterator];
-  return c ? c.call(a) : $jscomp.arrayIterator(a);
+  var b = a[Symbol.iterator];
+  return b ? b.call(a) : $jscomp.arrayIterator(a);
+};
+$jscomp.generator = {};
+$jscomp.generator.ensureIteratorResultIsObject_ = function(a) {
+  if (!(a instanceof Object)) {
+    throw new TypeError("Iterator result " + a + " is not an object");
+  }
+};
+$jscomp.generator.Context = function() {
+  this.isRunning_ = !1;
+  this.yieldAllIterator_ = null;
+  this.yieldResult = void 0;
+  this.nextAddress = 1;
+  this.finallyAddress_ = this.catchAddress_ = 0;
+  this.finallyContexts_ = this.abruptCompletion_ = null;
+};
+$jscomp.generator.Context.prototype.start_ = function() {
+  if (this.isRunning_) {
+    throw new TypeError("Generator is already running");
+  }
+  this.isRunning_ = !0;
+};
+$jscomp.generator.Context.prototype.stop_ = function() {
+  this.isRunning_ = !1;
+};
+$jscomp.generator.Context.prototype.jumpToErrorHandler_ = function() {
+  this.nextAddress = this.catchAddress_ || this.finallyAddress_;
+};
+$jscomp.generator.Context.prototype.next_ = function(a) {
+  this.yieldResult = a;
+};
+$jscomp.generator.Context.prototype.throw_ = function(a) {
+  this.abruptCompletion_ = {exception:a, isException:!0};
+  this.jumpToErrorHandler_();
+};
+$jscomp.generator.Context.prototype.return = function(a) {
+  this.abruptCompletion_ = {return:a};
+  this.nextAddress = this.finallyAddress_;
+};
+$jscomp.generator.Context.prototype.jumpThroughFinallyBlocks = function(a) {
+  this.abruptCompletion_ = {jumpTo:a};
+  this.nextAddress = this.finallyAddress_;
+};
+$jscomp.generator.Context.prototype.yield = function(a, b) {
+  this.nextAddress = b;
+  return {value:a};
+};
+$jscomp.generator.Context.prototype.yieldAll = function(a, b) {
+  a = $jscomp.makeIterator(a);
+  var c = a.next();
+  $jscomp.generator.ensureIteratorResultIsObject_(c);
+  if (c.done) {
+    this.yieldResult = c.value, this.nextAddress = b;
+  } else {
+    return this.yieldAllIterator_ = a, this.yield(c.value, b);
+  }
+};
+$jscomp.generator.Context.prototype.jumpTo = function(a) {
+  this.nextAddress = a;
+};
+$jscomp.generator.Context.prototype.jumpToEnd = function() {
+  this.nextAddress = 0;
+};
+$jscomp.generator.Context.prototype.setCatchFinallyBlocks = function(a, b) {
+  this.catchAddress_ = a;
+  void 0 != b && (this.finallyAddress_ = b);
+};
+$jscomp.generator.Context.prototype.setFinallyBlock = function(a) {
+  this.catchAddress_ = 0;
+  this.finallyAddress_ = a || 0;
+};
+$jscomp.generator.Context.prototype.leaveTryBlock = function(a, b) {
+  this.nextAddress = a;
+  this.catchAddress_ = b || 0;
+};
+$jscomp.generator.Context.prototype.enterCatchBlock = function(a) {
+  this.catchAddress_ = a || 0;
+  a = this.abruptCompletion_.exception;
+  this.abruptCompletion_ = null;
+  return a;
+};
+$jscomp.generator.Context.prototype.enterFinallyBlock = function(a, b, c) {
+  c ? this.finallyContexts_[c] = this.abruptCompletion_ : this.finallyContexts_ = [this.abruptCompletion_];
+  this.catchAddress_ = a || 0;
+  this.finallyAddress_ = b || 0;
+};
+$jscomp.generator.Context.prototype.leaveFinallyBlock = function(a, b) {
+  b = this.finallyContexts_.splice(b || 0)[0];
+  if (b = this.abruptCompletion_ = this.abruptCompletion_ || b) {
+    if (b.isException) {
+      return this.jumpToErrorHandler_();
+    }
+    void 0 != b.jumpTo && this.finallyAddress_ < b.jumpTo ? (this.nextAddress = b.jumpTo, this.abruptCompletion_ = null) : this.nextAddress = this.finallyAddress_;
+  } else {
+    this.nextAddress = a;
+  }
+};
+$jscomp.generator.Context.prototype.forIn = function(a) {
+  return new $jscomp.generator.Context.PropertyIterator(a);
+};
+$jscomp.generator.Context.PropertyIterator = function(a) {
+  this.object_ = a;
+  this.properties_ = [];
+  for (var b in a) {
+    this.properties_.push(b);
+  }
+  this.properties_.reverse();
+};
+$jscomp.generator.Context.PropertyIterator.prototype.getNext = function() {
+  for (; 0 < this.properties_.length;) {
+    var a = this.properties_.pop();
+    if (a in this.object_) {
+      return a;
+    }
+  }
+  return null;
+};
+$jscomp.generator.Engine_ = function(a) {
+  this.context_ = new $jscomp.generator.Context;
+  this.program_ = a;
+};
+$jscomp.generator.Engine_.prototype.next_ = function(a) {
+  this.context_.start_();
+  if (this.context_.yieldAllIterator_) {
+    return this.yieldAllStep_(this.context_.yieldAllIterator_.next, a, this.context_.next_);
+  }
+  this.context_.next_(a);
+  return this.nextStep_();
+};
+$jscomp.generator.Engine_.prototype.return_ = function(a) {
+  this.context_.start_();
+  var b = this.context_.yieldAllIterator_;
+  if (b) {
+    return this.yieldAllStep_("return" in b ? b["return"] : function(a) {
+      return {value:a, done:!0};
+    }, a, this.context_.return);
+  }
+  this.context_.return(a);
+  return this.nextStep_();
+};
+$jscomp.generator.Engine_.prototype.throw_ = function(a) {
+  this.context_.start_();
+  if (this.context_.yieldAllIterator_) {
+    return this.yieldAllStep_(this.context_.yieldAllIterator_["throw"], a, this.context_.next_);
+  }
+  this.context_.throw_(a);
+  return this.nextStep_();
+};
+$jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, c) {
+  try {
+    var d = a.call(this.context_.yieldAllIterator_, b);
+    $jscomp.generator.ensureIteratorResultIsObject_(d);
+    if (!d.done) {
+      return this.context_.stop_(), d;
+    }
+    var e = d.value;
+  } catch (f) {
+    return this.context_.yieldAllIterator_ = null, this.context_.throw_(f), this.nextStep_();
+  }
+  this.context_.yieldAllIterator_ = null;
+  c.call(this.context_, e);
+  return this.nextStep_();
+};
+$jscomp.generator.Engine_.prototype.nextStep_ = function() {
+  for (; this.context_.nextAddress;) {
+    try {
+      var a = this.program_(this.context_);
+      if (a) {
+        return this.context_.stop_(), {value:a.value, done:!1};
+      }
+    } catch (b) {
+      this.context_.yieldResult = void 0, this.context_.throw_(b);
+    }
+  }
+  this.context_.stop_();
+  if (this.context_.abruptCompletion_) {
+    a = this.context_.abruptCompletion_;
+    this.context_.abruptCompletion_ = null;
+    if (a.isException) {
+      throw a.exception;
+    }
+    return {value:a.return, done:!0};
+  }
+  return {value:void 0, done:!0};
+};
+$jscomp.generator.Generator_ = function(a) {
+  this.next = function(b) {
+    return a.next_(b);
+  };
+  this.throw = function(b) {
+    return a.throw_(b);
+  };
+  this.return = function(b) {
+    return a.return_(b);
+  };
+  $jscomp.initSymbolIterator();
+  this[Symbol.iterator] = function() {
+    return this;
+  };
+};
+$jscomp.generator.createGenerator = function(a, b) {
+  $jscomp.generator.Generator_.prototype = a.prototype;
+  return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
 };
 $jscomp.arrayFromIterator = function(a) {
-  for (var c, b = []; !(c = a.next()).done;) {
-    b.push(c.value);
+  for (var b, c = []; !(b = a.next()).done;) {
+    c.push(b.value);
   }
-  return b;
+  return c;
 };
 $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
-  var a = function() {
-    function a(a, c, d) {
-      for (;;) {
-        switch(b) {
-          case 0:
-            return b = 1, {value:"b", done:!1};
-          case 1:
-            if (1 != a) {
-              b = 2;
-              break;
-            }
-            b = -1;
-            throw d;
-          case 2:
-            return b = 3, {value:"c", done:!1};
-          case 3:
-            if (1 != a) {
-              b = 4;
-              break;
-            }
-            b = -1;
-            throw d;
-          case 4:
-            return b = 5, {value:"d", done:!1};
-          case 5:
-            if (1 != a) {
-              b = 6;
-              break;
-            }
-            b = -1;
-            throw d;
-          case 6:
-            b = -1;
-          default:
-            return {value:void 0, done:!0};
-        }
+  var a = function c() {
+    return $jscomp.generator.createGenerator(c, function(a) {
+      switch(a.nextAddress) {
+        case 1:
+          return a.yield("b", 2);
+        case 2:
+          return a.yield("c", 3);
+        case 3:
+          return a.yield("d", 0);
       }
-    }
-    var b = 0, e = {next:function(b) {
-      return a(0.0, b, void 0);
-    }, throw:function(b) {
-      return a(1.0, void 0, b);
-    }, return:function(a) {
-      throw Error("Not yet implemented");
-    }};
-    $jscomp.initSymbolIterator();
-    e[Symbol.iterator] = function() {
-      return this;
-    };
-    return e;
+    });
   }();
-  return "d" === [].concat(["a"], $jscomp.arrayFromIterable(a), ["e"])[3];
+  return "d" === ["a"].concat($jscomp.arrayFromIterable(a), ["e"])[3];
 };
 

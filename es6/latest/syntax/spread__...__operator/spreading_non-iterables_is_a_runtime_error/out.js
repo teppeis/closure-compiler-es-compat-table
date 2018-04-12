@@ -62,9 +62,9 @@ $jscomp.arrayFromIterable = function(a) {
 };
 module.exports = function() {
   try {
-    Math.max.apply(Math, [].concat($jscomp.arrayFromIterable(2)));
+    Math.max.apply(Math, $jscomp.arrayFromIterable(2));
   } catch (a) {
-    return 3 === Math.max.apply(Math, [].concat($jscomp.arrayFromIterable([1, 2, 3])));
+    return 3 === Math.max.apply(Math, [1, 2, 3]);
   }
 };
 

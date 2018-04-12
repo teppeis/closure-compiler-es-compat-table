@@ -61,6 +61,6 @@ $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
-  return 4 === Math.max.apply(Math, [].concat($jscomp.arrayFromIterable("1234")));
+  return 4 === Math.max.apply(Math, $jscomp.arrayFromIterable("1234"));
 };
 

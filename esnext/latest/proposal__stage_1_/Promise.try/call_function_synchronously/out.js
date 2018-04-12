@@ -176,7 +176,7 @@ $jscomp.polyfill("Promise", function(a) {
   };
   c.prototype.settle_ = function(a, c) {
     if (0 != this.state_) {
-      throw Error("Cannot settle(" + a + ", " + c | "): Promise already settled in state" + this.state_);
+      throw Error("Cannot settle(" + a + ", " + c + "): Promise already settled in state" + this.state_);
     }
     this.state_ = a;
     this.result_ = c;

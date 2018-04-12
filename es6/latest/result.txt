@@ -206,14 +206,14 @@ functions/super/is_statically_bound/out.js: [InvalidResult: false]
 functions/super/super___invokes_the_correct_constructor/out.js: [Pass]
 functions/generators/basic_functionality/out.js: [Pass]
 functions/generators/generator_function_expressions/out.js: [Pass]
-functions/generators/correct_this_binding/out.js: [Pass]
+functions/generators/correct_this_binding/out.js: [InvalidResult: 0]
 functions/generators/cant_use_this_with_new/out.js: [InvalidResult: undefined]
 functions/generators/sending/out.js: [Pass]
 functions/generators/%GeneratorPrototype%/out.js: [InvalidResult: 0]
-functions/generators/%GeneratorPrototype%_prototype_chain/out.js: TypeError: Object.getPrototypeOf called on non-object
+functions/generators/%GeneratorPrototype%_prototype_chain/out.js: TypeError: Cannot call method 'hasOwnProperty' of null
 functions/generators/%GeneratorPrototype%.constructor/out.js: SyntaxError: Unexpected identifier
 functions/generators/%GeneratorPrototype%.throw/out.js: [Pass]
-functions/generators/%GeneratorPrototype%.return/out.js: Error: Not yet implemented
+functions/generators/%GeneratorPrototype%.return/out.js: [Pass]
 functions/generators/yield_operator_precedence/out.js: [Pass]
 functions/generators/yield__,_arrays/out.js: [Pass]
 functions/generators/yield__,_sparse_arrays/out.js: [Pass]
@@ -223,7 +223,7 @@ functions/generators/yield__,_generator_instances/out.js: [Pass]
 functions/generators/yield__,_generic_iterables/out.js: [Pass]
 functions/generators/yield__,_instances_of_iterables/out.js: [Pass]
 functions/generators/yield___on_non-iterables_is_a_runtime_error/out.js: [InvalidResult: undefined]
-functions/generators/yield__,_iterator_closing/out.js: Error: Not yet implemented
+functions/generators/yield__,_iterator_closing/out.js: [Pass]
 functions/generators/yield__,_iterator_closing_via_throw__/out.js: [InvalidResult: false]
 functions/generators/shorthand_generator_methods/out.js: [Pass]
 functions/generators/string-keyed_shorthand_generator_methods/out.js: [Pass]

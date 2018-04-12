@@ -12,7 +12,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180204/functions/super/constructor_calls_use_correct_new.target_binding/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20180319/functions/super/constructor_calls_use_correct_new.target_binding/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
     constructor() { passed = (new.target === C); }
                               ^^^^^^^^^^
 

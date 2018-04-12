@@ -10,7 +10,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180204/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - unreachable code
+es6/v20180319/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - unreachable code
   try {
   ^^^^^
 

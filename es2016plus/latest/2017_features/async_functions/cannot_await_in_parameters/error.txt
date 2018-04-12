@@ -11,39 +11,67 @@ module.exports = function() {
 // EXPECT: 6: Error
 
 ----------------------------------------------------------
-java.lang.NullPointerException: NAME $jscomp$generator$action$arg 6 [length: 5] [source_file: es2016plus/v20180204/2017_features/async_functions/cannot_await_in_parameters/in.js]
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:799)
-	at com.google.javascript.jscomp.RemoveUnusedCode.getVarForNameNode(RemoveUnusedCode.java:667)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNameNode(RemoveUnusedCode.java:529)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:404)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:413)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:413)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:334)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:413)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseFunction(RemoveUnusedCode.java:1237)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:296)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseCall(RemoveUnusedCode.java:579)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:326)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseNode(RemoveUnusedCode.java:413)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseChildren(RemoveUnusedCode.java:1116)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseFunction(RemoveUnusedCode.java:1237)
-	at com.google.javascript.jscomp.RemoveUnusedCode.access$1100(RemoveUnusedCode.java:90)
-	at com.google.javascript.jscomp.RemoveUnusedCode$Continuation.apply(RemoveUnusedCode.java:1527)
-	at com.google.javascript.jscomp.RemoveUnusedCode.traverseAndRemoveUnusedReferences(RemoveUnusedCode.java:247)
-	at com.google.javascript.jscomp.RemoveUnusedCode.process(RemoveUnusedCode.java:228)
+java.lang.IllegalStateException: AST should not contain generator. Reference node:
+YIELD 6 [length: 23] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    CALL 6 [length: 17] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        GETPROP 6 [length: 15] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NAME Promise 6 [length: 7] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            STRING resolve 6 [length: 7] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+
+ Parent node:
+HOOK 6 [length: 27] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    SHEQ 6 [length: 27] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        VOID 6 [length: 27] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        NAME a 6 [length: 1] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+    YIELD 6 [length: 23] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        CALL 6 [length: 17] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            GETPROP 6 [length: 15] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                NAME Promise 6 [length: 7] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                STRING resolve 6 [length: 7] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    NAME a 6 [length: 1] [source_file: es2016plus/v20180319/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+
+	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:60)
+	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1504)
+	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1566)
+	at com.google.javascript.jscomp.AstValidator.validateYield(AstValidator.java:376)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:363)
+	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1419)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:272)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1182)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:254)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1050)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:173)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:114)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:649)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:765)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:757)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:732)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:347)
+	at com.google.javascript.jscomp.AstValidator.validateCall(AstValidator.java:799)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:335)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1050)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:173)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:114)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:649)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:765)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:757)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:732)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:347)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1182)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:254)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1050)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:173)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:114)
+	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:108)
+	at com.google.javascript.jscomp.AstValidator.validateScript(AstValidator.java:97)
+	at com.google.javascript.jscomp.AstValidator.validateCodeRoot(AstValidator.java:85)
+	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:71)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:303)
-	at com.google.javascript.jscomp.PhaseOptimizer$Loop.process(PhaseOptimizer.java:448)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
 	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2541)
-	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:833)
-	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:829)
+	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:834)
+	at com.google.javascript.jscomp.Compiler$3.call(Compiler.java:830)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:101)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)

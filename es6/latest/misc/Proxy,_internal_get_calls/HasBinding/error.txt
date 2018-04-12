@@ -11,7 +11,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180204/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - The with statement cannot be used in strict mode.
+es6/v20180319/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - The with statement cannot be used in strict mode.
   with(p) {
   ^^^^^^^^^
 

@@ -61,6 +61,6 @@ $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
-  return "\ud842\udfb7" === Array.apply(null, [].concat($jscomp.arrayFromIterable("\ud842\udfb7\ud842\udfb6")))[0];
+  return "\ud842\udfb7" === Array.apply(null, $jscomp.arrayFromIterable("\ud842\udfb7\ud842\udfb6"))[0];
 };
 

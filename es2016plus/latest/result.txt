@@ -5,7 +5,7 @@
 2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [InvalidResult: false]
 2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: TypeError: Object #<Int8Array> has no method 'includes'
 2016_misc/generator_functions_cant_be_used_with_new/out.js: [InvalidResult: undefined]
-2016_misc/generator_throw___caught_by_inner_generator/out.js: undefined
+2016_misc/generator_throw___caught_by_inner_generator/out.js: [Pass]
 2016_misc/strict_fn_w__non-strict_non-simple_params_is_error/out.js: [InvalidResult: false]
 2016_misc/nested_rest_destructuring,_declarations/out.js: [Pass]
 2016_misc/nested_rest_destructuring,_parameters/out.js: [Pass]

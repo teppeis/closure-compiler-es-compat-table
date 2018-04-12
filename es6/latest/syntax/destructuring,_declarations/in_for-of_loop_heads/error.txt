@@ -6,7 +6,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180204/syntax/destructuring,_declarations/in_for-of_loop_heads/in.js:3: WARNING - unreachable code
+es6/v20180319/syntax/destructuring,_declarations/in_for-of_loop_heads/in.js:3: WARNING - unreachable code
   for(var [i, j, k] of [[1,2,3]]) {
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

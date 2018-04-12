@@ -5,7 +5,7 @@ typeof class bar { static name() {} }.name === "function";
 
 };
 ----------------------------------------------------------
-es6/v20180204/built-in_extensions/function_name_property/class_expressions/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+es6/v20180319/built-in_extensions/function_name_property/class_expressions/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
 typeof class bar { static name() {} }.name === "function";
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

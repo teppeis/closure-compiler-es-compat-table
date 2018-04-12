@@ -8,7 +8,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-es6/v20180204/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20180319/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
     if (new.target === Object) {
         ^^^^^^^^^^
 

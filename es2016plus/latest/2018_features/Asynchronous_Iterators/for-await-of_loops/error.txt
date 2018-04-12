@@ -20,7 +20,7 @@ module.exports = function(asyncTestPassed) {
 
 };
 ----------------------------------------------------------
-es2016plus/v20180204/2018_features/Asynchronous_Iterators/for-await-of_loops/in.js:17: ERROR - Parse error. '(' expected
+es2016plus/v20180319/2018_features/Asynchronous_Iterators/for-await-of_loops/in.js:17: ERROR - Parse error. '(' expected
     for await(var value of asyncIterable)result += value;
         ^
 

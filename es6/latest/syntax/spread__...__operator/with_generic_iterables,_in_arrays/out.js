@@ -63,6 +63,6 @@ $jscomp.arrayFromIterable = function(a) {
 module.exports = function() {
   $jscomp.initSymbolIterator();
   var a = global.__createIterableObject(["b", "c", "d"]);
-  return "d" === [].concat(["a"], $jscomp.arrayFromIterable(a), ["e"])[3];
+  return "d" === ["a"].concat($jscomp.arrayFromIterable(a), ["e"])[3];
 };
 

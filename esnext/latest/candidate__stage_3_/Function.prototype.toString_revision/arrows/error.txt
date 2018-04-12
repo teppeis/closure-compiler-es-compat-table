@@ -6,7 +6,7 @@ module.exports = function() {
 
 };
 ----------------------------------------------------------
-esnext/v20180204/candidate__stage_3_/Function.prototype.toString_revision/arrows/in.js:4: WARNING - unreachable code
+esnext/v20180319/candidate__stage_3_/Function.prototype.toString_revision/arrows/in.js:4: WARNING - unreachable code
   var str = 'a => b';
   ^^^^^^^^^^^^^^^^^^^
 
