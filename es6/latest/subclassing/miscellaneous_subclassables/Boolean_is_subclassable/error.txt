@@ -1,0 +1,15 @@
+// subclassing / miscellaneous subclassables / Boolean is subclassable
+module.exports = function() {
+  class C extends Boolean {}
+  var c = new C(true);
+  return c instanceof Boolean
+&& c instanceof C
+&& c == true;
+
+};
+----------------------------------------------------------
+es6/v20180204/subclassing/miscellaneous_subclassables/Boolean_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Boolean
+  class C extends Boolean {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

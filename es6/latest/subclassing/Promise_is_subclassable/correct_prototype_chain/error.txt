@@ -1,0 +1,13 @@
+// subclassing / Promise is subclassable / correct prototype chain
+module.exports = function() {
+  class C extends Promise {}
+  var c = new C(function(resolve, reject) { resolve("foo"); });
+  return c instanceof C && c instanceof Promise && Object.getPrototypeOf(C) === Promise;
+
+};
+----------------------------------------------------------
+es6/v20180204/subclassing/Promise_is_subclassable/correct_prototype_chain/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Promise
+  class C extends Promise {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
