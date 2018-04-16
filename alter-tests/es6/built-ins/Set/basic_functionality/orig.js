@@ -1,5 +1,5 @@
 // built-ins / Set / basic functionality
-module.exports = function() {
+module.exports = () => {
   var obj = {};
   var set = new Set();
   set.add(123);

@@ -1,5 +1,5 @@
 // 2017 annex b / Object.prototype getter/setter methods / __defineSetter__
-module.exports = function() {
+module.exports = () => {
   var obj = {};
   function bar() {}
   Object.prototype.__defineSetter__.call(obj, "foo", bar);

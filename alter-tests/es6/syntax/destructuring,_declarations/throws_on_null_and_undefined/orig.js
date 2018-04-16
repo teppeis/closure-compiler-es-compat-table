@@ -1,5 +1,5 @@
 // syntax / destructuring, declarations / throws on null and undefined
-module.exports = function() {
+module.exports = () => {
   try {
     var {a} = null;
     return false;

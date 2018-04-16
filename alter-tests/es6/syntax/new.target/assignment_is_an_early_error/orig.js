@@ -1,5 +1,5 @@
 // syntax / new.target / assignment is an early error
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   var passed = false;
   new function f() {

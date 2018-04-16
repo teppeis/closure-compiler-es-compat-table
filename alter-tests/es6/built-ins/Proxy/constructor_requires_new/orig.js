@@ -1,5 +1,5 @@
 // built-ins / Proxy / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new Proxy({}, {});
   try {
     Proxy({}, {});

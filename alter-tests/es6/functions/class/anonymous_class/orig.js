@@ -1,5 +1,5 @@
 // functions / class / anonymous class
-module.exports = function() {
+module.exports = () => {
   return typeof class {} === "function";
 
 };

@@ -1,5 +1,5 @@
 // syntax / template literals / line break normalisation
-module.exports = function() {
+module.exports = () => {
   // NOTE: Edit carefully! This code includes various line breaks (CR, LF and CRLF).
   var cr   = `xy`;
   var lf   = `x

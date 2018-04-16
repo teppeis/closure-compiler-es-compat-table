@@ -1,5 +1,5 @@
 // built-ins / Promise / basic functionality
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
   var p2 = new Promise(function(resolve, reject) { reject("quux"); });
   var score = 0;

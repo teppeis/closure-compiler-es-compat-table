@@ -1,5 +1,5 @@
 // syntax / default function parameters / temporal dead zone
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   return (function(x = 1) {
     try {

@@ -1,5 +1,5 @@
 // built-ins / Set / Set.prototype.clear
-module.exports = function() {
+module.exports = () => {
   return typeof Set.prototype.clear === "function";
 
 };

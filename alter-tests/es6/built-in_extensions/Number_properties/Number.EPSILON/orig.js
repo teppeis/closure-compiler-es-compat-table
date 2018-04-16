@@ -1,5 +1,5 @@
 // built-in extensions / Number properties / Number.EPSILON
-module.exports = function() {
+module.exports = () => {
   return typeof Number.EPSILON === 'number';
 
 };

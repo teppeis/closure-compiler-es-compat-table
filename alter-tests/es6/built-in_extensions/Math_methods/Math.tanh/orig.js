@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.tanh
-module.exports = function() {
+module.exports = () => {
   return typeof Math.tanh === "function";
 
 };

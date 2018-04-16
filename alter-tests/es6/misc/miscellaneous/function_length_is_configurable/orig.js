@@ -1,5 +1,5 @@
 // misc / miscellaneous / function 'length' is configurable
-module.exports = function() {
+module.exports = () => {
   var fn = function(a, b) {};
   var desc = Object.getOwnPropertyDescriptor(fn, "length");
   if (desc.configurable) {

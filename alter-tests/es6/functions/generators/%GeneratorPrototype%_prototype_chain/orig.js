@@ -1,5 +1,5 @@
 // functions / generators / %GeneratorPrototype% prototype chain
-module.exports = function() {
+module.exports = () => {
   function * generatorFn(){}
   var g = generatorFn();
   var ownProto = Object.getPrototypeOf(g);

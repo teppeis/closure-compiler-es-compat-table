@@ -1,5 +1,5 @@
 // bindings / let / for/for-in loop iteration scope (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   let scopes = [];
   for(let i = 0; i < 2; i++) {

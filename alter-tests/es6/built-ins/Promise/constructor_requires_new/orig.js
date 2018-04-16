@@ -1,5 +1,5 @@
 // built-ins / Promise / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new Promise(function(){});
   try {
     Promise(function(){});

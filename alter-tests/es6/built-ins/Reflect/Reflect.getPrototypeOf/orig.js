@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.getPrototypeOf
-module.exports = function() {
+module.exports = () => {
   return Reflect.getPrototypeOf([]) === Array.prototype;
 
 };

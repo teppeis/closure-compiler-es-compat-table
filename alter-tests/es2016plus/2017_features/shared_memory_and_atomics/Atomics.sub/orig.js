@@ -1,5 +1,5 @@
 // 2017 features / shared memory and atomics / Atomics.sub
-module.exports = function() {
+module.exports = () => {
   return typeof Atomics.sub == 'function';
 
 };

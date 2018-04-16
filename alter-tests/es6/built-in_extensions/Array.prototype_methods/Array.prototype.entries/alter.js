@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype.entries
-module.exports = function() {
+module.exports = () => {
   var assert = require('assert');
   var iter = ['a', 'b'].entries();
   assert.deepEqual(iter.next(), {value: [0, 'a'], done: false});

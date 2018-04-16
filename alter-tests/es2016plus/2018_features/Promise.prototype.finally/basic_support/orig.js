@@ -1,5 +1,5 @@
 // 2018 features / Promise.prototype.finally / basic support
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var p1 = Promise.resolve("foo");
   var p2 = Promise.reject("bar");
   var score = 0;

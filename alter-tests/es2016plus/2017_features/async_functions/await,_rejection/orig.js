@@ -1,5 +1,5 @@
 // 2017 features / async functions / await, rejection
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   (async function (){
     await Promise.resolve();
     try {

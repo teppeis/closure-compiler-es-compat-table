@@ -1,5 +1,5 @@
 // bindings / const / for-of loop iteration scope (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   var scopes = [];
   for(const i of ['a','b']) {

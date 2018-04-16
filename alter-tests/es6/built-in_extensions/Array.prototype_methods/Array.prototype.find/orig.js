@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype.find
-module.exports = function() {
+module.exports = () => {
   return typeof Array.prototype.find === 'function';
 
 };

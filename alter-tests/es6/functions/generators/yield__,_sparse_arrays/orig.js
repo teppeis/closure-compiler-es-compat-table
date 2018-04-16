@@ -1,5 +1,5 @@
 // functions / generators / yield *, sparse arrays
-module.exports = function() {
+module.exports = () => {
   var iterator = (function * generator() {
     yield * [,,];
   }());

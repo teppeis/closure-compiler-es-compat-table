@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.imul
-module.exports = function() {
+module.exports = () => {
   return typeof Math.imul === "function";
 
 };

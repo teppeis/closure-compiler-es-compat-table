@@ -1,5 +1,5 @@
 // 2016 misc / generator functions can't be used with "new"
-module.exports = function() {
+module.exports = () => {
   function * generator() {
     yield 3;
   }

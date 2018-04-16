@@ -1,5 +1,5 @@
 // functions / generators / %GeneratorPrototype%.constructor
-module.exports = function() {
+module.exports = () => {
   function * g (){}
   var iterator = new g.constructor("a","b","c","yield a; yield b; yield c;")(5,6,7);
   var item = iterator.next();

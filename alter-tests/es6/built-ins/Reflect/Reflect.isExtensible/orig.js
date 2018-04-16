@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.isExtensible
-module.exports = function() {
+module.exports = () => {
   return Reflect.isExtensible({}) &&
 !Reflect.isExtensible(Object.preventExtensions({}));
 

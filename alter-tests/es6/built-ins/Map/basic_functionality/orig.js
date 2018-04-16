@@ -1,5 +1,5 @@
 // built-ins / Map / basic functionality
-module.exports = function() {
+module.exports = () => {
   var key = {};
   var map = new Map();
   map.set(key, 123);

@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'ownKeys' calls / SerializeJSONObject
-module.exports = function() {
+module.exports = () => {
 // SerializeJSONObject -> EnumerableOwnNames -> [[OwnPropertyKeys]]
   var ownKeysCalled = 0;
   var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});

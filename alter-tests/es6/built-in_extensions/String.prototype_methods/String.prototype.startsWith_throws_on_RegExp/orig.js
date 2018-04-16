@@ -1,5 +1,5 @@
 // built-in extensions / String.prototype methods / String.prototype.startsWith throws on RegExp
-module.exports = function() {
+module.exports = () => {
   try {
     "a".startsWith(/./);
   } catch(e) {

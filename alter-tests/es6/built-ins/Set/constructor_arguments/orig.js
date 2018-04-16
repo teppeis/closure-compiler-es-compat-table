@@ -1,5 +1,5 @@
 // built-ins / Set / constructor arguments
-module.exports = function() {
+module.exports = () => {
   var obj1 = {};
   var obj2 = {};
   var set = new Set([obj1, obj2]);

@@ -1,5 +1,5 @@
 // functions / class / extends
-module.exports = function() {
+module.exports = () => {
   class B {}
   class C extends B {}
   return new C() instanceof B

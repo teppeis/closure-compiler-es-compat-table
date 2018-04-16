@@ -1,5 +1,5 @@
 // functions / generators / sending
-module.exports = function() {
+module.exports = () => {
   var sent;
   function * generator(){
     sent = [yield 5, yield 6];

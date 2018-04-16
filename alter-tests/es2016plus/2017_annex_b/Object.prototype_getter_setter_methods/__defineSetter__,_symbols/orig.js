@@ -1,5 +1,5 @@
 // 2017 annex b / Object.prototype getter/setter methods / __defineSetter__, symbols
-module.exports = function() {
+module.exports = () => {
   var obj = {};
   var sym = Symbol();
   function bar(baz) {}

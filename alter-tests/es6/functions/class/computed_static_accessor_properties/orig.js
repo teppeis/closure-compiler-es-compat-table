@@ -1,5 +1,5 @@
 // functions / class / computed static accessor properties
-module.exports = function() {
+module.exports = () => {
   var garply = "foo", grault = "bar", baz = false;
   class C {
     static get [garply]() { return "foo"; }

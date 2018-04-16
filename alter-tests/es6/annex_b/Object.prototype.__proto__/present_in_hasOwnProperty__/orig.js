@@ -1,5 +1,5 @@
 // annex b / Object.prototype.__proto__ / present in hasOwnProperty()
-module.exports = function() {
+module.exports = () => {
   return Object.prototype.hasOwnProperty('__proto__');
 
 };

@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.construct, Promise subclassing
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   function F(){}
   var p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve("foo"); }], F);
   var p2 = Reflect.construct(Promise,[function(resolve, reject) { reject("quux"); }], F);

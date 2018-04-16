@@ -1,5 +1,5 @@
 // built-ins / WeakMap / basic functionality
-module.exports = function() {
+module.exports = () => {
   var key = {};
   var weakmap = new WeakMap();
   weakmap.set(key, 123);

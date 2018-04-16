@@ -1,5 +1,5 @@
 // functions / generators / string-keyed shorthand generator methods
-module.exports = function() {
+module.exports = () => {
   var o = {
     * "foo bar"() {
       yield 5; yield 6;

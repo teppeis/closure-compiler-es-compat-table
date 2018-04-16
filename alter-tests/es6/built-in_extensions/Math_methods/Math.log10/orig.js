@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.log10
-module.exports = function() {
+module.exports = () => {
   return typeof Math.log10 === "function";
 
 };

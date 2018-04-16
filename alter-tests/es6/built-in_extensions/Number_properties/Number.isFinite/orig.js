@@ -1,5 +1,5 @@
 // built-in extensions / Number properties / Number.isFinite
-module.exports = function() {
+module.exports = () => {
   return typeof Number.isFinite === 'function';
 
 };

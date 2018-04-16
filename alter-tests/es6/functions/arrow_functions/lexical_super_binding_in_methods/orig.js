@@ -1,5 +1,5 @@
 // functions / arrow functions / lexical "super" binding in methods
-module.exports = function() {
+module.exports = () => {
   class B {
     qux() {
       return "quux";

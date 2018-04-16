@@ -1,5 +1,5 @@
 // bindings / let / cannot be in statements (strict mode)
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   'use strict';
   let bar = 1;

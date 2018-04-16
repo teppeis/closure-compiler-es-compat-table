@@ -1,5 +1,5 @@
 // functions / generators / yield *, iterator closing
-module.exports = function() {
+module.exports = () => {
   $jscomp.initSymbolIterator();
   var closed = '';
   var iter = __createIterableObject([1, 2, 3], {

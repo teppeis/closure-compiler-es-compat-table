@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.replace
-module.exports = function() {
+module.exports = () => {
   var O = {};
   O[Symbol.replace] = function(){
     return 42;

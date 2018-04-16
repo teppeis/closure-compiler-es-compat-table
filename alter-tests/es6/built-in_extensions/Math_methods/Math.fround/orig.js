@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.fround
-module.exports = function() {
+module.exports = () => {
   return typeof Math.fround === "function";
 
 };

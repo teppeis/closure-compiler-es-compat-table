@@ -1,5 +1,5 @@
 // bindings / const / for-of loop iteration scope
-module.exports = function() {
+module.exports = () => {
   var scopes = [];
   for(const i of ['a','b']) {
     scopes.push(function(){ return i; });

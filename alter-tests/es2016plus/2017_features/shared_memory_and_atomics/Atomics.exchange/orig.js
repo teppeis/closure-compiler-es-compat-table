@@ -1,5 +1,5 @@
 // 2017 features / shared memory and atomics / Atomics.exchange
-module.exports = function() {
+module.exports = () => {
   return typeof Atomics.exchange == 'function';
 
 };

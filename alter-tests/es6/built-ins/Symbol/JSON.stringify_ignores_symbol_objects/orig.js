@@ -1,5 +1,5 @@
 // built-ins / Symbol / JSON.stringify ignores symbol objects
-module.exports = function() {
+module.exports = () => {
   var testSymbolObject = function (sym) {
     var object = { foo: sym };
     try {

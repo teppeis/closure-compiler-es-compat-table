@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.acosh
-module.exports = function() {
+module.exports = () => {
   return typeof Math.acosh === "function";
 
 };

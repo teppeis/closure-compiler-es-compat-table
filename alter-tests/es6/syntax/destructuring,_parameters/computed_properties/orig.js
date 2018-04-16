@@ -1,5 +1,5 @@
 // syntax / destructuring, parameters / computed properties
-module.exports = function() {
+module.exports = () => {
   var qux = "corge";
   return function({ [qux]: grault }) {
     return grault === "garply";

@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.sinh
-module.exports = function() {
+module.exports = () => {
   return typeof Math.sinh === "function";
 
 };

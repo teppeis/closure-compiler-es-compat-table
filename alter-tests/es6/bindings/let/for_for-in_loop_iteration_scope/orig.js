@@ -1,5 +1,5 @@
 // bindings / let / for/for-in loop iteration scope
-module.exports = function() {
+module.exports = () => {
   let scopes = [];
   for(let i = 0; i < 2; i++) {
     scopes.push(function(){ return i; });

@@ -1,5 +1,5 @@
 // 2017 features / async functions / throw
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   async function a(){
     throw "foo";
   }

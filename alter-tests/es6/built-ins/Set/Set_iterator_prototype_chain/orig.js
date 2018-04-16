@@ -1,5 +1,5 @@
 // built-ins / Set / Set iterator prototype chain
-module.exports = function() {
+module.exports = () => {
 // Iterator instance
   var iterator = new Set()[Symbol.iterator]();
   // %SetIteratorPrototype%

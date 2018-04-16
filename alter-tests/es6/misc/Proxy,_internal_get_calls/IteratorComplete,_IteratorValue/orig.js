@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / IteratorComplete, IteratorValue
-module.exports = function() {
+module.exports = () => {
 // IteratorComplete -> Get -> [[Get]]
 // IteratorValue -> Get -> [[Get]]
   var get = [];

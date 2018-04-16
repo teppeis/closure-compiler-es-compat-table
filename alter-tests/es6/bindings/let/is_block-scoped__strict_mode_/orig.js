@@ -1,5 +1,5 @@
 // bindings / let / is block-scoped (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   let bar = 123;
   { let bar = 456; }

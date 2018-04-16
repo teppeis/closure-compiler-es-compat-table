@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.hypot
-module.exports = function() {
+module.exports = () => {
   return Math.hypot() === 0 &&
 Math.hypot(1) === 1 &&
 Math.hypot(9, 12, 20) === 25 &&

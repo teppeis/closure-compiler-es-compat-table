@@ -1,5 +1,5 @@
 // bindings / const / basic support
-module.exports = function() {
+module.exports = () => {
   const foo = 123;
   return (foo === 123);
 

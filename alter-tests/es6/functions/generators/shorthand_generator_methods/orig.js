@@ -1,5 +1,5 @@
 // functions / generators / shorthand generator methods
-module.exports = function() {
+module.exports = () => {
   var o = {
     * generator() {
       yield 5; yield 6;

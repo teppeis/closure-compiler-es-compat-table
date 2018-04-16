@@ -1,5 +1,5 @@
 // functions / generators / shorthand generators can't be constructors
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   class C {
     * generator() {

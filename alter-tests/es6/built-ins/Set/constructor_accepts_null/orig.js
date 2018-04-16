@@ -1,5 +1,5 @@
 // built-ins / Set / constructor accepts null
-module.exports = function() {
+module.exports = () => {
   new Set(null);
   return true;
 

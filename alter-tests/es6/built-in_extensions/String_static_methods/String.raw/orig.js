@@ -1,5 +1,5 @@
 // built-in extensions / String static methods / String.raw
-module.exports = function() {
+module.exports = () => {
   return typeof String.raw === 'function';
 
 };

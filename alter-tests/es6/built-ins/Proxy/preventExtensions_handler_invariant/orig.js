@@ -1,5 +1,5 @@
 // built-ins / Proxy / "preventExtensions" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // [[PreventExtensions]] applied to the proxy object only returns true

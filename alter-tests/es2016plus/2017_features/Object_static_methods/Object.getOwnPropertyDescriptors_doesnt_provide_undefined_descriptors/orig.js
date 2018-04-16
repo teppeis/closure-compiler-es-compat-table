@@ -1,5 +1,5 @@
 // 2017 features / Object static methods / Object.getOwnPropertyDescriptors doesn't provide undefined descriptors
-module.exports = function() {
+module.exports = () => {
   var P = new Proxy({a:1}, {
     getOwnPropertyDescriptor: function(t, k) {}
   });

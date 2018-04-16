@@ -1,5 +1,5 @@
 // built-ins / Proxy / "getPrototypeOf" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = {};
   var fakeProto = {};
   var proxy = new Proxy(proxied, {

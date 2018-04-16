@@ -1,5 +1,5 @@
 // built-ins / Map / constructor invokes set
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   var _set = Map.prototype.set;
   Map.prototype.set = function(k, v) {

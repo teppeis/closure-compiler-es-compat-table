@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.cosh
-module.exports = function() {
+module.exports = () => {
   var nan = Math.cosh(NaN);
   return Math.cosh(0) === 1
     && Math.cosh(-0) === 1

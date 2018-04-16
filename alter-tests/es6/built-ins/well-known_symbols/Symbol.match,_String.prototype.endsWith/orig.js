@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.match, String.prototype.endsWith
-module.exports = function() {
+module.exports = () => {
   var re = /./;
   try {
     '/./'.endsWith(re);

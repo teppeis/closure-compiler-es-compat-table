@@ -1,5 +1,5 @@
 // 2017 features / async functions / async function constructor
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var a = async function (){}.constructor("return 'foo';");
   var p = a();
   if (!(p instanceof Promise)) {

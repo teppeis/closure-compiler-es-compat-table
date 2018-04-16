@@ -1,5 +1,5 @@
 // subclassing / Promise is subclassable / Promise.race
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   class P extends Promise {}
   var fulfills = P.race([
     new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),

@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'ownKeys' calls / TestIntegrityLevel
-module.exports = function() {
+module.exports = () => {
 // TestIntegrityLevel -> [[OwnPropertyKeys]]
   var ownKeysCalled = 0;
   var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});

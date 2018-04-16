@@ -1,5 +1,5 @@
 // functions / class / constructor requires new
-module.exports = function() {
+module.exports = () => {
   class C {}
   try {
     C();

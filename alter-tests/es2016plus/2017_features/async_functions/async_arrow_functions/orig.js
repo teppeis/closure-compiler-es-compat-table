@@ -1,5 +1,5 @@
 // 2017 features / async functions / async arrow functions
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var a = async () => await Promise.resolve("foo");
   var p = a();
   if (!(p instanceof Promise)) {

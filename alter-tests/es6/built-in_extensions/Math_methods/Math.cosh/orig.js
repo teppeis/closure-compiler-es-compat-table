@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.cosh
-module.exports = function() {
+module.exports = () => {
   return typeof Math.cosh === "function";
 
 };

@@ -1,5 +1,5 @@
 // 2016 features / Array.prototype.includes / Array.prototype.includes is generic
-module.exports = function() {
+module.exports = () => {
   var passed = 0;
   return [].includes.call({
     get "0"() {

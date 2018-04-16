@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.ownKeys, symbol keys
-module.exports = function() {
+module.exports = () => {
   var s1 = Symbol(), s2 = Symbol(), s3 = Symbol();
   var proto = {};
   proto[s1] = true;

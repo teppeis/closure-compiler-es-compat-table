@@ -1,5 +1,5 @@
 // built-ins / WeakMap / constructor arguments
-module.exports = function() {
+module.exports = () => {
   var key1 = {};
   var key2 = {};
   var weakmap = new WeakMap([[key1, 123], [key2, 456]]);

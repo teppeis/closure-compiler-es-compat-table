@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.match
-module.exports = function() {
+module.exports = () => {
   var O = {};
   O[Symbol.match] = function(){
     return 42;

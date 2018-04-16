@@ -1,5 +1,5 @@
 // built-in extensions / Object static methods / Object.getOwnPropertySymbols
-module.exports = function() {
+module.exports = () => {
   var o = {};
   var sym = Symbol(), sym2 = Symbol(), sym3 = Symbol();
   o[sym]  = true;
