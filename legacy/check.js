@@ -6,36 +6,16 @@
 // require('./polyfill');
 
 var fs = require('fs');
+var vm = require('vm');
 var path = require('path');
 var readdir = require('fs-readdir-recursive');
 var async = require('async');
+var assign = require('object-assign');
 
 var esVersion = process.env.ES_VERSION;
 var clVersion = process.env.CL_VERSION;
 var testDir = process.env.TEST_DIR;
 var buildDir = path.join(path.dirname(__dirname), esVersion, clVersion);
-
-global.__createIterableObject = function(arr, methods) {
-  methods = methods || {};
-  // eslint-disable-next-line no-undef
-  if (typeof Symbol !== 'function' || !Symbol.iterator) {
-    return {};
-  }
-  arr.length++;
-  var iterator = {
-    next: function() {
-      return {value: arr.shift(), done: arr.length <= 0};
-    },
-    return: methods.return,
-    throw: methods.throw,
-  };
-  var iterable = {};
-  // eslint-disable-next-line no-undef
-  iterable[Symbol.iterator] = function() {
-    return iterator;
-  };
-  return iterable;
-};
 
 var dirs = require(path.join(buildDir, 'files.json'));
 var files = dirs.map(function(dir) {
@@ -44,6 +24,8 @@ var files = dirs.map(function(dir) {
   .filter(function(file) {
     return !testDir || file.indexOf(testDir) > -1;
   });
+
+var createIterableObjectFunc = fs.readFileSync(path.join(__dirname, '__createIterableObject.js'), 'utf8');
 
 async.mapSeries(files, checkTimeout, function(err, results) {
   if (err) {
@@ -99,10 +81,6 @@ function checkExpectedError(fileAbs, cb) {
 }
 
 function check(file, cb) {
-  delete global.$jscomp;
-  delete global.Promise;
-  delete global.Symbol;
-
   // Promise: Promise.prototype isn't an instance
   if (file === 'built-ins/Promise/Promise.prototype_isnt_an_instance/out.js') {
     return cb(null, file + ': [Skip]');
@@ -112,22 +90,43 @@ function check(file, cb) {
     return checkExpectedError(fileAbs, cb);
   }
 
+  var context = {
+    module: {},
+    require: require,
+    callback: null,
+    setTimeout: setTimeout,
+    setInterval: setInterval,
+    clearTimeout: clearTimeout,
+    clearInterval: clearInterval,
+    // console: console,
+  };
+
   try {
-    var test = require(fileAbs);
-    if (test.length) {
+    var test = fs.readFileSync(fileAbs, 'utf8');
+    var src = 'var global = Function("return this")();' + test + ';' + createIterableObjectFunc + ';module.exports(callback);';
+    if (isAsyncTest(test)) {
       // async
-      return test(function() {
-        return cb(null, file + ': [Pass]');
-      });
+      return vm.runInNewContext(src, assign(context, {
+        callback: function() {
+          return cb(null, file + ': [Pass]');
+        }
+      }), file); // for Node v0.10 API
     } else {
       // sync
-      var res = test();
+      var res = vm.runInNewContext(src, context, file); // for Node v0.10 API
       if (res) {
         return cb(null, file + ': [Pass]');
       }
       return cb(null, file + ': [InvalidResult: ' + res + ']');
     }
   } catch (err) {
+    // console.error(err.stack);
     return cb(null, file + ': ' + err);
+  } finally {
+    // console.log('context', context);
   }
+}
+
+function isAsyncTest(src) {
+  return /^module.exports = function\([^)]+\)/m.test(src);
 }
