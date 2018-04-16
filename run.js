@@ -21,7 +21,7 @@ if (cli.input.length !== 1) {
   cli.showHelp();
 }
 
-const match = /^([^/]+)(?:\/(v\d+))?(?:\/(.*))?/.exec(cli.input[0]);
+const match = /^([^/]+)(?:\/([^/]+))?(?:\/(.*))?/.exec(cli.input[0]);
 let [, esVer, closureVer, targetDir] = match;
 
 if (!esVer) {
