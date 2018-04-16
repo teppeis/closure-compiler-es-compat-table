@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.find
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.find === "function" &&
 typeof Uint8Array.prototype.find === "function" &&
 typeof Uint8ClampedArray.prototype.find === "function" &&

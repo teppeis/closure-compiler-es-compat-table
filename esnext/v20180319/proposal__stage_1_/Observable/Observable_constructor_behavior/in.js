@@ -1,5 +1,5 @@
 // proposal (stage 1) / Observable / Observable constructor behavior
-module.exports = function() {
+module.exports = () => {
   if(!(new Observable(function(){}) instanceof Observable))return false;
   var nonCallableCheckPassed,
     primitiveCheckPassed,

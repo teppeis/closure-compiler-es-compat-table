@@ -1,5 +1,5 @@
 // built-in extensions / Number properties / Number.isInteger
-module.exports = function() {
+module.exports = () => {
   return Number.isInteger(0) === true
     && Number.isInteger(1) === true
     && Number.isInteger(-1) === true

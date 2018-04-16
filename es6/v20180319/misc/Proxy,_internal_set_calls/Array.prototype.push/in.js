@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'set' calls / Array.prototype.push
-module.exports = function() {
+module.exports = () => {
 // Array.prototype.push -> Set -> [[Set]]
   var set = [];
   var p = new Proxy([], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});

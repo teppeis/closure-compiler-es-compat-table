@@ -1,5 +1,5 @@
 // functions / class / methods aren't enumerable
-module.exports = function() {
+module.exports = () => {
   class C {
     foo() {}
     static bar() {}

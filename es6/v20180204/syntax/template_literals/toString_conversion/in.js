@@ -1,5 +1,5 @@
 // syntax / template literals / toString conversion
-module.exports = function() {
+module.exports = () => {
   var a = {
     toString: function() { return "foo"; },
     valueOf: function() { return "bar"; },

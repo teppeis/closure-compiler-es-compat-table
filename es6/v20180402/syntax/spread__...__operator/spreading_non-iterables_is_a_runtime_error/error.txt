@@ -1,5 +1,5 @@
 // syntax / spread (...) operator / spreading non-iterables is a runtime error
-module.exports = function() {
+module.exports = () => {
   try {
     Math.max(...2);
   } catch(e) {

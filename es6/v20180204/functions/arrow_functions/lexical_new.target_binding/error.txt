@@ -1,5 +1,5 @@
 // functions / arrow functions / lexical "new.target" binding
-module.exports = function() {
+module.exports = () => {
   function C() {
     return x => new.target;
   }

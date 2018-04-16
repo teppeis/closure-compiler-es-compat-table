@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.reduceRight
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.reduceRight === "function" &&
 typeof Uint8Array.prototype.reduceRight === "function" &&
 typeof Uint8ClampedArray.prototype.reduceRight === "function" &&

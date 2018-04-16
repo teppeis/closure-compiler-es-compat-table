@@ -1,5 +1,5 @@
 // 2017 misc / arguments.caller removed
-module.exports = function() {
+module.exports = () => {
   return (function(){
     'use strict';
     return !Object.getOwnPropertyDescriptor(arguments,'caller');

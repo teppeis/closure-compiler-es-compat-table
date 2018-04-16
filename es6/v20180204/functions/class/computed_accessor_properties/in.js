@@ -1,5 +1,5 @@
 // functions / class / computed accessor properties
-module.exports = function() {
+module.exports = () => {
   var garply = "foo", grault = "bar", baz = false;
   class C {
     get [garply]() { return "foo"; }

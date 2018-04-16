@@ -1,5 +1,5 @@
 // annex b / non-strict function semantics / function statements in if-statement clauses
-module.exports = function() {
+module.exports = () => {
 // Note: only available outside of strict mode.
   if (!this) return false;
   if(true) function foo() { return 2; }

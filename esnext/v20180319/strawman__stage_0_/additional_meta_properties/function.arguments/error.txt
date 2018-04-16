@@ -1,5 +1,5 @@
 // strawman (stage 0) / additional meta properties / function.arguments
-module.exports = function() {
+module.exports = () => {
 var arr =  (_ => function.arguments)(1, 2, 3);
 return Array.isArray(arr)
 && arr.length === 3

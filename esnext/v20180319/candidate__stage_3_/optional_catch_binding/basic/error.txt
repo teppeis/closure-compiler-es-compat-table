@@ -1,5 +1,5 @@
 // candidate (stage 3) / optional catch binding / basic
-module.exports = function() {
+module.exports = () => {
 try {
 throw new Error();
 }

@@ -1,5 +1,5 @@
 // built-ins / Set / -0 key converts to +0
-module.exports = function() {
+module.exports = () => {
   var set = new Set();
   set.add(-0);
   var k;

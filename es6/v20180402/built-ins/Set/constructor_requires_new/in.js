@@ -1,5 +1,5 @@
 // built-ins / Set / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new Set();
   try {
     Set();

@@ -1,5 +1,5 @@
 // annex b / non-strict function semantics / hoisted block-level function declaration
-module.exports = function() {
+module.exports = () => {
 // Note: only available outside of strict mode.
   if (!this) return false;
   var passed = f() === 1;

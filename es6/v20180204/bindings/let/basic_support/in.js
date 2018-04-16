@@ -1,5 +1,5 @@
 // bindings / let / basic support
-module.exports = function() {
+module.exports = () => {
   let foo = 123;
   return (foo === 123);
 

@@ -1,5 +1,5 @@
 // built-ins / WeakSet / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new WeakSet();
   try {
     WeakSet();

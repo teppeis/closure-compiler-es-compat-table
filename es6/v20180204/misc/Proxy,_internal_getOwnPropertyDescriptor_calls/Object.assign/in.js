@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'getOwnPropertyDescriptor' calls / Object.assign
-module.exports = function() {
+module.exports = () => {
 // Object.assign -> [[GetOwnProperty]]
   var gopd = [];
   var p = new Proxy({foo:1, bar:2},

@@ -1,5 +1,5 @@
 // built-ins / Set / Set.prototype isn't an instance
-module.exports = function() {
+module.exports = () => {
   new Set();
   var obj = {};
   try {

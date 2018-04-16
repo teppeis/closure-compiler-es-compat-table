@@ -1,5 +1,5 @@
 // 2017 annex b / Object.prototype getter/setter methods / __lookupSetter__
-module.exports = function() {
+module.exports = () => {
   var obj = {
     set foo(baz) { return "bar"; },
     qux: 1

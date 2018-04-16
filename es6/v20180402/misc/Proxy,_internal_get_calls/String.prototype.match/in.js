@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / String.prototype.match
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // String.prototype.match -> Get -> [[Get]]
   var get = [];

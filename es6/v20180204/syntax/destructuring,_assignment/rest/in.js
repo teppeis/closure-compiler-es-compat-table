@@ -1,5 +1,5 @@
 // syntax / destructuring, assignment / rest
-module.exports = function() {
+module.exports = () => {
   var a,b,c,d;
   [a, ...b] = [3, 4, 5];
   [c, ...d] = [6];

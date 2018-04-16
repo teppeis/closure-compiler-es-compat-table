@@ -1,5 +1,5 @@
 // built-ins / Promise / Promise.race
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var fulfills = Promise.race([
     new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
     new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),

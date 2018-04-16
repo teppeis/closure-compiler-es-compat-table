@@ -1,5 +1,5 @@
 // functions / generators / %GeneratorPrototype%.throw
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   function * generator(){
     try {

@@ -10,6 +10,42 @@ $jscomp.getGlobal = function(a) {
   return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
+$jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
+$jscomp.initSymbol = function() {
+  $jscomp.initSymbol = function() {
+  };
+  $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
+};
+$jscomp.Symbol = function() {
+  var a = 0;
+  return function(b) {
+    return $jscomp.SYMBOL_PREFIX + (b || "") + a++;
+  };
+}();
+$jscomp.initSymbolIterator = function() {
+  $jscomp.initSymbol();
+  var a = $jscomp.global.Symbol.iterator;
+  a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
+  "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
+    return $jscomp.arrayIterator(this);
+  }});
+  $jscomp.initSymbolIterator = function() {
+  };
+};
+$jscomp.arrayIterator = function(a) {
+  var b = 0;
+  return $jscomp.iteratorPrototype(function() {
+    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+  });
+};
+$jscomp.iteratorPrototype = function(a) {
+  $jscomp.initSymbolIterator();
+  a = {next:a};
+  a[$jscomp.global.Symbol.iterator] = function() {
+    return this;
+  };
+  return a;
+};
 $jscomp.polyfill = function(a, b, e, c) {
   if (b) {
     e = $jscomp.global;
@@ -49,7 +85,10 @@ $jscomp.polyfill("Object.getOwnPropertyDescriptors", function(a) {
   };
 }, "es8", "es5");
 module.exports = function() {
-  var a = {a:1}, b = "function" === typeof Symbol ? Symbol("b") : "b";
+  var a = {a:1};
+  $jscomp.initSymbol();
+  $jscomp.initSymbol();
+  var b = "function" === typeof Symbol ? Symbol("b") : "b";
   a[b] = 2;
   a = Object.defineProperty(a, "c", {value:3});
   a = Object.getOwnPropertyDescriptors(a);

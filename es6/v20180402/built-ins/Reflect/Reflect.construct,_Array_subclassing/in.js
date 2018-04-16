@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.construct, Array subclassing
-module.exports = function() {
+module.exports = () => {
   function F(){}
   var obj = Reflect.construct(Array, [], F);
   obj[2] = 'foo';

@@ -1,5 +1,5 @@
 // functions / super / in methods, property access
-module.exports = function() {
+module.exports = () => {
   class B {}
   B.prototype.qux = "foo";
   B.prototype.corge = "baz";

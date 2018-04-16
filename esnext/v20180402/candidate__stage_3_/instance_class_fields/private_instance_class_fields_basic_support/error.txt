@@ -1,5 +1,5 @@
 // candidate (stage 3) / instance class fields / private instance class fields basic support
-module.exports = function() {
+module.exports = () => {
 class C {
 #x;
 constructor(x){

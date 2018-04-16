@@ -1,5 +1,5 @@
 // misc / Object static methods accept primitives / Object.isExtensible
-module.exports = function() {
+module.exports = () => {
   return Object.isExtensible('a') === false;
 
 };

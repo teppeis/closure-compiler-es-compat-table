@@ -1,5 +1,5 @@
 // functions / arrow functions / no "prototype" property
-module.exports = function() {
+module.exports = () => {
   var a = () => 5;
   return !a.hasOwnProperty("prototype");
 

@@ -1,5 +1,5 @@
 // functions / generators / computed shorthand generators, classes
-module.exports = function() {
+module.exports = () => {
   var garply = "generator";
   class C {
     * [garply] () {

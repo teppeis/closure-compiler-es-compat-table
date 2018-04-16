@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / RegExp.prototype.flags
-module.exports = function() {
+module.exports = () => {
 // RegExp.prototype.flags -> Get -> [[Get]]
   var get = [];
   var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});

@@ -1,5 +1,5 @@
 // built-ins / Set / Set.prototype.forEach
-module.exports = function() {
+module.exports = () => {
   return typeof Set.prototype.forEach === "function";
 
 };

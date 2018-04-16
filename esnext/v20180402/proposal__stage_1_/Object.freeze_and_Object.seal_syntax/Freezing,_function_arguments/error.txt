@@ -1,5 +1,5 @@
 // proposal (stage 1) / Object.freeze and Object.seal syntax / Freezing, function arguments
-module.exports = function() {
+module.exports = () => {
 function foo(# bar, baz #) {
 if (baz === 42) bar = 27;
 return bar + baz;

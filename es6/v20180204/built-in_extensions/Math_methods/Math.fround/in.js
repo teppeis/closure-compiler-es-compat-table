@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.fround
-module.exports = function() {
+module.exports = () => {
   return Math.fround(0) === 0
     && Math.fround(-0) === -0
     && Math.fround(Infinity) === Infinity

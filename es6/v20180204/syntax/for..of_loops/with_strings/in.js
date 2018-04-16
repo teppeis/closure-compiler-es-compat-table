@@ -1,5 +1,5 @@
 // syntax / for..of loops / with strings
-module.exports = function() {
+module.exports = () => {
   var str = "";
   for (var item of "foo")
     str += item;

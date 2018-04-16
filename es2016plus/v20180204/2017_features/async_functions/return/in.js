@@ -1,5 +1,5 @@
 // 2017 features / async functions / return
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   async function a(){
     return "foo";
   }

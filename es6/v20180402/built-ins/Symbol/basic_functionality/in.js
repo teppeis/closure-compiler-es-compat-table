@@ -1,5 +1,5 @@
 // built-ins / Symbol / basic functionality
-module.exports = function() {
+module.exports = () => {
   var object = {};
   var symbol = Symbol();
   var value = {};

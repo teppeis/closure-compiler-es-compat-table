@@ -1,5 +1,5 @@
 // 2016 misc / generator throw() caught by inner generator
-module.exports = function() {
+module.exports = () => {
   function * generator() {
     yield * (function * () {
       try {

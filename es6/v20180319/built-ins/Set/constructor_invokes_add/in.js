@@ -1,5 +1,5 @@
 // built-ins / Set / constructor invokes add
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   var _add = Set.prototype.add;
   Set.prototype.add = function(v) {

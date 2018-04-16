@@ -1,5 +1,5 @@
 // syntax / new.target / in constructors
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new function f() {
     passed = (new.target === f);

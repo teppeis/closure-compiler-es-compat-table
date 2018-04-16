@@ -1,5 +1,5 @@
 // proposal (stage 1) / partial application syntax / runtime evaluation
-module.exports = function() {
+module.exports = () => {
 var f = function() {
 throw new Error();
 };

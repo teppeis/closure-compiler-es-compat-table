@@ -1,5 +1,5 @@
 // misc / prototype of bound functions / classes
-module.exports = function() {
+module.exports = () => {
   function correctProtoBound(proto) {
     class C {}
     if (Object.setPrototypeOf) {

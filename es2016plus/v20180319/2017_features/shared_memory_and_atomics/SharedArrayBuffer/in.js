@@ -1,5 +1,5 @@
 // 2017 features / shared memory and atomics / SharedArrayBuffer
-module.exports = function() {
+module.exports = () => {
   return typeof SharedArrayBuffer === 'function';
 
 };

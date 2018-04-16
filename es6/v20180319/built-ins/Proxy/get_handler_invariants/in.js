@@ -1,5 +1,5 @@
 // built-ins / Proxy / "get" handler invariants
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   var proxied = { };
   var proxy = new Proxy(proxied, {

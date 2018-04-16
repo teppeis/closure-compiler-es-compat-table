@@ -1,5 +1,5 @@
 // subclassing / Array is subclassable / Array.of
-module.exports = function() {
+module.exports = () => {
   class C extends Array {}
   return C.of(0) instanceof C;
 

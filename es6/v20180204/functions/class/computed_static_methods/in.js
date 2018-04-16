@@ -1,5 +1,5 @@
 // functions / class / computed static methods
-module.exports = function() {
+module.exports = () => {
   var foo = "method";
   class C {
     static [foo]() { return 3; }

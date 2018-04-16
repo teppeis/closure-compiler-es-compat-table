@@ -1,5 +1,5 @@
 // subclassing / Promise is subclassable / Promise.all
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   class P extends Promise {}
   var fulfills = P.all([
     new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),

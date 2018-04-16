@@ -1,5 +1,5 @@
 // 2017 features / async functions / await
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   (async function (){
     await Promise.resolve();
     var a1 = await new Promise(function(resolve) { setTimeout(resolve,800,"foo"); });

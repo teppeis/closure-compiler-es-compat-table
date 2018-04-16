@@ -1,5 +1,5 @@
 // syntax / octal and binary literals / octal supported by Number()
-module.exports = function() {
+module.exports = () => {
   return Number('0o1') === 1;
 
 };

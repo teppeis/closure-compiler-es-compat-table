@@ -1,5 +1,5 @@
 // syntax / new.target / assignment is an early error
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new function f() {
     passed = (new.target === f);

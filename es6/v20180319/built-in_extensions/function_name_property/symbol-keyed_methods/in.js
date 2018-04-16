@@ -1,5 +1,5 @@
 // built-in extensions / function "name" property / symbol-keyed methods
-module.exports = function() {
+module.exports = () => {
   var sym1 = Symbol("foo");
   var sym2 = Symbol();
   var o = {

@@ -1,5 +1,5 @@
 // built-ins / Symbol / Object(symbol)
-module.exports = function() {
+module.exports = () => {
   var symbol = Symbol();
   var symbolObject = Object(symbol);
   return typeof symbolObject === "object" &&

@@ -1,5 +1,5 @@
 // functions / super / in methods, method calls
-module.exports = function() {
+module.exports = () => {
   class B {
     qux(a) { return "foo" + a; }
   }

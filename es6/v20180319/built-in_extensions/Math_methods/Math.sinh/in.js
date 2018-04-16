@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.sinh
-module.exports = function() {
+module.exports = () => {
   var nan = Math.sinh(NaN);
   return Math.sinh(0) === 0
     && Math.sinh(-0) === -0

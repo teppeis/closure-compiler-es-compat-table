@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.atanh
-module.exports = function() {
+module.exports = () => {
   var nan1 = Math.atanh(NaN);
   var nan2 = Math.atanh(2);
   var nan3 = Math.atanh(-2);

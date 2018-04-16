@@ -1,5 +1,5 @@
 // built-ins / WeakMap / WeakMap.prototype isn't an instance
-module.exports = function() {
+module.exports = () => {
   new WeakMap();
   var obj = {};
   try {

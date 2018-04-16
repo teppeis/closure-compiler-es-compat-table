@@ -1,5 +1,5 @@
 // functions / arrow functions / no line break between params and <code>=></code>
-module.exports = function() {
+module.exports = () => {
   return (() => {
     x
       => 2;

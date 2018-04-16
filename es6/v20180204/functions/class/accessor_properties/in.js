@@ -1,5 +1,5 @@
 // functions / class / accessor properties
-module.exports = function() {
+module.exports = () => {
   var baz = false;
   class C {
     get foo() { return "foo"; }

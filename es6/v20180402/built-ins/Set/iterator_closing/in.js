@@ -1,5 +1,5 @@
 // built-ins / Set / iterator closing
-module.exports = function() {
+module.exports = () => {
   $jscomp.initSymbolIterator();
   var closed = false;
   var iter = global.__createIterableObject([1, 2, 3], {

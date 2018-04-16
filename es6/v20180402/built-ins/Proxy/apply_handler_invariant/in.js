@@ -1,5 +1,5 @@
 // built-ins / Proxy / "apply" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy(function(){}, {
     apply: function () { passed = true; }

@@ -1,5 +1,5 @@
 // misc / own property order / Object.keys
-module.exports = function() {
+module.exports = () => {
   var obj = {
     // Non-negative integer names appear first in value order
     2: true,

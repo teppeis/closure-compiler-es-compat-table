@@ -1,5 +1,5 @@
 // functions / class / implicit strict mode
-module.exports = function() {
+module.exports = () => {
   class C {
     static method() { return this === undefined; }
   }

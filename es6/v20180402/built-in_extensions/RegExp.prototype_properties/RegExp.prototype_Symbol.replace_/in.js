@@ -1,5 +1,5 @@
 // built-in extensions / RegExp.prototype properties / RegExp.prototype[Symbol.replace]
-module.exports = function() {
+module.exports = () => {
   return typeof RegExp.prototype[Symbol.replace] === 'function';
 
 };

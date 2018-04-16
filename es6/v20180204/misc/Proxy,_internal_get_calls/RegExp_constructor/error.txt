@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / RegExp constructor
-module.exports = function() {
+module.exports = () => {
 // RegExp -> Get -> [[Get]]
   var get = [];
   var re = { constructor: null };

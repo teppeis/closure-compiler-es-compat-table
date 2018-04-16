@@ -1,5 +1,5 @@
 // strawman (stage 0) / zones / Zone.prototype.run
-module.exports = function() {
+module.exports = () => {
   return typeof Zone.prototype.run == 'function';
 
 };

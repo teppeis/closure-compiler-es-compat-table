@@ -1,5 +1,5 @@
 // 2017 annex b / Proxy internal calls, getter/setter methods / __lookupSetter__
-module.exports = function() {
+module.exports = () => {
 // Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]
 // Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]
   var gopd = [];

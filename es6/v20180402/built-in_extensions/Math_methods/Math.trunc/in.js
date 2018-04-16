@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.trunc
-module.exports = function() {
+module.exports = () => {
   var nan = Math.trunc(NaN);
   return Math.trunc(0) === 0
     && Math.trunc(-0) === -0

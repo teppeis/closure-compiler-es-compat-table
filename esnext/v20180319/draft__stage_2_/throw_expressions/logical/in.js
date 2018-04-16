@@ -1,5 +1,5 @@
 // draft (stage 2) / throw expressions / logical
-module.exports = function() {
+module.exports = () => {
 var a, b;
 try {
 a = 19 || throw 77;

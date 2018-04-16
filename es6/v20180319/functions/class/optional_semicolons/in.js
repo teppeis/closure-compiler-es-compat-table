@@ -1,5 +1,5 @@
 // functions / class / optional semicolons
-module.exports = function() {
+module.exports = () => {
   class C {
     ;
     method() { return 2; };

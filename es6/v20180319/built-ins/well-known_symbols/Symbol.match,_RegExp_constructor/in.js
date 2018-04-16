@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.match, RegExp constructor
-module.exports = function() {
+module.exports = () => {
   var re = /./;
   re[Symbol.match] = false;
   var foo = {constructor: RegExp};

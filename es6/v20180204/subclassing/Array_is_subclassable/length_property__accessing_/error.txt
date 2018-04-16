@@ -1,5 +1,5 @@
 // subclassing / Array is subclassable / length property (accessing)
-module.exports = function() {
+module.exports = () => {
   class C extends Array {}
   var c = new C();
   var len1 = c.length;

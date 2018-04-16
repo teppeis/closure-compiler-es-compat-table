@@ -1,5 +1,5 @@
 // proposal (stage 1) / partial application syntax / partial application from right with rest
-module.exports = function() {
+module.exports = () => {
 function f(a, b, c) {
 return a + b + c;
 };

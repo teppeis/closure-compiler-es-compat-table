@@ -1,5 +1,5 @@
 // 2016 misc / Proxy, "enumerate" handler removed
-module.exports = function() {
+module.exports = () => {
   var passed = true;
   var proxy = new Proxy({}, {
     enumerate: function() {

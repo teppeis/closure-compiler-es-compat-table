@@ -1,5 +1,5 @@
 // built-ins / Proxy / "get" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = { };
   var proxy = new Proxy(proxied, {
     get: function (t, k, r) {

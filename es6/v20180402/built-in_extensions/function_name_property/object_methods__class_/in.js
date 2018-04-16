@@ -1,5 +1,5 @@
 // built-in extensions / function "name" property / object methods (class)
-module.exports = function() {
+module.exports = () => {
   var o = { foo: class {}, bar: class baz {}};
   o.qux = class {};
   return o.foo.name === "foo" &&

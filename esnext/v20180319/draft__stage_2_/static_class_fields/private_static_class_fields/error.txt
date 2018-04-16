@@ -1,5 +1,5 @@
 // draft (stage 2) / static class fields / private static class fields
-module.exports = function() {
+module.exports = () => {
 class C {
 static #x = 42;
 x(){

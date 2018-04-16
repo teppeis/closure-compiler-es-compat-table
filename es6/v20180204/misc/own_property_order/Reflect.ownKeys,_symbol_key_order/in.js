@@ -1,5 +1,5 @@
 // misc / own property order / Reflect.ownKeys, symbol key order
-module.exports = function() {
+module.exports = () => {
   var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
   var obj = {
     1: true,

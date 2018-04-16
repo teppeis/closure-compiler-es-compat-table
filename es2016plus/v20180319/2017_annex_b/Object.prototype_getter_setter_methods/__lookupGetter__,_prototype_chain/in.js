@@ -1,5 +1,5 @@
 // 2017 annex b / Object.prototype getter/setter methods / __lookupGetter__, prototype chain
-module.exports = function() {
+module.exports = () => {
   var obj = {
     get foo() { return "bar"},
     qux: 1

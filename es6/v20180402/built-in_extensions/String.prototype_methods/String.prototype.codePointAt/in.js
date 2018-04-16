@@ -1,5 +1,5 @@
 // built-in extensions / String.prototype methods / String.prototype.codePointAt
-module.exports = function() {
+module.exports = () => {
   return 'abc'.codePointAt() === 97
     && 'abc'.codePointAt(0) === 97
     && 'abc'.codePointAt(1) === 98

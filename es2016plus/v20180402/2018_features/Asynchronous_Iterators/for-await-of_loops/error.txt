@@ -1,5 +1,5 @@
 // 2018 features / Asynchronous Iterators / for-await-of loops
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var asyncIterable = {};
   asyncIterable[Symbol.asyncIterator] = function(){
     var i = 0;

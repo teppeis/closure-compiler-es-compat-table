@@ -1,5 +1,5 @@
 // draft (stage 2) / throw expressions / parameter initializers
-module.exports = function() {
+module.exports = () => {
 function fn (arg = throw 42) {
 return arg;
 }

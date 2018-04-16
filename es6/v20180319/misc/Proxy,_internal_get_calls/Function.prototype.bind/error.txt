@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / Function.prototype.bind
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // Function.prototype.bind -> Get -> [[Get]]
   var get = [];

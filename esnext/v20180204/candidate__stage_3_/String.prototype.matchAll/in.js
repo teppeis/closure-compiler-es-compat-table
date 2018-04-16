@@ -1,5 +1,5 @@
 // candidate (stage 3) / String.prototype.matchAll
-module.exports = function() {
+module.exports = () => {
   var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
   if(iterator[Symbol.iterator]() !== iterator)return false;
   var a = '', b = '', c = '', step;

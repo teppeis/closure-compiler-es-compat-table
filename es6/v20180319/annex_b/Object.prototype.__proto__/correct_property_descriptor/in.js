@@ -1,5 +1,5 @@
 // annex b / Object.prototype.__proto__ / correct property descriptor
-module.exports = function() {
+module.exports = () => {
   var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
   var A = function(){};
   return (desc

@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / Array.prototype.shift
-module.exports = function() {
+module.exports = () => {
 // Array.prototype.shift -> Get -> [[Get]]
   var get = [];
   var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});

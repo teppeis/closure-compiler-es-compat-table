@@ -1,5 +1,5 @@
 // built-ins / Symbol / Object.defineProperty support
-module.exports = function() {
+module.exports = () => {
   var object = {};
   var symbol = Symbol();
   var value = {};

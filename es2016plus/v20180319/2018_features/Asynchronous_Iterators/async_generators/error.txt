@@ -1,5 +1,5 @@
 // 2018 features / Asynchronous Iterators / async generators
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   async function*generator(){
     yield 42;
   }

@@ -1,5 +1,5 @@
 // optimisation / proper tail calls (tail call optimisation) / mutual recursion
-module.exports = function() {
+module.exports = () => {
   "use strict";
   function f(n){
     if (n <= 0) {

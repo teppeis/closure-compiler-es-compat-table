@@ -1,5 +1,5 @@
 // bindings / const / for loop statement scope (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   const baz = 1;
   for(const baz = 0; false;) {}

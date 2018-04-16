@@ -1,5 +1,5 @@
 // syntax / default function parameters / arguments object interaction
-module.exports = function() {
+module.exports = () => {
   return (function (a = "baz", b = "qux", c = "quux") {
     a = "corge";
     // The arguments object is not mapped to the

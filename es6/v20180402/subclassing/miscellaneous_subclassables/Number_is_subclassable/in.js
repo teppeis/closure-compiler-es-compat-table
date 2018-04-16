@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / Number is subclassable
-module.exports = function() {
+module.exports = () => {
   class C extends Number {}
   var c = new C(6);
   return c instanceof Number

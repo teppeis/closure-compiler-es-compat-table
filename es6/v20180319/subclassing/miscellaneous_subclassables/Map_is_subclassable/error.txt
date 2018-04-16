@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / Map is subclassable
-module.exports = function() {
+module.exports = () => {
   var key = {};
   class M extends Map {}
   var map = new M();

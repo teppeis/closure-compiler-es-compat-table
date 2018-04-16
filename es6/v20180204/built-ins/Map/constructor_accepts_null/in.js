@@ -1,5 +1,5 @@
 // built-ins / Map / constructor accepts null
-module.exports = function() {
+module.exports = () => {
   new Map(null);
   return true;
 

@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.of
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.of === "function" &&
 typeof Uint8Array.of === "function" &&
 typeof Uint8ClampedArray.of === "function" &&

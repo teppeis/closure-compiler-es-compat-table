@@ -1,5 +1,5 @@
 // misc / own property order / Object.assign
-module.exports = function() {
+module.exports = () => {
   var result = '';
   var target = {};
   "012349 DBACEFGHIJKLMNOPQRST".split('').concat(-1).forEach(function(key){

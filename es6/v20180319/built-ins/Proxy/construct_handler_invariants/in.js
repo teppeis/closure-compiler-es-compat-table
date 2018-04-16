@@ -1,5 +1,5 @@
 // built-ins / Proxy / "construct" handler invariants
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // A Proxy exotic object only has a [[Construct]] internal method if the

@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / Set is subclassable
-module.exports = function() {
+module.exports = () => {
   var obj = {};
   class S extends Set {}
   var set = new S();

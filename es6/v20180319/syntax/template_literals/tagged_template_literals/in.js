@@ -1,5 +1,5 @@
 // syntax / template literals / tagged template literals
-module.exports = function() {
+module.exports = () => {
   var called = false;
   function fn(parts, a, b) {
     called = true;

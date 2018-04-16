@@ -1,5 +1,5 @@
 // built-in extensions / Object static methods / Object.setPrototypeOf
-module.exports = function() {
+module.exports = () => {
   return Object.setPrototypeOf({}, Array.prototype) instanceof Array;
 
 };

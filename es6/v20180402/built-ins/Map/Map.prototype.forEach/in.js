@@ -1,5 +1,5 @@
 // built-ins / Map / Map.prototype.forEach
-module.exports = function() {
+module.exports = () => {
   return typeof Map.prototype.forEach === "function";
 
 };

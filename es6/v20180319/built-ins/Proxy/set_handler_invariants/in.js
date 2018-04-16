@@ -1,5 +1,5 @@
 // built-ins / Proxy / "set" handler invariants
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // Cannot change the value of a property to be different from the value of

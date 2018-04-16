@@ -1,5 +1,5 @@
 // built-in extensions / Number properties / Number.isSafeInteger
-module.exports = function() {
+module.exports = () => {
   return Number.isSafeInteger(3) === true
     && Number.isSafeInteger(3.1) === false
     && Number.isSafeInteger(3.0) === true

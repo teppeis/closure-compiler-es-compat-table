@@ -1,5 +1,5 @@
 // functions / arrow functions / lexical "super" binding in constructors
-module.exports = function() {
+module.exports = () => {
   var received;
   class B {
     constructor (arg) {

@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / Error is subclassable
-module.exports = function() {
+module.exports = () => {
   class C extends Error {}
   var c = new C();
   return c instanceof Error

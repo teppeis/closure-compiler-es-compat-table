@@ -1,5 +1,5 @@
 // built-ins / Map / Map.prototype.keys
-module.exports = function() {
+module.exports = () => {
   return typeof Map.prototype.keys === "function";
 
 };

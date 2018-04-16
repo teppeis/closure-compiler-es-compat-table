@@ -1,5 +1,5 @@
 // proposal (stage 1) / extensible numeric literals
-module.exports = function() {
+module.exports = () => {
 function i (str, num) {
 return typeof str + str + typeof num + num;
 }

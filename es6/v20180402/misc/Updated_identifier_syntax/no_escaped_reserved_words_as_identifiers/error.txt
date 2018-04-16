@@ -1,5 +1,5 @@
 // misc / Updated identifier syntax / no escaped reserved words as identifiers
-module.exports = function() {
+module.exports = () => {
   var \u0061;
   var v\u0061r;
   return false;

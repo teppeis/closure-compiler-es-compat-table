@@ -1,5 +1,5 @@
 // misc / Object static methods accept primitives / Object.getOwnPropertyDescriptor
-module.exports = function() {
+module.exports = () => {
   return Object.getOwnPropertyDescriptor('a', 'foo') === undefined;
 
 };

@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.defineProperty
-module.exports = function() {
+module.exports = () => {
   var obj = {};
   Reflect.defineProperty(obj, "foo", { value: 123 });
   return obj.foo === 123 &&

@@ -1,5 +1,5 @@
 // built-ins / Map / Map.prototype isn't an instance
-module.exports = function() {
+module.exports = () => {
   new Map();
   var obj = {};
   try {

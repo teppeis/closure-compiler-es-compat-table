@@ -1,5 +1,5 @@
 // syntax / destructuring, assignment / object destructuring with primitives
-module.exports = function() {
+module.exports = () => {
   var toFixed, slice;
   ({toFixed} = 2);
   ({slice} = '');

@@ -1,5 +1,5 @@
 // candidate (stage 3) / instance class fields / private instance class fields initializers
-module.exports = function() {
+module.exports = () => {
 class C {
 #x = 42;
 x(){

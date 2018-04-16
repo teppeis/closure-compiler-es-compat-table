@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.acosh
-module.exports = function() {
+module.exports = () => {
   var nan1 = Math.acosh(NaN);
   var nan2 = Math.acosh(-1);
   return Math.acosh(1) === 0

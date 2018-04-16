@@ -1,5 +1,5 @@
 // built-ins / Proxy / "has" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = {};
   var passed = false;
   "foo" in new Proxy(proxied, {

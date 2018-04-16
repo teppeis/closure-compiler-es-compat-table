@@ -1,5 +1,5 @@
 // built-ins / Symbol / symbol keys are hidden to pre-ES6 code
-module.exports = function() {
+module.exports = () => {
   var object = {};
   var symbol = Symbol();
   object[symbol] = 1;

@@ -1,5 +1,5 @@
 // built-ins / WeakMap / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new WeakMap();
   try {
     WeakMap();

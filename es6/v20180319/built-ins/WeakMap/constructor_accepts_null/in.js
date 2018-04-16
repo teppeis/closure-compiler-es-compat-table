@@ -1,5 +1,5 @@
 // built-ins / WeakMap / constructor accepts null
-module.exports = function() {
+module.exports = () => {
   new WeakMap(null);
   return true;
 

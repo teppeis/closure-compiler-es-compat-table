@@ -1,5 +1,5 @@
 // built-ins / Proxy / "set" handler, instances of proxies
-module.exports = function() {
+module.exports = () => {
   var proxied = { };
   var passed = false;
   var proxy = Object.create(new Proxy(proxied, {

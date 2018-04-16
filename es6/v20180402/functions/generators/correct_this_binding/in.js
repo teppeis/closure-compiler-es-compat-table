@@ -1,5 +1,5 @@
 // functions / generators / correct "this" binding
-module.exports = function() {
+module.exports = () => {
   function * generator(){
     yield this.x; yield this.y;
   };

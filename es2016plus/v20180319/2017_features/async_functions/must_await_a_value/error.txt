@@ -1,5 +1,5 @@
 // 2017 features / async functions / must await a value
-module.exports = function() {
+module.exports = () => {
   async function a() {
     await Promise.resolve();
   }

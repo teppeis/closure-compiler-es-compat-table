@@ -1,5 +1,5 @@
 // candidate (stage 3) / optional catch binding / yield
-module.exports = function() {
+module.exports = () => {
 function *foo() {
 try {
 yield;

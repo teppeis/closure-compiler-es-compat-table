@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype[Symbol.iterator]
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype[Symbol.iterator] === "function" &&
 typeof Uint8Array.prototype[Symbol.iterator] === "function" &&
 typeof Uint8ClampedArray.prototype[Symbol.iterator] === "function" &&

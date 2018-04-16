@@ -1,5 +1,5 @@
 // functions / class / extends null
-module.exports = function() {
+module.exports = () => {
   class C extends null {
     constructor() { return Object.create(null); }
   }

@@ -1,5 +1,5 @@
 // draft (stage 2) / Generator function.sent Meta Property
-module.exports = function() {
+module.exports = () => {
 var result;
 function* generator() {
 result = function.sent;

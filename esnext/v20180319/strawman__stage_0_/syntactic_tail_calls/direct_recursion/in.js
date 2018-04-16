@@ -1,5 +1,5 @@
 // strawman (stage 0) / syntactic tail calls / direct recursion
-module.exports = function() {
+module.exports = () => {
 "use strict";
 return (function f(n){
 if (n <= 0) {

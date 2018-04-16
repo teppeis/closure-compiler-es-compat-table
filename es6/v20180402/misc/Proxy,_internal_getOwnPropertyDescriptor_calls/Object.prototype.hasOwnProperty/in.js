@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'getOwnPropertyDescriptor' calls / Object.prototype.hasOwnProperty
-module.exports = function() {
+module.exports = () => {
 // Object.prototype.hasOwnProperty -> HasOwnProperty -> [[GetOwnProperty]]
   var gopd = [];
   var p = new Proxy({foo:1, bar:2},

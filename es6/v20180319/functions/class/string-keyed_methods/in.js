@@ -1,5 +1,5 @@
 // functions / class / string-keyed methods
-module.exports = function() {
+module.exports = () => {
   class C {
     "foo bar"() { return 2; }
   }

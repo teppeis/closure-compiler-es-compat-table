@@ -1,5 +1,5 @@
 // functions / generators / can't use "this" with new
-module.exports = function() {
+module.exports = () => {
   function * generator(){
     yield this.x; yield this.y;
   };

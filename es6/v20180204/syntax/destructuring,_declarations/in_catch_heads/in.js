@@ -1,5 +1,5 @@
 // syntax / destructuring, declarations / in catch heads
-module.exports = function() {
+module.exports = () => {
   try {
     throw [1,2];
   } catch([i,j]) {

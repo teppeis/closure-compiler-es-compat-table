@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.toPrimitive
-module.exports = function() {
+module.exports = () => {
   var a = {}, b = {}, c = {};
   var passed = 0;
   a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };

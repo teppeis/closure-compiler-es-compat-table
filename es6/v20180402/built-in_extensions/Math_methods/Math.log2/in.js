@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.log2
-module.exports = function() {
+module.exports = () => {
   var nan1 = Math.log2(-1);
   var nan2 = Math.log2(NaN);
   return Math.log2(2) === 1

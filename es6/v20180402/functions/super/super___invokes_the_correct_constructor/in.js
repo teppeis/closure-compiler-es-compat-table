@@ -1,5 +1,5 @@
 // functions / super / super() invokes the correct constructor
-module.exports = function() {
+module.exports = () => {
 // checks that super() is *not* a synonym of super.constructor()
   var passed;
   class B {

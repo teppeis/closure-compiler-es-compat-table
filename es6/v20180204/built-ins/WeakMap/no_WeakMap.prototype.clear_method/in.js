@@ -1,5 +1,5 @@
 // built-ins / WeakMap / no WeakMap.prototype.clear method
-module.exports = function() {
+module.exports = () => {
   if (!("clear" in WeakMap.prototype)) {
     return true;
   }

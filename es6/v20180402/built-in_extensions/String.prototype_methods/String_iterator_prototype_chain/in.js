@@ -1,5 +1,5 @@
 // built-in extensions / String.prototype methods / String iterator prototype chain
-module.exports = function() {
+module.exports = () => {
 // Iterator instance
   var iterator = ''[Symbol.iterator]();
   // %StringIteratorPrototype%

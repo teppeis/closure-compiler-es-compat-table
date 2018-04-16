@@ -1,5 +1,5 @@
 // misc / Updated identifier syntax / var 𐋀;
-module.exports = function() {
+module.exports = () => {
   var 𐋀;
   return true;
 

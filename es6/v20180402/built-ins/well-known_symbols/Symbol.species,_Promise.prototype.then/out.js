@@ -282,6 +282,7 @@ module.exports = function() {
     }, function() {
     });
   };
+  $jscomp.initSymbol();
   Object.defineProperty(d, Symbol.species, {value:e});
   return a.then(function() {
   }) instanceof e;

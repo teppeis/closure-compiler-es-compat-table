@@ -1,5 +1,5 @@
 // draft (stage 2) / weak references
-module.exports = function() {
+module.exports = () => {
   var O = {};
   var weakref = System.makeWeakRef(O);
   var works = weakref.get() === O;

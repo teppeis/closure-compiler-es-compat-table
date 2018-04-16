@@ -1,5 +1,5 @@
 // 2017 features / async functions / async methods, classes
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   class C {
     async a(){ return await Promise.resolve("foo"); }
   };

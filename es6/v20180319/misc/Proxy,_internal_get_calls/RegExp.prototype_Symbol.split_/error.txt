@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / RegExp.prototype[Symbol.split]
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // RegExp.prototype[Symbol.split] -> Get -> [[Get]]
   var get = [];

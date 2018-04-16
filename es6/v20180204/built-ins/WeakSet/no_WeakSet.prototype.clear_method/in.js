@@ -1,5 +1,5 @@
 // built-ins / WeakSet / no WeakSet.prototype.clear method
-module.exports = function() {
+module.exports = () => {
   if (!("clear" in WeakSet.prototype)) {
     return true;
   }

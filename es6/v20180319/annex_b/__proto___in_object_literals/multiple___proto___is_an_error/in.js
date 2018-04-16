@@ -1,5 +1,5 @@
 // annex b / __proto__ in object literals / multiple __proto__ is an error
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   try {
     eval("({ __proto__ : [], __proto__: {} })");

@@ -1,5 +1,5 @@
 // functions / generators / basic functionality
-module.exports = function() {
+module.exports = () => {
   function * generator(){
     yield 5; yield 6;
   };

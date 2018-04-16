@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / Boolean is subclassable
-module.exports = function() {
+module.exports = () => {
   class C extends Boolean {}
   var c = new C(true);
   return c instanceof Boolean

@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype.fill
-module.exports = function() {
+module.exports = () => {
   var assert = require('assert');
   assert.deepEqual(
     [1, 2, 3].fill(),

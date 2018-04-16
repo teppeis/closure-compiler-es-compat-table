@@ -1,5 +1,5 @@
 // misc / prototype of bound functions / arrow functions
-module.exports = function() {
+module.exports = () => {
   function correctProtoBound(proto) {
     var f = ()=>5;
     if (Object.setPrototypeOf) {

@@ -1,5 +1,5 @@
 // misc / own property order / JSON.stringify
-module.exports = function() {
+module.exports = () => {
   var obj = {
     2: true,
     0: true,

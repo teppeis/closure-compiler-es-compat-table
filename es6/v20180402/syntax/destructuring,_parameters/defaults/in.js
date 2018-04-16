@@ -1,5 +1,5 @@
 // syntax / destructuring, parameters / defaults
-module.exports = function() {
+module.exports = () => {
   return (function({a = 1, b = 0, c = 3, x:d = 0, y:e = 5},
     [f = 6, g = 0, h = 8]) {
     return a === 1 && b === 2 && c === 3 && d === 4 &&

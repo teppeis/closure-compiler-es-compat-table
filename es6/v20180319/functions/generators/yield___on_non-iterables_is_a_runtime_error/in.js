@@ -1,5 +1,5 @@
 // functions / generators / yield * on non-iterables is a runtime error
-module.exports = function() {
+module.exports = () => {
   var iterator = (function * generator() {
     yield * [5];
   }());

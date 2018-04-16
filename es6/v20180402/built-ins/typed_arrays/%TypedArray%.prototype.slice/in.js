@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.slice
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.slice === "function" &&
 typeof Uint8Array.prototype.slice === "function" &&
 typeof Uint8ClampedArray.prototype.slice === "function" &&

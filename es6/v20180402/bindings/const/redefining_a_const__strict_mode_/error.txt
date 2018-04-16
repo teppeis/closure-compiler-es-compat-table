@@ -1,5 +1,5 @@
 // bindings / const / redefining a const (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   const baz = 1;
   const foo = 1;

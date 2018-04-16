@@ -1,5 +1,5 @@
 // syntax / destructuring, declarations / with strings
-module.exports = function() {
+module.exports = () => {
   var [a, b, c] = "ab";
   return a === "a" && b === "b" && c === undefined;
 

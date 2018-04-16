@@ -87,6 +87,8 @@ module.exports = function() {
     return b[d];
   }});
   Array.from(b);
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   return a[0] === Symbol.iterator && "length,0,1" === a.slice(1) + "";
 };
 

@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / Array.prototype.concat
-module.exports = function() {
+module.exports = () => {
 // Array.prototype.concat -> Get -> [[Get]]
   var get = [];
   var arr = [1];

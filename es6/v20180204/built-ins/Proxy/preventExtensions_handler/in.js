@@ -1,5 +1,5 @@
 // built-ins / Proxy / "preventExtensions" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = {};
   var passed = false;
   Object.preventExtensions(

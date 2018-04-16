@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / ToPropertyDescriptor
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // ToPropertyDescriptor -> Get -> [[Get]]
   var get = [];

@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array iterator prototype chain
-module.exports = function() {
+module.exports = () => {
 // Iterator instance
   var iterator = [][Symbol.iterator]();
   // %ArrayIteratorPrototype%

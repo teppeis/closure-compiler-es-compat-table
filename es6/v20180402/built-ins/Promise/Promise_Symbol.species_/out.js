@@ -168,18 +168,18 @@ $jscomp.polyfill("Promise", function(a) {
     }
     "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
   };
-  c.prototype.reject_ = function(b) {
-    this.settle_(2, b);
+  c.prototype.reject_ = function(a) {
+    this.settle_(2, a);
   };
-  c.prototype.fulfill_ = function(b) {
-    this.settle_(1, b);
+  c.prototype.fulfill_ = function(a) {
+    this.settle_(1, a);
   };
-  c.prototype.settle_ = function(b, a) {
+  c.prototype.settle_ = function(a, c) {
     if (0 != this.state_) {
-      throw Error("Cannot settle(" + b + ", " + a + "): Promise already settled in state" + this.state_);
+      throw Error("Cannot settle(" + a + ", " + c + "): Promise already settled in state" + this.state_);
     }
-    this.state_ = b;
-    this.result_ = a;
+    this.state_ = a;
+    this.result_ = c;
     this.executeOnSettledCallbacks_();
   };
   c.prototype.executeOnSettledCallbacks_ = function() {
@@ -271,6 +271,9 @@ $jscomp.polyfill("Promise", function(a) {
   return c;
 }, "es6", "es3");
 module.exports = function() {
-  return "get" in Object.getOwnPropertyDescriptor(Promise, Symbol.species) && Promise[Symbol.species] === Promise;
+  $jscomp.initSymbol();
+  var a = Object.getOwnPropertyDescriptor(Promise, Symbol.species);
+  $jscomp.initSymbol();
+  return "get" in a && Promise[Symbol.species] === Promise;
 };
 

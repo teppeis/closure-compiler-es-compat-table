@@ -1,5 +1,5 @@
 // misc / miscellaneous / built-in prototypes are not instances
-module.exports = function() {
+module.exports = () => {
   try {
     RegExp.prototype.exec(); return false;
   } catch(e) {}

@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.lastIndexOf
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.lastIndexOf === "function" &&
 typeof Uint8Array.prototype.lastIndexOf === "function" &&
 typeof Uint8ClampedArray.prototype.lastIndexOf === "function" &&

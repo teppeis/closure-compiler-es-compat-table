@@ -1,5 +1,5 @@
 // built-ins / Proxy / "getPrototypeOf" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // If the target object is not extensible, [[GetPrototypeOf]] applied to the proxy object

@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / instanceof operator
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // InstanceofOperator -> GetMethod -> GetV -> [[Get]]
   // InstanceofOperator -> OrdinaryHasInstance -> Get -> [[Get]]

@@ -1,5 +1,5 @@
 // proposal (stage 1) / String.prototype.codePoints
-module.exports = function() {
+module.exports = () => {
   var results = [];
   for (let code of 'a𠮷b'.codePoints()) results.push(code);
   return results.length === 3

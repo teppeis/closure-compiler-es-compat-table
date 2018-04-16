@@ -1,5 +1,5 @@
 // draft (stage 2) / throw expressions / conditionals
-module.exports = function() {
+module.exports = () => {
 true ? 42 : throw 21;
 try {
 false ? 42 : throw 21;

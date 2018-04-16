@@ -1,5 +1,5 @@
 // syntax / object literal extensions / computed accessors
-module.exports = function() {
+module.exports = () => {
   var x = 'y',
     valueSet,
     obj = {

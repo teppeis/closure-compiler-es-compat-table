@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.species, Array.prototype.map
-module.exports = function() {
+module.exports = () => {
   var obj = [];
   obj.constructor = {};
   obj.constructor[Symbol.species] = function() {

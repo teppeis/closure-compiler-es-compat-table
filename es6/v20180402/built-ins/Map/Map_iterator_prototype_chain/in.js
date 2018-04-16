@@ -1,5 +1,5 @@
 // built-ins / Map / Map iterator prototype chain
-module.exports = function() {
+module.exports = () => {
 // Iterator instance
   var iterator = new Map()[Symbol.iterator]();
   // %MapIteratorPrototype%

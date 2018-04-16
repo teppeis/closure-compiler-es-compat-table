@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype.findIndex
-module.exports = function() {
+module.exports = () => {
   var arr = [{name: 'foo'}];
   var target = {name: 'bar'};
   arr.push(target);

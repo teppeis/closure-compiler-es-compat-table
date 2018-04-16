@@ -1,5 +1,5 @@
 // proposal (stage 1) / the pipeline operator
-module.exports = function() {
+module.exports = () => {
 function doubleSay (str) {
 return str + ', ' + str;
 }

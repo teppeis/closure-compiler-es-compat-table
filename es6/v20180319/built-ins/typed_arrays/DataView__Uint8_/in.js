@@ -1,5 +1,5 @@
 // built-ins / typed arrays / DataView (Uint8)
-module.exports = function() {
+module.exports = () => {
   var buffer = new ArrayBuffer(64);
   var view = new DataView(buffer);
   view.setUint8(0, 0x100);

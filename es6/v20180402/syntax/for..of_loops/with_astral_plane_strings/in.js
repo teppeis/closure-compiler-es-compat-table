@@ -1,5 +1,5 @@
 // syntax / for..of loops / with astral plane strings
-module.exports = function() {
+module.exports = () => {
   var str = "";
   for (var item of "𠮷𠮶")
     str += item + " ";

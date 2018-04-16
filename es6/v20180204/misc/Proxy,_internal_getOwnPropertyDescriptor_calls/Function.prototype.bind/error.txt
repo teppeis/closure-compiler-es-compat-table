@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'getOwnPropertyDescriptor' calls / Function.prototype.bind
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // Function.prototype.bind -> HasOwnProperty -> [[GetOwnProperty]]
   var gopd = [];

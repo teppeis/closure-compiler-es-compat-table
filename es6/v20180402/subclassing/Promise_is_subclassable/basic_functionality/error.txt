@@ -1,5 +1,5 @@
 // subclassing / Promise is subclassable / basic functionality
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   class P extends Promise {}
   var p1 = new P(function(resolve, reject) { resolve("foo"); });
   var p2 = new P(function(resolve, reject) { reject("quux"); });

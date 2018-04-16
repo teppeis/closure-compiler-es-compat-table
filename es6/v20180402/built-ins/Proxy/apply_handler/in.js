@@ -1,5 +1,5 @@
 // built-ins / Proxy / "apply" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = function(){};
   var passed = false;
   var host = {

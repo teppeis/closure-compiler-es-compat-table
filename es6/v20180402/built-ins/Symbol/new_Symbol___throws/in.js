@@ -1,5 +1,5 @@
 // built-ins / Symbol / new Symbol() throws
-module.exports = function() {
+module.exports = () => {
   var symbol = Symbol();
   try {
     new Symbol();

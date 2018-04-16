@@ -1,5 +1,5 @@
 // functions / class / static methods
-module.exports = function() {
+module.exports = () => {
   class C {
     static method() { return 3; }
   }

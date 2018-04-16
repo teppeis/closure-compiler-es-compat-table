@@ -1,5 +1,5 @@
 // built-ins / Proxy / "ownKeys" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // The Type of each result List element is either String or Symbol.

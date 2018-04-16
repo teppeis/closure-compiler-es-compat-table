@@ -1,5 +1,5 @@
 // syntax / destructuring, parameters / nested
-module.exports = function() {
+module.exports = () => {
   return function([e, {x:f, g}], {h, x:[i]}) {
     return e === 9 && f === 10 && g === undefined
 && h === 11 && i === 12;

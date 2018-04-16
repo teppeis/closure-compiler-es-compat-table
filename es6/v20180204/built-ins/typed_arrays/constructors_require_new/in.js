@@ -1,5 +1,5 @@
 // built-ins / typed arrays / constructors require new
-module.exports = function() {
+module.exports = () => {
   var buffer = new ArrayBuffer(64);
   var constructors = [
     'ArrayBuffer',

@@ -1,5 +1,5 @@
 // misc / prototype of bound functions / generator functions
-module.exports = function() {
+module.exports = () => {
   function correctProtoBound(proto) {
     var f = function*(){};
     if (Object.setPrototypeOf) {

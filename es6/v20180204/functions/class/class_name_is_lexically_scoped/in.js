@@ -1,5 +1,5 @@
 // functions / class / class name is lexically scoped
-module.exports = function() {
+module.exports = () => {
   class C {
     method() { return typeof C === "function"; }
   }

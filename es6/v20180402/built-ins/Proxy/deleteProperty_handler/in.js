@@ -1,5 +1,5 @@
 // built-ins / Proxy / "deleteProperty" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = {};
   var passed = false;
   delete new Proxy(proxied, {

@@ -103,8 +103,8 @@ $jscomp.polyfill("Promise", function(a) {
         delete b[e];
         try {
           a();
-        } catch (k) {
-          this.asyncThrow_(k);
+        } catch (h) {
+          this.asyncThrow_(h);
         }
       }
     }
@@ -119,20 +119,20 @@ $jscomp.polyfill("Promise", function(a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var e = this.createResolveAndReject_();
+    var a = this.createResolveAndReject_();
     try {
-      b(e.resolve, e.reject);
-    } catch (h) {
-      e.reject(h);
+      b(a.resolve, a.reject);
+    } catch (k) {
+      a.reject(k);
     }
   };
   c.prototype.createResolveAndReject_ = function() {
     function b(b) {
-      return function(c) {
-        a || (a = !0, b.call(e, c));
+      return function(e) {
+        c || (c = !0, b.call(a, e));
       };
     }
-    var e = this, a = !1;
+    var a = this, c = !1;
     return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
   };
   c.prototype.resolveTo_ = function(b) {
@@ -162,8 +162,8 @@ $jscomp.polyfill("Promise", function(a) {
     var a = void 0;
     try {
       a = b.then;
-    } catch (h) {
-      this.reject_(h);
+    } catch (k) {
+      this.reject_(k);
       return;
     }
     "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
@@ -184,8 +184,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   c.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var b = this.onSettledCallbacks_, a = 0; a < b.length; ++a) {
-        b[a].call(), b[a] = null;
+      for (var a = this.onSettledCallbacks_, c = 0; c < a.length; ++c) {
+        a[c].call(), a[c] = null;
       }
       this.onSettledCallbacks_ = null;
     }
@@ -199,26 +199,26 @@ $jscomp.polyfill("Promise", function(a) {
     var b = this.createResolveAndReject_();
     try {
       a.call(c, b.resolve, b.reject);
-    } catch (k) {
-      b.reject(k);
+    } catch (h) {
+      b.reject(h);
     }
   };
   c.prototype.then = function(a, d) {
     function b(a, b) {
       return "function" == typeof a ? function(b) {
         try {
-          e(a(b));
+          h(a(b));
         } catch (m) {
-          f(m);
+          e(m);
         }
       } : b;
     }
-    var e, f, g = new c(function(a, b) {
-      e = a;
-      f = b;
+    var h, e, f = new c(function(a, b) {
+      h = a;
+      e = b;
     });
-    this.callWhenSettled_(b(a, e), b(d, f));
-    return g;
+    this.callWhenSettled_(b(a, h), b(d, e));
+    return f;
   };
   c.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -273,6 +273,9 @@ $jscomp.polyfill("Promise", function(a) {
   return c;
 }, "es6", "es3");
 module.exports = function() {
-  return "get" in Object.getOwnPropertyDescriptor(Promise, Symbol.species) && Promise[Symbol.species] === Promise;
+  $jscomp.initSymbol();
+  var a = Object.getOwnPropertyDescriptor(Promise, Symbol.species);
+  $jscomp.initSymbol();
+  return "get" in a && Promise[Symbol.species] === Promise;
 };
 

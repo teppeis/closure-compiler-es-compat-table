@@ -1,5 +1,5 @@
 // annex b / RegExp.prototype.compile / basic functionality
-module.exports = function() {
+module.exports = () => {
   if (typeof RegExp.prototype.compile !== 'function')
     return false
   var rx = /a/;

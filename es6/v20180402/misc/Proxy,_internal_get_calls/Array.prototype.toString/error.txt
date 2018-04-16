@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / Array.prototype.toString
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // Array.prototype.toString -> Get -> [[Get]]
   var get = [];

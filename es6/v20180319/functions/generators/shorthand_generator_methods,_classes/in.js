@@ -1,5 +1,5 @@
 // functions / generators / shorthand generator methods, classes
-module.exports = function() {
+module.exports = () => {
   class C {
     * generator() {
       yield 5; yield 6;

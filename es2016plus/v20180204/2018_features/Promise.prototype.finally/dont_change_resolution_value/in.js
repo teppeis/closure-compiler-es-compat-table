@@ -1,5 +1,5 @@
 // 2018 features / Promise.prototype.finally / don't change resolution value
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var score = 0;
   function thenFn(result)  {
     score += (result === "foo");

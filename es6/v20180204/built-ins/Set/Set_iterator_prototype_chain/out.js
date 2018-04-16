@@ -1,27 +1,15 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
-};
-$jscomp.global = $jscomp.getGlobal(this);
-$jscomp.checkEs6ConformanceViaProxy = function() {
-  try {
-    var a = {}, f = Object.create(new $jscomp.global.Proxy(a, {get:function(d, c, b) {
-      return d == a && "q" == c && b == f;
-    }}));
-    return !0 === f.q;
-  } catch (d) {
-    return !1;
-  }
-};
-$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
-$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, f, d) {
   a != Array.prototype && a != Object.prototype && (a[f] = d.value);
 };
+$jscomp.getGlobal = function(a) {
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+};
+$jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
   $jscomp.initSymbol = function() {
@@ -58,6 +46,18 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.checkEs6ConformanceViaProxy = function() {
+  try {
+    var a = {}, f = Object.create(new $jscomp.global.Proxy(a, {get:function(d, c, b) {
+      return d == a && "q" == c && b == f;
+    }}));
+    return !0 === f.q;
+  } catch (d) {
+    return !1;
+  }
+};
+$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
+$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
   var f = a[Symbol.iterator];
@@ -345,7 +345,17 @@ $jscomp.polyfill("Set", function(a) {
   return d;
 }, "es6", "es3");
 module.exports = function() {
-  var a = (new Set)[Symbol.iterator](), f = Object.getPrototypeOf(a);
-  return Object.getPrototypeOf(f).hasOwnProperty(Symbol.iterator) && !f.hasOwnProperty(Symbol.iterator) && !a.hasOwnProperty(Symbol.iterator) && a[Symbol.iterator]() === a;
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  var a = (new Set)[Symbol.iterator](), f = Object.getPrototypeOf(a), d = Object.getPrototypeOf(f);
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  return d.hasOwnProperty(Symbol.iterator) && !f.hasOwnProperty(Symbol.iterator) && !a.hasOwnProperty(Symbol.iterator) && a[Symbol.iterator]() === a;
 };
 

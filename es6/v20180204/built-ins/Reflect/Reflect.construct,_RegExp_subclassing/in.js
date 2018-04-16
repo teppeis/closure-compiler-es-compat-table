@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.construct, RegExp subclassing
-module.exports = function() {
+module.exports = () => {
   function F(){}
   var obj = Reflect.construct(RegExp, ["baz","g"], F);
   return RegExp.prototype.exec.call(obj, "foobarbaz")[0] === "baz"

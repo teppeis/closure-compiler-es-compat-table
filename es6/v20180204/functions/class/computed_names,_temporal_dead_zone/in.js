@@ -1,5 +1,5 @@
 // functions / class / computed names, temporal dead zone
-module.exports = function() {
+module.exports = () => {
   try {
     var B = class C {
       [C](){}

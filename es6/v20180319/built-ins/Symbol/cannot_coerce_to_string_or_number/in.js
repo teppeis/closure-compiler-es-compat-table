@@ -1,5 +1,5 @@
 // built-ins / Symbol / cannot coerce to string or number
-module.exports = function() {
+module.exports = () => {
   var symbol = Symbol();
   try {
     symbol + "";

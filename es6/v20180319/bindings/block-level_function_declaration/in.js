@@ -1,5 +1,5 @@
 // bindings / block-level function declaration
-module.exports = function() {
+module.exports = () => {
   'use strict';
   if (f() !== 1) return false;
   function f() { return 1; }

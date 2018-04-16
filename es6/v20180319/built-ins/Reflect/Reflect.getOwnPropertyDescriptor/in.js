@@ -1,5 +1,5 @@
 // built-ins / Reflect / Reflect.getOwnPropertyDescriptor
-module.exports = function() {
+module.exports = () => {
   var obj = { baz: 789 };
   var desc = Reflect.getOwnPropertyDescriptor(obj, "baz");
   return desc.value === 789 &&

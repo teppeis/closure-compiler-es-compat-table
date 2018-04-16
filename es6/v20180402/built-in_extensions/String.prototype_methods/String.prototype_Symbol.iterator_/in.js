@@ -1,5 +1,5 @@
 // built-in extensions / String.prototype methods / String.prototype[Symbol.iterator]
-module.exports = function() {
+module.exports = () => {
   var assert = require('assert');
   var iter = 'abc'[Symbol.iterator]();
   assert.deepEqual(iter.next(), {value: 'a', done: false});

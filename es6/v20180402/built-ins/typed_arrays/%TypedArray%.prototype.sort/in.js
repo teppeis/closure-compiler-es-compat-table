@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.sort
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.sort === "function" &&
 typeof Uint8Array.prototype.sort === "function" &&
 typeof Uint8ClampedArray.prototype.sort === "function" &&

@@ -1,5 +1,5 @@
 // built-ins / Proxy / "setPrototypeOf" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   Object.setPrototypeOf({},{});

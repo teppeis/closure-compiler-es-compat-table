@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'set' calls / Array.from
-module.exports = function() {
+module.exports = () => {
 // Array.from -> Set -> [[Set]]
   var set = [];
   var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});

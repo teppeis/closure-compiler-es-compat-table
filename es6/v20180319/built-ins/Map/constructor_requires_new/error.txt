@@ -1,5 +1,5 @@
 // built-ins / Map / constructor requires new
-module.exports = function() {
+module.exports = () => {
   new Map();
   try {
     Map();

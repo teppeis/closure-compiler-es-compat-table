@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.values
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.values === "function" &&
 typeof Uint8Array.prototype.values === "function" &&
 typeof Uint8ClampedArray.prototype.values === "function" &&

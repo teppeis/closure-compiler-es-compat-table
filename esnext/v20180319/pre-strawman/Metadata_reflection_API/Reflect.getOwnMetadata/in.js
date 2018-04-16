@@ -1,5 +1,5 @@
 // pre-strawman / Metadata reflection API / Reflect.getOwnMetadata
-module.exports = function() {
+module.exports = () => {
   return typeof Reflect.getOwnMetadata == 'function';
 
 };

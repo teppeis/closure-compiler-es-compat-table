@@ -1,5 +1,5 @@
 // functions / generators / %GeneratorPrototype%.return
-module.exports = function() {
+module.exports = () => {
   function * generator(){
     yield 5; yield 6;
   };

@@ -1,5 +1,5 @@
 // built-ins / WeakMap / constructor invokes set
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   var _set = WeakMap.prototype.set;
   WeakMap.prototype.set = function(k, v) {

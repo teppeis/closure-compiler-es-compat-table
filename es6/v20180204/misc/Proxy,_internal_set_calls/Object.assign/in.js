@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'set' calls / Object.assign
-module.exports = function() {
+module.exports = () => {
 // Object.assign -> Set -> [[Set]]
   var set = [];
   var p = new Proxy({}, { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});

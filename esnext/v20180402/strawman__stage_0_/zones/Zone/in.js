@@ -1,5 +1,5 @@
 // strawman (stage 0) / zones / Zone
-module.exports = function() {
+module.exports = () => {
   return typeof Zone == 'function';
 
 };

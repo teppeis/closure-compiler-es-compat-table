@@ -1,5 +1,5 @@
 // built-ins / Promise / Promise.all, generic iterables
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   $jscomp.initSymbolIterator();
   var fulfills = Promise.all(global.__createIterableObject([
     new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),

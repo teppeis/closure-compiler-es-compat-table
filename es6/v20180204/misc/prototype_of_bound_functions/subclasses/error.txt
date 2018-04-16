@@ -1,5 +1,5 @@
 // misc / prototype of bound functions / subclasses
-module.exports = function() {
+module.exports = () => {
   function correctProtoBound(superclass) {
     class C extends superclass {
       constructor() {

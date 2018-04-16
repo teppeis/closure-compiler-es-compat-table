@@ -1,5 +1,5 @@
 // proposal (stage 1) / Object.freeze and Object.seal syntax / Sealing, function arguments
-module.exports = function() {
+module.exports = () => {
 function foo(| bar, baz |) {
 return bar + baz;
 }

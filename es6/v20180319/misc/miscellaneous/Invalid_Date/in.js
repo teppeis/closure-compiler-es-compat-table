@@ -1,5 +1,5 @@
 // misc / miscellaneous / Invalid Date
-module.exports = function() {
+module.exports = () => {
   return new Date(NaN) + "" === "Invalid Date";
 
 };

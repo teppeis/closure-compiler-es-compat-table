@@ -1,5 +1,5 @@
 // draft (stage 2) / Class and Property Decorators / class decorators
-module.exports = function() {
+module.exports = () => {
 class A {
 @nonconf
 get B() {}

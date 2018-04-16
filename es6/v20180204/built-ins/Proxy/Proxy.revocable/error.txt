@@ -1,5 +1,5 @@
 // built-ins / Proxy / Proxy.revocable
-module.exports = function() {
+module.exports = () => {
   var obj = Proxy.revocable({}, { get: function() { return 5; } });
   var passed = (obj.proxy.foo === 5);
   obj.revoke();

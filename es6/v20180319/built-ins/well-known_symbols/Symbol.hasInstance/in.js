@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.hasInstance
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   var obj = { foo: true };
   var C = function(){};

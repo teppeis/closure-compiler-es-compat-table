@@ -1,5 +1,5 @@
 // built-ins / Set / Set.prototype.values
-module.exports = function() {
+module.exports = () => {
   return typeof Set.prototype.values === "function";
 
 };

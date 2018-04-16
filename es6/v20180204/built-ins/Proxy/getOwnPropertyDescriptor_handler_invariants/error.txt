@@ -1,5 +1,5 @@
 // built-ins / Proxy / "getOwnPropertyDescriptor" handler invariants
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // A property cannot be reported as non-existent, if it exists as a non-configurable

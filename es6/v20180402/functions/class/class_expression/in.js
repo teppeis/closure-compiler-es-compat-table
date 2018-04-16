@@ -1,5 +1,5 @@
 // functions / class / class expression
-module.exports = function() {
+module.exports = () => {
   return typeof class C {} === "function";
 
 };

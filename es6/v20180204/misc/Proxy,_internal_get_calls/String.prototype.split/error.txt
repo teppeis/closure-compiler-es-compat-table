@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / String.prototype.split
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // String.prototype.split functions -> Get -> [[Get]]
   var get = [];

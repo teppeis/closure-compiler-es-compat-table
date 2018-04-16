@@ -1,5 +1,5 @@
 // built-ins / Proxy / "deleteProperty" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // A property cannot be reported as deleted, if it exists as a non-configurable

@@ -1,5 +1,5 @@
 // 2017 features / Object static methods / Object.entries
-module.exports = function() {
+module.exports = () => {
   var obj = Object.create({ a: "qux", d: "qux" });
   obj.a = "foo"; obj.b = "bar"; obj.c = "baz";
   var e = Object.entries(obj);

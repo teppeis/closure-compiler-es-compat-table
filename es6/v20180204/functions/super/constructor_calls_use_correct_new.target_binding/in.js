@@ -1,5 +1,5 @@
 // functions / super / constructor calls use correct "new.target" binding
-module.exports = function() {
+module.exports = () => {
   var passed;
   class B {
     constructor() { passed = (new.target === C); }

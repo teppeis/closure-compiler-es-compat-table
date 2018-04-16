@@ -1,5 +1,5 @@
 // subclassing / miscellaneous subclassables / String is subclassable
-module.exports = function() {
+module.exports = () => {
   class C extends String {}
   var c = new C("golly");
   return c instanceof String
