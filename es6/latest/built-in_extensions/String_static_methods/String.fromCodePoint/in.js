@@ -1,5 +1,5 @@
 // built-in extensions / String static methods / String.fromCodePoint
-module.exports = function() {
+module.exports = () => {
   return String.fromCodePoint() === ''
     && String.fromCodePoint(42) === '*'
     && String.fromCodePoint(65, 90) === 'AZ'

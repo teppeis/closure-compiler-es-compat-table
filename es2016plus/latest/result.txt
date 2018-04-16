@@ -3,7 +3,7 @@
 2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [Pass]
-2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: TypeError: Object #<Int8Array> has no method 'includes'
+2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: ReferenceError: Int8Array is not defined
 2016_misc/generator_functions_cant_be_used_with_new/out.js: [InvalidResult: undefined]
 2016_misc/generator_throw___caught_by_inner_generator/out.js: [Pass]
 2016_misc/strict_fn_w__non-strict_non-simple_params_is_error/out.js: [InvalidResult: false]
@@ -55,19 +55,19 @@
 2017_misc/RegExp_u_flag,_case_folding/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'iu'
 2017_misc/arguments.caller_removed/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__/out.js: [Pass]
-2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__,_symbols/out.js: ReferenceError: Symbol is not defined
+2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__,_symbols/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__,_ToObject_this_/out.js: [InvalidResult: undefined]
 2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__/out.js: [Pass]
-2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__,_symbols/out.js: ReferenceError: Symbol is not defined
+2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__,_symbols/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__,_ToObject_this_/out.js: [InvalidResult: undefined]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_prototype_chain/out.js: [Pass]
-2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_symbols/out.js: ReferenceError: Symbol is not defined
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_symbols/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_ToObject_this_/out.js: [InvalidResult: undefined]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_data_properties_can_shadow_accessors/out.js: [InvalidResult: false]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_prototype_chain/out.js: [Pass]
-2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_symbols/out.js: ReferenceError: Symbol is not defined
+2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_symbols/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_ToObject_this_/out.js: [InvalidResult: undefined]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_data_properties_can_shadow_accessors/out.js: [InvalidResult: false]
 2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__defineGetter__/out.js: ReferenceError: Proxy is not defined

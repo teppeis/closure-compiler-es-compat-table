@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.reverse
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.reverse === "function" &&
 typeof Uint8Array.prototype.reverse === "function" &&
 typeof Uint8ClampedArray.prototype.reverse === "function" &&

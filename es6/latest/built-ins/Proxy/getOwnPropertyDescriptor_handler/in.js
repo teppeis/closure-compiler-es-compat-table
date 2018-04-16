@@ -1,5 +1,5 @@
 // built-ins / Proxy / "getOwnPropertyDescriptor" handler
-module.exports = function() {
+module.exports = () => {
   var proxied = {};
   var fakeDesc = { value: "foo", configurable: true };
   var returnedDesc = Object.getOwnPropertyDescriptor(

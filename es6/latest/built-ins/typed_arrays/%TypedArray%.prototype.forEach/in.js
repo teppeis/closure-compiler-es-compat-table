@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%.prototype.forEach
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array.prototype.forEach === "function" &&
 typeof Uint8Array.prototype.forEach === "function" &&
 typeof Uint8ClampedArray.prototype.forEach === "function" &&

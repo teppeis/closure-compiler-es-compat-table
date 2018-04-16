@@ -1,5 +1,5 @@
 // functions / class / is block-scoped
-module.exports = function() {
+module.exports = () => {
   class C {}
   var c1 = C;
   {

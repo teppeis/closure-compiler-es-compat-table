@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.match, String.prototype.startsWith
-module.exports = function() {
+module.exports = () => {
   var re = /./;
   try {
     '/./'.startsWith(re);

@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.match, String.prototype.includes
-module.exports = function() {
+module.exports = () => {
   var re = /./;
   try {
     '/./'.includes(re);

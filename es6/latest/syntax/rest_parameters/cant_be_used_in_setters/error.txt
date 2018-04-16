@@ -1,5 +1,5 @@
 // syntax / rest parameters / can't be used in setters
-module.exports = function() {
+module.exports = () => {
   return (function (...args) {
     var obj = {
       set e(...args) {}

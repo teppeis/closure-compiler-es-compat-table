@@ -1,5 +1,5 @@
 // functions / class / prototype methods
-module.exports = function() {
+module.exports = () => {
   class C {
     method() { return 2; }
   }

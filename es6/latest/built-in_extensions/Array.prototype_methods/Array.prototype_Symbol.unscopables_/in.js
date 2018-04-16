@@ -1,5 +1,5 @@
 // built-in extensions / Array.prototype methods / Array.prototype[Symbol.unscopables]
-module.exports = function() {
+module.exports = () => {
   var unscopables = Array.prototype[Symbol.unscopables];
   if (!unscopables) {
     return false;

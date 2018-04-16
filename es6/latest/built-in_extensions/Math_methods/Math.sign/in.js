@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.sign
-module.exports = function() {
+module.exports = () => {
   var nan = Math.sign(NaN);
   return Math.sign(3) === 1
     && Math.sign(-3) === -1

@@ -1,5 +1,5 @@
 // built-ins / WeakMap / frozen objects as keys
-module.exports = function() {
+module.exports = () => {
   var f = Object.freeze({});
   var m = new WeakMap;
   m.set(f, 42);

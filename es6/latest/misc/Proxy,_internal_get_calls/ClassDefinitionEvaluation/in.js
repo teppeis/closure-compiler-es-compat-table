@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / ClassDefinitionEvaluation
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // ClassDefinitionEvaluation -> Get -> [[Get]]
   var get = [];

@@ -1,5 +1,5 @@
 // misc / miscellaneous / duplicate property names in strict mode
-module.exports = function() {
+module.exports = () => {
   'use strict';
   return this === undefined && ({ a:1, a:1 }).a === 1;
 

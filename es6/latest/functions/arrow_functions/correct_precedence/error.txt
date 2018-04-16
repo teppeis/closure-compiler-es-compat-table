@@ -1,5 +1,5 @@
 // functions / arrow functions / correct precedence
-module.exports = function() {
+module.exports = () => {
   return (() => {
     0 || () => 2";
     return false;

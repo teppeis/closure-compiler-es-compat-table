@@ -1,5 +1,5 @@
 // 2018 features / Promise.prototype.finally / change rejection value
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var score = 0;
   Promise
     .reject("foobar")

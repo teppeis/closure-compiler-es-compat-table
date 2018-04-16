@@ -1,27 +1,15 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
-};
-$jscomp.global = $jscomp.getGlobal(this);
-$jscomp.checkEs6ConformanceViaProxy = function() {
-  try {
-    var a = {}, d = Object.create(new $jscomp.global.Proxy(a, {get:function(g, c, e) {
-      return g == a && "q" == c && e == d;
-    }}));
-    return !0 === d.q;
-  } catch (g) {
-    return !1;
-  }
-};
-$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
-$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, g) {
   a != Array.prototype && a != Object.prototype && (a[d] = g.value);
 };
+$jscomp.getGlobal = function(a) {
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+};
+$jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
   $jscomp.initSymbol = function() {
@@ -58,6 +46,18 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.checkEs6ConformanceViaProxy = function() {
+  try {
+    var a = {}, d = Object.create(new $jscomp.global.Proxy(a, {get:function(g, c, e) {
+      return g == a && "q" == c && e == d;
+    }}));
+    return !0 === d.q;
+  } catch (g) {
+    return !1;
+  }
+};
+$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
+$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
   var d = a[Symbol.iterator];
@@ -271,6 +271,9 @@ $jscomp.polyfill("Map", function(a) {
   return c;
 }, "es6", "es3");
 module.exports = function() {
-  return "get" in Object.getOwnPropertyDescriptor(Map, Symbol.species) && Map[Symbol.species] === Map;
+  $jscomp.initSymbol();
+  var a = Object.getOwnPropertyDescriptor(Map, Symbol.species);
+  $jscomp.initSymbol();
+  return "get" in a && Map[Symbol.species] === Map;
 };
 

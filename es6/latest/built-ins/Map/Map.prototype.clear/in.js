@@ -1,5 +1,5 @@
 // built-ins / Map / Map.prototype.clear
-module.exports = function() {
+module.exports = () => {
   return typeof Map.prototype.clear === "function";
 
 };

@@ -1,5 +1,5 @@
 // syntax / destructuring, assignment / defaults
-module.exports = function() {
+module.exports = () => {
   var a,b,c,d,e,f;
   ({a = 1, b = 0, z:c = 3} = {b:2, z:undefined});
   [d = 0, e = 5, f = 6] = [4,,undefined];

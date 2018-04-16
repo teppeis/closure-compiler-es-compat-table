@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / ToPrimitive
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // ToPrimitive -> Get -> [[Get]]
   var get = [];

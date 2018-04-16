@@ -1,5 +1,5 @@
 // built-ins / Map / -0 key converts to +0
-module.exports = function() {
+module.exports = () => {
   var map = new Map();
   map.set(-0, "foo");
   var k;

@@ -1,5 +1,5 @@
 // built-in extensions / function "name" property / variables (class)
-module.exports = function() {
+module.exports = () => {
   var foo = class {};
   var bar = class baz {};
   var qux = class { static name() {} };

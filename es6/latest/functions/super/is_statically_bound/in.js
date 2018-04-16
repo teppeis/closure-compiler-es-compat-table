@@ -1,5 +1,5 @@
 // functions / super / is statically bound
-module.exports = function() {
+module.exports = () => {
   class B {
     qux() { return "bar"; }
   }

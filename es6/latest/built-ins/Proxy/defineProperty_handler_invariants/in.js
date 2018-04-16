@@ -1,5 +1,5 @@
 // built-ins / Proxy / "defineProperty" handler invariants
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // A property cannot be added, if the target object is not extensible.

@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.search
-module.exports = function() {
+module.exports = () => {
   var O = {};
   O[Symbol.search] = function(){
     return 42;

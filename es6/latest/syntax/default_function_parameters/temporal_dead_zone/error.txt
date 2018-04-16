@@ -1,5 +1,5 @@
 // syntax / default function parameters / temporal dead zone
-module.exports = function() {
+module.exports = () => {
   (function(a=a){}());
   (function(a=b,b){}());
   return false;

@@ -1,5 +1,5 @@
 // candidate (stage 3) / global / "global" global property has correct property descriptor
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   var actualGlobal = Function('return this')();
   if (typeof global !== 'object') { return false; }

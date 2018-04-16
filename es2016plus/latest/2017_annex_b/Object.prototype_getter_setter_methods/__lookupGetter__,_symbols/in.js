@@ -1,5 +1,5 @@
 // 2017 annex b / Object.prototype getter/setter methods / __lookupGetter__, symbols
-module.exports = function() {
+module.exports = () => {
   var sym = Symbol();
   var sym2 = Symbol();
   var obj = {};

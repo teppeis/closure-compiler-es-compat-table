@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.cbrt
-module.exports = function() {
+module.exports = () => {
   var nan = Math.cbrt(NaN);
   return Math.cbrt(-1) === -1 
     && Math.cbrt(64) === 4

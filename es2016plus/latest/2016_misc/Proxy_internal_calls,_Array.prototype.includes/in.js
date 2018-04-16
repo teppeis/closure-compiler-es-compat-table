@@ -1,5 +1,5 @@
 // 2016 misc / Proxy internal calls, Array.prototype.includes
-module.exports = function() {
+module.exports = () => {
 // Array.prototype.includes -> Get -> [[Get]]
   var get = [];
   var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});

@@ -1,5 +1,5 @@
 // built-ins / WeakMap / WeakMap.prototype.delete
-module.exports = function() {
+module.exports = () => {
   return typeof WeakMap.prototype.delete === "function";
 
 };

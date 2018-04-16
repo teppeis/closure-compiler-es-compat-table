@@ -1,5 +1,5 @@
 // functions / generators / yield *, arrays
-module.exports = function() {
+module.exports = () => {
   var iterator = (function * generator() {
     yield * [5, 6];
   }());

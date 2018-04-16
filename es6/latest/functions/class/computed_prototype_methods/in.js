@@ -1,5 +1,5 @@
 // functions / class / computed prototype methods
-module.exports = function() {
+module.exports = () => {
   var foo = "method";
   class C {
     [foo]() { return 2; }

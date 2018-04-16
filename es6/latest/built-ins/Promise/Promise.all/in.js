@@ -1,5 +1,5 @@
 // built-ins / Promise / Promise.all
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var fulfills = Promise.all([
     new Promise(function(resolve)   { setTimeout(resolve,2000,"foo"); }),
     new Promise(function(resolve)   { setTimeout(resolve,1000,"bar"); }),

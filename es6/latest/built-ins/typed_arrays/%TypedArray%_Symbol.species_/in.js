@@ -1,5 +1,5 @@
 // built-ins / typed arrays / %TypedArray%[Symbol.species]
-module.exports = function() {
+module.exports = () => {
   return typeof Int8Array[Symbol.species] === "function" &&
 typeof Uint8Array[Symbol.species] === "function" &&
 typeof Uint8ClampedArray[Symbol.species] === "function" &&

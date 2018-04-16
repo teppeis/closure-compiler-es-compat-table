@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'getOwnPropertyDescriptor' calls / [[Set]]
-module.exports = function() {
+module.exports = () => {
 // [[Set]] -> [[GetOwnProperty]]
   var gopd = [];
   var p = new Proxy({},

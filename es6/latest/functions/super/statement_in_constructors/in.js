@@ -1,5 +1,5 @@
 // functions / super / statement in constructors
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   class B {
     constructor(a) { passed = (a === "barbaz"); }

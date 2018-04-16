@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.species, Promise.prototype.then
-module.exports = function() {
+module.exports = () => {
   var promise      = new Promise(function(resolve){ resolve(42); });
   var FakePromise1 = promise.constructor = function(exec){ exec(function(){}, function(){}); };
   var FakePromise2 = function(exec){ exec(function(){}, function(){}); };

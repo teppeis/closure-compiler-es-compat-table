@@ -1,5 +1,5 @@
 // proposal (stage 1) / `.of` and `.from` on collection constructors / WeakMap.from
-module.exports = function() {
+module.exports = () => {
   var A = {};
   var B = {};
   var C = WeakMap.from([[A, 1], [B, 2]], function (it) {

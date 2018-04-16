@@ -1,5 +1,5 @@
 // candidate (stage 3) / instance class fields / public instance class fields
-module.exports = function() {
+module.exports = () => {
 class C {
 x = 'x';
 }

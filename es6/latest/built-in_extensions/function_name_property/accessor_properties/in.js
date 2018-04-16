@@ -1,5 +1,5 @@
 // built-in extensions / function "name" property / accessor properties
-module.exports = function() {
+module.exports = () => {
   var o = { get foo(){}, set foo(x){} };
   var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
   return descriptor.get.name === "get foo" &&

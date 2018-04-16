@@ -1,5 +1,5 @@
 // misc / Proxy, internal 'get' calls / Date.prototype.toJSON
-module.exports = function() {
+module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   // Date.prototype.toJSON -> ToPrimitive -> Get -> [[Get]]
   // Date.prototype.toJSON -> Invoke -> GetMethod -> GetV -> [[Get]]

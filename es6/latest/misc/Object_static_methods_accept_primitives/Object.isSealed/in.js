@@ -1,5 +1,5 @@
 // misc / Object static methods accept primitives / Object.isSealed
-module.exports = function() {
+module.exports = () => {
   return Object.isSealed('a') === true;
 
 };

@@ -1,5 +1,5 @@
 // built-ins / typed arrays / correct prototype chains
-module.exports = function() {
+module.exports = () => {
   var constructors = [
     'Int8Array',
     'Uint8Array',

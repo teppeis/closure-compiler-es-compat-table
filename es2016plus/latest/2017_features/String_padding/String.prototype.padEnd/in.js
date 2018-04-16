@@ -1,5 +1,5 @@
 // 2017 features / String padding / String.prototype.padEnd
-module.exports = function() {
+module.exports = () => {
   return 'hello'.padEnd(10) === 'hello     '
 && 'hello'.padEnd(10, '1234') === 'hello12341'
 && 'hello'.padEnd() === 'hello'

@@ -1,5 +1,5 @@
 // built-ins / Proxy / "isExtensible" handler invariant
-module.exports = function() {
+module.exports = () => {
   var passed = false;
   new Proxy({},{});
   // [[IsExtensible]] applied to the proxy object must return the same value

@@ -1,5 +1,5 @@
 // proposal (stage 1) / Promise.try / function throws exception
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var score = 0;
   Promise.try(function() {
     score++;

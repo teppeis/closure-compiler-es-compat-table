@@ -1,5 +1,5 @@
 // built-in extensions / Number properties / Number.isFinite
-module.exports = function() {
+module.exports = () => {
   return Number.isFinite(Infinity) === false
     && Number.isFinite(-Infinity) === false
     && Number.isFinite(NaN) === false

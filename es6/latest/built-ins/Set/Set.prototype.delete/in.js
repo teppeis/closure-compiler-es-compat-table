@@ -1,5 +1,5 @@
 // built-ins / Set / Set.prototype.delete
-module.exports = function() {
+module.exports = () => {
   return typeof Set.prototype.delete === "function";
 
 };

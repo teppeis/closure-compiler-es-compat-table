@@ -1,5 +1,5 @@
 // built-ins / WeakSet / basic functionality
-module.exports = function() {
+module.exports = () => {
   var obj1 = {};
   var weakset = new WeakSet();
   weakset.add(obj1);

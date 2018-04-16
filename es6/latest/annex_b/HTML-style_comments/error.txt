@@ -1,5 +1,5 @@
 // annex b / HTML-style comments
-module.exports = function() {
+module.exports = () => {
 --> A comment
 <!-- Another comment
   var a = 3; <!-- Another comment

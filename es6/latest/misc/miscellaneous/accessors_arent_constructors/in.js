@@ -1,5 +1,5 @@
 // misc / miscellaneous / accessors aren't constructors
-module.exports = function() {
+module.exports = () => {
   var f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
   try {
     new f;

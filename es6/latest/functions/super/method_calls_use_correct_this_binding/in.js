@@ -1,5 +1,5 @@
 // functions / super / method calls use correct "this" binding
-module.exports = function() {
+module.exports = () => {
   class B {
     qux(a) { return this.foo + a; }
   }

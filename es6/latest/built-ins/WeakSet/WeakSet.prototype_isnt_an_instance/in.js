@@ -1,5 +1,5 @@
 // built-ins / WeakSet / WeakSet.prototype isn't an instance
-module.exports = function() {
+module.exports = () => {
   new WeakSet();
   var obj = {};
   try {

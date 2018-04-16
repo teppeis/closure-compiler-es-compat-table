@@ -1,4 +1,4 @@
 // built-in extensions / String.prototype methods / String.prototype.endsWith
-module.exports = function() {
+module.exports = () => {
   return 'foobar'.endsWith('bar');
 };

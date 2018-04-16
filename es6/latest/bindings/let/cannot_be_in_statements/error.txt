@@ -1,5 +1,5 @@
 // bindings / let / cannot be in statements
-module.exports = function() {
+module.exports = () => {
   let bar = 1;
   if(true) let baz = 1;
   return false;

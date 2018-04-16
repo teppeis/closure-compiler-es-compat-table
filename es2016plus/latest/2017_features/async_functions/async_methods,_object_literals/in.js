@@ -1,5 +1,5 @@
 // 2017 features / async functions / async methods, object literals
-module.exports = function(asyncTestPassed) {
+module.exports = (asyncTestPassed) => {
   var o = {
     async a(){ return await Promise.resolve("foo"); }
   };

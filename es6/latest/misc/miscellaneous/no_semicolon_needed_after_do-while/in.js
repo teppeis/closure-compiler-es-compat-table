@@ -1,5 +1,5 @@
 // misc / miscellaneous / no semicolon needed after do-while
-module.exports = function() {
+module.exports = () => {
   do {} while (false) return true;
 
 };

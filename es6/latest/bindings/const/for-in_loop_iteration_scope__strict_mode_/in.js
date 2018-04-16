@@ -1,5 +1,5 @@
 // bindings / const / for-in loop iteration scope (strict mode)
-module.exports = function() {
+module.exports = () => {
   'use strict';
   var scopes = [];
   for(const i in { a:1, b:1 }) {

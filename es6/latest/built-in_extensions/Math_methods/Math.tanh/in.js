@@ -1,5 +1,5 @@
 // built-in extensions / Math methods / Math.tanh
-module.exports = function() {
+module.exports = () => {
   var nan = Math.tanh(NaN);
   return Math.tanh(0) === 0
     && Math.tanh(-0) === -0

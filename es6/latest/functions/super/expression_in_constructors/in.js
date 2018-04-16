@@ -1,5 +1,5 @@
 // functions / super / expression in constructors
-module.exports = function() {
+module.exports = () => {
   class B {
     constructor(a) { return ["foo" + a]; }
   }

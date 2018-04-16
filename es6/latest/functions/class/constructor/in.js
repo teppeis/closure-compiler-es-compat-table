@@ -1,5 +1,5 @@
 // functions / class / constructor
-module.exports = function() {
+module.exports = () => {
   class C {
     constructor() { this.x = 1; }
   }

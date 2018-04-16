@@ -1,5 +1,5 @@
 // 2017 features / Object static methods / Object.getOwnPropertyDescriptors
-module.exports = function() {
+module.exports = () => {
   var object = {a: 1};
   var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
   object[B] = 2;

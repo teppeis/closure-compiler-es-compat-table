@@ -1,5 +1,5 @@
 // built-ins / well-known symbols / Symbol.toStringTag affects existing built-ins
-module.exports = function() {
+module.exports = () => {
   var s = Symbol.toStringTag;
   var passed = true;
   [
