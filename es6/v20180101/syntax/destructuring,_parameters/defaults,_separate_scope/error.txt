@@ -1,0 +1,13 @@
+// syntax / destructuring, parameters / defaults, separate scope
+module.exports = () => {
+  return (function({a=function(){
+    return typeof b === 'undefined';
+  }}){
+    var b = 1;
+    return a();
+  }({}));
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

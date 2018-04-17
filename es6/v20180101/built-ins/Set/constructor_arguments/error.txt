@@ -1,0 +1,11 @@
+// built-ins / Set / constructor arguments
+module.exports = () => {
+  var obj1 = {};
+  var obj2 = {};
+  var set = new Set([obj1, obj2]);
+  return set.has(obj1) && set.has(obj2);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:56 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

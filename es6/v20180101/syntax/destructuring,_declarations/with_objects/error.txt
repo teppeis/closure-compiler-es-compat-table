@@ -1,0 +1,9 @@
+// syntax / destructuring, declarations / with objects
+module.exports = () => {
+  var {c, x:d, e} = {c:7, x:8};
+  return c === 7 && d === 8 && e === undefined;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

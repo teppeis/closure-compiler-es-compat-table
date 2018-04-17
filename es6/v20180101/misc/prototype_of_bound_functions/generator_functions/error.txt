@@ -1,0 +1,21 @@
+// misc / prototype of bound functions / generator functions
+module.exports = () => {
+  function correctProtoBound(proto) {
+    var f = function*(){};
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(f, proto);
+    }
+    else {
+      f.__proto__ = proto;
+    }
+    var boundF = Function.prototype.bind.call(f, null);
+    return Object.getPrototypeOf(boundF) === proto;
+  }
+  return correctProtoBound(Function.prototype)
+&& correctProtoBound({})
+&& correctProtoBound(null);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:28 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

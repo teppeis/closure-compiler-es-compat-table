@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.every
+module.exports = () => {
+  return typeof Int8Array.prototype.every === "function" &&
+typeof Uint8Array.prototype.every === "function" &&
+typeof Uint8ClampedArray.prototype.every === "function" &&
+typeof Int16Array.prototype.every === "function" &&
+typeof Uint16Array.prototype.every === "function" &&
+typeof Int32Array.prototype.every === "function" &&
+typeof Uint32Array.prototype.every === "function" &&
+typeof Float32Array.prototype.every === "function" &&
+typeof Float64Array.prototype.every === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:11 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

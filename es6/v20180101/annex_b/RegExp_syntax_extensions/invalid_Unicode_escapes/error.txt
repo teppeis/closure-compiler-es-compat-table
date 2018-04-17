@@ -1,0 +1,9 @@
+// annex b / RegExp syntax extensions / invalid Unicode escapes
+module.exports = () => {
+  return /\u1/.exec("u1")[0] === "u1"
+&& /[\u1]/.exec("u")[0] === "u";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:26 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

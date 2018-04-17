@@ -1,0 +1,17 @@
+// subclassing / miscellaneous subclassables / Number is subclassable
+module.exports = () => {
+  class C extends Number {}
+  var c = new C(6);
+  return c instanceof Number
+&& c instanceof C
+&& +c === 6;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/subclassing/miscellaneous_subclassables/Number_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
+  class C extends Number {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

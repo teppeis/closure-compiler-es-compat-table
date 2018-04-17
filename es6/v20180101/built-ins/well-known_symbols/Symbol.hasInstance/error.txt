@@ -1,0 +1,20 @@
+// built-ins / well-known symbols / Symbol.hasInstance
+module.exports = () => {
+  var passed = false;
+  var obj = { foo: true };
+  var C = function(){};
+  Object.defineProperty(C, Symbol.hasInstance, {
+    value: function(inst) { passed = inst.foo; return false; }
+  });
+  obj instanceof C;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:25 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+  obj instanceof C;
+  ^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

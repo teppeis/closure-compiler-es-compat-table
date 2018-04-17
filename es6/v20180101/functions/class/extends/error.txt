@@ -1,0 +1,11 @@
+// functions / class / extends
+module.exports = () => {
+  class B {}
+  class C extends B {}
+  return new C() instanceof B
+&& B.isPrototypeOf(C);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:42 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

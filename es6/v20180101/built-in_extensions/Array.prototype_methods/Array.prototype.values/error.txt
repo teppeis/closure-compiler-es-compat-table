@@ -1,0 +1,14 @@
+// built-in extensions / Array.prototype methods / Array.prototype.values
+module.exports = () => {
+  var assert = require('assert');
+  var iter = ['a', ,'c'].values();
+  assert.deepEqual(iter.next(), {value: 'a', done: false});
+  assert.deepEqual(iter.next(), {value: undefined, done: false});
+  assert.deepEqual(iter.next(), {value: 'c', done: false});
+  assert.deepEqual(iter.next(), {value: undefined, done: true});
+  return true;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,9 @@
+// annex b / __proto__ in object literals / basic support
+module.exports = () => {
+  return { __proto__ : [] } instanceof Array
+&& !({ __proto__ : null } instanceof Object);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:30 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

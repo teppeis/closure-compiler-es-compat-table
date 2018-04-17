@@ -1,0 +1,11 @@
+// built-in extensions / function "name" property / class statements
+module.exports = () => {
+  class foo {};
+  class bar { static name() {} };
+  return foo.name === "foo" &&
+typeof bar.name === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:16 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,8 @@
+// built-ins / Set / Set.prototype.keys
+module.exports = () => {
+  return typeof Set.prototype.keys === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:52 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,8 @@
+// misc / miscellaneous / RegExp.prototype.toString generic and uses "flags" property
+module.exports = () => {
+  return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:23 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

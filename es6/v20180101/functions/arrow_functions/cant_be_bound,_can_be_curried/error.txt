@@ -1,0 +1,10 @@
+// functions / arrow functions / can't be bound, can be curried
+module.exports = () => {
+  var d = { x : "bar", y : function() { return z => this.x + z; }};
+  var e = { x : "baz" };
+  return d.y().bind(e, "ley")() === "barley";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:35 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

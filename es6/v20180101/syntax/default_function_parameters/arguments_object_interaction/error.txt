@@ -1,0 +1,15 @@
+// syntax / default function parameters / arguments object interaction
+module.exports = () => {
+  return (function (a = "baz", b = "qux", c = "quux") {
+    a = "corge";
+    // The arguments object is not mapped to the
+    // parameters, even outside of strict mode.
+    return arguments.length === 2
+&& arguments[0] === "foo"
+&& arguments[1] === "bar";
+  }("foo", "bar"));
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:40 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

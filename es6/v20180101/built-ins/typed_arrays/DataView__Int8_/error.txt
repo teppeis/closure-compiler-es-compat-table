@@ -1,0 +1,11 @@
+// built-ins / typed arrays / DataView (Int8)
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var view = new DataView(buffer);
+  view.setInt8 (0, 0x80);
+  return view.getInt8(0) === -0x80;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:19 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,10 @@
+// syntax / destructuring, assignment / with arrays
+module.exports = () => {
+  var a,b,c;
+  [a, , [b], c] = [5, null, [6]];
+  return a === 5 && b === 6 && c === undefined;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:48 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

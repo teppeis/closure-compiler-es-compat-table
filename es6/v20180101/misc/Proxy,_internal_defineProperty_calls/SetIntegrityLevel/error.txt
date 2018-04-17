@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'defineProperty' calls / SetIntegrityLevel
+module.exports = () => {
+// SetIntegrityLevel -> DefinePropertyOrThrow -> [[DefineOwnProperty]]
+  var def = [];
+  var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+  Object.freeze(p);
+  return def + '' === "foo,bar";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:01 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

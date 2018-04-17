@@ -1,0 +1,20 @@
+// misc / Proxy, internal 'get' calls / RegExp.prototype[Symbol.split]
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // RegExp.prototype[Symbol.split] -> Get -> [[Get]]
+  var get = [];
+  var constructor = Function();
+  constructor[Symbol.species] = Object;
+  var p = new Proxy({ constructor: constructor, flags: '', exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+  RegExp.prototype[Symbol.split].call(p, "");
+  return get + '' === "constructor,flags,exec";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:13 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/misc/Proxy,_internal_get_calls/RegExp.prototype_Symbol.split_/in.js:5: WARNING - unreachable code
+  var get = [];
+  ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

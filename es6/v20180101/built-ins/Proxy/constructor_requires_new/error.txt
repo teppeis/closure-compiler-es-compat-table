@@ -1,0 +1,14 @@
+// built-ins / Proxy / constructor requires new
+module.exports = () => {
+  new Proxy({}, {});
+  try {
+    Proxy({}, {});
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:35 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,14 @@
+// optimisation / proper tail calls (tail call optimisation) / direct recursion
+module.exports = () => {
+  "use strict";
+  return (function f(n){
+    if (n <= 0) {
+      return  "foo";
+    }
+    return f(n - 1);
+  }(1e6)) === "foo";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:29 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

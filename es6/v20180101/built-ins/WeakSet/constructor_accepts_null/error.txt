@@ -1,0 +1,9 @@
+// built-ins / WeakSet / constructor accepts null
+module.exports = () => {
+  new WeakSet(null);
+  return true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:07 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

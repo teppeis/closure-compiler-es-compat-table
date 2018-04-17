@@ -1,0 +1,18 @@
+// functions / generators / shorthand generators can't be constructors
+module.exports = () => {
+  class C {
+    * generator() {
+      yield 5; yield 6;
+    }
+  };
+  class D {
+    * constructor() {
+      return {};
+    }
+  }
+  return false;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:33:50 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

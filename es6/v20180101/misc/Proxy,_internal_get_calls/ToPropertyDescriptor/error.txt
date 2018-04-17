@@ -1,0 +1,26 @@
+// misc / Proxy, internal 'get' calls / ToPropertyDescriptor
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // ToPropertyDescriptor -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({
+    enumerable: true, configurable: true, value: true,
+    writable: true, get: Function(), set: Function()
+  }, { get: function(o, k) { get.push(k); return o[k]; }});
+  try {
+    // This will throw, since it will have true for both "get" and "value",
+    // but not before performing a Get on every property.
+    Object.defineProperty({}, "foo", p);
+  } catch(e) {
+    return get + '' === "enumerable,configurable,value,writable,get,set";
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:16 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/misc/Proxy,_internal_get_calls/ToPropertyDescriptor/in.js:5: WARNING - unreachable code
+  var get = [];
+  ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

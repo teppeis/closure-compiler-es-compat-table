@@ -1,0 +1,19 @@
+// functions / super / constructor calls use correct "new.target" binding
+module.exports = () => {
+  var passed;
+  class B {
+    constructor() { passed = (new.target === C); }
+  }
+  class C extends B {
+    constructor() { super(); }
+  }
+  new C();
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20171023/functions/super/constructor_calls_use_correct_new.target_binding/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    constructor() { passed = (new.target === C); }
+                              ^^^^^^^^^^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,10 @@
+// syntax / spread (...) operator / with generic iterables, in arrays
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var iterable = global.__createIterableObject(["b", "c", "d"]);
+  return ["a", ...iterable, "e"][3] === "d";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:18 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

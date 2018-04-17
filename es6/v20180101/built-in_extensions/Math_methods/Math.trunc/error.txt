@@ -1,0 +1,17 @@
+// built-in extensions / Math methods / Math.trunc
+module.exports = () => {
+  var nan = Math.trunc(NaN);
+  return Math.trunc(0) === 0
+    && Math.trunc(-0) === -0
+    && Math.trunc(1.1) === 1
+    && Math.trunc(-1.1) === -1
+    && Math.trunc(0.1) === 0
+    && Math.trunc(-0.1) === -0
+    && Math.trunc(Infinity) === Infinity
+    && Math.trunc(-Infinity) === -Infinity
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

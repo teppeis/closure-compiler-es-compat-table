@@ -1,0 +1,14 @@
+// functions / class / constructor requires new
+module.exports = () => {
+  class C {}
+  try {
+    C();
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:41 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

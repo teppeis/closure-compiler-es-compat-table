@@ -1,0 +1,10 @@
+// built-ins / WeakMap / WeakMap.prototype.set returns this
+module.exports = () => {
+  var weakmap = new WeakMap();
+  var key = {};
+  return weakmap.set(key, 0) === weakmap;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:02 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

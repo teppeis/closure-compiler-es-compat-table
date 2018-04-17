@@ -1,0 +1,11 @@
+// built-in extensions / Date.prototype[Symbol.toPrimitive]
+module.exports = () => {
+  var tp = Date.prototype[Symbol.toPrimitive];
+  return tp.call(Object(2), "number") === 2
+&& tp.call(Object(2), "string") === "2"
+&& tp.call(Object(2), "default") === "2";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:52 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

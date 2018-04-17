@@ -1,0 +1,11 @@
+// built-ins / Symbol / JSON.stringify ignores symbol primitives
+module.exports = () => {
+  var object = { foo: Symbol() };
+  object[Symbol()] = 1;
+  var array = [Symbol()];
+  return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === undefined;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

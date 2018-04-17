@@ -1,0 +1,8 @@
+// annex b / RegExp syntax extensions / invalid control-character escapes
+module.exports = () => {
+  return /\c2/.exec("\\c2")[0] === "\\c2";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:28 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / Error.prototype.toString
+module.exports = () => {
+// Error.prototype.toString -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+  Error.prototype.toString.call(p);
+  return get + '' === "name,message";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:09 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,12 @@
+// built-ins / Set / basic functionality
+module.exports = () => {
+  var obj = {};
+  var set = new Set();
+  set.add(123);
+  set.add(123);
+  return set.has(123);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:55 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

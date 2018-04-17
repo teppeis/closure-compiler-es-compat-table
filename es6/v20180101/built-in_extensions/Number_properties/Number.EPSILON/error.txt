@@ -1,0 +1,8 @@
+// built-in extensions / Number properties / Number.EPSILON
+module.exports = () => {
+  return Number.EPSILON > 0 && Number.EPSILON < 0.01;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

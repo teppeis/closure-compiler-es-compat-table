@@ -1,0 +1,12 @@
+// built-in extensions / function "name" property / object methods (class)
+module.exports = () => {
+  var o = { foo: class {}, bar: class baz {}};
+  o.qux = class {};
+  return o.foo.name === "foo" &&
+o.bar.name === "baz" &&
+o.qux.name === "";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:18 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,44 @@
+// built-ins / Proxy / "get" handler invariants
+module.exports = () => {
+  var passed = false;
+  var proxied = { };
+  var proxy = new Proxy(proxied, {
+    get: function () {
+      passed = true;
+      return 4;
+    }
+  });
+  // The value reported for a property must be the same as the value of the corresponding
+  // target object property if the target object property is a non-writable,
+  // non-configurable own data property.
+  Object.defineProperty(proxied, "foo", { value: 5, enumerable: true });
+  try {
+    proxy.foo;
+    return false;
+  }
+  catch(e) {}
+  // The value reported for a property must be undefined if the corresponding target
+  // object property is a non-configurable own accessor property that has undefined
+  // as its [[Get]] attribute.
+  Object.defineProperty(proxied, "bar",
+    { set: function(){}, enumerable: true });
+  try {
+    proxy.bar;
+    return false;
+  }
+  catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:39 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Proxy/get_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+    proxy.foo;
+    ^^^^^^^^^
+
+es6/v20180101/built-ins/Proxy/get_handler_invariants/in.js:26: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+    proxy.bar;
+    ^^^^^^^^^
+
+0 error(s), 2 warning(s)

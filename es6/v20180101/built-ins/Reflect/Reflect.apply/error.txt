@@ -1,0 +1,8 @@
+// built-ins / Reflect / Reflect.apply
+module.exports = () => {
+  return Reflect.apply(Array.prototype.push, [1,2], [3,4,5]) === 5;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:44 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

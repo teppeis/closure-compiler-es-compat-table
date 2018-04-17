@@ -1,0 +1,19 @@
+// functions / generators / %GeneratorPrototype%.throw
+module.exports = () => {
+  var passed = false;
+  function * generator(){
+    try {
+      yield 5; yield 6;
+    } catch(e) {
+      passed = (e === "foo");
+    }
+  };
+  var iterator = generator();
+  iterator.next();
+  iterator.throw("foo");
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

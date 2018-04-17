@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'set' calls / Array.prototype.fill
+module.exports = () => {
+// Array.prototype.fill -> Set -> [[Set]]
+  var set = [];
+  var p = new Proxy([1,2,3,4,5,6], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+  p.fill(0, 3);
+  return set + '' === "3,4,5";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:19 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

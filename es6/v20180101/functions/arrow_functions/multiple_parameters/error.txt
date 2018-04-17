@@ -1,0 +1,9 @@
+// functions / arrow functions / multiple parameters
+module.exports = () => {
+  var c = (v, w, x, y, z) => "" + v + w + x + y + z;
+  return (c(6, 5, 4, 3, 2) === "65432");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

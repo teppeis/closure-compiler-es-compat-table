@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / Array.prototype.shift
+module.exports = () => {
+// Array.prototype.shift -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy([0,1,2,3], { get: function(o, k) { get.push(k); return o[k]; }});
+  Array.prototype.shift.call(p);
+  return get + '' === "length,0,1,2,3";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:07 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

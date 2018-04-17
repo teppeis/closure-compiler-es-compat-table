@@ -1,0 +1,12 @@
+// built-in extensions / Array static methods / Array.from map function, generic iterables
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var iterable = global.__createIterableObject(["foo", "bar", "bal"]);
+  return Array.from(iterable, function(e, i) {
+    return e + this.baz + i;
+  }, { baz: "d" }) + '' === "food0,bard1,bald2";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:51 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,8 @@
+// built-ins / Map / Map.prototype.keys
+module.exports = () => {
+  return typeof Map.prototype.keys === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:23 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.sinh
+module.exports = () => {
+  var nan = Math.sinh(NaN);
+  return Math.sinh(0) === 0
+    && Math.sinh(-0) === -0
+    && Math.sinh(Infinity) === Infinity
+    && Math.sinh(-Infinity) === -Infinity
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:59 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

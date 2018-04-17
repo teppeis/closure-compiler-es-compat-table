@@ -1,0 +1,15 @@
+// built-ins / WeakMap / constructor invokes set
+module.exports = () => {
+  var passed = false;
+  var _set = WeakMap.prototype.set;
+  WeakMap.prototype.set = function(k, v) {
+    passed = true;
+  };
+  new WeakMap([ [{ }, 42] ]);
+  WeakMap.prototype.set = _set;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:03 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

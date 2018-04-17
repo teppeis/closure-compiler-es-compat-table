@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'set' calls / Array.prototype.reverse
+module.exports = () => {
+// Array.prototype.reverse -> Set -> [[Set]]
+  var set = [];
+  var p = new Proxy([0,0,0,,], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+  p.reverse();
+  return set + '' === "3,1,2";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:20 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

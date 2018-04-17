@@ -1,0 +1,9 @@
+// built-in extensions / Array static methods / Array[Symbol.species]
+module.exports = () => {
+  var prop = Object.getOwnPropertyDescriptor(Array, Symbol.species);
+  return 'get' in prop && Array[Symbol.species] === Array;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:52 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

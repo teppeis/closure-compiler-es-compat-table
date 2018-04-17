@@ -1,0 +1,19 @@
+// annex b / __proto__ in object literals / multiple __proto__ is an error
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  try {
+    eval("({ __proto__ : [], __proto__: {} })");
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:30 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - unreachable code
+  try {
+  ^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,21 @@
+// built-ins / Proxy / Proxy.revocable
+module.exports = () => {
+  var obj = Proxy.revocable({}, { get: function() { return 5; } });
+  var passed = (obj.proxy.foo === 5);
+  obj.revoke();
+  try {
+    obj.proxy.foo;
+  } catch(e) {
+    passed &= e instanceof TypeError;
+  }
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:34 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Proxy/Proxy.revocable/in.js:7: WARNING - Suspicious code. The result of the 'getprop' operator is not being used.
+    obj.proxy.foo;
+    ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

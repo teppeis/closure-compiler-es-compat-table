@@ -1,0 +1,17 @@
+// built-ins / Map / constructor requires new
+module.exports = () => {
+  new Map();
+  try {
+    Map();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20171112/built-ins/Map/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
+    Map();
+    ^^^^^
+
+0 error(s), 1 warning(s)

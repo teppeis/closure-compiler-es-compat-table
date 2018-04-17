@@ -1,0 +1,10 @@
+// syntax / template literals / basic functionality
+module.exports = () => {
+  var a = "ba", b = "QUX";
+  return `foo bar
+${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:21 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

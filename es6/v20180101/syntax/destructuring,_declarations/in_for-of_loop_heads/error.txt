@@ -1,0 +1,15 @@
+// syntax / destructuring, declarations / in for-of loop heads
+module.exports = () => {
+  for(var [i, j, k] of [[1,2,3]]) {
+    return i === 1 && j === 2 && k === 3;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:53 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/destructuring,_declarations/in_for-of_loop_heads/in.js:3: WARNING - unreachable code
+  for(var [i, j, k] of [[1,2,3]]) {
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

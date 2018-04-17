@@ -1,0 +1,17 @@
+// built-in extensions / Math methods / Math.atanh
+module.exports = () => {
+  var nan1 = Math.atanh(NaN);
+  var nan2 = Math.atanh(2);
+  var nan3 = Math.atanh(-2);
+  return Math.atanh(0) === 0
+    && Math.atanh(-0) === -0
+    && Math.atanh(1) === Infinity
+    && Math.atanh(-1) === -Infinity
+    && nan1 !== nan1
+    && nan2 !== nan2
+    && nan3 !== nan3;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:54 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

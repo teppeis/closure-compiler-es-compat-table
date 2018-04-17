@@ -1,0 +1,10 @@
+// syntax / destructuring, parameters / with strings
+module.exports = () => {
+  return function([a, b, c]) {
+    return a === "a" && b === "b" && c === undefined;
+  }("ab");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:06 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

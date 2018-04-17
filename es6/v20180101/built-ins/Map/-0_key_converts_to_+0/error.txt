@@ -1,0 +1,14 @@
+// built-ins / Map / -0 key converts to +0
+module.exports = () => {
+  var map = new Map();
+  map.set(-0, "foo");
+  var k;
+  map.forEach(function (value, key) {
+    k = 1 / key;
+  });
+  return k === Infinity && map.get(+0) == "foo";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:20 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

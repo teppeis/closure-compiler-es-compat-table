@@ -1,0 +1,9 @@
+// bindings / const / basic support
+module.exports = () => {
+  const foo = 123;
+  return (foo === 123);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:33 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

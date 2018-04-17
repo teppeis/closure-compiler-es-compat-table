@@ -1,0 +1,23 @@
+// misc / Proxy, internal 'get' calls / IteratorComplete, IteratorValue
+module.exports = () => {
+// IteratorComplete -> Get -> [[Get]]
+// IteratorValue -> Get -> [[Get]]
+  var get = [];
+  var iterable = {};
+  iterable[Symbol.iterator] = function() {
+    return {
+      next: function() {
+        return new Proxy({ value: 2, done: false }, { get: function(o, k) { get.push(k); return o[k]; }});
+      }
+    };
+  }
+  var i = 0;
+  for(var e of iterable) {
+    if (++i >= 2) break;
+  }
+  return get + '' === "done,value,done,value";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:10 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,8 @@
+// built-in extensions / String.prototype methods / String.prototype.repeat
+module.exports = () => {
+  return 'foo'.repeat(3) === 'foofoofoo';
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:11 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,9 @@
+// built-ins / Set / Set.prototype.add returns this
+module.exports = () => {
+  var set = new Set();
+  return set.add(0) === set;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:50 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

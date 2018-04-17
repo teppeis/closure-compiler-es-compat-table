@@ -1,0 +1,9 @@
+// functions / arrow functions / no "prototype" property
+module.exports = () => {
+  var a = () => 5;
+  return !a.hasOwnProperty("prototype");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

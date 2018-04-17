@@ -1,0 +1,11 @@
+// built-in extensions / function "name" property / accessor properties
+module.exports = () => {
+  var o = { get foo(){}, set foo(x){} };
+  var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+  return descriptor.get.name === "get foo" &&
+descriptor.set.name === "set foo";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:14 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

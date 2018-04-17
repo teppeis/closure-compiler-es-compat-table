@@ -1,0 +1,20 @@
+// functions / generators / string-keyed shorthand generator methods
+module.exports = () => {
+  var o = {
+    * "foo bar"() {
+      yield 5; yield 6;
+    },
+  };
+  var iterator = o["foo bar"]();
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  item = iterator.next();
+  passed    &= item.value === 6 && item.done === false;
+  item = iterator.next();
+  passed    &= item.value === undefined && item.done === true;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:51 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

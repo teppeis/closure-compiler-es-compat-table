@@ -1,0 +1,12 @@
+// syntax / for..of loops / with sparse arrays
+module.exports = () => {
+  var arr = [,,];
+  var count = 0;
+  for (var item of arr)
+    count += (item === undefined);
+  return count === 2;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:09 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,15 @@
+// built-ins / Set / constructor invokes add
+module.exports = () => {
+  var passed = false;
+  var _add = Set.prototype.add;
+  Set.prototype.add = function(v) {
+    passed = true;
+  };
+  new Set([1]);
+  Set.prototype.add = _add;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:56 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

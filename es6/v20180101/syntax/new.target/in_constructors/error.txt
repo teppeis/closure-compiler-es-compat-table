@@ -1,0 +1,24 @@
+// syntax / new.target / in constructors
+module.exports = () => {
+  var passed = false;
+  new function f() {
+    passed = (new.target === f);
+  }();
+  (function() {
+    passed &= (new.target === undefined);
+  }());
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:10 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/new.target/in_constructors/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed = (new.target === f);
+              ^^^^^^^^^^
+
+es6/v20180101/syntax/new.target/in_constructors/in.js:8: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed &= (new.target === undefined);
+               ^^^^^^^^^^
+
+2 error(s), 0 warning(s)

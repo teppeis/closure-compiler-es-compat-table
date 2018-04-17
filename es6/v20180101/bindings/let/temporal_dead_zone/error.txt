@@ -1,0 +1,17 @@
+// bindings / let / temporal dead zone
+module.exports = () => {
+  var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+  function fn() { passed &= qux === 456; }
+  let qux = 456;
+  fn();
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:43 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/bindings/let/temporal_dead_zone/in.js:3: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+  var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+                                   ^^^
+
+0 error(s), 1 warning(s)

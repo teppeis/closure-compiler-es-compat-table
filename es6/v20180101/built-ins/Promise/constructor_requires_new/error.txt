@@ -1,0 +1,14 @@
+// built-ins / Promise / constructor requires new
+module.exports = () => {
+  new Promise(function(){});
+  try {
+    Promise(function(){});
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:33 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

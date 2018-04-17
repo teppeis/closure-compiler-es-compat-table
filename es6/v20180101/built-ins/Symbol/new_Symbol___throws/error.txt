@@ -1,0 +1,13 @@
+// built-ins / Symbol / new Symbol() throws
+module.exports = () => {
+  var symbol = Symbol();
+  try {
+    new Symbol();
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

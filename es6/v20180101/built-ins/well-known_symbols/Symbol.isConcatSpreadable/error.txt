@@ -1,0 +1,11 @@
+// built-ins / well-known symbols / Symbol.isConcatSpreadable
+module.exports = () => {
+  var a = [], b = [];
+  b[Symbol.isConcatSpreadable] = false;
+  a = a.concat(b);
+  return a[0] === b;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:25 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

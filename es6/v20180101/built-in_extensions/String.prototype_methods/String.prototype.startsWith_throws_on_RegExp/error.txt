@@ -1,0 +1,12 @@
+// built-in extensions / String.prototype methods / String.prototype.startsWith throws on RegExp
+module.exports = () => {
+  try {
+    'a'.startsWith(/./);
+  } catch(e) {
+    return 'foobar'.startsWith('foo');
+  }
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:12 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

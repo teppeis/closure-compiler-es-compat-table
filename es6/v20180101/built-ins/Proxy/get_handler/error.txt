@@ -1,0 +1,14 @@
+// built-ins / Proxy / "get" handler
+module.exports = () => {
+  var proxied = { };
+  var proxy = new Proxy(proxied, {
+    get: function (t, k, r) {
+      return t === proxied && k === "foo" && r === proxy && 5;
+    }
+  });
+  return proxy.foo === 5;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

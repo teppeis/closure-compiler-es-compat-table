@@ -1,0 +1,11 @@
+// built-in extensions / String static methods / String.fromCodePoint
+module.exports = () => {
+  return String.fromCodePoint() === ''
+    && String.fromCodePoint(42) === '*'
+    && String.fromCodePoint(65, 90) === 'AZ'
+    && String.fromCodePoint(0x2F804) === '\uD87E\uDC04';
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:13 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

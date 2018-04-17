@@ -1,0 +1,10 @@
+// built-in extensions / function "name" property / function statements
+module.exports = () => {
+  function foo(){};
+  return foo.name === 'foo' &&
+(function(){}).name === '';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:17 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

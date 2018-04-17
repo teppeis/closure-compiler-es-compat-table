@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / JSON.stringify
+module.exports = () => {
+// JSON.stringify -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+  JSON.stringify(p);
+  return get + '' === "toJSON";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:10 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

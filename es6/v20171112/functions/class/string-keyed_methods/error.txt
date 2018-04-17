@@ -1,0 +1,15 @@
+// functions / class / string-keyed methods
+module.exports = () => {
+  class C {
+    "foo bar"() { return 2; }
+  }
+  return typeof C.prototype["foo bar"] === "function"
+&& new C()["foo bar"]() === 2;
+
+};
+----------------------------------------------------------
+es6/v20171112/functions/class/string-keyed_methods/in.js:4: ERROR - Parse error. '}' expected
+    "foo bar"() { return 2; }
+    ^
+
+1 error(s), 0 warning(s)

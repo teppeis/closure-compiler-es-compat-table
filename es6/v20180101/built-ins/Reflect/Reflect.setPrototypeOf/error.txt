@@ -1,0 +1,10 @@
+// built-ins / Reflect / Reflect.setPrototypeOf
+module.exports = () => {
+  var obj = {};
+  Reflect.setPrototypeOf(obj, Array.prototype);
+  return obj instanceof Array;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:50 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

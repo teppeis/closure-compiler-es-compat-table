@@ -1,0 +1,16 @@
+// built-ins / WeakMap / iterator closing
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var closed = false;
+  var iter = global.__createIterableObject([1, 2, 3], {
+    'return': function(){ closed = true; return {}; }
+  });
+  try {
+    new WeakMap(iter);
+  } catch(e){}
+  return closed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:04 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

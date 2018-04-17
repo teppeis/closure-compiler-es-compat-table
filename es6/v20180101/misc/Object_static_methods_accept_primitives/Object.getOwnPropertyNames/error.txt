@@ -1,0 +1,10 @@
+// misc / Object static methods accept primitives / Object.getOwnPropertyNames
+module.exports = () => {
+  var s = Object.getOwnPropertyNames('a');
+  return s.length === 2 &&
+((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:59 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

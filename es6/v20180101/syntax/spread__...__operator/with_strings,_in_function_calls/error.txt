@@ -1,0 +1,8 @@
+// syntax / spread (...) operator / with strings, in function calls
+module.exports = () => {
+  return Math.max(..."1234") === 4;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:20 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

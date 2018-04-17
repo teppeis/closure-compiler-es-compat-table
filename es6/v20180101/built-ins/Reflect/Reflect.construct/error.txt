@@ -1,0 +1,10 @@
+// built-ins / Reflect / Reflect.construct
+module.exports = () => {
+  return Reflect.construct(function(a, b, c) {
+    this.qux = a + b + c;
+  }, ["foo", "bar", "baz"]).qux === "foobarbaz";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:45 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

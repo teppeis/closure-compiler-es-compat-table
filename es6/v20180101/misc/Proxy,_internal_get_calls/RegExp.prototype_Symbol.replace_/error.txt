@@ -1,0 +1,14 @@
+// misc / Proxy, internal 'get' calls / RegExp.prototype[Symbol.replace]
+module.exports = () => {
+// RegExp.prototype[Symbol.replace] -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+  RegExp.prototype[Symbol.replace].call(p);
+  p.global = true;
+  RegExp.prototype[Symbol.replace].call(p);
+  return get + '' === "global,exec,global,unicode,exec";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:13 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

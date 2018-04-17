@@ -1,0 +1,10 @@
+// built-in extensions / Number properties / Number.MIN_SAFE_INTEGER
+module.exports = () => {
+  // NOTE: this assinment is needed to insert polyfill
+  var n = Number.MIN_SAFE_INTEGER;
+  return n === -(Math.pow(2, 53) - 1);
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:01 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

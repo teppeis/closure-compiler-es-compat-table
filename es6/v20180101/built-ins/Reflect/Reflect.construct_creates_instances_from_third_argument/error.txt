@@ -1,0 +1,10 @@
+// built-ins / Reflect / Reflect.construct creates instances from third argument
+module.exports = () => {
+  function F(){}
+  var obj = Reflect.construct(function(){ this.y = 1; }, [], F);
+  return obj.y === 1 && obj instanceof F;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

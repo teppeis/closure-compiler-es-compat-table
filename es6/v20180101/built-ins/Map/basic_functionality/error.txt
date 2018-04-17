@@ -1,0 +1,11 @@
+// built-ins / Map / basic functionality
+module.exports = () => {
+  var key = {};
+  var map = new Map();
+  map.set(key, 123);
+  return map.has(key) && map.get(key) === 123;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

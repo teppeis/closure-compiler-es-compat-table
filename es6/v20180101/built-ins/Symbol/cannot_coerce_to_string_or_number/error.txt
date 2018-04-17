@@ -1,0 +1,27 @@
+// built-ins / Symbol / cannot coerce to string or number
+module.exports = () => {
+  var symbol = Symbol();
+  try {
+    symbol + "";
+    return false;
+  }
+  catch(e) {}
+  try {
+    symbol + 0;
+    return false;
+  } catch(e) {}
+  return true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:59 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:5: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+    symbol + "";
+    ^^^^^^^^^^^
+
+es6/v20180101/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:10: WARNING - Suspicious code. The result of the 'add' operator is not being used.
+    symbol + 0;
+    ^^^^^^^^^^
+
+0 error(s), 2 warning(s)

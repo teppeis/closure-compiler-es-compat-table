@@ -1,0 +1,8 @@
+// built-ins / Symbol / typeof support
+module.exports = () => {
+  return typeof Symbol() === "symbol";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:01 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

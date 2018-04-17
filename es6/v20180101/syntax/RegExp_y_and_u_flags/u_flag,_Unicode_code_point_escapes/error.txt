@@ -1,0 +1,8 @@
+// syntax / RegExp "y" and "u" flags / "u" flag, Unicode code point escapes
+module.exports = () => {
+  return "𝌆".match(/\u{1d306}/u)[0].length === 2;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

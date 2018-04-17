@@ -1,0 +1,15 @@
+// functions / generators / yield operator precedence
+module.exports = () => {
+  var passed;
+  function * generator(){
+    passed = yield 0 ? true : false;
+  };
+  var iterator = generator();
+  iterator.next();
+  iterator.next(true);
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:55 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

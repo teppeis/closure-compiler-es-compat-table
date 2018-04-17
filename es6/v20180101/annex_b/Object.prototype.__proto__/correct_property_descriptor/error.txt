@@ -1,0 +1,14 @@
+// annex b / Object.prototype.__proto__ / correct property descriptor
+module.exports = () => {
+  var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+  var A = function(){};
+  return (desc
+&& "get" in desc
+&& "set" in desc
+&& desc.configurable
+&& !desc.enumerable);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:22 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

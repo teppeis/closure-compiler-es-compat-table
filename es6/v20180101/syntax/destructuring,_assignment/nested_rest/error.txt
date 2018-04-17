@@ -1,0 +1,10 @@
+// syntax / destructuring, assignment / nested rest
+module.exports = () => {
+  var a = [1, 2, 3], first, last;
+  [first, ...[a[2], last]] = a;
+  return first === 1 && last === 3 && (a + "") === "1,2,2";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

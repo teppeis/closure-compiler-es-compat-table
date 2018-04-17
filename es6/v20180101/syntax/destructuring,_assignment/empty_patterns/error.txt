@@ -1,0 +1,10 @@
+// syntax / destructuring, assignment / empty patterns
+module.exports = () => {
+  [] = [1,2];
+  ({} = {a:1,b:2});
+  return true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:44 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

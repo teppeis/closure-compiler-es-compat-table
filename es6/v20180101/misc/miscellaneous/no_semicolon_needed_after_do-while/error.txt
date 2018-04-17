@@ -1,0 +1,8 @@
+// misc / miscellaneous / no semicolon needed after do-while
+module.exports = () => {
+  do {} while (false) return true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:25 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

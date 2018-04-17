@@ -1,0 +1,23 @@
+// built-ins / Proxy / "setPrototypeOf" handler invariant
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  Object.setPrototypeOf({},{});
+  // If the target object is not extensible, the argument value must be the
+  // same as the result of [[GetPrototypeOf]] applied to target object.
+  try {
+    Object.setPrototypeOf(
+      new Proxy(Object.preventExtensions({}), {
+        setPrototypeOf: function () {
+          passed = true;
+          return true;
+        }
+      }),{});
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:42 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

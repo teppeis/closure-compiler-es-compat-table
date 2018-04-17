@@ -1,0 +1,17 @@
+// syntax / spread (...) operator / spreading non-iterables is a runtime error
+module.exports = () => {
+  try {
+    Math.max(...2);
+  } catch(e) {
+    return Math.max(...[1, 2, 3]) === 3;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:15 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error/in.js:4: WARNING - Suspicious code. The result of the extern function call 'Math.max' is not being used.
+    Math.max(...2);
+    ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

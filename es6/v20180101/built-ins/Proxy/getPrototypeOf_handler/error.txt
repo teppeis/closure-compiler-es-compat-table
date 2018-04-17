@@ -1,0 +1,15 @@
+// built-ins / Proxy / "getPrototypeOf" handler
+module.exports = () => {
+  var proxied = {};
+  var fakeProto = {};
+  var proxy = new Proxy(proxied, {
+    getPrototypeOf: function (t) {
+      return t === proxied && fakeProto;
+    }
+  });
+  return Object.getPrototypeOf(proxy) === fakeProto;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

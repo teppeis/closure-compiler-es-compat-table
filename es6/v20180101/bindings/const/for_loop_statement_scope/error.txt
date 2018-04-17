@@ -1,0 +1,15 @@
+// bindings / const / for loop statement scope
+module.exports = () => {
+  const baz = 1;
+  for(const baz = 0; false;) {}
+  return baz === 1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/bindings/const/for_loop_statement_scope/in.js:4: WARNING - unreachable code
+  for(const baz = 0; false;) {}
+                             ^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,10 @@
+// bindings / const / basic support (strict mode)
+module.exports = () => {
+  "use strict";
+  const foo = 123;
+  return (foo === 123);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:34 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

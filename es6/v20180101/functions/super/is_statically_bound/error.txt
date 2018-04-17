@@ -1,0 +1,18 @@
+// functions / super / is statically bound
+module.exports = () => {
+  class B {
+    qux() { return "bar"; }
+  }
+  class C extends B {
+    qux() { return super.qux() + this.corge; }
+  }
+  var obj = {
+    qux: C.prototype.qux,
+    corge: "ley"
+  };
+  return obj.qux() === "barley";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

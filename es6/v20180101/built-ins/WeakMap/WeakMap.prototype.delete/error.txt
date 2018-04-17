@@ -1,0 +1,8 @@
+// built-ins / WeakMap / WeakMap.prototype.delete
+module.exports = () => {
+  return typeof WeakMap.prototype.delete === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:01 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

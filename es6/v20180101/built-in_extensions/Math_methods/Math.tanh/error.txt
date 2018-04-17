@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.tanh
+module.exports = () => {
+  var nan = Math.tanh(NaN);
+  return Math.tanh(0) === 0
+    && Math.tanh(-0) === -0
+    && Math.tanh(Infinity) === 1
+    && Math.tanh(-Infinity) === -1
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

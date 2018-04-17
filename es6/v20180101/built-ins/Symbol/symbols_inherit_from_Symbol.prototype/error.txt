@@ -1,0 +1,13 @@
+// built-ins / Symbol / symbols inherit from Symbol.prototype
+module.exports = () => {
+  var symbol = Symbol();
+  var passed = symbol.foo === undefined;
+  Symbol.prototype.foo = 2;
+  passed &= symbol.foo === 2;
+  delete Symbol.prototype.foo;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

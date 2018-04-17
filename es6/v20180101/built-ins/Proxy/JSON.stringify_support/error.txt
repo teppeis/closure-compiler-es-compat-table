@@ -1,0 +1,8 @@
+// built-ins / Proxy / JSON.stringify support
+module.exports = () => {
+  return JSON.stringify(new Proxy(['foo'], {})) === '["foo"]';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:33 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

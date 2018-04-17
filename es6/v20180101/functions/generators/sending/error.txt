@@ -1,0 +1,16 @@
+// functions / generators / sending
+module.exports = () => {
+  var sent;
+  function * generator(){
+    sent = [yield 5, yield 6];
+  };
+  var iterator = generator();
+  iterator.next();
+  iterator.next("foo");
+  iterator.next("bar");
+  return sent[0] === "foo" && sent[1] === "bar";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:49 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

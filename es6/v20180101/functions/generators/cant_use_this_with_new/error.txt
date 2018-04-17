@@ -1,0 +1,16 @@
+// functions / generators / can't use "this" with new
+module.exports = () => {
+  function * generator(){
+    yield this.x; yield this.y;
+  };
+  try {
+    (new generator()).next();
+  }
+  catch (e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:47 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

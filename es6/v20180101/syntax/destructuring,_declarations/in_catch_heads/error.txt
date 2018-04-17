@@ -1,0 +1,16 @@
+// syntax / destructuring, declarations / in catch heads
+module.exports = () => {
+  try {
+    throw [1,2];
+  } catch([i,j]) {
+    try {
+      throw { k: 3, l: 4 };
+    } catch({k, l}) {
+      return i === 1 && j === 2 && k === 3 && l === 4;
+    }
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:52 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

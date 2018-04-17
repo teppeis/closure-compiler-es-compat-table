@@ -1,0 +1,14 @@
+// functions / class / computed accessor properties
+module.exports = () => {
+  var garply = "foo", grault = "bar", baz = false;
+  class C {
+    get [garply]() { return "foo"; }
+    set [grault](x) { baz = x; }
+  }
+  new C().bar = true;
+  return new C().foo === "foo" && baz;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:40 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

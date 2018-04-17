@@ -1,0 +1,9 @@
+// built-ins / Set / Set[Symbol.species]
+module.exports = () => {
+  var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
+  return 'get' in prop && Set[Symbol.species] === Set;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:54 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

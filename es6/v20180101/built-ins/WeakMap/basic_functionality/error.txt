@@ -1,0 +1,11 @@
+// built-ins / WeakMap / basic functionality
+module.exports = () => {
+  var key = {};
+  var weakmap = new WeakMap();
+  weakmap.set(key, 123);
+  return weakmap.has(key) && weakmap.get(key) === 123;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:02 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

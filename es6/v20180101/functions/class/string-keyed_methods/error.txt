@@ -1,0 +1,12 @@
+// functions / class / string-keyed methods
+module.exports = () => {
+  class C {
+    "foo bar"() { return 2; }
+  }
+  return typeof C.prototype["foo bar"] === "function"
+&& new C()["foo bar"]() === 2;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:45 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,12 @@
+// annex b / RegExp.prototype.compile / basic functionality
+module.exports = () => {
+  if (typeof RegExp.prototype.compile !== 'function')
+    return false
+  var rx = /a/;
+  rx.compile('b');
+  return rx.test('b');
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:25 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

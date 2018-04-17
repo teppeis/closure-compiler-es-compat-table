@@ -1,0 +1,15 @@
+// built-in extensions / Array.prototype methods / Array.prototype.find
+module.exports = () => {
+  var arr = [{name: 'foo'}];
+  var target = {name: 'bar'};
+  arr.push(target);
+  arr.push({name: 'baz'});
+  var obj = {};
+  return arr.find(function(el, idx, ar) {
+    return el.name === 'bar' && idx === 1 && this === obj;
+  }, obj) === target;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:45 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

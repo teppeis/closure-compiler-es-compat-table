@@ -1,0 +1,12 @@
+// built-in extensions / Number properties / Number.isNaN
+module.exports = () => {
+  return Number.isNaN(NaN) === true
+    &&  Number.isNaN(0) === false
+    &&  Number.isNaN(null) === false
+    &&  Number.isNaN(undefined) === false
+    &&  Number.isNaN('') === false;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:02 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

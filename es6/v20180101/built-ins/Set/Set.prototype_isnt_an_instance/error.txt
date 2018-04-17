@@ -1,0 +1,20 @@
+// built-ins / Set / Set.prototype isn't an instance
+module.exports = () => {
+  new Set();
+  var obj = {};
+  try {
+    Set.prototype.has(obj);
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:54 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Set/Set.prototype_isnt_an_instance/in.js:6: WARNING - Suspicious code. The result of the extern function call 'Set.prototype.has' is not being used.
+    Set.prototype.has(obj);
+    ^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

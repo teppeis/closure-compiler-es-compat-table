@@ -1,0 +1,16 @@
+// functions / class / implicit strict mode
+module.exports = () => {
+  class C {
+    static method() { return this === undefined; }
+  }
+  return (0,C.method)();
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:43 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/functions/class/implicit_strict_mode/in.js:6: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+  return (0,C.method)();
+          ^
+
+0 error(s), 1 warning(s)

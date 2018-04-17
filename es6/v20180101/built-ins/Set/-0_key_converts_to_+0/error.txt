@@ -1,0 +1,14 @@
+// built-ins / Set / -0 key converts to +0
+module.exports = () => {
+  var set = new Set();
+  set.add(-0);
+  var k;
+  set.forEach(function (value) {
+    k = 1 / value;
+  });
+  return k === Infinity && set.has(+0);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:50 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

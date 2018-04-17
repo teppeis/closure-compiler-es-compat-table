@@ -1,0 +1,27 @@
+// misc / own property order / Object.getOwnPropertyNames
+module.exports = () => {
+  var obj = {
+    2: true,
+    0: true,
+    1: true,
+    ' ': true,
+    9: true,
+    D: true,
+    B: true,
+    '-1': true
+  };
+  obj.A = true;
+  obj[3] = true;
+  "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+    obj[key] = true;
+  });
+  Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+  Object.defineProperty(obj, '4', { value: true, enumerable: true });
+  delete obj[2];
+  obj[2] = true;
+  return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:26 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

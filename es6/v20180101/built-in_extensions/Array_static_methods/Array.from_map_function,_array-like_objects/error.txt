@@ -1,0 +1,10 @@
+// built-in extensions / Array static methods / Array.from map function, array-like objects
+module.exports = () => {
+  return Array.from({ 0: "foo", 1: "bar", length: 2 }, function(e, i) {
+    return e + this.baz + i;
+  }, { baz: "d" }) + '' === "food0,bard1";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:50 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

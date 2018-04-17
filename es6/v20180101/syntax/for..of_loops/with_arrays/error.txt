@@ -1,0 +1,15 @@
+// syntax / for..of loops / with arrays
+module.exports = () => {
+  var arr = [5];
+  for (var item of arr)
+    return item === 5;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:07 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/for..of_loops/with_arrays/in.js:4: WARNING - unreachable code
+  for (var item of arr)
+  ^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

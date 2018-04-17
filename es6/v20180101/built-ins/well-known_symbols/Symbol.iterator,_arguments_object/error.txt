@@ -1,0 +1,11 @@
+// built-ins / well-known symbols / Symbol.iterator, arguments object
+module.exports = () => {
+  return (function() {
+    return typeof arguments[Symbol.iterator] === 'function'
+&& Object.hasOwnProperty.call(arguments, Symbol.iterator);
+  }());
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:25 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

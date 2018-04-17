@@ -1,0 +1,19 @@
+// syntax / for..of loops / iterator closing, break
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var closed = false;
+  var iter = __createIterableObject([1, 2, 3], {
+    'return': function(){ closed = true; return {}; }
+  });
+  for (var it of iter) break;
+  return closed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:07 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/for..of_loops/iterator_closing,_break/in.js:8: WARNING - unreachable code
+  for (var it of iter) break;
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

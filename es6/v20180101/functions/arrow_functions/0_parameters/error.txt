@@ -1,0 +1,8 @@
+// functions / arrow functions / 0 parameters
+module.exports = () => {
+  return (() => 5)() === 5;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:34 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

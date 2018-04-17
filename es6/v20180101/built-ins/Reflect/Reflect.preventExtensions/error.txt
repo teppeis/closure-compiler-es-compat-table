@@ -1,0 +1,10 @@
+// built-ins / Reflect / Reflect.preventExtensions
+module.exports = () => {
+  var obj = {};
+  Reflect.preventExtensions(obj);
+  return !Object.isExtensible(obj);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:49 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

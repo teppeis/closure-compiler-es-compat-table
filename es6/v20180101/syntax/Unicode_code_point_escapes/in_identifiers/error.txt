@@ -1,0 +1,9 @@
+// syntax / Unicode code point escapes / in identifiers
+module.exports = () => {
+  var \u{102C0} = { \u{102C0} : 2 };
+  return \u{102C0}['\ud800\udec0'] === 2;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:40 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

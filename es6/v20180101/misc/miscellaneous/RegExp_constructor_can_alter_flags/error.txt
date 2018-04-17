@@ -1,0 +1,8 @@
+// misc / miscellaneous / RegExp constructor can alter flags
+module.exports = () => {
+  return new RegExp(/./im, "g").global === true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:23 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

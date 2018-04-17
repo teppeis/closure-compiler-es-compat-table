@@ -1,0 +1,11 @@
+// built-in extensions / Number properties / Number.isFinite
+module.exports = () => {
+  return Number.isFinite(Infinity) === false
+    && Number.isFinite(-Infinity) === false
+    && Number.isFinite(NaN) === false
+    && Number.isFinite(0) === true;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:01 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,9 @@
+// syntax / destructuring, declarations / trailing commas in object patterns
+module.exports = () => {
+  var {a,} = {a:1};
+  return a === 1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:55 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

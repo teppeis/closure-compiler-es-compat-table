@@ -1,0 +1,8 @@
+// syntax / rest parameters / function 'length' property
+module.exports = () => {
+  return function(a, ...b){}.length === 1 && function(...c){}.length === 0;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:14 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,12 @@
+// built-in extensions / String.prototype methods / String.prototype.codePointAt
+module.exports = () => {
+  return 'abc'.codePointAt() === 97
+    && 'abc'.codePointAt(0) === 97
+    && 'abc'.codePointAt(1) === 98
+    && 'abc'.codePointAt(1) === 98
+    && '\uD87E\uDC04'.codePointAt(0) === 0x2F804;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:09 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

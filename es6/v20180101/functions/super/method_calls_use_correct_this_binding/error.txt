@@ -1,0 +1,16 @@
+// functions / super / method calls use correct "this" binding
+module.exports = () => {
+  class B {
+    qux(a) { return this.foo + a; }
+  }
+  class C extends B {
+    qux(a) { return super.qux("bar" + a); }
+  }
+  var obj = new C();
+  obj.foo = "foo";
+  return obj.qux("baz") === "foobarbaz";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

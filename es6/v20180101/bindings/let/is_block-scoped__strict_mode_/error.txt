@@ -1,0 +1,11 @@
+// bindings / let / is block-scoped (strict mode)
+module.exports = () => {
+  'use strict';
+  let bar = 123;
+  { let bar = 456; }
+  return bar === 123;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:43 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

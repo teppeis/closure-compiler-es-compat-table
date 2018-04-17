@@ -1,0 +1,16 @@
+// syntax / rest parameters / new Function() support
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  return new Function("a", "...b",
+    "return b instanceof Array && a+b === 'foobar,baz';"
+  )('foo','bar','baz');
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:15 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/syntax/rest_parameters/new_Function___support/in.js:4: WARNING - unreachable code
+  return new Function("a", "...b",
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

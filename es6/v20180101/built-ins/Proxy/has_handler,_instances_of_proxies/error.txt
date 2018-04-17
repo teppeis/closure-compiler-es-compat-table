@@ -1,0 +1,20 @@
+// built-ins / Proxy / "has" handler, instances of proxies
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  "foo" in Object.create(new Proxy(proxied, {
+    has: function (t, k) {
+      passed = t === proxied && k === "foo";
+    }
+  }));
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:39 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Proxy/has_handler,_instances_of_proxies/in.js:5: WARNING - Suspicious code. The result of the 'in' operator is not being used.
+  "foo" in Object.create(new Proxy(proxied, {
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

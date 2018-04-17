@@ -1,0 +1,11 @@
+// syntax / destructuring, assignment / with generic iterables
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var a,b,c;
+  [a, b, c] = global.__createIterableObject([1, 2]);
+  return a === 1 && b === 2 && c === undefined;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:49 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,18 @@
+// bindings / const / redefining a const is an error
+module.exports = () => {
+  const baz = 1;
+  const foo = 1;
+  foo = 2;
+  return false;
+};
+
+// EXPECT: 5: ERROR - Constant reassigned: foo
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/bindings/const/redefining_a_const_is_an_error/in.js:5: ERROR - Constant reassigned: foo
+  foo = 2;
+  ^^^
+
+1 error(s), 0 warning(s)

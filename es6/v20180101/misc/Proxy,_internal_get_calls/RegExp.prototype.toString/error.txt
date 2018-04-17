@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / RegExp.prototype.toString
+module.exports = () => {
+// RegExp.prototype.toString -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+  RegExp.prototype.toString.call(p);
+  return get + '' === "source,flags";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:12 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,14 @@
+// built-ins / well-known symbols / Symbol.match, String.prototype.includes
+module.exports = () => {
+  var re = /./;
+  try {
+    '/./'.includes(re);
+  } catch(e){
+    re[Symbol.match] = false;
+    return '/./'.includes(re);
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:28 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

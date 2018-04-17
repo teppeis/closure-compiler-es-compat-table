@@ -1,0 +1,11 @@
+// syntax / destructuring, parameters / computed properties
+module.exports = () => {
+  var qux = "corge";
+  return function({ [qux]: grault }) {
+    return grault === "garply";
+  }({ corge: "garply" });
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:59 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

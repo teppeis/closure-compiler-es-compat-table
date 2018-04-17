@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.fround
+module.exports = () => {
+  return Math.fround(0) === 0
+    && Math.fround(-0) === -0
+    && Math.fround(Infinity) === Infinity
+    && Math.fround(-Infinity) === -Infinity
+    && Math.fround(1.5) === 1.5
+    && Math.fround(1.4) !== 1.4;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,10 @@
+// syntax / destructuring, parameters / with generator instances
+module.exports = () => {
+  return function([a, b, c]) {
+    return a === 1 && b === 2 && c === undefined;
+  }(function*(){ yield 1; yield 2; }());
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:05 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

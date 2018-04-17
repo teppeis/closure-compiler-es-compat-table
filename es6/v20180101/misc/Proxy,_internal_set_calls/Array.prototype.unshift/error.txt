@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'set' calls / Array.prototype.unshift
+module.exports = () => {
+// Array.prototype.unshift -> Set -> [[Set]]
+  var set = [];
+  var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+  p.unshift(0,1);
+  return set + '' === "5,3,2,0,1,length";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:21 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

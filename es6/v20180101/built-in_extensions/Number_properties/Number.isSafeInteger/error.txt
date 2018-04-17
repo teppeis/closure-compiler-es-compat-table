@@ -1,0 +1,14 @@
+// built-in extensions / Number properties / Number.isSafeInteger
+module.exports = () => {
+  return Number.isSafeInteger(3) === true
+    && Number.isSafeInteger(3.1) === false
+    && Number.isSafeInteger(3.0) === true
+    && Number.isSafeInteger(Math.pow(2, 53)) === false
+    && Number.isSafeInteger(Math.pow(2, 53) - 1) === true
+    && Number.isSafeInteger(NaN) === false
+    && Number.isSafeInteger(Infinity) === false
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:02 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

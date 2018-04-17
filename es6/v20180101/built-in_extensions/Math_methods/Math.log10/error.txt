@@ -1,0 +1,16 @@
+// built-in extensions / Math methods / Math.log10
+module.exports = () => {
+  var nan1 = Math.log10(-1);
+  var nan2 = Math.log10(NaN);
+  return Math.log10(1) === 0
+    && Math.log10(10) === 1
+    && Math.log10(0) === -Infinity
+    && Math.log10(-0) === -Infinity
+    && Math.log10(Infinity) === Infinity
+    && nan1 !== nan1
+    && nan2 !== nan2;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:58 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

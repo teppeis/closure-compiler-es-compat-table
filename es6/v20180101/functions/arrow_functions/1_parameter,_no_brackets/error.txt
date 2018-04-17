@@ -1,0 +1,9 @@
+// functions / arrow functions / 1 parameter, no brackets
+module.exports = () => {
+  var b = x => x + "foo";
+  return (b("fee fie foe ") === "fee fie foe foo");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:35 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

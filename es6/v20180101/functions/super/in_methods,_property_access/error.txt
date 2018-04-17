@@ -1,0 +1,15 @@
+// functions / super / in methods, property access
+module.exports = () => {
+  class B {}
+  B.prototype.qux = "foo";
+  B.prototype.corge = "baz";
+  class C extends B {
+    quux(a) { return super.qux + a + super["corge"]; }
+  }
+  C.prototype.qux = "garply";
+  return new C().quux("bar") === "foobarbaz";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:56 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

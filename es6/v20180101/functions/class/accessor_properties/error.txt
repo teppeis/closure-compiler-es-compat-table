@@ -1,0 +1,14 @@
+// functions / class / accessor properties
+module.exports = () => {
+  var baz = false;
+  class C {
+    get foo() { return "foo"; }
+    set bar(x) { baz = x; }
+  }
+  new C().bar = true;
+  return new C().foo === "foo" && baz;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

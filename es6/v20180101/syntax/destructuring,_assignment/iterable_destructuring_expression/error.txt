@@ -1,0 +1,9 @@
+// syntax / destructuring, assignment / iterable destructuring expression
+module.exports = () => {
+  var a, b, iterable = [1,2];
+  return ([a, b] = iterable) === iterable;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:45 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

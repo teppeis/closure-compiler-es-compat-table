@@ -1,0 +1,11 @@
+// misc / Updated identifier syntax / var ⸯ;
+module.exports = () => {
+  var ⸯ;
+  return false;
+};
+
+// EXPECT: 2: Error
+
+----------------------------------------------------------
+Apr 17, 2018 11:34:22 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

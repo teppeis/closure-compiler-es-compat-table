@@ -1,0 +1,12 @@
+// bindings / const / for-in loop iteration scope
+module.exports = () => {
+  var scopes = [];
+  for(const i in { a:1, b:1 }) {
+    scopes.push(function(){ return i; });
+  }
+  return (scopes[0]() === "a" && scopes[1]() === "b");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:34 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.copyWithin
+module.exports = () => {
+  return typeof Int8Array.prototype.copyWithin === "function" &&
+typeof Uint8Array.prototype.copyWithin === "function" &&
+typeof Uint8ClampedArray.prototype.copyWithin === "function" &&
+typeof Int16Array.prototype.copyWithin === "function" &&
+typeof Uint16Array.prototype.copyWithin === "function" &&
+typeof Int32Array.prototype.copyWithin === "function" &&
+typeof Uint32Array.prototype.copyWithin === "function" &&
+typeof Float32Array.prototype.copyWithin === "function" &&
+typeof Float64Array.prototype.copyWithin === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:10 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

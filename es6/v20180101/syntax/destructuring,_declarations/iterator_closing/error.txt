@@ -1,0 +1,14 @@
+// syntax / destructuring, declarations / iterator closing
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var closed = false;
+  var iter = global.__createIterableObject([1, 2, 3], {
+    'return': function(){ closed = true; return {}; }
+  });
+  var [a, b] = iter;
+  return closed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:53 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,10 @@
+// syntax / destructuring, parameters / with arrays
+module.exports = () => {
+  return function([a, , [b], c]) {
+    return a === 5 && b === 6 && c === undefined;
+  }([5, null, [6]]);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:04 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

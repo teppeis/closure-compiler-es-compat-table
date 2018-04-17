@@ -1,0 +1,9 @@
+// annex b / RegExp syntax extensions / invalid hexadecimal escapes
+module.exports = () => {
+  return /\x1/.exec("x1")[0] === "x1"
+&& /[\x1]/.exec("x")[0] === "x";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:28 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

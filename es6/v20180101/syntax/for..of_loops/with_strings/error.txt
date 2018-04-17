@@ -1,0 +1,11 @@
+// syntax / for..of loops / with strings
+module.exports = () => {
+  var str = "";
+  for (var item of "foo")
+    str += item;
+  return str === "foo";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:09 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

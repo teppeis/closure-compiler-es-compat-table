@@ -1,0 +1,14 @@
+// functions / class / is block-scoped
+module.exports = () => {
+  class C {}
+  var c1 = C;
+  {
+    class C {}
+    var c2 = C;
+  }
+  return C === c1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:43 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

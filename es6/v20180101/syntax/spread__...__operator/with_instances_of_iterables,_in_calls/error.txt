@@ -1,0 +1,10 @@
+// syntax / spread (...) operator / with instances of iterables, in calls
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var iterable = global.__createIterableObject([1, 2, 3]);
+  return Math.max(...Object.create(iterable)) === 3;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:19 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

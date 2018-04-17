@@ -1,0 +1,15 @@
+// subclassing / RegExp is subclassable / RegExp.prototype.test
+module.exports = () => {
+  class R extends RegExp {}
+  var r = new R("baz");
+  return r.test("foobarbaz");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:35 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/subclassing/RegExp_is_subclassable/RegExp.prototype.test/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+  class R extends RegExp {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

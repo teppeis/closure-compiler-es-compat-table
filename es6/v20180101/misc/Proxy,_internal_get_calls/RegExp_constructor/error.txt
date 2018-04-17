@@ -1,0 +1,19 @@
+// misc / Proxy, internal 'get' calls / RegExp constructor
+module.exports = () => {
+// RegExp -> Get -> [[Get]]
+  var get = [];
+  var re = { constructor: null };
+  re[Symbol.match] = true;
+  var p = new Proxy(re, { get: function(o, k) { get.push(k); return o[k]; }});
+  RegExp(p);
+  return get[0] === Symbol.match && get.slice(1) + '' === "constructor,source,flags";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:14 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/misc/Proxy,_internal_get_calls/RegExp_constructor/in.js:8: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+  RegExp(p);
+  ^^^^^^^^^
+
+0 error(s), 1 warning(s)

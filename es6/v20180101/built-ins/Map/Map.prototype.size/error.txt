@@ -1,0 +1,11 @@
+// built-ins / Map / Map.prototype.size
+module.exports = () => {
+  var key = {};
+  var map = new Map();
+  map.set(key, 123);
+  return map.size === 1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:24 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

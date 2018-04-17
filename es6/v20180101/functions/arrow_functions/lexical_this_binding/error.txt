@@ -1,0 +1,10 @@
+// functions / arrow functions / lexical "this" binding
+module.exports = () => {
+  var d = { x : "bar", y : function() { return z => this.x + z; }}.y();
+  var e = { x : "baz", y : d };
+  return d("ley") === "barley" && e.y("ley") === "barley";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

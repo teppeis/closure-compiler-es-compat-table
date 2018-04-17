@@ -1,0 +1,9 @@
+// built-in extensions / Math methods / Math.imul
+module.exports = () => {
+  return Math.imul(0, 0) === 0
+    && Math.imul(2, 4) === 8;
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

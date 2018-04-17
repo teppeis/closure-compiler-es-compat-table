@@ -1,0 +1,18 @@
+// subclassing / miscellaneous subclassables / Set is subclassable
+module.exports = () => {
+  var obj = {};
+  class S extends Set {}
+  var set = new S();
+  set.add(123);
+  set.add(123);
+  return set instanceof S && set.has(123);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:37 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/subclassing/miscellaneous_subclassables/Set_is_subclassable/in.js:4: ERROR - This code cannot be converted from ES6. extending native class: Set
+  class S extends Set {}
+  ^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

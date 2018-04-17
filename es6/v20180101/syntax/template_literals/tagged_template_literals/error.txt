@@ -1,0 +1,19 @@
+// syntax / template literals / tagged template literals
+module.exports = () => {
+  var called = false;
+  function fn(parts, a, b) {
+    called = true;
+    return parts instanceof Array &&
+parts[0]     === "foo"      &&
+parts[1]     === "bar\n"    &&
+parts.raw[0] === "foo"      &&
+parts.raw[1] === "bar\\n"   &&
+a === 123                   &&
+b === 456;
+  }
+  return fn `foo${123}bar\n${456}` && called;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:22 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

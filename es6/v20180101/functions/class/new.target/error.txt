@@ -1,0 +1,28 @@
+// functions / class / new.target
+module.exports = () => {
+  var passed = false;
+  new function f() {
+    passed = new.target === f;
+  }();
+  class A {
+    constructor() {
+      passed &= new.target === B;
+    }
+  }
+  class B extends A {}
+  new B();
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:43 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/functions/class/new.target/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed = new.target === f;
+             ^^^^^^^^^^
+
+es6/v20180101/functions/class/new.target/in.js:9: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+      passed &= new.target === B;
+                ^^^^^^^^^^
+
+2 error(s), 0 warning(s)

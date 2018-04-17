@@ -1,0 +1,15 @@
+// misc / miscellaneous / no assignments allowed in for-in head in strict mode
+module.exports = () => {
+  'use strict';
+  for (var i = 0 in {}) {}
+  return false;
+};
+
+// EXPECT: 4: ERROR - Parse error. for-in statement may not have initializer
+
+----------------------------------------------------------
+es6/v20171023/misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/in.js:4: ERROR - Parse error. for-in statement may not have initializer
+  for (var i = 0 in {}) {}
+                 ^
+
+1 error(s), 0 warning(s)

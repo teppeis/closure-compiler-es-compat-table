@@ -1,0 +1,9 @@
+// annex b / RegExp syntax extensions / incomplete patterns and quantifiers
+module.exports = () => {
+  return /x{1/.exec("x{1")[0] === "x{1"
+&& /x]1/.exec("x]1")[0] === "x]1";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:26 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

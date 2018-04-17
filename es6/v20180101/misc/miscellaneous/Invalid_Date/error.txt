@@ -1,0 +1,8 @@
+// misc / miscellaneous / Invalid Date
+module.exports = () => {
+  return new Date(NaN) + "" === "Invalid Date";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:22 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

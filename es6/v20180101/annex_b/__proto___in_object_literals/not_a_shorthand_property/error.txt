@@ -1,0 +1,12 @@
+// annex b / __proto__ in object literals / not a shorthand property
+module.exports = () => {
+  if (!({ __proto__ : [] } instanceof Array)) {
+    return false;
+  }
+  var __proto__ = [];
+  return !({ __proto__ } instanceof Array);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:31 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

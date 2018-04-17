@@ -1,0 +1,24 @@
+// functions / generators / yield *, iterator closing via throw()
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var closed = false;
+  var iter = global.__createIterableObject([1, 2, 3], {
+    'throw': undefined,
+    'return': function() {
+      closed = true;
+      return {done: true};
+    }
+  });
+  var gen = (function*(){
+    try {
+      yield *iter;
+    } catch(e){}
+  })();
+  gen.next();
+  gen['throw']();
+  return closed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:54 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

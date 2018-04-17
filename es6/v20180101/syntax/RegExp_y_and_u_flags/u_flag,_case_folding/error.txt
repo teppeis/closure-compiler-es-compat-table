@@ -1,0 +1,8 @@
+// syntax / RegExp "y" and "u" flags / "u" flag, case folding
+module.exports = () => {
+  return "ſ".match(/S/iu) && "S".match(/ſ/iu);
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:38 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

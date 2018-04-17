@@ -1,0 +1,8 @@
+// misc / Object static methods accept primitives / Object.freeze
+module.exports = () => {
+  return Object.freeze('a') === 'a';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:58 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

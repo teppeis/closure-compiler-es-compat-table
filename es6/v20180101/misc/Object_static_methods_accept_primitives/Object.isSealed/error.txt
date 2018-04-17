@@ -1,0 +1,8 @@
+// misc / Object static methods accept primitives / Object.isSealed
+module.exports = () => {
+  return Object.isSealed('a') === true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:00 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

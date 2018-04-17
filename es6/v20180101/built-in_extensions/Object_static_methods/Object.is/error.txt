@@ -1,0 +1,11 @@
+// built-in extensions / Object static methods / Object.is
+module.exports = () => {
+  return Object.is(1, 1)
+    && Object.is(NaN, NaN)
+    && Object.is(0, 0)
+    && !Object.is(-0, 0);
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:04 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

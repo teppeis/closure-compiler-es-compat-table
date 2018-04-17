@@ -1,0 +1,10 @@
+// annex b / Object.prototype.__proto__ / absent from Object.create(null)
+module.exports = () => {
+  var o = Object.create(null), p = {};
+  o.__proto__ = p;
+  return Object.getPrototypeOf(o) !== p;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:21 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

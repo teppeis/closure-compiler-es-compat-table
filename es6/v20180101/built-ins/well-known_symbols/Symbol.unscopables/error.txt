@@ -1,0 +1,17 @@
+// built-ins / well-known symbols / Symbol.unscopables
+module.exports = () => {
+  var a = { foo: 1, bar: 2 };
+  a[Symbol.unscopables] = { bar: true };
+  with (a) {
+    return foo === 1 && typeof bar === "undefined";
+  }
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:34 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - The with statement cannot be used in strict mode.
+  with (a) {
+  ^^^^^^^^^^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,9 @@
+// syntax / object literal extensions / computed shorthand methods
+module.exports = () => {
+  var x = 'y';
+  return ({ [x](){ return 1 } }).y() === 1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:11 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,12 @@
+// syntax / template literals / toString conversion
+module.exports = () => {
+  var a = {
+    toString: function() { return "foo"; },
+    valueOf: function() { return "bar"; },
+  };
+  return `${a}` === "foo";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:22 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

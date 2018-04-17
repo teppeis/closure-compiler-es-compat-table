@@ -1,0 +1,9 @@
+// syntax / destructuring, declarations / with astral plane strings
+module.exports = () => {
+  var [c] = "𠮷𠮶";
+  return c === "𠮷";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:56 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,22 @@
+// built-ins / Proxy / "ownKeys" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.keys(
+    new Proxy(proxied, {
+      ownKeys: function (t) {
+        passed = t === proxied; return [];
+      }
+    })
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:41 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Proxy/ownKeys_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+  Object.keys(
+  ^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,9 @@
+// syntax / spread (...) operator / with generator instances, in arrays
+module.exports = () => {
+  var iterable = (function*(){ yield "b"; yield "c"; yield "d"; }());
+  return ["a", ...iterable, "e"][3] === "d";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:17 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,14 @@
+// built-in extensions / Math methods / Math.cbrt
+module.exports = () => {
+  var nan = Math.cbrt(NaN);
+  return Math.cbrt(-1) === -1 
+    && Math.cbrt(64) === 4
+    && Math.cbrt(0) === 0
+    && Math.cbrt(-0) === -0
+    && Math.cbrt(Infinity) === Infinity
+    && Math.cbrt(-Infinity) === -Infinity
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:31:55 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

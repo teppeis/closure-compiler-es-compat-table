@@ -1,0 +1,22 @@
+// built-ins / Proxy / "isExtensible" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.isExtensible(
+    new Proxy(proxied, {
+      isExtensible: function (t) {
+        passed = t === proxied; return true;
+      }
+    })
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:40 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+  Object.isExtensible(
+  ^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,14 @@
+// built-in extensions / function "name" property / class expressions
+module.exports = () => {
+  return class foo {}.name === "foo" &&
+typeof class bar { static name() {} }.name === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:15 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/built-in_extensions/function_name_property/class_expressions/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+typeof class bar { static name() {} }.name === "function";
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

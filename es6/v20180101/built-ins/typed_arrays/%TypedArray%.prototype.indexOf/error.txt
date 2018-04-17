@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.indexOf
+module.exports = () => {
+  return typeof Int8Array.prototype.indexOf === "function" &&
+typeof Uint8Array.prototype.indexOf === "function" &&
+typeof Uint8ClampedArray.prototype.indexOf === "function" &&
+typeof Int16Array.prototype.indexOf === "function" &&
+typeof Uint16Array.prototype.indexOf === "function" &&
+typeof Int32Array.prototype.indexOf === "function" &&
+typeof Uint32Array.prototype.indexOf === "function" &&
+typeof Float32Array.prototype.indexOf === "function" &&
+typeof Float64Array.prototype.indexOf === "function";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:13 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,18 @@
+// functions / generators / correct "this" binding
+module.exports = () => {
+  function * generator(){
+    yield this.x; yield this.y;
+  };
+  var iterator = { g: generator, x: 5, y: 6 }.g();
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  item = iterator.next();
+  passed    &= item.value === 6 && item.done === false;
+  item = iterator.next();
+  passed    &= item.value === undefined && item.done === true;
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:48 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

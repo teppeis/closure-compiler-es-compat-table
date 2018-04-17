@@ -1,0 +1,8 @@
+// annex b / RegExp syntax extensions / hyphens in character sets
+module.exports = () => {
+  return /[\w-_]/.exec("-")[0] === "-";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:26 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

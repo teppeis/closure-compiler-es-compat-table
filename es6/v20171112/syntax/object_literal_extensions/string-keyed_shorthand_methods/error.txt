@@ -1,0 +1,11 @@
+// syntax / object literal extensions / string-keyed shorthand methods
+module.exports = () => {
+  return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
+
+};
+----------------------------------------------------------
+es6/v20171112/syntax/object_literal_extensions/string-keyed_shorthand_methods/in.js:3: ERROR - Parse error. '[' expected
+  return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
+            ^
+
+1 error(s), 0 warning(s)

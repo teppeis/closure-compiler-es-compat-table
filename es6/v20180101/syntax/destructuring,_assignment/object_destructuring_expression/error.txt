@@ -1,0 +1,9 @@
+// syntax / destructuring, assignment / object destructuring expression
+module.exports = () => {
+  var a, b, obj = { a:1, b:2 };
+  return ({a,b} = obj) === obj;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

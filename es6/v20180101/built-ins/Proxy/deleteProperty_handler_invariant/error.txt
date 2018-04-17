@@ -1,0 +1,23 @@
+// built-ins / Proxy / "deleteProperty" handler invariant
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  // A property cannot be reported as deleted, if it exists as a non-configurable
+  // own property of the target object.
+  var proxied = {};
+  Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+  try {
+    delete new Proxy(proxied, {
+      deleteProperty: function () {
+        passed = true;
+        return true;
+      }
+    }).foo;
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:36 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

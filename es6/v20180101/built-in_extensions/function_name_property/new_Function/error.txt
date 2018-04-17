@@ -1,0 +1,8 @@
+// built-in extensions / function "name" property / new Function
+module.exports = () => {
+  return (new Function).name === "anonymous";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:17 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

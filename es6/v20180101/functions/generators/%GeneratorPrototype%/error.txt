@@ -1,0 +1,15 @@
+// functions / generators / %GeneratorPrototype%
+module.exports = () => {
+  function * generatorFn(){}
+  var ownProto = Object.getPrototypeOf(generatorFn());
+  var passed = ownProto === generatorFn.prototype;
+  var sharedProto = Object.getPrototypeOf(ownProto);
+  passed &= sharedProto !== Object.prototype &&
+sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
+sharedProto.hasOwnProperty('next');
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

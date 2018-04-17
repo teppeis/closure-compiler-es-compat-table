@@ -1,0 +1,10 @@
+// built-ins / WeakSet / WeakSet.prototype.add returns this
+module.exports = () => {
+  var weakset = new WeakSet();
+  var obj = {};
+  return weakset.add(obj) === weakset;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:05 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

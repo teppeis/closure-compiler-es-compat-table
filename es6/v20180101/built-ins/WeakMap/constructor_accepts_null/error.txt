@@ -1,0 +1,9 @@
+// built-ins / WeakMap / constructor accepts null
+module.exports = () => {
+  new WeakMap(null);
+  return true;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:03 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

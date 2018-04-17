@@ -1,0 +1,11 @@
+// built-in extensions / Math methods / Math.hypot
+module.exports = () => {
+  return Math.hypot() === 0 &&
+Math.hypot(1) === 1 &&
+Math.hypot(9, 12, 20) === 25 &&
+Math.hypot(27, 36, 60, 100) === 125;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:57 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

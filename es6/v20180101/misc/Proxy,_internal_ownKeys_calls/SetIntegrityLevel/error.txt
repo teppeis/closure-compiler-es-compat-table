@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'ownKeys' calls / SetIntegrityLevel
+module.exports = () => {
+// SetIntegrityLevel -> [[OwnPropertyKeys]]
+  var ownKeysCalled = 0;
+  var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+  Object.freeze(p);
+  return ownKeysCalled === 1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:17 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

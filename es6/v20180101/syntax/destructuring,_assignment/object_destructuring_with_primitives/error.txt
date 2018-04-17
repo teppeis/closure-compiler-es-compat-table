@@ -1,0 +1,12 @@
+// syntax / destructuring, assignment / object destructuring with primitives
+module.exports = () => {
+  var toFixed, slice;
+  ({toFixed} = 2);
+  ({slice} = '');
+  return toFixed === Number.prototype.toFixed
+&& slice === String.prototype.slice;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:46 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

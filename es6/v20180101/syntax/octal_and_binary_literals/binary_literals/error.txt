@@ -1,0 +1,8 @@
+// syntax / octal and binary literals / binary literals
+module.exports = () => {
+  return 0b10 === 2 && 0B10 === 2;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:12 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

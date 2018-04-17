@@ -1,0 +1,9 @@
+// built-in extensions / String.prototype methods / String.prototype.includes
+module.exports = () => {
+  return 'foobar'.includes('oba');
+
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:32:10 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

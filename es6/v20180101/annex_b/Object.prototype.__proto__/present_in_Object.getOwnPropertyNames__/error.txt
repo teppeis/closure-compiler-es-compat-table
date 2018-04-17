@@ -1,0 +1,8 @@
+// annex b / Object.prototype.__proto__ / present in Object.getOwnPropertyNames()
+module.exports = () => {
+  return Object.getOwnPropertyNames(Object.prototype).indexOf('__proto__') > -1;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:23 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

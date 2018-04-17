@@ -1,0 +1,10 @@
+// syntax / rest parameters / basic functionality
+module.exports = () => {
+  return (function (foo, ...args) {
+    return args instanceof Array && args + "" === "bar,baz";
+  }("foo", "bar", "baz"));
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:35:14 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,10 @@
+// built-ins / Symbol / global symbol registry
+module.exports = () => {
+  var symbol = Symbol.for('foo');
+  return Symbol.for('foo') === symbol &&
+Symbol.keyFor(symbol) === 'foo';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:59 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

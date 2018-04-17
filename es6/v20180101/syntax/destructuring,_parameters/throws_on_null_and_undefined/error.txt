@@ -1,0 +1,21 @@
+// syntax / destructuring, parameters / throws on null and undefined
+module.exports = () => {
+  var a = 'pass a', b = 'pass b';
+  try {
+    (function({c}){
+      a = c;
+    }(null));
+    return false;
+  } catch(e) {}
+  try {
+    (function({d}){
+      b = d;
+    }(undefined));
+    return false;
+  } catch(e) {}
+  return a === 'pass a' && b === 'pass b';
+};
+
+----------------------------------------------------------
+Apr 17, 2018 11:35:03 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

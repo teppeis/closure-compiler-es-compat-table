@@ -1,0 +1,14 @@
+// built-ins / Symbol / Object(symbol)
+module.exports = () => {
+  var symbol = Symbol();
+  var symbolObject = Object(symbol);
+  return typeof symbolObject === "object" &&
+symbolObject instanceof Symbol &&
+symbolObject == symbol &&
+symbolObject !== symbol &&
+symbolObject.valueOf() === symbol;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:58 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,10 @@
+// annex b / Object.prototype.__proto__ / set prototype
+module.exports = () => {
+  var o = {};
+  o.__proto__ = Array.prototype;
+  return o instanceof Array;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:24 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

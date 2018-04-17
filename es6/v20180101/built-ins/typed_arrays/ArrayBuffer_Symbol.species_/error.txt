@@ -1,0 +1,8 @@
+// built-ins / typed arrays / ArrayBuffer[Symbol.species]
+module.exports = () => {
+  return typeof ArrayBuffer[Symbol.species] === 'function';
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:17 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

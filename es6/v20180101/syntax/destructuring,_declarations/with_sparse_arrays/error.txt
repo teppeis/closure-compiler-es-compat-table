@@ -1,0 +1,9 @@
+// syntax / destructuring, declarations / with sparse arrays
+module.exports = () => {
+  var [a, , b] = [,,,];
+  return a === undefined && b === undefined;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:58 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

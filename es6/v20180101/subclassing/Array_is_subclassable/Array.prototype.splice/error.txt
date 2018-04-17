@@ -1,0 +1,16 @@
+// subclassing / Array is subclassable / Array.prototype.splice
+module.exports = () => {
+  class C extends Array {}
+  var c = new C();
+  c.push(2,4,6);
+  return c.splice(1,2) instanceof C;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:34:32 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
+es6/v20180101/subclassing/Array_is_subclassable/Array.prototype.splice/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+  class C extends Array {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

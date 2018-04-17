@@ -1,0 +1,16 @@
+// built-ins / Proxy / "construct" handler
+module.exports = () => {
+  var proxied = function(){};
+  var passed = false;
+  new new Proxy(proxied, {
+    construct: function (t, args) {
+      passed = t === proxied && args + "" === "foo,bar";
+      return {};
+    }
+  })("foo","bar");
+  return passed;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:35 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

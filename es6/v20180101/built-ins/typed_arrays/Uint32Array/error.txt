@@ -1,0 +1,10 @@
+// built-ins / typed arrays / Uint32Array
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var view = new Uint32Array(buffer);       view[0] = 0x100000000;
+  return view[0] === 0;
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:33:23 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,8 @@
+// built-ins / Reflect / Reflect.has
+module.exports = () => {
+  return Reflect.has({ qux: 987 }, "qux");
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:32:48 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules

@@ -1,0 +1,9 @@
+// annex b / RegExp syntax extensions / octal escape sequences
+module.exports = () => {
+  return /\041/.exec("!")[0] === "!"
+&& /[\041]/.exec("!")[0] === "!";
+
+};
+----------------------------------------------------------
+Apr 17, 2018 11:31:28 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+警告: Skipping pass rewriteScriptsToEs6Modules
