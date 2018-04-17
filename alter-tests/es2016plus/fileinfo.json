@@ -1,0 +1,520 @@
+[
+  {
+    "path": "2016_features/exponentiation______operator/basic_support",
+    "category": "2016 features",
+    "test": "exponentiation (**) operator",
+    "subtest": "basic support"
+  },
+  {
+    "path": "2016_features/exponentiation______operator/assignment",
+    "category": "2016 features",
+    "test": "exponentiation (**) operator",
+    "subtest": "assignment"
+  },
+  {
+    "path": "2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens",
+    "category": "2016 features",
+    "test": "exponentiation (**) operator",
+    "subtest": "early syntax error for unary negation without parens"
+  },
+  {
+    "path": "2016_features/Array.prototype.includes/Array.prototype.includes",
+    "category": "2016 features",
+    "test": "Array.prototype.includes",
+    "subtest": "Array.prototype.includes"
+  },
+  {
+    "path": "2016_features/Array.prototype.includes/Array.prototype.includes_is_generic",
+    "category": "2016 features",
+    "test": "Array.prototype.includes",
+    "subtest": "Array.prototype.includes is generic"
+  },
+  {
+    "path": "2016_features/Array.prototype.includes/%TypedArray%.prototype.includes",
+    "category": "2016 features",
+    "test": "Array.prototype.includes",
+    "subtest": "%TypedArray%.prototype.includes"
+  },
+  {
+    "path": "2016_misc/generator_functions_cant_be_used_with_new",
+    "category": "2016 misc",
+    "test": "generator functions can't be used with \"new\""
+  },
+  {
+    "path": "2016_misc/generator_throw___caught_by_inner_generator",
+    "category": "2016 misc",
+    "test": "generator throw() caught by inner generator"
+  },
+  {
+    "path": "2016_misc/strict_fn_w__non-strict_non-simple_params_is_error",
+    "category": "2016 misc",
+    "test": "strict fn w/ non-strict non-simple params is error"
+  },
+  {
+    "path": "2016_misc/nested_rest_destructuring,_declarations",
+    "category": "2016 misc",
+    "test": "nested rest destructuring, declarations"
+  },
+  {
+    "path": "2016_misc/nested_rest_destructuring,_parameters",
+    "category": "2016 misc",
+    "test": "nested rest destructuring, parameters"
+  },
+  {
+    "path": "2016_misc/Proxy,_enumerate_handler_removed",
+    "category": "2016 misc",
+    "test": "Proxy, \"enumerate\" handler removed"
+  },
+  {
+    "path": "2016_misc/Proxy_internal_calls,_Array.prototype.includes",
+    "category": "2016 misc",
+    "test": "Proxy internal calls, Array.prototype.includes"
+  },
+  {
+    "path": "2017_features/Object_static_methods/Object.values",
+    "category": "2017 features",
+    "test": "Object static methods",
+    "subtest": "Object.values"
+  },
+  {
+    "path": "2017_features/Object_static_methods/Object.entries",
+    "category": "2017 features",
+    "test": "Object static methods",
+    "subtest": "Object.entries"
+  },
+  {
+    "path": "2017_features/Object_static_methods/Object.getOwnPropertyDescriptors",
+    "category": "2017 features",
+    "test": "Object static methods",
+    "subtest": "Object.getOwnPropertyDescriptors"
+  },
+  {
+    "path": "2017_features/Object_static_methods/Object.getOwnPropertyDescriptors_doesnt_provide_undefined_descriptors",
+    "category": "2017 features",
+    "test": "Object static methods",
+    "subtest": "Object.getOwnPropertyDescriptors doesn't provide undefined descriptors"
+  },
+  {
+    "path": "2017_features/String_padding/String.prototype.padStart",
+    "category": "2017 features",
+    "test": "String padding",
+    "subtest": "String.prototype.padStart"
+  },
+  {
+    "path": "2017_features/String_padding/String.prototype.padEnd",
+    "category": "2017 features",
+    "test": "String padding",
+    "subtest": "String.prototype.padEnd"
+  },
+  {
+    "path": "2017_features/trailing_commas_in_function_syntax/in_parameter_lists",
+    "category": "2017 features",
+    "test": "trailing commas in function syntax",
+    "subtest": "in parameter lists"
+  },
+  {
+    "path": "2017_features/trailing_commas_in_function_syntax/in_argument_lists",
+    "category": "2017 features",
+    "test": "trailing commas in function syntax",
+    "subtest": "in argument lists"
+  },
+  {
+    "path": "2017_features/async_functions/return",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "return"
+  },
+  {
+    "path": "2017_features/async_functions/throw",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "throw"
+  },
+  {
+    "path": "2017_features/async_functions/no_line_break_between_async_and_function",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "no line break between async and function"
+  },
+  {
+    "path": "2017_features/async_functions/no_prototype_property",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "no \"prototype\" property"
+  },
+  {
+    "path": "2017_features/async_functions/await",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "await"
+  },
+  {
+    "path": "2017_features/async_functions/await,_rejection",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "await, rejection"
+  },
+  {
+    "path": "2017_features/async_functions/must_await_a_value",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "must await a value"
+  },
+  {
+    "path": "2017_features/async_functions/can_await_non-Promise_values",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "can await non-Promise values"
+  },
+  {
+    "path": "2017_features/async_functions/cannot_await_in_parameters",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "cannot await in parameters"
+  },
+  {
+    "path": "2017_features/async_functions/async_methods,_object_literals",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "async methods, object literals"
+  },
+  {
+    "path": "2017_features/async_functions/async_methods,_classes",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "async methods, classes"
+  },
+  {
+    "path": "2017_features/async_functions/async_arrow_functions",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "async arrow functions"
+  },
+  {
+    "path": "2017_features/async_functions/correct_prototype_chain",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "correct prototype chain"
+  },
+  {
+    "path": "2017_features/async_functions/async_function_prototype,_Symbol.toStringTag",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "async function prototype, Symbol.toStringTag"
+  },
+  {
+    "path": "2017_features/async_functions/async_function_constructor",
+    "category": "2017 features",
+    "test": "async functions",
+    "subtest": "async function constructor"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/SharedArrayBuffer",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "SharedArrayBuffer"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/SharedArrayBuffer_Symbol.species_",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "SharedArrayBuffer[Symbol.species]"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/SharedArrayBuffer.prototype.byteLength",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "SharedArrayBuffer.prototype.byteLength"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/SharedArrayBuffer.prototype.slice",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "SharedArrayBuffer.prototype.slice"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/SharedArrayBuffer.prototype_Symbol.toStringTag_",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "SharedArrayBuffer.prototype[Symbol.toStringTag]"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.add",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.add"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.and",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.and"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.compareExchange",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.compareExchange"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.exchange",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.exchange"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.wait",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.wait"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.wake",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.wake"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.isLockFree",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.isLockFree"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.load",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.load"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.or",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.or"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.store",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.store"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.sub",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.sub"
+  },
+  {
+    "path": "2017_features/shared_memory_and_atomics/Atomics.xor",
+    "category": "2017 features",
+    "test": "shared memory and atomics",
+    "subtest": "Atomics.xor"
+  },
+  {
+    "path": "2017_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets__ES_2017_semantics_",
+    "category": "2017 misc",
+    "test": "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets (ES 2017 semantics)"
+  },
+  {
+    "path": "2017_misc/RegExp_u_flag,_case_folding",
+    "category": "2017 misc",
+    "test": "RegExp \"u\" flag, case folding"
+  },
+  {
+    "path": "2017_misc/arguments.caller_removed",
+    "category": "2017 misc",
+    "test": "arguments.caller removed"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineGetter__"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__,_symbols",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineGetter__, symbols"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineGetter__,_ToObject_this_",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineGetter__, ToObject(this)"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineSetter__"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__,_symbols",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineSetter__, symbols"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__defineSetter__,_ToObject_this_",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__defineSetter__, ToObject(this)"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupGetter__"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_prototype_chain",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupGetter__, prototype chain"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_symbols",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupGetter__, symbols"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_ToObject_this_",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupGetter__, ToObject(this)"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupGetter__,_data_properties_can_shadow_accessors",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupGetter__, data properties can shadow accessors"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupSetter__"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_prototype_chain",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupSetter__, prototype chain"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_symbols",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupSetter__, symbols"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_ToObject_this_",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupSetter__, ToObject(this)"
+  },
+  {
+    "path": "2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_data_properties_can_shadow_accessors",
+    "category": "2017 annex b",
+    "test": "Object.prototype getter/setter methods",
+    "subtest": "__lookupSetter__, data properties can shadow accessors"
+  },
+  {
+    "path": "2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__defineGetter__",
+    "category": "2017 annex b",
+    "test": "Proxy internal calls, getter/setter methods",
+    "subtest": "__defineGetter__"
+  },
+  {
+    "path": "2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__defineSetter__",
+    "category": "2017 annex b",
+    "test": "Proxy internal calls, getter/setter methods",
+    "subtest": "__defineSetter__"
+  },
+  {
+    "path": "2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupGetter__",
+    "category": "2017 annex b",
+    "test": "Proxy internal calls, getter/setter methods",
+    "subtest": "__lookupGetter__"
+  },
+  {
+    "path": "2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupSetter__",
+    "category": "2017 annex b",
+    "test": "Proxy internal calls, getter/setter methods",
+    "subtest": "__lookupSetter__"
+  },
+  {
+    "path": "2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode",
+    "category": "2017 annex b",
+    "test": "assignments allowed in for-in head in non-strict mode"
+  },
+  {
+    "path": "2018_features/object_rest_spread_properties/object_rest_properties",
+    "category": "2018 features",
+    "test": "object rest/spread properties",
+    "subtest": "object rest properties"
+  },
+  {
+    "path": "2018_features/object_rest_spread_properties/object_spread_properties",
+    "category": "2018 features",
+    "test": "object rest/spread properties",
+    "subtest": "object spread properties"
+  },
+  {
+    "path": "2018_features/Promise.prototype.finally/basic_support",
+    "category": "2018 features",
+    "test": "Promise.prototype.finally",
+    "subtest": "basic support"
+  },
+  {
+    "path": "2018_features/Promise.prototype.finally/dont_change_resolution_value",
+    "category": "2018 features",
+    "test": "Promise.prototype.finally",
+    "subtest": "don't change resolution value"
+  },
+  {
+    "path": "2018_features/Promise.prototype.finally/change_rejection_value",
+    "category": "2018 features",
+    "test": "Promise.prototype.finally",
+    "subtest": "change rejection value"
+  },
+  {
+    "path": "2018_features/template_literal_revision",
+    "category": "2018 features",
+    "test": "template literal revision"
+  },
+  {
+    "path": "2018_features/s__dotAll__flag_for_regular_expressions",
+    "category": "2018 features",
+    "test": "s (dotAll) flag for regular expressions"
+  },
+  {
+    "path": "2018_features/RegExp_named_capture_groups",
+    "category": "2018 features",
+    "test": "RegExp named capture groups"
+  },
+  {
+    "path": "2018_features/RegExp_Lookbehind_Assertions",
+    "category": "2018 features",
+    "test": "RegExp Lookbehind Assertions"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes"
+  },
+  {
+    "path": "2018_features/Asynchronous_Iterators/async_generators",
+    "category": "2018 features",
+    "test": "Asynchronous Iterators",
+    "subtest": "async generators"
+  },
+  {
+    "path": "2018_features/Asynchronous_Iterators/for-await-of_loops",
+    "category": "2018 features",
+    "test": "Asynchronous Iterators",
+    "subtest": "for-await-of loops"
+  }
+]

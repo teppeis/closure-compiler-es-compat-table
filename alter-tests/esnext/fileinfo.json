@@ -1,0 +1,1207 @@
+[
+  {
+    "path": "candidate__stage_3_/string_trimming/String.prototype.trimLeft",
+    "category": "candidate (stage 3)",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimLeft"
+  },
+  {
+    "path": "candidate__stage_3_/string_trimming/String.prototype.trimRight",
+    "category": "candidate (stage 3)",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimRight"
+  },
+  {
+    "path": "candidate__stage_3_/string_trimming/String.prototype.trimStart",
+    "category": "candidate (stage 3)",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimStart"
+  },
+  {
+    "path": "candidate__stage_3_/string_trimming/String.prototype.trimEnd",
+    "category": "candidate (stage 3)",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimEnd"
+  },
+  {
+    "path": "candidate__stage_3_/global/global_global_property_is_global_object",
+    "category": "candidate (stage 3)",
+    "test": "global",
+    "subtest": "\"global\" global property is global object"
+  },
+  {
+    "path": "candidate__stage_3_/global/global_global_property_has_correct_property_descriptor",
+    "category": "candidate (stage 3)",
+    "test": "global",
+    "subtest": "\"global\" global property has correct property descriptor"
+  },
+  {
+    "path": "candidate__stage_3_/String.prototype.matchAll",
+    "category": "candidate (stage 3)",
+    "test": "String.prototype.matchAll"
+  },
+  {
+    "path": "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "public instance class fields"
+  },
+  {
+    "path": "candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "private instance class fields basic support"
+  },
+  {
+    "path": "candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "private instance class fields initializers"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "functions created with the Function constructor"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/arrows",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "arrows"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/_native_code_",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "[native code]"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "class expression with implicit constructor"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "class expression with explicit constructor"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "unicode escape sequences in identifiers"
+  },
+  {
+    "path": "candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names",
+    "category": "candidate (stage 3)",
+    "test": "Function.prototype.toString revision",
+    "subtest": "methods and computed property names"
+  },
+  {
+    "path": "candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatten",
+    "category": "candidate (stage 3)",
+    "test": "Array.prototype.{flatten, flatMap}",
+    "subtest": "Array.prototype.flatten"
+  },
+  {
+    "path": "candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatMap",
+    "category": "candidate (stage 3)",
+    "test": "Array.prototype.{flatten, flatMap}",
+    "subtest": "Array.prototype.flatMap"
+  },
+  {
+    "path": "candidate__stage_3_/optional_catch_binding/basic",
+    "category": "candidate (stage 3)",
+    "test": "optional catch binding",
+    "subtest": "basic"
+  },
+  {
+    "path": "candidate__stage_3_/optional_catch_binding/await",
+    "category": "candidate (stage 3)",
+    "test": "optional catch binding",
+    "subtest": "await"
+  },
+  {
+    "path": "candidate__stage_3_/optional_catch_binding/yield",
+    "category": "candidate (stage 3)",
+    "test": "optional catch binding",
+    "subtest": "yield"
+  },
+  {
+    "path": "candidate__stage_3_/numeric_separators",
+    "category": "candidate (stage 3)",
+    "test": "numeric separators"
+  },
+  {
+    "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
+    "category": "draft (stage 2)",
+    "test": "Generator function.sent Meta Property"
+  },
+  {
+    "path": "draft__stage_2_/Class_and_Property_Decorators/class_decorators",
+    "category": "draft (stage 2)",
+    "test": "Class and Property Decorators",
+    "subtest": "class decorators"
+  },
+  {
+    "path": "draft__stage_2_/weak_references",
+    "category": "draft (stage 2)",
+    "test": "weak references"
+  },
+  {
+    "path": "draft__stage_2_/static_class_fields/public_static_class_fields",
+    "category": "draft (stage 2)",
+    "test": "static class fields",
+    "subtest": "public static class fields"
+  },
+  {
+    "path": "draft__stage_2_/static_class_fields/private_static_class_fields",
+    "category": "draft (stage 2)",
+    "test": "static class fields",
+    "subtest": "private static class fields"
+  },
+  {
+    "path": "draft__stage_2_/throw_expressions/logical",
+    "category": "draft (stage 2)",
+    "test": "throw expressions",
+    "subtest": "logical"
+  },
+  {
+    "path": "draft__stage_2_/throw_expressions/parameter_initializers",
+    "category": "draft (stage 2)",
+    "test": "throw expressions",
+    "subtest": "parameter initializers"
+  },
+  {
+    "path": "draft__stage_2_/throw_expressions/arrow_function_bodies",
+    "category": "draft (stage 2)",
+    "test": "throw expressions",
+    "subtest": "arrow function bodies"
+  },
+  {
+    "path": "draft__stage_2_/throw_expressions/conditionals",
+    "category": "draft (stage 2)",
+    "test": "throw expressions",
+    "subtest": "conditionals"
+  },
+  {
+    "path": "draft__stage_2_/Symbol.prototype.description",
+    "category": "draft (stage 2)",
+    "test": "Symbol.prototype.description"
+  },
+  {
+    "path": "proposal__stage_1_/do_expressions",
+    "category": "proposal (stage 1)",
+    "test": "do expressions"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/basic_support",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "basic support"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Float32x4",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Float32x4"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int32x4",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Int32x4"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int16x8",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Int16x8"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int8x16",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Int8x16"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint32x4",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Uint32x4"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint16x8",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Uint16x8"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint8x16",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Uint8x16"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool32x4",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Bool32x4"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool16x8",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Bool16x8"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool8x16",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "Bool8x16"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.abs",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.abs"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.add",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.add"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.addSaturate",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%integerType%.addSaturate"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.and",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.and"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.anyTrue",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%booleanType%.anyTrue"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.allTrue",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%booleanType%.allTrue"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.check",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.check"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.equal",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.equal"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.extractLane",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.extractLane"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThan",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.greaterThan"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThanOrEqual",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.greaterThanOrEqual"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThan",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.lessThan"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThanOrEqual",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.lessThanOrEqual"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.mul",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.mul"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.div",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.div"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.load"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load1",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.load1"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load2",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.load2"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load3",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.load3"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.max",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.max"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.maxNum",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.maxNum"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.min",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.min"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.minNum",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.minNum"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.neg",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.neg"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.not",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.not"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.notEqual",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.notEqual"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.or",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.or"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalApproximation",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.reciprocalApproximation"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalSqrtApproximation",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.reciprocalSqrtApproximation"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.replaceLane",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.replaceLane"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.select",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.select"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftLeftByScalar",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%integerType%.shiftLeftByScalar"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftRightByScalar",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%integerType%.shiftRightByScalar"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.shuffle",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.shuffle"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.splat",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.splat"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.sqrt",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%floatType%.sqrt"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.store"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store1",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.store1"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store2",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.store2"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store3",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.store3"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.sub",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.sub"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.subSaturate",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%integerType%.subSaturate"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.swizzle",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.swizzle"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.xor",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.xor"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMDBits",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.fromTIMDBits"
+  },
+  {
+    "path": "proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMD",
+    "category": "proposal (stage 1)",
+    "test": "SIMD (Single Instruction, Multiple Data)",
+    "subtest": "SIMD.%type%.fromTIMD"
+  },
+  {
+    "path": "proposal__stage_1_/Realms",
+    "category": "proposal (stage 1)",
+    "test": "Realms"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/basic_support",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "basic support"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Symbol.observable_well_known_symbol",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Symbol.observable well known symbol"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Observable.prototype.subscribe",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Observable.prototype.subscribe"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Observable_constructor_behavior",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Observable constructor behavior"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Observable.prototype_Symbol.observable_",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Observable.prototype[Symbol.observable]"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Observable.of",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Observable.of"
+  },
+  {
+    "path": "proposal__stage_1_/Observable/Observable.from",
+    "category": "proposal (stage 1)",
+    "test": "Observable",
+    "subtest": "Observable.from"
+  },
+  {
+    "path": "proposal__stage_1_/Frozen_Realms_API",
+    "category": "proposal (stage 1)",
+    "test": "Frozen Realms API"
+  },
+  {
+    "path": "proposal__stage_1_/Math.signbit",
+    "category": "proposal (stage 1)",
+    "test": "Math.signbit"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.clamp",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.clamp"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.DEG_PER_RAD",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.DEG_PER_RAD"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.degrees",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.degrees"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.fscale",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.fscale"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.RAD_PER_DEG",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.RAD_PER_DEG"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.radians",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.radians"
+  },
+  {
+    "path": "proposal__stage_1_/Math_extensions_proposal/Math.scale",
+    "category": "proposal (stage 1)",
+    "test": "Math extensions proposal",
+    "subtest": "Math.scale"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/basic_support",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "basic support"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/returns_instance_of_Promise",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "returns instance of Promise"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/call_function_synchronously",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "call function synchronously"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/function_returns_value",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "function returns value"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/function_throws_exception",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "function throws exception"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "function returns fulfilled Promise"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.try/function_returns_rejected_Promise",
+    "category": "proposal (stage 1)",
+    "test": "Promise.try",
+    "subtest": "function returns rejected Promise"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "Map.of"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.from",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "Map.from"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.of",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "Set.of"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.from",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "Set.from"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.of",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "WeakMap.of"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.from",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "WeakMap.from"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.of",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "WeakSet.of"
+  },
+  {
+    "path": "proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.from",
+    "category": "proposal (stage 1)",
+    "test": "`.of` and `.from` on collection constructors",
+    "subtest": "WeakSet.from"
+  },
+  {
+    "path": "proposal__stage_1_/the_pipeline_operator",
+    "category": "proposal (stage 1)",
+    "test": "the pipeline operator"
+  },
+  {
+    "path": "proposal__stage_1_/extensible_numeric_literals",
+    "category": "proposal (stage 1)",
+    "test": "extensible numeric literals"
+  },
+  {
+    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_property_access",
+    "category": "proposal (stage 1)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional property access"
+  },
+  {
+    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access",
+    "category": "proposal (stage 1)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional bracket access"
+  },
+  {
+    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_method_call",
+    "category": "proposal (stage 1)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional method call"
+  },
+  {
+    "path": "proposal__stage_1_/nullish_coalescing_operator_____",
+    "category": "proposal (stage 1)",
+    "test": "nullish coalescing operator (??)"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_from_left",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application from left"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_from_right",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application from right"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application for any arg"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application from left with rest"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application from right with rest"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "partial application for any arg with rest"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/mixed_partial_application",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "mixed partial application"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/runtime_evaluation",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "runtime evaluation"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "runtime evaluation of property access"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/lexical__this_",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "lexical `this`"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/constructor_partial_application",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "constructor partial application"
+  },
+  {
+    "path": "proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest",
+    "category": "proposal (stage 1)",
+    "test": "partial application syntax",
+    "subtest": "constructor partial application with rest"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Object.freeze syntax"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Object.freeze syntax with array literal"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Object.seal syntax"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Object.seal syntax with array literal"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_destructuring",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Sealing, function destructuring"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_destructuring",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Freezing, function destructuring"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_arguments",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Sealing, function arguments"
+  },
+  {
+    "path": "proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments",
+    "category": "proposal (stage 1)",
+    "test": "Object.freeze and Object.seal syntax",
+    "subtest": "Freezing, function arguments"
+  },
+  {
+    "path": "proposal__stage_1_/String.prototype.replaceAll",
+    "category": "proposal (stage 1)",
+    "test": "String.prototype.replaceAll"
+  },
+  {
+    "path": "proposal__stage_1_/String.prototype.codePoints",
+    "category": "proposal (stage 1)",
+    "test": "String.prototype.codePoints"
+  },
+  {
+    "path": "proposal__stage_1_/Object.fromEntries",
+    "category": "proposal (stage 1)",
+    "test": "Object.fromEntries"
+  },
+  {
+    "path": "proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem",
+    "category": "proposal (stage 1)",
+    "test": "getting last item from array",
+    "subtest": "Array.prototype.lastItem"
+  },
+  {
+    "path": "proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex",
+    "category": "proposal (stage 1)",
+    "test": "getting last item from array",
+    "subtest": "Array.prototype.lastIndex"
+  },
+  {
+    "path": "proposal__stage_1_/Set_methods/Set.prototype.intersect",
+    "category": "proposal (stage 1)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.intersect"
+  },
+  {
+    "path": "proposal__stage_1_/Set_methods/Set.prototype.union",
+    "category": "proposal (stage 1)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.union"
+  },
+  {
+    "path": "proposal__stage_1_/Set_methods/Set.prototype.except",
+    "category": "proposal (stage 1)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.except"
+  },
+  {
+    "path": "proposal__stage_1_/Set_methods/Set.prototype.xor",
+    "category": "proposal (stage 1)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.xor"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.groupBy",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.groupBy"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.keyBy",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.keyBy"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.filter",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.filter"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.mapKeys",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.mapKeys"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.mapValues",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.mapValues"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.merge",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.merge"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.addAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.addAll"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.deleteAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.deleteAll"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.every",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.every"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.filter",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.filter"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.find",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.find"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.join",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.join"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.map",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.map"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.reduce",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.reduce"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Set.prototype.some",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Set.prototype.some"
+  },
+  {
+    "path": "strawman__stage_0_/bind______operator/binary_form",
+    "category": "strawman (stage 0)",
+    "test": "bind (::) operator",
+    "subtest": "binary form"
+  },
+  {
+    "path": "strawman__stage_0_/bind______operator/unary_form",
+    "category": "strawman (stage 0)",
+    "test": "bind (::) operator",
+    "subtest": "unary form"
+  },
+  {
+    "path": "strawman__stage_0_/String.prototype.at",
+    "category": "strawman (stage 0)",
+    "test": "String.prototype.at"
+  },
+  {
+    "path": "strawman__stage_0_/additional_meta_properties/function.callee",
+    "category": "strawman (stage 0)",
+    "test": "additional meta properties",
+    "subtest": "function.callee"
+  },
+  {
+    "path": "strawman__stage_0_/additional_meta_properties/function.count",
+    "category": "strawman (stage 0)",
+    "test": "additional meta properties",
+    "subtest": "function.count"
+  },
+  {
+    "path": "strawman__stage_0_/additional_meta_properties/function.arguments",
+    "category": "strawman (stage 0)",
+    "test": "additional meta properties",
+    "subtest": "function.arguments"
+  },
+  {
+    "path": "strawman__stage_0_/method_parameter_decorators",
+    "category": "strawman (stage 0)",
+    "test": "method parameter decorators"
+  },
+  {
+    "path": "strawman__stage_0_/function_expression_decorators",
+    "category": "strawman (stage 0)",
+    "test": "function expression decorators"
+  },
+  {
+    "path": "strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable",
+    "category": "strawman (stage 0)",
+    "test": "Reflect.isCallable / Reflect.isConstructor",
+    "subtest": "Reflect.isCallable"
+  },
+  {
+    "path": "strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor",
+    "category": "strawman (stage 0)",
+    "test": "Reflect.isCallable / Reflect.isConstructor",
+    "subtest": "Reflect.isConstructor"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.current",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.current"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.prototype.name",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.prototype.name"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.prototype.parent",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.prototype.parent"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.prototype.fork",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.prototype.fork"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.prototype.run",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.prototype.run"
+  },
+  {
+    "path": "strawman__stage_0_/zones/Zone.prototype.wrap",
+    "category": "strawman (stage 0)",
+    "test": "zones",
+    "subtest": "Zone.prototype.wrap"
+  },
+  {
+    "path": "strawman__stage_0_/asap",
+    "category": "strawman (stage 0)",
+    "test": "asap"
+  },
+  {
+    "path": "strawman__stage_0_/syntactic_tail_calls/direct_recursion",
+    "category": "strawman (stage 0)",
+    "test": "syntactic tail calls",
+    "subtest": "direct recursion"
+  },
+  {
+    "path": "strawman__stage_0_/syntactic_tail_calls/mutual_recursion",
+    "category": "strawman (stage 0)",
+    "test": "syntactic tail calls",
+    "subtest": "mutual recursion"
+  },
+  {
+    "path": "strawman__stage_0_/object_shorthand_improvements/object_initializers",
+    "category": "strawman (stage 0)",
+    "test": "object shorthand improvements",
+    "subtest": "object initializers"
+  },
+  {
+    "path": "strawman__stage_0_/object_shorthand_improvements/destructuring_assignments",
+    "category": "strawman (stage 0)",
+    "test": "object shorthand improvements",
+    "subtest": "destructuring assignments"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.defineMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.defineMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.hasMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.hasMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.hasOwnMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.getMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.getMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.getOwnMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.getMetadataKeys"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.getOwnMetadataKeys"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.deleteMetadata"
+  },
+  {
+    "path": "pre-strawman/Metadata_reflection_API/Reflect.metadata",
+    "category": "pre-strawman",
+    "test": "Metadata reflection API",
+    "subtest": "Reflect.metadata"
+  }
+]

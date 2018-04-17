@@ -1,0 +1,4091 @@
+[
+  {
+    "path": "optimisation/proper_tail_calls__tail_call_optimisation_/direct_recursion",
+    "category": "optimisation",
+    "test": "proper tail calls (tail call optimisation)",
+    "subtest": "direct recursion"
+  },
+  {
+    "path": "optimisation/proper_tail_calls__tail_call_optimisation_/mutual_recursion",
+    "category": "optimisation",
+    "test": "proper tail calls (tail call optimisation)",
+    "subtest": "mutual recursion"
+  },
+  {
+    "path": "syntax/default_function_parameters/basic_functionality",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "syntax/default_function_parameters/explicit_undefined_defers_to_the_default",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "explicit undefined defers to the default"
+  },
+  {
+    "path": "syntax/default_function_parameters/defaults_can_refer_to_previous_params",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "defaults can refer to previous params"
+  },
+  {
+    "path": "syntax/default_function_parameters/arguments_object_interaction",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "arguments object interaction"
+  },
+  {
+    "path": "syntax/default_function_parameters/temporal_dead_zone",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "temporal dead zone"
+  },
+  {
+    "path": "syntax/default_function_parameters/separate_scope",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "separate scope"
+  },
+  {
+    "path": "syntax/default_function_parameters/new_Function___support",
+    "category": "syntax",
+    "test": "default function parameters",
+    "subtest": "new Function() support"
+  },
+  {
+    "path": "syntax/rest_parameters/basic_functionality",
+    "category": "syntax",
+    "test": "rest parameters",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "syntax/rest_parameters/function_length_property",
+    "category": "syntax",
+    "test": "rest parameters",
+    "subtest": "function 'length' property"
+  },
+  {
+    "path": "syntax/rest_parameters/arguments_object_interaction",
+    "category": "syntax",
+    "test": "rest parameters",
+    "subtest": "arguments object interaction"
+  },
+  {
+    "path": "syntax/rest_parameters/cant_be_used_in_setters",
+    "category": "syntax",
+    "test": "rest parameters",
+    "subtest": "can't be used in setters"
+  },
+  {
+    "path": "syntax/rest_parameters/new_Function___support",
+    "category": "syntax",
+    "test": "rest parameters",
+    "subtest": "new Function() support"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_arrays,_in_function_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with arrays, in function calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_arrays,_in_array_literals",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with arrays, in array literals"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_sparse_arrays,_in_function_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with sparse arrays, in function calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_sparse_arrays,_in_array_literals",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with sparse arrays, in array literals"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_strings,_in_function_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with strings, in function calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_strings,_in_array_literals",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with strings, in array literals"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_astral_plane_strings,_in_function_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with astral plane strings, in function calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_astral_plane_strings,_in_array_literals",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with astral plane strings, in array literals"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_generator_instances,_in_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with generator instances, in calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_generator_instances,_in_arrays",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with generator instances, in arrays"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_generic_iterables,_in_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with generic iterables, in calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_generic_iterables,_in_arrays",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with generic iterables, in arrays"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_instances_of_iterables,_in_calls",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with instances of iterables, in calls"
+  },
+  {
+    "path": "syntax/spread__...__operator/with_instances_of_iterables,_in_arrays",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "with instances of iterables, in arrays"
+  },
+  {
+    "path": "syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error",
+    "category": "syntax",
+    "test": "spread (...) operator",
+    "subtest": "spreading non-iterables is a runtime error"
+  },
+  {
+    "path": "syntax/object_literal_extensions/computed_properties",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "computed properties"
+  },
+  {
+    "path": "syntax/object_literal_extensions/shorthand_properties",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "shorthand properties"
+  },
+  {
+    "path": "syntax/object_literal_extensions/shorthand_methods",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "shorthand methods"
+  },
+  {
+    "path": "syntax/object_literal_extensions/string-keyed_shorthand_methods",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "string-keyed shorthand methods"
+  },
+  {
+    "path": "syntax/object_literal_extensions/computed_shorthand_methods",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "computed shorthand methods"
+  },
+  {
+    "path": "syntax/object_literal_extensions/computed_accessors",
+    "category": "syntax",
+    "test": "object literal extensions",
+    "subtest": "computed accessors"
+  },
+  {
+    "path": "syntax/for..of_loops/with_arrays",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with arrays"
+  },
+  {
+    "path": "syntax/for..of_loops/with_sparse_arrays",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with sparse arrays"
+  },
+  {
+    "path": "syntax/for..of_loops/with_strings",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with strings"
+  },
+  {
+    "path": "syntax/for..of_loops/with_astral_plane_strings",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with astral plane strings"
+  },
+  {
+    "path": "syntax/for..of_loops/with_generator_instances",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with generator instances"
+  },
+  {
+    "path": "syntax/for..of_loops/with_generic_iterables",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with generic iterables"
+  },
+  {
+    "path": "syntax/for..of_loops/with_instances_of_generic_iterables",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "with instances of generic iterables"
+  },
+  {
+    "path": "syntax/for..of_loops/iterator_closing,_break",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "iterator closing, break"
+  },
+  {
+    "path": "syntax/for..of_loops/iterator_closing,_throw",
+    "category": "syntax",
+    "test": "for..of loops",
+    "subtest": "iterator closing, throw"
+  },
+  {
+    "path": "syntax/octal_and_binary_literals/octal_literals",
+    "category": "syntax",
+    "test": "octal and binary literals",
+    "subtest": "octal literals"
+  },
+  {
+    "path": "syntax/octal_and_binary_literals/binary_literals",
+    "category": "syntax",
+    "test": "octal and binary literals",
+    "subtest": "binary literals"
+  },
+  {
+    "path": "syntax/octal_and_binary_literals/octal_supported_by_Number__",
+    "category": "syntax",
+    "test": "octal and binary literals",
+    "subtest": "octal supported by Number()"
+  },
+  {
+    "path": "syntax/octal_and_binary_literals/binary_supported_by_Number__",
+    "category": "syntax",
+    "test": "octal and binary literals",
+    "subtest": "binary supported by Number()"
+  },
+  {
+    "path": "syntax/template_literals/basic_functionality",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "syntax/template_literals/toString_conversion",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "toString conversion"
+  },
+  {
+    "path": "syntax/template_literals/tagged_template_literals",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "tagged template literals"
+  },
+  {
+    "path": "syntax/template_literals/passed_array_is_frozen",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "passed array is frozen"
+  },
+  {
+    "path": "syntax/template_literals/line_break_normalisation",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "line break normalisation"
+  },
+  {
+    "path": "syntax/RegExp_y_and_u_flags/y_flag",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"y\" flag"
+  },
+  {
+    "path": "syntax/RegExp_y_and_u_flags/y_flag,_lastIndex",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"y\" flag, lastIndex"
+  },
+  {
+    "path": "syntax/RegExp_y_and_u_flags/u_flag",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"u\" flag"
+  },
+  {
+    "path": "syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"u\" flag, Unicode code point escapes"
+  },
+  {
+    "path": "syntax/RegExp_y_and_u_flags/u_flag,_case_folding",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"u\" flag, case folding"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_arrays",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with arrays"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_sparse_arrays",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with sparse arrays"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_strings",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with strings"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_astral_plane_strings",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with astral plane strings"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_generator_instances",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with generator instances"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_instances_of_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with instances of generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/iterator_closing",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/trailing_commas_in_iterable_patterns",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "trailing commas in iterable patterns"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/with_objects",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "with objects"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/object_destructuring_with_primitives",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "object destructuring with primitives"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/trailing_commas_in_object_patterns",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "trailing commas in object patterns"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/throws_on_null_and_undefined",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "throws on null and undefined"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/computed_properties",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "computed properties"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/multiples_in_a_single_var_statement",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "multiples in a single var statement"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/nested",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "nested"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/in_for-in_loop_heads",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "in for-in loop heads"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/in_for-of_loop_heads",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "in for-of loop heads"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/in_catch_heads",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "in catch heads"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/rest",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "rest"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/defaults",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "defaults"
+  },
+  {
+    "path": "syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone",
+    "category": "syntax",
+    "test": "destructuring, declarations",
+    "subtest": "defaults, let temporal dead zone"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_arrays",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with arrays"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_sparse_arrays",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with sparse arrays"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_strings",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with strings"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_astral_plane_strings",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with astral plane strings"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_generator_instances",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with generator instances"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_instances_of_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with instances of generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/iterator_closing",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/iterable_destructuring_expression",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "iterable destructuring expression"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/chained_iterable_destructuring",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "chained iterable destructuring"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/trailing_commas_in_iterable_patterns",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "trailing commas in iterable patterns"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/with_objects",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "with objects"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/object_destructuring_with_primitives",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "object destructuring with primitives"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/trailing_commas_in_object_patterns",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "trailing commas in object patterns"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/object_destructuring_expression",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "object destructuring expression"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "parenthesised left-hand-side is a syntax error"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/chained_object_destructuring",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "chained object destructuring"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/throws_on_null_and_undefined",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "throws on null and undefined"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/computed_properties",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "computed properties"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/nested",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "nested"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/rest",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "rest"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/nested_rest",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "nested rest"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/empty_patterns",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "empty patterns"
+  },
+  {
+    "path": "syntax/destructuring,_assignment/defaults",
+    "category": "syntax",
+    "test": "destructuring, assignment",
+    "subtest": "defaults"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_arrays",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with arrays"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_sparse_arrays",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with sparse arrays"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_strings",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with strings"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_astral_plane_strings",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with astral plane strings"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_generator_instances",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with generator instances"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_instances_of_generic_iterables",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with instances of generic iterables"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/iterator_closing",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/trailing_commas_in_iterable_patterns",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "trailing commas in iterable patterns"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/with_objects",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "with objects"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/object_destructuring_with_primitives",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "object destructuring with primitives"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/trailing_commas_in_object_patterns",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "trailing commas in object patterns"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/throws_on_null_and_undefined",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "throws on null and undefined"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/computed_properties",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "computed properties"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/nested",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "nested"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/arguments_interaction",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "'arguments' interaction"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/new_Function___support",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "new Function() support"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/in_parameters,_function_length_property",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "in parameters, function 'length' property"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/rest",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "rest"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/empty_patterns",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "empty patterns"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/defaults",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "defaults"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/defaults,_separate_scope",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "defaults, separate scope"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/defaults,_new_Function___support",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "defaults, new Function() support"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/defaults,_arrow_function",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "defaults, arrow function"
+  },
+  {
+    "path": "syntax/Unicode_code_point_escapes/in_strings",
+    "category": "syntax",
+    "test": "Unicode code point escapes",
+    "subtest": "in strings"
+  },
+  {
+    "path": "syntax/Unicode_code_point_escapes/in_identifiers",
+    "category": "syntax",
+    "test": "Unicode code point escapes",
+    "subtest": "in identifiers"
+  },
+  {
+    "path": "syntax/new.target/in_constructors",
+    "category": "syntax",
+    "test": "new.target",
+    "subtest": "in constructors"
+  },
+  {
+    "path": "syntax/new.target/assignment_is_an_early_error",
+    "category": "syntax",
+    "test": "new.target",
+    "subtest": "assignment is an early error"
+  },
+  {
+    "path": "bindings/const/basic_support",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "basic support"
+  },
+  {
+    "path": "bindings/const/is_block-scoped",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "is block-scoped"
+  },
+  {
+    "path": "bindings/const/cannot_be_in_statements",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "cannot be in statements"
+  },
+  {
+    "path": "bindings/const/redefining_a_const_is_an_error",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "redefining a const is an error"
+  },
+  {
+    "path": "bindings/const/for_loop_statement_scope",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for loop statement scope"
+  },
+  {
+    "path": "bindings/const/for-in_loop_iteration_scope",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for-in loop iteration scope"
+  },
+  {
+    "path": "bindings/const/for-of_loop_iteration_scope",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for-of loop iteration scope"
+  },
+  {
+    "path": "bindings/const/temporal_dead_zone",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "temporal dead zone"
+  },
+  {
+    "path": "bindings/const/basic_support__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "basic support (strict mode)"
+  },
+  {
+    "path": "bindings/const/is_block-scoped__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "is block-scoped (strict mode)"
+  },
+  {
+    "path": "bindings/const/cannot_be_in_statements__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "cannot be in statements (strict mode)"
+  },
+  {
+    "path": "bindings/const/redefining_a_const__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "redefining a const (strict mode)"
+  },
+  {
+    "path": "bindings/const/for_loop_statement_scope__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for loop statement scope (strict mode)"
+  },
+  {
+    "path": "bindings/const/for-in_loop_iteration_scope__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for-in loop iteration scope (strict mode)"
+  },
+  {
+    "path": "bindings/const/for-of_loop_iteration_scope__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "for-of loop iteration scope (strict mode)"
+  },
+  {
+    "path": "bindings/const/temporal_dead_zone__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "temporal dead zone (strict mode)"
+  },
+  {
+    "path": "bindings/let/basic_support",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "basic support"
+  },
+  {
+    "path": "bindings/let/is_block-scoped",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "is block-scoped"
+  },
+  {
+    "path": "bindings/let/cannot_be_in_statements",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "cannot be in statements"
+  },
+  {
+    "path": "bindings/let/for_loop_statement_scope",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for loop statement scope"
+  },
+  {
+    "path": "bindings/let/temporal_dead_zone",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "temporal dead zone"
+  },
+  {
+    "path": "bindings/let/for_for-in_loop_iteration_scope",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for/for-in loop iteration scope"
+  },
+  {
+    "path": "bindings/let/basic_support__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "basic support (strict mode)"
+  },
+  {
+    "path": "bindings/let/is_block-scoped__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "is block-scoped (strict mode)"
+  },
+  {
+    "path": "bindings/let/cannot_be_in_statements__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "cannot be in statements (strict mode)"
+  },
+  {
+    "path": "bindings/let/for_loop_statement_scope__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for loop statement scope (strict mode)"
+  },
+  {
+    "path": "bindings/let/temporal_dead_zone__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "temporal dead zone (strict mode)"
+  },
+  {
+    "path": "bindings/let/for_for-in_loop_iteration_scope__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for/for-in loop iteration scope (strict mode)"
+  },
+  {
+    "path": "bindings/block-level_function_declaration",
+    "category": "bindings",
+    "test": "block-level function declaration"
+  },
+  {
+    "path": "functions/arrow_functions/0_parameters",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "0 parameters"
+  },
+  {
+    "path": "functions/arrow_functions/1_parameter,_no_brackets",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "1 parameter, no brackets"
+  },
+  {
+    "path": "functions/arrow_functions/multiple_parameters",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "multiple parameters"
+  },
+  {
+    "path": "functions/arrow_functions/lexical_this_binding",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "lexical \"this\" binding"
+  },
+  {
+    "path": "functions/arrow_functions/this_unchanged_by_call_or_apply",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "\"this\" unchanged by call or apply"
+  },
+  {
+    "path": "functions/arrow_functions/cant_be_bound,_can_be_curried",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "can't be bound, can be curried"
+  },
+  {
+    "path": "functions/arrow_functions/lexical_arguments_binding",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "lexical \"arguments\" binding"
+  },
+  {
+    "path": "functions/arrow_functions/no_line_break_between_params_and_arrow",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "no line break between params and <code>=></code>"
+  },
+  {
+    "path": "functions/arrow_functions/correct_precedence",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "correct precedence"
+  },
+  {
+    "path": "functions/arrow_functions/no_prototype_property",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "no \"prototype\" property"
+  },
+  {
+    "path": "functions/arrow_functions/lexical_super_binding_in_constructors",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "lexical \"super\" binding in constructors"
+  },
+  {
+    "path": "functions/arrow_functions/lexical_super_binding_in_methods",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "lexical \"super\" binding in methods"
+  },
+  {
+    "path": "functions/arrow_functions/lexical_new.target_binding",
+    "category": "functions",
+    "test": "arrow functions",
+    "subtest": "lexical \"new.target\" binding"
+  },
+  {
+    "path": "functions/class/class_statement",
+    "category": "functions",
+    "test": "class",
+    "subtest": "class statement"
+  },
+  {
+    "path": "functions/class/is_block-scoped",
+    "category": "functions",
+    "test": "class",
+    "subtest": "is block-scoped"
+  },
+  {
+    "path": "functions/class/class_expression",
+    "category": "functions",
+    "test": "class",
+    "subtest": "class expression"
+  },
+  {
+    "path": "functions/class/anonymous_class",
+    "category": "functions",
+    "test": "class",
+    "subtest": "anonymous class"
+  },
+  {
+    "path": "functions/class/constructor",
+    "category": "functions",
+    "test": "class",
+    "subtest": "constructor"
+  },
+  {
+    "path": "functions/class/prototype_methods",
+    "category": "functions",
+    "test": "class",
+    "subtest": "prototype methods"
+  },
+  {
+    "path": "functions/class/string-keyed_methods",
+    "category": "functions",
+    "test": "class",
+    "subtest": "string-keyed methods"
+  },
+  {
+    "path": "functions/class/computed_prototype_methods",
+    "category": "functions",
+    "test": "class",
+    "subtest": "computed prototype methods"
+  },
+  {
+    "path": "functions/class/optional_semicolons",
+    "category": "functions",
+    "test": "class",
+    "subtest": "optional semicolons"
+  },
+  {
+    "path": "functions/class/static_methods",
+    "category": "functions",
+    "test": "class",
+    "subtest": "static methods"
+  },
+  {
+    "path": "functions/class/computed_static_methods",
+    "category": "functions",
+    "test": "class",
+    "subtest": "computed static methods"
+  },
+  {
+    "path": "functions/class/accessor_properties",
+    "category": "functions",
+    "test": "class",
+    "subtest": "accessor properties"
+  },
+  {
+    "path": "functions/class/computed_accessor_properties",
+    "category": "functions",
+    "test": "class",
+    "subtest": "computed accessor properties"
+  },
+  {
+    "path": "functions/class/static_accessor_properties",
+    "category": "functions",
+    "test": "class",
+    "subtest": "static accessor properties"
+  },
+  {
+    "path": "functions/class/computed_static_accessor_properties",
+    "category": "functions",
+    "test": "class",
+    "subtest": "computed static accessor properties"
+  },
+  {
+    "path": "functions/class/class_name_is_lexically_scoped",
+    "category": "functions",
+    "test": "class",
+    "subtest": "class name is lexically scoped"
+  },
+  {
+    "path": "functions/class/computed_names,_temporal_dead_zone",
+    "category": "functions",
+    "test": "class",
+    "subtest": "computed names, temporal dead zone"
+  },
+  {
+    "path": "functions/class/methods_arent_enumerable",
+    "category": "functions",
+    "test": "class",
+    "subtest": "methods aren't enumerable"
+  },
+  {
+    "path": "functions/class/implicit_strict_mode",
+    "category": "functions",
+    "test": "class",
+    "subtest": "implicit strict mode"
+  },
+  {
+    "path": "functions/class/constructor_requires_new",
+    "category": "functions",
+    "test": "class",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "functions/class/extends",
+    "category": "functions",
+    "test": "class",
+    "subtest": "extends"
+  },
+  {
+    "path": "functions/class/extends_expressions",
+    "category": "functions",
+    "test": "class",
+    "subtest": "extends expressions"
+  },
+  {
+    "path": "functions/class/extends_null",
+    "category": "functions",
+    "test": "class",
+    "subtest": "extends null"
+  },
+  {
+    "path": "functions/class/new.target",
+    "category": "functions",
+    "test": "class",
+    "subtest": "new.target"
+  },
+  {
+    "path": "functions/super/statement_in_constructors",
+    "category": "functions",
+    "test": "super",
+    "subtest": "statement in constructors"
+  },
+  {
+    "path": "functions/super/expression_in_constructors",
+    "category": "functions",
+    "test": "super",
+    "subtest": "expression in constructors"
+  },
+  {
+    "path": "functions/super/in_methods,_property_access",
+    "category": "functions",
+    "test": "super",
+    "subtest": "in methods, property access"
+  },
+  {
+    "path": "functions/super/in_methods,_method_calls",
+    "category": "functions",
+    "test": "super",
+    "subtest": "in methods, method calls"
+  },
+  {
+    "path": "functions/super/method_calls_use_correct_this_binding",
+    "category": "functions",
+    "test": "super",
+    "subtest": "method calls use correct \"this\" binding"
+  },
+  {
+    "path": "functions/super/constructor_calls_use_correct_new.target_binding",
+    "category": "functions",
+    "test": "super",
+    "subtest": "constructor calls use correct \"new.target\" binding"
+  },
+  {
+    "path": "functions/super/is_statically_bound",
+    "category": "functions",
+    "test": "super",
+    "subtest": "is statically bound"
+  },
+  {
+    "path": "functions/super/super___invokes_the_correct_constructor",
+    "category": "functions",
+    "test": "super",
+    "subtest": "super() invokes the correct constructor"
+  },
+  {
+    "path": "functions/generators/basic_functionality",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "functions/generators/generator_function_expressions",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "generator function expressions"
+  },
+  {
+    "path": "functions/generators/correct_this_binding",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "correct \"this\" binding"
+  },
+  {
+    "path": "functions/generators/cant_use_this_with_new",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "can't use \"this\" with new"
+  },
+  {
+    "path": "functions/generators/sending",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "sending"
+  },
+  {
+    "path": "functions/generators/%GeneratorPrototype%",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "%GeneratorPrototype%"
+  },
+  {
+    "path": "functions/generators/%GeneratorPrototype%_prototype_chain",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "%GeneratorPrototype% prototype chain"
+  },
+  {
+    "path": "functions/generators/%GeneratorPrototype%.constructor",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "%GeneratorPrototype%.constructor"
+  },
+  {
+    "path": "functions/generators/%GeneratorPrototype%.throw",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "%GeneratorPrototype%.throw"
+  },
+  {
+    "path": "functions/generators/%GeneratorPrototype%.return",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "%GeneratorPrototype%.return"
+  },
+  {
+    "path": "functions/generators/yield_operator_precedence",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield operator precedence"
+  },
+  {
+    "path": "functions/generators/yield__,_arrays",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, arrays"
+  },
+  {
+    "path": "functions/generators/yield__,_sparse_arrays",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, sparse arrays"
+  },
+  {
+    "path": "functions/generators/yield__,_strings",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, strings"
+  },
+  {
+    "path": "functions/generators/yield__,_astral_plane_strings",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, astral plane strings"
+  },
+  {
+    "path": "functions/generators/yield__,_generator_instances",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, generator instances"
+  },
+  {
+    "path": "functions/generators/yield__,_generic_iterables",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, generic iterables"
+  },
+  {
+    "path": "functions/generators/yield__,_instances_of_iterables",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, instances of iterables"
+  },
+  {
+    "path": "functions/generators/yield___on_non-iterables_is_a_runtime_error",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield * on non-iterables is a runtime error"
+  },
+  {
+    "path": "functions/generators/yield__,_iterator_closing",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, iterator closing"
+  },
+  {
+    "path": "functions/generators/yield__,_iterator_closing_via_throw__",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "yield *, iterator closing via throw()"
+  },
+  {
+    "path": "functions/generators/shorthand_generator_methods",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "shorthand generator methods"
+  },
+  {
+    "path": "functions/generators/string-keyed_shorthand_generator_methods",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "string-keyed shorthand generator methods"
+  },
+  {
+    "path": "functions/generators/computed_shorthand_generators",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "computed shorthand generators"
+  },
+  {
+    "path": "functions/generators/shorthand_generator_methods,_classes",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "shorthand generator methods, classes"
+  },
+  {
+    "path": "functions/generators/computed_shorthand_generators,_classes",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "computed shorthand generators, classes"
+  },
+  {
+    "path": "functions/generators/shorthand_generators_cant_be_constructors",
+    "category": "functions",
+    "test": "generators",
+    "subtest": "shorthand generators can't be constructors"
+  },
+  {
+    "path": "built-ins/typed_arrays/Int8Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Int8Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Uint8Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Uint8Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Uint8ClampedArray",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Uint8ClampedArray"
+  },
+  {
+    "path": "built-ins/typed_arrays/Int16Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Int16Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Uint16Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Uint16Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Int32Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Int32Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Uint32Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Uint32Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Float32Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Float32Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/Float64Array",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "Float64Array"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Int8_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Int8)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Uint8_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Uint8)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Int16_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Int16)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Uint16_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Uint16)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Int32_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Int32)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Uint32_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Uint32)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Float32_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Float32)"
+  },
+  {
+    "path": "built-ins/typed_arrays/DataView__Float64_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "DataView (Float64)"
+  },
+  {
+    "path": "built-ins/typed_arrays/ArrayBuffer_Symbol.species_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "ArrayBuffer[Symbol.species]"
+  },
+  {
+    "path": "built-ins/typed_arrays/constructors_require_new",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "constructors require new"
+  },
+  {
+    "path": "built-ins/typed_arrays/constructors_accept_generic_iterables",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "constructors accept generic iterables"
+  },
+  {
+    "path": "built-ins/typed_arrays/correct_prototype_chains",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "correct prototype chains"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.from",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.from"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.of",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.of"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.subarray",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.subarray"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.join",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.join"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.indexOf",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.indexOf"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.lastIndexOf",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.lastIndexOf"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.slice",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.slice"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.every",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.every"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.filter",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.filter"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.forEach",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.forEach"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.map",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.map"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.reduce",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.reduce"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.reduceRight",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.reduceRight"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.reverse",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.reverse"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.some",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.some"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.sort",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.sort"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.copyWithin",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.copyWithin"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.find",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.find"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.findIndex",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.findIndex"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.fill",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.fill"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.keys",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.keys"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.values",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.values"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype.entries",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype.entries"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%.prototype_Symbol.iterator_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%.prototype[Symbol.iterator]"
+  },
+  {
+    "path": "built-ins/typed_arrays/%TypedArray%_Symbol.species_",
+    "category": "built-ins",
+    "test": "typed arrays",
+    "subtest": "%TypedArray%[Symbol.species]"
+  },
+  {
+    "path": "built-ins/Map/basic_functionality",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/Map/constructor_arguments",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "constructor arguments"
+  },
+  {
+    "path": "built-ins/Map/constructor_requires_new",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/Map/constructor_accepts_null",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "constructor accepts null"
+  },
+  {
+    "path": "built-ins/Map/constructor_invokes_set",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "constructor invokes set"
+  },
+  {
+    "path": "built-ins/Map/iterator_closing",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.set_returns_this",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.set returns this"
+  },
+  {
+    "path": "built-ins/Map/-0_key_converts_to_+0",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "-0 key converts to +0"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.size",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.size"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.delete",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.delete"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.clear",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.clear"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.forEach",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.forEach"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.keys",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.keys"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.values",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.values"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype.entries",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype.entries"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype_Symbol.iterator_",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype[Symbol.iterator]"
+  },
+  {
+    "path": "built-ins/Map/Map.prototype_isnt_an_instance",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map.prototype isn't an instance"
+  },
+  {
+    "path": "built-ins/Map/Map_iterator_prototype_chain",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map iterator prototype chain"
+  },
+  {
+    "path": "built-ins/Map/Map_Symbol.species_",
+    "category": "built-ins",
+    "test": "Map",
+    "subtest": "Map[Symbol.species]"
+  },
+  {
+    "path": "built-ins/Set/basic_functionality",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/Set/constructor_arguments",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "constructor arguments"
+  },
+  {
+    "path": "built-ins/Set/constructor_requires_new",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/Set/constructor_accepts_null",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "constructor accepts null"
+  },
+  {
+    "path": "built-ins/Set/constructor_invokes_add",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "constructor invokes add"
+  },
+  {
+    "path": "built-ins/Set/iterator_closing",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.add_returns_this",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.add returns this"
+  },
+  {
+    "path": "built-ins/Set/-0_key_converts_to_+0",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "-0 key converts to +0"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.size",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.size"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.delete",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.delete"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.clear",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.clear"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.forEach",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.forEach"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.keys",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.keys"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.values",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.values"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype.entries",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype.entries"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype_Symbol.iterator_",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype[Symbol.iterator]"
+  },
+  {
+    "path": "built-ins/Set/Set.prototype_isnt_an_instance",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set.prototype isn't an instance"
+  },
+  {
+    "path": "built-ins/Set/Set_iterator_prototype_chain",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set iterator prototype chain"
+  },
+  {
+    "path": "built-ins/Set/Set_Symbol.species_",
+    "category": "built-ins",
+    "test": "Set",
+    "subtest": "Set[Symbol.species]"
+  },
+  {
+    "path": "built-ins/WeakMap/basic_functionality",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/WeakMap/constructor_arguments",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "constructor arguments"
+  },
+  {
+    "path": "built-ins/WeakMap/constructor_requires_new",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/WeakMap/constructor_accepts_null",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "constructor accepts null"
+  },
+  {
+    "path": "built-ins/WeakMap/constructor_invokes_set",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "constructor invokes set"
+  },
+  {
+    "path": "built-ins/WeakMap/frozen_objects_as_keys",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "frozen objects as keys"
+  },
+  {
+    "path": "built-ins/WeakMap/iterator_closing",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "built-ins/WeakMap/WeakMap.prototype.set_returns_this",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "WeakMap.prototype.set returns this"
+  },
+  {
+    "path": "built-ins/WeakMap/WeakMap.prototype.delete",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "WeakMap.prototype.delete"
+  },
+  {
+    "path": "built-ins/WeakMap/no_WeakMap.prototype.clear_method",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "no WeakMap.prototype.clear method"
+  },
+  {
+    "path": "built-ins/WeakMap/.has,_.get_and_.delete_methods_accept_primitives",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": ".has, .get and .delete methods accept primitives"
+  },
+  {
+    "path": "built-ins/WeakMap/WeakMap.prototype_isnt_an_instance",
+    "category": "built-ins",
+    "test": "WeakMap",
+    "subtest": "WeakMap.prototype isn't an instance"
+  },
+  {
+    "path": "built-ins/WeakSet/basic_functionality",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/WeakSet/constructor_arguments",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "constructor arguments"
+  },
+  {
+    "path": "built-ins/WeakSet/constructor_requires_new",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/WeakSet/constructor_accepts_null",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "constructor accepts null"
+  },
+  {
+    "path": "built-ins/WeakSet/constructor_invokes_add",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "constructor invokes add"
+  },
+  {
+    "path": "built-ins/WeakSet/iterator_closing",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "iterator closing"
+  },
+  {
+    "path": "built-ins/WeakSet/WeakSet.prototype.add_returns_this",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "WeakSet.prototype.add returns this"
+  },
+  {
+    "path": "built-ins/WeakSet/WeakSet.prototype.delete",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "WeakSet.prototype.delete"
+  },
+  {
+    "path": "built-ins/WeakSet/no_WeakSet.prototype.clear_method",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "no WeakSet.prototype.clear method"
+  },
+  {
+    "path": "built-ins/WeakSet/.has_and_.delete_methods_accept_primitives",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": ".has and .delete methods accept primitives"
+  },
+  {
+    "path": "built-ins/WeakSet/WeakSet.prototype_isnt_an_instance",
+    "category": "built-ins",
+    "test": "WeakSet",
+    "subtest": "WeakSet.prototype isn't an instance"
+  },
+  {
+    "path": "built-ins/Proxy/constructor_requires_new",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/Proxy/no_prototype_property",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "no \"prototype\" property"
+  },
+  {
+    "path": "built-ins/Proxy/get_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"get\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/get_handler,_instances_of_proxies",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"get\" handler, instances of proxies"
+  },
+  {
+    "path": "built-ins/Proxy/get_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"get\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/set_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"set\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/set_handler,_instances_of_proxies",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"set\" handler, instances of proxies"
+  },
+  {
+    "path": "built-ins/Proxy/set_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"set\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/has_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"has\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/has_handler,_instances_of_proxies",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"has\" handler, instances of proxies"
+  },
+  {
+    "path": "built-ins/Proxy/has_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"has\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/deleteProperty_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"deleteProperty\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/deleteProperty_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"deleteProperty\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/getOwnPropertyDescriptor_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"getOwnPropertyDescriptor\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"getOwnPropertyDescriptor\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/defineProperty_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"defineProperty\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/defineProperty_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"defineProperty\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/getPrototypeOf_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"getPrototypeOf\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/getPrototypeOf_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"getPrototypeOf\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/setPrototypeOf_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"setPrototypeOf\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/setPrototypeOf_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"setPrototypeOf\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/isExtensible_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"isExtensible\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/isExtensible_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"isExtensible\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/preventExtensions_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"preventExtensions\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/preventExtensions_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"preventExtensions\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/ownKeys_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"ownKeys\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/ownKeys_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"ownKeys\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/apply_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"apply\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/apply_handler_invariant",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"apply\" handler invariant"
+  },
+  {
+    "path": "built-ins/Proxy/construct_handler",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"construct\" handler"
+  },
+  {
+    "path": "built-ins/Proxy/construct_handler_invariants",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "\"construct\" handler invariants"
+  },
+  {
+    "path": "built-ins/Proxy/Proxy.revocable",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "Proxy.revocable"
+  },
+  {
+    "path": "built-ins/Proxy/Array.isArray_support",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "Array.isArray support"
+  },
+  {
+    "path": "built-ins/Proxy/JSON.stringify_support",
+    "category": "built-ins",
+    "test": "Proxy",
+    "subtest": "JSON.stringify support"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.get",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.get"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.set",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.set"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.has",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.has"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.deleteProperty",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.deleteProperty"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.getOwnPropertyDescriptor",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.getOwnPropertyDescriptor"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.defineProperty",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.defineProperty"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.getPrototypeOf",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.getPrototypeOf"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.setPrototypeOf",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.setPrototypeOf"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.isExtensible",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.isExtensible"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.preventExtensions",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.preventExtensions"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.ownKeys,_string_keys",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.ownKeys, string keys"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.ownKeys,_symbol_keys",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.ownKeys, symbol keys"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.apply",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.apply"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct_sets_new.target_meta-property",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct sets new.target meta-property"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct_creates_instances_from_third_argument",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct creates instances from third argument"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct,_Array_subclassing",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct, Array subclassing"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct,_RegExp_subclassing",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct, RegExp subclassing"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct,_Function_subclassing",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct, Function subclassing"
+  },
+  {
+    "path": "built-ins/Reflect/Reflect.construct,_Promise_subclassing",
+    "category": "built-ins",
+    "test": "Reflect",
+    "subtest": "Reflect.construct, Promise subclassing"
+  },
+  {
+    "path": "built-ins/Promise/basic_functionality",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/Promise/constructor_requires_new",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "constructor requires new"
+  },
+  {
+    "path": "built-ins/Promise/Promise.prototype_isnt_an_instance",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise.prototype isn't an instance"
+  },
+  {
+    "path": "built-ins/Promise/Promise.all",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise.all"
+  },
+  {
+    "path": "built-ins/Promise/Promise.all,_generic_iterables",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise.all, generic iterables"
+  },
+  {
+    "path": "built-ins/Promise/Promise.race",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise.race"
+  },
+  {
+    "path": "built-ins/Promise/Promise.race,_generic_iterables",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise.race, generic iterables"
+  },
+  {
+    "path": "built-ins/Promise/Promise_Symbol.species_",
+    "category": "built-ins",
+    "test": "Promise",
+    "subtest": "Promise[Symbol.species]"
+  },
+  {
+    "path": "built-ins/Symbol/basic_functionality",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "built-ins/Symbol/typeof_support",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "typeof support"
+  },
+  {
+    "path": "built-ins/Symbol/symbol_keys_are_hidden_to_pre-ES6_code",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "symbol keys are hidden to pre-ES6 code"
+  },
+  {
+    "path": "built-ins/Symbol/Object.defineProperty_support",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "Object.defineProperty support"
+  },
+  {
+    "path": "built-ins/Symbol/symbols_inherit_from_Symbol.prototype",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "symbols inherit from Symbol.prototype"
+  },
+  {
+    "path": "built-ins/Symbol/cannot_coerce_to_string_or_number",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "cannot coerce to string or number"
+  },
+  {
+    "path": "built-ins/Symbol/can_convert_with_String__",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "can convert with String()"
+  },
+  {
+    "path": "built-ins/Symbol/new_Symbol___throws",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "new Symbol() throws"
+  },
+  {
+    "path": "built-ins/Symbol/Object_symbol_",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "Object(symbol)"
+  },
+  {
+    "path": "built-ins/Symbol/JSON.stringify_ignores_symbol_primitives",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "JSON.stringify ignores symbol primitives"
+  },
+  {
+    "path": "built-ins/Symbol/JSON.stringify_ignores_symbol_objects",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "JSON.stringify ignores symbol objects"
+  },
+  {
+    "path": "built-ins/Symbol/global_symbol_registry",
+    "category": "built-ins",
+    "test": "Symbol",
+    "subtest": "global symbol registry"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.hasInstance",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.hasInstance"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.isConcatSpreadable",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.isConcatSpreadable"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.iterator,_existence",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.iterator, existence"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.iterator,_arguments_object",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.iterator, arguments object"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_existence",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, existence"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Array.prototype.concat",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Array.prototype.concat"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Array.prototype.filter",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Array.prototype.filter"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Array.prototype.map",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Array.prototype.map"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Array.prototype.slice",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Array.prototype.slice"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Array.prototype.splice",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Array.prototype.splice"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_RegExp.prototype_Symbol.split_",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, RegExp.prototype[Symbol.split]"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.species,_Promise.prototype.then",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.species, Promise.prototype.then"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.replace",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.replace"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.search",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.search"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.split",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.split"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.match",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.match"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.match,_RegExp_constructor",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.match, RegExp constructor"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.match,_String.prototype.startsWith",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.match, String.prototype.startsWith"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.match,_String.prototype.endsWith",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.match, String.prototype.endsWith"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.match,_String.prototype.includes",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.match, String.prototype.includes"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.toPrimitive",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.toPrimitive"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.toStringTag",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.toStringTag"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.toStringTag affects existing built-ins"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.toStringTag, new built-ins"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.toStringTag,_misc._built-ins",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.toStringTag, misc. built-ins"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.unscopables",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.unscopables"
+  },
+  {
+    "path": "built-in_extensions/Object_static_methods/Object.assign",
+    "category": "built-in extensions",
+    "test": "Object static methods",
+    "subtest": "Object.assign"
+  },
+  {
+    "path": "built-in_extensions/Object_static_methods/Object.is",
+    "category": "built-in extensions",
+    "test": "Object static methods",
+    "subtest": "Object.is"
+  },
+  {
+    "path": "built-in_extensions/Object_static_methods/Object.getOwnPropertySymbols",
+    "category": "built-in extensions",
+    "test": "Object static methods",
+    "subtest": "Object.getOwnPropertySymbols"
+  },
+  {
+    "path": "built-in_extensions/Object_static_methods/Object.setPrototypeOf",
+    "category": "built-in extensions",
+    "test": "Object static methods",
+    "subtest": "Object.setPrototypeOf"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/function_statements",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "function statements"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/function_expressions",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "function expressions"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/new_Function",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "new Function"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/bound_functions",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "bound functions"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/variables__function_",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "variables (function)"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/object_methods__function_",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "object methods (function)"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/accessor_properties",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "accessor properties"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/shorthand_methods",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "shorthand methods"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/shorthand_methods__no_lexical_binding_",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "shorthand methods (no lexical binding)"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/symbol-keyed_methods",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "symbol-keyed methods"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/class_statements",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "class statements"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/class_expressions",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "class expressions"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/variables__class_",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "variables (class)"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/object_methods__class_",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "object methods (class)"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/class_prototype_methods",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "class prototype methods"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/class_static_methods",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "class static methods"
+  },
+  {
+    "path": "built-in_extensions/function_name_property/isnt_writable,_is_configurable",
+    "category": "built-in extensions",
+    "test": "function \"name\" property",
+    "subtest": "isn't writable, is configurable"
+  },
+  {
+    "path": "built-in_extensions/String_static_methods/String.raw",
+    "category": "built-in extensions",
+    "test": "String static methods",
+    "subtest": "String.raw"
+  },
+  {
+    "path": "built-in_extensions/String_static_methods/String.fromCodePoint",
+    "category": "built-in extensions",
+    "test": "String static methods",
+    "subtest": "String.fromCodePoint"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.codePointAt",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.codePointAt"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.normalize",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.normalize"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.repeat",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.repeat"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.startsWith",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.startsWith"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.startsWith_throws_on_RegExp",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.startsWith throws on RegExp"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.endsWith",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.endsWith"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.endsWith_throws_on_RegExp",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.endsWith throws on RegExp"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype.includes",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype.includes"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String.prototype[Symbol.iterator]"
+  },
+  {
+    "path": "built-in_extensions/String.prototype_methods/String_iterator_prototype_chain",
+    "category": "built-in extensions",
+    "test": "String.prototype methods",
+    "subtest": "String iterator prototype chain"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp.prototype.flags",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp.prototype.flags"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.match_",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp.prototype[Symbol.match]"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.replace_",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp.prototype[Symbol.replace]"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.split_",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp.prototype[Symbol.split]"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.search_",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp.prototype[Symbol.search]"
+  },
+  {
+    "path": "built-in_extensions/RegExp.prototype_properties/RegExp_Symbol.species_",
+    "category": "built-in extensions",
+    "test": "RegExp.prototype properties",
+    "subtest": "RegExp[Symbol.species]"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from,_array-like_objects",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from, array-like objects"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from,_generator_instances",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from, generator instances"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from,_generic_iterables",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from, generic iterables"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from,_instances_of_generic_iterables",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from, instances of generic iterables"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from_map_function,_array-like_objects",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from map function, array-like objects"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from_map_function,_generator_instances",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from map function, generator instances"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from_map_function,_generic_iterables",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from map function, generic iterables"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_iterables",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from map function, instances of iterables"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.from,_iterator_closing",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.from, iterator closing"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array.of",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array.of"
+  },
+  {
+    "path": "built-in_extensions/Array_static_methods/Array_Symbol.species_",
+    "category": "built-in extensions",
+    "test": "Array static methods",
+    "subtest": "Array[Symbol.species]"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.copyWithin"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.find",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.find"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.findIndex",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.findIndex"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.fill",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.fill"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.keys",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.keys"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.values",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.values"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.entries",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.entries"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.iterator_",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype[Symbol.iterator]"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array iterator prototype chain"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype[Symbol.unscopables]"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.isFinite",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.isFinite"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.isInteger",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.isInteger"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.isSafeInteger",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.isSafeInteger"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.isNaN",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.isNaN"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.parseFloat",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.parseFloat"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.parseInt",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.parseInt"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.EPSILON",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.EPSILON"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.MIN_SAFE_INTEGER",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.MIN_SAFE_INTEGER"
+  },
+  {
+    "path": "built-in_extensions/Number_properties/Number.MAX_SAFE_INTEGER",
+    "category": "built-in extensions",
+    "test": "Number properties",
+    "subtest": "Number.MAX_SAFE_INTEGER"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.clz32",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.clz32"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.imul",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.imul"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.sign",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.sign"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.log10",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.log10"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.log2",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.log2"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.log1p",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.log1p"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.expm1",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.expm1"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.cosh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.cosh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.sinh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.sinh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.tanh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.tanh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.acosh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.acosh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.asinh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.asinh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.atanh",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.atanh"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.trunc",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.trunc"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.fround",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.fround"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.cbrt",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.cbrt"
+  },
+  {
+    "path": "built-in_extensions/Math_methods/Math.hypot",
+    "category": "built-in extensions",
+    "test": "Math methods",
+    "subtest": "Math.hypot"
+  },
+  {
+    "path": "built-in_extensions/Date.prototype_Symbol.toPrimitive_",
+    "category": "built-in extensions",
+    "test": "Date.prototype[Symbol.toPrimitive]"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/length_property__accessing_",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "length property (accessing)"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/length_property__setting_",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "length property (setting)"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/correct_prototype_chain",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "correct prototype chain"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.isArray_support",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.isArray support"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.prototype.concat",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.prototype.concat"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.prototype.filter",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.prototype.filter"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.prototype.map",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.prototype.map"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.prototype.slice",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.prototype.slice"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.prototype.splice",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.prototype.splice"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.from",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.from"
+  },
+  {
+    "path": "subclassing/Array_is_subclassable/Array.of",
+    "category": "subclassing",
+    "test": "Array is subclassable",
+    "subtest": "Array.of"
+  },
+  {
+    "path": "subclassing/RegExp_is_subclassable/basic_functionality",
+    "category": "subclassing",
+    "test": "RegExp is subclassable",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "subclassing/RegExp_is_subclassable/correct_prototype_chain",
+    "category": "subclassing",
+    "test": "RegExp is subclassable",
+    "subtest": "correct prototype chain"
+  },
+  {
+    "path": "subclassing/RegExp_is_subclassable/RegExp.prototype.exec",
+    "category": "subclassing",
+    "test": "RegExp is subclassable",
+    "subtest": "RegExp.prototype.exec"
+  },
+  {
+    "path": "subclassing/RegExp_is_subclassable/RegExp.prototype.test",
+    "category": "subclassing",
+    "test": "RegExp is subclassable",
+    "subtest": "RegExp.prototype.test"
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/can_be_called",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "can be called"
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/correct_prototype_chain",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "correct prototype chain"
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/can_be_used_with_new",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "can be used with \"new\""
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/Function.prototype.call",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "Function.prototype.call"
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/Function.prototype.apply",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "Function.prototype.apply"
+  },
+  {
+    "path": "subclassing/Function_is_subclassable/Function.prototype.bind",
+    "category": "subclassing",
+    "test": "Function is subclassable",
+    "subtest": "Function.prototype.bind"
+  },
+  {
+    "path": "subclassing/Promise_is_subclassable/basic_functionality",
+    "category": "subclassing",
+    "test": "Promise is subclassable",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "subclassing/Promise_is_subclassable/correct_prototype_chain",
+    "category": "subclassing",
+    "test": "Promise is subclassable",
+    "subtest": "correct prototype chain"
+  },
+  {
+    "path": "subclassing/Promise_is_subclassable/Promise.all",
+    "category": "subclassing",
+    "test": "Promise is subclassable",
+    "subtest": "Promise.all"
+  },
+  {
+    "path": "subclassing/Promise_is_subclassable/Promise.race",
+    "category": "subclassing",
+    "test": "Promise is subclassable",
+    "subtest": "Promise.race"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/Boolean_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "Boolean is subclassable"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/Number_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "Number is subclassable"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/String_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "String is subclassable"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/Error_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "Error is subclassable"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/Map_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "Map is subclassable"
+  },
+  {
+    "path": "subclassing/miscellaneous_subclassables/Set_is_subclassable",
+    "category": "subclassing",
+    "test": "miscellaneous subclassables",
+    "subtest": "Set is subclassable"
+  },
+  {
+    "path": "misc/prototype_of_bound_functions/basic_functions",
+    "category": "misc",
+    "test": "prototype of bound functions",
+    "subtest": "basic functions"
+  },
+  {
+    "path": "misc/prototype_of_bound_functions/generator_functions",
+    "category": "misc",
+    "test": "prototype of bound functions",
+    "subtest": "generator functions"
+  },
+  {
+    "path": "misc/prototype_of_bound_functions/arrow_functions",
+    "category": "misc",
+    "test": "prototype of bound functions",
+    "subtest": "arrow functions"
+  },
+  {
+    "path": "misc/prototype_of_bound_functions/classes",
+    "category": "misc",
+    "test": "prototype of bound functions",
+    "subtest": "classes"
+  },
+  {
+    "path": "misc/prototype_of_bound_functions/subclasses",
+    "category": "misc",
+    "test": "prototype of bound functions",
+    "subtest": "subclasses"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/ToPrimitive",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "ToPrimitive"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/CreateListFromArrayLike",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "CreateListFromArrayLike"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/instanceof_operator",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "instanceof operator"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/HasBinding",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "HasBinding"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/CreateDynamicFunction",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "CreateDynamicFunction"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/ClassDefinitionEvaluation",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "ClassDefinitionEvaluation"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/IteratorComplete,_IteratorValue",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "IteratorComplete, IteratorValue"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/ToPropertyDescriptor",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "ToPropertyDescriptor"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Object.assign",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Object.assign"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Object.defineProperties",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Object.defineProperties"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Function.prototype.bind",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Function.prototype.bind"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Error.prototype.toString",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Error.prototype.toString"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/String.raw",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "String.raw"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp_constructor",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp constructor"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype.flags",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype.flags"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype.test",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype.test"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype.toString",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype.toString"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype_Symbol.match_",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype[Symbol.match]"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype_Symbol.replace_",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype[Symbol.replace]"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype_Symbol.search_",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype[Symbol.search]"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/RegExp.prototype_Symbol.split_",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "RegExp.prototype[Symbol.split]"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.from",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.from"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.concat",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.concat"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype_iteration_methods",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype iteration methods"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.pop",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.pop"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.reverse",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.reverse"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.shift",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.shift"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.splice",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.splice"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Array.prototype.toString",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Array.prototype.toString"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/JSON.stringify",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "JSON.stringify"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Promise_resolve_functions",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Promise resolve functions"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/String.prototype.match",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "String.prototype.match"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/String.prototype.replace",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "String.prototype.replace"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/String.prototype.search",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "String.prototype.search"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/String.prototype.split",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "String.prototype.split"
+  },
+  {
+    "path": "misc/Proxy,_internal_get_calls/Date.prototype.toJSON",
+    "category": "misc",
+    "test": "Proxy, internal 'get' calls",
+    "subtest": "Date.prototype.toJSON"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Object.assign",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Object.assign"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.from",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.from"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.of",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.of"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.copyWithin",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.copyWithin"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.fill",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.fill"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.pop",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.pop"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.push",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.push"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.reverse",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.reverse"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.shift",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.shift"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.splice",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.splice"
+  },
+  {
+    "path": "misc/Proxy,_internal_set_calls/Array.prototype.unshift",
+    "category": "misc",
+    "test": "Proxy, internal 'set' calls",
+    "subtest": "Array.prototype.unshift"
+  },
+  {
+    "path": "misc/Proxy,_internal_defineProperty_calls/__Set__",
+    "category": "misc",
+    "test": "Proxy, internal 'defineProperty' calls",
+    "subtest": "[[Set]]"
+  },
+  {
+    "path": "misc/Proxy,_internal_defineProperty_calls/SetIntegrityLevel",
+    "category": "misc",
+    "test": "Proxy, internal 'defineProperty' calls",
+    "subtest": "SetIntegrityLevel"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.copyWithin",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.copyWithin"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.pop",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.pop"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.reverse",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.reverse"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.shift",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.shift"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.splice",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.splice"
+  },
+  {
+    "path": "misc/Proxy,_internal_deleteProperty_calls/Array.prototype.unshift",
+    "category": "misc",
+    "test": "Proxy, internal 'deleteProperty' calls",
+    "subtest": "Array.prototype.unshift"
+  },
+  {
+    "path": "misc/Proxy,_internal_getOwnPropertyDescriptor_calls/__Set__",
+    "category": "misc",
+    "test": "Proxy, internal 'getOwnPropertyDescriptor' calls",
+    "subtest": "[[Set]]"
+  },
+  {
+    "path": "misc/Proxy,_internal_getOwnPropertyDescriptor_calls/Object.assign",
+    "category": "misc",
+    "test": "Proxy, internal 'getOwnPropertyDescriptor' calls",
+    "subtest": "Object.assign"
+  },
+  {
+    "path": "misc/Proxy,_internal_getOwnPropertyDescriptor_calls/Object.prototype.hasOwnProperty",
+    "category": "misc",
+    "test": "Proxy, internal 'getOwnPropertyDescriptor' calls",
+    "subtest": "Object.prototype.hasOwnProperty"
+  },
+  {
+    "path": "misc/Proxy,_internal_getOwnPropertyDescriptor_calls/Function.prototype.bind",
+    "category": "misc",
+    "test": "Proxy, internal 'getOwnPropertyDescriptor' calls",
+    "subtest": "Function.prototype.bind"
+  },
+  {
+    "path": "misc/Proxy,_internal_ownKeys_calls/SetIntegrityLevel",
+    "category": "misc",
+    "test": "Proxy, internal 'ownKeys' calls",
+    "subtest": "SetIntegrityLevel"
+  },
+  {
+    "path": "misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel",
+    "category": "misc",
+    "test": "Proxy, internal 'ownKeys' calls",
+    "subtest": "TestIntegrityLevel"
+  },
+  {
+    "path": "misc/Proxy,_internal_ownKeys_calls/SerializeJSONObject",
+    "category": "misc",
+    "test": "Proxy, internal 'ownKeys' calls",
+    "subtest": "SerializeJSONObject"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.getPrototypeOf",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.getPrototypeOf"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.getOwnPropertyDescriptor",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.getOwnPropertyDescriptor"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.getOwnPropertyNames",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.getOwnPropertyNames"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.seal",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.seal"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.freeze",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.freeze"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.preventExtensions",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.preventExtensions"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.isSealed",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.isSealed"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.isFrozen",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.isFrozen"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.isExtensible",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.isExtensible"
+  },
+  {
+    "path": "misc/Object_static_methods_accept_primitives/Object.keys",
+    "category": "misc",
+    "test": "Object static methods accept primitives",
+    "subtest": "Object.keys"
+  },
+  {
+    "path": "misc/own_property_order/Object.keys",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "Object.keys"
+  },
+  {
+    "path": "misc/own_property_order/Object.getOwnPropertyNames",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "Object.getOwnPropertyNames"
+  },
+  {
+    "path": "misc/own_property_order/Object.assign",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "Object.assign"
+  },
+  {
+    "path": "misc/own_property_order/JSON.stringify",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "JSON.stringify"
+  },
+  {
+    "path": "misc/own_property_order/JSON.parse",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "JSON.parse"
+  },
+  {
+    "path": "misc/own_property_order/Reflect.ownKeys,_string_key_order",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "Reflect.ownKeys, string key order"
+  },
+  {
+    "path": "misc/own_property_order/Reflect.ownKeys,_symbol_key_order",
+    "category": "misc",
+    "test": "own property order",
+    "subtest": "Reflect.ownKeys, symbol key order"
+  },
+  {
+    "path": "misc/Updated_identifier_syntax/var_U+2E2F_",
+    "category": "misc",
+    "test": "Updated identifier syntax",
+    "subtest": "var ⸯ;"
+  },
+  {
+    "path": "misc/Updated_identifier_syntax/var_U+102C0_",
+    "category": "misc",
+    "test": "Updated identifier syntax",
+    "subtest": "var 𐋀;"
+  },
+  {
+    "path": "misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers",
+    "category": "misc",
+    "test": "Updated identifier syntax",
+    "subtest": "no escaped reserved words as identifiers"
+  },
+  {
+    "path": "misc/miscellaneous/duplicate_property_names_in_strict_mode",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "duplicate property names in strict mode"
+  },
+  {
+    "path": "misc/miscellaneous/no_semicolon_needed_after_do-while",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "no semicolon needed after do-while"
+  },
+  {
+    "path": "misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "no assignments allowed in for-in head in strict mode"
+  },
+  {
+    "path": "misc/miscellaneous/accessors_arent_constructors",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "accessors aren't constructors"
+  },
+  {
+    "path": "misc/miscellaneous/Invalid_Date",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "Invalid Date"
+  },
+  {
+    "path": "misc/miscellaneous/RegExp_constructor_can_alter_flags",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "RegExp constructor can alter flags"
+  },
+  {
+    "path": "misc/miscellaneous/RegExp.prototype.toString_generic_and_uses_flags_property",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "RegExp.prototype.toString generic and uses \"flags\" property"
+  },
+  {
+    "path": "misc/miscellaneous/built-in_prototypes_are_not_instances",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "built-in prototypes are not instances"
+  },
+  {
+    "path": "misc/miscellaneous/function_length_is_configurable",
+    "category": "misc",
+    "test": "miscellaneous",
+    "subtest": "function 'length' is configurable"
+  },
+  {
+    "path": "annex_b/non-strict_function_semantics/hoisted_block-level_function_declaration",
+    "category": "annex b",
+    "test": "non-strict function semantics",
+    "subtest": "hoisted block-level function declaration"
+  },
+  {
+    "path": "annex_b/non-strict_function_semantics/labeled_function_statements",
+    "category": "annex b",
+    "test": "non-strict function semantics",
+    "subtest": "labeled function statements"
+  },
+  {
+    "path": "annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses",
+    "category": "annex b",
+    "test": "non-strict function semantics",
+    "subtest": "function statements in if-statement clauses"
+  },
+  {
+    "path": "annex_b/__proto___in_object_literals/basic_support",
+    "category": "annex b",
+    "test": "__proto__ in object literals",
+    "subtest": "basic support"
+  },
+  {
+    "path": "annex_b/__proto___in_object_literals/multiple___proto___is_an_error",
+    "category": "annex b",
+    "test": "__proto__ in object literals",
+    "subtest": "multiple __proto__ is an error"
+  },
+  {
+    "path": "annex_b/__proto___in_object_literals/not_a_computed_property",
+    "category": "annex b",
+    "test": "__proto__ in object literals",
+    "subtest": "not a computed property"
+  },
+  {
+    "path": "annex_b/__proto___in_object_literals/not_a_shorthand_property",
+    "category": "annex b",
+    "test": "__proto__ in object literals",
+    "subtest": "not a shorthand property"
+  },
+  {
+    "path": "annex_b/__proto___in_object_literals/not_a_shorthand_method",
+    "category": "annex b",
+    "test": "__proto__ in object literals",
+    "subtest": "not a shorthand method"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/get_prototype",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "get prototype"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/set_prototype",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "set prototype"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/absent_from_Object.create_null_",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "absent from Object.create(null)"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/present_in_hasOwnProperty__",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "present in hasOwnProperty()"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/correct_property_descriptor",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "correct property descriptor"
+  },
+  {
+    "path": "annex_b/Object.prototype.__proto__/present_in_Object.getOwnPropertyNames__",
+    "category": "annex b",
+    "test": "Object.prototype.__proto__",
+    "subtest": "present in Object.getOwnPropertyNames()"
+  },
+  {
+    "path": "annex_b/String.prototype_HTML_methods/existence",
+    "category": "annex b",
+    "test": "String.prototype HTML methods",
+    "subtest": "existence"
+  },
+  {
+    "path": "annex_b/String.prototype_HTML_methods/tags_names_are_lowercase",
+    "category": "annex b",
+    "test": "String.prototype HTML methods",
+    "subtest": "tags' names are lowercase"
+  },
+  {
+    "path": "annex_b/String.prototype_HTML_methods/quotes_in_arguments_are_escaped",
+    "category": "annex b",
+    "test": "String.prototype HTML methods",
+    "subtest": "quotes in arguments are escaped"
+  },
+  {
+    "path": "annex_b/RegExp.prototype.compile/basic_functionality",
+    "category": "annex b",
+    "test": "RegExp.prototype.compile",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "annex_b/RegExp.prototype.compile/returns_this",
+    "category": "annex b",
+    "test": "RegExp.prototype.compile",
+    "subtest": "returns this"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/hyphens_in_character_sets",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "hyphens in character sets"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/invalid_character_escapes",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "invalid character escapes"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/invalid_control-character_escapes",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "invalid control-character escapes"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/invalid_Unicode_escapes",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "invalid Unicode escapes"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "invalid hexadecimal escapes"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/incomplete_patterns_and_quantifiers",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "incomplete patterns and quantifiers"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/octal_escape_sequences",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "octal escape sequences"
+  },
+  {
+    "path": "annex_b/RegExp_syntax_extensions/invalid_backreferences_become_octal_escapes",
+    "category": "annex b",
+    "test": "RegExp syntax extensions",
+    "subtest": "invalid backreferences become octal escapes"
+  },
+  {
+    "path": "annex_b/HTML-style_comments",
+    "category": "annex b",
+    "test": "HTML-style comments"
+  }
+]
