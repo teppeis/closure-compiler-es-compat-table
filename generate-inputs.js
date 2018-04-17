@@ -9,6 +9,7 @@ const mkdirp = require('mkdirp');
 const {basedir, testDir, alterTestDir, fileList} = init();
 
 fileList
+  .map(({path}) => path)
   .filter(dir => !testDir || `${dir}/`.includes(testDir))
   .forEach(dir => {
     const src = getTestSrc(dir);
@@ -35,7 +36,7 @@ function init() {
   const basedir = path.join(__dirname, esVersion, clVersion);
   const testDir = process.env.TEST_DIR;
   const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
-  const fileList = require(path.join(alterTestDir, 'files.json'));
+  const fileList = require(path.join(alterTestDir, 'fileinfo.json')).map(({path}) => path);
   return {basedir, testDir, alterTestDir, fileList};
 }
 

@@ -47,7 +47,7 @@ data.tests.forEach(test => {
 });
 
 if (!testDir) {
-  fs.writeFileSync(path.join(alterTestDir, 'files.json'), JSON.stringify(fileList, null, 2));
+  fs.writeFileSync(path.join(alterTestDir, 'fileinfo.json'), JSON.stringify(fileList, null, 2));
 }
 
 function init() {
@@ -75,7 +75,12 @@ function writeInputSrcFile(fn, category, test, sub) {
   }
   const origPath = path.join(dir, 'orig.js');
   generateTestJsSrc(fn, name, origPath);
-  fileList.push(path.relative(alterTestDir, dir));
+  fileList.push({
+    path: path.relative(alterTestDir, dir),
+    category,
+    test,
+    subtest: sub,
+  });
 }
 
 function escapePath(str) {
