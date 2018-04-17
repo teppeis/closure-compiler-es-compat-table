@@ -416,7 +416,7 @@ built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (b) {
   } has no method 'for'
 built-ins/well-known_symbols/Symbol.hasInstance/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.isConcatSpreadable/out.js: [InvalidResult: false]
-built-ins/well-known_symbols/Symbol.iterator,_existence/out.js: [InvalidResult: false]
+built-ins/well-known_symbols/Symbol.iterator,_existence/out.js: [Pass]
 built-ins/well-known_symbols/Symbol.iterator,_arguments_object/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.species,_existence/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.species,_Array.prototype.concat/out.js: [InvalidResult: false]

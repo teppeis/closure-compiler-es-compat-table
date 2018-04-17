@@ -48,6 +48,7 @@ $jscomp.iteratorPrototype = function(a) {
 };
 module.exports = function() {
   $jscomp.initSymbol();
-  return "iterator" in Symbol;
+  $jscomp.initSymbolIterator();
+  return !!Symbol.iterator;
 };
 
