@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "author": "Teppei Sato",
   "main": "index.js",
+  "files": [
+    "es6",
+    "es2016plus",
+    "esnext",
+    "alter-tests"
+  ],
   "scripts": {
     "es2016plus": "./run.js es2016plus",
     "es6": "./run.js es6",
@@ -22,10 +28,10 @@
     "object-assign": "^4.1.1",
     "rimraf": "^2.6.2"
   },
-  "license": "MIT",
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-teppeis": "^6.8.0",
     "prettier": "1.12.1"
-  }
+  },
+  "license": "MIT"
 }

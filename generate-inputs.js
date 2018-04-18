@@ -24,7 +24,11 @@ if (!testDir) {
 }
 
 function init() {
-  const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
+  const versionToDir = new Map([
+    ['es6', 'es6'],
+    ['es2016plus', 'es2016plus'],
+    ['esnext', 'esnext'],
+  ]);
   const esVersion = versionToDir.get(process.env.ES_VERSION);
   if (!esVersion) {
     throw new Error(`ES_VERSION is invalid: ${process.env.ES_VERSION}`);
@@ -48,5 +52,5 @@ function getTestSrc(dir) {
   try {
     return fs.readFileSync(path.join(alterDir, 'orig.js'), 'utf8');
   } catch (ignore) {}
-  throw new Error('test file not found: ' + dir);
+  throw new Error(`test file not found: ${dir}`);
 }

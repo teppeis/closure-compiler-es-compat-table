@@ -23,8 +23,10 @@ class TestCode {
 
   toString(ignoreEval = false) {
     const param = this.isAsync ? 'asyncTestPassed' : '';
-    const throws = this.useEval && !ignoreEval ?
-      `throw new Error('eval() and Function() cannot be transpiled');\n` : '';
+    const throws =
+      this.useEval && !ignoreEval
+        ? `throw new Error('eval() and Function() cannot be transpiled');\n`
+        : '';
     const initIterator = this.useCreateIterable ? '$jscomp.initSymbolIterator();\n' : '';
     // Use arrow function to enable EarlyEs6ToEs3Converter for Symbol polyfill
     // @see https://github.com/google/closure-compiler/issues/2881#issuecomment-381416295
@@ -51,7 +53,11 @@ if (!testDir) {
 }
 
 function init() {
-  const versionToDir = new Map([['es6', 'es6'], ['es2016plus', 'es2016plus'], ['esnext', 'esnext']]);
+  const versionToDir = new Map([
+    ['es6', 'es6'],
+    ['es2016plus', 'es2016plus'],
+    ['esnext', 'esnext'],
+  ]);
   const esVersion = versionToDir.get(process.env.ES_VERSION);
   if (!esVersion) {
     throw new Error(`ES_VERSION is invalid: ${process.env.ES_VERSION}`);
@@ -100,7 +106,7 @@ function format(src) {
   try {
     const {output} = linter.verifyAndFix(src, {
       parserOptions: {
-        ecmaVersion: 2018
+        ecmaVersion: 2018,
       },
       rules: {
         indent: ['error', 2],
@@ -131,9 +137,9 @@ function generateTestJsSrc(fn, name, origPath) {
     // NOTE: not used now
     // it's an array of objects like the following:
     // { type: 'application/javascript;version=1.8', script: function () { ... } }
-    throw new Error(name + ': test is an array');
+    throw new Error(`${name}: test is an array`);
   } else {
-    throw new Error(name + ': unknown test type :' + fn);
+    throw new Error(`${name}: unknown test type :${fn}`);
   }
 }
 

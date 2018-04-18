@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const meow = require('meow');
-const path = require('path');
 const execa = require('execa');
 
-const cli = meow(`
+const cli = meow(
+  `
 	Usage
 	  $ run.js TARGET
 
@@ -12,16 +14,18 @@ const cli = meow(`
     $ ./runjs es6
     $ ./runjs es6/v20180402
     $ ./runjs es6/v20180402/syntax/rest_parameters/basic_functionality
-`, {
-	flags: {
-	}
-});
+`,
+  {
+    flags: {},
+  }
+);
 
 if (cli.input.length !== 1) {
   cli.showHelp();
 }
 
 const match = /^([^/]+)(?:\/([^/]+))?(?:\/(.*))?/.exec(cli.input[0]);
+// eslint-disable-next-line prefer-const
 let [, esVer, closureVer, targetDir] = match;
 
 if (!esVer) {
@@ -30,7 +34,7 @@ if (!esVer) {
 
 const opts = {
   stdio: 'inherit',
-  cwd: __dirname
+  cwd: __dirname,
 };
 
 (async () => {
@@ -51,7 +55,7 @@ const opts = {
       ES_VERSION: esVer,
       CL_VERSION: closureVer,
       TEST_DIR: targetDir,
-    }
+    },
   });
   console.log('Compile');
   await execa('./compile.sh', [esVer, targetDir], opts);
