@@ -42,6 +42,10 @@ const failedFileInfo = resultFile
       throw new Error(`Invalid result line: ${line}`);
     }
     const [, out, result] = match;
+    return {out, result};
+  })
+  .filter(({result}) => result !== '[Pass]')
+  .map(({out, result}) => {
     const dir = path.dirname(out);
     const info = fileInfo.find(({path}) => path === dir);
     if (!info) {
