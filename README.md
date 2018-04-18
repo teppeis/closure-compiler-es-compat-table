@@ -4,7 +4,7 @@ ECMAScript compatibility checker for Closure Compiler
 ## Setup
 
 ```console
-$ git clone https://github.com/teppeis/closure-compiler-es6-compat-table.git
+$ git clone https://github.com/teppeis/closure-compiler-es-compat-table.git
 $ git submodule --init update
 $ npm install
 ```
