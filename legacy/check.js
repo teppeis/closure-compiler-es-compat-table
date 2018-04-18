@@ -34,7 +34,18 @@ async.mapSeries(files, checkTimeout, function(err, results) {
   if (err) {
     return console.error('check.js', err);
   }
-  console.log(results.join('\n'));
+  console.log(
+    results
+      .map(function(msg) {
+        return msg
+          .split('\n')
+          .map(function(line) {
+            return line.trim();
+          })
+          .join(' ');
+      })
+      .join('\n')
+  );
 });
 
 function checkTimeout(file, cb) {
