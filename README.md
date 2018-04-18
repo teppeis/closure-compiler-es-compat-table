@@ -1,18 +1,40 @@
-ES6 table checker for Closure Compiler
+ECMAScript compatibility checker for Closure Compiler
 ====
 
-## Usage:
+## Setup
 
-```
+```console
 $ git clone https://github.com/teppeis/closure-compiler-es6-compat-table.git
 $ git submodule --init update
 $ npm install
-$ npm run es6
-$ npm run es2016plus
-$ npm run esnext
 ```
 
-## Required
+### Required
 
-- Java for Closure Compiler
-- gcc for Nailgun
+- Node.js v8+
+- Java 8+
+- GCC to compile [Nailgun](http://martiansoftware.com/nailgun/)
+
+## Update tests
+
+Import new tests from `compat-table`
+
+```console
+$ ./update-tests.js v20180402
+```
+
+## Run tests and update result
+
+```console
+$ ./runjs es6             # use current installed google-closure-compiler
+$ ./runjs es6/v20180402   # use google-closure-compiler@20180402
+$ ./runjs es6/v20180402/syntax
+$ ./runjs es6/v20180402/syntax/rest_parameters
+$ ./runjs es6/v20180402/syntax/rest_parameters/basic_functionality
+```
+
+## Update `latest`
+
+```console
+$ ./update-latest.sh v20180402
+```
