@@ -8,7 +8,6 @@
 var fs = require('fs');
 var vm = require('vm');
 var path = require('path');
-var readdir = require('fs-readdir-recursive');
 var async = require('async');
 var assign = require('object-assign');
 
@@ -18,14 +17,18 @@ var testDir = process.env.TEST_DIR;
 var buildDir = path.join(path.dirname(__dirname), esVersion, clVersion);
 
 var dirs = require(path.join(buildDir, 'files.json'));
-var files = dirs.map(function(dir) {
+var files = dirs
+  .map(function(dir) {
     return path.join(dir, 'out.js');
   })
   .filter(function(file) {
     return !testDir || file.indexOf(testDir) > -1;
   });
 
-var createIterableObjectFunc = fs.readFileSync(path.join(__dirname, '__createIterableObject.js'), 'utf8');
+var createIterableObjectFunc = fs.readFileSync(
+  path.join(__dirname, '__createIterableObject.js'),
+  'utf8'
+);
 
 async.mapSeries(files, checkTimeout, function(err, results) {
   if (err) {
@@ -103,14 +106,23 @@ function check(file, cb) {
 
   try {
     var test = fs.readFileSync(fileAbs, 'utf8');
-    var src = 'var global = Function("return this")();' + test + ';' + createIterableObjectFunc + ';module.exports(callback);';
+    var src =
+      'var global = Function("return this")();' +
+      test +
+      ';' +
+      createIterableObjectFunc +
+      ';module.exports(callback);';
     if (isAsyncTest(test)) {
       // async
-      return vm.runInNewContext(src, assign(context, {
-        callback: function() {
-          return cb(null, file + ': [Pass]');
-        }
-      }), file); // for Node v0.10 API
+      return vm.runInNewContext(
+        src,
+        assign(context, {
+          callback: function() {
+            return cb(null, file + ': [Pass]');
+          },
+        }),
+        file
+      ); // for Node v0.10 API
     } else {
       // sync
       var res = vm.runInNewContext(src, context, file); // for Node v0.10 API

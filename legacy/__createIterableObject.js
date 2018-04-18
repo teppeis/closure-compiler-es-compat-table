@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 global.__createIterableObject = function(arr, methods) {
   methods = methods || {};
   // eslint-disable-next-line no-undef
