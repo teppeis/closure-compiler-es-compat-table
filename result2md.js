@@ -24,8 +24,8 @@ if (cli.input.length !== 1) {
   cli.showHelp();
 }
 const resultFilePass = cli.input[0];
-const match = /^(es[^/]+)/.exec(resultFilePass);
-const [, esVersion] = match;
+const match = /^(es[^/]+)\/([^/]+)/.exec(resultFilePass);
+const [, esVersion, clVersion] = match;
 if (!esVersion) {
   throw new Error(`ES_VERSION is invalid`);
 }
@@ -48,7 +48,7 @@ const failedFileInfo = resultFile
       throw new Error(`fileInfo not found: ${dir}`);
     }
     const escapedPath = escapeDirAsUrl(out);
-    const url = `https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/${escapedPath}`;
+    const url = `https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/${esVersion}/${clVersion}/${escapedPath}`;
     return {...info, result, url};
   });
 
