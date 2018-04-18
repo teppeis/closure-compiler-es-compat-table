@@ -2,6 +2,8 @@
 
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
 const meow = require('meow');
 const execa = require('execa');
 
@@ -61,6 +63,9 @@ const opts = {
   await execa('./compile.sh', [esVer, targetDir], opts);
   console.log('Check');
   await execa('./check.sh', [esVer, targetDir], opts);
-  // console.log('Cleanup');
-  // await execa('./clean-path.sh', [esVer], opts);
+  console.log('Generate fail.md');
+  const {stdout} = await execa('./result2md.js', [path.join(esVer, closureVer, 'result.txt')], {
+    cwd: __dirname,
+  });
+  fs.writeFileSync(path.join(__dirname, esVer, closureVer, 'fail.md'), stdout);
 })();

@@ -13,7 +13,7 @@ const cli = meow(
 	  $ result2md.js RESULT
 
 	Examples
-    $ ./runjs es6/v20180402/pass.txt
+    $ ./runjs es6/v20180402/result.txt
 `,
   {
     flags: {},
@@ -23,21 +23,34 @@ const cli = meow(
 if (cli.input.length !== 1) {
   cli.showHelp();
 }
-const passFilePass = cli.input[0];
-const match = /^(es[^/]+)/.exec(passFilePass);
+const resultFilePass = cli.input[0];
+const match = /^(es[^/]+)/.exec(resultFilePass);
 const [, esVersion] = match;
 if (!esVersion) {
   throw new Error(`ES_VERSION is invalid`);
 }
 const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
 const fileInfo = require(path.join(alterTestDir, 'fileinfo.json'));
-const passFile = fs.readFileSync(path.join(process.cwd(), passFilePass), 'utf8');
+const resultFile = fs.readFileSync(path.join(process.cwd(), resultFilePass), 'utf8');
 
-const failedFileInfo = fileInfo.filter(({path}) => !passFile.includes(path)).map(info => {
-  const escapedPath = escapeDirAsUrl(info.path);
-  info.url = `https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/${escapedPath}`;
-  return info;
-});
+const failedFileInfo = resultFile
+  .split('\n')
+  .filter(line => !!line)
+  .map(line => {
+    const match = /^([^:]*): (.*)$/.exec(line);
+    if (!match) {
+      throw new Error(`Invalid result line: ${line}`);
+    }
+    const [, out, result] = match;
+    const dir = path.dirname(out);
+    const info = fileInfo.find(({path}) => path === dir);
+    if (!info) {
+      throw new Error(`fileInfo not found: ${dir}`);
+    }
+    const escapedPath = escapeDirAsUrl(out);
+    const url = `https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/${escapedPath}`;
+    return {...info, result, url};
+  });
 
 function escapeDirAsUrl(dir) {
   return dir
@@ -71,7 +84,8 @@ failedFileInfo
     if (!subtest) {
       subtestName = test;
     }
-    output.push(`- ${subtestName} ([in](${url}/in.js)/[out](${url}/out.js))`);
+    const input = `${path.dirname(url)}/in.js`;
+    output.push(`- ${subtestName} ([in](${input})/[out](${url}))`);
   });
 
 console.log(output.join('\n'));

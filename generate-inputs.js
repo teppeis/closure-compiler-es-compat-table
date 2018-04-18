@@ -8,16 +8,13 @@ const mkdirp = require('mkdirp');
 
 const {basedir, testDir, alterTestDir, fileList} = init();
 
-fileList
-  .map(({path}) => path)
-  .filter(dir => !testDir || `${dir}/`.includes(testDir))
-  .forEach(dir => {
-    const src = getTestSrc(dir);
-    const writeDir = path.join(basedir, dir);
-    console.log(writeDir);
-    mkdirp.sync(writeDir);
-    fs.writeFileSync(path.join(writeDir, 'in.js'), src);
-  });
+fileList.filter(dir => !testDir || `${dir}/`.includes(testDir)).forEach(dir => {
+  const src = getTestSrc(dir);
+  const writeDir = path.join(basedir, dir);
+  console.log(writeDir);
+  mkdirp.sync(writeDir);
+  fs.writeFileSync(path.join(writeDir, 'in.js'), src);
+});
 
 if (!testDir) {
   fs.writeFileSync(path.join(basedir, 'files.json'), JSON.stringify(fileList, null, 2));
