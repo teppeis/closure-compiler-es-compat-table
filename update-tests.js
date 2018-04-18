@@ -6,7 +6,25 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const Linter = require('eslint').Linter;
+const meow = require('meow');
 
+const cli = meow(
+  `
+	Usage
+	  $ update-tests.js ES_VERSION
+
+	Examples
+    $ ./update-tests.js es6
+`,
+  {
+    flags: {},
+  }
+);
+
+if (cli.input.length !== 1) {
+  cli.showHelp();
+}
+const esVersion = cli.input[0];
 const {testDir, alterTestDir, data} = init();
 const fileList = [];
 const linter = new Linter();
@@ -53,14 +71,9 @@ if (!testDir) {
 }
 
 function init() {
-  const versionToDir = new Map([
-    ['es6', 'es6'],
-    ['es2016plus', 'es2016plus'],
-    ['esnext', 'esnext'],
-  ]);
-  const esVersion = versionToDir.get(process.env.ES_VERSION);
-  if (!esVersion) {
-    throw new Error(`ES_VERSION is invalid: ${process.env.ES_VERSION}`);
+  const versions = new Set(['es6', 'es2016plus', 'esnext']);
+  if (!versions.has(esVersion)) {
+    throw new Error(`ES_VERSION is invalid: ${esVersion}`);
   }
   const testDir = process.env.TEST_DIR;
   const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
