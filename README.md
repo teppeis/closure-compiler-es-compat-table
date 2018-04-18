@@ -1,6 +1,8 @@
 ECMAScript compatibility checker for Closure Compiler
 ====
 
+Run [kangax's ES compat-table tests](https://kangax.github.io/compat-table/es6/) and store the results.
+
 ## Setup
 
 ```console
