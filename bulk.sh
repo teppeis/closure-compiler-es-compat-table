@@ -1,20 +1,27 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 reset () {
+    echo "update $1"
     rm -rf "$1"
     ./run.js "$1"
     git add "$1"
     git ci -m "update $1"
 }
 
-reset es6/v20180402
-reset es2016plus/v20180402
-reset esnext/v20180402
+reset_closure () {
+    clVer=$1
+    reset "es6/$clVer"
+    reset "es2016plus/$clVer"
+    reset "esnext/$clVer"
+}
 
-reset es6/v20180319
-reset es2016plus/v20180319
-reset esnext/v20180319
+reset_es () {
+    esVer=$1
+    find "$esVer" -type d -depth 1 -name 'v*' -print0 | sort -zr | while IFS= read -r -d $'\0' dir; do
+        reset "$dir"
+    done
+}
 
-reset es6/v20180204
-reset es2016plus/v20180204
-reset esnext/v20180204
+reset_closure v20180402
+reset_closure v20180319
+reset_closure v20180204
