@@ -9,12 +9,10 @@
 
 ### default function parameters
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/default_function_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/default_function_parameters/arguments_object_interaction/out.js))
-- new Function() support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/default_function_parameters/new_Function___support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/default_function_parameters/new_Function___support/out.js))
 
 ### rest parameters
 - function 'length' property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/function_length_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/function_length_property/out.js))
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/arguments_object_interaction/out.js))
-- new Function() support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/new_Function___support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/rest_parameters/new_Function___support/out.js))
 
 ### spread (...) operator
 - with sparse arrays, in array literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/spread__...__operator/with_sparse_arrays%2C_in_array_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/spread__...__operator/with_sparse_arrays%2C_in_array_literals/out.js))
@@ -56,8 +54,6 @@
 ### destructuring, parameters
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/with_astral_plane_strings/out.js))
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/iterator_closing/out.js))
-- new Function() support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/new_Function___support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/new_Function___support/out.js))
-- defaults, new Function() support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/defaults%2C_new_Function___support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/destructuring%2C_parameters/defaults%2C_new_Function___support/out.js))
 
 ### Unicode code point escapes
 - in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/Unicode_code_point_escapes/in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180402/syntax/Unicode_code_point_escapes/in_identifiers/out.js))
