@@ -66,6 +66,7 @@ function escapeDirAsUrl(dir) {
 // const output = [`# ES2015`];
 const output = [];
 const skipCategories = new Set(['subclassing']);
+const skipTests = new Set(['shared memory and atomics']);
 const skipSubtests = new Set([
   'Reflect.construct, Array subclassing',
   'Reflect.construct, RegExp subclassing',
@@ -78,7 +79,7 @@ let prevTest = null;
 failedFileInfo
   .filter(info => !!info)
   .filter(({category}) => !skipCategories.has(category.toLowerCase()))
-  .filter(({test}) => !/^Proxy/.test(test))
+  .filter(({test}) => !/^Proxy/.test(test) && !skipTests.has(test))
   .filter(({subtest}) => !skipSubtests.has(subtest))
   .forEach(({category, test, subtest, url}) => {
     if (prevCategory !== category) {
