@@ -13,9 +13,9 @@
 - String.prototype.matchAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/String.prototype.matchAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/String.prototype.matchAll/out.js))
 
 ### instance class fields
-- public instance class fields ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
-- private instance class fields basic support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
-- private instance class fields initializers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt))
+- public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
+- private instance class fields basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
+- private instance class fields initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt))
 
 ### Function.prototype.toString revision
 - functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))
@@ -30,33 +30,33 @@
 - Array.prototype.flatMap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/Array.prototype._flatten%2C_flatMap_/Array.prototype.flatMap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/Array.prototype._flatten%2C_flatMap_/Array.prototype.flatMap/out.js))
 
 ### optional catch binding
-- basic ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/basic/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/basic/error.txt))
-- await ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/await/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/await/error.txt))
-- yield ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/yield/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/yield/error.txt))
+- basic ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/basic/error.txt))
+- await ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/await/error.txt))
+- yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/optional_catch_binding/yield/error.txt))
 
 ### numeric separators
-- numeric separators ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/numeric_separators/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/numeric_separators/error.txt))
+- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/candidate__stage_3_/numeric_separators/error.txt))
 
 ## Draft (stage 2)
 
 ### Generator function.sent Meta Property
-- Generator function.sent Meta Property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Generator_function.sent_Meta_Property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Generator_function.sent_Meta_Property/error.txt))
+- Generator function.sent Meta Property ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Generator_function.sent_Meta_Property/error.txt))
 
 ### Class and Property Decorators
-- class decorators ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Class_and_Property_Decorators/class_decorators/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt))
+- class decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt))
 
 ### weak references
 - weak references ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/weak_references/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/weak_references/out.js))
 
 ### static class fields
-- public static class fields ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/public_static_class_fields/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/public_static_class_fields/error.txt))
-- private static class fields ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/private_static_class_fields/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/private_static_class_fields/error.txt))
+- public static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/public_static_class_fields/error.txt))
+- private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/static_class_fields/private_static_class_fields/error.txt))
 
 ### throw expressions
-- logical ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/logical/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/logical/error.txt))
-- parameter initializers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/parameter_initializers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/parameter_initializers/error.txt))
-- arrow function bodies ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/arrow_function_bodies/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
-- conditionals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/conditionals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/conditionals/error.txt))
+- logical ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/logical/error.txt))
+- parameter initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/parameter_initializers/error.txt))
+- arrow function bodies ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
+- conditionals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/throw_expressions/conditionals/error.txt))
 
 ### Symbol.prototype.description
 - Symbol.prototype.description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Symbol.prototype.description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/draft__stage_2_/Symbol.prototype.description/out.js))
@@ -64,7 +64,7 @@
 ## Proposal (stage 1)
 
 ### do expressions
-- do expressions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/do_expressions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/do_expressions/error.txt))
+- do expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/do_expressions/error.txt))
 
 ### SIMD (Single Instruction, Multiple Data)
 - basic support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/SIMD__Single_Instruction%2C_Multiple_Data_/basic_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/SIMD__Single_Instruction%2C_Multiple_Data_/basic_support/out.js))
@@ -172,42 +172,42 @@
 - WeakSet.from ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.from/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.from/out.js))
 
 ### the pipeline operator
-- the pipeline operator ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/the_pipeline_operator/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/the_pipeline_operator/error.txt))
+- the pipeline operator ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/the_pipeline_operator/error.txt))
 
 ### extensible numeric literals
-- extensible numeric literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/extensible_numeric_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/extensible_numeric_literals/error.txt))
+- extensible numeric literals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/extensible_numeric_literals/error.txt))
 
 ### optional chaining operator (?.)
-- optional property access ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_property_access/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_property_access/error.txt))
-- optional bracket access ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access/error.txt))
-- optional method call ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_method_call/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_method_call/error.txt))
+- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_property_access/error.txt))
+- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access/error.txt))
+- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/optional_chaining_operator___._/optional_method_call/error.txt))
 
 ### nullish coalescing operator (??)
-- nullish coalescing operator (??) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/nullish_coalescing_operator_____/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/nullish_coalescing_operator_____/error.txt))
+- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/nullish_coalescing_operator_____/error.txt))
 
 ### partial application syntax
-- partial application from left ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left/error.txt))
-- partial application from right ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right/error.txt))
-- partial application for any arg ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/error.txt))
-- partial application from left with rest ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/error.txt))
-- partial application from right with rest ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/error.txt))
-- partial application for any arg with rest ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest/error.txt))
-- mixed partial application ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/mixed_partial_application/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/mixed_partial_application/error.txt))
-- runtime evaluation ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation/error.txt))
-- runtime evaluation of property access ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/error.txt))
-- lexical `this` ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/lexical__this_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/lexical__this_/error.txt))
-- constructor partial application ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application/error.txt))
-- constructor partial application with rest ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/error.txt))
+- partial application from left ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left/error.txt))
+- partial application from right ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right/error.txt))
+- partial application for any arg ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/error.txt))
+- partial application from left with rest ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/error.txt))
+- partial application from right with rest ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/error.txt))
+- partial application for any arg with rest ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest/error.txt))
+- mixed partial application ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/mixed_partial_application/error.txt))
+- runtime evaluation ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation/error.txt))
+- runtime evaluation of property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/error.txt))
+- lexical `this` ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/lexical__this_/error.txt))
+- constructor partial application ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application/error.txt))
+- constructor partial application with rest ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/error.txt))
 
 ### Object.freeze and Object.seal syntax
-- Object.freeze syntax ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/error.txt))
-- Object.freeze syntax with array literal ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/error.txt))
-- Object.seal syntax ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax/error.txt))
-- Object.seal syntax with array literal ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/error.txt))
-- Sealing, function destructuring ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_destructuring/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_destructuring/error.txt))
-- Freezing, function destructuring ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_destructuring/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_destructuring/error.txt))
-- Sealing, function arguments ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_arguments/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_arguments/error.txt))
-- Freezing, function arguments ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_arguments/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_arguments/error.txt))
+- Object.freeze syntax ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/error.txt))
+- Object.freeze syntax with array literal ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/error.txt))
+- Object.seal syntax ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax/error.txt))
+- Object.seal syntax with array literal ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/error.txt))
+- Sealing, function destructuring ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_destructuring/error.txt))
+- Freezing, function destructuring ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_destructuring/error.txt))
+- Sealing, function arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_arguments/error.txt))
+- Freezing, function arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_arguments/error.txt))
 
 ### String.prototype.replaceAll
 - String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/proposal__stage_1_/String.prototype.replaceAll/out.js))
@@ -248,26 +248,26 @@
 ## Strawman (stage 0)
 
 ### bind (::) operator
-- binary form ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/binary_form/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/binary_form/error.txt))
-- unary form ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/unary_form/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/unary_form/error.txt))
+- binary form ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/binary_form/error.txt))
+- unary form ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/bind______operator/unary_form/error.txt))
 
 ### String.prototype.at
 - String.prototype.at ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/String.prototype.at/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/String.prototype.at/out.js))
 
 ### additional meta properties
-- function.callee ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.callee/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.callee/error.txt))
-- function.count ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.count/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.count/error.txt))
-- function.arguments ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.arguments/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.arguments/error.txt))
+- function.callee ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.callee/error.txt))
+- function.count ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.count/error.txt))
+- function.arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/additional_meta_properties/function.arguments/error.txt))
 
 ### method parameter decorators
-- method parameter decorators ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/method_parameter_decorators/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/method_parameter_decorators/error.txt))
+- method parameter decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/method_parameter_decorators/error.txt))
 
 ### function expression decorators
-- function expression decorators ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/function_expression_decorators/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/function_expression_decorators/error.txt))
+- function expression decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/function_expression_decorators/error.txt))
 
 ### Reflect.isCallable / Reflect.isConstructor
-- Reflect.isCallable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/error.txt))
-- Reflect.isConstructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/error.txt))
+- Reflect.isCallable ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/error.txt))
+- Reflect.isConstructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/error.txt))
 
 ### zones
 - Zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/zones/Zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/zones/Zone/out.js))
@@ -282,12 +282,12 @@
 - asap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/asap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/asap/out.js))
 
 ### syntactic tail calls
-- direct recursion ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/direct_recursion/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt))
-- mutual recursion ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt))
+- direct recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt))
+- mutual recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt))
 
 ### object shorthand improvements
-- object initializers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/object_initializers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
-- destructuring assignments ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
+- object initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
+- destructuring assignments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180204/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
 
 ## Pre strawman
 

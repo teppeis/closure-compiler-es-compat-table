@@ -23,7 +23,7 @@
 - spreading non-iterables is a runtime error ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error/out.js))
 
 ### object literal extensions
-- computed accessors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/object_literal_extensions/computed_accessors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/object_literal_extensions/computed_accessors/error.txt))
+- computed accessors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/object_literal_extensions/computed_accessors/error.txt))
 
 ### for..of loops
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/for..of_loops/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/for..of_loops/with_astral_plane_strings/out.js))
@@ -63,8 +63,8 @@
 - in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/Unicode_code_point_escapes/in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/Unicode_code_point_escapes/in_identifiers/out.js))
 
 ### new.target
-- in constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/in_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/in_constructors/error.txt))
-- assignment is an early error ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/assignment_is_an_early_error/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/assignment_is_an_early_error/error.txt))
+- in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/in_constructors/error.txt))
+- assignment is an early error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/new.target/assignment_is_an_early_error/error.txt))
 
 ## Bindings
 
@@ -80,22 +80,22 @@
 
 ### arrow functions
 - no "prototype" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/no_prototype_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/no_prototype_property/out.js))
-- lexical "super" binding in constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_super_binding_in_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_super_binding_in_constructors/error.txt))
-- lexical "new.target" binding ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_new.target_binding/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_new.target_binding/error.txt))
+- lexical "super" binding in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_super_binding_in_constructors/error.txt))
+- lexical "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/arrow_functions/lexical_new.target_binding/error.txt))
 
 ### class
-- computed static accessor properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/computed_static_accessor_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/computed_static_accessor_properties/error.txt))
-- class name is lexically scoped ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/class_name_is_lexically_scoped/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/class_name_is_lexically_scoped/error.txt))
+- computed static accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/computed_static_accessor_properties/error.txt))
+- class name is lexically scoped ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/class_name_is_lexically_scoped/error.txt))
 - computed names, temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/computed_names%2C_temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/computed_names%2C_temporal_dead_zone/out.js))
 - methods aren't enumerable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/methods_arent_enumerable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/methods_arent_enumerable/out.js))
 - implicit strict mode ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/implicit_strict_mode/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/implicit_strict_mode/out.js))
 - constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/constructor_requires_new/out.js))
-- extends expressions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_expressions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_expressions/error.txt))
-- extends null ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/error.txt))
-- new.target ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/new.target/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/new.target/error.txt))
+- extends expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_expressions/error.txt))
+- extends null ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/error.txt))
+- new.target ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/new.target/error.txt))
 
 ### super
-- constructor calls use correct "new.target" binding ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/constructor_calls_use_correct_new.target_binding/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/constructor_calls_use_correct_new.target_binding/error.txt))
+- constructor calls use correct "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/constructor_calls_use_correct_new.target_binding/error.txt))
 - is statically bound ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/is_statically_bound/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/is_statically_bound/out.js))
 
 ### generators
@@ -137,10 +137,7 @@
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/WeakSet/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/WeakSet/iterator_closing/out.js))
 
 ### Reflect
-- Reflect.construct sets new.target meta-property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/error.txt))
-- Reflect.construct, Array subclassing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Array_subclassing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Array_subclassing/out.js))
-- Reflect.construct, RegExp subclassing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_RegExp_subclassing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_RegExp_subclassing/out.js))
-- Reflect.construct, Function subclassing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Function_subclassing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Function_subclassing/out.js))
+- Reflect.construct sets new.target meta-property ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/error.txt))
 - Reflect.construct, Promise subclassing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Promise_subclassing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Reflect/Reflect.construct%2C_Promise_subclassing/out.js))
 
 ### Promise
@@ -184,7 +181,7 @@
 - Symbol.toStringTag affects existing built-ins ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins/out.js))
 - Symbol.toStringTag, new built-ins ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag%2C_new_built-ins/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag%2C_new_built-ins/out.js))
 - Symbol.toStringTag, misc. built-ins ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag%2C_misc._built-ins/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.toStringTag%2C_misc._built-ins/out.js))
-- Symbol.unscopables ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.unscopables/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.unscopables/error.txt))
+- Symbol.unscopables ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/well-known_symbols/Symbol.unscopables/error.txt))
 
 ## Built in extensions
 
@@ -202,7 +199,7 @@
 - shorthand methods ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/shorthand_methods/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/shorthand_methods/out.js))
 - symbol-keyed methods ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/symbol-keyed_methods/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/symbol-keyed_methods/out.js))
 - class statements ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_statements/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_statements/out.js))
-- class expressions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_expressions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_expressions/error.txt))
+- class expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_expressions/error.txt))
 - variables (class) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/variables__class_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/variables__class_/out.js))
 - object methods (class) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/object_methods__class_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/object_methods__class_/out.js))
 - class prototype methods ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_prototype_methods/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/function_name_property/class_prototype_methods/out.js))
@@ -253,7 +250,7 @@
 - generator functions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/generator_functions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/generator_functions/out.js))
 - arrow functions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/arrow_functions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/arrow_functions/out.js))
 - classes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/classes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/classes/out.js))
-- subclasses ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/error.txt))
+- subclasses ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/error.txt))
 
 ### Object static methods accept primitives
 - Object.getPrototypeOf ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Object_static_methods_accept_primitives/Object.getPrototypeOf/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Object_static_methods_accept_primitives/Object.getPrototypeOf/out.js))
@@ -273,10 +270,10 @@
 
 ### Updated identifier syntax
 - var ⸯ; ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Updated_identifier_syntax/var_U%2B2E2F_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Updated_identifier_syntax/var_U%2B2E2F_/out.js))
-- var 𐋀; ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Updated_identifier_syntax/var_U%2B102C0_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Updated_identifier_syntax/var_U%2B102C0_/error.txt))
+- var 𐋀; ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Updated_identifier_syntax/var_U%2B102C0_/error.txt))
 
 ### miscellaneous
-- duplicate property names in strict mode ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/duplicate_property_names_in_strict_mode/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/duplicate_property_names_in_strict_mode/error.txt))
+- duplicate property names in strict mode ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/duplicate_property_names_in_strict_mode/error.txt))
 - accessors aren't constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/accessors_arent_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/accessors_arent_constructors/out.js))
 - RegExp constructor can alter flags ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/RegExp_constructor_can_alter_flags/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/RegExp_constructor_can_alter_flags/out.js))
 - RegExp.prototype.toString generic and uses "flags" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/RegExp.prototype.toString_generic_and_uses_flags_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/miscellaneous/RegExp.prototype.toString_generic_and_uses_flags_property/out.js))
@@ -287,8 +284,8 @@
 
 ### non-strict function semantics
 - hoisted block-level function declaration ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/hoisted_block-level_function_declaration/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/hoisted_block-level_function_declaration/out.js))
-- labeled function statements ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/labeled_function_statements/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/labeled_function_statements/error.txt))
-- function statements in if-statement clauses ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/error.txt))
+- labeled function statements ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/labeled_function_statements/error.txt))
+- function statements in if-statement clauses ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/error.txt))
 
 ### __proto__ in object literals
 - basic support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/__proto___in_object_literals/basic_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/annex_b/__proto___in_object_literals/basic_support/out.js))

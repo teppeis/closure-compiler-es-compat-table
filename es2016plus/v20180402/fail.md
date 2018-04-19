@@ -20,7 +20,7 @@
 ### async functions
 - no line break between async and function ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/no_line_break_between_async_and_function/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/no_line_break_between_async_and_function/out.js))
 - no "prototype" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/no_prototype_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/no_prototype_property/out.js))
-- cannot await in parameters ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/cannot_await_in_parameters/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/cannot_await_in_parameters/error.txt))
+- cannot await in parameters ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/cannot_await_in_parameters/error.txt))
 - correct prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/correct_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/correct_prototype_chain/out.js))
 - async function prototype, Symbol.toStringTag ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/async_function_prototype%2C_Symbol.toStringTag/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/async_function_prototype%2C_Symbol.toStringTag/out.js))
 - async function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/async_function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_features/async_functions/async_function_constructor/out.js))
@@ -60,15 +60,15 @@
 - __lookupSetter__, data properties can shadow accessors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__%2C_data_properties_can_shadow_accessors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__%2C_data_properties_can_shadow_accessors/out.js))
 
 ### assignments allowed in for-in head in non-strict mode
-- assignments allowed in for-in head in non-strict mode ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/error.txt))
+- assignments allowed in for-in head in non-strict mode ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/error.txt))
 
 ## 2018 features
 
 ### template literal revision
-- template literal revision ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/template_literal_revision/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/template_literal_revision/error.txt))
+- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/template_literal_revision/error.txt))
 
 ### s (dotAll) flag for regular expressions
-- s (dotAll) flag for regular expressions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/s__dotAll__flag_for_regular_expressions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
+- s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
 
 ### RegExp named capture groups
 - RegExp named capture groups ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/RegExp_named_capture_groups/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/RegExp_named_capture_groups/out.js))
@@ -80,5 +80,5 @@
 - RegExp Unicode Property Escapes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/RegExp_Unicode_Property_Escapes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/RegExp_Unicode_Property_Escapes/out.js))
 
 ### Asynchronous Iterators
-- async generators ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/async_generators/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/async_generators/error.txt))
-- for-await-of loops ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/for-await-of_loops/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt))
+- async generators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/async_generators/error.txt))
+- for-await-of loops ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180402/2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt))
