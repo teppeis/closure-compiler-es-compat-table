@@ -70,6 +70,8 @@ const skipSubtests = new Set([
   'Reflect.construct, Array subclassing',
   'Reflect.construct, RegExp subclassing',
   'Reflect.construct, Function subclassing',
+  'new Function() support',
+  'defaults, new Function() support',
 ]);
 let prevCategory = null;
 let prevTest = null;
