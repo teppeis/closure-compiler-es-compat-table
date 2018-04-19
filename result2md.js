@@ -94,8 +94,14 @@ failedFileInfo
     if (!subtest) {
       subtestName = test;
     }
-    const input = `${path.dirname(url)}/in.js`;
-    output.push(`- ${subtestName} ([in](${input})/[out](${url}))`);
+    if (/error\.txt$/.test(url)) {
+      // compile error
+      output.push(`- ${subtestName} ([compile error](${url}))`);
+    } else {
+      // invalid transpile or not implemented
+      const input = `${path.dirname(url)}/in.js`;
+      output.push(`- ${subtestName} ([in](${input})/[out](${url}))`);
+    }
   });
 
 console.log(output.join('\n'));
