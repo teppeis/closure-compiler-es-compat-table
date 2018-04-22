@@ -1,7 +1,6 @@
 {
   "extends": ["teppeis/node-v8", "teppeis/prettier"],
   "rules": {
-    "no-empty": ["error", { "allowEmptyCatch": true }],
     "node/shebang": "off"
   }
 }
