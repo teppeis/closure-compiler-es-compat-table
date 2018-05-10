@@ -21,7 +21,7 @@
     "closure-gun": "^0.1.12",
     "execa": "^0.10.0",
     "fs-readdir-recursive": "^1.1.0",
-    "google-closure-compiler": "^20180402.0.0",
+    "google-closure-compiler": "^20180506.0.0",
     "humanize-string": "^1.0.2",
     "meow": "^4.0.1",
     "mkdirp": "^0.5.1",

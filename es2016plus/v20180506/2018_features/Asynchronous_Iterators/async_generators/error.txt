@@ -1,0 +1,17 @@
+// 2018 features / Asynchronous Iterators / async generators
+module.exports = (asyncTestPassed) => {
+  async function*generator(){
+    yield 42;
+  }
+  var iterator = generator();
+  iterator.next().then(function(step){
+    if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();
+  });
+
+};
+----------------------------------------------------------
+es2016plus/v20180506/2018_features/Asynchronous_Iterators/async_generators/in.js:3: ERROR - Parse error. async functions cannot be generators
+  async function*generator(){
+                ^
+
+1 error(s), 0 warning(s)

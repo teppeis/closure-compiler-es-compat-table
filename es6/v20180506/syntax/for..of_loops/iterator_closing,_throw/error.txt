@@ -1,0 +1,19 @@
+// syntax / for..of loops / iterator closing, throw
+module.exports = () => {
+  $jscomp.initSymbolIterator();
+  var closed = false;
+  var iter = __createIterableObject([1, 2, 3], {
+    'return': function(){ closed = true; return {}; }
+  });
+  try {
+    for (var it of iter) throw 0;
+  } catch(e){}
+  return closed;
+
+};
+----------------------------------------------------------
+es6/v20180506/syntax/for..of_loops/iterator_closing,_throw/in.js:9: WARNING - unreachable code
+    for (var it of iter) throw 0;
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

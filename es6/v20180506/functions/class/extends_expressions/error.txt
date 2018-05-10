@@ -1,0 +1,14 @@
+// functions / class / extends expressions
+module.exports = () => {
+  var B;
+  class C extends (B = class {}) {}
+  return new C() instanceof B
+&& B.isPrototypeOf(C);
+
+};
+----------------------------------------------------------
+es6/v20180506/functions/class/extends_expressions/in.js:4: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+  class C extends (B = class {}) {}
+                       ^^^^^^^^
+
+1 error(s), 0 warning(s)
