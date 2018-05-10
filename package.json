@@ -23,7 +23,7 @@
     "fs-readdir-recursive": "^1.1.0",
     "google-closure-compiler": "^20180506.0.0",
     "humanize-string": "^1.0.2",
-    "meow": "^4.0.1",
+    "meow": "^5.0.0",
     "mkdirp": "^0.5.1",
     "object-assign": "^4.1.1",
     "rimraf": "^2.6.2"
