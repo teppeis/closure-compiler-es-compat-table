@@ -15,7 +15,7 @@ return target === C.prototype
 
 };
 ----------------------------------------------------------
-esnext/v20180402/strawman__stage_0_/method_parameter_decorators/in.js:10: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
+esnext/v20180506/strawman__stage_0_/method_parameter_decorators/in.js:10: ERROR - Parse error. Character '@' (U+0040) is not a valid identifier start char
 method(@decorator foo){ }
        ^
 

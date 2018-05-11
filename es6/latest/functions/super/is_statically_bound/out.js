@@ -57,6 +57,6 @@ module.exports = function() {
   b.prototype.qux = function() {
     return a.prototype.qux.call(this) + this.corge;
   };
-  return "barley" === b.prototype.qux();
+  return "barley" === {qux:b.prototype.qux, corge:"ley"}.qux();
 };
 

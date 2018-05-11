@@ -46,6 +46,21 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.underscoreProtoCanBeSet = function() {
+  var a = {a:!0}, b = {};
+  try {
+    return b.__proto__ = a, b.a;
+  } catch (e) {
+  }
+  return !1;
+};
+$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
+  }
+  return a;
+} : null;
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
   var b = a[Symbol.iterator];
@@ -250,8 +265,9 @@ $jscomp.generator.Generator_ = function(a) {
   };
 };
 $jscomp.generator.createGenerator = function(a, b) {
-  $jscomp.generator.Generator_.prototype = a.prototype;
-  return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  return b;
 };
 $jscomp.checkEs6ConformanceViaProxy = function() {
   try {
@@ -398,6 +414,7 @@ $jscomp.polyfill("Map", function(a) {
     }
   };
   f.prototype.set = function(a, b) {
+    a = 0 === a ? 0 : a;
     var g = c(this, a);
     g.list || (g.list = this.data_[g.id] = []);
     g.entry ? g.entry.value = b : (g.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:a, value:b}, g.list.push(g.entry), this.head_.previous.next = g.entry, this.head_.previous = g.entry, this.size++);
@@ -514,6 +531,7 @@ $jscomp.polyfill("Set", function(a) {
     this.size = this.map_.size;
   };
   e.prototype.add = function(a) {
+    a = 0 === a ? 0 : a;
     this.map_.set(a, a);
     this.size = this.map_.size;
     return this;
@@ -764,17 +782,11 @@ module.exports = function() {
   $jscomp.initSymbol();
   return a = a && "GeneratorFunction" === Object.getPrototypeOf(function f() {
     return $jscomp.generator.createGenerator(f, function(a) {
-      switch(a.nextAddress) {
-        case 1:
-          a.jumpToEnd();
-      }
+      a.jumpToEnd();
     });
   })[b] && "Generator" === Object.getPrototypeOf(function c() {
     return $jscomp.generator.createGenerator(c, function(a) {
-      switch(a.nextAddress) {
-        case 1:
-          a.jumpToEnd();
-      }
+      a.jumpToEnd();
     });
   }())[b] && "Map" === Map.prototype[b] && "Set" === Set.prototype[b] && "ArrayBuffer" === ArrayBuffer.prototype[b] && "DataView" === DataView.prototype[b] && "Promise" === Promise.prototype[b] && "Symbol" === Symbol.prototype[b] && "function" === typeof Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get;
 };

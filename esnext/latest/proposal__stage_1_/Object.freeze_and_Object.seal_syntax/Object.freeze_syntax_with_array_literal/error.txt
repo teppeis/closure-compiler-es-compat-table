@@ -4,7 +4,7 @@ return Object.isFrozen([# 42 #]);
 
 };
 ----------------------------------------------------------
-esnext/v20180402/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/in.js:3: ERROR - Parse error. ']' expected
+esnext/v20180506/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/in.js:3: ERROR - Parse error. ']' expected
 return Object.isFrozen([# 42 #]);
                         ^
 

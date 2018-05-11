@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180402/built-ins/Set/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Set' is not being used.
+es6/v20180506/built-ins/Set/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Set' is not being used.
     Set();
     ^^^^^
 

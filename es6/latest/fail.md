@@ -92,10 +92,8 @@
 
 ### super
 - constructor calls use correct "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/constructor_calls_use_correct_new.target_binding/error.txt))
-- is statically bound ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/is_statically_bound/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/super/is_statically_bound/out.js))
 
 ### generators
-- correct "this" binding ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/correct_this_binding/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/correct_this_binding/out.js))
 - can't use "this" with new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/cant_use_this_with_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/cant_use_this_with_new/out.js))
 - %GeneratorPrototype% ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/%25GeneratorPrototype%25/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/%25GeneratorPrototype%25/out.js))
 - %GeneratorPrototype% prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/%25GeneratorPrototype%25_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/%25GeneratorPrototype%25_prototype_chain/out.js))
@@ -112,14 +110,12 @@
 ### Map
 - constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/constructor_requires_new/out.js))
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/iterator_closing/out.js))
-- -0 key converts to +0 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/-0_key_converts_to_%2B0/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/-0_key_converts_to_%2B0/out.js))
 - Map iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/Map_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/Map_iterator_prototype_chain/out.js))
 - Map[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/Map_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Map/Map_Symbol.species_/out.js))
 
 ### Set
 - constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/constructor_requires_new/out.js))
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/iterator_closing/out.js))
-- -0 key converts to +0 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/-0_key_converts_to_%2B0/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/-0_key_converts_to_%2B0/out.js))
 - Set iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/Set_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/Set_iterator_prototype_chain/out.js))
 - Set[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/Set_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-ins/Set/Set_Symbol.species_/out.js))
 

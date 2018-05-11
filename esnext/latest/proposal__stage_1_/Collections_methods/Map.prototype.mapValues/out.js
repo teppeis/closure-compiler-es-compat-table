@@ -196,6 +196,7 @@ $jscomp.polyfill("Map", function(a) {
     }
   };
   d.prototype.set = function(a, c) {
+    a = 0 === a ? 0 : a;
     var b = e(this, a);
     b.list || (b.list = this.data_[b.id] = []);
     b.entry ? b.entry.value = c : (b.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:a, value:c}, b.list.push(b.entry), this.head_.previous.next = b.entry, this.head_.previous = b.entry, this.size++);

@@ -10,7 +10,7 @@ return new C().x() === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20180402/draft__stage_2_/static_class_fields/private_static_class_fields/in.js:4: ERROR - Parse error. '[' expected
+esnext/v20180506/draft__stage_2_/static_class_fields/private_static_class_fields/in.js:4: ERROR - Parse error. '[' expected
 static #x = 42;
        ^
 

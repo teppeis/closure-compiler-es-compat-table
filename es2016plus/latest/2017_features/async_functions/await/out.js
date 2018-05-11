@@ -74,7 +74,7 @@ $jscomp.polyfill("Promise", function(a) {
     this.batch_ = null;
   }
   function d(a) {
-    return a instanceof c ? a : new c(function(b, g) {
+    return a instanceof c ? a : new c(function(b, f) {
       b(a);
     });
   }
@@ -130,8 +130,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   c.prototype.createResolveAndReject_ = function() {
     function a(a) {
-      return function(g) {
-        c || (c = !0, a.call(b, g));
+      return function(f) {
+        c || (c = !0, a.call(b, f));
       };
     }
     var b = this, c = !1;
@@ -187,12 +187,12 @@ $jscomp.polyfill("Promise", function(a) {
   c.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
       for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
-        f.asyncExecute(this.onSettledCallbacks_[a]);
+        g.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
   };
-  var f = new b;
+  var g = new b;
   c.prototype.settleSameAsPromise_ = function(a) {
     var b = this.createResolveAndReject_();
     a.callWhenSettled_(b.resolve, b.reject);
@@ -210,17 +210,17 @@ $jscomp.polyfill("Promise", function(a) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
-        } catch (l) {
-          g(l);
+        } catch (m) {
+          f(m);
         }
       } : b;
     }
-    var e, g, f = new c(function(a, b) {
+    var e, f, l = new c(function(a, b) {
       e = a;
-      g = b;
+      f = b;
     });
-    this.callWhenSettled_(d(a, e), d(b, g));
-    return f;
+    this.callWhenSettled_(d(a, e), d(b, f));
+    return l;
   };
   c.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -239,7 +239,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? f.asyncExecute(c) : this.onSettledCallbacks_.push(c);
+    null == this.onSettledCallbacks_ ? g.asyncExecute(c) : this.onSettledCallbacks_.push(c);
   };
   c.resolve = d;
   c.reject = function(a) {
@@ -272,23 +272,21 @@ $jscomp.polyfill("Promise", function(a) {
   };
   return c;
 }, "es6", "es3");
-$jscomp.asyncExecutePromiseGenerator = function(a) {
-  function b(b) {
-    return a.next(b);
+$jscomp.underscoreProtoCanBeSet = function() {
+  var a = {a:!0}, b = {};
+  try {
+    return b.__proto__ = a, b.a;
+  } catch (d) {
   }
-  function d(b) {
-    return a.throw(b);
+  return !1;
+};
+$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
   }
-  return new Promise(function(e, c) {
-    function f(a) {
-      a.done ? e(a.value) : Promise.resolve(a.value).then(b, d).then(f, c);
-    }
-    f(a.next());
-  });
-};
-$jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
-  return $jscomp.asyncExecutePromiseGenerator(a());
-};
+  return a;
+} : null;
 $jscomp.generator = {};
 $jscomp.generator.ensureIteratorResultIsObject_ = function(a) {
   if (!(a instanceof Object)) {
@@ -443,8 +441,8 @@ $jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, d) {
       return this.context_.stop_(), e;
     }
     var c = e.value;
-  } catch (f) {
-    return this.context_.yieldAllIterator_ = null, this.context_.throw_(f), this.nextStep_();
+  } catch (g) {
+    return this.context_.yieldAllIterator_ = null, this.context_.throw_(g), this.nextStep_();
   }
   this.context_.yieldAllIterator_ = null;
   d.call(this.context_, c);
@@ -483,34 +481,55 @@ $jscomp.generator.Generator_ = function(a) {
     return a.return_(b);
   };
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };
 };
 $jscomp.generator.createGenerator = function(a, b) {
-  $jscomp.generator.Generator_.prototype = a.prototype;
-  return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  return b;
+};
+$jscomp.asyncExecutePromiseGenerator = function(a) {
+  function b(b) {
+    return a.next(b);
+  }
+  function d(b) {
+    return a.throw(b);
+  }
+  return new Promise(function(e, c) {
+    function g(a) {
+      a.done ? e(a.value) : Promise.resolve(a.value).then(b, d).then(g, c);
+    }
+    g(a.next());
+  });
+};
+$jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
+  return $jscomp.asyncExecutePromiseGenerator(a());
+};
+$jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
+  return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
 module.exports = function(a) {
   (function() {
-    return $jscomp.asyncExecutePromiseGeneratorFunction(function d() {
-      var e, c;
-      return $jscomp.generator.createGenerator(d, function(d) {
-        switch(d.nextAddress) {
-          case 1:
-            return d.yield(Promise.resolve(), 2);
-          case 2:
-            return d.yield(new Promise(function(a) {
-              setTimeout(a, 800, "foo");
-            }), 3);
-          case 3:
-            return e = d.yieldResult, d.yield(new Promise(function(a) {
-              setTimeout(a, 800, "bar");
-            }), 4);
-          case 4:
-            c = d.yieldResult, "foobar" === e + c && a(), d.jumpToEnd();
-        }
-      });
+    var b, d;
+    return $jscomp.asyncExecutePromiseGeneratorProgram(function(e) {
+      switch(e.nextAddress) {
+        case 1:
+          return e.yield(Promise.resolve(), 2);
+        case 2:
+          return e.yield(new Promise(function(a) {
+            setTimeout(a, 800, "foo");
+          }), 3);
+        case 3:
+          return b = e.yieldResult, e.yield(new Promise(function(a) {
+            setTimeout(a, 800, "bar");
+          }), 4);
+        case 4:
+          d = e.yieldResult, "foobar" === b + d && a(), e.jumpToEnd();
+      }
     });
   })();
 };

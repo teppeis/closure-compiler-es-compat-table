@@ -196,6 +196,7 @@ $jscomp.polyfill("Map", function(a) {
     }
   };
   c.prototype.set = function(a, c) {
+    a = 0 === a ? 0 : a;
     var e = b(this, a);
     e.list || (e.list = this.data_[e.id] = []);
     e.entry ? e.entry.value = c : (e.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:a, value:c}, e.list.push(e.entry), this.head_.previous.next = e.entry, this.head_.previous = e.entry, this.size++);
@@ -305,13 +306,14 @@ $jscomp.polyfill("Set", function(a) {
     this.map_ = new Map;
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var b; !(b = a.next()).done;) {
-        this.add(b.value);
+      for (var c; !(c = a.next()).done;) {
+        this.add(c.value);
       }
     }
     this.size = this.map_.size;
   };
   d.prototype.add = function(a) {
+    a = 0 === a ? 0 : a;
     this.map_.set(a, a);
     this.size = this.map_.size;
     return this;

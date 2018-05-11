@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180402/syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error/in.js:4: WARNING - Suspicious code. The result of the extern function call 'Math.max' is not being used.
+es6/v20180506/syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error/in.js:4: WARNING - Suspicious code. The result of the extern function call 'Math.max' is not being used.
     Math.max(...2);
     ^^^^^^^^^^^^^^
 

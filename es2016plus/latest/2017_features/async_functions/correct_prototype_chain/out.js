@@ -272,23 +272,21 @@ $jscomp.polyfill("Promise", function(a) {
   };
   return c;
 }, "es6", "es3");
-$jscomp.asyncExecutePromiseGenerator = function(a) {
-  function b(b) {
-    return a.next(b);
+$jscomp.underscoreProtoCanBeSet = function() {
+  var a = {a:!0}, b = {};
+  try {
+    return b.__proto__ = a, b.a;
+  } catch (d) {
   }
-  function d(b) {
-    return a.throw(b);
+  return !1;
+};
+$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
   }
-  return new Promise(function(e, c) {
-    function g(a) {
-      a.done ? e(a.value) : Promise.resolve(a.value).then(b, d).then(g, c);
-    }
-    g(a.next());
-  });
-};
-$jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
-  return $jscomp.asyncExecutePromiseGenerator(a());
-};
+  return a;
+} : null;
 $jscomp.generator = {};
 $jscomp.generator.ensureIteratorResultIsObject_ = function(a) {
   if (!(a instanceof Object)) {
@@ -483,23 +481,41 @@ $jscomp.generator.Generator_ = function(a) {
     return a.return_(b);
   };
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };
 };
 $jscomp.generator.createGenerator = function(a, b) {
-  $jscomp.generator.Generator_.prototype = a.prototype;
-  return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  return b;
+};
+$jscomp.asyncExecutePromiseGenerator = function(a) {
+  function b(b) {
+    return a.next(b);
+  }
+  function d(b) {
+    return a.throw(b);
+  }
+  return new Promise(function(e, c) {
+    function g(a) {
+      a.done ? e(a.value) : Promise.resolve(a.value).then(b, d).then(g, c);
+    }
+    g(a.next());
+  });
+};
+$jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
+  return $jscomp.asyncExecutePromiseGenerator(a());
+};
+$jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
+  return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
 module.exports = function() {
   var a = Object.getPrototypeOf(function() {
-    return $jscomp.asyncExecutePromiseGeneratorFunction(function d() {
-      return $jscomp.generator.createGenerator(d, function(a) {
-        switch(a.nextAddress) {
-          case 1:
-            a.jumpToEnd();
-        }
-      });
+    return $jscomp.asyncExecutePromiseGeneratorProgram(function(a) {
+      a.jumpToEnd();
     });
   });
   return a !== function() {

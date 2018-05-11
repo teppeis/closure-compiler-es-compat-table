@@ -46,6 +46,21 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.underscoreProtoCanBeSet = function() {
+  var a = {a:!0}, b = {};
+  try {
+    return b.__proto__ = a, b.a;
+  } catch (c) {
+  }
+  return !1;
+};
+$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
+  }
+  return a;
+} : null;
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
   var b = a[Symbol.iterator];
@@ -250,8 +265,9 @@ $jscomp.generator.Generator_ = function(a) {
   };
 };
 $jscomp.generator.createGenerator = function(a, b) {
-  $jscomp.generator.Generator_.prototype = a.prototype;
-  return new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
+  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  return b;
 };
 module.exports = function() {
   $jscomp.initSymbolIterator();
@@ -260,12 +276,12 @@ module.exports = function() {
     return {done:!0};
   }}), c = function e() {
     return $jscomp.generator.createGenerator(e, function(c) {
-      switch(c.nextAddress) {
-        case 1:
-          return c.setFinallyBlock(2), c.yieldAll(b, 2);
-        case 2:
-          c.enterFinallyBlock(), a += "b", c.leaveFinallyBlock(0);
+      if (1 == c.nextAddress) {
+        return c.setFinallyBlock(2), c.yieldAll(b, 2);
       }
+      c.enterFinallyBlock();
+      a += "b";
+      return c.leaveFinallyBlock(0);
     });
   }();
   c.next();

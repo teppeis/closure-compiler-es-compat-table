@@ -282,7 +282,7 @@ $jscomp.polyfill("Promise.prototype.finally", function(a) {
       });
     });
   };
-}, "es8", "es3");
+}, "es9", "es3");
 module.exports = function(a) {
   function c() {
     e++;

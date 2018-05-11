@@ -15,7 +15,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180402/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+es6/v20180506/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
     Date.prototype.valueOf(); return false;
     ^^^^^^^^^^^^^^^^^^^^^^^^
 

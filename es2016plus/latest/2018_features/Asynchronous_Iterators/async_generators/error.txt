@@ -10,7 +10,7 @@ module.exports = (asyncTestPassed) => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20180402/2018_features/Asynchronous_Iterators/async_generators/in.js:3: ERROR - Parse error. async functions cannot be generators
+es2016plus/v20180506/2018_features/Asynchronous_Iterators/async_generators/in.js:3: ERROR - Parse error. async functions cannot be generators
   async function*generator(){
                 ^
 
