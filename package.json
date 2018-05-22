@@ -17,7 +17,7 @@
     "test": "eslint *.js legacy/*.js"
   },
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^2.6.1",
     "closure-gun": "^0.1.12",
     "execa": "^0.10.0",
     "fs-readdir-recursive": "^1.1.0",
