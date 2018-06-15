@@ -22,7 +22,7 @@ $ npm install
 Import new tests from `compat-table`
 
 ```console
-$ ./update-tests.js v20180402
+$ ./update-tests.js es6
 ```
 
 ## Run tests and update result
