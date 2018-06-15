@@ -5,6 +5,8 @@
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
+const glob = require('glob');
+const rimraf = require('rimraf');
 
 const {basedir, testDir, alterTestDir, fileList} = init();
 
@@ -18,6 +20,17 @@ fileList.filter(dir => !testDir || `${dir}/`.includes(testDir)).forEach(dir => {
 
 if (!testDir) {
   fs.writeFileSync(path.join(basedir, 'files.json'), JSON.stringify(fileList, null, 2));
+  cleanupDirsForRemovedTests(fileList);
+}
+
+function cleanupDirsForRemovedTests(fileList) {
+  const pathSet = new Set(fileList.map(file => path.join(basedir, file)));
+  const files = glob.sync(path.join(basedir, '**/in.js'));
+  const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
+  removedDirs.forEach(dir => {
+    console.log(`rm: ${path.relative(__dirname, dir)}`);
+    rimraf.sync(dir, {glob: false});
+  });
 }
 
 function init() {
