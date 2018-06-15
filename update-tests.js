@@ -7,6 +7,8 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const Linter = require('eslint').Linter;
 const meow = require('meow');
+const glob = require('glob');
+const rimraf = require('rimraf');
 
 const cli = meow(
   `
@@ -68,6 +70,17 @@ data.tests.forEach(test => {
 
 if (!testDir) {
   fs.writeFileSync(path.join(alterTestDir, 'fileinfo.json'), JSON.stringify(fileList, null, 2));
+  cleanupDirsForRemovedTests(fileList);
+}
+
+function cleanupDirsForRemovedTests(fileList) {
+  const pathSet = new Set(fileList.map(file => path.join(alterTestDir, file.path)));
+  const files = glob.sync(path.join(alterTestDir, '**/orig.js'));
+  const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
+  removedDirs.forEach(dir => {
+    console.log(`rm: ${path.relative(__dirname, dir)}`);
+    rimraf.sync(dir, {glob: false});
+  });
 }
 
 function init() {
