@@ -1,0 +1,18 @@
+// 2016 misc / Proxy, "enumerate" handler removed
+module.exports = () => {
+  var passed = true;
+  var proxy = new Proxy({}, {
+    enumerate: function() {
+      passed = false;
+    }
+  });
+  for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+  return passed;
+
+};
+----------------------------------------------------------
+es2016plus/v20180610/2016_misc/Proxy,_enumerate_handler_removed/in.js:9: WARNING - If this if/for/while really shouldn't have a body, use {}
+  for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+                       ^
+
+0 error(s), 1 warning(s)

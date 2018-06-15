@@ -1,0 +1,13 @@
+// proposal (stage 1) / optional chaining operator (?.) / optional property access
+module.exports = () => {
+var foo = { baz: 42 };
+var bar = null;
+return foo?.baz === 42 && bar?.baz === undefined;
+
+};
+----------------------------------------------------------
+esnext/v20180610/proposal__stage_1_/optional_chaining_operator___._/optional_property_access/in.js:5: ERROR - Parse error. primary expression expected
+return foo?.baz === 42 && bar?.baz === undefined;
+            ^
+
+1 error(s), 0 warning(s)
