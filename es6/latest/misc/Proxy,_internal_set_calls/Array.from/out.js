@@ -51,9 +51,9 @@ $jscomp.polyfill = function(a, b, c, d) {
     c = $jscomp.global;
     a = a.split(".");
     for (d = 0; d < a.length - 1; d++) {
-      var f = a[d];
-      f in c || (c[f] = {});
-      c = c[f];
+      var g = a[d];
+      g in c || (c[g] = {});
+      c = c[g];
     }
     a = a[a.length - 1];
     d = c[a];
@@ -69,22 +69,22 @@ $jscomp.polyfill("Array.from", function(a) {
     };
     var b = [], e = a[Symbol.iterator];
     if ("function" == typeof e) {
-      for (a = e.call(a); !(e = a.next()).done;) {
-        b.push(c.call(d, e.value));
+      a = e.call(a);
+      for (var f = 0; !(e = a.next()).done;) {
+        b.push(c.call(d, e.value, f++));
       }
     } else {
-      e = a.length;
-      for (var g = 0; g < e; g++) {
-        b.push(c.call(d, a[g]));
+      for (e = a.length, f = 0; f < e; f++) {
+        b.push(c.call(d, a[f], f));
       }
     }
     return b;
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = [], b = new Proxy({}, {set:function(b, d, f) {
+  var a = [], b = new Proxy({}, {set:function(b, d, g) {
     a.push(d);
-    b[d] = f;
+    b[d] = g;
     return !0;
   }});
   Array.from.call(function() {

@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20180506/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4: WARNING - unreachable code
+esnext/v20180610/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4: WARNING - unreachable code
   var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

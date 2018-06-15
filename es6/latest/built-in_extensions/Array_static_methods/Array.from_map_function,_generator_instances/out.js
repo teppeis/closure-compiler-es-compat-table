@@ -219,12 +219,12 @@ $jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, c) {
     if (!d.done) {
       return this.context_.stop_(), d;
     }
-    var f = d.value;
+    var g = d.value;
   } catch (e) {
     return this.context_.yieldAllIterator_ = null, this.context_.throw_(e), this.nextStep_();
   }
   this.context_.yieldAllIterator_ = null;
-  c.call(this.context_, f);
+  c.call(this.context_, g);
   return this.nextStep_();
 };
 $jscomp.generator.Engine_.prototype.nextStep_ = function() {
@@ -274,9 +274,9 @@ $jscomp.polyfill = function(a, b, c, d) {
     c = $jscomp.global;
     a = a.split(".");
     for (d = 0; d < a.length - 1; d++) {
-      var f = a[d];
-      f in c || (c[f] = {});
-      c = c[f];
+      var g = a[d];
+      g in c || (c[g] = {});
+      c = c[g];
     }
     a = a[a.length - 1];
     d = c[a];
@@ -292,13 +292,13 @@ $jscomp.polyfill("Array.from", function(a) {
     };
     var b = [], e = a[Symbol.iterator];
     if ("function" == typeof e) {
-      for (a = e.call(a); !(e = a.next()).done;) {
-        b.push(c.call(d, e.value));
+      a = e.call(a);
+      for (var f = 0; !(e = a.next()).done;) {
+        b.push(c.call(d, e.value, f++));
       }
     } else {
-      e = a.length;
-      for (var g = 0; g < e; g++) {
-        b.push(c.call(d, a[g]));
+      for (e = a.length, f = 0; f < e; f++) {
+        b.push(c.call(d, a[f], f));
       }
     }
     return b;

@@ -10,7 +10,7 @@ return a + e === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20180506/draft__stage_2_/throw_expressions/logical/in.js:5: ERROR - Parse error. primary expression expected
+esnext/v20180610/draft__stage_2_/throw_expressions/logical/in.js:5: ERROR - Parse error. primary expression expected
 a = 19 || throw 77;
                ^
 

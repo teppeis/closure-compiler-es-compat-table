@@ -15,7 +15,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180506/misc/prototype_of_bound_functions/subclasses/in.js:5: ERROR - constructor is missing a call to super()
+es6/v20180610/misc/prototype_of_bound_functions/subclasses/in.js:5: ERROR - constructor is missing a call to super()
       constructor() {
       ^^^^^^^^^^^^^^^
 
