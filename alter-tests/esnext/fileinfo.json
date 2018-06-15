@@ -59,6 +59,18 @@
     "subtest": "private instance class fields initializers"
   },
   {
+    "path": "candidate__stage_3_/static_class_fields/public_static_class_fields",
+    "category": "candidate (stage 3)",
+    "test": "static class fields",
+    "subtest": "public static class fields"
+  },
+  {
+    "path": "candidate__stage_3_/static_class_fields/private_static_class_fields",
+    "category": "candidate (stage 3)",
+    "test": "static class fields",
+    "subtest": "private static class fields"
+  },
+  {
     "path": "candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor",
     "category": "candidate (stage 3)",
     "test": "Function.prototype.toString revision",
@@ -101,39 +113,69 @@
     "subtest": "methods and computed property names"
   },
   {
-    "path": "candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatten",
+    "path": "candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flat",
     "category": "candidate (stage 3)",
-    "test": "Array.prototype.{flatten, flatMap}",
-    "subtest": "Array.prototype.flatten"
+    "test": "Array.prototype.{flat, flatMap}",
+    "subtest": "Array.prototype.flat"
   },
   {
-    "path": "candidate__stage_3_/Array.prototype._flatten,_flatMap_/Array.prototype.flatMap",
+    "path": "candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flatMap",
     "category": "candidate (stage 3)",
-    "test": "Array.prototype.{flatten, flatMap}",
+    "test": "Array.prototype.{flat, flatMap}",
     "subtest": "Array.prototype.flatMap"
   },
   {
-    "path": "candidate__stage_3_/optional_catch_binding/basic",
+    "path": "candidate__stage_3_/Symbol.prototype.description",
     "category": "candidate (stage 3)",
-    "test": "optional catch binding",
-    "subtest": "basic"
+    "test": "Symbol.prototype.description"
   },
   {
-    "path": "candidate__stage_3_/optional_catch_binding/await",
+    "path": "candidate__stage_3_/BigInt/basic_functionality",
     "category": "candidate (stage 3)",
-    "test": "optional catch binding",
-    "subtest": "await"
+    "test": "BigInt",
+    "subtest": "basic functionality"
   },
   {
-    "path": "candidate__stage_3_/optional_catch_binding/yield",
+    "path": "candidate__stage_3_/BigInt/constructor",
     "category": "candidate (stage 3)",
-    "test": "optional catch binding",
-    "subtest": "yield"
+    "test": "BigInt",
+    "subtest": "constructor"
   },
   {
-    "path": "candidate__stage_3_/numeric_separators",
+    "path": "candidate__stage_3_/BigInt/BigInt.asUintN",
     "category": "candidate (stage 3)",
-    "test": "numeric separators"
+    "test": "BigInt",
+    "subtest": "BigInt.asUintN"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/BigInt.asIntN",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "BigInt.asIntN"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/BigInt64Array",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "BigInt64Array"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/BigUint64Array",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "BigUint64Array"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/DataView.prototype.getBigInt64",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "DataView.prototype.getBigInt64"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/DataView.prototype.getBigUint64",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "DataView.prototype.getBigUint64"
   },
   {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
@@ -147,21 +189,14 @@
     "subtest": "class decorators"
   },
   {
+    "path": "draft__stage_2_/Realms",
+    "category": "draft (stage 2)",
+    "test": "Realms"
+  },
+  {
     "path": "draft__stage_2_/weak_references",
     "category": "draft (stage 2)",
     "test": "weak references"
-  },
-  {
-    "path": "draft__stage_2_/static_class_fields/public_static_class_fields",
-    "category": "draft (stage 2)",
-    "test": "static class fields",
-    "subtest": "public static class fields"
-  },
-  {
-    "path": "draft__stage_2_/static_class_fields/private_static_class_fields",
-    "category": "draft (stage 2)",
-    "test": "static class fields",
-    "subtest": "private static class fields"
   },
   {
     "path": "draft__stage_2_/throw_expressions/logical",
@@ -188,9 +223,38 @@
     "subtest": "conditionals"
   },
   {
-    "path": "draft__stage_2_/Symbol.prototype.description",
+    "path": "draft__stage_2_/numeric_separators",
     "category": "draft (stage 2)",
-    "test": "Symbol.prototype.description"
+    "test": "numeric separators"
+  },
+  {
+    "path": "draft__stage_2_/Object.fromEntries",
+    "category": "draft (stage 2)",
+    "test": "Object.fromEntries"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.intersection",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.intersection"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.union",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.union"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.difference",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.difference"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.symmetricDifference",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.symmetricDifference"
   },
   {
     "path": "proposal__stage_1_/do_expressions",
@@ -540,11 +604,6 @@
     "subtest": "SIMD.%type%.fromTIMD"
   },
   {
-    "path": "proposal__stage_1_/Realms",
-    "category": "proposal (stage 1)",
-    "test": "Realms"
-  },
-  {
     "path": "proposal__stage_1_/Observable/basic_support",
     "category": "proposal (stage 1)",
     "test": "Observable",
@@ -892,11 +951,6 @@
     "test": "String.prototype.codePoints"
   },
   {
-    "path": "proposal__stage_1_/Object.fromEntries",
-    "category": "proposal (stage 1)",
-    "test": "Object.fromEntries"
-  },
-  {
     "path": "proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem",
     "category": "proposal (stage 1)",
     "test": "getting last item from array",
@@ -907,30 +961,6 @@
     "category": "proposal (stage 1)",
     "test": "getting last item from array",
     "subtest": "Array.prototype.lastIndex"
-  },
-  {
-    "path": "proposal__stage_1_/Set_methods/Set.prototype.intersect",
-    "category": "proposal (stage 1)",
-    "test": "Set methods",
-    "subtest": "Set.prototype.intersect"
-  },
-  {
-    "path": "proposal__stage_1_/Set_methods/Set.prototype.union",
-    "category": "proposal (stage 1)",
-    "test": "Set methods",
-    "subtest": "Set.prototype.union"
-  },
-  {
-    "path": "proposal__stage_1_/Set_methods/Set.prototype.except",
-    "category": "proposal (stage 1)",
-    "test": "Set methods",
-    "subtest": "Set.prototype.except"
-  },
-  {
-    "path": "proposal__stage_1_/Set_methods/Set.prototype.xor",
-    "category": "proposal (stage 1)",
-    "test": "Set methods",
-    "subtest": "Set.prototype.xor"
   },
   {
     "path": "proposal__stage_1_/Collections_methods/Map.groupBy",
