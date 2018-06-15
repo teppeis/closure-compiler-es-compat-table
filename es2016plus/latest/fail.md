@@ -45,9 +45,6 @@
 
 ## 2018 features
 
-### template literal revision
-- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/template_literal_revision/error.txt))
-
 ### s (dotAll) flag for regular expressions
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
 
@@ -63,3 +60,15 @@
 ### Asynchronous Iterators
 - async generators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/async_generators/error.txt))
 - for-await-of loops ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt))
+
+## 2018 misc
+
+### template literal revision
+- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/template_literal_revision/error.txt))
+
+## 2019 misc
+
+### optional catch binding
+- basic ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/optional_catch_binding/basic/error.txt))
+- await ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/optional_catch_binding/await/error.txt))
+- yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/optional_catch_binding/yield/error.txt))
