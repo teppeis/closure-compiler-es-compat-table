@@ -1,4 +1,4 @@
-// 2018 features / template literal revision
+// 2018 misc / template literal revision
 module.exports = () => {
   function tag(strings, a) {
     return strings[0] === void 0 &&
