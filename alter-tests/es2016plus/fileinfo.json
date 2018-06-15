@@ -481,11 +481,6 @@
     "subtest": "change rejection value"
   },
   {
-    "path": "2018_features/template_literal_revision",
-    "category": "2018 features",
-    "test": "template literal revision"
-  },
-  {
     "path": "2018_features/s__dotAll__flag_for_regular_expressions",
     "category": "2018 features",
     "test": "s (dotAll) flag for regular expressions"
@@ -516,5 +511,28 @@
     "category": "2018 features",
     "test": "Asynchronous Iterators",
     "subtest": "for-await-of loops"
+  },
+  {
+    "path": "2018_misc/template_literal_revision",
+    "category": "2018 misc",
+    "test": "template literal revision"
+  },
+  {
+    "path": "2019_misc/optional_catch_binding/basic",
+    "category": "2019 misc",
+    "test": "optional catch binding",
+    "subtest": "basic"
+  },
+  {
+    "path": "2019_misc/optional_catch_binding/await",
+    "category": "2019 misc",
+    "test": "optional catch binding",
+    "subtest": "await"
+  },
+  {
+    "path": "2019_misc/optional_catch_binding/yield",
+    "category": "2019 misc",
+    "test": "optional catch binding",
+    "subtest": "yield"
   }
 ]
