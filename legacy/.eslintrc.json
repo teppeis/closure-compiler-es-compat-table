@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["teppeis/node", "teppeis/prettier"],
+  "extends": ["teppeis/es5", "teppeis/+node", "teppeis/+prettier"],
   "rules": {
     "node/no-unsupported-features": [2, { "version": "0.10.0" }]
   }
