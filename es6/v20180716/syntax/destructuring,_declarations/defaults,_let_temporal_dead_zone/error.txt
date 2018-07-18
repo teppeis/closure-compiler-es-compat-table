@@ -1,0 +1,25 @@
+// syntax / destructuring, declarations / defaults, let temporal dead zone
+module.exports = () => {
+  var {a, b = 2} = {a:1};
+  let {c = c} = {};
+  let {c = d, d} = {d:1};
+  return false;
+};
+
+// EXPECT: 4: ERROR - Illegal variable reference before declaration: c
+// EXPECT: 5: ERROR - Illegal variable reference before declaration: d
+
+----------------------------------------------------------
+es6/v20180716/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:4: ERROR - Illegal variable reference before declaration: c
+  let {c = c} = {};
+           ^
+
+es6/v20180716/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - Illegal redeclared variable: c
+  let {c = d, d} = {d:1};
+       ^
+
+es6/v20180716/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - Illegal variable reference before declaration: d
+  let {c = d, d} = {d:1};
+           ^
+
+3 error(s), 0 warning(s)
