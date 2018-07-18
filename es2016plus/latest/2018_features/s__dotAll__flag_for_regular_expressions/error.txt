@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20180610/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3: ERROR - Parse error. Invalid RegExp flag 's'
+es2016plus/v20180716/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3: ERROR - Parse error. Invalid RegExp flag 's'
   const regex = /foo.bar/s;
                 ^
 

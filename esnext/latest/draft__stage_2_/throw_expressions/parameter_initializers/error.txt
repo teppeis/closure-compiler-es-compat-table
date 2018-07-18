@@ -12,7 +12,7 @@ return e === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20180610/draft__stage_2_/throw_expressions/parameter_initializers/in.js:3: ERROR - Parse error. primary expression expected
+esnext/v20180716/draft__stage_2_/throw_expressions/parameter_initializers/in.js:3: ERROR - Parse error. primary expression expected
 function fn (arg = throw 42) {
                         ^
 

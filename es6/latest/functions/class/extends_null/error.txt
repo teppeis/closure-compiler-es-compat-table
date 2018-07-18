@@ -8,8 +8,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180610/functions/class/extends_null/in.js:4: ERROR - constructor is missing a call to super()
-    constructor() { return Object.create(null); }
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+es6/v20180716/functions/class/extends_null/in.js:3: ERROR - The class in an extends clause must be a qualified name.
+  class C extends null {
+                  ^^^^
 
 1 error(s), 0 warning(s)

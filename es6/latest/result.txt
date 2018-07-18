@@ -10,7 +10,7 @@ syntax/default_function_parameters/new_Function___support/out.js: Error: eval() 
 syntax/rest_parameters/basic_functionality/out.js: [Pass]
 syntax/rest_parameters/function_length_property/out.js: [InvalidResult: false]
 syntax/rest_parameters/arguments_object_interaction/out.js: [InvalidResult: false]
-syntax/rest_parameters/cant_be_used_in_setters/out.js: [Pass]
+syntax/rest_parameters/cant_be_used_in_setters/error.txt: [NotExpectedCompileError]
 syntax/rest_parameters/new_Function___support/out.js: Error: eval() and Function() cannot be transpiled
 syntax/spread__...__operator/with_arrays,_in_function_calls/out.js: [Pass]
 syntax/spread__...__operator/with_arrays,_in_array_literals/out.js: [Pass]
@@ -560,7 +560,7 @@ misc/prototype_of_bound_functions/basic_functions/out.js: [InvalidResult: false]
 misc/prototype_of_bound_functions/generator_functions/out.js: [InvalidResult: false]
 misc/prototype_of_bound_functions/arrow_functions/out.js: [InvalidResult: false]
 misc/prototype_of_bound_functions/classes/out.js: [InvalidResult: false]
-misc/prototype_of_bound_functions/subclasses/error.txt: [CompileError]
+misc/prototype_of_bound_functions/subclasses/out.js: [InvalidResult: false]
 misc/Proxy,_internal_get_calls/ToPrimitive/out.js: Error: eval() and Function() cannot be transpiled
 misc/Proxy,_internal_get_calls/CreateListFromArrayLike/out.js: ReferenceError: Proxy is not defined
 misc/Proxy,_internal_get_calls/instanceof_operator/out.js: Error: eval() and Function() cannot be transpiled

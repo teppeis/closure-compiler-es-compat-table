@@ -59,6 +59,9 @@ $jscomp.arrayFromIterator = function(a) {
   }
   return c;
 };
+$jscomp.arrayFromIterable = function(a) {
+  return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
+};
 module.exports = function() {
   var a = $jscomp.makeIterator([3, 4, 5]);
   var b = a.next().value;

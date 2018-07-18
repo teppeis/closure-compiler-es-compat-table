@@ -48,6 +48,8 @@ $jscomp.iteratorPrototype = function(a) {
 };
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   var b = a[Symbol.iterator];
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };

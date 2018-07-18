@@ -4,7 +4,6 @@ syntax/default_function_parameters/defaults_can_refer_to_previous_params/out.js:
 syntax/default_function_parameters/temporal_dead_zone/out.js: [Pass]
 syntax/default_function_parameters/separate_scope/out.js: [Pass]
 syntax/rest_parameters/basic_functionality/out.js: [Pass]
-syntax/rest_parameters/cant_be_used_in_setters/out.js: [Pass]
 syntax/spread__...__operator/with_arrays,_in_function_calls/out.js: [Pass]
 syntax/spread__...__operator/with_arrays,_in_array_literals/out.js: [Pass]
 syntax/spread__...__operator/with_sparse_arrays,_in_function_calls/out.js: [Pass]

@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180610/bindings/const/temporal_dead_zone__strict_mode_/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
+es6/v20180716/bindings/const/temporal_dead_zone__strict_mode_/in.js:4: WARNING - Suspicious code. This code lacks side-effects. Is there a bug?
   var passed = (function(){ try { qux; } catch(e) { return true; }}());
                                   ^^^
 

@@ -43,9 +43,9 @@ $jscomp.polyfill("Object.assign", function(a) {
   return a || $jscomp.assign;
 }, "es6", "es3");
 module.exports = function() {
-  var a = {a:1, b:2, c:3}, b = a.a;
-  a = Object.assign({}, a);
-  a = (delete a.a, a);
-  return 1 === b && void 0 === a.a && 2 === a.b && 3 === a.c;
+  var a = {a:1, b:2, c:3}, b = Object.assign({}, a);
+  a = a.a;
+  b = (delete b.a, b);
+  return 1 === a && void 0 === b.a && 2 === b.b && 3 === b.c;
 };
 

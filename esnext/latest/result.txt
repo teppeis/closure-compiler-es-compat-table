@@ -43,63 +43,6 @@ draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [objec
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
 draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/basic_support/out.js: [InvalidResult: false]
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Float32x4/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int32x4/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int16x8/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Int8x16/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint32x4/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint16x8/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Uint8x16/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool32x4/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool16x8/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/Bool8x16/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.abs/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.add/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.addSaturate/out.js: ReferenceError: simdSmallIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.and/out.js: ReferenceError: simdBoolIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.anyTrue/out.js: ReferenceError: simdBoolTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%booleanType%.allTrue/out.js: ReferenceError: simdBoolTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.check/out.js: ReferenceError: simdAllTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.equal/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.extractLane/out.js: ReferenceError: simdAllTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThan/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.greaterThanOrEqual/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThan/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.lessThanOrEqual/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.mul/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.div/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load1/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load2/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.load3/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.max/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.maxNum/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.min/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.minNum/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.neg/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.not/out.js: ReferenceError: simdBoolTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.notEqual/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.or/out.js: ReferenceError: simdBoolIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalApproximation/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.reciprocalSqrtApproximation/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.replaceLane/out.js: ReferenceError: simdAllTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.select/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftLeftByScalar/out.js: ReferenceError: simdIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.shiftRightByScalar/out.js: ReferenceError: simdIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.shuffle/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.splat/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%floatType%.sqrt/out.js: ReferenceError: simdFloatTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store1/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store2/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.store3/out.js: ReferenceError: simd32bitFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.sub/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%integerType%.subSaturate/out.js: ReferenceError: simdSmallIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.swizzle/out.js: ReferenceError: simdFloatIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.xor/out.js: ReferenceError: simdBoolIntTypes is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMDBits/out.js: ReferenceError: SIMD is not defined
-proposal__stage_1_/SIMD__Single_Instruction,_Multiple_Data_/SIMD.%type%.fromTIMD/out.js: ReferenceError: SIMD is not defined
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Observable.prototype.subscribe/out.js: ReferenceError: Observable is not defined

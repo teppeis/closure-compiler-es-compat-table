@@ -13,6 +13,7 @@
 ### rest parameters
 - function 'length' property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/rest_parameters/function_length_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/rest_parameters/function_length_property/out.js))
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/rest_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/rest_parameters/arguments_object_interaction/out.js))
+- can't be used in setters ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/rest_parameters/cant_be_used_in_setters/error.txt))
 
 ### spread (...) operator
 - with sparse arrays, in array literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/spread__...__operator/with_sparse_arrays%2C_in_array_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/syntax/spread__...__operator/with_sparse_arrays%2C_in_array_literals/out.js))
@@ -238,7 +239,7 @@
 - generator functions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/generator_functions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/generator_functions/out.js))
 - arrow functions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/arrow_functions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/arrow_functions/out.js))
 - classes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/classes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/classes/out.js))
-- subclasses ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/error.txt))
+- subclasses ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/prototype_of_bound_functions/subclasses/out.js))
 
 ### Object static methods accept primitives
 - Object.getPrototypeOf ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Object_static_methods_accept_primitives/Object.getPrototypeOf/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/misc/Object_static_methods_accept_primitives/Object.getPrototypeOf/out.js))

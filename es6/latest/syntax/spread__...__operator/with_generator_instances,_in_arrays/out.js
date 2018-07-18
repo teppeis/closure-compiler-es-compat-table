@@ -46,6 +46,22 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.makeIterator = function(a) {
+  $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  var b = a[Symbol.iterator];
+  return b ? b.call(a) : $jscomp.arrayIterator(a);
+};
+$jscomp.arrayFromIterator = function(a) {
+  for (var b, c = []; !(b = a.next()).done;) {
+    c.push(b.value);
+  }
+  return c;
+};
+$jscomp.arrayFromIterable = function(a) {
+  return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
+};
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
   try {
@@ -61,11 +77,6 @@ $jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.set
   }
   return a;
 } : null;
-$jscomp.makeIterator = function(a) {
-  $jscomp.initSymbolIterator();
-  var b = a[Symbol.iterator];
-  return b ? b.call(a) : $jscomp.arrayIterator(a);
-};
 $jscomp.generator = {};
 $jscomp.generator.ensureIteratorResultIsObject_ = function(a) {
   if (!(a instanceof Object)) {
@@ -260,6 +271,8 @@ $jscomp.generator.Generator_ = function(a) {
     return a.return_(b);
   };
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };
@@ -268,15 +281,6 @@ $jscomp.generator.createGenerator = function(a, b) {
   b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
   $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
-};
-$jscomp.arrayFromIterator = function(a) {
-  for (var b, c = []; !(b = a.next()).done;) {
-    c.push(b.value);
-  }
-  return c;
-};
-$jscomp.arrayFromIterable = function(a) {
-  return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
 };
 module.exports = function() {
   var a = function c() {

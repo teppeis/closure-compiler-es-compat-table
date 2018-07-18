@@ -262,6 +262,8 @@ $jscomp.generator.Generator_ = function(a) {
     return a.return_(b);
   };
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };

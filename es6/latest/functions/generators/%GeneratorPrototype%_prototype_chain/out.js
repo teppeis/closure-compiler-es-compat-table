@@ -63,6 +63,8 @@ $jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.set
 } : null;
 $jscomp.makeIterator = function(a) {
   $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
   var b = a[Symbol.iterator];
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
@@ -259,6 +261,8 @@ $jscomp.generator.Generator_ = function(a) {
   this.return = function(b) {
     return a.return_(b);
   };
+  $jscomp.initSymbolIterator();
+  $jscomp.initSymbol();
   $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
