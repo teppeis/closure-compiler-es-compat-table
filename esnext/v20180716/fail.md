@@ -46,6 +46,9 @@
 - DataView.prototype.getBigInt64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js))
 - DataView.prototype.getBigUint64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js))
 
+### Object.fromEntries
+- Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/candidate__stage_3_/Object.fromEntries/out.js))
+
 ## Draft (stage 2)
 
 ### Generator function.sent Meta Property
@@ -68,9 +71,6 @@
 
 ### numeric separators
 - numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/draft__stage_2_/numeric_separators/error.txt))
-
-### Object.fromEntries
-- Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/draft__stage_2_/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/draft__stage_2_/Object.fromEntries/out.js))
 
 ### Set methods
 - Set.prototype.intersection ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/draft__stage_2_/Set_methods/Set.prototype.intersection/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20180716/draft__stage_2_/Set_methods/Set.prototype.intersection/out.js))
