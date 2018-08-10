@@ -1,4 +1,4 @@
-// syntax / spread (...) operator / with generic iterables, in arrays
+// syntax / spread syntax for iterable objects / with generic iterables, in arrays
 module.exports = () => {
   $jscomp.initSymbolIterator();
   var iterable = global.__createIterableObject(["b", "c", "d"]);

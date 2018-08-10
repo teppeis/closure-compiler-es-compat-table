@@ -1,4 +1,4 @@
-// syntax / spread (...) operator / spreading non-iterables is a runtime error
+// syntax / spread syntax for iterable objects / spreading non-iterables is a runtime error
 module.exports = () => {
   try {
     Math.max(...2);

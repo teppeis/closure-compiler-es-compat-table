@@ -84,93 +84,93 @@
     "subtest": "new Function() support"
   },
   {
-    "path": "syntax/spread__...__operator/with_arrays,_in_function_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_arrays,_in_function_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with arrays, in function calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_arrays,_in_array_literals",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_arrays,_in_array_literals",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with arrays, in array literals"
   },
   {
-    "path": "syntax/spread__...__operator/with_sparse_arrays,_in_function_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_sparse_arrays,_in_function_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with sparse arrays, in function calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_sparse_arrays,_in_array_literals",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_sparse_arrays,_in_array_literals",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with sparse arrays, in array literals"
   },
   {
-    "path": "syntax/spread__...__operator/with_strings,_in_function_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_strings,_in_function_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with strings, in function calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_strings,_in_array_literals",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_strings,_in_array_literals",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with strings, in array literals"
   },
   {
-    "path": "syntax/spread__...__operator/with_astral_plane_strings,_in_function_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_astral_plane_strings,_in_function_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with astral plane strings, in function calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_astral_plane_strings,_in_array_literals",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_astral_plane_strings,_in_array_literals",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with astral plane strings, in array literals"
   },
   {
-    "path": "syntax/spread__...__operator/with_generator_instances,_in_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_generator_instances,_in_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with generator instances, in calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_generator_instances,_in_arrays",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_generator_instances,_in_arrays",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with generator instances, in arrays"
   },
   {
-    "path": "syntax/spread__...__operator/with_generic_iterables,_in_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with generic iterables, in calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_generic_iterables,_in_arrays",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_arrays",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with generic iterables, in arrays"
   },
   {
-    "path": "syntax/spread__...__operator/with_instances_of_iterables,_in_calls",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_calls",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with instances of iterables, in calls"
   },
   {
-    "path": "syntax/spread__...__operator/with_instances_of_iterables,_in_arrays",
+    "path": "syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_arrays",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "with instances of iterables, in arrays"
   },
   {
-    "path": "syntax/spread__...__operator/spreading_non-iterables_is_a_runtime_error",
+    "path": "syntax/spread_syntax_for_iterable_objects/spreading_non-iterables_is_a_runtime_error",
     "category": "syntax",
-    "test": "spread (...) operator",
+    "test": "spread syntax for iterable objects",
     "subtest": "spreading non-iterables is a runtime error"
   },
   {
