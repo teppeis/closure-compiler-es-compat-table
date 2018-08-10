@@ -178,6 +178,11 @@
     "subtest": "DataView.prototype.getBigUint64"
   },
   {
+    "path": "candidate__stage_3_/Object.fromEntries",
+    "category": "candidate (stage 3)",
+    "test": "Object.fromEntries"
+  },
+  {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
     "category": "draft (stage 2)",
     "test": "Generator function.sent Meta Property"
@@ -226,11 +231,6 @@
     "path": "draft__stage_2_/numeric_separators",
     "category": "draft (stage 2)",
     "test": "numeric separators"
-  },
-  {
-    "path": "draft__stage_2_/Object.fromEntries",
-    "category": "draft (stage 2)",
-    "test": "Object.fromEntries"
   },
   {
     "path": "draft__stage_2_/Set_methods/Set.prototype.intersection",
