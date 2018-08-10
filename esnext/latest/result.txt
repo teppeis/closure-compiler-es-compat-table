@@ -28,6 +28,7 @@ candidate__stage_3_/BigInt/BigInt64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js: ReferenceError: DataView is not defined
 candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js: ReferenceError: DataView is not defined
+candidate__stage_3_/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]
@@ -37,7 +38,6 @@ draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileErro
 draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/conditionals/error.txt: [CompileError]
 draft__stage_2_/numeric_separators/error.txt: [CompileError]
-draft__stage_2_/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
 draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object [object Object] has no method 'intersection'
 draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
