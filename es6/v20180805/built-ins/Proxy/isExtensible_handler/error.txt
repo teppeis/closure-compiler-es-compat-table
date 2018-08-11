@@ -1,0 +1,20 @@
+// built-ins / Proxy / "isExtensible" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.isExtensible(
+    new Proxy(proxied, {
+      isExtensible: function (t) {
+        passed = t === proxied; return true;
+      }
+    })
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20180805/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+  Object.isExtensible(
+  ^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
