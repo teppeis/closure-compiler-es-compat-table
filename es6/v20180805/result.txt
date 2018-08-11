@@ -10,7 +10,7 @@ syntax/default_function_parameters/new_Function___support/out.js: Error: eval() 
 syntax/rest_parameters/basic_functionality/out.js: [Pass]
 syntax/rest_parameters/function_length_property/out.js: [InvalidResult: false]
 syntax/rest_parameters/arguments_object_interaction/out.js: [InvalidResult: false]
-syntax/rest_parameters/cant_be_used_in_setters/error.txt: [NotExpectedCompileError]
+syntax/rest_parameters/cant_be_used_in_setters/out.js: [Pass]
 syntax/rest_parameters/new_Function___support/out.js: Error: eval() and Function() cannot be transpiled
 syntax/spread_syntax_for_iterable_objects/with_arrays,_in_function_calls/out.js: [Pass]
 syntax/spread_syntax_for_iterable_objects/with_arrays,_in_array_literals/out.js: [Pass]

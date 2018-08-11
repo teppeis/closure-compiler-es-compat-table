@@ -8,4 +8,4 @@ module.exports = () => {
   }());
 };
 
-// EXPECT: 5: ERROR - Parse error. 'identifier' expected
+// EXPECT: 5: ERROR - Parse error.

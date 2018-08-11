@@ -13,7 +13,6 @@
 ### rest parameters
 - function 'length' property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/rest_parameters/function_length_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/rest_parameters/function_length_property/out.js))
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/rest_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/rest_parameters/arguments_object_interaction/out.js))
-- can't be used in setters ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/rest_parameters/cant_be_used_in_setters/error.txt))
 
 ### spread syntax for iterable objects
 - with sparse arrays, in array literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/spread_syntax_for_iterable_objects/with_sparse_arrays%2C_in_array_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20180805/syntax/spread_syntax_for_iterable_objects/with_sparse_arrays%2C_in_array_literals/out.js))
