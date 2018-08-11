@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180716/functions/class/extends_null/in.js:3: ERROR - The class in an extends clause must be a qualified name.
+es6/v20180805/functions/class/extends_null/in.js:3: ERROR - The class in an extends clause must be a qualified name.
   class C extends null {
                   ^^^^
 

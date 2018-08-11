@@ -32,6 +32,13 @@ $jscomp.initSymbolIterator = function() {
   $jscomp.initSymbolIterator = function() {
   };
 };
+$jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
+  var a = $jscomp.global.Symbol.asyncIterator;
+  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
+  $jscomp.initSymbolAsyncIterator = function() {
+  };
+};
 $jscomp.arrayIterator = function(a) {
   var d = 0;
   return $jscomp.iteratorPrototype(function() {
@@ -184,16 +191,16 @@ $jscomp.polyfill("Promise", function(a) {
   };
   c.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
-      for (var b = 0; b < this.onSettledCallbacks_.length; ++b) {
-        g.asyncExecute(this.onSettledCallbacks_[b]);
+      for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
+        g.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
   };
   var g = new d;
-  c.prototype.settleSameAsPromise_ = function(b) {
-    var a = this.createResolveAndReject_();
-    b.callWhenSettled_(a.resolve, a.reject);
+  c.prototype.settleSameAsPromise_ = function(a) {
+    var b = this.createResolveAndReject_();
+    a.callWhenSettled_(b.resolve, b.reject);
   };
   c.prototype.settleSameAsThenable_ = function(a, c) {
     var b = this.createResolveAndReject_();

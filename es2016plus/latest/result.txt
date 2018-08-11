@@ -84,8 +84,8 @@
 2018_features/RegExp_named_capture_groups/out.js: SyntaxError: Invalid regular expression: /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/: Invalid group
 2018_features/RegExp_Lookbehind_Assertions/out.js: SyntaxError: Invalid regular expression: /(?<=a)b/: Invalid group
 2018_features/RegExp_Unicode_Property_Escapes/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'
-2018_features/Asynchronous_Iterators/async_generators/error.txt: [CompileError]
-2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt: [CompileError]
+2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
+2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Timeout: asyncTestPassed() is not called for 5s]
 2018_misc/template_literal_revision/error.txt: [CompileError]
 2019_misc/optional_catch_binding/basic/error.txt: [CompileError]
 2019_misc/optional_catch_binding/await/error.txt: [CompileError]

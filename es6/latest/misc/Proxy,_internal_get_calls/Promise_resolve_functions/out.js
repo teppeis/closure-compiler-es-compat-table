@@ -32,6 +32,13 @@ $jscomp.initSymbolIterator = function() {
   $jscomp.initSymbolIterator = function() {
   };
 };
+$jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
+  var a = $jscomp.global.Symbol.asyncIterator;
+  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
+  $jscomp.initSymbolAsyncIterator = function() {
+  };
+};
 $jscomp.arrayIterator = function(a) {
   var d = 0;
   return $jscomp.iteratorPrototype(function() {
@@ -158,15 +165,15 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
   };
-  c.prototype.resolveToNonPromiseObj_ = function(b) {
-    var a = void 0;
+  c.prototype.resolveToNonPromiseObj_ = function(a) {
+    var b = void 0;
     try {
-      a = b.then;
+      b = a.then;
     } catch (g) {
       this.reject_(g);
       return;
     }
-    "function" == typeof a ? this.settleSameAsThenable_(a, b) : this.fulfill_(b);
+    "function" == typeof b ? this.settleSameAsThenable_(b, a) : this.fulfill_(a);
   };
   c.prototype.reject_ = function(a) {
     this.settle_(2, a);

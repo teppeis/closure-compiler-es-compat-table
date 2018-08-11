@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180716/built-ins/WeakMap/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakMap' is not being used.
+es6/v20180805/built-ins/WeakMap/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'WeakMap' is not being used.
     WeakMap();
     ^^^^^^^^^
 

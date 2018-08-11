@@ -58,8 +58,7 @@
 - RegExp Unicode Property Escapes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/out.js))
 
 ### Asynchronous Iterators
-- async generators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/async_generators/error.txt))
-- for-await-of loops ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt))
+- for-await-of loops ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/out.js))
 
 ## 2018 misc
 

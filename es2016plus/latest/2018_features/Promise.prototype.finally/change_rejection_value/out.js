@@ -32,6 +32,13 @@ $jscomp.initSymbolIterator = function() {
   $jscomp.initSymbolIterator = function() {
   };
 };
+$jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
+  var a = $jscomp.global.Symbol.asyncIterator;
+  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
+  $jscomp.initSymbolAsyncIterator = function() {
+  };
+};
 $jscomp.arrayIterator = function(a) {
   var c = 0;
   return $jscomp.iteratorPrototype(function() {
@@ -127,34 +134,34 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   d.prototype.createResolveAndReject_ = function() {
-    function b(b) {
-      return function(d) {
-        c || (c = !0, b.call(a, d));
+    function a(a) {
+      return function(b) {
+        d || (d = !0, a.call(c, b));
       };
     }
-    var a = this, c = !1;
-    return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
+    var c = this, d = !1;
+    return {resolve:a(this.resolveTo_), reject:a(this.reject_)};
   };
-  d.prototype.resolveTo_ = function(b) {
-    if (b === this) {
+  d.prototype.resolveTo_ = function(a) {
+    if (a === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (b instanceof d) {
-        this.settleSameAsPromise_(b);
+      if (a instanceof d) {
+        this.settleSameAsPromise_(a);
       } else {
         a: {
-          switch(typeof b) {
+          switch(typeof a) {
             case "object":
-              var a = null != b;
+              var b = null != a;
               break a;
             case "function":
-              a = !0;
+              b = !0;
               break a;
             default:
-              a = !1;
+              b = !1;
           }
         }
-        a ? this.resolveToNonPromiseObj_(b) : this.fulfill_(b);
+        b ? this.resolveToNonPromiseObj_(a) : this.fulfill_(a);
       }
     }
   };
@@ -253,8 +260,8 @@ $jscomp.polyfill("Promise", function(a) {
     });
   };
   d.all = function(a) {
-    var b = $jscomp.makeIterator(a), c = b.next();
-    return c.done ? e([]) : new d(function(a, d) {
+    var c = $jscomp.makeIterator(a), b = c.next();
+    return b.done ? e([]) : new d(function(a, d) {
       function f(b) {
         return function(c) {
           h[b] = c;
@@ -264,8 +271,8 @@ $jscomp.polyfill("Promise", function(a) {
       }
       var h = [], g = 0;
       do {
-        h.push(void 0), g++, e(c.value).callWhenSettled_(f(h.length - 1), d), c = b.next();
-      } while (!c.done);
+        h.push(void 0), g++, e(b.value).callWhenSettled_(f(h.length - 1), d), b = c.next();
+      } while (!b.done);
     });
   };
   return d;

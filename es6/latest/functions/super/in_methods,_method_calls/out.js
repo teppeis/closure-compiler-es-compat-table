@@ -73,6 +73,13 @@ $jscomp.initSymbolIterator = function() {
   $jscomp.initSymbolIterator = function() {
   };
 };
+$jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
+  var a = $jscomp.global.Symbol.asyncIterator;
+  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
+  $jscomp.initSymbolAsyncIterator = function() {
+  };
+};
 $jscomp.arrayIterator = function(a) {
   var b = 0;
   return $jscomp.iteratorPrototype(function() {
