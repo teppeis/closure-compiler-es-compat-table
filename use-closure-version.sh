@@ -1,13 +1,16 @@
 #!/bin/bash -e
 
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ] || [ $# -gt 2 ]; then
     {
-        echo "Usage: change-version.sh CLOSURE_VERSION"
-        echo "  - CLOSURE_VERSION: ex. 'v20180402'"
+        echo "Usage: $(basename "$0") CLOSURE_VERSION [COMPILER_JAR]"
+        echo "  - CLOSURE_VERSION: ex. v20180402, 1.0-SNAPSHOT"
+        echo "  - COMPILER_JAR: ex. ../compiler.jar"
     } 1>&2
     exit 1
 fi
+
 targetVer=$1
+compilerJar=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 closureGunDir="$basedir/node_modules/closure-gun"
@@ -24,6 +27,19 @@ fi
 
 # stop current process
 npm run --silent stop > /dev/null 2>&1 || true
+
+if [ "$targetVer" = '1.0-SNAPSHOT' ]; then
+    if [ ! -f "$compilerJar" ]; then
+        echo "COMPILER_JAR is not a file: $compilerJar" 1>&2
+        exit 1
+    fi
+    closureDir="$basedir/node_modules/google-closure-compiler"
+    mkdir -p "$closureDir"
+    cp "$compilerJar" "$closureDir/compiler.jar"
+    npm i --no-save closure-gun
+    rm -rf "$closureDir"
+    exit
+fi
 
 cacheDir="$basedir/.closure-gun-cache"
 mkdir -p "$cacheDir"
