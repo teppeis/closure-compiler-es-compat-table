@@ -1,0 +1,69 @@
+// 2018 features / RegExp named capture groups
+module.exports = () => {
+  var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
+  return result.groups.year === '2016'
+&& result.groups.month === '03'
+&& result.groups.day === '11'
+&& result[0] === '2016-03-11'
+&& result[1] === '2016'
+&& result[2] === '03'
+&& result[3] === '11';
+
+};
+----------------------------------------------------------
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+Malformed parenthetical: (?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})
+  Node(REGEXP): es2016plus/1.0-SNAPSHOT/2018_features/RegExp_named_capture_groups/in.js:3:15
+  var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
+  Parent(GETPROP): es2016plus/1.0-SNAPSHOT/2018_features/RegExp_named_capture_groups/in.js:3:15
+  var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
+
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseParenthetical(RegExpTree.java:285)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parse(RegExpTree.java:151)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseTopLevel(RegExpTree.java:129)
+	at com.google.javascript.jscomp.regex.RegExpTree.parseRegExp(RegExpTree.java:581)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.visit(MarkUntranspilableFeaturesAsRemoved.java:106)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:847)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:974)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:886)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:809)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:825)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:797)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:822)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:331)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:341)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.checkForUntranspilable(MarkUntranspilableFeaturesAsRemoved.java:86)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.process(MarkUntranspilableFeaturesAsRemoved.java:81)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:307)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1056)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:849)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:109)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:783)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:780)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Malformed parenthetical: (?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})
+	... 45 more

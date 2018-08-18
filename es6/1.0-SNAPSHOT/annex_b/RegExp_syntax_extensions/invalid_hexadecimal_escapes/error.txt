@@ -1,0 +1,69 @@
+// annex b / RegExp syntax extensions / invalid hexadecimal escapes
+module.exports = () => {
+  return /\x1/.exec("x1")[0] === "x1"
+&& /[\x1]/.exec("x")[0] === "x";
+
+};
+----------------------------------------------------------
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+Abbreviated hex escape 1
+  Node(REGEXP): es6/1.0-SNAPSHOT/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:3:9
+  return /\x1/.exec("x1")[0] === "x1"
+  Parent(GETPROP): es6/1.0-SNAPSHOT/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:3:9
+  return /\x1/.exec("x1")[0] === "x1"
+
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseHex(RegExpTree.java:485)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseEscapeChar(RegExpTree.java:412)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseEscape(RegExpTree.java:475)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parse(RegExpTree.java:156)
+	at com.google.javascript.jscomp.regex.RegExpTree$1Parser.parseTopLevel(RegExpTree.java:129)
+	at com.google.javascript.jscomp.regex.RegExpTree.parseRegExp(RegExpTree.java:581)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.visit(MarkUntranspilableFeaturesAsRemoved.java:106)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:847)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:974)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:886)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:809)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:825)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:797)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:822)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:959)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:843)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:331)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:341)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.checkForUntranspilable(MarkUntranspilableFeaturesAsRemoved.java:86)
+	at com.google.javascript.jscomp.MarkUntranspilableFeaturesAsRemoved.process(MarkUntranspilableFeaturesAsRemoved.java:81)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:307)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:230)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1056)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:849)
+	at com.google.javascript.jscomp.Compiler.access$000(Compiler.java:109)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:783)
+	at com.google.javascript.jscomp.Compiler$2.call(Compiler.java:780)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Abbreviated hex escape 1
+	... 51 more

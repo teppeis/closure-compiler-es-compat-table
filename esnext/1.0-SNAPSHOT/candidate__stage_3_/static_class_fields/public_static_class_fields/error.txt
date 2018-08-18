@@ -1,0 +1,14 @@
+// candidate (stage 3) / static class fields / public static class fields
+module.exports = () => {
+class C {
+static x = 'x';
+}
+return C.x === 'x';
+
+};
+----------------------------------------------------------
+esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/public_static_class_fields/in.js:4: ERROR - Parse error. '(' expected
+static x = 'x';
+         ^
+
+1 error(s), 0 warning(s)
