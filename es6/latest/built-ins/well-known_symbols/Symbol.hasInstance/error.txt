@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180805/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
+es6/v20180910/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9: WARNING - Suspicious code. The result of the 'instanceof' operator is not being used.
   obj instanceof C;
   ^^^^^^^^^^^^^^^^
 

@@ -10,7 +10,7 @@ return false;
 
 };
 ----------------------------------------------------------
-es2016plus/v20180805/2019_misc/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
+es2016plus/v20180910/2019_misc/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
 catch {
       ^
 

@@ -39,3 +39,4 @@
 2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
 2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
+2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]

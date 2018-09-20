@@ -52,13 +52,10 @@
 - RegExp named capture groups ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_named_capture_groups/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_named_capture_groups/out.js))
 
 ### RegExp Lookbehind Assertions
-- RegExp Lookbehind Assertions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Lookbehind_Assertions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Lookbehind_Assertions/out.js))
+- RegExp Lookbehind Assertions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Lookbehind_Assertions/error.txt))
 
 ### RegExp Unicode Property Escapes
-- RegExp Unicode Property Escapes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/out.js))
-
-### Asynchronous Iterators
-- for-await-of loops ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/Asynchronous_Iterators/for-await-of_loops/out.js))
+- RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
 
 ## 2018 misc
 

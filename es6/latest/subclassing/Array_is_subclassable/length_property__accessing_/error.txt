@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180805/subclassing/Array_is_subclassable/length_property__accessing_/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+es6/v20180910/subclassing/Array_is_subclassable/length_property__accessing_/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
   class C extends Array {}
   ^^^^^^^^^^^^^^^^^^^^^^^^
 

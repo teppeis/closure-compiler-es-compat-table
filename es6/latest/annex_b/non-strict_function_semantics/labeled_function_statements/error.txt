@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180805/annex_b/non-strict_function_semantics/labeled_function_statements/in.js:5: ERROR - Parse error. Functions can only be declared at top level or inside a block.
+es6/v20180910/annex_b/non-strict_function_semantics/labeled_function_statements/in.js:5: ERROR - Parse error. Functions can only be declared at top level or inside a block.
   label: function foo() { return 2; }
   ^
 

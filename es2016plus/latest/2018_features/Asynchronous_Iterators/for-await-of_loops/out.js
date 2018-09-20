@@ -519,6 +519,34 @@ $jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
 $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
   return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
+$jscomp.makeAsyncIterator = function(a) {
+  $jscomp.initSymbolAsyncIterator();
+  $jscomp.initSymbol();
+  $jscomp.initSymbolAsyncIterator();
+  var b = a[Symbol.asyncIterator];
+  return void 0 !== b ? b.call(a) : new $jscomp.AsyncIteratorFromSyncWrapper($jscomp.makeIterator(a));
+};
+$jscomp.AsyncIteratorFromSyncWrapper = function(a) {
+  $jscomp.initSymbol();
+  $jscomp.initSymbolAsyncIterator();
+  this[Symbol.asyncIterator] = function() {
+    return this;
+  };
+  $jscomp.initSymbol();
+  $jscomp.initSymbolIterator();
+  this[Symbol.iterator] = function() {
+    return a;
+  };
+  this.next = function(b) {
+    return Promise.resolve(a.next(b));
+  };
+  void 0 !== a["throw"] && (this["throw"] = function(b) {
+    return Promise.resolve(a["throw"](b));
+  });
+  void 0 !== a["return"] && (this["return"] = function(b) {
+    return Promise.resolve(a["return"](b));
+  });
+};
 module.exports = function(a) {
   var b = {};
   $jscomp.initSymbol();

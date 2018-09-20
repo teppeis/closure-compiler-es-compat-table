@@ -6,7 +6,7 @@ return fuz.bar === 42 && fuz.baz === 33;
 
 };
 ----------------------------------------------------------
-esnext/v20180805/strawman__stage_0_/object_shorthand_improvements/object_initializers/in.js:4: ERROR - Parse error. '}' expected
+esnext/v20180910/strawman__stage_0_/object_shorthand_improvements/object_initializers/in.js:4: ERROR - Parse error. '}' expected
 var fuz = { foo.bar, foo['baz'] };
                ^
 

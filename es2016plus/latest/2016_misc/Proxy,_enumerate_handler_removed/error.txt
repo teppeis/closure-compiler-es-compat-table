@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20180805/2016_misc/Proxy,_enumerate_handler_removed/in.js:9: WARNING - If this if/for/while really shouldn't have a body, use {}
+es2016plus/v20180910/2016_misc/Proxy,_enumerate_handler_removed/in.js:9: WARNING - If this if/for/while really shouldn't have a body, use {}
   for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
                        ^
 

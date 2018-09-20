@@ -86,8 +86,7 @@
 - methods aren't enumerable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/methods_arent_enumerable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/methods_arent_enumerable/out.js))
 - implicit strict mode ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/implicit_strict_mode/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/implicit_strict_mode/out.js))
 - constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/constructor_requires_new/out.js))
-- extends expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_expressions/error.txt))
-- extends null ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/error.txt))
+- extends null ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/extends_null/out.js))
 - new.target ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/class/new.target/error.txt))
 
 ### super

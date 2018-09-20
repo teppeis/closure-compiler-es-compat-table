@@ -11,11 +11,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180805/misc/Proxy,_internal_get_calls/HasBinding/in.js:8: WARNING - Suspicious code. The result of the 'typeof' operator is not being used.
+es6/v20180910/misc/Proxy,_internal_get_calls/HasBinding/in.js:8: WARNING - Suspicious code. The result of the 'typeof' operator is not being used.
     typeof foo;
     ^^^^^^^^^^
 
-es6/v20180805/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - The with statement cannot be used in strict mode.
+es6/v20180910/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - The with statement cannot be used in strict mode.
   with(p) {
   ^^^^^^^^^
 
