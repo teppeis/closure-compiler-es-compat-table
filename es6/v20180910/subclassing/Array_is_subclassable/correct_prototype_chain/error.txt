@@ -1,0 +1,13 @@
+// subclassing / Array is subclassable / correct prototype chain
+module.exports = () => {
+  class C extends Array {}
+  var c = new C();
+  return c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;
+
+};
+----------------------------------------------------------
+es6/v20180910/subclassing/Array_is_subclassable/correct_prototype_chain/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+  class C extends Array {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
