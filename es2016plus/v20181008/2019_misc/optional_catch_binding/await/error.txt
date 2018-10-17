@@ -1,0 +1,18 @@
+// 2019 misc / optional catch binding / await
+module.exports = (asyncTestPassed) => {
+(async function (){
+try {
+await Promise.reject();
+}
+catch {
+asyncTestPassed();
+}
+})();
+
+};
+----------------------------------------------------------
+es2016plus/v20181008/2019_misc/optional_catch_binding/await/in.js:7: ERROR - Parse error. '(' expected
+catch {
+      ^
+
+1 error(s), 0 warning(s)
