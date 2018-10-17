@@ -47,7 +47,7 @@ class TestCode {
       this.useEval && !ignoreEval
         ? `throw new Error('eval() and Function() cannot be transpiled');\n`
         : '';
-    const initIterator = this.useCreateIterable ? '$jscomp.initSymbolIterator();\n' : '';
+    const initIterator = this.useCreateIterable ? 'module.exports._ = Symbol.iterator;\n' : '';
     // Use arrow function to enable EarlyEs6ToEs3Converter for Symbol polyfill
     // @see https://github.com/google/closure-compiler/issues/2881#issuecomment-381416295
     const src = `// ${this.name}
