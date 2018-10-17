@@ -1,0 +1,15 @@
+// misc / Updated identifier syntax / no escaped reserved words as identifiers
+module.exports = () => {
+  var \u0061;
+  var v\u0061r;
+  return false;
+};
+
+// EXPECT: 4: ERROR - Parse error. 'identifier' expected
+
+----------------------------------------------------------
+es6/v20181008/misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/in.js:4: ERROR - Parse error. 'identifier' expected
+  var v\u0061r;
+      ^
+
+1 error(s), 0 warning(s)

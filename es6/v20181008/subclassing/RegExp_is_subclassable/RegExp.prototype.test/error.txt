@@ -1,0 +1,13 @@
+// subclassing / RegExp is subclassable / RegExp.prototype.test
+module.exports = () => {
+  class R extends RegExp {}
+  var r = new R("baz");
+  return r.test("foobarbaz");
+
+};
+----------------------------------------------------------
+es6/v20181008/subclassing/RegExp_is_subclassable/RegExp.prototype.test/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: RegExp
+  class R extends RegExp {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
