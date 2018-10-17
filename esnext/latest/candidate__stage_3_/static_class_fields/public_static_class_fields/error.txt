@@ -7,7 +7,7 @@ return C.x === 'x';
 
 };
 ----------------------------------------------------------
-esnext/v20180910/candidate__stage_3_/static_class_fields/public_static_class_fields/in.js:4: ERROR - Parse error. '(' expected
+esnext/v20181008/candidate__stage_3_/static_class_fields/public_static_class_fields/in.js:4: ERROR - Parse error. '(' expected
 static x = 'x';
          ^
 

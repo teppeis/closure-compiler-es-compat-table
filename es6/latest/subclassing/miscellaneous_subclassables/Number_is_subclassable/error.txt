@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180910/subclassing/miscellaneous_subclassables/Number_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
+es6/v20181008/subclassing/miscellaneous_subclassables/Number_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Number
   class C extends Number {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^
 

@@ -15,7 +15,7 @@ return it.next().value;
 
 };
 ----------------------------------------------------------
-es2016plus/v20180910/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
+es2016plus/v20181008/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
 catch {
       ^
 

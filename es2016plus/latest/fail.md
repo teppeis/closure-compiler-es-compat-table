@@ -49,18 +49,13 @@
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
 
 ### RegExp named capture groups
-- RegExp named capture groups ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_named_capture_groups/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_named_capture_groups/out.js))
+- RegExp named capture groups ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_named_capture_groups/error.txt))
 
 ### RegExp Lookbehind Assertions
 - RegExp Lookbehind Assertions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Lookbehind_Assertions/error.txt))
 
 ### RegExp Unicode Property Escapes
 - RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
-
-## 2018 misc
-
-### template literal revision
-- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/template_literal_revision/error.txt))
 
 ## 2019 misc
 

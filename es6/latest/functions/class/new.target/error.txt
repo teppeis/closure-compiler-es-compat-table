@@ -15,11 +15,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20180910/functions/class/new.target/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20181008/functions/class/new.target/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
     passed = new.target === f;
              ^^^^^^^^^^
 
-es6/v20180910/functions/class/new.target/in.js:9: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20181008/functions/class/new.target/in.js:9: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
       passed &= new.target === B;
                 ^^^^^^^^^^
 
