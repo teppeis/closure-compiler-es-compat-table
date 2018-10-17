@@ -13,7 +13,7 @@
     "es2016plus": "./run.js es2016plus",
     "es6": "./run.js es6",
     "esnext": "./run.js esnext",
-    "stop": "./node_modules/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop",
+    "stop": "./node_modules/@teppeis/closure-gun/nailgun/ng com.martiansoftware.nailgun.builtins.NGStop",
     "test": "eslint *.js legacy/*.js"
   },
   "dependencies": {

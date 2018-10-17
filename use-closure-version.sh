@@ -13,7 +13,7 @@ targetVer=$1
 compilerJar=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
-closureGunDir="$basedir/node_modules/closure-gun"
+closureGunDir="$basedir/node_modules/@teppeis/closure-gun"
 
 if [ ! -d "$closureGunDir" ]; then
     npm i
@@ -36,7 +36,7 @@ if [ "$targetVer" = '1.0-SNAPSHOT' ]; then
     closureDir="$basedir/node_modules/google-closure-compiler"
     mkdir -p "$closureDir"
     cp "$compilerJar" "$closureDir/compiler.jar"
-    npm i --no-save closure-gun
+    npm i --no-save @teppeis/closure-gun
     rm -rf "$closureDir"
     exit
 fi
