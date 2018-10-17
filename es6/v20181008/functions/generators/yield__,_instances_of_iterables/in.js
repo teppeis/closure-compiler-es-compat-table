@@ -1,6 +1,6 @@
 // functions / generators / yield *, instances of iterables
 module.exports = () => {
-  $jscomp.initSymbolIterator();
+  module.exports._ = Symbol.iterator;
   var iterator = (function * generator() {
     yield * Object.create(__createIterableObject([5, 6, 7]));
   }());
