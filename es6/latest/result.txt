@@ -22,10 +22,10 @@ syntax/spread_syntax_for_iterable_objects/with_astral_plane_strings,_in_function
 syntax/spread_syntax_for_iterable_objects/with_astral_plane_strings,_in_array_literals/out.js: [InvalidResult: false]
 syntax/spread_syntax_for_iterable_objects/with_generator_instances,_in_calls/out.js: [Pass]
 syntax/spread_syntax_for_iterable_objects/with_generator_instances,_in_arrays/out.js: [Pass]
-syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_calls/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_arrays/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_calls/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_arrays/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_calls/out.js: [Pass]
+syntax/spread_syntax_for_iterable_objects/with_generic_iterables,_in_arrays/out.js: [Pass]
+syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_calls/out.js: [Pass]
+syntax/spread_syntax_for_iterable_objects/with_instances_of_iterables,_in_arrays/out.js: [Pass]
 syntax/spread_syntax_for_iterable_objects/spreading_non-iterables_is_a_runtime_error/out.js: [InvalidResult: undefined]
 syntax/object_literal_extensions/computed_properties/out.js: [Pass]
 syntax/object_literal_extensions/shorthand_properties/out.js: [Pass]
@@ -38,10 +38,10 @@ syntax/for..of_loops/with_sparse_arrays/out.js: [Pass]
 syntax/for..of_loops/with_strings/out.js: [Pass]
 syntax/for..of_loops/with_astral_plane_strings/out.js: [InvalidResult: false]
 syntax/for..of_loops/with_generator_instances/out.js: [Pass]
-syntax/for..of_loops/with_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/for..of_loops/with_instances_of_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/for..of_loops/iterator_closing,_break/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/for..of_loops/iterator_closing,_throw/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+syntax/for..of_loops/with_generic_iterables/out.js: [Pass]
+syntax/for..of_loops/with_instances_of_generic_iterables/out.js: [Pass]
+syntax/for..of_loops/iterator_closing,_break/out.js: [InvalidResult: false]
+syntax/for..of_loops/iterator_closing,_throw/out.js: [InvalidResult: false]
 syntax/octal_and_binary_literals/octal_literals/out.js: [Pass]
 syntax/octal_and_binary_literals/binary_literals/out.js: [Pass]
 syntax/octal_and_binary_literals/octal_supported_by_Number__/out.js: [InvalidResult: false]
@@ -61,9 +61,9 @@ syntax/destructuring,_declarations/with_sparse_arrays/out.js: [Pass]
 syntax/destructuring,_declarations/with_strings/out.js: [Pass]
 syntax/destructuring,_declarations/with_astral_plane_strings/out.js: [InvalidResult: false]
 syntax/destructuring,_declarations/with_generator_instances/out.js: [Pass]
-syntax/destructuring,_declarations/with_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_declarations/with_instances_of_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_declarations/iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+syntax/destructuring,_declarations/with_generic_iterables/out.js: [Pass]
+syntax/destructuring,_declarations/with_instances_of_generic_iterables/out.js: [Pass]
+syntax/destructuring,_declarations/iterator_closing/out.js: [InvalidResult: false]
 syntax/destructuring,_declarations/trailing_commas_in_iterable_patterns/out.js: [Pass]
 syntax/destructuring,_declarations/with_objects/out.js: [Pass]
 syntax/destructuring,_declarations/object_destructuring_with_primitives/out.js: [Pass]
@@ -83,9 +83,9 @@ syntax/destructuring,_assignment/with_sparse_arrays/out.js: [Pass]
 syntax/destructuring,_assignment/with_strings/out.js: [Pass]
 syntax/destructuring,_assignment/with_astral_plane_strings/out.js: [InvalidResult: false]
 syntax/destructuring,_assignment/with_generator_instances/out.js: [Pass]
-syntax/destructuring,_assignment/with_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_assignment/with_instances_of_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_assignment/iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+syntax/destructuring,_assignment/with_generic_iterables/out.js: [Pass]
+syntax/destructuring,_assignment/with_instances_of_generic_iterables/out.js: [Pass]
+syntax/destructuring,_assignment/iterator_closing/out.js: [InvalidResult: false]
 syntax/destructuring,_assignment/iterable_destructuring_expression/out.js: [Pass]
 syntax/destructuring,_assignment/chained_iterable_destructuring/out.js: [Pass]
 syntax/destructuring,_assignment/trailing_commas_in_iterable_patterns/out.js: [Pass]
@@ -107,9 +107,9 @@ syntax/destructuring,_parameters/with_sparse_arrays/out.js: [Pass]
 syntax/destructuring,_parameters/with_strings/out.js: [Pass]
 syntax/destructuring,_parameters/with_astral_plane_strings/out.js: [InvalidResult: false]
 syntax/destructuring,_parameters/with_generator_instances/out.js: [Pass]
-syntax/destructuring,_parameters/with_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_parameters/with_instances_of_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-syntax/destructuring,_parameters/iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+syntax/destructuring,_parameters/with_generic_iterables/out.js: [Pass]
+syntax/destructuring,_parameters/with_instances_of_generic_iterables/out.js: [Pass]
+syntax/destructuring,_parameters/iterator_closing/out.js: [InvalidResult: false]
 syntax/destructuring,_parameters/trailing_commas_in_iterable_patterns/out.js: [Pass]
 syntax/destructuring,_parameters/with_objects/out.js: [Pass]
 syntax/destructuring,_parameters/object_destructuring_with_primitives/out.js: [Pass]
@@ -250,7 +250,7 @@ built-ins/typed_arrays/DataView__Float32_/out.js: ReferenceError: ArrayBuffer is
 built-ins/typed_arrays/DataView__Float64_/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/ArrayBuffer_Symbol.species_/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/constructors_require_new/out.js: ReferenceError: ArrayBuffer is not defined
-built-ins/typed_arrays/constructors_accept_generic_iterables/out.js: ReferenceError: $jscomp is not defined
+built-ins/typed_arrays/constructors_accept_generic_iterables/out.js: TypeError: undefined is not a function
 built-ins/typed_arrays/correct_prototype_chains/out.js: ReferenceError: Int8Array is not defined
 built-ins/typed_arrays/%TypedArray%.from/out.js: ReferenceError: Int8Array is not defined
 built-ins/typed_arrays/%TypedArray%.of/out.js: ReferenceError: Int8Array is not defined
@@ -321,7 +321,7 @@ built-ins/WeakMap/constructor_requires_new/out.js: [InvalidResult: false]
 built-ins/WeakMap/constructor_accepts_null/out.js: [Pass]
 built-ins/WeakMap/constructor_invokes_set/out.js: [Pass]
 built-ins/WeakMap/frozen_objects_as_keys/out.js: [Pass]
-built-ins/WeakMap/iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-ins/WeakMap/iterator_closing/out.js: [InvalidResult: false]
 built-ins/WeakMap/WeakMap.prototype.set_returns_this/out.js: [Pass]
 built-ins/WeakMap/WeakMap.prototype.delete/out.js: [Pass]
 built-ins/WeakMap/no_WeakMap.prototype.clear_method/out.js: [Pass]
@@ -332,7 +332,7 @@ built-ins/WeakSet/constructor_arguments/out.js: [Pass]
 built-ins/WeakSet/constructor_requires_new/out.js: [InvalidResult: false]
 built-ins/WeakSet/constructor_accepts_null/out.js: [Pass]
 built-ins/WeakSet/constructor_invokes_add/out.js: [Pass]
-built-ins/WeakSet/iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-ins/WeakSet/iterator_closing/out.js: [InvalidResult: false]
 built-ins/WeakSet/WeakSet.prototype.add_returns_this/out.js: [Pass]
 built-ins/WeakSet/WeakSet.prototype.delete/out.js: [Pass]
 built-ins/WeakSet/no_WeakSet.prototype.clear_method/out.js: [Pass]
@@ -396,9 +396,9 @@ built-ins/Promise/basic_functionality/out.js: [Pass]
 built-ins/Promise/constructor_requires_new/out.js: [Pass]
 built-ins/Promise/Promise.prototype_isnt_an_instance/out.js: [Skip]
 built-ins/Promise/Promise.all/out.js: [Pass]
-built-ins/Promise/Promise.all,_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-ins/Promise/Promise.all,_generic_iterables/out.js: [Pass]
 built-ins/Promise/Promise.race/out.js: [Pass]
-built-ins/Promise/Promise.race,_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-ins/Promise/Promise.race,_generic_iterables/out.js: [Pass]
 built-ins/Promise/Promise_Symbol.species_/out.js: TypeError: Cannot use 'in' operator to search for 'get' in undefined
 built-ins/Symbol/basic_functionality/out.js: [Pass]
 built-ins/Symbol/typeof_support/out.js: [InvalidResult: false]
@@ -479,13 +479,13 @@ built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.search_/
 built-in_extensions/RegExp.prototype_properties/RegExp_Symbol.species_/out.js: TypeError: Cannot use 'in' operator to search for 'get' in undefined
 built-in_extensions/Array_static_methods/Array.from,_array-like_objects/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array.from,_generator_instances/out.js: [Pass]
-built-in_extensions/Array_static_methods/Array.from,_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-built-in_extensions/Array_static_methods/Array.from,_instances_of_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-in_extensions/Array_static_methods/Array.from,_generic_iterables/out.js: [Pass]
+built-in_extensions/Array_static_methods/Array.from,_instances_of_generic_iterables/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array.from_map_function,_array-like_objects/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array.from_map_function,_generator_instances/out.js: [Pass]
-built-in_extensions/Array_static_methods/Array.from_map_function,_generic_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_iterables/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
-built-in_extensions/Array_static_methods/Array.from,_iterator_closing/out.js: TypeError: Object #<Object> has no method 'initSymbolIterator'
+built-in_extensions/Array_static_methods/Array.from_map_function,_generic_iterables/out.js: [Pass]
+built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_iterables/out.js: [Pass]
+built-in_extensions/Array_static_methods/Array.from,_iterator_closing/out.js: [InvalidResult: false]
 built-in_extensions/Array_static_methods/Array.of/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array_Symbol.species_/out.js: TypeError: Cannot use 'in' operator to search for 'get' in undefined
 built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: AssertionError: [1,2,3,4,5] deepEqual [1,2,1,2,3]

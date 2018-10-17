@@ -1,21 +1,5 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
-};
-$jscomp.global = $jscomp.getGlobal(this);
-$jscomp.checkEs6ConformanceViaProxy = function() {
-  try {
-    var a = {}, e = Object.create(new $jscomp.global.Proxy(a, {get:function(d, c, f) {
-      return d == a && "q" == c && f == e;
-    }}));
-    return !0 === e.q;
-  } catch (d) {
-    return !1;
-  }
-};
-$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
-$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.arrayIteratorImpl = function(a) {
   var e = 0;
   return function() {
@@ -31,6 +15,10 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, e, d) {
   a != Array.prototype && a != Object.prototype && (a[e] = d.value);
 };
+$jscomp.getGlobal = function(a) {
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+};
+$jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
   $jscomp.initSymbol = function() {
@@ -68,6 +56,18 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.checkEs6ConformanceViaProxy = function() {
+  try {
+    var a = {}, e = Object.create(new $jscomp.global.Proxy(a, {get:function(d, c, f) {
+      return d == a && "q" == c && f == e;
+    }}));
+    return !0 === e.q;
+  } catch (d) {
+    return !1;
+  }
+};
+$jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
+$jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.makeIterator = function(a) {
   var e = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
   return e ? e.call(a) : $jscomp.arrayIterator(a);
@@ -255,16 +255,16 @@ $jscomp.polyfill("Map", function(a) {
   var f = function(a, c) {
     var b = c && typeof c;
     "object" == b || "function" == b ? d.has(c) ? b = d.get(c) : (b = "" + ++l, d.set(c, b)) : b = "p_" + c;
-    var f = a.data_[b];
-    if (f && $jscomp.owns(a.data_, b)) {
-      for (a = 0; a < f.length; a++) {
-        var e = f[a];
-        if (c !== c && e.key !== e.key || c === e.key) {
-          return {id:b, list:f, index:a, entry:e};
+    var e = a.data_[b];
+    if (e && $jscomp.owns(a.data_, b)) {
+      for (a = 0; a < e.length; a++) {
+        var f = e[a];
+        if (c !== c && f.key !== f.key || c === f.key) {
+          return {id:b, list:e, index:a, entry:f};
         }
       }
     }
-    return {id:b, list:f, index:-1, entry:void 0};
+    return {id:b, list:e, index:-1, entry:void 0};
   }, g = function(a, c) {
     var b = a.head_;
     return $jscomp.iteratorPrototype(function() {
@@ -360,7 +360,9 @@ $jscomp.polyfill("Set", function(a) {
   return d;
 }, "es6", "es3");
 module.exports = function() {
+  $jscomp.initSymbol();
   $jscomp.initSymbolIterator();
+  module.exports._ = Symbol.iterator;
   var a = !1, e = global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
