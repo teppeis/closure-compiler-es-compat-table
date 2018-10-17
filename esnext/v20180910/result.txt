@@ -2,8 +2,8 @@ candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
 candidate__stage_3_/string_trimming/String.prototype.trimStart/out.js: TypeError: Object abc has no method 'trimStart'
 candidate__stage_3_/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object abc has no method 'trimEnd'
-candidate__stage_3_/global/global_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/global/global_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/String.prototype.matchAll/out.js: TypeError: Object 11a2bb has no method 'matchAll'
 candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt: [CompileError]
