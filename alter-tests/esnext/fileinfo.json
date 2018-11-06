@@ -810,11 +810,6 @@
     "subtest": "Zone.prototype.wrap"
   },
   {
-    "path": "strawman__stage_0_/asap",
-    "category": "strawman (stage 0)",
-    "test": "asap"
-  },
-  {
     "path": "strawman__stage_0_/syntactic_tail_calls/direct_recursion",
     "category": "strawman (stage 0)",
     "test": "syntactic tail calls",

@@ -136,7 +136,6 @@ strawman__stage_0_/zones/Zone.prototype.parent/out.js: ReferenceError: Zone is n
 strawman__stage_0_/zones/Zone.prototype.fork/out.js: ReferenceError: Zone is not defined
 strawman__stage_0_/zones/Zone.prototype.run/out.js: ReferenceError: Zone is not defined
 strawman__stage_0_/zones/Zone.prototype.wrap/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/asap/out.js: ReferenceError: asap is not defined
 strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileError]
 strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]

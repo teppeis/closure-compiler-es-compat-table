@@ -224,9 +224,6 @@
 - Zone.prototype.run ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/zones/Zone.prototype.run/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/zones/Zone.prototype.run/out.js))
 - Zone.prototype.wrap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/zones/Zone.prototype.wrap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/zones/Zone.prototype.wrap/out.js))
 
-### asap
-- asap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/asap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/asap/out.js))
-
 ### syntactic tail calls
 - direct recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt))
 - mutual recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181008/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt))
