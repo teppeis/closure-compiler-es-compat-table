@@ -1,0 +1,15 @@
+// proposal (stage 1) / partial application syntax / partial application from right
+module.exports = () => {
+function f(a, b) {
+return a + b;
+};
+var p = f(?, 'b');
+return p('a') === 'ab';
+
+};
+----------------------------------------------------------
+esnext/v20181028/proposal__stage_1_/partial_application_syntax/partial_application_from_right/in.js:6: ERROR - Parse error. ')' expected
+var p = f(?, 'b');
+          ^
+
+1 error(s), 0 warning(s)
