@@ -137,7 +137,6 @@
   "strawman__stage_0_/zones/Zone.prototype.fork",
   "strawman__stage_0_/zones/Zone.prototype.run",
   "strawman__stage_0_/zones/Zone.prototype.wrap",
-  "strawman__stage_0_/asap",
   "strawman__stage_0_/syntactic_tail_calls/direct_recursion",
   "strawman__stage_0_/syntactic_tail_calls/mutual_recursion",
   "strawman__stage_0_/object_shorthand_improvements/object_initializers",
