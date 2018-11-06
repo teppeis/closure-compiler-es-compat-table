@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20181008/2018_features/RegExp_named_capture_groups/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp named groups" to targeted output language. Either remove feature "RegExp named groups" or raise output level to ECMASCRIPT_2018.
+es2016plus/v20181028/2018_features/RegExp_named_capture_groups/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp named groups" to targeted output language. Either remove feature "RegExp named groups" or raise output level to ECMASCRIPT_2018.
   var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

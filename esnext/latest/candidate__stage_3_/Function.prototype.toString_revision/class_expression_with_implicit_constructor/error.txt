@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20181008/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js:4: WARNING - unreachable code
+esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js:4: WARNING - unreachable code
   var str = 'class A {}';
   ^^^^^^^^^^^^^^^^^^^^^^^
 
