@@ -1,0 +1,17 @@
+// bindings / let / scope shadow resolution
+module.exports = () => {
+  try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+  } catch(e) {
+    return false;
+  }
+
+};
+----------------------------------------------------------
+es6/v20181125/bindings/let/scope_shadow_resolution/in.js:7: WARNING - unreachable code
+  } catch(e) {
+    ^^^^^^^^^^
+
+0 error(s), 1 warning(s)

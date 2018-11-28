@@ -1,0 +1,18 @@
+// bindings / let / scope shadow resolution (strict mode)
+module.exports = () => {
+  'use strict';
+  try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+  } catch(e) {
+    return false;
+  }
+
+};
+----------------------------------------------------------
+es6/v20181125/bindings/let/scope_shadow_resolution__strict_mode_/in.js:8: WARNING - unreachable code
+  } catch(e) {
+    ^^^^^^^^^^
+
+0 error(s), 1 warning(s)
