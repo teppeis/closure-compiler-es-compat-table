@@ -336,6 +336,12 @@
     "subtest": "\"u\" flag"
   },
   {
+    "path": "syntax/RegExp_y_and_u_flags/u_flag,_non-BMP_Unicode_characters",
+    "category": "syntax",
+    "test": "RegExp \"y\" and \"u\" flags",
+    "subtest": "\"u\" flag, non-BMP Unicode characters"
+  },
+  {
     "path": "syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes",
     "category": "syntax",
     "test": "RegExp \"y\" and \"u\" flags",
@@ -804,6 +810,12 @@
     "subtest": "is block-scoped"
   },
   {
+    "path": "bindings/const/scope_shadow_resolution",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "scope shadow resolution"
+  },
+  {
     "path": "bindings/const/cannot_be_in_statements",
     "category": "bindings",
     "test": "const",
@@ -850,6 +862,12 @@
     "category": "bindings",
     "test": "const",
     "subtest": "is block-scoped (strict mode)"
+  },
+  {
+    "path": "bindings/const/scope_shadow_resolution__strict_mode_",
+    "category": "bindings",
+    "test": "const",
+    "subtest": "scope shadow resolution (strict mode)"
   },
   {
     "path": "bindings/const/cannot_be_in_statements__strict_mode_",
@@ -900,6 +918,12 @@
     "subtest": "is block-scoped"
   },
   {
+    "path": "bindings/let/scope_shadow_resolution",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "scope shadow resolution"
+  },
+  {
     "path": "bindings/let/cannot_be_in_statements",
     "category": "bindings",
     "test": "let",
@@ -934,6 +958,12 @@
     "category": "bindings",
     "test": "let",
     "subtest": "is block-scoped (strict mode)"
+  },
+  {
+    "path": "bindings/let/scope_shadow_resolution__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "scope shadow resolution (strict mode)"
   },
   {
     "path": "bindings/let/cannot_be_in_statements__strict_mode_",

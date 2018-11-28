@@ -1,4 +1,4 @@
-// candidate (stage 3) / Symbol.prototype.description
+// 2019 misc / Symbol.prototype.description
 module.exports = () => {
   return Symbol('foo').description === 'foo';
 

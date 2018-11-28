@@ -71,48 +71,6 @@
     "subtest": "private static class fields"
   },
   {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "functions created with the Function constructor"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/arrows",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "arrows"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/_native_code_",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "[native code]"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "class expression with implicit constructor"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "class expression with explicit constructor"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "unicode escape sequences in identifiers"
-  },
-  {
-    "path": "candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names",
-    "category": "candidate (stage 3)",
-    "test": "Function.prototype.toString revision",
-    "subtest": "methods and computed property names"
-  },
-  {
     "path": "candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flat",
     "category": "candidate (stage 3)",
     "test": "Array.prototype.{flat, flatMap}",
@@ -123,11 +81,6 @@
     "category": "candidate (stage 3)",
     "test": "Array.prototype.{flat, flatMap}",
     "subtest": "Array.prototype.flatMap"
-  },
-  {
-    "path": "candidate__stage_3_/Symbol.prototype.description",
-    "category": "candidate (stage 3)",
-    "test": "Symbol.prototype.description"
   },
   {
     "path": "candidate__stage_3_/BigInt/basic_functionality",
@@ -181,6 +134,11 @@
     "path": "candidate__stage_3_/Object.fromEntries",
     "category": "candidate (stage 3)",
     "test": "Object.fromEntries"
+  },
+  {
+    "path": "candidate__stage_3_/Well-formed_JSON.stringify",
+    "category": "candidate (stage 3)",
+    "test": "Well-formed JSON.stringify"
   },
   {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
@@ -255,6 +213,18 @@
     "category": "draft (stage 2)",
     "test": "Set methods",
     "subtest": "Set.prototype.symmetricDifference"
+  },
+  {
+    "path": "draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__",
+    "category": "draft (stage 2)",
+    "test": "ArrayBuffer.prototype.transfer",
+    "subtest": "ArrayBuffer.prototype.transfer()"
+  },
+  {
+    "path": "draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__",
+    "category": "draft (stage 2)",
+    "test": "ArrayBuffer.prototype.transfer",
+    "subtest": "ArrayBuffer.prototype.realloc()"
   },
   {
     "path": "proposal__stage_1_/do_expressions",

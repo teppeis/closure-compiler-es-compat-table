@@ -534,5 +534,52 @@
     "category": "2019 misc",
     "test": "optional catch binding",
     "subtest": "yield"
+  },
+  {
+    "path": "2019_misc/Symbol.prototype.description",
+    "category": "2019 misc",
+    "test": "Symbol.prototype.description"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "functions created with the Function constructor"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/arrows",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "arrows"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/_native_code_",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "[native code]"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "class expression with implicit constructor"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "class expression with explicit constructor"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "unicode escape sequences in identifiers"
+  },
+  {
+    "path": "2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names",
+    "category": "2019 misc",
+    "test": "Function.prototype.toString revision",
+    "subtest": "methods and computed property names"
   }
 ]
