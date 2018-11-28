@@ -1,0 +1,19 @@
+// proposal (stage 1) / Object.freeze and Object.seal syntax / Sealing, function destructuring
+module.exports = () => {
+function foo({| bar, baz |}) {
+return bar + baz;
+}
+if (foo({ bar: 1, baz: 2 }) !== 3) return;
+try {
+foo({ bar: 1, fuz: 2 });
+} catch (e) {
+return true;
+}
+
+};
+----------------------------------------------------------
+esnext/v20181125/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_destructuring/in.js:3: ERROR - Parse error. '}' expected
+function foo({| bar, baz |}) {
+              ^
+
+1 error(s), 0 warning(s)

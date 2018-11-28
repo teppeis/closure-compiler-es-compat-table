@@ -1,0 +1,11 @@
+// proposal (stage 1) / Object.freeze and Object.seal syntax / Object.freeze syntax
+module.exports = () => {
+return Object.isFrozen({# foo: 42 #});
+
+};
+----------------------------------------------------------
+esnext/v20181125/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/in.js:3: ERROR - Parse error. '}' expected
+return Object.isFrozen({# foo: 42 #});
+                        ^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,11 @@
+// candidate (stage 3) / BigInt / constructor
+module.exports = () => {
+return BigInt("3") === 3n;
+
+};
+----------------------------------------------------------
+esnext/v20181125/candidate__stage_3_/BigInt/constructor/in.js:3: ERROR - Parse error. Semi-colon expected
+return BigInt("3") === 3n;
+                        ^
+
+1 error(s), 0 warning(s)
