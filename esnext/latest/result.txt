@@ -10,16 +10,8 @@ candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_su
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt: [CompileError]
-candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/Function.prototype.toString_revision/_native_code_/out.js: [Pass]
-candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flat/out.js: TypeError: Object 1,2,3,4,5,6 has no method 'flat'
 candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flatMap/out.js: TypeError: Object [object Object],[object Object] has no method 'flatMap'
-candidate__stage_3_/Symbol.prototype.description/out.js: [InvalidResult: false]
 candidate__stage_3_/BigInt/basic_functionality/error.txt: [CompileError]
 candidate__stage_3_/BigInt/constructor/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigInt.asUintN/out.js: ReferenceError: BigInt is not defined
@@ -29,6 +21,7 @@ candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js: ReferenceError: DataView is not defined
 candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js: ReferenceError: DataView is not defined
 candidate__stage_3_/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
+candidate__stage_3_/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]
@@ -42,6 +35,8 @@ draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object
 draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
 draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]

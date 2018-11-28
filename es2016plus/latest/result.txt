@@ -90,3 +90,11 @@
 2019_misc/optional_catch_binding/basic/error.txt: [CompileError]
 2019_misc/optional_catch_binding/await/error.txt: [CompileError]
 2019_misc/optional_catch_binding/yield/error.txt: [CompileError]
+2019_misc/Symbol.prototype.description/out.js: [InvalidResult: false]
+2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/_native_code_/out.js: Error: Funtion#toString() is not supported
+2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled
