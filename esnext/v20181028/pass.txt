@@ -1,3 +1,2 @@
 candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
-candidate__stage_3_/Function.prototype.toString_revision/_native_code_/out.js: [Pass]

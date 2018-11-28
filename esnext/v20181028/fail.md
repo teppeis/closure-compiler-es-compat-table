@@ -21,20 +21,9 @@
 - public static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt))
 - private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt))
 
-### Function.prototype.toString revision
-- functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))
-- arrows ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/arrows/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/arrows/out.js))
-- class expression with implicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js))
-- class expression with explicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js))
-- unicode escape sequences in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js))
-- methods and computed property names ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Function.prototype.toString_revision/methods_and_computed_property_names/out.js))
-
 ### Array.prototype.{flat, flatMap}
 - Array.prototype.flat ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/out.js))
 - Array.prototype.flatMap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/out.js))
-
-### Symbol.prototype.description
-- Symbol.prototype.description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Symbol.prototype.description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Symbol.prototype.description/out.js))
 
 ### BigInt
 - basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/BigInt/basic_functionality/error.txt))
@@ -48,6 +37,9 @@
 
 ### Object.fromEntries
 - Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Object.fromEntries/out.js))
+
+### Well-formed JSON.stringify
+- Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/candidate__stage_3_/Well-formed_JSON.stringify/out.js))
 
 ## Draft (stage 2)
 
@@ -77,6 +69,10 @@
 - Set.prototype.union ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.union/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.union/out.js))
 - Set.prototype.difference ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.difference/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.difference/out.js))
 - Set.prototype.symmetricDifference ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js))
+
+### ArrayBuffer.prototype.transfer
+- ArrayBuffer.prototype.transfer() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js))
+- ArrayBuffer.prototype.realloc() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20181028/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js))
 
 ## Proposal (stage 1)
 
