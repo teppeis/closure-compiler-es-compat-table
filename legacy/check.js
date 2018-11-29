@@ -115,6 +115,12 @@ function check(file, cb) {
     // console: console,
   };
 
+  // Math.fround polyfill requires Float32Array
+  // https://github.com/google/closure-compiler/commit/5d04b3ccad67e6d2a1a9edcc8f31a7fa2a1ba996
+  if (file === 'built-in_extensions/Math_methods/Math.fround/out.js') {
+    // context.Float32Array = Float32Array;
+  }
+
   try {
     var test = fs.readFileSync(fileAbs, 'utf8');
     var src =
