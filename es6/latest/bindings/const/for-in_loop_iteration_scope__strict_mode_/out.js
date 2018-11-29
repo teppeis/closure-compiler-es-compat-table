@@ -1,11 +1,11 @@
 module.exports = function() {
   var b = [], a = {}, c;
   for (c in{a:1, b:1}) {
-    a.i = c, b.push(function(a) {
+    a.$jscomp$loop$prop$i$1 = c, b.push(function(a) {
       return function() {
-        return a.i;
+        return a.$jscomp$loop$prop$i$1;
       };
-    }(a)), a = {i:a.i};
+    }(a)), a = {$jscomp$loop$prop$i$1:a.$jscomp$loop$prop$i$1};
   }
   return "a" === b[0]() && "b" === b[1]();
 };

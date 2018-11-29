@@ -7,15 +7,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20181028/annex_b/HTML-style_comments/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20181125/annex_b/HTML-style_comments/in.js:3: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
 --> A comment
 ^
 
-es6/v20181028/annex_b/HTML-style_comments/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20181125/annex_b/HTML-style_comments/in.js:4: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
 <!-- Another comment
 ^
 
-es6/v20181028/annex_b/HTML-style_comments/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20181125/annex_b/HTML-style_comments/in.js:5: WARNING - Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
   var a = 3; <!-- Another comment
              ^
 

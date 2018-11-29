@@ -4,7 +4,7 @@ return Object.isSealed([| 42 |]);
 
 };
 ----------------------------------------------------------
-esnext/v20181028/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/in.js:3: ERROR - Parse error. ']' expected
+esnext/v20181125/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/in.js:3: ERROR - Parse error. ']' expected
 return Object.isSealed([| 42 |]);
                         ^
 

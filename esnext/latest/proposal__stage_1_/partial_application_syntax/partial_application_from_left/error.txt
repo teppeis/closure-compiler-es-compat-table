@@ -8,7 +8,7 @@ return p('b') === 'ab';
 
 };
 ----------------------------------------------------------
-esnext/v20181028/proposal__stage_1_/partial_application_syntax/partial_application_from_left/in.js:6: ERROR - Parse error. ')' expected
+esnext/v20181125/proposal__stage_1_/partial_application_syntax/partial_application_from_left/in.js:6: ERROR - Parse error. ')' expected
 var p = f('a', ?);
                ^
 

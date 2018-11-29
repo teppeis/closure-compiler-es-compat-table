@@ -1,8 +1,8 @@
 module.exports = function() {
-  for (var a = [], b = {i:0}; 2 > b.i; b = {i:b.i}, b.i++) {
+  for (var a = [], b = {$jscomp$loop$prop$i$2:0}; 2 > b.$jscomp$loop$prop$i$2; b = {$jscomp$loop$prop$i$2:b.$jscomp$loop$prop$i$2}, b.$jscomp$loop$prop$i$2++) {
     a.push(function(a) {
       return function() {
-        return a.i;
+        return a.$jscomp$loop$prop$i$2;
       };
     }(b));
   }
@@ -10,11 +10,11 @@ module.exports = function() {
   a = [];
   var c = {}, d;
   for (d in{a:1, b:1}) {
-    c.i$0 = d, a.push(function(a) {
+    c.$jscomp$loop$prop$i$0$4 = d, a.push(function(a) {
       return function() {
-        return a.i$0;
+        return a.$jscomp$loop$prop$i$0$4;
       };
-    }(c)), c = {i$0:c.i$0};
+    }(c)), c = {$jscomp$loop$prop$i$0$4:c.$jscomp$loop$prop$i$0$4};
   }
   return b &= "a" === a[0]() && "b" === a[1]();
 };

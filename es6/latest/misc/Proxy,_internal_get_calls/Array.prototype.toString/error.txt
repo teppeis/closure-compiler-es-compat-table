@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20181028/misc/Proxy,_internal_get_calls/Array.prototype.toString/in.js:5: WARNING - unreachable code
+es6/v20181125/misc/Proxy,_internal_get_calls/Array.prototype.toString/in.js:5: WARNING - unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 

@@ -14,10 +14,10 @@ $jscomp.makeIterator = function(a) {
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
-  for (var a = [], b = {}, d = $jscomp.makeIterator(["a", "b"]), c = d.next(); !c.done; b = {i:b.i}, c = d.next()) {
-    b.i = c.value, a.push(function(a) {
+  for (var a = [], b = {}, d = $jscomp.makeIterator(["a", "b"]), c = d.next(); !c.done; b = {$jscomp$loop$prop$i$2:b.$jscomp$loop$prop$i$2}, c = d.next()) {
+    b.$jscomp$loop$prop$i$2 = c.value, a.push(function(a) {
       return function() {
-        return a.i;
+        return a.$jscomp$loop$prop$i$2;
       };
     }(b));
   }

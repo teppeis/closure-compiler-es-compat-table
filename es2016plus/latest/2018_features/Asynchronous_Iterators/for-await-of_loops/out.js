@@ -12,6 +12,7 @@ $jscomp.arrayIterator = function(a) {
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
+$jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, d) {
   a != Array.prototype && a != Object.prototype && (a[b] = d.value);
 };
@@ -55,28 +56,6 @@ $jscomp.iteratorPrototype = function(a) {
     return this;
   };
   return a;
-};
-$jscomp.makeAsyncIterator = function(a) {
-  $jscomp.initSymbolAsyncIterator();
-  var b = a[Symbol.asyncIterator];
-  return void 0 !== b ? b.call(a) : new $jscomp.AsyncIteratorFromSyncWrapper($jscomp.makeIterator(a));
-};
-$jscomp.AsyncIteratorFromSyncWrapper = function(a) {
-  this[Symbol.asyncIterator] = function() {
-    return this;
-  };
-  this[Symbol.iterator] = function() {
-    return a;
-  };
-  this.next = function(b) {
-    return Promise.resolve(a.next(b));
-  };
-  void 0 !== a["throw"] && (this["throw"] = function(b) {
-    return Promise.resolve(a["throw"](b));
-  });
-  void 0 !== a["return"] && (this["return"] = function(b) {
-    return Promise.resolve(a["return"](b));
-  });
 };
 $jscomp.makeIterator = function(a) {
   var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
@@ -538,6 +517,28 @@ $jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
 };
 $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
   return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
+};
+$jscomp.makeAsyncIterator = function(a) {
+  $jscomp.initSymbolAsyncIterator();
+  var b = a[Symbol.asyncIterator];
+  return void 0 !== b ? b.call(a) : new $jscomp.AsyncIteratorFromSyncWrapper($jscomp.makeIterator(a));
+};
+$jscomp.AsyncIteratorFromSyncWrapper = function(a) {
+  this[Symbol.asyncIterator] = function() {
+    return this;
+  };
+  this[Symbol.iterator] = function() {
+    return a;
+  };
+  this.next = function(b) {
+    return Promise.resolve(a.next(b));
+  };
+  void 0 !== a["throw"] && (this["throw"] = function(b) {
+    return Promise.resolve(a["throw"](b));
+  });
+  void 0 !== a["return"] && (this["return"] = function(b) {
+    return Promise.resolve(a["return"](b));
+  });
 };
 module.exports = function(a) {
   var b = {};

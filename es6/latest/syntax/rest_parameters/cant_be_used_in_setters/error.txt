@@ -11,7 +11,7 @@ module.exports = () => {
 // EXPECT: 5: ERROR - Parse error.
 
 ----------------------------------------------------------
-es6/v20181028/syntax/rest_parameters/cant_be_used_in_setters/in.js:5: ERROR - Parse error. Setter must not have a rest parameter
+es6/v20181125/syntax/rest_parameters/cant_be_used_in_setters/in.js:5: ERROR - Parse error. Setter must not have a rest parameter
       set e(...args) {}
             ^
 
