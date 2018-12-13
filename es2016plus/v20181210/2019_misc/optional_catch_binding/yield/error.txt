@@ -1,0 +1,22 @@
+// 2019 misc / optional catch binding / yield
+module.exports = () => {
+function *foo() {
+try {
+yield;
+throw new Error();
+}
+catch {
+return true;
+}
+}
+var it = foo();
+it.next();
+return it.next().value;
+
+};
+----------------------------------------------------------
+es2016plus/v20181210/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
+catch {
+      ^
+
+1 error(s), 0 warning(s)
