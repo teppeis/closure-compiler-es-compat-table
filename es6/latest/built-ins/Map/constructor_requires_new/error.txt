@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20181125/built-ins/Map/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
+es6/v20181210/built-ins/Map/constructor_requires_new/in.js:5: WARNING - Suspicious code. The result of the extern function call 'Map' is not being used.
     Map();
     ^^^^^
 
