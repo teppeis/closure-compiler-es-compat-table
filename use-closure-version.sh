@@ -29,16 +29,15 @@ fi
 npm run --silent stop > /dev/null 2>&1 || true
 
 if [ "$targetVer" = '1.0-SNAPSHOT' ]; then
-    if [ ! -f "$compilerJar" ]; then
-        echo "COMPILER_JAR is not a file: $compilerJar" 1>&2
-        exit 1
+    if [ -f "$compilerJar" ]; then
+        closureDir="$basedir/node_modules/google-closure-compiler"
+        mkdir -p "$closureDir"
+        cp "$compilerJar" "$closureDir/compiler.jar"
+        npm i --no-save @teppeis/closure-gun
+        rm -rf "$closureDir"
+        exit
     fi
-    closureDir="$basedir/node_modules/google-closure-compiler"
-    mkdir -p "$closureDir"
-    cp "$compilerJar" "$closureDir/compiler.jar"
-    npm i --no-save @teppeis/closure-gun
-    rm -rf "$closureDir"
-    exit
+    targetVer=nightly
 fi
 
 cacheDir="$basedir/.closure-gun-cache"
