@@ -1,8 +1,18 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
+$jscomp.arrayIteratorImpl = function(a) {
+  var b = 0;
+  return function() {
+    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+  };
+};
+$jscomp.arrayIterator = function(a) {
+  return {next:$jscomp.arrayIteratorImpl(a)};
+};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
+$jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
@@ -27,7 +37,7 @@ $jscomp.initSymbolIterator = function() {
   var a = $jscomp.global.Symbol.iterator;
   a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
-    return $jscomp.arrayIterator(this);
+    return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
   }});
   $jscomp.initSymbolIterator = function() {
   };
@@ -38,12 +48,6 @@ $jscomp.initSymbolAsyncIterator = function() {
   a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
   $jscomp.initSymbolAsyncIterator = function() {
   };
-};
-$jscomp.arrayIterator = function(a) {
-  var b = 0;
-  return $jscomp.iteratorPrototype(function() {
-    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
-  });
 };
 $jscomp.iteratorPrototype = function(a) {
   $jscomp.initSymbolIterator();
@@ -69,10 +73,7 @@ $jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.set
   return a;
 } : null;
 $jscomp.makeIterator = function(a) {
-  $jscomp.initSymbolIterator();
-  $jscomp.initSymbol();
-  $jscomp.initSymbolIterator();
-  var b = a[Symbol.iterator];
+  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.generator = {};
@@ -269,8 +270,6 @@ $jscomp.generator.Generator_ = function(a) {
     return a.return_(b);
   };
   $jscomp.initSymbolIterator();
-  $jscomp.initSymbol();
-  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };
@@ -281,7 +280,9 @@ $jscomp.generator.createGenerator = function(a, b) {
   return b;
 };
 module.exports = function() {
+  $jscomp.initSymbol();
   $jscomp.initSymbolIterator();
+  module.exports._ = Symbol.iterator;
   var a = !1, b = global.__createIterableObject([1, 2, 3], {"throw":void 0, "return":function() {
     a = !0;
     return {done:!0};

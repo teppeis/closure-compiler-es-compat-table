@@ -1,8 +1,18 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
+$jscomp.arrayIteratorImpl = function(a) {
+  var d = 0;
+  return function() {
+    return d < a.length ? {done:!1, value:a[d++]} : {done:!0};
+  };
+};
+$jscomp.arrayIterator = function(a) {
+  return {next:$jscomp.arrayIteratorImpl(a)};
+};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
+$jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, f) {
   a != Array.prototype && a != Object.prototype && (a[d] = f.value);
 };
@@ -27,7 +37,7 @@ $jscomp.initSymbolIterator = function() {
   var a = $jscomp.global.Symbol.iterator;
   a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
-    return $jscomp.arrayIterator(this);
+    return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
   }});
   $jscomp.initSymbolIterator = function() {
   };
@@ -39,12 +49,6 @@ $jscomp.initSymbolAsyncIterator = function() {
   $jscomp.initSymbolAsyncIterator = function() {
   };
 };
-$jscomp.arrayIterator = function(a) {
-  var d = 0;
-  return $jscomp.iteratorPrototype(function() {
-    return d < a.length ? {done:!1, value:a[d++]} : {done:!0};
-  });
-};
 $jscomp.iteratorPrototype = function(a) {
   $jscomp.initSymbolIterator();
   a = {next:a};
@@ -54,8 +58,7 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 $jscomp.makeIterator = function(a) {
-  $jscomp.initSymbolIterator();
-  var d = a[Symbol.iterator];
+  var d = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
   return d ? d.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.polyfill = function(a, d, f, e) {
@@ -278,7 +281,9 @@ $jscomp.polyfill("Promise", function(a) {
   return c;
 }, "es6", "es3");
 module.exports = function(a) {
+  $jscomp.initSymbol();
   $jscomp.initSymbolIterator();
+  module.exports._ = Symbol.iterator;
   var d = Promise.race(global.__createIterableObject([new Promise(function(a) {
     setTimeout(a, 1000, "foo");
   }), new Promise(function(a, d) {

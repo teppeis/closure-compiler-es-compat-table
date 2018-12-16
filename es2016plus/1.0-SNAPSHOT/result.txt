@@ -75,7 +75,7 @@
 2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupGetter__/out.js: ReferenceError: Proxy is not defined
 2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupSetter__/out.js: ReferenceError: Proxy is not defined
 2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/error.txt: [CompileError]
-2018_features/object_rest_spread_properties/object_rest_properties/out.js: [Pass]
+2018_features/object_rest_spread_properties/object_rest_properties/out.js: TypeError: Object function Object() { [native code] } has no method 'assign'
 2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
 2018_features/Promise.prototype.finally/basic_support/out.js: [Pass]
 2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
@@ -83,10 +83,18 @@
 2018_features/s__dotAll__flag_for_regular_expressions/error.txt: [CompileError]
 2018_features/RegExp_named_capture_groups/error.txt: [CompileError]
 2018_features/RegExp_Lookbehind_Assertions/error.txt: [CompileError]
-2018_features/RegExp_Unicode_Property_Escapes/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'
+2018_features/RegExp_Unicode_Property_Escapes/error.txt: [CompileError]
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
-2018_misc/template_literal_revision/error.txt: [CompileError]
+2018_misc/template_literal_revision/out.js: [Pass]
 2019_misc/optional_catch_binding/basic/error.txt: [CompileError]
 2019_misc/optional_catch_binding/await/error.txt: [CompileError]
 2019_misc/optional_catch_binding/yield/error.txt: [CompileError]
+2019_misc/Symbol.prototype.description/out.js: [InvalidResult: false]
+2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/_native_code_/out.js: Error: Funtion#toString() is not supported
+2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled

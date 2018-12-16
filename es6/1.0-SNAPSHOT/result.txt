@@ -54,7 +54,8 @@ syntax/template_literals/line_break_normalisation/out.js: [Pass]
 syntax/RegExp_y_and_u_flags/y_flag/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'y'
 syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'y'
 syntax/RegExp_y_and_u_flags/u_flag/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'
-syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes/error.txt: [CompileError]
+syntax/RegExp_y_and_u_flags/u_flag,_non-BMP_Unicode_characters/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'
+syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'
 syntax/RegExp_y_and_u_flags/u_flag,_case_folding/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'iu'
 syntax/destructuring,_declarations/with_arrays/out.js: [Pass]
 syntax/destructuring,_declarations/with_sparse_arrays/out.js: [Pass]
@@ -132,6 +133,7 @@ syntax/new.target/in_constructors/error.txt: [CompileError]
 syntax/new.target/assignment_is_an_early_error/error.txt: [NotExpectedCompileError]
 bindings/const/basic_support/out.js: [Pass]
 bindings/const/is_block-scoped/out.js: [Pass]
+bindings/const/scope_shadow_resolution/out.js: [Pass]
 bindings/const/cannot_be_in_statements/out.js: [Pass]
 bindings/const/redefining_a_const_is_an_error/out.js: [Pass]
 bindings/const/for_loop_statement_scope/out.js: [Pass]
@@ -140,6 +142,7 @@ bindings/const/for-of_loop_iteration_scope/out.js: [Pass]
 bindings/const/temporal_dead_zone/out.js: [InvalidResult: 0]
 bindings/const/basic_support__strict_mode_/out.js: [Pass]
 bindings/const/is_block-scoped__strict_mode_/out.js: [Pass]
+bindings/const/scope_shadow_resolution__strict_mode_/out.js: [Pass]
 bindings/const/cannot_be_in_statements__strict_mode_/out.js: [Pass]
 bindings/const/redefining_a_const__strict_mode_/out.js: [Pass]
 bindings/const/for_loop_statement_scope__strict_mode_/out.js: [Pass]
@@ -148,12 +151,14 @@ bindings/const/for-of_loop_iteration_scope__strict_mode_/out.js: [Pass]
 bindings/const/temporal_dead_zone__strict_mode_/out.js: [InvalidResult: 0]
 bindings/let/basic_support/out.js: [Pass]
 bindings/let/is_block-scoped/out.js: [Pass]
+bindings/let/scope_shadow_resolution/out.js: [Pass]
 bindings/let/cannot_be_in_statements/out.js: [Pass]
 bindings/let/for_loop_statement_scope/out.js: [Pass]
 bindings/let/temporal_dead_zone/out.js: [InvalidResult: 0]
 bindings/let/for_for-in_loop_iteration_scope/out.js: [Pass]
 bindings/let/basic_support__strict_mode_/out.js: [Pass]
 bindings/let/is_block-scoped__strict_mode_/out.js: [Pass]
+bindings/let/scope_shadow_resolution__strict_mode_/out.js: [Pass]
 bindings/let/cannot_be_in_statements__strict_mode_/out.js: [Pass]
 bindings/let/for_loop_statement_scope__strict_mode_/out.js: [Pass]
 bindings/let/temporal_dead_zone__strict_mode_/out.js: [InvalidResult: 0]
@@ -250,7 +255,7 @@ built-ins/typed_arrays/DataView__Float32_/out.js: ReferenceError: ArrayBuffer is
 built-ins/typed_arrays/DataView__Float64_/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/ArrayBuffer_Symbol.species_/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/constructors_require_new/out.js: ReferenceError: ArrayBuffer is not defined
-built-ins/typed_arrays/constructors_accept_generic_iterables/out.js: ReferenceError: $jscomp is not defined
+built-ins/typed_arrays/constructors_accept_generic_iterables/out.js: TypeError: undefined is not a function
 built-ins/typed_arrays/correct_prototype_chains/out.js: ReferenceError: Int8Array is not defined
 built-ins/typed_arrays/%TypedArray%.from/out.js: ReferenceError: Int8Array is not defined
 built-ins/typed_arrays/%TypedArray%.of/out.js: ReferenceError: Int8Array is not defined
@@ -391,7 +396,7 @@ built-ins/Reflect/Reflect.construct_creates_instances_from_third_argument/out.js
 built-ins/Reflect/Reflect.construct,_Array_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_RegExp_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_Function_subclassing/out.js: [InvalidResult: false]
-built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<c> has no method 'createResolveAndReject_'
+built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<d> has no method 'createResolveAndReject_'
 built-ins/Promise/basic_functionality/out.js: [Pass]
 built-ins/Promise/constructor_requires_new/out.js: [Pass]
 built-ins/Promise/Promise.prototype_isnt_an_instance/out.js: [Skip]
@@ -521,7 +526,7 @@ built-in_extensions/Math_methods/Math.acosh/out.js: [Pass]
 built-in_extensions/Math_methods/Math.asinh/out.js: [Pass]
 built-in_extensions/Math_methods/Math.atanh/out.js: [Pass]
 built-in_extensions/Math_methods/Math.trunc/out.js: [Pass]
-built-in_extensions/Math_methods/Math.fround/out.js: TypeError: Object #<Object> has no method 'fround'
+built-in_extensions/Math_methods/Math.fround/out.js: [InvalidResult: false]
 built-in_extensions/Math_methods/Math.cbrt/out.js: [InvalidResult: false]
 built-in_extensions/Math_methods/Math.hypot/out.js: [InvalidResult: false]
 built-in_extensions/Date.prototype_Symbol.toPrimitive_/out.js: TypeError: Cannot call method 'call' of undefined
@@ -674,8 +679,8 @@ annex_b/RegExp.prototype.compile/returns_this/out.js: [InvalidResult: false]
 annex_b/RegExp_syntax_extensions/hyphens_in_character_sets/out.js: [Pass]
 annex_b/RegExp_syntax_extensions/invalid_character_escapes/out.js: [Pass]
 annex_b/RegExp_syntax_extensions/invalid_control-character_escapes/out.js: [Pass]
-annex_b/RegExp_syntax_extensions/invalid_Unicode_escapes/error.txt: [CompileError]
-annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/error.txt: [CompileError]
+annex_b/RegExp_syntax_extensions/invalid_Unicode_escapes/out.js: [Pass]
+annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/out.js: [Pass]
 annex_b/RegExp_syntax_extensions/incomplete_patterns_and_quantifiers/out.js: [Pass]
 annex_b/RegExp_syntax_extensions/octal_escape_sequences/out.js: [Pass]
 annex_b/RegExp_syntax_extensions/invalid_backreferences_become_octal_escapes/out.js: [Pass]

@@ -45,6 +45,9 @@
 
 ## 2018 features
 
+### object rest/spread properties
+- object rest properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/object_rest_spread_properties/object_rest_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/object_rest_spread_properties/object_rest_properties/out.js))
+
 ### s (dotAll) flag for regular expressions
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
 
@@ -55,12 +58,7 @@
 - RegExp Lookbehind Assertions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/RegExp_Lookbehind_Assertions/error.txt))
 
 ### RegExp Unicode Property Escapes
-- RegExp Unicode Property Escapes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/RegExp_Unicode_Property_Escapes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/RegExp_Unicode_Property_Escapes/out.js))
-
-## 2018 misc
-
-### template literal revision
-- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_misc/template_literal_revision/error.txt))
+- RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
 
 ## 2019 misc
 
@@ -68,3 +66,15 @@
 - basic ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/basic/error.txt))
 - await ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/await/error.txt))
 - yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/yield/error.txt))
+
+### Symbol.prototype.description
+- Symbol.prototype.description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/out.js))
+
+### Function.prototype.toString revision
+- functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))
+- arrows ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/arrows/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/arrows/out.js))
+- [native code] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/_native_code_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/_native_code_/out.js))
+- class expression with implicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js))
+- class expression with explicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js))
+- unicode escape sequences in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js))
+- methods and computed property names ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js))

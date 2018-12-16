@@ -40,7 +40,8 @@
 - "y" flag ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/y_flag/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/y_flag/out.js))
 - "y" flag, lastIndex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/y_flag%2C_lastIndex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/y_flag%2C_lastIndex/out.js))
 - "u" flag ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag/out.js))
-- "u" flag, Unicode code point escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_Unicode_code_point_escapes/error.txt))
+- "u" flag, non-BMP Unicode characters ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_non-BMP_Unicode_characters/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_non-BMP_Unicode_characters/out.js))
+- "u" flag, Unicode code point escapes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_Unicode_code_point_escapes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_Unicode_code_point_escapes/out.js))
 - "u" flag, case folding ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_case_folding/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/syntax/RegExp_y_and_u_flags/u_flag%2C_case_folding/out.js))
 
 ### destructuring, declarations
@@ -289,7 +290,3 @@
 
 ### RegExp.prototype.compile
 - returns this ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/annex_b/RegExp.prototype.compile/returns_this/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/annex_b/RegExp.prototype.compile/returns_this/out.js))
-
-### RegExp syntax extensions
-- invalid Unicode escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/annex_b/RegExp_syntax_extensions/invalid_Unicode_escapes/error.txt))
-- invalid hexadecimal escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/error.txt))
