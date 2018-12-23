@@ -22,7 +22,7 @@
     "execa": "^1.0.0",
     "fs-readdir-recursive": "^1.1.0",
     "glob": "^7.1.3",
-    "google-closure-compiler": "^20181216.0.0-nightly",
+    "google-closure-compiler": "^20181220.0.0-nightly",
     "humanize-string": "^1.0.2",
     "meow": "^5.0.0",
     "mkdirp": "^0.5.1",
