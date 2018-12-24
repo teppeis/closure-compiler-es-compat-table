@@ -13,11 +13,11 @@
     "es2016plus": "./run.js es2016plus",
     "es6": "./run.js es6",
     "esnext": "./run.js esnext",
-    "stop": "./node_modules/@teppeis/closure-gun/nailgun/ng ng-stop",
+    "stop": "closure-gun-stop",
     "test": "eslint *.js legacy/*.js"
   },
   "dependencies": {
-    "@teppeis/closure-gun": "^2.0.0-beta.0",
+    "@teppeis/closure-gun": "^2.0.0-beta.1",
     "async": "^2.6.1",
     "execa": "^1.0.0",
     "fs-readdir-recursive": "^1.1.0",
