@@ -1,4 +1,4 @@
-#!/bin/bash -eux
+#!/bin/bash -eu
 
 if [ $# -lt 1 ] || [ $# -gt 1 ]; then
     {
@@ -29,7 +29,7 @@ fi
 
 cacheDir="$basedir/.closure-gun-cache"
 
-if [ -n "$currentVer" ]; then
+if [ -n "$currentVer" ] && [ "$currentVer" != '1.0-SNAPSHOT' ]; then
     rm -rf "${cacheDir:?}/$currentVer"
     mkdir -p "$cacheDir/$currentVer"
     mv "$closureDir" "$cacheDir/$currentVer/"
