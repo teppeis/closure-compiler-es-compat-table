@@ -16,6 +16,7 @@ if [ -z "$(git status --porcelain)" ]; then
 fi
 
 echo "Updated"
+git checkout -b "$TRAVIS_BRANCH"
 git diff
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
