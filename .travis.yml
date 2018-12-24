@@ -11,6 +11,6 @@ jobs:
     - stage: Test
       script: npm test
     - stage: Update Nightly
-      if: branch = master
+      if: branch = master AND type = cron
       script:
         - ./travis-update-nightly.sh
