@@ -23,4 +23,4 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add .
 git commit --message "update nightly result with $version (travis: $TRAVIS_BUILD_NUMBER) [skip ci]"
-git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" "HEAD:nightly-tmp"
+git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" "HEAD:master"
