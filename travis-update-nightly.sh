@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/bash -eux
 
 curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -17,4 +17,4 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add .
 git commit --message "update nightly result with $version (travis #$TRAVIS_BUILD_NUMBER)"
-# git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" "$TRAVIS_BRANCH"
+git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" "$TRAVIS_BRANCH:nightly-tmp"
