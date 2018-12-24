@@ -26,6 +26,16 @@ $jscomp.polyfill = function(a, c, b, d) {
     c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
+$jscomp.polyfill("Math.trunc", function(a) {
+  return a ? a : function(a) {
+    a = Number(a);
+    if (isNaN(a) || Infinity === a || -Infinity === a || 0 === a) {
+      return a;
+    }
+    var b = Math.floor(Math.abs(a));
+    return 0 > a ? -b : b;
+  };
+}, "es6", "es3");
 module.exports = function() {
   return !0;
 };

@@ -26,6 +26,12 @@ $jscomp.polyfill = function(a, c, b, d) {
     c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
+$jscomp.polyfill("Math.sign", function(a) {
+  return a ? a : function(a) {
+    a = Number(a);
+    return 0 === a || isNaN(a) ? a : 0 < a ? 1 : -1;
+  };
+}, "es6", "es3");
 module.exports = function() {
   return !0;
 };

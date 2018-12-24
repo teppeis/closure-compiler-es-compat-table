@@ -1,4 +1,4 @@
-candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [InvalidResult: false]
+candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
 candidate__stage_3_/string_trimming/String.prototype.trimStart/out.js: TypeError: Object abc has no method 'trimStart'
 candidate__stage_3_/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object abc has no method 'trimEnd'
