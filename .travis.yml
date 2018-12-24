@@ -2,6 +2,8 @@ sudo: false
 language: node_js
 node_js:
 - 10
+git:
+  submodules: false
 env:
   global:
     secure: S93TF9OboNj0klUfymbb9ele4IcJ2cY0uSqkBHXtCET1kP/OR8hc8QdFIjI7ebn60eT6fzrz7w6+qU0i4aDZCbKwgjC9gYUHQhY2wkUvWBGvNmCPb0OjuAeCVo2UmmR7mwH9h7b7bVfUMk4hrgmw9TShY+PIltTP5c5z1YGePtc=
