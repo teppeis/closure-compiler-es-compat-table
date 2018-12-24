@@ -1,5 +1,10 @@
 #!/bin/bash -eux
 
+git show
+git log
+git branch
+git checkout "$TRAVIS_BRANCH"
+
 curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 nodebrew install 0.10
@@ -16,7 +21,6 @@ if [ -z "$(git status --porcelain)" ]; then
 fi
 
 echo "Updated"
-git checkout -b "$TRAVIS_BRANCH"
 git diff
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
