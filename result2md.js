@@ -79,7 +79,7 @@ let prevTest = null;
 failedFileInfo
   .filter(info => !!info)
   .filter(({category}) => !skipCategories.has(category.toLowerCase()))
-  .filter(({test}) => !/^Proxy/.test(test) && !skipTests.has(test))
+  .filter(({test}) => !test.startsWith('Proxy') && !skipTests.has(test))
   .filter(({subtest}) => !skipSubtests.has(subtest))
   .forEach(({category, test, subtest, url}) => {
     if (prevCategory !== category) {

@@ -119,8 +119,8 @@ function escapePath(str) {
   // valid: #$%=~-,_.+
   // invalid: [](){}`^~|@;:`*?"<>
   return str
-    .replace('\u{2e2f}', 'U+2E2F')
-    .replace('\u{102c0}', 'U+102C0')
+    .replace('\u{2E2F}', 'U+2E2F')
+    .replace('\u{102C0}', 'U+102C0')
     .replace(/<\/?code>/g, '')
     .replace(/=>/g, 'arrow')
     .replace(/['"]/g, '')
