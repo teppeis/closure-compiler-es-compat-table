@@ -1,6 +1,8 @@
 ECMAScript compatibility checker for Closure Compiler
 ====
 
+[![Build Status](https://travis-ci.org/teppeis/closure-compiler-es-compat-table.svg?branch=master)](https://travis-ci.org/teppeis/closure-compiler-es-compat-table)
+
 Run [kangax's ES compat-table tests](https://kangax.github.io/compat-table/es6/) and store the results.
 
 ## Setup
