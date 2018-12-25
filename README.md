@@ -17,7 +17,7 @@ $ npm install
 
 - Node.js v8+
 - Java 8+
-- GCC to compile [Nailgun](http://martiansoftware.com/nailgun/)
+- Python for [closure-gun](https://www.npmjs.com/package/@teppeis/closure-gun)
 
 ## Update tests
 
