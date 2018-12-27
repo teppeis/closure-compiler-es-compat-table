@@ -24,19 +24,19 @@ $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, e) {
   a != Array.prototype && a != Object.prototype && (a[c] = e.value);
 };
-$jscomp.polyfill = function(a, c, e, f) {
+$jscomp.polyfill = function(a, c, e, g) {
   if (c) {
     e = $jscomp.global;
     a = a.split(".");
-    for (f = 0; f < a.length - 1; f++) {
-      var d = a[f];
+    for (g = 0; g < a.length - 1; g++) {
+      var d = a[g];
       d in e || (e[d] = {});
       e = e[d];
     }
     a = a[a.length - 1];
-    f = e[a];
-    c = c(f);
-    c != f && null != c && $jscomp.defineProperty(e, a, {configurable:!0, writable:!0, value:c});
+    g = e[a];
+    c = c(g);
+    c != g && null != c && $jscomp.defineProperty(e, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
@@ -45,35 +45,34 @@ $jscomp.polyfill("Promise", function(a) {
     this.batch_ = null;
   }
   function e(b) {
-    return b instanceof d ? b : new d(function(g, a) {
-      g(b);
+    return b instanceof d ? b : new d(function(f, a) {
+      f(b);
     });
   }
   if (a && !$jscomp.FORCE_POLYFILL_PROMISE) {
     return a;
   }
   c.prototype.asyncExecute = function(b) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var f = this;
+      this.asyncExecuteFunction(function() {
+        f.executeBatch_();
+      });
+    }
     this.batch_.push(b);
-    return this;
   };
-  c.prototype.asyncExecuteBatch_ = function() {
-    var b = this;
-    this.asyncExecuteFunction(function() {
-      b.executeBatch_();
-    });
-  };
-  var f = $jscomp.global.setTimeout;
+  var g = $jscomp.global.setTimeout;
   c.prototype.asyncExecuteFunction = function(b) {
-    f(b, 0);
+    g(b, 0);
   };
   c.prototype.executeBatch_ = function() {
     for (; this.batch_ && this.batch_.length;) {
       var b = this.batch_;
       this.batch_ = [];
-      for (var g = 0; g < b.length; ++g) {
-        var a = b[g];
-        b[g] = null;
+      for (var f = 0; f < b.length; ++f) {
+        var a = b[f];
+        b[f] = null;
         try {
           a();
         } catch (k) {
@@ -92,20 +91,20 @@ $jscomp.polyfill("Promise", function(a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var f = this.createResolveAndReject_();
     try {
-      b(a.resolve, a.reject);
+      b(f.resolve, f.reject);
     } catch (h) {
-      a.reject(h);
+      f.reject(h);
     }
   };
   d.prototype.createResolveAndReject_ = function() {
     function b(b) {
-      return function(g) {
-        d || (d = !0, b.call(a, g));
+      return function(d) {
+        a || (a = !0, b.call(f, d));
       };
     }
-    var a = this, d = !1;
+    var f = this, a = !1;
     return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
   };
   d.prototype.resolveTo_ = function(b) {
@@ -176,22 +175,22 @@ $jscomp.polyfill("Promise", function(a) {
       d.reject(k);
     }
   };
-  d.prototype.then = function(a, c) {
-    function b(a, b) {
+  d.prototype.then = function(b, a) {
+    function c(a, b) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
         } catch (m) {
-          g(m);
+          f(m);
         }
       } : b;
     }
-    var e, g, f = new d(function(a, b) {
+    var e, f, g = new d(function(a, b) {
       e = a;
-      g = b;
+      f = b;
     });
-    this.callWhenSettled_(b(a, e), b(c, g));
-    return f;
+    this.callWhenSettled_(c(b, e), c(a, f));
+    return g;
   };
   d.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -229,8 +228,8 @@ $jscomp.polyfill("Promise", function(a) {
     var b = $jscomp.makeIterator(a), c = b.next();
     return c.done ? e([]) : new d(function(a, d) {
       function f(b) {
-        return function(d) {
-          g[b] = d;
+        return function(c) {
+          g[b] = c;
           h--;
           0 == h && a(g);
         };

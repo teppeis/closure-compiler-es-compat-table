@@ -90,15 +90,14 @@ $jscomp.polyfill("Promise", function(a) {
     return a;
   }
   d.prototype.asyncExecute = function(b) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var a = this;
+      this.asyncExecuteFunction(function() {
+        a.executeBatch_();
+      });
+    }
     this.batch_.push(b);
-    return this;
-  };
-  d.prototype.asyncExecuteBatch_ = function() {
-    var b = this;
-    this.asyncExecuteFunction(function() {
-      b.executeBatch_();
-    });
   };
   var f = $jscomp.global.setTimeout;
   d.prototype.asyncExecuteFunction = function(b) {
@@ -137,34 +136,34 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   c.prototype.createResolveAndReject_ = function() {
-    function b(b) {
-      return function(l) {
-        c || (c = !0, b.call(a, l));
+    function a(a) {
+      return function(b) {
+        h || (h = !0, a.call(c, b));
       };
     }
-    var a = this, c = !1;
-    return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
+    var c = this, h = !1;
+    return {resolve:a(this.resolveTo_), reject:a(this.reject_)};
   };
-  c.prototype.resolveTo_ = function(b) {
-    if (b === this) {
+  c.prototype.resolveTo_ = function(a) {
+    if (a === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (b instanceof c) {
-        this.settleSameAsPromise_(b);
+      if (a instanceof c) {
+        this.settleSameAsPromise_(a);
       } else {
         a: {
-          switch(typeof b) {
+          switch(typeof a) {
             case "object":
-              var a = null != b;
+              var b = null != a;
               break a;
             case "function":
-              a = !0;
+              b = !0;
               break a;
             default:
-              a = !1;
+              b = !1;
           }
         }
-        a ? this.resolveToNonPromiseObj_(b) : this.fulfill_(b);
+        b ? this.resolveToNonPromiseObj_(a) : this.fulfill_(a);
       }
     }
   };
@@ -218,8 +217,8 @@ $jscomp.polyfill("Promise", function(a) {
       return "function" == typeof a ? function(b) {
         try {
           g(a(b));
-        } catch (m) {
-          e(m);
+        } catch (l) {
+          e(l);
         }
       } : b;
     }
