@@ -536,9 +536,22 @@
     "subtest": "yield"
   },
   {
-    "path": "2019_misc/Symbol.prototype.description",
+    "path": "2019_misc/Symbol.prototype.description/basic",
     "category": "2019 misc",
-    "test": "Symbol.prototype.description"
+    "test": "Symbol.prototype.description",
+    "subtest": "basic"
+  },
+  {
+    "path": "2019_misc/Symbol.prototype.description/empty_description",
+    "category": "2019 misc",
+    "test": "Symbol.prototype.description",
+    "subtest": "empty description"
+  },
+  {
+    "path": "2019_misc/Symbol.prototype.description/undefined_description",
+    "category": "2019 misc",
+    "test": "Symbol.prototype.description",
+    "subtest": "undefined description"
   },
   {
     "path": "2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor",

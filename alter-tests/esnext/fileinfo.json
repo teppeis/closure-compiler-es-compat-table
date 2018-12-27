@@ -215,6 +215,24 @@
     "subtest": "Set.prototype.symmetricDifference"
   },
   {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.isDisjointWith",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.isDisjointWith"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.isSubsetOf",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.isSubsetOf"
+  },
+  {
+    "path": "draft__stage_2_/Set_methods/Set.prototype.isSupersetOf",
+    "category": "draft (stage 2)",
+    "test": "Set methods",
+    "subtest": "Set.prototype.isSupersetOf"
+  },
+  {
     "path": "draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__",
     "category": "draft (stage 2)",
     "test": "ArrayBuffer.prototype.transfer",
@@ -603,10 +621,46 @@
     "subtest": "Map.keyBy"
   },
   {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.deleteAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.deleteAll"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.every",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.every"
+  },
+  {
     "path": "proposal__stage_1_/Collections_methods/Map.prototype.filter",
     "category": "proposal (stage 1)",
     "test": "Collections methods",
     "subtest": "Map.prototype.filter"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.find",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.find"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.findKey",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.findKey"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.includes",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.includes"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.keyOf",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.keyOf"
   },
   {
     "path": "proposal__stage_1_/Collections_methods/Map.prototype.mapKeys",
@@ -625,6 +679,18 @@
     "category": "proposal (stage 1)",
     "test": "Collections methods",
     "subtest": "Map.prototype.merge"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.reduce",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.reduce"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/Map.prototype.some",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "Map.prototype.some"
   },
   {
     "path": "proposal__stage_1_/Collections_methods/Set.prototype.addAll",
@@ -679,6 +745,46 @@
     "category": "proposal (stage 1)",
     "test": "Collections methods",
     "subtest": "Set.prototype.some"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "WeakMap.prototype.deleteAll"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "WeakSet.prototype.addAll"
+  },
+  {
+    "path": "proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll",
+    "category": "proposal (stage 1)",
+    "test": "Collections methods",
+    "subtest": "WeakSet.prototype.deleteAll"
+  },
+  {
+    "path": "proposal__stage_1_/Promise.allSettled",
+    "category": "proposal (stage 1)",
+    "test": "Promise.allSettled"
+  },
+  {
+    "path": "proposal__stage_1_/Math.seededPRNG",
+    "category": "proposal (stage 1)",
+    "test": "Math.seededPRNG"
+  },
+  {
+    "path": "proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString",
+    "category": "proposal (stage 1)",
+    "test": "{ BigInt, Number }.fromString",
+    "subtest": "Number.fromString"
+  },
+  {
+    "path": "proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString",
+    "category": "proposal (stage 1)",
+    "test": "{ BigInt, Number }.fromString",
+    "subtest": "BigInt.fromString"
   },
   {
     "path": "strawman__stage_0_/bind______operator/binary_form",
