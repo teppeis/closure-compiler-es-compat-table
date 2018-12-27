@@ -68,7 +68,8 @@
 - yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/optional_catch_binding/yield/error.txt))
 
 ### Symbol.prototype.description
-- Symbol.prototype.description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/out.js))
+- basic ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/basic/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/basic/out.js))
+- empty description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/empty_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Symbol.prototype.description/empty_description/out.js))
 
 ### Function.prototype.toString revision
 - functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20181210/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))

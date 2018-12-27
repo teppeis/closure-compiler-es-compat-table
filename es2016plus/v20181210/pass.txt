@@ -40,3 +40,4 @@
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
 2018_misc/template_literal_revision/out.js: [Pass]
+2019_misc/Symbol.prototype.description/undefined_description/out.js: [Pass]
