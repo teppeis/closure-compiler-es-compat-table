@@ -35,6 +35,9 @@ draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object
 draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
 draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
+draft__stage_2_/Set_methods/Set.prototype.isDisjointWith/out.js: TypeError: Object [object Object] has no method 'isDisjointWith'
+draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [object Object] has no method 'isSubsetOf'
+draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
@@ -101,10 +104,18 @@ proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem/out.js:
 proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex/out.js: [InvalidResult: false]
 proposal__stage_1_/Collections_methods/Map.groupBy/out.js: TypeError: Object function (c) { this.data_ = {}; this.head_ = h(); this.size = 0; if (c) { c = $jscomp.makeIterator(c); for (var a; !(a = c.next()).done;) { a = a.value, this.set(a[0], a[1]); } } } has no method 'groupBy'
 proposal__stage_1_/Collections_methods/Map.keyBy/out.js: TypeError: Object function (b) { this.data_ = {}; this.head_ = h(); this.size = 0; if (b) { b = $jscomp.makeIterator(b); for (var a; !(a = b.next()).done;) { a = a.value, this.set(a[0], a[1]); } } } has no method 'keyBy'
+proposal__stage_1_/Collections_methods/Map.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/Map.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
 proposal__stage_1_/Collections_methods/Map.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+proposal__stage_1_/Collections_methods/Map.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+proposal__stage_1_/Collections_methods/Map.prototype.findKey/out.js: TypeError: Object [object Object] has no method 'findKey'
+proposal__stage_1_/Collections_methods/Map.prototype.includes/out.js: TypeError: Object [object Object] has no method 'includes'
+proposal__stage_1_/Collections_methods/Map.prototype.keyOf/out.js: TypeError: Object [object Object] has no method 'keyOf'
 proposal__stage_1_/Collections_methods/Map.prototype.mapKeys/out.js: TypeError: Object [object Object] has no method 'mapKeys'
 proposal__stage_1_/Collections_methods/Map.prototype.mapValues/out.js: TypeError: Object [object Object] has no method 'mapValues'
 proposal__stage_1_/Collections_methods/Map.prototype.merge/out.js: TypeError: Object [object Object] has no method 'merge'
+proposal__stage_1_/Collections_methods/Map.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+proposal__stage_1_/Collections_methods/Map.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
 proposal__stage_1_/Collections_methods/Set.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
 proposal__stage_1_/Collections_methods/Set.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
 proposal__stage_1_/Collections_methods/Set.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
@@ -114,6 +125,13 @@ proposal__stage_1_/Collections_methods/Set.prototype.join/out.js: TypeError: Obj
 proposal__stage_1_/Collections_methods/Set.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
 proposal__stage_1_/Collections_methods/Set.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
 proposal__stage_1_/Collections_methods/Set.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
+proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Promise.allSettled/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'allSettled'
+proposal__stage_1_/Math.seededPRNG/out.js: TypeError: Object #<Object> has no method 'seededPRNG'
+proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString/out.js: TypeError: Object function Number() { [native code] } has no method 'fromString'
+proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [CompileError]
 strawman__stage_0_/bind______operator/binary_form/error.txt: [CompileError]
 strawman__stage_0_/bind______operator/unary_form/error.txt: [CompileError]
 strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
