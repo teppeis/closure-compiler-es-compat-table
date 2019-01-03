@@ -27,7 +27,7 @@
     "meow": "^5.0.0",
     "mkdirp": "^0.5.1",
     "object-assign": "^4.1.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "eslint": "^5.11.1",
