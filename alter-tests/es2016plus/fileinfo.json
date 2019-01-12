@@ -594,5 +594,17 @@
     "category": "2019 misc",
     "test": "Function.prototype.toString revision",
     "subtest": "methods and computed property names"
+  },
+  {
+    "path": "2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals",
+    "category": "2019 misc",
+    "test": "JSON superset",
+    "subtest": "LINE SEPARATOR can appear in string literals"
+  },
+  {
+    "path": "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals",
+    "category": "2019 misc",
+    "test": "JSON superset",
+    "subtest": "PARAGRAPH SEPARATOR can appear in string literals"
   }
 ]
