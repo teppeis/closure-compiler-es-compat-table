@@ -1,0 +1,12 @@
+// 2019 misc / JSON superset / PARAGRAPH SEPARATOR can appear in string literals
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  return eval("'\u2029'") === "\u2029";
+
+};
+----------------------------------------------------------
+es2016plus/1.0-SNAPSHOT/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/in.js:4: WARNING - unreachable code
+  return eval("'\u2029'") === "\u2029";
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

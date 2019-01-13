@@ -100,5 +100,7 @@
   "2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor",
   "2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor",
   "2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers",
-  "2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names"
+  "2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names",
+  "2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals",
+  "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals"
 ]
