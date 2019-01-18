@@ -33,7 +33,6 @@
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_prototype_chain/out.js: [Pass]
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_symbols/out.js: [Pass]
-2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
 2018_features/Promise.prototype.finally/basic_support/out.js: [Pass]
 2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
 2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]
