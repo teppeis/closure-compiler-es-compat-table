@@ -215,10 +215,10 @@
     "subtest": "Set.prototype.symmetricDifference"
   },
   {
-    "path": "draft__stage_2_/Set_methods/Set.prototype.isDisjointWith",
+    "path": "draft__stage_2_/Set_methods/Set.prototype.isDisjointFrom",
     "category": "draft (stage 2)",
     "test": "Set methods",
-    "subtest": "Set.prototype.isDisjointWith"
+    "subtest": "Set.prototype.isDisjointFrom"
   },
   {
     "path": "draft__stage_2_/Set_methods/Set.prototype.isSubsetOf",
