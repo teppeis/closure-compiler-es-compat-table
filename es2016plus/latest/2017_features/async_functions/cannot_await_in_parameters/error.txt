@@ -12,24 +12,24 @@ module.exports = () => {
 
 ----------------------------------------------------------
 java.lang.IllegalStateException: AST should not contain generator. Reference node:
-YIELD 6 [length: 23] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    CALL 6 [length: 17] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        GETPROP 6 [length: 15] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NAME Promise 6 [length: 7] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            STRING resolve 6 [length: 7] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
+YIELD 6 [length: 23] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    CALL 6 [length: 17] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        GETPROP 6 [length: 15] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NAME Promise 6 [length: 7] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            STRING resolve 6 [length: 7] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
 
  Parent node:
-HOOK 6 [length: 27] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    SHEQ 6 [length: 27] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        VOID 6 [length: 27] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        NAME a 6 [length: 1] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
-    YIELD 6 [length: 23] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        CALL 6 [length: 17] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            GETPROP 6 [length: 15] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                NAME Promise 6 [length: 7] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                STRING resolve 6 [length: 7] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    NAME a 6 [length: 1] [source_file: es2016plus/v20181210/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+HOOK 6 [length: 27] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    SHEQ 6 [length: 27] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        VOID 6 [length: 27] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        NAME a 6 [length: 1] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+    YIELD 6 [length: 23] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        CALL 6 [length: 17] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            GETPROP 6 [length: 15] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                NAME Promise 6 [length: 7] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                STRING resolve 6 [length: 7] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    NAME a 6 [length: 1] [source_file: es2016plus/v20190106/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
 
 	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
 	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1734)
@@ -69,8 +69,8 @@ HOOK 6 [length: 27] [source_file: es2016plus/v20181210/2017_features/async_funct
 	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:114)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:310)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:231)
-	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2435)
-	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:849)
+	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2381)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:793)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)

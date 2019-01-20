@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20181210/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/in.js:5: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
+esnext/v20190106/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/in.js:5: ERROR - This code cannot be converted from ES6. class expression that cannot be extracted
 && !Reflect.isCallable(class {});
                        ^^^^^^^^
 

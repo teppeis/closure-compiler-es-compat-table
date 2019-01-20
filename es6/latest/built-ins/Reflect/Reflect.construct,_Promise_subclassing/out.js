@@ -88,15 +88,14 @@ $jscomp.polyfill("Promise", function(a) {
     return a;
   }
   d.prototype.asyncExecute = function(c) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var a = this;
+      this.asyncExecuteFunction(function() {
+        a.executeBatch_();
+      });
+    }
     this.batch_.push(c);
-    return this;
-  };
-  d.prototype.asyncExecuteBatch_ = function() {
-    var c = this;
-    this.asyncExecuteFunction(function() {
-      c.executeBatch_();
-    });
   };
   var e = $jscomp.global.setTimeout;
   d.prototype.asyncExecuteFunction = function(c) {
@@ -135,34 +134,34 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   b.prototype.createResolveAndReject_ = function() {
-    function c(c) {
-      return function(d) {
-        b || (b = !0, c.call(a, d));
+    function a(a) {
+      return function(c) {
+        d || (d = !0, a.call(b, c));
       };
     }
-    var a = this, b = !1;
-    return {resolve:c(this.resolveTo_), reject:c(this.reject_)};
+    var b = this, d = !1;
+    return {resolve:a(this.resolveTo_), reject:a(this.reject_)};
   };
-  b.prototype.resolveTo_ = function(c) {
-    if (c === this) {
+  b.prototype.resolveTo_ = function(a) {
+    if (a === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (c instanceof b) {
-        this.settleSameAsPromise_(c);
+      if (a instanceof b) {
+        this.settleSameAsPromise_(a);
       } else {
         a: {
-          switch(typeof c) {
+          switch(typeof a) {
             case "object":
-              var a = null != c;
+              var c = null != a;
               break a;
             case "function":
-              a = !0;
+              c = !0;
               break a;
             default:
-              a = !1;
+              c = !1;
           }
         }
-        a ? this.resolveToNonPromiseObj_(c) : this.fulfill_(c);
+        c ? this.resolveToNonPromiseObj_(a) : this.fulfill_(a);
       }
     }
   };
@@ -200,8 +199,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   var g = new d;
   b.prototype.settleSameAsPromise_ = function(a) {
-    var c = this.createResolveAndReject_();
-    a.callWhenSettled_(c.resolve, c.reject);
+    var b = this.createResolveAndReject_();
+    a.callWhenSettled_(b.resolve, b.reject);
   };
   b.prototype.settleSameAsThenable_ = function(a, b) {
     var c = this.createResolveAndReject_();
@@ -212,18 +211,18 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   b.prototype.then = function(a, d) {
-    function c(a, c) {
-      return "function" == typeof a ? function(c) {
+    function c(a, b) {
+      return "function" == typeof a ? function(b) {
         try {
-          f(a(c));
+          f(a(b));
         } catch (m) {
           e(m);
         }
-      } : c;
+      } : b;
     }
-    var f, e, h = new b(function(a, c) {
+    var f, e, h = new b(function(a, b) {
       f = a;
-      e = c;
+      e = b;
     });
     this.callWhenSettled_(c(a, f), c(d, e));
     return h;
@@ -249,31 +248,31 @@ $jscomp.polyfill("Promise", function(a) {
   };
   b.resolve = f;
   b.reject = function(a) {
-    return new b(function(c, b) {
-      b(a);
+    return new b(function(b, c) {
+      c(a);
     });
   };
   b.race = function(a) {
-    return new b(function(c, b) {
+    return new b(function(b, c) {
       for (var d = $jscomp.makeIterator(a), e = d.next(); !e.done; e = d.next()) {
-        f(e.value).callWhenSettled_(c, b);
+        f(e.value).callWhenSettled_(b, c);
       }
     });
   };
   b.all = function(a) {
-    var c = $jscomp.makeIterator(a), d = c.next();
-    return d.done ? f([]) : new b(function(a, b) {
-      function e(c) {
-        return function(b) {
-          h[c] = b;
+    var d = $jscomp.makeIterator(a), c = d.next();
+    return c.done ? f([]) : new b(function(a, b) {
+      function e(b) {
+        return function(c) {
+          h[b] = c;
           g--;
           0 == g && a(h);
         };
       }
       var h = [], g = 0;
       do {
-        h.push(void 0), g++, f(d.value).callWhenSettled_(e(h.length - 1), b), d = c.next();
-      } while (!d.done);
+        h.push(void 0), g++, f(c.value).callWhenSettled_(e(h.length - 1), b), c = d.next();
+      } while (!c.done);
     });
   };
   return b;

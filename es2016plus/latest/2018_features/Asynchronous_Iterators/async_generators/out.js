@@ -308,15 +308,14 @@ $jscomp.polyfill("Promise", function(a) {
     return a;
   }
   b.prototype.asyncExecute = function(a) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var b = this;
+      this.asyncExecuteFunction(function() {
+        b.executeBatch_();
+      });
+    }
     this.batch_.push(a);
-    return this;
-  };
-  b.prototype.asyncExecuteBatch_ = function() {
-    var a = this;
-    this.asyncExecuteFunction(function() {
-      a.executeBatch_();
-    });
   };
   var d = $jscomp.global.setTimeout;
   b.prototype.asyncExecuteFunction = function(a) {

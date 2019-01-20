@@ -35,7 +35,7 @@ draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object
 draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
 draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
-draft__stage_2_/Set_methods/Set.prototype.isDisjointWith/out.js: TypeError: Object [object Object] has no method 'isDisjointWith'
+draft__stage_2_/Set_methods/Set.prototype.isDisjointFrom/out.js: TypeError: Object [object Object] has no method 'isDisjointFrom'
 draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [object Object] has no method 'isSubsetOf'
 draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
@@ -59,7 +59,7 @@ proposal__stage_1_/Math_extensions_proposal/Math.radians/out.js: TypeError: Obje
 proposal__stage_1_/Math_extensions_proposal/Math.scale/out.js: TypeError: Object #<Object> has no method 'scale'
 proposal__stage_1_/Promise.try/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
-proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (b) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var e = this.createResolveAndReject_(); try { b(e.resolve, e.reject); } catch (h) { e.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'

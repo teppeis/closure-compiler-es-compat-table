@@ -53,15 +53,14 @@ $jscomp.polyfill("Promise", function(b) {
     return b;
   }
   e.prototype.asyncExecute = function(a) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var d = this;
+      this.asyncExecuteFunction(function() {
+        d.executeBatch_();
+      });
+    }
     this.batch_.push(a);
-    return this;
-  };
-  e.prototype.asyncExecuteBatch_ = function() {
-    var a = this;
-    this.asyncExecuteFunction(function() {
-      a.executeBatch_();
-    });
   };
   var g = $jscomp.global.setTimeout;
   e.prototype.asyncExecuteFunction = function(a) {
@@ -176,8 +175,8 @@ $jscomp.polyfill("Promise", function(b) {
       b.reject(k);
     }
   };
-  c.prototype.then = function(a, b) {
-    function d(a, b) {
+  c.prototype.then = function(a, d) {
+    function b(a, b) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
@@ -190,7 +189,7 @@ $jscomp.polyfill("Promise", function(b) {
       e = a;
       f = b;
     });
-    this.callWhenSettled_(d(a, e), d(b, f));
+    this.callWhenSettled_(b(a, e), b(d, f));
     return g;
   };
   c.prototype.catch = function(a) {

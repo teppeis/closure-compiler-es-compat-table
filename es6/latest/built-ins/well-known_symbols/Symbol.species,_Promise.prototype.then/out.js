@@ -90,15 +90,14 @@ $jscomp.polyfill("Promise", function(a) {
     return a;
   }
   d.prototype.asyncExecute = function(b) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var a = this;
+      this.asyncExecuteFunction(function() {
+        a.executeBatch_();
+      });
+    }
     this.batch_.push(b);
-    return this;
-  };
-  d.prototype.asyncExecuteBatch_ = function() {
-    var b = this;
-    this.asyncExecuteFunction(function() {
-      b.executeBatch_();
-    });
   };
   var f = $jscomp.global.setTimeout;
   d.prototype.asyncExecuteFunction = function(b) {
@@ -113,8 +112,8 @@ $jscomp.polyfill("Promise", function(a) {
         b[a] = null;
         try {
           c();
-        } catch (k) {
-          this.asyncThrow_(k);
+        } catch (h) {
+          this.asyncThrow_(h);
         }
       }
     }
@@ -137,34 +136,34 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   c.prototype.createResolveAndReject_ = function() {
-    function b(b) {
-      return function(d) {
-        c || (c = !0, b.call(a, d));
+    function a(a) {
+      return function(b) {
+        g || (g = !0, a.call(c, b));
       };
     }
-    var a = this, c = !1;
-    return {resolve:b(this.resolveTo_), reject:b(this.reject_)};
+    var c = this, g = !1;
+    return {resolve:a(this.resolveTo_), reject:a(this.reject_)};
   };
-  c.prototype.resolveTo_ = function(b) {
-    if (b === this) {
+  c.prototype.resolveTo_ = function(a) {
+    if (a === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (b instanceof c) {
-        this.settleSameAsPromise_(b);
+      if (a instanceof c) {
+        this.settleSameAsPromise_(a);
       } else {
         a: {
-          switch(typeof b) {
+          switch(typeof a) {
             case "object":
-              var a = null != b;
+              var b = null != a;
               break a;
             case "function":
-              a = !0;
+              b = !0;
               break a;
             default:
-              a = !1;
+              b = !1;
           }
         }
-        a ? this.resolveToNonPromiseObj_(b) : this.fulfill_(b);
+        b ? this.resolveToNonPromiseObj_(a) : this.fulfill_(a);
       }
     }
   };
@@ -195,12 +194,12 @@ $jscomp.polyfill("Promise", function(a) {
   c.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
       for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
-        l.asyncExecute(this.onSettledCallbacks_[a]);
+        k.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
   };
-  var l = new d;
+  var k = new d;
   c.prototype.settleSameAsPromise_ = function(a) {
     var b = this.createResolveAndReject_();
     a.callWhenSettled_(b.resolve, b.reject);
@@ -209,8 +208,8 @@ $jscomp.polyfill("Promise", function(a) {
     var b = this.createResolveAndReject_();
     try {
       a.call(c, b.resolve, b.reject);
-    } catch (k) {
-      b.reject(k);
+    } catch (h) {
+      b.reject(h);
     }
   };
   c.prototype.then = function(a, d) {
@@ -218,17 +217,17 @@ $jscomp.polyfill("Promise", function(a) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
-        } catch (n) {
-          f(n);
+        } catch (m) {
+          f(m);
         }
       } : b;
     }
-    var e, f, m = new c(function(a, b) {
+    var e, f, l = new c(function(a, b) {
       e = a;
       f = b;
     });
     this.callWhenSettled_(b(a, e), b(d, f));
-    return m;
+    return l;
   };
   c.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -247,7 +246,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? l.asyncExecute(b) : this.onSettledCallbacks_.push(b);
+    null == this.onSettledCallbacks_ ? k.asyncExecute(b) : this.onSettledCallbacks_.push(b);
   };
   c.resolve = e;
   c.reject = function(a) {
@@ -267,14 +266,14 @@ $jscomp.polyfill("Promise", function(a) {
     return d.done ? e([]) : new c(function(a, c) {
       function f(b) {
         return function(c) {
-          h[b] = c;
-          g--;
-          0 == g && a(h);
+          g[b] = c;
+          h--;
+          0 == h && a(g);
         };
       }
-      var h = [], g = 0;
+      var g = [], h = 0;
       do {
-        h.push(void 0), g++, e(d.value).callWhenSettled_(f(h.length - 1), c), d = b.next();
+        g.push(void 0), h++, e(d.value).callWhenSettled_(f(g.length - 1), c), d = b.next();
       } while (!d.done);
     });
   };

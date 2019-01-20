@@ -53,15 +53,14 @@ $jscomp.polyfill("Promise", function(b) {
     return b;
   }
   c.prototype.asyncExecute = function(a) {
-    null == this.batch_ && (this.batch_ = [], this.asyncExecuteBatch_());
+    if (null == this.batch_) {
+      this.batch_ = [];
+      var d = this;
+      this.asyncExecuteFunction(function() {
+        d.executeBatch_();
+      });
+    }
     this.batch_.push(a);
-    return this;
-  };
-  c.prototype.asyncExecuteBatch_ = function() {
-    var a = this;
-    this.asyncExecuteFunction(function() {
-      a.executeBatch_();
-    });
   };
   var g = $jscomp.global.setTimeout;
   c.prototype.asyncExecuteFunction = function(a) {

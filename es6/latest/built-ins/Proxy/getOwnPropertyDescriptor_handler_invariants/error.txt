@@ -54,23 +54,23 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20181210/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20190106/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:16: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
     Object.getOwnPropertyDescriptor(proxy, "foo");
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20181210/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:24: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20190106/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:24: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
     Object.getOwnPropertyDescriptor(proxy, "bar");
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20181210/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:30: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20190106/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:30: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
     Object.getOwnPropertyDescriptor(new Proxy(proxied, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20181210/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:40: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20190106/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:40: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
     Object.getOwnPropertyDescriptor(new Proxy({}, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20181210/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:47: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20190106/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:47: WARNING - Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
     Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

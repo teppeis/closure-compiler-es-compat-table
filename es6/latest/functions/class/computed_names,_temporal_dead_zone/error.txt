@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20181210/functions/class/computed_names,_temporal_dead_zone/in.js:7: WARNING - unreachable code
+es6/v20190106/functions/class/computed_names,_temporal_dead_zone/in.js:7: WARNING - unreachable code
   } catch(e) {
     ^^^^^^^^^^
 
