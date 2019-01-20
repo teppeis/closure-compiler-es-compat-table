@@ -1,0 +1,18 @@
+// built-ins / WeakMap / WeakMap.prototype isn't an instance
+module.exports = () => {
+  new WeakMap();
+  var obj = {};
+  try {
+    WeakMap.prototype.has(obj);
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20190106/built-ins/WeakMap/WeakMap.prototype_isnt_an_instance/in.js:6: WARNING - Suspicious code. The result of the extern function call 'WeakMap.prototype.has' is not being used.
+    WeakMap.prototype.has(obj);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
