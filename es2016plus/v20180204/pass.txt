@@ -33,3 +33,4 @@
 2017_annex_b/Object.prototype_getter_setter_methods/__lookupSetter__,_symbols/out.js: [Pass]
 2018_features/object_rest_spread_properties/object_rest_properties/out.js: [Pass]
 2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
+2019_misc/Symbol.prototype.description/undefined_description/out.js: [Pass]

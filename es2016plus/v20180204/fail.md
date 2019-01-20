@@ -54,9 +54,6 @@
 - don't change resolution value ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Promise.prototype.finally/dont_change_resolution_value/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js))
 - change rejection value ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Promise.prototype.finally/change_rejection_value/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Promise.prototype.finally/change_rejection_value/out.js))
 
-### template literal revision
-- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/template_literal_revision/error.txt))
-
 ### s (dotAll) flag for regular expressions
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
 
@@ -72,3 +69,32 @@
 ### Asynchronous Iterators
 - async generators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Asynchronous_Iterators/async_generators/error.txt))
 - for-await-of loops ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_features/Asynchronous_Iterators/for-await-of_loops/error.txt))
+
+## 2018 misc
+
+### template literal revision
+- template literal revision ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2018_misc/template_literal_revision/error.txt))
+
+## 2019 misc
+
+### optional catch binding
+- basic ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/optional_catch_binding/basic/error.txt))
+- await ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/optional_catch_binding/await/error.txt))
+- yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/optional_catch_binding/yield/error.txt))
+
+### Symbol.prototype.description
+- basic ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Symbol.prototype.description/basic/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Symbol.prototype.description/basic/out.js))
+- empty description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Symbol.prototype.description/empty_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Symbol.prototype.description/empty_description/out.js))
+
+### Function.prototype.toString revision
+- functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))
+- arrows ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/arrows/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/arrows/out.js))
+- [native code] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/_native_code_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/_native_code_/out.js))
+- class expression with implicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/out.js))
+- class expression with explicit constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js))
+- unicode escape sequences in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js))
+- methods and computed property names ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js))
+
+### JSON superset
+- LINE SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js))
+- PARAGRAPH SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20180204/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js))
