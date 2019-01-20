@@ -361,6 +361,6 @@ $jscomp.polyfill("Set", function(a) {
   return d;
 }, "es6", "es3");
 module.exports = function() {
-  return (new Set([1, 2, 3])).isDisjointWith([4, 5, 6]);
+  return (new Set([1, 2, 3])).isDisjointFrom([4, 5, 6]);
 };
 

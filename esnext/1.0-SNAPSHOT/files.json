@@ -36,7 +36,7 @@
   "draft__stage_2_/Set_methods/Set.prototype.union",
   "draft__stage_2_/Set_methods/Set.prototype.difference",
   "draft__stage_2_/Set_methods/Set.prototype.symmetricDifference",
-  "draft__stage_2_/Set_methods/Set.prototype.isDisjointWith",
+  "draft__stage_2_/Set_methods/Set.prototype.isDisjointFrom",
   "draft__stage_2_/Set_methods/Set.prototype.isSubsetOf",
   "draft__stage_2_/Set_methods/Set.prototype.isSupersetOf",
   "draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__",
