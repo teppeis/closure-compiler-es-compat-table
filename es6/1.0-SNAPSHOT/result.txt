@@ -493,7 +493,7 @@ built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_i
 built-in_extensions/Array_static_methods/Array.from,_iterator_closing/out.js: [InvalidResult: false]
 built-in_extensions/Array_static_methods/Array.of/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array_Symbol.species_/out.js: TypeError: Cannot use 'in' operator to search for 'get' in undefined
-built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: AssertionError: [1,2,3,4,5] deepEqual [1,2,1,2,3]
+built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.find/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.findIndex/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.fill/out.js: [Pass]

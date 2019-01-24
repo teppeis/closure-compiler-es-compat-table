@@ -219,7 +219,6 @@
 - Array[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array_static_methods/Array_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array_static_methods/Array_Symbol.species_/out.js))
 
 ### Array.prototype methods
-- Array.prototype.copyWithin ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js))
 - Array iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/out.js))
 - Array.prototype[Symbol.unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/out.js))
 

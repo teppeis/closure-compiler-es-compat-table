@@ -269,6 +269,7 @@ built-in_extensions/Array_static_methods/Array.from_map_function,_generator_inst
 built-in_extensions/Array_static_methods/Array.from_map_function,_generic_iterables/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_iterables/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array.of/out.js: [Pass]
+built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.find/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.findIndex/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.fill/out.js: [Pass]
