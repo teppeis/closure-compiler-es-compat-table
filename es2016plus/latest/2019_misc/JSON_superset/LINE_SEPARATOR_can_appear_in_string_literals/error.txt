@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20190106/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/in.js:4: WARNING - unreachable code
+es2016plus/v20190121/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/in.js:4: WARNING - unreachable code
   return eval("'\u2028'") === "\u2028";
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

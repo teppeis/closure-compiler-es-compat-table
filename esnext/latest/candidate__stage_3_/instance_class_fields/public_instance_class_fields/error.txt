@@ -7,7 +7,7 @@ return new C().x === 'x';
 
 };
 ----------------------------------------------------------
-esnext/v20190106/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:4: ERROR - Parse error. '(' expected
+esnext/v20190121/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:4: ERROR - Parse error. '(' expected
 x = 'x';
   ^
 

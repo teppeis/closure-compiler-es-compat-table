@@ -5,15 +5,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20190106/2018_features/RegExp_Lookbehind_Assertions/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
+es2016plus/v20190121/2018_features/RegExp_Lookbehind_Assertions/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
   return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
          ^^^^^^^^^
 
-es2016plus/v20190106/2018_features/RegExp_Lookbehind_Assertions/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
+es2016plus/v20190121/2018_features/RegExp_Lookbehind_Assertions/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
   return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
                                  ^^^^^^^^^
 
-es2016plus/v20190106/2018_features/RegExp_Lookbehind_Assertions/in.js:4: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
+es2016plus/v20190121/2018_features/RegExp_Lookbehind_Assertions/in.js:4: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language. Either remove feature "RegExp Lookbehind" or raise output level to ECMASCRIPT_2018.
 !/(?<=a)b/.test('b');
  ^^^^^^^^^
 

@@ -6,7 +6,7 @@ return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
 
 };
 ----------------------------------------------------------
-esnext/v20190106/strawman__stage_0_/bind______operator/binary_form/in.js:5: ERROR - Parse error. Semi-colon expected
+esnext/v20190121/strawman__stage_0_/bind______operator/binary_form/in.js:5: ERROR - Parse error. Semi-colon expected
 return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
                  ^
 

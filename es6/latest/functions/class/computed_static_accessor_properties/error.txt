@@ -10,11 +10,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190106/functions/class/computed_static_accessor_properties/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+es6/v20190121/functions/class/computed_static_accessor_properties/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
     static get [garply]() { return "foo"; }
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20190106/functions/class/computed_static_accessor_properties/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+es6/v20190121/functions/class/computed_static_accessor_properties/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
     static set [grault](x) { baz = x; }
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

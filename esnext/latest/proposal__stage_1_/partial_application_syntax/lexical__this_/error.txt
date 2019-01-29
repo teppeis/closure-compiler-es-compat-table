@@ -8,7 +8,7 @@ return o.f('a') === 'abfalse';
 
 };
 ----------------------------------------------------------
-esnext/v20190106/proposal__stage_1_/partial_application_syntax/lexical__this_/in.js:6: ERROR - Parse error. ')' expected
+esnext/v20190121/proposal__stage_1_/partial_application_syntax/lexical__this_/in.js:6: ERROR - Parse error. ')' expected
 var o = { f: f(?, 'b') };
                ^
 
