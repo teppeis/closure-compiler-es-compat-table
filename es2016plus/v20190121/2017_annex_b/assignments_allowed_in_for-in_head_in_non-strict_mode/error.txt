@@ -1,0 +1,12 @@
+// 2017 annex b / assignments allowed in for-in head in non-strict mode
+module.exports = () => {
+  for (var i = 0 in {}) {}
+  return i === 0;
+
+};
+----------------------------------------------------------
+es2016plus/v20190121/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js:3: ERROR - Parse error. for-in statement may not have initializer
+  for (var i = 0 in {}) {}
+                 ^
+
+1 error(s), 0 warning(s)

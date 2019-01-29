@@ -1,0 +1,17 @@
+// 2019 misc / optional catch binding / basic
+module.exports = () => {
+try {
+throw new Error();
+}
+catch {
+return true;
+}
+return false;
+
+};
+----------------------------------------------------------
+es2016plus/v20190121/2019_misc/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
+catch {
+      ^
+
+1 error(s), 0 warning(s)
