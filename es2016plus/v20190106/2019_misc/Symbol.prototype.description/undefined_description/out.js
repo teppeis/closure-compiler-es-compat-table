@@ -59,6 +59,7 @@ $jscomp.iteratorPrototype = function(a) {
 };
 module.exports = function() {
   $jscomp.initSymbol();
-  return void 0 === Symbol().description;
+  $jscomp.initSymbol();
+  return Symbol.prototype.hasOwnProperty("description") && void 0 === Symbol().description;
 };
 
