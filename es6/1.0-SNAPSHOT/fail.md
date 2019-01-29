@@ -225,7 +225,6 @@
 ### Math methods
 - Math.fround ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.fround/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.fround/out.js))
 - Math.cbrt ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.cbrt/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.cbrt/out.js))
-- Math.hypot ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.hypot/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Math_methods/Math.hypot/out.js))
 
 ### Date.prototype[Symbol.toPrimitive]
 - Date.prototype[Symbol.toPrimitive] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Date.prototype_Symbol.toPrimitive_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/built-in_extensions/Date.prototype_Symbol.toPrimitive_/out.js))
