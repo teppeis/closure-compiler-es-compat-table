@@ -92,7 +92,7 @@
 2019_misc/optional_catch_binding/yield/error.txt: [CompileError]
 2019_misc/Symbol.prototype.description/basic/out.js: [InvalidResult: false]
 2019_misc/Symbol.prototype.description/empty_description/out.js: [InvalidResult: false]
-2019_misc/Symbol.prototype.description/undefined_description/out.js: [Pass]
+2019_misc/Symbol.prototype.description/undefined_description/out.js: [InvalidResult: false]
 2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/_native_code_/out.js: Error: Funtion#toString() is not supported
