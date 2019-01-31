@@ -518,6 +518,53 @@
     "test": "template literal revision"
   },
   {
+    "path": "2019_features/Object.fromEntries",
+    "category": "2019 features",
+    "test": "Object.fromEntries"
+  },
+  {
+    "path": "2019_features/string_trimming/String.prototype.trimLeft",
+    "category": "2019 features",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimLeft"
+  },
+  {
+    "path": "2019_features/string_trimming/String.prototype.trimRight",
+    "category": "2019 features",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimRight"
+  },
+  {
+    "path": "2019_features/string_trimming/String.prototype.trimStart",
+    "category": "2019 features",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimStart"
+  },
+  {
+    "path": "2019_features/string_trimming/String.prototype.trimEnd",
+    "category": "2019 features",
+    "test": "string trimming",
+    "subtest": "String.prototype.trimEnd"
+  },
+  {
+    "path": "2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flat",
+    "category": "2019 features",
+    "test": "Array.prototype.{flat, flatMap}",
+    "subtest": "Array.prototype.flat"
+  },
+  {
+    "path": "2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flatMap",
+    "category": "2019 features",
+    "test": "Array.prototype.{flat, flatMap}",
+    "subtest": "Array.prototype.flatMap"
+  },
+  {
+    "path": "2019_features/Array.prototype._flat,_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_",
+    "category": "2019 features",
+    "test": "Array.prototype.{flat, flatMap}",
+    "subtest": "flat and flatMap in Array.prototype[@@unscopables]"
+  },
+  {
     "path": "2019_misc/optional_catch_binding/basic",
     "category": "2019 misc",
     "test": "optional catch binding",
@@ -606,5 +653,10 @@
     "category": "2019 misc",
     "test": "JSON superset",
     "subtest": "PARAGRAPH SEPARATOR can appear in string literals"
+  },
+  {
+    "path": "2019_misc/Well-formed_JSON.stringify",
+    "category": "2019 misc",
+    "test": "Well-formed JSON.stringify"
   }
 ]

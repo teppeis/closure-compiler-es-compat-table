@@ -1,29 +1,5 @@
 [
   {
-    "path": "candidate__stage_3_/string_trimming/String.prototype.trimLeft",
-    "category": "candidate (stage 3)",
-    "test": "string trimming",
-    "subtest": "String.prototype.trimLeft"
-  },
-  {
-    "path": "candidate__stage_3_/string_trimming/String.prototype.trimRight",
-    "category": "candidate (stage 3)",
-    "test": "string trimming",
-    "subtest": "String.prototype.trimRight"
-  },
-  {
-    "path": "candidate__stage_3_/string_trimming/String.prototype.trimStart",
-    "category": "candidate (stage 3)",
-    "test": "string trimming",
-    "subtest": "String.prototype.trimStart"
-  },
-  {
-    "path": "candidate__stage_3_/string_trimming/String.prototype.trimEnd",
-    "category": "candidate (stage 3)",
-    "test": "string trimming",
-    "subtest": "String.prototype.trimEnd"
-  },
-  {
     "path": "candidate__stage_3_/globalThis/globalThis_global_property_is_global_object",
     "category": "candidate (stage 3)",
     "test": "globalThis",
@@ -69,18 +45,6 @@
     "category": "candidate (stage 3)",
     "test": "static class fields",
     "subtest": "private static class fields"
-  },
-  {
-    "path": "candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flat",
-    "category": "candidate (stage 3)",
-    "test": "Array.prototype.{flat, flatMap}",
-    "subtest": "Array.prototype.flat"
-  },
-  {
-    "path": "candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flatMap",
-    "category": "candidate (stage 3)",
-    "test": "Array.prototype.{flat, flatMap}",
-    "subtest": "Array.prototype.flatMap"
   },
   {
     "path": "candidate__stage_3_/BigInt/basic_functionality",
@@ -129,16 +93,6 @@
     "category": "candidate (stage 3)",
     "test": "BigInt",
     "subtest": "DataView.prototype.getBigUint64"
-  },
-  {
-    "path": "candidate__stage_3_/Object.fromEntries",
-    "category": "candidate (stage 3)",
-    "test": "Object.fromEntries"
-  },
-  {
-    "path": "candidate__stage_3_/Well-formed_JSON.stringify",
-    "category": "candidate (stage 3)",
-    "test": "Well-formed JSON.stringify"
   },
   {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
@@ -243,6 +197,11 @@
     "category": "draft (stage 2)",
     "test": "ArrayBuffer.prototype.transfer",
     "subtest": "ArrayBuffer.prototype.realloc()"
+  },
+  {
+    "path": "draft__stage_2_/Promise.allSettled",
+    "category": "draft (stage 2)",
+    "test": "Promise.allSettled"
   },
   {
     "path": "proposal__stage_1_/do_expressions",
@@ -763,11 +722,6 @@
     "category": "proposal (stage 1)",
     "test": "Collections methods",
     "subtest": "WeakSet.prototype.deleteAll"
-  },
-  {
-    "path": "proposal__stage_1_/Promise.allSettled",
-    "category": "proposal (stage 1)",
-    "test": "Promise.allSettled"
   },
   {
     "path": "proposal__stage_1_/Math.seededPRNG",
