@@ -11,8 +11,8 @@ asyncTestPassed();
 
 };
 ----------------------------------------------------------
-es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/await/in.js:7: ERROR - Parse error. '(' expected
+es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/await/in.js:7: ERROR - This language feature is not currently supported by the compiler: Optional catch binding.
 catch {
-      ^
+^
 
 1 error(s), 0 warning(s)

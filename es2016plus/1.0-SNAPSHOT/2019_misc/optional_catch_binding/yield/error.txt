@@ -15,8 +15,8 @@ return it.next().value;
 
 };
 ----------------------------------------------------------
-es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
+es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - This language feature is not currently supported by the compiler: Optional catch binding.
 catch {
-      ^
+^
 
 1 error(s), 0 warning(s)
