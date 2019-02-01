@@ -1,10 +1,6 @@
 
 ## Candidate (stage 3)
 
-### string trimming
-- String.prototype.trimStart ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/string_trimming/String.prototype.trimStart/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/string_trimming/String.prototype.trimStart/out.js))
-- String.prototype.trimEnd ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/string_trimming/String.prototype.trimEnd/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/string_trimming/String.prototype.trimEnd/out.js))
-
 ### globalThis
 - "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js))
 - "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
@@ -21,10 +17,6 @@
 - public static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt))
 - private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt))
 
-### Array.prototype.{flat, flatMap}
-- Array.prototype.flat ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/out.js))
-- Array.prototype.flatMap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/out.js))
-
 ### BigInt
 - basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/basic_functionality/error.txt))
 - constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/constructor/error.txt))
@@ -34,12 +26,6 @@
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
 - DataView.prototype.getBigInt64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js))
 - DataView.prototype.getBigUint64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js))
-
-### Object.fromEntries
-- Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Object.fromEntries/out.js))
-
-### Well-formed JSON.stringify
-- Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Well-formed_JSON.stringify/out.js))
 
 ## Draft (stage 2)
 
@@ -76,6 +62,9 @@
 ### ArrayBuffer.prototype.transfer
 - ArrayBuffer.prototype.transfer() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js))
 - ArrayBuffer.prototype.realloc() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js))
+
+### Promise.allSettled
+- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Promise.allSettled/out.js))
 
 ## Proposal (stage 1)
 
@@ -200,9 +189,6 @@
 - WeakMap.prototype.deleteAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll/out.js))
 - WeakSet.prototype.addAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll/out.js))
 - WeakSet.prototype.deleteAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js))
-
-### Promise.allSettled
-- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Promise.allSettled/out.js))
 
 ### Math.seededPRNG
 - Math.seededPRNG ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Math.seededPRNG/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Math.seededPRNG/out.js))

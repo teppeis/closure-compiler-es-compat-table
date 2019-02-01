@@ -61,6 +61,20 @@
 ### RegExp Unicode Property Escapes
 - RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
 
+## 2019 features
+
+### Object.fromEntries
+- Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Object.fromEntries/out.js))
+
+### string trimming
+- String.prototype.trimStart ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/string_trimming/String.prototype.trimStart/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/string_trimming/String.prototype.trimStart/out.js))
+- String.prototype.trimEnd ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/string_trimming/String.prototype.trimEnd/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/string_trimming/String.prototype.trimEnd/out.js))
+
+### Array.prototype.{flat, flatMap}
+- Array.prototype.flat ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/out.js))
+- Array.prototype.flatMap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/out.js))
+- flat and flatMap in Array.prototype[@@unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js))
+
 ## 2019 misc
 
 ### optional catch binding
@@ -85,3 +99,6 @@
 ### JSON superset
 - LINE SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js))
 - PARAGRAPH SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js))
+
+### Well-formed JSON.stringify
+- Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Well-formed_JSON.stringify/out.js))

@@ -1,7 +1,3 @@
-candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
-candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]
-candidate__stage_3_/string_trimming/String.prototype.trimStart/out.js: TypeError: Object abc has no method 'trimStart'
-candidate__stage_3_/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object abc has no method 'trimEnd'
 candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/String.prototype.matchAll/out.js: TypeError: Object 11a2bb has no method 'matchAll'
@@ -10,8 +6,6 @@ candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_su
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt: [CompileError]
-candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flat/out.js: TypeError: Object 1,2,3,4,5,6 has no method 'flat'
-candidate__stage_3_/Array.prototype._flat,_flatMap_/Array.prototype.flatMap/out.js: TypeError: Object [object Object],[object Object] has no method 'flatMap'
 candidate__stage_3_/BigInt/basic_functionality/error.txt: [CompileError]
 candidate__stage_3_/BigInt/constructor/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigInt.asUintN/out.js: ReferenceError: BigInt is not defined
@@ -20,8 +14,6 @@ candidate__stage_3_/BigInt/BigInt64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js: ReferenceError: DataView is not defined
 candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js: ReferenceError: DataView is not defined
-candidate__stage_3_/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
-candidate__stage_3_/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]
@@ -40,6 +32,7 @@ draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [
 draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
+draft__stage_2_/Promise.allSettled/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'allSettled'
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
@@ -128,7 +121,6 @@ proposal__stage_1_/Collections_methods/Set.prototype.some/out.js: TypeError: Obj
 proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
 proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
 proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
-proposal__stage_1_/Promise.allSettled/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'allSettled'
 proposal__stage_1_/Math.seededPRNG/out.js: TypeError: Object #<Object> has no method 'seededPRNG'
 proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString/out.js: TypeError: Object function Number() { [native code] } has no method 'fromString'
 proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [CompileError]
