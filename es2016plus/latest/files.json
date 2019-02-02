@@ -88,6 +88,14 @@
   "2018_features/Asynchronous_Iterators/async_generators",
   "2018_features/Asynchronous_Iterators/for-await-of_loops",
   "2018_misc/template_literal_revision",
+  "2019_features/Object.fromEntries",
+  "2019_features/string_trimming/String.prototype.trimLeft",
+  "2019_features/string_trimming/String.prototype.trimRight",
+  "2019_features/string_trimming/String.prototype.trimStart",
+  "2019_features/string_trimming/String.prototype.trimEnd",
+  "2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flat",
+  "2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flatMap",
+  "2019_features/Array.prototype._flat,_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_",
   "2019_misc/optional_catch_binding/basic",
   "2019_misc/optional_catch_binding/await",
   "2019_misc/optional_catch_binding/yield",
@@ -102,5 +110,6 @@
   "2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers",
   "2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names",
   "2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals",
-  "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals"
+  "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals",
+  "2019_misc/Well-formed_JSON.stringify"
 ]

@@ -1,2 +1,0 @@
-candidate__stage_3_/string_trimming/String.prototype.trimLeft/out.js: [Pass]
-candidate__stage_3_/string_trimming/String.prototype.trimRight/out.js: [Pass]

@@ -1,4 +1,4 @@
-// proposal (stage 1) / Promise.allSettled
+// draft (stage 2) / Promise.allSettled
 module.exports = (asyncTestPassed) => {
   Promise.allSettled([
     Promise.resolve(1),

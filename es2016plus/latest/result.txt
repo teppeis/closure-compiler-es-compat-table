@@ -87,6 +87,14 @@
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
 2018_misc/template_literal_revision/out.js: [Pass]
+2019_features/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
+2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
+2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
+2019_features/string_trimming/String.prototype.trimStart/out.js: TypeError: Object abc has no method 'trimStart'
+2019_features/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object abc has no method 'trimEnd'
+2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flat/out.js: TypeError: Object 1,2,3,4,5,6 has no method 'flat'
+2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flatMap/out.js: TypeError: Object [object Object],[object Object] has no method 'flatMap'
+2019_features/Array.prototype._flat,_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js: TypeError: Cannot read property 'flat' of undefined
 2019_misc/optional_catch_binding/basic/error.txt: [CompileError]
 2019_misc/optional_catch_binding/await/error.txt: [CompileError]
 2019_misc/optional_catch_binding/yield/error.txt: [CompileError]
@@ -102,3 +110,4 @@
 2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
