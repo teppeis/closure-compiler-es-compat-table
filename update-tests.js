@@ -13,9 +13,10 @@ const rimraf = require('rimraf');
 const cli = meow(
   `
 	Usage
-	  $ update-tests.js ES_VERSION
+	  $ update-tests.js [ES_VERSION]
 
 	Examples
+    $ ./update-tests.js
     $ ./update-tests.js es6
 `,
   {
@@ -23,12 +24,10 @@ const cli = meow(
   }
 );
 
-if (cli.input.length !== 1) {
+if (cli.input.length > 2) {
   cli.showHelp();
 }
-const esVersion = cli.input[0];
-const {testDir, alterTestDir, data} = init();
-const fileList = [];
+
 const linter = new Linter();
 
 class TestCode {
@@ -58,22 +57,37 @@ ${throws}${initIterator}${this.expr}
   }
 }
 
-data.tests.forEach(test => {
-  if (test.subtests) {
-    test.subtests.forEach(subtest => {
-      writeInputSrcFile(subtest.exec, test.category, test.name, subtest.name);
-    });
-  } else {
-    writeInputSrcFile(test.exec, test.category, test.name);
+const esVersions = cli.input.length > 0 ? [cli.input[0]] : ['es6', 'es2016plus', 'esnext'];
+esVersions.forEach(esVersion => {
+  const {testDir, alterTestDir, data} = init(esVersion);
+  const fileList = [];
+  data.tests.forEach(test => {
+    if (test.subtests) {
+      test.subtests.forEach(subtest => {
+        fileList.push(
+          writeInputSrcFile(
+            subtest.exec,
+            test.category,
+            test.name,
+            {testDir, alterTestDir},
+            subtest.name
+          )
+        );
+      });
+    } else {
+      fileList.push(
+        writeInputSrcFile(test.exec, test.category, test.name, {testDir, alterTestDir})
+      );
+    }
+  });
+
+  if (!testDir) {
+    fs.writeFileSync(path.join(alterTestDir, 'fileinfo.json'), JSON.stringify(fileList, null, 2));
+    cleanupDirsForRemovedTests(fileList, alterTestDir);
   }
 });
 
-if (!testDir) {
-  fs.writeFileSync(path.join(alterTestDir, 'fileinfo.json'), JSON.stringify(fileList, null, 2));
-  cleanupDirsForRemovedTests(fileList);
-}
-
-function cleanupDirsForRemovedTests(fileList) {
+function cleanupDirsForRemovedTests(fileList, alterTestDir) {
   const pathSet = new Set(fileList.map(file => path.join(alterTestDir, file.path)));
   const files = glob.sync(path.join(alterTestDir, '**/orig.js'));
   const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
@@ -83,7 +97,7 @@ function cleanupDirsForRemovedTests(fileList) {
   });
 }
 
-function init() {
+function init(esVersion) {
   const versions = new Set(['es6', 'es2016plus', 'esnext']);
   if (!versions.has(esVersion)) {
     throw new Error(`ES_VERSION is invalid: ${esVersion}`);
@@ -95,7 +109,7 @@ function init() {
   return {testDir, alterTestDir, data};
 }
 
-function writeInputSrcFile(fn, category, test, sub) {
+function writeInputSrcFile(fn, category, test, {testDir, alterTestDir}, sub) {
   let dir = path.join(alterTestDir, escapePath(category), escapePath(test));
   let name = `${category} / ${test}`;
   if (sub) {
@@ -107,12 +121,12 @@ function writeInputSrcFile(fn, category, test, sub) {
   }
   const origPath = path.join(dir, 'orig.js');
   generateTestJsSrc(fn, name, origPath);
-  fileList.push({
+  return {
     path: path.relative(alterTestDir, dir),
     category,
     test,
     subtest: sub,
-  });
+  };
 }
 
 function escapePath(str) {
