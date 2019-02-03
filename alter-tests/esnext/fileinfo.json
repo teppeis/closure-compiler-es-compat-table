@@ -864,6 +864,11 @@
     "subtest": "destructuring assignments"
   },
   {
+    "path": "strawman__stage_0_/Promise.any",
+    "category": "strawman (stage 0)",
+    "test": "Promise.any"
+  },
+  {
     "path": "pre-strawman/Metadata_reflection_API/Reflect.defineMetadata",
     "category": "pre-strawman",
     "test": "Metadata reflection API",
