@@ -145,6 +145,7 @@ strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileErro
 strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt: [CompileError]
+strawman__stage_0_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'
 pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
 pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
 pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined

@@ -238,6 +238,9 @@
 - object initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
 - destructuring assignments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
 
+### Promise.any
+- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Promise.any/out.js))
+
 ## Pre strawman
 
 ### Metadata reflection API

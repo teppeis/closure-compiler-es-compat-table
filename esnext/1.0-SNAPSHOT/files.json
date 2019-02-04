@@ -146,6 +146,7 @@
   "strawman__stage_0_/syntactic_tail_calls/mutual_recursion",
   "strawman__stage_0_/object_shorthand_improvements/object_initializers",
   "strawman__stage_0_/object_shorthand_improvements/destructuring_assignments",
+  "strawman__stage_0_/Promise.any",
   "pre-strawman/Metadata_reflection_API/Reflect.defineMetadata",
   "pre-strawman/Metadata_reflection_API/Reflect.hasMetadata",
   "pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata",
