@@ -101,7 +101,7 @@
 - yield *, astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield__%2C_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield__%2C_astral_plane_strings/out.js))
 - yield * on non-iterables is a runtime error ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield___on_non-iterables_is_a_runtime_error/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield___on_non-iterables_is_a_runtime_error/out.js))
 - yield *, iterator closing via throw() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield__%2C_iterator_closing_via_throw__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/yield__%2C_iterator_closing_via_throw__/out.js))
-- shorthand generators can't be constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/shorthand_generators_cant_be_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/shorthand_generators_cant_be_constructors/out.js))
+- shorthand generators can't be constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/1.0-SNAPSHOT/functions/generators/shorthand_generators_cant_be_constructors/error.txt))
 
 ## Built ins
 

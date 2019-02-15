@@ -41,3 +41,6 @@
 2018_misc/template_literal_revision/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
+2019_misc/optional_catch_binding/basic/out.js: [Pass]
+2019_misc/optional_catch_binding/await/out.js: [Pass]
+2019_misc/optional_catch_binding/yield/out.js: [Pass]

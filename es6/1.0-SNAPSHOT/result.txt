@@ -235,7 +235,7 @@ functions/generators/string-keyed_shorthand_generator_methods/out.js: [Pass]
 functions/generators/computed_shorthand_generators/out.js: [Pass]
 functions/generators/shorthand_generator_methods,_classes/out.js: [Pass]
 functions/generators/computed_shorthand_generators,_classes/out.js: [Pass]
-functions/generators/shorthand_generators_cant_be_constructors/out.js: [InvalidResult: false]
+functions/generators/shorthand_generators_cant_be_constructors/error.txt: [CompileError]
 built-ins/typed_arrays/Int8Array/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/Uint8Array/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/Uint8ClampedArray/out.js: ReferenceError: ArrayBuffer is not defined

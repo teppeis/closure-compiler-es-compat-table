@@ -77,11 +77,6 @@
 
 ## 2019 misc
 
-### optional catch binding
-- basic ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/basic/error.txt))
-- await ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/await/error.txt))
-- yield ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/optional_catch_binding/yield/error.txt))
-
 ### Symbol.prototype.description
 - basic ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/basic/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/basic/out.js))
 - empty description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/empty_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Symbol.prototype.description/empty_description/out.js))

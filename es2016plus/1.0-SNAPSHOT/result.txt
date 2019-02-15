@@ -95,9 +95,9 @@
 2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flat/out.js: TypeError: Object 1,2,3,4,5,6 has no method 'flat'
 2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flatMap/out.js: TypeError: Object [object Object],[object Object] has no method 'flatMap'
 2019_features/Array.prototype._flat,_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js: TypeError: Cannot read property 'flat' of undefined
-2019_misc/optional_catch_binding/basic/error.txt: [CompileError]
-2019_misc/optional_catch_binding/await/error.txt: [CompileError]
-2019_misc/optional_catch_binding/yield/error.txt: [CompileError]
+2019_misc/optional_catch_binding/basic/out.js: [Pass]
+2019_misc/optional_catch_binding/await/out.js: [Pass]
+2019_misc/optional_catch_binding/yield/out.js: [Pass]
 2019_misc/Symbol.prototype.description/basic/out.js: [InvalidResult: false]
 2019_misc/Symbol.prototype.description/empty_description/out.js: [InvalidResult: false]
 2019_misc/Symbol.prototype.description/undefined_description/out.js: [InvalidResult: false]
