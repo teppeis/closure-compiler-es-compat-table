@@ -97,8 +97,8 @@
 - methods and computed property names ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js))
 
 ### JSON superset
-- LINE SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js))
-- PARAGRAPH SEPARATOR can appear in string literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js))
+- LINE SEPARATOR can appear in string literals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/error.txt))
+- PARAGRAPH SEPARATOR can appear in string literals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/error.txt))
 
 ### Well-formed JSON.stringify
 - Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Well-formed_JSON.stringify/out.js))
