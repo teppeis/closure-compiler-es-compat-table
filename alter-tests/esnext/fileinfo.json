@@ -95,6 +95,18 @@
     "subtest": "DataView.prototype.getBigUint64"
   },
   {
+    "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
+    "category": "candidate (stage 3)",
+    "test": "Legacy RegExp features in JavaScript",
+    "subtest": "RegExp \"lastMatch\""
+  },
+  {
+    "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9",
+    "category": "candidate (stage 3)",
+    "test": "Legacy RegExp features in JavaScript",
+    "subtest": "RegExp.$1-$9"
+  },
+  {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
     "category": "draft (stage 2)",
     "test": "Generator function.sent Meta Property"
