@@ -27,6 +27,10 @@
 - DataView.prototype.getBigInt64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js))
 - DataView.prototype.getBigUint64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js))
 
+### Legacy RegExp features in JavaScript
+- RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
+- RegExp.$1-$9 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.%241-%249/error.txt))
+
 ## Draft (stage 2)
 
 ### Generator function.sent Meta Property
@@ -237,6 +241,9 @@
 ### object shorthand improvements
 - object initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
 - destructuring assignments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
+
+### Promise.any
+- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/strawman__stage_0_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20190121/strawman__stage_0_/Promise.any/out.js))
 
 ## Pre strawman
 
