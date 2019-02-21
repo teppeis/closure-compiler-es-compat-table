@@ -14,6 +14,8 @@ candidate__stage_3_/BigInt/BigInt64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js: ReferenceError: DataView is not defined
 candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js: ReferenceError: DataView is not defined
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]
@@ -145,6 +147,7 @@ strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileErro
 strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]
 strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt: [CompileError]
+strawman__stage_0_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'
 pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
 pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
 pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined
