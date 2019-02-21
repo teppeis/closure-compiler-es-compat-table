@@ -280,6 +280,20 @@ $jscomp.generator.createGenerator = function(a, b) {
   return b;
 };
 module.exports = function() {
-  return !1;
+  function a() {
+    return $jscomp.generator.createGenerator(a, function(a) {
+      if (1 == a.nextAddress) {
+        return a.setCatchFinallyBlocks(2), a.yield(void 0, 4);
+      }
+      if (2 != a.nextAddress) {
+        throw Error();
+      }
+      a.enterCatchBlock();
+      return a.return(!0);
+    });
+  }
+  var b = a();
+  b.next();
+  return b.next().value;
 };
 

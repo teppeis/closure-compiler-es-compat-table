@@ -10,8 +10,8 @@ return false;
 
 };
 ----------------------------------------------------------
-es2016plus/v20190121/2019_misc/optional_catch_binding/basic/in.js:6: ERROR - Parse error. '(' expected
-catch {
-      ^
+es2016plus/v20190215/2019_misc/optional_catch_binding/basic/in.js:9: WARNING - unreachable code
+return false;
+^^^^^^^^^^^^^
 
-1 error(s), 0 warning(s)
+0 error(s), 1 warning(s)

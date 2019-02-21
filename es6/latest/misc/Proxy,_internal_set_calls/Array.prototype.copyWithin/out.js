@@ -16,9 +16,9 @@ $jscomp.polyfill = function(a, d, b, c) {
     b = $jscomp.global;
     a = a.split(".");
     for (c = 0; c < a.length - 1; c++) {
-      var e = a[c];
-      e in b || (b[e] = {});
-      b = b[e];
+      var f = a[c];
+      f in b || (b[f] = {});
+      b = b[f];
     }
     a = a[a.length - 1];
     c = b[a];
@@ -27,18 +27,25 @@ $jscomp.polyfill = function(a, d, b, c) {
   }
 };
 $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
-  return a ? a : function(a, b, c) {
-    var d = this.length;
-    a = Number(a);
+  function d(b) {
     b = Number(b);
-    c = Number(null != c ? c : d);
-    if (a < b) {
-      for (c = Math.min(c, d); b < c;) {
-        b in this ? this[a++] = this[b++] : (delete this[a++], b++);
+    return Infinity === b || -Infinity === b ? b : b | 0;
+  }
+  return a ? a : function(b, c, a) {
+    var e = this.length;
+    b = d(b);
+    c = d(c);
+    a = void 0 === a ? e : d(a);
+    b = 0 > b ? Math.max(e + b, 0) : Math.min(b, e);
+    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
+    a = 0 > a ? Math.max(e + a, 0) : Math.min(a, e);
+    if (b < c) {
+      for (; c < a;) {
+        c in this ? this[b++] = this[c++] : (delete this[b++], c++);
       }
     } else {
-      for (c = Math.min(c, d + b - a), a += c - b; c > b;) {
-        --c in this ? this[--a] = this[c] : delete this[a];
+      for (a = Math.min(a, e + c - b), b += a - c; a > c;) {
+        --a in this ? this[--b] = this[a] : delete this[--b];
       }
     }
     return this;

@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190121/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js:3: WARNING - Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/v20190121/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js]
+es6/v20190215/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js:3: WARNING - Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/v20190215/syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/in.js]
   var re = new RegExp('yy', 'y');
                             ^^^
 

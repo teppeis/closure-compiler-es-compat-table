@@ -235,7 +235,7 @@ functions/generators/string-keyed_shorthand_generator_methods/out.js: [Pass]
 functions/generators/computed_shorthand_generators/out.js: [Pass]
 functions/generators/shorthand_generator_methods,_classes/out.js: [Pass]
 functions/generators/computed_shorthand_generators,_classes/out.js: [Pass]
-functions/generators/shorthand_generators_cant_be_constructors/out.js: [InvalidResult: false]
+functions/generators/shorthand_generators_cant_be_constructors/error.txt: [CompileError]
 built-ins/typed_arrays/Int8Array/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/Uint8Array/out.js: ReferenceError: ArrayBuffer is not defined
 built-ins/typed_arrays/Uint8ClampedArray/out.js: ReferenceError: ArrayBuffer is not defined
@@ -493,7 +493,7 @@ built-in_extensions/Array_static_methods/Array.from_map_function,_instances_of_i
 built-in_extensions/Array_static_methods/Array.from,_iterator_closing/out.js: [InvalidResult: false]
 built-in_extensions/Array_static_methods/Array.of/out.js: [Pass]
 built-in_extensions/Array_static_methods/Array_Symbol.species_/out.js: TypeError: Cannot use 'in' operator to search for 'get' in undefined
-built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: AssertionError: [1,2,3,4,5] deepEqual [1,2,1,2,3]
+built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.find/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.findIndex/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.fill/out.js: [Pass]
@@ -528,7 +528,7 @@ built-in_extensions/Math_methods/Math.atanh/out.js: [Pass]
 built-in_extensions/Math_methods/Math.trunc/out.js: [Pass]
 built-in_extensions/Math_methods/Math.fround/out.js: [InvalidResult: false]
 built-in_extensions/Math_methods/Math.cbrt/out.js: [InvalidResult: false]
-built-in_extensions/Math_methods/Math.hypot/out.js: [InvalidResult: false]
+built-in_extensions/Math_methods/Math.hypot/out.js: [Pass]
 built-in_extensions/Date.prototype_Symbol.toPrimitive_/out.js: TypeError: Cannot call method 'call' of undefined
 subclassing/Array_is_subclassable/length_property__accessing_/error.txt: [CompileError]
 subclassing/Array_is_subclassable/length_property__setting_/error.txt: [CompileError]

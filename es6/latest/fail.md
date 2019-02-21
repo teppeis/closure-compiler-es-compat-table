@@ -101,7 +101,7 @@
 - yield *, astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield__%2C_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield__%2C_astral_plane_strings/out.js))
 - yield * on non-iterables is a runtime error ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield___on_non-iterables_is_a_runtime_error/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield___on_non-iterables_is_a_runtime_error/out.js))
 - yield *, iterator closing via throw() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield__%2C_iterator_closing_via_throw__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/yield__%2C_iterator_closing_via_throw__/out.js))
-- shorthand generators can't be constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/shorthand_generators_cant_be_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/shorthand_generators_cant_be_constructors/out.js))
+- shorthand generators can't be constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/functions/generators/shorthand_generators_cant_be_constructors/error.txt))
 
 ## Built ins
 
@@ -219,14 +219,12 @@
 - Array[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array_static_methods/Array_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array_static_methods/Array_Symbol.species_/out.js))
 
 ### Array.prototype methods
-- Array.prototype.copyWithin ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array.prototype.copyWithin/out.js))
 - Array iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/out.js))
 - Array.prototype[Symbol.unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/out.js))
 
 ### Math methods
 - Math.fround ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.fround/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.fround/out.js))
 - Math.cbrt ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.cbrt/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.cbrt/out.js))
-- Math.hypot ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.hypot/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Math_methods/Math.hypot/out.js))
 
 ### Date.prototype[Symbol.toPrimitive]
 - Date.prototype[Symbol.toPrimitive] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Date.prototype_Symbol.toPrimitive_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/latest/built-in_extensions/Date.prototype_Symbol.toPrimitive_/out.js))

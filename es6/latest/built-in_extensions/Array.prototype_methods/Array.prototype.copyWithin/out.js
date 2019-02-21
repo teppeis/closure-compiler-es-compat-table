@@ -11,34 +11,41 @@ $jscomp.getGlobal = function(a) {
   return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, d, b, c) {
+$jscomp.polyfill = function(a, d, b, f) {
   if (d) {
     b = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var e = a[c];
-      e in b || (b[e] = {});
-      b = b[e];
+    for (f = 0; f < a.length - 1; f++) {
+      var c = a[f];
+      c in b || (b[c] = {});
+      b = b[c];
     }
     a = a[a.length - 1];
-    c = b[a];
-    d = d(c);
-    d != c && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+    f = b[a];
+    d = d(f);
+    d != f && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
   }
 };
 $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
-  return a ? a : function(a, b, c) {
-    var d = this.length;
-    a = Number(a);
+  function d(b) {
     b = Number(b);
-    c = Number(null != c ? c : d);
-    if (a < b) {
-      for (c = Math.min(c, d); b < c;) {
-        b in this ? this[a++] = this[b++] : (delete this[a++], b++);
+    return Infinity === b || -Infinity === b ? b : b | 0;
+  }
+  return a ? a : function(b, a, c) {
+    var e = this.length;
+    b = d(b);
+    a = d(a);
+    c = void 0 === c ? e : d(c);
+    b = 0 > b ? Math.max(e + b, 0) : Math.min(b, e);
+    a = 0 > a ? Math.max(e + a, 0) : Math.min(a, e);
+    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
+    if (b < a) {
+      for (; a < c;) {
+        a in this ? this[b++] = this[a++] : (delete this[b++], a++);
       }
     } else {
-      for (c = Math.min(c, d + b - a), a += c - b; c > b;) {
-        --c in this ? this[--a] = this[c] : delete this[a];
+      for (c = Math.min(c, e + a - b), b += c - a; c > a;) {
+        --c in this ? this[--b] = this[c] : delete this[--b];
       }
     }
     return this;
