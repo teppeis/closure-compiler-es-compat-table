@@ -1,0 +1,26 @@
+// functions / class / new.target
+module.exports = () => {
+  var passed = false;
+  new function f() {
+    passed = new.target === f;
+  }();
+  class A {
+    constructor() {
+      passed &= new.target === B;
+    }
+  }
+  class B extends A {}
+  new B();
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20190215/functions/class/new.target/in.js:5: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    passed = new.target === f;
+             ^^^^^^^^^^
+
+es6/v20190215/functions/class/new.target/in.js:9: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+      passed &= new.target === B;
+                ^^^^^^^^^^
+
+2 error(s), 0 warning(s)

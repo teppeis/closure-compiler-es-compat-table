@@ -1,0 +1,14 @@
+// functions / arrow functions / lexical "new.target" binding
+module.exports = () => {
+  function C() {
+    return x => new.target;
+  }
+  return new C()() === C && C()() === undefined;
+
+};
+----------------------------------------------------------
+es6/v20190215/functions/arrow_functions/lexical_new.target_binding/in.js:4: ERROR - ES6 transpilation of 'new.target' is not yet implemented.
+    return x => new.target;
+                ^^^^^^^^^^
+
+1 error(s), 0 warning(s)

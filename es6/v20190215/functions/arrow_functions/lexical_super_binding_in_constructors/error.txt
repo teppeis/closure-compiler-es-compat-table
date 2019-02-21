@@ -1,0 +1,23 @@
+// functions / arrow functions / lexical "super" binding in constructors
+module.exports = () => {
+  var received;
+  class B {
+    constructor (arg) {
+      received = arg;
+    }
+  }
+  class C extends B {
+    constructor () {
+      var callSuper = () => super('foo');
+      callSuper();
+    }
+  }
+  return new C instanceof C && received === 'foo'
+
+};
+----------------------------------------------------------
+es6/v20190215/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:10: ERROR - constructor is missing a call to super()
+    constructor () {
+    ^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,17 @@
+// subclassing / miscellaneous subclassables / String is subclassable
+module.exports = () => {
+  class C extends String {}
+  var c = new C("golly");
+  return c instanceof String
+&& c instanceof C
+&& c + '' === "golly"
+&& c[0] === "g"
+&& c.length === 5;
+
+};
+----------------------------------------------------------
+es6/v20190215/subclassing/miscellaneous_subclassables/String_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: String
+  class C extends String {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
