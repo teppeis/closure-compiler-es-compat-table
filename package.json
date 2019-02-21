@@ -30,9 +30,9 @@
     "rimraf": "^2.6.3"
   },
   "devDependencies": {
-    "eslint": "^5.11.1",
-    "eslint-config-teppeis": "^9.0.0",
-    "prettier": "1.15.3"
+    "eslint": "^5.14.1",
+    "eslint-config-teppeis": "^9.5.0",
+    "prettier": "^1.16.4"
   },
   "license": "MIT"
 }
