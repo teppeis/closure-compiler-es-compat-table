@@ -108,6 +108,6 @@
 2019_misc/Function.prototype.toString_revision/class_expression_with_explicit_constructor/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/out.js: Error: eval() and Function() cannot be transpiled
-2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js: Error: eval() and Function() cannot be transpiled
-2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: Error: eval() and Function() cannot be transpiled
+2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
+2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
