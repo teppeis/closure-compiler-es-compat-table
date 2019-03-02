@@ -24,8 +24,8 @@
 - BigInt.asIntN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asIntN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asIntN/out.js))
 - BigInt64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt64Array/error.txt))
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
-- DataView.prototype.getBigInt64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js))
-- DataView.prototype.getBigUint64 ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js))
+- DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt))
+- DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt))
 
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
