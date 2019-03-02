@@ -222,8 +222,8 @@
 - function expression decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/function_expression_decorators/error.txt))
 
 ### Reflect.isCallable / Reflect.isConstructor
-- Reflect.isCallable ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/error.txt))
-- Reflect.isConstructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/error.txt))
+- Reflect.isCallable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/out.js))
+- Reflect.isConstructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/out.js))
 
 ### zones
 - Zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/zones/Zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/zones/Zone/out.js))
