@@ -12,8 +12,8 @@ candidate__stage_3_/BigInt/BigInt.asUintN/out.js: ReferenceError: BigInt is not 
 candidate__stage_3_/BigInt/BigInt.asIntN/out.js: ReferenceError: BigInt is not defined
 candidate__stage_3_/BigInt/BigInt64Array/error.txt: [CompileError]
 candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
-candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/out.js: ReferenceError: DataView is not defined
-candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/out.js: ReferenceError: DataView is not defined
+candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
+candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
