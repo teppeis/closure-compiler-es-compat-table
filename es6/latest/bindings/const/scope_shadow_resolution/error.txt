@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190215/bindings/const/scope_shadow_resolution/in.js:7: WARNING - unreachable code
+es6/v20190301/bindings/const/scope_shadow_resolution/in.js:7: WARNING - unreachable code
   } catch(e) {
     ^^^^^^^^^^
 

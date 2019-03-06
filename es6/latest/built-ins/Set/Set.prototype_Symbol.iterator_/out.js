@@ -26,16 +26,27 @@ $jscomp.initSymbol = function() {
   };
   $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
+$jscomp.SymbolClass = function(a, e) {
+  this.$jscomp$symbol$id_ = a;
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:e});
+};
+$jscomp.SymbolClass.prototype.toString = function() {
+  return this.$jscomp$symbol$id_;
+};
 $jscomp.Symbol = function() {
-  var a = 0;
-  return function(e) {
-    return $jscomp.SYMBOL_PREFIX + (e || "") + a++;
-  };
+  function a(d) {
+    if (this instanceof a) {
+      throw new TypeError("Symbol is not a constructor");
+    }
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (d || "") + "_" + e++, d);
+  }
+  var e = 0;
+  return a;
 }();
 $jscomp.initSymbolIterator = function() {
   $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.iterator;
-  a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
+  a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("Symbol.iterator"));
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
     return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
   }});
@@ -45,7 +56,7 @@ $jscomp.initSymbolIterator = function() {
 $jscomp.initSymbolAsyncIterator = function() {
   $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.asyncIterator;
-  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("asyncIterator"));
+  a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("Symbol.asyncIterator"));
   $jscomp.initSymbolAsyncIterator = function() {
   };
 };
@@ -253,19 +264,19 @@ $jscomp.polyfill("Map", function(a) {
     }
   };
   c.prototype[Symbol.iterator] = c.prototype.entries;
-  var f = function(b, a) {
-    var c = a && typeof a;
-    "object" == c || "function" == c ? d.has(a) ? c = d.get(a) : (c = "" + ++l, d.set(a, c)) : c = "p_" + a;
-    var f = b.data_[c];
-    if (f && $jscomp.owns(b.data_, c)) {
-      for (b = 0; b < f.length; b++) {
-        var e = f[b];
-        if (a !== a && e.key !== e.key || a === e.key) {
-          return {id:c, list:f, index:b, entry:e};
+  var f = function(a, c) {
+    var b = c && typeof c;
+    "object" == b || "function" == b ? d.has(c) ? b = d.get(c) : (b = "" + ++l, d.set(c, b)) : b = "p_" + c;
+    var e = a.data_[b];
+    if (e && $jscomp.owns(a.data_, b)) {
+      for (a = 0; a < e.length; a++) {
+        var f = e[a];
+        if (c !== c && f.key !== f.key || c === f.key) {
+          return {id:b, list:e, index:a, entry:f};
         }
       }
     }
-    return {id:c, list:f, index:-1, entry:void 0};
+    return {id:b, list:e, index:-1, entry:void 0};
   }, g = function(a, c) {
     var b = a.head_;
     return $jscomp.iteratorPrototype(function() {

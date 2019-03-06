@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20190215/2018_features/RegExp_Unicode_Property_Escapes/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp unicode property escape" to targeted output language.
+es2016plus/v20190301/2018_features/RegExp_Unicode_Property_Escapes/in.js:3: ERROR - Cannot convert ECMASCRIPT_2018 feature "RegExp unicode property escape" to targeted output language.
   const regexGreekSymbol = /\p{Script=Greek}/u;
                            ^^^^^^^^^^^^^^^^^^^
 

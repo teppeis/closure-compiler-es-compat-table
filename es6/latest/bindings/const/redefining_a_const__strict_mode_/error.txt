@@ -10,7 +10,7 @@ module.exports = () => {
 // EXPECT: 6: ERROR - Constant reassigned: foo
 
 ----------------------------------------------------------
-es6/v20190215/bindings/const/redefining_a_const__strict_mode_/in.js:6: ERROR - Constant reassigned: foo
+es6/v20190301/bindings/const/redefining_a_const__strict_mode_/in.js:6: ERROR - Constant reassigned: foo
   foo = 2;
   ^^^
 

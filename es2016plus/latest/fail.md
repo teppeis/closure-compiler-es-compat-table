@@ -71,15 +71,11 @@
 - String.prototype.trimEnd ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimEnd/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimEnd/out.js))
 
 ### Array.prototype.{flat, flatMap}
-- Array.prototype.flat ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flat/out.js))
-- Array.prototype.flatMap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/Array.prototype.flatMap/out.js))
 - flat and flatMap in Array.prototype[@@unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js))
 
 ## 2019 misc
 
 ### Symbol.prototype.description
-- basic ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/basic/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/basic/out.js))
-- empty description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/empty_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/empty_description/out.js))
 - undefined description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/undefined_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_misc/Symbol.prototype.description/undefined_description/out.js))
 
 ### Function.prototype.toString revision
