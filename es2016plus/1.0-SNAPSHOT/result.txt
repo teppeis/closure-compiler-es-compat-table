@@ -91,8 +91,8 @@
 2019_features/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
-2019_features/string_trimming/String.prototype.trimStart/out.js: TypeError: Object abc has no method 'trimStart'
-2019_features/string_trimming/String.prototype.trimEnd/out.js: TypeError: Object abc has no method 'trimEnd'
+2019_features/string_trimming/String.prototype.trimStart/out.js: [Pass]
+2019_features/string_trimming/String.prototype.trimEnd/out.js: [Pass]
 2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flat/out.js: [Pass]
 2019_features/Array.prototype._flat,_flatMap_/Array.prototype.flatMap/out.js: [Pass]
 2019_features/Array.prototype._flat,_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js: TypeError: Cannot read property 'flat' of undefined
