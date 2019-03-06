@@ -1,0 +1,13 @@
+// syntax / RegExp "y" and "u" flags / "y" flag
+module.exports = () => {
+  var re = new RegExp('\\w', 'y');
+  re.exec('xy');
+  return (re.exec('xy')[0] === 'y');
+
+};
+----------------------------------------------------------
+es6/v20190301/syntax/RegExp_y_and_u_flags/y_flag/in.js:3: WARNING - Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/v20190301/syntax/RegExp_y_and_u_flags/y_flag/in.js]
+  var re = new RegExp('\\w', 'y');
+                             ^^^
+
+0 error(s), 1 warning(s)

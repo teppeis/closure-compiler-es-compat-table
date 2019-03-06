@@ -1,0 +1,13 @@
+// bindings / const / for loop statement scope
+module.exports = () => {
+  const baz = 1;
+  for(const baz = 0; false;) {}
+  return baz === 1;
+
+};
+----------------------------------------------------------
+es6/v20190301/bindings/const/for_loop_statement_scope/in.js:4: WARNING - unreachable code
+  for(const baz = 0; false;) {}
+                             ^^
+
+0 error(s), 1 warning(s)

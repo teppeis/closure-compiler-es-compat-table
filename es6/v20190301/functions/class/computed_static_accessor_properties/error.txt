@@ -1,0 +1,21 @@
+// functions / class / computed static accessor properties
+module.exports = () => {
+  var garply = "foo", grault = "bar", baz = false;
+  class C {
+    static get [garply]() { return "foo"; }
+    static set [grault](x) { baz = x; }
+  }
+  C.bar = true;
+  return C.foo === "foo" && baz;
+
+};
+----------------------------------------------------------
+es6/v20190301/functions/class/computed_static_accessor_properties/in.js:5: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+    static get [garply]() { return "foo"; }
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+es6/v20190301/functions/class/computed_static_accessor_properties/in.js:6: ERROR - ES6 transpilation of 'Static computed property' is not yet implemented.
+    static set [grault](x) { baz = x; }
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2 error(s), 0 warning(s)

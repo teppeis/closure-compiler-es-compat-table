@@ -1,0 +1,17 @@
+// 2019 misc / optional catch binding / basic
+module.exports = () => {
+try {
+throw new Error();
+}
+catch {
+return true;
+}
+return false;
+
+};
+----------------------------------------------------------
+es2016plus/v20190301/2019_misc/optional_catch_binding/basic/in.js:9: WARNING - unreachable code
+return false;
+^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,78 @@
+// 2017 features / async functions / cannot await in parameters
+module.exports = () => {
+  async function a() {
+    await Promise.resolve();
+  }
+  (async function a(b = await Promise.resolve()) {
+  }());
+  return false;
+};
+
+// EXPECT: 6: Error
+
+----------------------------------------------------------
+java.lang.IllegalStateException: AST should not contain generator. Reference node:
+YIELD 6 [length: 23] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    CALL 6 [length: 17] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        GETPROP 6 [length: 15] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NAME Promise 6 [length: 7] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            STRING resolve 6 [length: 7] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+
+ Parent node:
+HOOK 6 [length: 27] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    SHEQ 6 [length: 27] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        VOID 6 [length: 27] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        NAME a 6 [length: 1] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+    YIELD 6 [length: 23] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        CALL 6 [length: 17] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            GETPROP 6 [length: 15] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                NAME Promise 6 [length: 7] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                STRING resolve 6 [length: 7] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    NAME a 6 [length: 1] [source_file: es2016plus/v20190301/2017_features/async_functions/cannot_await_in_parameters/in.js] [is_constant_var: 1]
+
+	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
+	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1743)
+	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1807)
+	at com.google.javascript.jscomp.AstValidator.validateYield(AstValidator.java:520)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:425)
+	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1658)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:331)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1413)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1272)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:816)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:952)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:928)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:904)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:409)
+	at com.google.javascript.jscomp.AstValidator.validateCall(AstValidator.java:986)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:397)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1272)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:816)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:952)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:928)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:904)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:409)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1413)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1272)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
+	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:152)
+	at com.google.javascript.jscomp.AstValidator.validateScript(AstValidator.java:141)
+	at com.google.javascript.jscomp.AstValidator.validateCodeRoot(AstValidator.java:128)
+	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:114)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:328)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:237)
+	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2359)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:779)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
