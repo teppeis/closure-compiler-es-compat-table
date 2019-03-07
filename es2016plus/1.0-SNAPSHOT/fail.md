@@ -63,9 +63,6 @@
 
 ## 2019 features
 
-### Object.fromEntries
-- Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Object.fromEntries/out.js))
-
 ### Array.prototype.{flat, flatMap}
 - flat and flatMap in Array.prototype[@@unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js))
 

@@ -88,7 +88,7 @@
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
 2018_misc/template_literal_revision/out.js: [Pass]
-2019_features/Object.fromEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'fromEntries'
+2019_features/Object.fromEntries/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimStart/out.js: [Pass]
