@@ -12,11 +12,6 @@
     "subtest": "\"globalThis\" global property has correct property descriptor"
   },
   {
-    "path": "candidate__stage_3_/String.prototype.matchAll",
-    "category": "candidate (stage 3)",
-    "test": "String.prototype.matchAll"
-  },
-  {
     "path": "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
     "category": "candidate (stage 3)",
     "test": "instance class fields",
@@ -35,6 +30,12 @@
     "subtest": "private instance class fields initializers"
   },
   {
+    "path": "candidate__stage_3_/instance_class_fields/computed_instance_class_fields",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "computed instance class fields"
+  },
+  {
     "path": "candidate__stage_3_/static_class_fields/public_static_class_fields",
     "category": "candidate (stage 3)",
     "test": "static class fields",
@@ -45,6 +46,17 @@
     "category": "candidate (stage 3)",
     "test": "static class fields",
     "subtest": "private static class fields"
+  },
+  {
+    "path": "candidate__stage_3_/static_class_fields/computed_static_class_fields",
+    "category": "candidate (stage 3)",
+    "test": "static class fields",
+    "subtest": "computed static class fields"
+  },
+  {
+    "path": "candidate__stage_3_/numeric_separators",
+    "category": "candidate (stage 3)",
+    "test": "numeric separators"
   },
   {
     "path": "candidate__stage_3_/BigInt/basic_functionality",
@@ -93,6 +105,11 @@
     "category": "candidate (stage 3)",
     "test": "BigInt",
     "subtest": "DataView.prototype.getBigUint64"
+  },
+  {
+    "path": "candidate__stage_3_/Promise.allSettled",
+    "category": "candidate (stage 3)",
+    "test": "Promise.allSettled"
   },
   {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
@@ -152,9 +169,9 @@
     "subtest": "conditionals"
   },
   {
-    "path": "draft__stage_2_/numeric_separators",
+    "path": "draft__stage_2_/String.prototype.replaceAll",
     "category": "draft (stage 2)",
-    "test": "numeric separators"
+    "test": "String.prototype.replaceAll"
   },
   {
     "path": "draft__stage_2_/Set_methods/Set.prototype.intersection",
@@ -209,11 +226,6 @@
     "category": "draft (stage 2)",
     "test": "ArrayBuffer.prototype.transfer",
     "subtest": "ArrayBuffer.prototype.realloc()"
-  },
-  {
-    "path": "draft__stage_2_/Promise.allSettled",
-    "category": "draft (stage 2)",
-    "test": "Promise.allSettled"
   },
   {
     "path": "proposal__stage_1_/do_expressions",
@@ -558,11 +570,6 @@
     "subtest": "Freezing, function arguments"
   },
   {
-    "path": "proposal__stage_1_/String.prototype.replaceAll",
-    "category": "proposal (stage 1)",
-    "test": "String.prototype.replaceAll"
-  },
-  {
     "path": "proposal__stage_1_/String.prototype.codePoints",
     "category": "proposal (stage 1)",
     "test": "String.prototype.codePoints"
@@ -753,6 +760,11 @@
     "subtest": "BigInt.fromString"
   },
   {
+    "path": "proposal__stage_1_/Promise.any",
+    "category": "proposal (stage 1)",
+    "test": "Promise.any"
+  },
+  {
     "path": "strawman__stage_0_/bind______operator/binary_form",
     "category": "strawman (stage 0)",
     "test": "bind (::) operator",
@@ -874,11 +886,6 @@
     "category": "strawman (stage 0)",
     "test": "object shorthand improvements",
     "subtest": "destructuring assignments"
-  },
-  {
-    "path": "strawman__stage_0_/Promise.any",
-    "category": "strawman (stage 0)",
-    "test": "Promise.any"
   },
   {
     "path": "pre-strawman/Metadata_reflection_API/Reflect.defineMetadata",

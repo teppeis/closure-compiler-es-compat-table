@@ -664,5 +664,10 @@
     "path": "2019_misc/Well-formed_JSON.stringify",
     "category": "2019 misc",
     "test": "Well-formed JSON.stringify"
+  },
+  {
+    "path": "2020_features/String.prototype.matchAll",
+    "category": "2020 features",
+    "test": "String.prototype.matchAll"
   }
 ]

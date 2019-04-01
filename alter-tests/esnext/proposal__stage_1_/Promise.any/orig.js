@@ -1,4 +1,4 @@
-// strawman (stage 0) / Promise.any
+// proposal (stage 1) / Promise.any
 module.exports = (asyncTestPassed) => {
   Promise.any([
     Promise.resolve(1),
