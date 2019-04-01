@@ -1,0 +1,15 @@
+// proposal (stage 1) / partial application syntax / partial application from left with rest
+module.exports = () => {
+function f(a, b, c) {
+return a + b + c;
+};
+var p = f('a', ...);
+return p('b', 'c') === 'abc';
+
+};
+----------------------------------------------------------
+esnext/v20190325/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/in.js:6: ERROR - Parse error. primary expression expected
+var p = f('a', ...);
+                   ^
+
+1 error(s), 0 warning(s)

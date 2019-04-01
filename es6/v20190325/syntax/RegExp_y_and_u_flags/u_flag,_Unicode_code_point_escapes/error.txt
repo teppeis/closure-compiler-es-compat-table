@@ -1,0 +1,11 @@
+// syntax / RegExp "y" and "u" flags / "u" flag, Unicode code point escapes
+module.exports = () => {
+  return "𝌆".match(/\u{1d306}/u)[0].length === 2;
+
+};
+----------------------------------------------------------
+es6/v20190325/syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes/in.js:3: WARNING - Malformed Regular Expression: {1d306}
+  return "𝌆".match(/\u{1d306}/u)[0].length === 2;
+                    ^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

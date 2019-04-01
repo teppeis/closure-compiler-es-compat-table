@@ -1,0 +1,15 @@
+// bindings / let / cannot be in statements
+module.exports = () => {
+  let bar = 1;
+  if(true) let baz = 1;
+  return false;
+};
+
+// EXPECT: 4: ERROR - Block-scoped declaration not directly within block: baz
+
+----------------------------------------------------------
+es6/v20190325/bindings/let/cannot_be_in_statements/in.js:4: ERROR - Block-scoped declaration not directly within block: baz
+  if(true) let baz = 1;
+               ^^^^^^^
+
+1 error(s), 0 warning(s)

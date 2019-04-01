@@ -1,0 +1,15 @@
+// proposal (stage 1) / partial application syntax / lexical `this`
+module.exports = () => {
+function f(a, b) {
+return a + b + (this === o);
+}
+var o = { f: f(?, 'b') };
+return o.f('a') === 'abfalse';
+
+};
+----------------------------------------------------------
+esnext/v20190325/proposal__stage_1_/partial_application_syntax/lexical__this_/in.js:6: ERROR - Parse error. ')' expected
+var o = { f: f(?, 'b') };
+               ^
+
+1 error(s), 0 warning(s)
