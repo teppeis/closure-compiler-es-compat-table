@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190301/bindings/const/for_loop_statement_scope/in.js:4: WARNING - unreachable code
+es6/v20190325/bindings/const/for_loop_statement_scope/in.js:4: WARNING - unreachable code
   for(const baz = 0; false;) {}
                              ^^
 

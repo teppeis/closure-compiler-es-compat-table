@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190301/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
+es6/v20190325/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3: ERROR - Parse error. Character '?' (U+D800) is not a valid identifier start char
   var 𐋀;
       ^
 

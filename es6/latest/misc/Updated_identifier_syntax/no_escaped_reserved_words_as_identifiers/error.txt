@@ -8,7 +8,7 @@ module.exports = () => {
 // EXPECT: 4: ERROR - Parse error. 'identifier' expected
 
 ----------------------------------------------------------
-es6/v20190301/misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/in.js:4: ERROR - Parse error. 'identifier' expected
+es6/v20190325/misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/in.js:4: ERROR - Parse error. 'identifier' expected
   var v\u0061r;
       ^
 
