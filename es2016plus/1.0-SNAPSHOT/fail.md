@@ -82,3 +82,8 @@
 
 ### Well-formed JSON.stringify
 - Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2019_misc/Well-formed_JSON.stringify/out.js))
+
+## 2020 features
+
+### String.prototype.matchAll
+- String.prototype.matchAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2020_features/String.prototype.matchAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/1.0-SNAPSHOT/2020_features/String.prototype.matchAll/out.js))

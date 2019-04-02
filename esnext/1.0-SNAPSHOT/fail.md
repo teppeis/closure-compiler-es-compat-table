@@ -5,17 +5,19 @@
 - "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js))
 - "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
 
-### String.prototype.matchAll
-- String.prototype.matchAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/String.prototype.matchAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/String.prototype.matchAll/out.js))
-
 ### instance class fields
 - public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
 - private instance class fields basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
 - private instance class fields initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt))
+- computed instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/instance_class_fields/computed_instance_class_fields/error.txt))
 
 ### static class fields
 - public static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt))
 - private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt))
+- computed static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/static_class_fields/computed_static_class_fields/error.txt))
+
+### numeric separators
+- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/numeric_separators/error.txt))
 
 ### BigInt
 - basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/basic_functionality/error.txt))
@@ -26,6 +28,9 @@
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt))
 - DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt))
+
+### Promise.allSettled
+- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Promise.allSettled/out.js))
 
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
@@ -51,8 +56,8 @@
 - arrow function bodies ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
 - conditionals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/throw_expressions/conditionals/error.txt))
 
-### numeric separators
-- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/numeric_separators/error.txt))
+### String.prototype.replaceAll
+- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/String.prototype.replaceAll/out.js))
 
 ### Set methods
 - Set.prototype.intersection ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Set_methods/Set.prototype.intersection/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Set_methods/Set.prototype.intersection/out.js))
@@ -66,9 +71,6 @@
 ### ArrayBuffer.prototype.transfer
 - ArrayBuffer.prototype.transfer() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js))
 - ArrayBuffer.prototype.realloc() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js))
-
-### Promise.allSettled
-- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/draft__stage_2_/Promise.allSettled/out.js))
 
 ## Proposal (stage 1)
 
@@ -156,9 +158,6 @@
 - Sealing, function arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing%2C_function_arguments/error.txt))
 - Freezing, function arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing%2C_function_arguments/error.txt))
 
-### String.prototype.replaceAll
-- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/String.prototype.replaceAll/out.js))
-
 ### String.prototype.codePoints
 - String.prototype.codePoints ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/String.prototype.codePoints/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/String.prototype.codePoints/out.js))
 
@@ -201,6 +200,9 @@
 - Number.fromString ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/out.js))
 - BigInt.fromString ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/__BigInt%2C_Number__.fromString/BigInt.fromString/error.txt))
 
+### Promise.any
+- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/proposal__stage_1_/Promise.any/out.js))
+
 ## Strawman (stage 0)
 
 ### bind (::) operator
@@ -241,9 +243,6 @@
 ### object shorthand improvements
 - object initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
 - destructuring assignments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
-
-### Promise.any
-- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/1.0-SNAPSHOT/strawman__stage_0_/Promise.any/out.js))
 
 ## Pre strawman
 

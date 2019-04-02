@@ -1,4 +1,4 @@
-// candidate (stage 3) / String.prototype.matchAll
+// 2020 features / String.prototype.matchAll
 module.exports = () => {
   var iterator = '11a2bb'.matchAll(/(\d)(\D)/g);
   if(iterator[Symbol.iterator]() !== iterator)return false;
