@@ -124,6 +124,9 @@ function check(file, cb) {
   try {
     var test = fs.readFileSync(fileAbs, 'utf8');
     var src =
+      // Node v0.10 implements trimLeft/Right
+      'delete String.prototype.trimLeft;' +
+      'delete String.prototype.trimRight;' +
       'var global = Function("return this")();' +
       test +
       ';' +
