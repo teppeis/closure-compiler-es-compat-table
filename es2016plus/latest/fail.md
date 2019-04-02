@@ -63,6 +63,12 @@
 
 ## 2019 features
 
+### string trimming
+- String.prototype.trimLeft ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimLeft/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimLeft/out.js))
+- String.prototype.trimRight ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimRight/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimRight/out.js))
+- String.prototype.trimStart ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimStart/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimStart/out.js))
+- String.prototype.trimEnd ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimEnd/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/string_trimming/String.prototype.trimEnd/out.js))
+
 ### Array.prototype.{flat, flatMap}
 - flat and flatMap in Array.prototype[@@unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js))
 
