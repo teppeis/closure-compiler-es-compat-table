@@ -47,7 +47,7 @@ $jscomp.inherits = function(a, b) {
 };
 module.exports = function() {
   var a = function() {
-  }, b = function(b) {
+  }, b = function() {
     return a.apply(this, arguments) || this;
   };
   $jscomp.inherits(b, a);
