@@ -1,0 +1,17 @@
+// bindings / const / redefining a const (strict mode)
+module.exports = () => {
+  'use strict';
+  const baz = 1;
+  const foo = 1;
+  foo = 2;
+  return false;
+};
+
+// EXPECT: 6: ERROR - Constant reassigned: foo
+
+----------------------------------------------------------
+es6/v20190415/bindings/const/redefining_a_const__strict_mode_/in.js:6: ERROR - Constant reassigned: foo
+  foo = 2;
+  ^^^
+
+1 error(s), 0 warning(s)

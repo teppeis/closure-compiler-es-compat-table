@@ -1,0 +1,17 @@
+// draft (stage 2) / throw expressions / logical
+module.exports = () => {
+var a, b;
+try {
+a = 19 || throw 77;
+b = 88 && throw 23;
+} catch (e) {
+return a + e === 42;
+}
+
+};
+----------------------------------------------------------
+esnext/v20190415/draft__stage_2_/throw_expressions/logical/in.js:5: ERROR - Parse error. primary expression expected
+a = 19 || throw 77;
+               ^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,21 @@
+// proposal (stage 1) / the pipeline operator
+module.exports = () => {
+function doubleSay (str) {
+return str + ', ' + str;
+}
+function capitalize (str) {
+return str[0].toUpperCase() + str.slice(1);
+}
+var result = 'hello'
+|> doubleSay
+|> capitalize
+|> _ => _ + '!';
+return result === 'Hello, hello!';
+
+};
+----------------------------------------------------------
+esnext/v20190415/proposal__stage_1_/the_pipeline_operator/in.js:10: ERROR - Parse error. primary expression expected
+|> doubleSay
+  ^
+
+1 error(s), 0 warning(s)

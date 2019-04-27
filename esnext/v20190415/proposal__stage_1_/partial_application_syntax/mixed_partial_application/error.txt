@@ -1,0 +1,15 @@
+// proposal (stage 1) / partial application syntax / mixed partial application
+module.exports = () => {
+function f(a, b, c, d) {
+return a + b + c;
+};
+var p = f(?, 'b', ...);
+return p('a', 'c', 'd') === 'abcd';
+
+};
+----------------------------------------------------------
+esnext/v20190415/proposal__stage_1_/partial_application_syntax/mixed_partial_application/in.js:6: ERROR - Parse error. ')' expected
+var p = f(?, 'b', ...);
+          ^
+
+1 error(s), 0 warning(s)

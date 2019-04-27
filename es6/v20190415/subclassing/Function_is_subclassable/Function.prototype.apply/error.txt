@@ -1,0 +1,13 @@
+// subclassing / Function is subclassable / Function.prototype.apply
+module.exports = () => {
+  class C extends Function {}
+  var c = new C("x", "return this.bar + x;");
+  return c.apply({bar:1}, [2]) === 3;
+
+};
+----------------------------------------------------------
+es6/v20190415/subclassing/Function_is_subclassable/Function.prototype.apply/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+  class C extends Function {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

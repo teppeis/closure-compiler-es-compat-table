@@ -1,0 +1,13 @@
+// strawman (stage 0) / object shorthand improvements / object initializers
+module.exports = () => {
+var foo = { bar: 42, baz: 33 };
+var fuz = { foo.bar, foo['baz'] };
+return fuz.bar === 42 && fuz.baz === 33;
+
+};
+----------------------------------------------------------
+esnext/v20190415/strawman__stage_0_/object_shorthand_improvements/object_initializers/in.js:4: ERROR - Parse error. '}' expected
+var fuz = { foo.bar, foo['baz'] };
+               ^
+
+1 error(s), 0 warning(s)
