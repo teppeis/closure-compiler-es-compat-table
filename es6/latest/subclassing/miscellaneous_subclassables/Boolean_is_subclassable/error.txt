@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190325/subclassing/miscellaneous_subclassables/Boolean_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Boolean
+es6/v20190415/subclassing/miscellaneous_subclassables/Boolean_is_subclassable/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Boolean
   class C extends Boolean {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

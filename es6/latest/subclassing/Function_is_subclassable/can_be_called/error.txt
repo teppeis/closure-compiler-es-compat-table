@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190325/subclassing/Function_is_subclassable/can_be_called/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
+es6/v20190415/subclassing/Function_is_subclassable/can_be_called/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Function
   class C extends Function {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

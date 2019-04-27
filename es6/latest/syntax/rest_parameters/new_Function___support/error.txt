@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190325/syntax/rest_parameters/new_Function___support/in.js:4: WARNING - unreachable code
+es6/v20190415/syntax/rest_parameters/new_Function___support/in.js:4: WARNING - unreachable code
   return new Function("a", "...b",
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
