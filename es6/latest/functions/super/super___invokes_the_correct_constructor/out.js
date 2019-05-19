@@ -52,7 +52,7 @@ module.exports = function() {
   b.prototype.constructor = function() {
     a = !1;
   };
-  var c = function(a) {
+  var c = function() {
     return b.apply(this, arguments) || this;
   };
   $jscomp.inherits(c, b);

@@ -13,7 +13,7 @@ return true;
 
 };
 ----------------------------------------------------------
-esnext/v20190415/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_destructuring/in.js:3: ERROR - Parse error. '}' expected
+esnext/v20190513/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_destructuring/in.js:3: ERROR - Parse error. '}' expected
 function foo({# bar, baz #}) {
               ^
 

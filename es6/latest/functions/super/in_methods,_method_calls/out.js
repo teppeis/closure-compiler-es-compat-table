@@ -51,7 +51,7 @@ module.exports = function() {
   a.prototype.qux = function(a) {
     return "foo" + a;
   };
-  var b = function(b) {
+  var b = function() {
     return a.apply(this, arguments) || this;
   };
   $jscomp.inherits(b, a);

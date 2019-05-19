@@ -28,7 +28,7 @@ $jscomp.polyfill = function(a, e, b, c) {
 };
 $jscomp.polyfill("Array.prototype.flat", function(a) {
   return a ? a : function(a) {
-    a = void 0 === a ? 1 : Number(a);
+    a = void 0 === a ? 1 : a;
     for (var b = [], c = 0; c < this.length; c++) {
       var d = this[c];
       Array.isArray(d) && 0 < a ? (d = Array.prototype.flat.call(d, a - 1), b.push.apply(b, d)) : b.push(d);

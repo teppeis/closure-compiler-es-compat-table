@@ -50,7 +50,7 @@ module.exports = function() {
   };
   a.prototype.qux = "foo";
   a.prototype.corge = "baz";
-  var b = function(b) {
+  var b = function() {
     return a.apply(this, arguments) || this;
   };
   $jscomp.inherits(b, a);
