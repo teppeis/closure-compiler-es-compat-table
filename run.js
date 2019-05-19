@@ -74,8 +74,19 @@ const opts = {
         TEST_DIR: targetDir,
       },
     });
-    console.log('Compile');
-    await execa('./compile.sh', [esVer, targetDir], opts);
+    if (targetDir) {
+      console.log('Compile (Java)');
+      await execa('./compile.sh', [esVer, targetDir], opts);
+    } else {
+      const env = {};
+      if (process.env.AWS) {
+        console.log('Compile (AWS)');
+        env.AWS = 1;
+      } else {
+        console.log('Compile (Native)');
+      }
+      await execa('node', ['./batch/run.js', path.join(esVer, closureVer)], {...opts, env});
+    }
   }
   if (!skipCheck) {
     console.log('Check');

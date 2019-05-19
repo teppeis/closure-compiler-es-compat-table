@@ -19,9 +19,11 @@
   "dependencies": {
     "@teppeis/closure-gun": "^2.0.0",
     "async": "^2.6.2",
+    "del": "^4.1.1",
     "execa": "^1.0.0",
+    "faastjs": "^2.0.4",
     "fs-readdir-recursive": "^1.1.0",
-    "glob": "^7.1.4",
+    "globby": "^9.2.0",
     "google-closure-compiler": "^20190415.0.0",
     "humanize-string": "^2.1.0",
     "meow": "^5.0.0",
