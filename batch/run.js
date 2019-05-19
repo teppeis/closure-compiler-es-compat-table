@@ -44,13 +44,13 @@ if (!version) {
         },
       })
     : await faastLocal(funcs, commonOpts);
-  await del(`${targetDir}/**/(out.js|error.txt)`);
+  await del(`${targetDir}/**/(out.js|error.txt)`, {dot: true});
   // const files = [
   //   targetDir + '/2016_features/Array.prototype.includes/Array.prototype.includes/in.js',
   //   targetDir + '/2018_features/RegExp_named_capture_groups/in.js',
   // ];
   // const files = [`${targetDir}/2016_misc/Proxy,_enumerate_handler_removed/in.js`];
-  const files = await globby(`${targetDir}/**/in.js`);
+  const files = await globby(`${targetDir}/**/in.js`, {dot: true});
   const total = files.length;
   let done = 0;
   const promises = files.map(input => {
