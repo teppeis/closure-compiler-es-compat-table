@@ -324,6 +324,12 @@
     "subtest": "TemplateStrings call site caching"
   },
   {
+    "path": "syntax/template_literals/TemplateStrings_permanent_caching",
+    "category": "syntax",
+    "test": "template literals",
+    "subtest": "TemplateStrings permanent caching"
+  },
+  {
     "path": "syntax/RegExp_y_and_u_flags/y_flag",
     "category": "syntax",
     "test": "RegExp \"y\" and \"u\" flags",
