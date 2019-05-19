@@ -1,0 +1,13 @@
+// 2019 misc / Function.prototype.toString revision / class expression with implicit constructor
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  var str = 'class A {}';
+  return eval('(' + str + ')') + '' === str;
+
+};
+----------------------------------------------------------
+es2016plus/v20190513/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js:4: WARNING - unreachable code
+  var str = 'class A {}';
+  ^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,15 @@
+// subclassing / Array is subclassable / length property (setting)
+module.exports = () => {
+  class C extends Array {}
+  var c = new C();
+  c[2] = 'foo';
+  c.length = 1;
+  return c.length === 1 && !(2 in c);
+
+};
+----------------------------------------------------------
+es6/v20190513/subclassing/Array_is_subclassable/length_property__setting_/in.js:3: ERROR - This code cannot be converted from ES6. extending native class: Array
+  class C extends Array {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
