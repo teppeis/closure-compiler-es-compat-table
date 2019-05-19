@@ -1,10 +1,8 @@
 // syntax / template literals / TemplateStrings call site caching
 module.exports = () => {
-// Safari 12 sometimes garbage collects the cached TemplateStrings,
-// even when the call site is still alive.
-// This is almost impossible to write a test case for, but we can test
-// the general semantics.
-// https://bugs.webkit.org/show_bug.cgi?id=190756
+// TemplateStrings caching was changed from per-contents to
+// per-call-site.
+// https://github.com/tc39/ecma262/pull/890
   function strings(array) {
     return array;
   }
