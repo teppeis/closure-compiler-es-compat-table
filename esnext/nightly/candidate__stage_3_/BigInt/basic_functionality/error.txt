@@ -1,0 +1,11 @@
+// candidate (stage 3) / BigInt / basic functionality
+module.exports = () => {
+return (1n + 2n) === 3n;
+
+};
+----------------------------------------------------------
+esnext/nightly/candidate__stage_3_/BigInt/basic_functionality/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+return (1n + 2n) === 3n;
+         ^
+
+1 error(s), 0 warning(s)

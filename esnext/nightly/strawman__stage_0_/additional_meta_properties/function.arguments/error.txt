@@ -1,0 +1,16 @@
+// strawman (stage 0) / additional meta properties / function.arguments
+module.exports = () => {
+var arr =  (_ => function.arguments)(1, 2, 3);
+return Array.isArray(arr)
+&& arr.length === 3
+&& arr[0] === 1
+&& arr[1] === 2
+&& arr[2] === 3;
+
+};
+----------------------------------------------------------
+esnext/nightly/strawman__stage_0_/additional_meta_properties/function.arguments/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+var arr =  (_ => function.arguments)(1, 2, 3);
+                         ^
+
+1 error(s), 0 warning(s)

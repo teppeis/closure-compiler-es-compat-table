@@ -1,0 +1,12 @@
+// misc / miscellaneous / duplicate property names in strict mode
+module.exports = () => {
+  'use strict';
+  return this === undefined && ({ a:1, a:1 }).a === 1;
+
+};
+----------------------------------------------------------
+es6/nightly/misc/miscellaneous/duplicate_property_names_in_strict_mode/in.js:4: ERROR - [JSC_DUPLICATE_OBJECT_KEY] Object literal contains illegal duplicate key "a", disallowed in strict mode
+  return this === undefined && ({ a:1, a:1 }).a === 1;
+                                       ^
+
+1 error(s), 0 warning(s)
