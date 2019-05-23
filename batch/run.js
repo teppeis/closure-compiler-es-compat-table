@@ -4,7 +4,7 @@ const {faastAws, faastLocal} = require('faastjs');
 const funcs = require('./functions');
 const path = require('path');
 const fs = require('fs').promises;
-const globby = require('globby');
+const glob = require('glob');
 const del = require('del');
 
 if (process.argv.length < 3) {
@@ -50,7 +50,7 @@ if (!version) {
   //   targetDir + '/2018_features/RegExp_named_capture_groups/in.js',
   // ];
   // const files = [`${targetDir}/2016_misc/Proxy,_enumerate_handler_removed/in.js`];
-  const files = await globby(`${targetDir}/**/in.js`, {dot: true});
+  const files = glob.sync(`${targetDir}/**/in.js`, {dot: true});
   const total = files.length;
   let done = 0;
   const promises = files.map(input => {
