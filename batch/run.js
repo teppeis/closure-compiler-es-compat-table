@@ -18,12 +18,22 @@ if (!version) {
   throw new Error(`An argument required. ex) es2016plus/v20190415, but ${dir}`);
 }
 
+const {platform} = process;
+let nativeImageOsSuffix;
+if (process.env.AWS || platform === 'linux') {
+  nativeImageOsSuffix = 'linux';
+} else if (platform === 'darwin') {
+  nativeImageOsSuffix = 'osx';
+} else {
+  throw new Error(`Unsuported Platform: ${platform}`);
+}
+
 (async () => {
   const commonOpts = {
     addDirectory: [targetDir],
     packageJson: {
       dependencies: {
-        [`google-closure-compiler-${process.env.AWS ? 'linux' : 'osx'}`]: version,
+        [`google-closure-compiler-${nativeImageOsSuffix}`]: version,
       },
     },
     webpackOptions: {
