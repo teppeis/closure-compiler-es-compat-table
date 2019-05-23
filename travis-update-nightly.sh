@@ -6,7 +6,7 @@ curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 nodebrew install 0.10
 
-npm show google-closure-compiler@nightly
+version=$(npm show google-closure-compiler@nightly --json|jq -r .version)
 
 ./run.js es6/nightly
 ./run.js es2016plus/nightly
