@@ -13,7 +13,7 @@ TEST_DIR=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 closure="$basedir/node_modules/.bin/closure-gun"
-closureVer=$("$basedir/get-closure-version.sh")
+closureVer=$("$basedir/get-closure-version.js")
 pkgname=$(basename "$basedir")
 
 BUILD_DIR="$basedir/$ES_VERSION/$closureVer"

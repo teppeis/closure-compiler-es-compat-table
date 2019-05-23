@@ -13,7 +13,7 @@ if (process.argv.length < 3) {
 const dir = process.argv[2];
 const targetDir = path.resolve(process.cwd(), dir);
 const targetDirRelative = path.relative(path.resolve(__dirname, '..'), targetDir);
-const [, version] = /v(\d{8})\/?$/.exec(targetDir) || [];
+const [, version] = /\/([^/]*)\/?$/.exec(targetDir) || [];
 if (!version) {
   throw new Error(`An argument required. ex) es2016plus/v20190415, but ${dir}`);
 }

@@ -55,7 +55,7 @@ const opts = {
 
 (async () => {
   if (!closureVer) {
-    closureVer = await execa.stdout('./get-closure-version.sh', {...opts, stdio: 'pipe'});
+    closureVer = await execa.stdout('./get-closure-version.js', {...opts, stdio: 'pipe'});
     if (!closureVer) {
       throw new Error(closureVer);
     }

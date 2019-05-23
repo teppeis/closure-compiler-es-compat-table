@@ -12,7 +12,7 @@ ES_VERSION=$1
 TEST_DIR=$2
 
 basedir=$(cd "$(dirname "$0")" && pwd)
-closureVer=$("$basedir/get-closure-version.sh")
+closureVer=$("$basedir/get-closure-version.js")
 
 resultDir="$basedir/$ES_VERSION/$closureVer"
 resultTmp=$(mktemp closure-compat-check-result.XXXXX)

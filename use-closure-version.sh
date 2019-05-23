@@ -12,7 +12,7 @@ targetVer=$1
 
 basedir=$(cd "$(dirname "$0")" && pwd)
 
-currentVer=$("$basedir/get-closure-version.sh" 2> /dev/null)
+currentVer=$("$basedir/get-closure-version.js" 2> /dev/null)
 
 if [ "$currentVer" = "$targetVer" ]; then
     exit
