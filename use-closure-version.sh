@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 
+# for closure-gun (deprecated)
+
 if [ $# -lt 1 ] || [ $# -gt 1 ]; then
     {
         echo "Usage: $(basename "$0") CLOSURE_VERSION"

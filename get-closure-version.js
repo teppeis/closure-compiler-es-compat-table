@@ -3,8 +3,14 @@
 'use strict';
 
 const {version} = require('google-closure-compiler/package.json');
+const semver = require('semver');
+
+let major = `v${semver.major(version)}`;
 if (version.endsWith('-nightly')) {
-  console.log('nightly');
+  major = 'nightly';
+}
+if (require.main === module) {
+  console.log(major);
 } else {
-  console.log(version);
+  module.exports = major;
 }
