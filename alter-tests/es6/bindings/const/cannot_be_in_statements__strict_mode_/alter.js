@@ -6,4 +6,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 5: ERROR - Block-scoped declaration not directly within block: baz
+// EXPECT: 5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz

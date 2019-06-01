@@ -5,4 +5,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 4: ERROR - Parse error. 'identifier' expected
+// EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected

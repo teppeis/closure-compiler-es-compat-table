@@ -5,7 +5,7 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 4: ERROR - Parse error. for-in statement may not have initializer
+// EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
 
 ----------------------------------------------------------
 es6/v20190528/misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer

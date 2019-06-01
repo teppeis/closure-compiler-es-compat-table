@@ -6,4 +6,4 @@ module.exports = () => {
   })();
 };
 
-// EXPECT: 4: ERROR - Parse error. invalid arrow function parameters
+// EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters

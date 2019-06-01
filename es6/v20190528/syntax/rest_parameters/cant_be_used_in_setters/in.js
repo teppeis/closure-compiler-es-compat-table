@@ -8,4 +8,4 @@ module.exports = () => {
   }());
 };
 
-// EXPECT: 5: ERROR - Parse error.
+// EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error.
