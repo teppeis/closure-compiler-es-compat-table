@@ -30,7 +30,7 @@ if (process.env.AWS || platform === 'linux') {
 
 (async () => {
   const commonOpts = {
-    addDirectory: [targetDir],
+    include: [targetDirRelative],
     packageJson: {
       dependencies: {
         [`google-closure-compiler-${nativeImageOsSuffix}`]: version,
@@ -68,7 +68,7 @@ if (process.env.AWS || platform === 'linux') {
     const errorFile = path.join(path.dirname(input), 'error.txt');
     return m.functions
       .compile({
-        js: [path.relative(targetDir, input)],
+        js: [path.relative(process.cwd(), input)],
         // compilation_level: 'ADVANCED',
         compilation_level: 'SIMPLE',
         formatting: ['PRETTY_PRINT'],
@@ -107,11 +107,9 @@ if (process.env.AWS || platform === 'linux') {
 
 async function writeError(inputFile, errorFile, message) {
   await fs.copyFile(inputFile, errorFile);
-  const relative = path.relative(targetDir, path.dirname(path.dirname(inputFile)));
-  const fullpath = path.join(targetDirRelative, relative);
   const body = `
 ----------------------------------------------------------
-${message.trimEnd().replace(new RegExp(relative, 'g'), fullpath)}
+${message.trimEnd()}
 `;
   return fs.writeFile(errorFile, body, {flag: 'a'});
 }
