@@ -7,4 +7,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 6: ERROR - Parse error. Unary operator '-' requires parentheses before '**'
+// EXPECT: 6: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
