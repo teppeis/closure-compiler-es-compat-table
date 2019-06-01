@@ -1,0 +1,14 @@
+// candidate (stage 3) / BigInt / DataView.prototype.getBigInt64
+module.exports = () => {
+var buffer = new ArrayBuffer(64);
+var view = new DataView(buffer);
+view.setBigInt64(0, 1n);
+return view.getBigInt64(0) === 1n;
+
+};
+----------------------------------------------------------
+esnext/v20190528/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. ',' expected
+view.setBigInt64(0, 1n);
+                     ^
+
+1 error(s), 0 warning(s)

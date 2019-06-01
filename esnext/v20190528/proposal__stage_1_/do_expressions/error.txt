@@ -1,0 +1,14 @@
+// proposal (stage 1) / do expressions
+module.exports = () => {
+return do {
+let x = 23;
+x + 19;
+} === 42;
+
+};
+----------------------------------------------------------
+esnext/v20190528/proposal__stage_1_/do_expressions/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+return do {
+         ^
+
+1 error(s), 0 warning(s)
