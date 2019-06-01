@@ -6,10 +6,10 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 5: ERROR - Constant reassigned: foo
+// EXPECT: 5: ERROR - [JSC_REASSIGNED_CONSTANT] Constant reassigned: foo
 
 ----------------------------------------------------------
-es6/v20190513/bindings/const/redefining_a_const_is_an_error/in.js:5: ERROR - Constant reassigned: foo
+es6/v20190528/bindings/const/redefining_a_const_is_an_error/in.js:5: ERROR - [JSC_REASSIGNED_CONSTANT] Constant reassigned: foo
   foo = 2;
   ^^^
 

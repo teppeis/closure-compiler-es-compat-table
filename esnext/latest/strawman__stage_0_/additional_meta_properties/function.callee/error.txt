@@ -5,7 +5,7 @@ return f();
 
 };
 ----------------------------------------------------------
-esnext/v20190513/strawman__stage_0_/additional_meta_properties/function.callee/in.js:3: ERROR - Parse error. '(' expected
+esnext/v20190528/strawman__stage_0_/additional_meta_properties/function.callee/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
 var f = _ => function.callee === f;
                      ^
 

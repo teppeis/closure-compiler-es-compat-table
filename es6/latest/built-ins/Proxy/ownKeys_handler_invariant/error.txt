@@ -34,15 +34,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190513/built-ins/Proxy/ownKeys_handler_invariant/in.js:7: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20190528/built-ins/Proxy/ownKeys_handler_invariant/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
     Object.keys(new Proxy({}, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20190513/built-ins/Proxy/ownKeys_handler_invariant/in.js:18: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20190528/built-ins/Proxy/ownKeys_handler_invariant/in.js:18: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
     Object.keys(new Proxy(proxied, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20190513/built-ins/Proxy/ownKeys_handler_invariant/in.js:27: WARNING - Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20190528/built-ins/Proxy/ownKeys_handler_invariant/in.js:27: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
     Object.keys(new Proxy(Object.preventExtensions({b:1}), {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

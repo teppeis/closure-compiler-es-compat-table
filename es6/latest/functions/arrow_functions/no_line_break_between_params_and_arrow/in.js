@@ -7,4 +7,4 @@ module.exports = () => {
   })();
 };
 
-// EXPECT: 5: ERROR - Parse error. No newline allowed before '=>'
+// EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. No newline allowed before '=>'

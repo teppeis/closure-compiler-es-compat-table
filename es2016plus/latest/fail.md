@@ -1,6 +1,9 @@
 
 ## 2016 features
 
+### exponentiation (**) operator
+- early syntax error for unary negation without parens ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/error.txt))
+
 ### Array.prototype.includes
 - %TypedArray%.prototype.includes ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2016_features/Array.prototype.includes/%25TypedArray%25.prototype.includes/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2016_features/Array.prototype.includes/%25TypedArray%25.prototype.includes/out.js))
 
@@ -20,6 +23,7 @@
 ### async functions
 - no line break between async and function ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/no_line_break_between_async_and_function/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/no_line_break_between_async_and_function/out.js))
 - no "prototype" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/no_prototype_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/no_prototype_property/out.js))
+- must await a value ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/must_await_a_value/error.txt))
 - cannot await in parameters ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/cannot_await_in_parameters/error.txt))
 - correct prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/correct_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/correct_prototype_chain/out.js))
 - async function prototype, Symbol.toStringTag ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/async_function_prototype%2C_Symbol.toStringTag/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2017_features/async_functions/async_function_prototype%2C_Symbol.toStringTag/out.js))

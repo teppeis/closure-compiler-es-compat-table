@@ -6,4 +6,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 5: ERROR - Constant reassigned: foo
+// EXPECT: 5: ERROR - [JSC_REASSIGNED_CONSTANT] Constant reassigned: foo

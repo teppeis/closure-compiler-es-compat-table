@@ -1,6 +1,6 @@
 2016_features/exponentiation______operator/basic_support/out.js: [Pass]
 2016_features/exponentiation______operator/assignment/out.js: [Pass]
-2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/out.js: [Pass]
+2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/error.txt: [NotExpectedCompileError]
 2016_features/Array.prototype.includes/Array.prototype.includes/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [Pass]
 2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: ReferenceError: Int8Array is not defined
@@ -25,7 +25,7 @@
 2017_features/async_functions/no_prototype_property/out.js: [InvalidResult: false]
 2017_features/async_functions/await/out.js: [Pass]
 2017_features/async_functions/await,_rejection/out.js: [Pass]
-2017_features/async_functions/must_await_a_value/out.js: [Pass]
+2017_features/async_functions/must_await_a_value/error.txt: [NotExpectedCompileError]
 2017_features/async_functions/can_await_non-Promise_values/out.js: [Pass]
 2017_features/async_functions/cannot_await_in_parameters/error.txt: [NotExpectedCompileError]
 2017_features/async_functions/async_methods,_object_literals/out.js: [Pass]

@@ -6,5 +6,6 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 4: ERROR - Illegal variable reference before declaration: c
-// EXPECT: 5: ERROR - Illegal variable reference before declaration: d
+// EXPECT: 4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: c
+// EXPECT: 5: ERROR - [JSC_REDECLARED_VARIABLE_ERROR] Illegal redeclared variable: c
+// EXPECT: 5: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d

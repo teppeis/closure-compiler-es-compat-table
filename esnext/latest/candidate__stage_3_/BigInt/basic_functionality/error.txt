@@ -4,7 +4,7 @@ return (1n + 2n) === 3n;
 
 };
 ----------------------------------------------------------
-esnext/v20190513/candidate__stage_3_/BigInt/basic_functionality/in.js:3: ERROR - Parse error. ')' expected
+esnext/v20190528/candidate__stage_3_/BigInt/basic_functionality/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
 return (1n + 2n) === 3n;
          ^
 
