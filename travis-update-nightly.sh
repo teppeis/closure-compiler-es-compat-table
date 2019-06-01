@@ -11,6 +11,7 @@ version=$(npm show google-closure-compiler@nightly --json|jq -r .version)
 ./run.js es6/nightly
 ./run.js es2016plus/nightly
 ./run.js esnext/nightly
+./replace-lambda-stacktrace.sh
 
 if [ -z "$(git status --porcelain)" ]; then
     echo "No updates"
