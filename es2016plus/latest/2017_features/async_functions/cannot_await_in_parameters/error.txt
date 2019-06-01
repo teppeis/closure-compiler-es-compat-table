@@ -75,7 +75,7 @@ HOOK 6 [length: 27] [source_file: es2016plus/v20190528/2017_features/async_funct
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:237)
 	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2380)
 	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:780)
-	at com.google.javascript.jscomp.Compiler$$Lambda$371/825460549.call(Unknown Source)
+	at com.google.javascript.jscomp.Compiler$$Lambda$<REPLACED>.call(Unknown Source)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
