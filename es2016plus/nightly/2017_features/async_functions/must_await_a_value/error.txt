@@ -9,7 +9,7 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 7: ERROR - Parse error. primary expression expected
+// EXPECT: 7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 
 ----------------------------------------------------------
 es2016plus/nightly/2017_features/async_functions/must_await_a_value/in.js:7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected

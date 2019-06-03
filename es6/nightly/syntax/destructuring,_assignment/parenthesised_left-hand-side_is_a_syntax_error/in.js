@@ -6,4 +6,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 5: ERROR - Parse error. invalid assignment target
+// EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
