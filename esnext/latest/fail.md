@@ -22,8 +22,8 @@
 ### BigInt
 - basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/basic_functionality/error.txt))
 - constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/constructor/error.txt))
-- BigInt.asUintN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asUintN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asUintN/out.js))
 - BigInt.asIntN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asIntN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asIntN/out.js))
+- BigInt.asUintN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asUintN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt.asUintN/out.js))
 - BigInt64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigInt64Array/error.txt))
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt))
@@ -55,6 +55,14 @@
 - parameter initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/throw_expressions/parameter_initializers/error.txt))
 - arrow function bodies ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
 - conditionals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/throw_expressions/conditionals/error.txt))
+
+### optional chaining operator (?.)
+- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/optional_chaining_operator___._/optional_property_access/error.txt))
+- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/optional_chaining_operator___._/optional_bracket_access/error.txt))
+- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/optional_chaining_operator___._/optional_method_call/error.txt))
+
+### nullish coalescing operator (??)
+- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/nullish_coalescing_operator_____/error.txt))
 
 ### String.prototype.replaceAll
 - String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/String.prototype.replaceAll/out.js))
@@ -126,14 +134,6 @@
 ### extensible numeric literals
 - extensible numeric literals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/extensible_numeric_literals/error.txt))
 
-### optional chaining operator (?.)
-- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/optional_chaining_operator___._/optional_property_access/error.txt))
-- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access/error.txt))
-- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/optional_chaining_operator___._/optional_method_call/error.txt))
-
-### nullish coalescing operator (??)
-- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/nullish_coalescing_operator_____/error.txt))
-
 ### partial application syntax
 - partial application from left ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/partial_application_syntax/partial_application_from_left/error.txt))
 - partial application from right ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/partial_application_syntax/partial_application_from_right/error.txt))
@@ -161,9 +161,9 @@
 ### String.prototype.codePoints
 - String.prototype.codePoints ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/String.prototype.codePoints/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/String.prototype.codePoints/out.js))
 
-### getting last item from array
-- Array.prototype.lastItem ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem/out.js))
-- Array.prototype.lastIndex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex/out.js))
+### Getting last item from array
+- Array.prototype.lastItem ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastItem/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastItem/out.js))
+- Array.prototype.lastIndex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastIndex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastIndex/out.js))
 
 ### Collections methods
 - Map.groupBy ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Collections_methods/Map.groupBy/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/proposal__stage_1_/Collections_methods/Map.groupBy/out.js))
