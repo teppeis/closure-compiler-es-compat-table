@@ -1,4 +1,4 @@
-// proposal (stage 1) / nullish coalescing operator (??)
+// draft (stage 2) / nullish coalescing operator (??)
 module.exports = () => {
 return null ?? 42 === 42 &&
 undefined ?? 42 === 42 &&
