@@ -71,16 +71,16 @@
     "subtest": "constructor"
   },
   {
-    "path": "candidate__stage_3_/BigInt/BigInt.asUintN",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "BigInt.asUintN"
-  },
-  {
     "path": "candidate__stage_3_/BigInt/BigInt.asIntN",
     "category": "candidate (stage 3)",
     "test": "BigInt",
     "subtest": "BigInt.asIntN"
+  },
+  {
+    "path": "candidate__stage_3_/BigInt/BigInt.asUintN",
+    "category": "candidate (stage 3)",
+    "test": "BigInt",
+    "subtest": "BigInt.asUintN"
   },
   {
     "path": "candidate__stage_3_/BigInt/BigInt64Array",
@@ -167,6 +167,29 @@
     "category": "draft (stage 2)",
     "test": "throw expressions",
     "subtest": "conditionals"
+  },
+  {
+    "path": "draft__stage_2_/optional_chaining_operator___._/optional_property_access",
+    "category": "draft (stage 2)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional property access"
+  },
+  {
+    "path": "draft__stage_2_/optional_chaining_operator___._/optional_bracket_access",
+    "category": "draft (stage 2)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional bracket access"
+  },
+  {
+    "path": "draft__stage_2_/optional_chaining_operator___._/optional_method_call",
+    "category": "draft (stage 2)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional method call"
+  },
+  {
+    "path": "draft__stage_2_/nullish_coalescing_operator_____",
+    "category": "draft (stage 2)",
+    "test": "nullish coalescing operator (??)"
   },
   {
     "path": "draft__stage_2_/String.prototype.replaceAll",
@@ -427,29 +450,6 @@
     "test": "extensible numeric literals"
   },
   {
-    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_property_access",
-    "category": "proposal (stage 1)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional property access"
-  },
-  {
-    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_bracket_access",
-    "category": "proposal (stage 1)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional bracket access"
-  },
-  {
-    "path": "proposal__stage_1_/optional_chaining_operator___._/optional_method_call",
-    "category": "proposal (stage 1)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional method call"
-  },
-  {
-    "path": "proposal__stage_1_/nullish_coalescing_operator_____",
-    "category": "proposal (stage 1)",
-    "test": "nullish coalescing operator (??)"
-  },
-  {
     "path": "proposal__stage_1_/partial_application_syntax/partial_application_from_left",
     "category": "proposal (stage 1)",
     "test": "partial application syntax",
@@ -575,15 +575,15 @@
     "test": "String.prototype.codePoints"
   },
   {
-    "path": "proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastItem",
+    "path": "proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastItem",
     "category": "proposal (stage 1)",
-    "test": "getting last item from array",
+    "test": "Getting last item from array",
     "subtest": "Array.prototype.lastItem"
   },
   {
-    "path": "proposal__stage_1_/getting_last_item_from_array/Array.prototype.lastIndex",
+    "path": "proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastIndex",
     "category": "proposal (stage 1)",
-    "test": "getting last item from array",
+    "test": "Getting last item from array",
     "subtest": "Array.prototype.lastIndex"
   },
   {
