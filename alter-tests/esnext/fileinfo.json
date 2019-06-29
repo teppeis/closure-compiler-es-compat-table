@@ -12,6 +12,18 @@
     "subtest": "\"globalThis\" global property has correct property descriptor"
   },
   {
+    "path": "candidate__stage_3_/WeakReferences/WeakRef_minimal_support",
+    "category": "candidate (stage 3)",
+    "test": "WeakReferences",
+    "subtest": "WeakRef minimal support"
+  },
+  {
+    "path": "candidate__stage_3_/WeakReferences/Finalizers_minimal_support",
+    "category": "candidate (stage 3)",
+    "test": "WeakReferences",
+    "subtest": "Finalizers minimal support"
+  },
+  {
     "path": "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
     "category": "candidate (stage 3)",
     "test": "instance class fields",
@@ -138,11 +150,6 @@
     "path": "draft__stage_2_/Realms",
     "category": "draft (stage 2)",
     "test": "Realms"
-  },
-  {
-    "path": "draft__stage_2_/weak_references",
-    "category": "draft (stage 2)",
-    "test": "weak references"
   },
   {
     "path": "draft__stage_2_/throw_expressions/logical",
