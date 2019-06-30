@@ -12,7 +12,7 @@ if (process.argv.length < 3) {
 }
 const dir = process.argv[2];
 const targetDir = path.resolve(process.cwd(), dir);
-const targetDirRelative = path.relative(path.resolve(__dirname, ".."), targetDir);
+const cwd = path.resolve(__dirname, "..");
 const [, version] = /\/([^/]*)\/?$/.exec(targetDir) || [];
 if (!version) {
   throw new Error(`An argument required. ex) es2016plus/v20190415, but ${dir}`);
@@ -28,9 +28,14 @@ if (process.env.AWS || platform === "linux") {
   throw new Error(`Unsuported Platform: ${platform}`);
 }
 
+// work around for faast.js that doesn't have an option to expand dot files
+const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
+
 (async () => {
   const commonOpts = {
-    include: [targetDirRelative],
+    include: [{ path: targetDir, cwd }]
+      .concat(dotDirs.map(dir => ({ path: dir, cwd })))
+      .map(({ path: dir, cwd }) => ({ path: path.relative(cwd, dir), cwd })),
     packageJson: {
       dependencies: {
         [`google-closure-compiler-${nativeImageOsSuffix}`]: version,
@@ -45,6 +50,7 @@ if (process.env.AWS || platform === "linux") {
       ],
     },
   };
+  console.log(commonOpts);
   const m = process.env.AWS
     ? await faastAws(funcs, {
         ...commonOpts,
