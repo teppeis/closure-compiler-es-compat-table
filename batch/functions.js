@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const child_process = require('child_process');
-const {compiler: Compiler} = require('google-closure-compiler');
-const {getNativeImagePath} = require('google-closure-compiler/lib/utils');
-const {promisify} = require('util');
+const child_process = require("child_process");
+const { compiler: Compiler } = require("google-closure-compiler");
+const { getNativeImagePath } = require("google-closure-compiler/lib/utils");
+const { promisify } = require("util");
 
 async function compile(options) {
-  options = {...options, json_streams: 'OUT'};
+  options = { ...options, json_streams: "OUT" };
   const compiler = new Compiler(options);
   // use native binary
   compiler.JAR_PATH = null;
@@ -29,7 +29,7 @@ async function compile(options) {
 }
 
 async function exec(command) {
-  const {stdout} = await promisify(child_process.exec)(command);
+  const { stdout } = await promisify(child_process.exec)(command);
   return stdout;
 }
 

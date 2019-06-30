@@ -1,29 +1,29 @@
-'use strict';
+"use strict";
 
-const {faastAws, faastLocal} = require('faastjs');
-const funcs = require('./functions');
-const path = require('path');
-const fs = require('fs').promises;
-const glob = require('glob');
-const del = require('del');
+const { faastAws, faastLocal } = require("faastjs");
+const funcs = require("./functions");
+const path = require("path");
+const fs = require("fs").promises;
+const glob = require("glob");
+const del = require("del");
 
 if (process.argv.length < 3) {
-  throw new Error('An argument required. ex) es2016plus/v20190415');
+  throw new Error("An argument required. ex) es2016plus/v20190415");
 }
 const dir = process.argv[2];
 const targetDir = path.resolve(process.cwd(), dir);
-const targetDirRelative = path.relative(path.resolve(__dirname, '..'), targetDir);
+const targetDirRelative = path.relative(path.resolve(__dirname, ".."), targetDir);
 const [, version] = /\/([^/]*)\/?$/.exec(targetDir) || [];
 if (!version) {
   throw new Error(`An argument required. ex) es2016plus/v20190415, but ${dir}`);
 }
 
-const {platform} = process;
+const { platform } = process;
 let nativeImageOsSuffix;
-if (process.env.AWS || platform === 'linux') {
-  nativeImageOsSuffix = 'linux';
-} else if (platform === 'darwin') {
-  nativeImageOsSuffix = 'osx';
+if (process.env.AWS || platform === "linux") {
+  nativeImageOsSuffix = "linux";
+} else if (platform === "darwin") {
+  nativeImageOsSuffix = "osx";
 } else {
   throw new Error(`Unsuported Platform: ${platform}`);
 }
@@ -38,43 +38,43 @@ if (process.env.AWS || platform === 'linux') {
     },
     webpackOptions: {
       externals: [
-        new RegExp('^aws-sdk/?'),
-        'google-closure-compiler-js',
-        'google-closure-compiler-linux',
-        'google-closure-compiler-osx',
+        new RegExp("^aws-sdk/?"),
+        "google-closure-compiler-js",
+        "google-closure-compiler-linux",
+        "google-closure-compiler-osx",
       ],
     },
   };
   const m = process.env.AWS
     ? await faastAws(funcs, {
         ...commonOpts,
-        region: 'ap-northeast-1',
+        region: "ap-northeast-1",
         awsLambdaOptions: {
-          Runtime: 'nodejs10.x',
+          Runtime: "nodejs10.x",
         },
       })
     : await faastLocal(funcs, commonOpts);
-  await del(`${targetDir}/**/(out.js|error.txt)`, {dot: true});
+  await del(`${targetDir}/**/(out.js|error.txt)`, { dot: true });
   // const files = [
   //   targetDir + '/2016_features/Array.prototype.includes/Array.prototype.includes/in.js',
   //   targetDir + '/2018_features/RegExp_named_capture_groups/in.js',
   // ];
   // const files = [`${targetDir}/2016_misc/Proxy,_enumerate_handler_removed/in.js`];
-  const files = glob.sync(`${targetDir}/**/in.js`, {dot: true});
+  const files = glob.sync(`${targetDir}/**/in.js`, { dot: true });
   const total = files.length;
   let done = 0;
   const promises = files.map(input => {
-    const output = path.join(path.dirname(input), 'out.js');
-    const errorFile = path.join(path.dirname(input), 'error.txt');
+    const output = path.join(path.dirname(input), "out.js");
+    const errorFile = path.join(path.dirname(input), "error.txt");
     return m.functions
       .compile({
         js: [path.relative(process.cwd(), input)],
         // compilation_level: 'ADVANCED',
-        compilation_level: 'SIMPLE',
-        formatting: ['PRETTY_PRINT'],
+        compilation_level: "SIMPLE",
+        formatting: ["PRETTY_PRINT"],
         // debug: true,
-        language_in: 'ECMASCRIPT_NEXT',
-        language_out: 'ECMASCRIPT5',
+        language_in: "ECMASCRIPT_NEXT",
+        language_out: "ECMASCRIPT5",
       })
       .then(
         async result => {
@@ -85,9 +85,9 @@ if (process.env.AWS || platform === 'linux') {
         },
         async e => {
           const message = e
-            .split('\n')
+            .split("\n")
             .slice(2) // Remove error headers
-            .join('\n');
+            .join("\n");
           return writeError(input, errorFile, message);
         }
       )
@@ -111,5 +111,5 @@ async function writeError(inputFile, errorFile, message) {
 ----------------------------------------------------------
 ${message.trimEnd()}
 `;
-  return fs.writeFile(errorFile, body, {flag: 'a'});
+  return fs.writeFile(errorFile, body, { flag: "a" });
 }

@@ -1,5 +1,5 @@
 {
-  "extends": ["teppeis/node-v11", "teppeis/+prettier"],
+  "extends": ["teppeis/node-v12", "teppeis/+prettier"],
   "rules": {
     "require-await": "off",
     "node/shebang": "off"

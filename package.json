@@ -14,7 +14,7 @@
     "es6": "./run.js es6",
     "esnext": "./run.js esnext",
     "stop": "closure-gun-stop",
-    "test": "eslint *.js legacy/*.js"
+    "test": "eslint *.js batch/*.js legacy/*.js"
   },
   "dependencies": {
     "@teppeis/closure-gun": "^2.0.0",

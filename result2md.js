@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict";
 
-const fs = require('fs');
-const path = require('path');
-const meow = require('meow');
-const humanize = require('humanize-string');
+const fs = require("fs");
+const path = require("path");
+const meow = require("meow");
+const humanize = require("humanize-string");
 
 const cli = meow(
   `
@@ -29,12 +29,12 @@ const [, esVersion, clVersion] = match;
 if (!esVersion) {
   throw new Error(`ES_VERSION is invalid`);
 }
-const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
-const fileInfo = require(path.join(alterTestDir, 'fileinfo.json'));
-const resultFile = fs.readFileSync(path.join(process.cwd(), resultFilePass), 'utf8');
+const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
+const fileInfo = require(path.join(alterTestDir, "fileinfo.json"));
+const resultFile = fs.readFileSync(path.join(process.cwd(), resultFilePass), "utf8");
 
 const failedFileInfo = resultFile
-  .split('\n')
+  .split("\n")
   .filter(line => !!line)
   .map(line => {
     const match = /^([^:]*): (.*)$/.exec(line);
@@ -42,46 +42,46 @@ const failedFileInfo = resultFile
       throw new Error(`Invalid result line: ${line}`);
     }
     const [, out, result] = match;
-    return {out, result};
+    return { out, result };
   })
-  .filter(({result}) => result !== '[Pass]')
-  .map(({out, result}) => {
+  .filter(({ result }) => result !== "[Pass]")
+  .map(({ out, result }) => {
     const dir = path.dirname(out);
-    const info = fileInfo.find(({path}) => path === dir);
+    const info = fileInfo.find(({ path }) => path === dir);
     if (!info) {
       throw new Error(`fileInfo not found: ${dir}`);
     }
     const escapedPath = escapeDirAsUrl(out);
     const url = `https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/${esVersion}/${clVersion}/${escapedPath}`;
-    return {...info, result, url};
+    return { ...info, result, url };
   });
 
 function escapeDirAsUrl(dir) {
   return dir
-    .split('/')
+    .split("/")
     .map(encodeURIComponent)
-    .join('/');
+    .join("/");
 }
 
 // const output = [`# ES2015`];
 const output = [];
-const skipCategories = new Set(['subclassing']);
-const skipTests = new Set(['shared memory and atomics']);
+const skipCategories = new Set(["subclassing"]);
+const skipTests = new Set(["shared memory and atomics"]);
 const skipSubtests = new Set([
-  'Reflect.construct, Array subclassing',
-  'Reflect.construct, RegExp subclassing',
-  'Reflect.construct, Function subclassing',
-  'new Function() support',
-  'defaults, new Function() support',
+  "Reflect.construct, Array subclassing",
+  "Reflect.construct, RegExp subclassing",
+  "Reflect.construct, Function subclassing",
+  "new Function() support",
+  "defaults, new Function() support",
 ]);
 let prevCategory = null;
 let prevTest = null;
 failedFileInfo
   .filter(info => !!info)
-  .filter(({category}) => !skipCategories.has(category.toLowerCase()))
-  .filter(({test}) => !test.startsWith('Proxy') && !skipTests.has(test))
-  .filter(({subtest}) => !skipSubtests.has(subtest))
-  .forEach(({category, test, subtest, url}) => {
+  .filter(({ category }) => !skipCategories.has(category.toLowerCase()))
+  .filter(({ test }) => !test.startsWith("Proxy") && !skipTests.has(test))
+  .filter(({ subtest }) => !skipSubtests.has(subtest))
+  .forEach(({ category, test, subtest, url }) => {
     if (prevCategory !== category) {
       output.push(`\n## ${humanize(category)}`);
       prevCategory = category;
@@ -90,7 +90,7 @@ failedFileInfo
       output.push(`\n### ${test}`);
       prevTest = test;
     }
-    if (test === 'typed arrays') {
+    if (test === "typed arrays") {
       return;
     }
     let subtestName = subtest;
@@ -107,4 +107,4 @@ failedFileInfo
     }
   });
 
-console.log(output.join('\n'));
+console.log(output.join("\n"));
