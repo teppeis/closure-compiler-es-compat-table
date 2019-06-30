@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict";
 
-const fs = require('fs');
-const path = require('path');
-const mkdirp = require('mkdirp');
-const {Linter} = require('eslint');
-const meow = require('meow');
-const glob = require('glob');
-const rimraf = require('rimraf');
+const fs = require("fs");
+const path = require("path");
+const mkdirp = require("mkdirp");
+const { Linter } = require("eslint");
+const meow = require("meow");
+const glob = require("glob");
+const rimraf = require("rimraf");
 
 const cli = meow(
   `
@@ -41,12 +41,12 @@ class TestCode {
   }
 
   toString(ignoreEval = false) {
-    const param = this.isAsync ? 'asyncTestPassed' : '';
+    const param = this.isAsync ? "asyncTestPassed" : "";
     const throws =
       this.useEval && !ignoreEval
         ? `throw new Error('eval() and Function() cannot be transpiled');\n`
-        : '';
-    const initIterator = this.useCreateIterable ? 'module.exports._ = Symbol.iterator;\n' : '';
+        : "";
+    const initIterator = this.useCreateIterable ? "module.exports._ = Symbol.iterator;\n" : "";
     // Use arrow function to enable EarlyEs6ToEs3Converter for Symbol polyfill
     // @see https://github.com/google/closure-compiler/issues/2881#issuecomment-381416295
     const src = `// ${this.name}
@@ -57,9 +57,9 @@ ${throws}${initIterator}${this.expr}
   }
 }
 
-const esVersions = cli.input.length > 0 ? [cli.input[0]] : ['es6', 'es2016plus', 'esnext'];
+const esVersions = cli.input.length > 0 ? [cli.input[0]] : ["es6", "es2016plus", "esnext"];
 esVersions.forEach(esVersion => {
-  const {testDir, alterTestDir, data} = init(esVersion);
+  const { testDir, alterTestDir, data } = init(esVersion);
   const fileList = [];
   data.tests.forEach(test => {
     if (test.subtests) {
@@ -69,47 +69,47 @@ esVersions.forEach(esVersion => {
             subtest.exec,
             test.category,
             test.name,
-            {testDir, alterTestDir},
+            { testDir, alterTestDir },
             subtest.name
           )
         );
       });
     } else {
       fileList.push(
-        writeInputSrcFile(test.exec, test.category, test.name, {testDir, alterTestDir})
+        writeInputSrcFile(test.exec, test.category, test.name, { testDir, alterTestDir })
       );
     }
   });
 
   if (!testDir) {
-    fs.writeFileSync(path.join(alterTestDir, 'fileinfo.json'), JSON.stringify(fileList, null, 2));
+    fs.writeFileSync(path.join(alterTestDir, "fileinfo.json"), JSON.stringify(fileList, null, 2));
     cleanupDirsForRemovedTests(fileList, alterTestDir);
   }
 });
 
 function cleanupDirsForRemovedTests(fileList, alterTestDir) {
   const pathSet = new Set(fileList.map(file => path.join(alterTestDir, file.path)));
-  const files = glob.sync(path.join(alterTestDir, '**/orig.js'));
+  const files = glob.sync(path.join(alterTestDir, "**/orig.js"));
   const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
   removedDirs.forEach(dir => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
-    rimraf.sync(dir, {glob: false});
+    rimraf.sync(dir, { glob: false });
   });
 }
 
 function init(esVersion) {
-  const versions = new Set(['es6', 'es2016plus', 'esnext']);
+  const versions = new Set(["es6", "es2016plus", "esnext"]);
   if (!versions.has(esVersion)) {
     throw new Error(`ES_VERSION is invalid: ${esVersion}`);
   }
   const testDir = process.env.TEST_DIR;
-  const alterTestDir = path.join(__dirname, 'alter-tests', esVersion);
+  const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
   mkdirp.sync(alterTestDir);
   const data = require(`./compat-table/data-${esVersion}`);
-  return {testDir, alterTestDir, data};
+  return { testDir, alterTestDir, data };
 }
 
-function writeInputSrcFile(fn, category, test, {testDir, alterTestDir}, sub) {
+function writeInputSrcFile(fn, category, test, { testDir, alterTestDir }, sub) {
   let dir = path.join(alterTestDir, escapePath(category), escapePath(test));
   let name = `${category} / ${test}`;
   if (sub) {
@@ -119,7 +119,7 @@ function writeInputSrcFile(fn, category, test, {testDir, alterTestDir}, sub) {
   if (testDir && !`${dir}/`.includes(testDir)) {
     return;
   }
-  const origPath = path.join(dir, 'orig.js');
+  const origPath = path.join(dir, "orig.js");
   generateTestJsSrc(fn, name, origPath);
   return {
     path: path.relative(alterTestDir, dir),
@@ -133,23 +133,23 @@ function escapePath(str) {
   // valid: #$%=~-,_.+
   // invalid: [](){}`^~|@;:`*?"<>
   return str
-    .replace('\u{2E2F}', 'U+2E2F')
-    .replace('\u{102C0}', 'U+102C0')
-    .replace(/<\/?code>/g, '')
-    .replace(/=>/g, 'arrow')
-    .replace(/['"]/g, '')
-    .replace(/ \(([^)]+)\)]/g, ' $1')
-    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, '_');
+    .replace("\u{2E2F}", "U+2E2F")
+    .replace("\u{102C0}", "U+102C0")
+    .replace(/<\/?code>/g, "")
+    .replace(/=>/g, "arrow")
+    .replace(/['"]/g, "")
+    .replace(/ \(([^)]+)\)]/g, " $1")
+    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, "_");
 }
 
 function format(src) {
   try {
-    const {output} = linter.verifyAndFix(src, {
+    const { output } = linter.verifyAndFix(src, {
       parserOptions: {
         ecmaVersion: 2018,
       },
       rules: {
-        indent: ['error', 2],
+        indent: ["error", 2],
       },
     });
     return output;
@@ -161,14 +161,14 @@ function format(src) {
 }
 
 function generateTestJsSrc(fn, name, origPath) {
-  if (typeof fn === 'function') {
+  if (typeof fn === "function") {
     const testCode = createTestCode(fn, name);
     const existingSrc = getExistigSrc(origPath);
     if (existingSrc) {
       if (existingSrc === testCode.toString()) {
         return;
       } else {
-        console.error('changed test:', name);
+        console.error("changed test:", name);
       }
     }
     mkdirp.sync(path.dirname(origPath));
@@ -191,13 +191,13 @@ function createTestCode(fn, name) {
     expr = match[1];
   }
   // remove indent for template literal test code
-  expr = expr.replace(/^\s*/gm, '');
+  expr = expr.replace(/^\s*/gm, "");
   return new TestCode(expr, name);
 }
 
 function getExistigSrc(origPath) {
   try {
-    return fs.readFileSync(origPath, 'utf8');
+    return fs.readFileSync(origPath, "utf8");
   } catch (ignore) {
     return null;
   }
