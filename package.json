@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@teppeis/closure-gun": "^2.0.0",
-    "async": "^2.6.2",
+    "async": "^3.1.0",
     "del": "^4.1.1",
     "execa": "^2.0.1",
     "faastjs": "^3.0.2",
