@@ -16,7 +16,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190528/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:10: ERROR - [JSC_MISSING_CALL_TO_SUPER] constructor is missing a call to super()
+es6/v20190618/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:10: ERROR - [JSC_MISSING_CALL_TO_SUPER] constructor is missing a call to super()
     constructor () {
     ^^^^^^^^^^^
 

@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190528/subclassing/miscellaneous_subclassables/Set_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Set
+es6/v20190618/subclassing/miscellaneous_subclassables/Set_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Set
   class S extends Set {}
   ^^^^^^^^^^^^^^^^^^^^^^
 

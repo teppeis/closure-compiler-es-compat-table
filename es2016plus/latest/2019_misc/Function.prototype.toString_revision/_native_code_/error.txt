@@ -7,7 +7,7 @@ module.exports = () => {
 };
 
 ----------------------------------------------------------
-es2016plus/v20190528/2019_misc/Function.prototype.toString_revision/_native_code_/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20190618/2019_misc/Function.prototype.toString_revision/_native_code_/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

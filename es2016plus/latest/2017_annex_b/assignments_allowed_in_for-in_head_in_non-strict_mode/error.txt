@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20190528/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
+es2016plus/v20190618/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
   for (var i = 0 in {}) {}
                  ^
 

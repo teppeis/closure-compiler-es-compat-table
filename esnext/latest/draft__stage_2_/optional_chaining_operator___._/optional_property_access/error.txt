@@ -6,7 +6,7 @@ return foo?.baz === 42 && bar?.baz === undefined;
 
 };
 ----------------------------------------------------------
-esnext/v20190528/draft__stage_2_/optional_chaining_operator___._/optional_property_access/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20190618/draft__stage_2_/optional_chaining_operator___._/optional_property_access/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return foo?.baz === 42 && bar?.baz === undefined;
             ^
 
