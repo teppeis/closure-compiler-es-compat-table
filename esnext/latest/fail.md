@@ -5,6 +5,10 @@
 - "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js))
 - "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
 
+### WeakReferences
+- WeakRef minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js))
+- Finalizers minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js))
+
 ### instance class fields
 - public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
 - private instance class fields basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
@@ -46,9 +50,6 @@
 
 ### Realms
 - Realms ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Realms/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Realms/out.js))
-
-### weak references
-- weak references ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/weak_references/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/weak_references/out.js))
 
 ### throw expressions
 - logical ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/throw_expressions/logical/error.txt))

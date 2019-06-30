@@ -1,6 +1,8 @@
 [
   "candidate__stage_3_/globalThis/globalThis_global_property_is_global_object",
   "candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor",
+  "candidate__stage_3_/WeakReferences/WeakRef_minimal_support",
+  "candidate__stage_3_/WeakReferences/Finalizers_minimal_support",
   "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
   "candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support",
   "candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers",
@@ -23,7 +25,6 @@
   "draft__stage_2_/Generator_function.sent_Meta_Property",
   "draft__stage_2_/Class_and_Property_Decorators/class_decorators",
   "draft__stage_2_/Realms",
-  "draft__stage_2_/weak_references",
   "draft__stage_2_/throw_expressions/logical",
   "draft__stage_2_/throw_expressions/parameter_initializers",
   "draft__stage_2_/throw_expressions/arrow_function_bodies",

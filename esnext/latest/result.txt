@@ -1,5 +1,7 @@
 candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
+candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
+candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js: ReferenceError: FinalizationGroup is not defined
 candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
@@ -22,7 +24,6 @@ candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt:
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]
-draft__stage_2_/weak_references/out.js: ReferenceError: System is not defined
 draft__stage_2_/throw_expressions/logical/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
