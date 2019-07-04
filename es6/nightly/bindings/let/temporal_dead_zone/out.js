@@ -1,7 +1,7 @@
 module.exports = function() {
   a: {
     try {
-      a;
+      456;
     } catch (b) {
       var a = !0;
       break a;
