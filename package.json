@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "eslint": "^6.0.1",
-    "eslint-config-teppeis": "^10.1.1"
+    "eslint-config-teppeis": "^10.1.2"
   },
   "license": "MIT"
 }
