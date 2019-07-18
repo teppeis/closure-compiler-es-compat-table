@@ -1,0 +1,18 @@
+// misc / Proxy, internal 'get' calls / String.prototype.split
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // String.prototype.split functions -> Get -> [[Get]]
+  var get = [];
+  var proxied = {};
+  proxied[Symbol.toPrimitive] = Function();
+  var p = new Proxy(proxied, { get: function(o, k) { get.push(k); return o[k]; }});
+  "".split(p);
+  return get[0] === Symbol.split && get[1] === Symbol.toPrimitive && get.length === 2;
+
+};
+----------------------------------------------------------
+es6/v20190709/misc/Proxy,_internal_get_calls/String.prototype.split/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  var get = [];
+  ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

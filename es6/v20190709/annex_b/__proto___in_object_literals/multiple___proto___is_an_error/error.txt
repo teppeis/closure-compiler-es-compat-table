@@ -1,0 +1,17 @@
+// annex b / __proto__ in object literals / multiple __proto__ is an error
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  try {
+    eval("({ __proto__ : [], __proto__: {} })");
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20190709/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  try {
+  ^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,17 @@
+// candidate (stage 3) / instance class fields / private instance class fields initializers
+module.exports = () => {
+class C {
+#x = 42;
+x(){
+return this.#x;
+}
+}
+return new C().x() === 42;
+
+};
+----------------------------------------------------------
+esnext/v20190709/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+#x = 42;
+^
+
+1 error(s), 0 warning(s)
