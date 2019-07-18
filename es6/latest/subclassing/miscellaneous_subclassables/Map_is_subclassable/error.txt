@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190618/subclassing/miscellaneous_subclassables/Map_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Map
+es6/v20190709/subclassing/miscellaneous_subclassables/Map_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Map
   class M extends Map {}
   ^^^^^^^^^^^^^^^^^^^^^^
 

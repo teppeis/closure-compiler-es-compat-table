@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20190618/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+esnext/v20190709/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var actualGlobal = Function('return this')();
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
