@@ -6,86 +6,90 @@ $jscomp.getGlobal = function(a) {
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
   try {
-    var a = {}, b = Object.create(new $jscomp.global.Proxy(a, {get:function(c, e, f) {
-      return c == a && "q" == e && f == b;
+    var a = {}, c = Object.create(new $jscomp.global.Proxy(a, {get:function(d, b, f) {
+      return d == a && "q" == b && f == c;
     }}));
-    return !0 === b.q;
-  } catch (c) {
+    return !0 === c.q;
+  } catch (d) {
     return !1;
   }
 };
 $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
 $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
+  var c = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
   return {next:$jscomp.arrayIteratorImpl(a)};
 };
 $jscomp.makeIterator = function(a) {
-  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return b ? b.call(a) : $jscomp.arrayIterator(a);
+  var c = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+  return c ? c.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, d) {
+  a != Array.prototype && a != Object.prototype && (a[c] = d.value);
 };
-$jscomp.polyfill = function(a, b, c, e) {
-  if (b) {
-    c = $jscomp.global;
+$jscomp.polyfill = function(a, c, d, b) {
+  if (c) {
+    d = $jscomp.global;
     a = a.split(".");
-    for (e = 0; e < a.length - 1; e++) {
-      var f = a[e];
-      f in c || (c[f] = {});
-      c = c[f];
+    for (b = 0; b < a.length - 1; b++) {
+      var f = a[b];
+      f in d || (d[f] = {});
+      d = d[f];
     }
     a = a[a.length - 1];
-    e = c[a];
-    b = b(e);
-    b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+    b = d[a];
+    c = c(b);
+    c != b && null != c && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:c});
   }
 };
-$jscomp.owns = function(a, b) {
-  return Object.prototype.hasOwnProperty.call(a, b);
+$jscomp.owns = function(a, c) {
+  return Object.prototype.hasOwnProperty.call(a, c);
 };
 $jscomp.polyfill("WeakMap", function(a) {
-  function b() {
+  function c() {
     if (!a || !Object.seal) {
       return !1;
     }
     try {
-      var h = Object.seal({}), e = Object.seal({}), b = new a([[h, 2], [e, 3]]);
-      if (2 != b.get(h) || 3 != b.get(e)) {
+      var h = Object.seal({}), b = Object.seal({}), c = new a([[h, 2], [b, 3]]);
+      if (2 != c.get(h) || 3 != c.get(b)) {
         return !1;
       }
-      b.delete(h);
-      b.set(e, 4);
-      return !b.has(h) && 4 == b.get(e);
-    } catch (l) {
+      c.delete(h);
+      c.set(b, 4);
+      return !c.has(h) && 4 == c.get(b);
+    } catch (m) {
       return !1;
     }
   }
-  function c() {
+  function d() {
   }
-  function e(a) {
-    if (!$jscomp.owns(a, d)) {
-      var b = new c;
-      $jscomp.defineProperty(a, d, {value:b});
-    }
+  function b(a) {
+    var b = typeof a;
+    return "object" === b && null !== a || "function" === b;
   }
   function f(a) {
+    if (!$jscomp.owns(a, e)) {
+      var b = new d;
+      $jscomp.defineProperty(a, e, {value:b});
+    }
+  }
+  function k(a) {
     var b = Object[a];
     b && (Object[a] = function(a) {
-      if (a instanceof c) {
+      if (a instanceof d) {
         return a;
       }
-      e(a);
+      f(a);
       return b(a);
     });
   }
@@ -94,16 +98,16 @@ $jscomp.polyfill("WeakMap", function(a) {
       return a;
     }
   } else {
-    if (b()) {
+    if (c()) {
       return a;
     }
   }
-  var d = "$jscomp_hidden_" + Math.random();
-  f("freeze");
-  f("preventExtensions");
-  f("seal");
-  var k = 0, g = function(a) {
-    this.id_ = (k += Math.random() + 1).toString();
+  var e = "$jscomp_hidden_" + Math.random();
+  k("freeze");
+  k("preventExtensions");
+  k("seal");
+  var l = 0, g = function(a) {
+    this.id_ = (l += Math.random() + 1).toString();
     if (a) {
       a = $jscomp.makeIterator(a);
       for (var b; !(b = a.next()).done;) {
@@ -111,27 +115,30 @@ $jscomp.polyfill("WeakMap", function(a) {
       }
     }
   };
-  g.prototype.set = function(a, b) {
-    e(a);
-    if (!$jscomp.owns(a, d)) {
+  g.prototype.set = function(a, c) {
+    if (!b(a)) {
+      throw Error("Invalid WeakMap key");
+    }
+    f(a);
+    if (!$jscomp.owns(a, e)) {
       throw Error("WeakMap key fail: " + a);
     }
-    a[d][this.id_] = b;
+    a[e][this.id_] = c;
     return this;
   };
   g.prototype.get = function(a) {
-    return $jscomp.owns(a, d) ? a[d][this.id_] : void 0;
+    return b(a) && $jscomp.owns(a, e) ? a[e][this.id_] : void 0;
   };
   g.prototype.has = function(a) {
-    return $jscomp.owns(a, d) && $jscomp.owns(a[d], this.id_);
+    return b(a) && $jscomp.owns(a, e) && $jscomp.owns(a[e], this.id_);
   };
   g.prototype.delete = function(a) {
-    return $jscomp.owns(a, d) && $jscomp.owns(a[d], this.id_) ? delete a[d][this.id_] : !1;
+    return b(a) && $jscomp.owns(a, e) && $jscomp.owns(a[e], this.id_) ? delete a[e][this.id_] : !1;
   };
   return g;
 }, "es6", "es3");
 $jscomp.polyfill("WeakSet", function(a) {
-  function b() {
+  function c() {
     if (!a || !Object.seal) {
       return !1;
     }
@@ -143,7 +150,7 @@ $jscomp.polyfill("WeakSet", function(a) {
       d.delete(b);
       d.add(c);
       return !d.has(b) && d.has(c);
-    } catch (k) {
+    } catch (e) {
       return !1;
     }
   }
@@ -152,11 +159,11 @@ $jscomp.polyfill("WeakSet", function(a) {
       return a;
     }
   } else {
-    if (b()) {
+    if (c()) {
       return a;
     }
   }
-  var c = function(a) {
+  var d = function(a) {
     this.map_ = new WeakMap;
     if (a) {
       a = $jscomp.makeIterator(a);
@@ -165,22 +172,22 @@ $jscomp.polyfill("WeakSet", function(a) {
       }
     }
   };
-  c.prototype.add = function(a) {
+  d.prototype.add = function(a) {
     this.map_.set(a, !0);
     return this;
   };
-  c.prototype.has = function(a) {
+  d.prototype.has = function(a) {
     return this.map_.has(a);
   };
-  c.prototype.delete = function(a) {
+  d.prototype.delete = function(a) {
     return this.map_.delete(a);
   };
-  return c;
+  return d;
 }, "es6", "es3");
 module.exports = function() {
-  var a = {}, b = new WeakSet;
-  b.add(a);
-  b.add(a);
-  return b.has(a);
+  var a = {}, c = new WeakSet;
+  c.add(a);
+  c.add(a);
+  return c.has(a);
 };
 
