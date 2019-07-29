@@ -669,5 +669,10 @@
     "path": "2020_features/String.prototype.matchAll",
     "category": "2020 features",
     "test": "String.prototype.matchAll"
+  },
+  {
+    "path": "2020_features/Promise.allSettled",
+    "category": "2020 features",
+    "test": "Promise.allSettled"
   }
 ]

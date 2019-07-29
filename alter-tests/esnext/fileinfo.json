@@ -66,6 +66,29 @@
     "subtest": "computed static class fields"
   },
   {
+    "path": "candidate__stage_3_/optional_chaining_operator___._/optional_property_access",
+    "category": "candidate (stage 3)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional property access"
+  },
+  {
+    "path": "candidate__stage_3_/optional_chaining_operator___._/optional_bracket_access",
+    "category": "candidate (stage 3)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional bracket access"
+  },
+  {
+    "path": "candidate__stage_3_/optional_chaining_operator___._/optional_method_call",
+    "category": "candidate (stage 3)",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional method call"
+  },
+  {
+    "path": "candidate__stage_3_/nullish_coalescing_operator_____",
+    "category": "candidate (stage 3)",
+    "test": "nullish coalescing operator (??)"
+  },
+  {
     "path": "candidate__stage_3_/numeric_separators",
     "category": "candidate (stage 3)",
     "test": "numeric separators"
@@ -119,11 +142,6 @@
     "subtest": "DataView.prototype.getBigUint64"
   },
   {
-    "path": "candidate__stage_3_/Promise.allSettled",
-    "category": "candidate (stage 3)",
-    "test": "Promise.allSettled"
-  },
-  {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
@@ -174,29 +192,6 @@
     "category": "draft (stage 2)",
     "test": "throw expressions",
     "subtest": "conditionals"
-  },
-  {
-    "path": "draft__stage_2_/optional_chaining_operator___._/optional_property_access",
-    "category": "draft (stage 2)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional property access"
-  },
-  {
-    "path": "draft__stage_2_/optional_chaining_operator___._/optional_bracket_access",
-    "category": "draft (stage 2)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional bracket access"
-  },
-  {
-    "path": "draft__stage_2_/optional_chaining_operator___._/optional_method_call",
-    "category": "draft (stage 2)",
-    "test": "optional chaining operator (?.)",
-    "subtest": "optional method call"
-  },
-  {
-    "path": "draft__stage_2_/nullish_coalescing_operator_____",
-    "category": "draft (stage 2)",
-    "test": "nullish coalescing operator (??)"
   },
   {
     "path": "draft__stage_2_/String.prototype.replaceAll",

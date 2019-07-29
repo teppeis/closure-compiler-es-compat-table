@@ -1,4 +1,4 @@
-// draft (stage 2) / optional chaining operator (?.) / optional method call
+// candidate (stage 3) / optional chaining operator (?.) / optional method call
 module.exports = () => {
 var foo = { baz: function () { return 42; } };
 var bar = null;
