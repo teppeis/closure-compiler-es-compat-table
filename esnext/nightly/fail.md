@@ -20,6 +20,14 @@
 - private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt))
 - computed static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/static_class_fields/computed_static_class_fields/error.txt))
 
+### optional chaining operator (?.)
+- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/optional_chaining_operator___._/optional_property_access/error.txt))
+- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/optional_chaining_operator___._/optional_bracket_access/error.txt))
+- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/optional_chaining_operator___._/optional_method_call/error.txt))
+
+### nullish coalescing operator (??)
+- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/nullish_coalescing_operator_____/error.txt))
+
 ### numeric separators
 - numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/numeric_separators/error.txt))
 
@@ -32,9 +40,6 @@
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt))
 - DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt))
-
-### Promise.allSettled
-- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/Promise.allSettled/out.js))
 
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
@@ -56,14 +61,6 @@
 - parameter initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/parameter_initializers/error.txt))
 - arrow function bodies ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
 - conditionals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/conditionals/error.txt))
-
-### optional chaining operator (?.)
-- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/optional_chaining_operator___._/optional_property_access/error.txt))
-- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/optional_chaining_operator___._/optional_bracket_access/error.txt))
-- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/optional_chaining_operator___._/optional_method_call/error.txt))
-
-### nullish coalescing operator (??)
-- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/nullish_coalescing_operator_____/error.txt))
 
 ### String.prototype.replaceAll
 - String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/String.prototype.replaceAll/out.js))
