@@ -253,6 +253,11 @@
     "subtest": "ArrayBuffer.prototype.realloc()"
   },
   {
+    "path": "draft__stage_2_/Promise.any",
+    "category": "draft (stage 2)",
+    "test": "Promise.any"
+  },
+  {
     "path": "proposal__stage_1_/do_expressions",
     "category": "proposal (stage 1)",
     "test": "do expressions"
@@ -760,11 +765,6 @@
     "category": "proposal (stage 1)",
     "test": "{ BigInt, Number }.fromString",
     "subtest": "BigInt.fromString"
-  },
-  {
-    "path": "proposal__stage_1_/Promise.any",
-    "category": "proposal (stage 1)",
-    "test": "Promise.any"
   },
   {
     "path": "strawman__stage_0_/bind______operator/binary_form",
