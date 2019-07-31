@@ -78,6 +78,9 @@
 - ArrayBuffer.prototype.transfer() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js))
 - ArrayBuffer.prototype.realloc() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js))
 
+### Promise.any
+- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/Promise.any/out.js))
+
 ## Proposal (stage 1)
 
 ### do expressions
@@ -197,9 +200,6 @@
 ### { BigInt, Number }.fromString
 - Number.fromString ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/out.js))
 - BigInt.fromString ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/__BigInt%2C_Number__.fromString/BigInt.fromString/error.txt))
-
-### Promise.any
-- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Promise.any/out.js))
 
 ## Strawman (stage 0)
 

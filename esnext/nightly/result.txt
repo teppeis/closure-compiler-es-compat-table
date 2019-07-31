@@ -41,6 +41,7 @@ draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [
 draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
+draft__stage_2_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
@@ -127,7 +128,6 @@ proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js: TypeE
 proposal__stage_1_/Math.seededPRNG/out.js: TypeError: Object #<Object> has no method 'seededPRNG'
 proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString/out.js: TypeError: Object function Number() { [native code] } has no method 'fromString'
 proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [CompileError]
-proposal__stage_1_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'
 strawman__stage_0_/bind______operator/binary_form/error.txt: [CompileError]
 strawman__stage_0_/bind______operator/unary_form/error.txt: [CompileError]
 strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
