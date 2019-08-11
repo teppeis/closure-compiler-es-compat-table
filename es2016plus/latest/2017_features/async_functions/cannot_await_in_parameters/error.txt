@@ -12,55 +12,55 @@ module.exports = () => {
 
 ----------------------------------------------------------
 java.lang.IllegalStateException: AST should not contain async function. Reference node:
-AWAIT 6 [length: 23] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    CALL 6 [length: 17] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            STRING resolve 6 [length: 7] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
+AWAIT 6 [length: 23] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    CALL 6 [length: 17] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            STRING resolve 6 [length: 7] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
 
  Parent node:
-HOOK 6 [length: 27] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    SHEQ 6 [length: 27] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        VOID 6 [length: 27] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
-    AWAIT 6 [length: 23] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        CALL 6 [length: 17] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                STRING resolve 6 [length: 7] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20190709/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
+HOOK 6 [length: 27] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    SHEQ 6 [length: 27] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        VOID 6 [length: 27] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
+    AWAIT 6 [length: 23] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        CALL 6 [length: 17] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                STRING resolve 6 [length: 7] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20190729/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
 
 	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
-	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1794)
-	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1858)
-	at com.google.javascript.jscomp.AstValidator.validateAwait(AstValidator.java:522)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:425)
-	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1709)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:331)
-	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1420)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1279)
+	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1812)
+	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1876)
+	at com.google.javascript.jscomp.AstValidator.validateAwait(AstValidator.java:526)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:429)
+	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1727)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:335)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1438)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:314)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1297)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
-	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:810)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:946)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:922)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:898)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:405)
-	at com.google.javascript.jscomp.AstValidator.validateCall(AstValidator.java:985)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:397)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1279)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:814)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:950)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:926)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:902)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:409)
+	at com.google.javascript.jscomp.AstValidator.validateCall(AstValidator.java:989)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:401)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1297)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
-	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:810)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:946)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:922)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:898)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:405)
-	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1420)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1279)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:814)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:950)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:926)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:902)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:409)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1438)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:314)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1297)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
 	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:152)
@@ -69,8 +69,8 @@ HOOK 6 [length: 27] [source_file: es2016plus/v20190709/2017_features/async_funct
 	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:114)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:326)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:235)
-	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2376)
-	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:776)
+	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2389)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:783)
 	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
