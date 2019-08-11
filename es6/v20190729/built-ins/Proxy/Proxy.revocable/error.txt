@@ -1,0 +1,19 @@
+// built-ins / Proxy / Proxy.revocable
+module.exports = () => {
+  var obj = Proxy.revocable({}, { get: function() { return 5; } });
+  var passed = (obj.proxy.foo === 5);
+  obj.revoke();
+  try {
+    obj.proxy.foo;
+  } catch(e) {
+    passed &= e instanceof TypeError;
+  }
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20190729/built-ins/Proxy/Proxy.revocable/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+    obj.proxy.foo;
+    ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

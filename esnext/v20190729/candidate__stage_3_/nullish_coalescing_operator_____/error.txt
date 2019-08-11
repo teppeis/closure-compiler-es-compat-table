@@ -1,0 +1,15 @@
+// candidate (stage 3) / nullish coalescing operator (??)
+module.exports = () => {
+return null ?? 42 === 42 &&
+undefined ?? 42 === 42 &&
+false ?? 42 === false &&
+'' ?? 42 === '' &&
+0 ?? 42 === 0;
+
+};
+----------------------------------------------------------
+esnext/v20190729/candidate__stage_3_/nullish_coalescing_operator_____/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+return null ?? 42 === 42 &&
+              ^
+
+1 error(s), 0 warning(s)
