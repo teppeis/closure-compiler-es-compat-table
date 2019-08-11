@@ -1,4 +1,4 @@
-// candidate (stage 3) / Promise.allSettled
+// 2020 features / Promise.allSettled
 module.exports = (asyncTestPassed) => {
   Promise.allSettled([
     Promise.resolve(1),
