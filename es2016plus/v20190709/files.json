@@ -113,5 +113,6 @@
   "2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals",
   "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals",
   "2019_misc/Well-formed_JSON.stringify",
-  "2020_features/String.prototype.matchAll"
+  "2020_features/String.prototype.matchAll",
+  "2020_features/Promise.allSettled"
 ]
