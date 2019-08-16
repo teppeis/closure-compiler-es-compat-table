@@ -20,7 +20,7 @@
     "@teppeis/closure-gun": "^2.0.0",
     "async": "^2.6.3",
     "del": "^5.0.0",
-    "execa": "^2.0.3",
+    "execa": "^2.0.4",
     "faastjs": "^3.0.5",
     "fs-readdir-recursive": "^1.1.0",
     "glob": "^7.1.4",
