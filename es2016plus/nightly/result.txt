@@ -113,4 +113,4 @@
 2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
 2020_features/String.prototype.matchAll/out.js: TypeError: Object 11a2bb has no method 'matchAll'
-2020_features/Promise.allSettled/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'allSettled'
+2020_features/Promise.allSettled/out.js: [Pass]

@@ -87,6 +87,3 @@
 
 ### String.prototype.matchAll
 - String.prototype.matchAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/out.js))
-
-### Promise.allSettled
-- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/Promise.allSettled/out.js))
