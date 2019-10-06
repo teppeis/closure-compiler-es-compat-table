@@ -1,0 +1,16 @@
+// draft (stage 2) / throw expressions / arrow function bodies
+module.exports = () => {
+var fn = () => throw 42;
+try {
+fn();
+} catch (e) {
+return e === 42;
+}
+
+};
+----------------------------------------------------------
+esnext/v20190929/draft__stage_2_/throw_expressions/arrow_function_bodies/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+var fn = () => throw 42;
+                    ^
+
+1 error(s), 0 warning(s)
