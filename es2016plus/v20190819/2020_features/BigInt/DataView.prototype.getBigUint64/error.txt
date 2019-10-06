@@ -1,0 +1,14 @@
+// 2020 features / BigInt / DataView.prototype.getBigUint64
+module.exports = () => {
+var buffer = new ArrayBuffer(64);
+var view = new DataView(buffer);
+view.setBigUint64(0, 1n);
+return view.getBigUint64(0) === 1n;
+
+};
+----------------------------------------------------------
+es2016plus/v20190819/2020_features/BigInt/DataView.prototype.getBigUint64/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. ',' expected
+view.setBigUint64(0, 1n);
+                      ^
+
+1 error(s), 0 warning(s)
