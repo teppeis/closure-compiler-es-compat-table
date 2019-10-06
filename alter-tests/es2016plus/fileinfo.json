@@ -671,8 +671,68 @@
     "test": "String.prototype.matchAll"
   },
   {
+    "path": "2020_features/BigInt/basic_functionality",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "2020_features/BigInt/constructor",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "constructor"
+  },
+  {
+    "path": "2020_features/BigInt/BigInt.asUintN",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "BigInt.asUintN"
+  },
+  {
+    "path": "2020_features/BigInt/BigInt.asIntN",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "BigInt.asIntN"
+  },
+  {
+    "path": "2020_features/BigInt/BigInt64Array",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "BigInt64Array"
+  },
+  {
+    "path": "2020_features/BigInt/BigUint64Array",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "BigUint64Array"
+  },
+  {
+    "path": "2020_features/BigInt/DataView.prototype.getBigInt64",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "DataView.prototype.getBigInt64"
+  },
+  {
+    "path": "2020_features/BigInt/DataView.prototype.getBigUint64",
+    "category": "2020 features",
+    "test": "BigInt",
+    "subtest": "DataView.prototype.getBigUint64"
+  },
+  {
     "path": "2020_features/Promise.allSettled",
     "category": "2020 features",
     "test": "Promise.allSettled"
+  },
+  {
+    "path": "2020_features/globalThis/globalThis_global_property_is_global_object",
+    "category": "2020 features",
+    "test": "globalThis",
+    "subtest": "\"globalThis\" global property is global object"
+  },
+  {
+    "path": "2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor",
+    "category": "2020 features",
+    "test": "globalThis",
+    "subtest": "\"globalThis\" global property has correct property descriptor"
   }
 ]

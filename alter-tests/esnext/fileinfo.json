@@ -1,17 +1,5 @@
 [
   {
-    "path": "candidate__stage_3_/globalThis/globalThis_global_property_is_global_object",
-    "category": "candidate (stage 3)",
-    "test": "globalThis",
-    "subtest": "\"globalThis\" global property is global object"
-  },
-  {
-    "path": "candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor",
-    "category": "candidate (stage 3)",
-    "test": "globalThis",
-    "subtest": "\"globalThis\" global property has correct property descriptor"
-  },
-  {
     "path": "candidate__stage_3_/WeakReferences/WeakRef_minimal_support",
     "category": "candidate (stage 3)",
     "test": "WeakReferences",
@@ -94,52 +82,9 @@
     "test": "numeric separators"
   },
   {
-    "path": "candidate__stage_3_/BigInt/basic_functionality",
+    "path": "candidate__stage_3_/String.prototype.replaceAll",
     "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "basic functionality"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/constructor",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "constructor"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/BigInt.asIntN",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "BigInt.asIntN"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/BigInt.asUintN",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "BigInt.asUintN"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/BigInt64Array",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "BigInt64Array"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/BigUint64Array",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "BigUint64Array"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/DataView.prototype.getBigInt64",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "DataView.prototype.getBigInt64"
-  },
-  {
-    "path": "candidate__stage_3_/BigInt/DataView.prototype.getBigUint64",
-    "category": "candidate (stage 3)",
-    "test": "BigInt",
-    "subtest": "DataView.prototype.getBigUint64"
+    "test": "String.prototype.replaceAll"
   },
   {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
@@ -192,11 +137,6 @@
     "category": "draft (stage 2)",
     "test": "throw expressions",
     "subtest": "conditionals"
-  },
-  {
-    "path": "draft__stage_2_/String.prototype.replaceAll",
-    "category": "draft (stage 2)",
-    "test": "String.prototype.replaceAll"
   },
   {
     "path": "draft__stage_2_/Set_methods/Set.prototype.intersection",

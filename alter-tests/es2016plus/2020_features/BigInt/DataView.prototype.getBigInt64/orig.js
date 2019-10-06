@@ -1,4 +1,4 @@
-// candidate (stage 3) / BigInt / DataView.prototype.getBigInt64
+// 2020 features / BigInt / DataView.prototype.getBigInt64
 module.exports = () => {
 var buffer = new ArrayBuffer(64);
 var view = new DataView(buffer);

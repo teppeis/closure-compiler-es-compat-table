@@ -1,4 +1,4 @@
-// candidate (stage 3) / BigInt / BigUint64Array
+// 2020 features / BigInt / BigUint64Array
 module.exports = () => {
 var buffer = new ArrayBuffer(64);
 var view = new BigUint64Array(buffer);

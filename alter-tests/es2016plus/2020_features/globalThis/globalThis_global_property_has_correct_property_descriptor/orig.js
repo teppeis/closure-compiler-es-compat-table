@@ -1,4 +1,4 @@
-// candidate (stage 3) / globalThis / "globalThis" global property has correct property descriptor
+// 2020 features / globalThis / "globalThis" global property has correct property descriptor
 module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   var actualGlobal = Function('return this')();
