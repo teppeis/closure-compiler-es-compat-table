@@ -1,0 +1,14 @@
+// strawman (stage 0) / object shorthand improvements / destructuring assignments
+module.exports = () => {
+var foo = { bar: 42, baz: 33 };
+var fuz = {};
+({ fuz.bar, fuz['baz'] } = foo);
+return fuz.bar === 42 && fuz.baz === 33;
+
+};
+----------------------------------------------------------
+esnext/v20190909/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+({ fuz.bar, fuz['baz'] } = foo);
+      ^
+
+1 error(s), 0 warning(s)

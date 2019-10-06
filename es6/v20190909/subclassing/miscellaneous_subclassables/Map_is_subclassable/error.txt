@@ -1,0 +1,15 @@
+// subclassing / miscellaneous subclassables / Map is subclassable
+module.exports = () => {
+  var key = {};
+  class M extends Map {}
+  var map = new M();
+  map.set(key, 123);
+  return map instanceof M && map.has(key) && map.get(key) === 123;
+
+};
+----------------------------------------------------------
+es6/v20190909/subclassing/miscellaneous_subclassables/Map_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Map
+  class M extends Map {}
+  ^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

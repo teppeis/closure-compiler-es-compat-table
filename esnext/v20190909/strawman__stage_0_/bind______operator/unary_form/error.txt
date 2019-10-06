@@ -1,0 +1,12 @@
+// strawman (stage 0) / bind (::) operator / unary form
+module.exports = () => {
+var obj = { garply: "bar", foo: function() { this.garply += "foo"; return this; } };
+return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+
+};
+----------------------------------------------------------
+esnext/v20190909/strawman__stage_0_/bind______operator/unary_form/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
+               ^
+
+1 error(s), 0 warning(s)

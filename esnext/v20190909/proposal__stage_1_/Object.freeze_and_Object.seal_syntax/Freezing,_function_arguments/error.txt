@@ -1,0 +1,20 @@
+// proposal (stage 1) / Object.freeze and Object.seal syntax / Freezing, function arguments
+module.exports = () => {
+function foo(# bar, baz #) {
+if (baz === 42) bar = 27;
+return bar + baz;
+}
+if (foo(1, 2) !== 3) return;
+try {
+foo(1, 42);
+} catch (e) {
+return true;
+}
+
+};
+----------------------------------------------------------
+esnext/v20190909/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+function foo(# bar, baz #) {
+             ^
+
+1 error(s), 0 warning(s)
