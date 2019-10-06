@@ -11,7 +11,7 @@ return p('a') === 'ab';
 
 };
 ----------------------------------------------------------
-esnext/v20190909/proposal__stage_1_/partial_application_syntax/runtime_evaluation/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+esnext/v20190929/proposal__stage_1_/partial_application_syntax/runtime_evaluation/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
 var p = f(?, 'b');
           ^
 

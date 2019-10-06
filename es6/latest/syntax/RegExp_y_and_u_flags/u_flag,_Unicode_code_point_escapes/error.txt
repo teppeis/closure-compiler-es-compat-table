@@ -4,7 +4,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190909/syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes/in.js:3: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: {1d306}
+es6/v20190929/syntax/RegExp_y_and_u_flags/u_flag,_Unicode_code_point_escapes/in.js:3: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: {1d306}
   return "𝌆".match(/\u{1d306}/u)[0].length === 2;
                     ^^^^^^^^^^^^
 
