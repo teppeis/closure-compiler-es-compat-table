@@ -5,7 +5,7 @@ return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
 
 };
 ----------------------------------------------------------
-esnext/v20190729/strawman__stage_0_/bind______operator/unary_form/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20190819/strawman__stage_0_/bind______operator/unary_form/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return typeof ::obj.foo === "function" && ::obj.foo().garply === "barfoo";
                ^
 

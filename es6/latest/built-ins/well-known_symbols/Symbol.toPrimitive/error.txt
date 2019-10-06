@@ -12,15 +12,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190729/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'ge' operator is not being used.
+es6/v20190819/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'ge' operator is not being used.
   a >= 0;
   ^^^^^^
 
-es6/v20190729/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+es6/v20190819/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
   b in {};
   ^^^^^^^
 
-es6/v20190729/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
+es6/v20190819/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
   c == 0;
   ^^^^^^
 

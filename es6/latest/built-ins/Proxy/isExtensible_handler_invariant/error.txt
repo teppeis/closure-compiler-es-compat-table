@@ -25,11 +25,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190729/built-ins/Proxy/isExtensible_handler_invariant/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+es6/v20190819/built-ins/Proxy/isExtensible_handler_invariant/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
     Object.isExtensible(new Proxy({}, {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20190729/built-ins/Proxy/isExtensible_handler_invariant/in.js:17: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+es6/v20190819/built-ins/Proxy/isExtensible_handler_invariant/in.js:17: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
     Object.isExtensible(new Proxy(Object.preventExtensions({}), {
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
