@@ -114,5 +114,15 @@
   "2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals",
   "2019_misc/Well-formed_JSON.stringify",
   "2020_features/String.prototype.matchAll",
-  "2020_features/Promise.allSettled"
+  "2020_features/BigInt/basic_functionality",
+  "2020_features/BigInt/constructor",
+  "2020_features/BigInt/BigInt.asUintN",
+  "2020_features/BigInt/BigInt.asIntN",
+  "2020_features/BigInt/BigInt64Array",
+  "2020_features/BigInt/BigUint64Array",
+  "2020_features/BigInt/DataView.prototype.getBigInt64",
+  "2020_features/BigInt/DataView.prototype.getBigUint64",
+  "2020_features/Promise.allSettled",
+  "2020_features/globalThis/globalThis_global_property_is_global_object",
+  "2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor"
 ]
