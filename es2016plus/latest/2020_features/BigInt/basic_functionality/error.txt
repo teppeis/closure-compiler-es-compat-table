@@ -1,0 +1,11 @@
+// 2020 features / BigInt / basic functionality
+module.exports = () => {
+return (1n + 2n) === 3n;
+
+};
+----------------------------------------------------------
+es2016plus/v20190729/2020_features/BigInt/basic_functionality/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+return (1n + 2n) === 3n;
+         ^
+
+1 error(s), 0 warning(s)
