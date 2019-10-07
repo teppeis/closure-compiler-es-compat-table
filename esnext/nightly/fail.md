@@ -1,10 +1,6 @@
 
 ## Candidate (stage 3)
 
-### globalThis
-- "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js))
-- "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
-
 ### WeakReferences
 - WeakRef minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js))
 - Finalizers minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js))
@@ -31,15 +27,8 @@
 ### numeric separators
 - numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/numeric_separators/error.txt))
 
-### BigInt
-- basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/basic_functionality/error.txt))
-- constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/constructor/error.txt))
-- BigInt.asIntN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigInt.asIntN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigInt.asIntN/out.js))
-- BigInt.asUintN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigInt.asUintN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigInt.asUintN/out.js))
-- BigInt64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigInt64Array/error.txt))
-- BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/BigUint64Array/error.txt))
-- DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt))
-- DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt))
+### String.prototype.replaceAll
+- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/String.prototype.replaceAll/out.js))
 
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
@@ -61,9 +50,6 @@
 - parameter initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/parameter_initializers/error.txt))
 - arrow function bodies ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt))
 - conditionals ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/throw_expressions/conditionals/error.txt))
-
-### String.prototype.replaceAll
-- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/String.prototype.replaceAll/out.js))
 
 ### Set methods
 - Set.prototype.intersection ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/Set_methods/Set.prototype.intersection/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/draft__stage_2_/Set_methods/Set.prototype.intersection/out.js))

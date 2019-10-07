@@ -1,5 +1,3 @@
-candidate__stage_3_/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
-candidate__stage_3_/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
 candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
 candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js: ReferenceError: FinalizationGroup is not defined
 candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
@@ -14,14 +12,7 @@ candidate__stage_3_/optional_chaining_operator___._/optional_bracket_access/erro
 candidate__stage_3_/optional_chaining_operator___._/optional_method_call/error.txt: [CompileError]
 candidate__stage_3_/nullish_coalescing_operator_____/error.txt: [CompileError]
 candidate__stage_3_/numeric_separators/error.txt: [CompileError]
-candidate__stage_3_/BigInt/basic_functionality/error.txt: [CompileError]
-candidate__stage_3_/BigInt/constructor/error.txt: [CompileError]
-candidate__stage_3_/BigInt/BigInt.asIntN/out.js: ReferenceError: BigInt is not defined
-candidate__stage_3_/BigInt/BigInt.asUintN/out.js: ReferenceError: BigInt is not defined
-candidate__stage_3_/BigInt/BigInt64Array/error.txt: [CompileError]
-candidate__stage_3_/BigInt/BigUint64Array/error.txt: [CompileError]
-candidate__stage_3_/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
-candidate__stage_3_/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
+candidate__stage_3_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
@@ -31,7 +22,6 @@ draft__stage_2_/throw_expressions/logical/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
 draft__stage_2_/throw_expressions/conditionals/error.txt: [CompileError]
-draft__stage_2_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object [object Object] has no method 'intersection'
 draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
 draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'

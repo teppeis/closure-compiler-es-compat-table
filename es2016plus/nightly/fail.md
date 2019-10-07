@@ -87,3 +87,17 @@
 
 ### String.prototype.matchAll
 - String.prototype.matchAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/out.js))
+
+### BigInt
+- basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/basic_functionality/error.txt))
+- constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/constructor/error.txt))
+- BigInt.asUintN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigInt.asUintN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigInt.asUintN/out.js))
+- BigInt.asIntN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigInt.asIntN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigInt.asIntN/out.js))
+- BigInt64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigInt64Array/error.txt))
+- BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/BigUint64Array/error.txt))
+- DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigInt64/error.txt))
+- DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigUint64/error.txt))
+
+### globalThis
+- "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_is_global_object/out.js))
+- "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))

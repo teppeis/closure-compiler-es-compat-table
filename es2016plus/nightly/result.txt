@@ -113,4 +113,14 @@
 2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
 2020_features/String.prototype.matchAll/out.js: TypeError: Object 11a2bb has no method 'matchAll'
+2020_features/BigInt/basic_functionality/error.txt: [CompileError]
+2020_features/BigInt/constructor/error.txt: [CompileError]
+2020_features/BigInt/BigInt.asUintN/out.js: ReferenceError: BigInt is not defined
+2020_features/BigInt/BigInt.asIntN/out.js: ReferenceError: BigInt is not defined
+2020_features/BigInt/BigInt64Array/error.txt: [CompileError]
+2020_features/BigInt/BigUint64Array/error.txt: [CompileError]
+2020_features/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
+2020_features/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
 2020_features/Promise.allSettled/out.js: [Pass]
+2020_features/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
+2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
