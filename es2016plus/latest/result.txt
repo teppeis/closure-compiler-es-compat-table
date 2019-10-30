@@ -122,6 +122,6 @@
 2020_features/BigInt/BigUint64Array/error.txt: [CompileError]
 2020_features/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
 2020_features/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
-2020_features/Promise.allSettled/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'allSettled'
+2020_features/Promise.allSettled/out.js: [Pass]
 2020_features/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
 2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled

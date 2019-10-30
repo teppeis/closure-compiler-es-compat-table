@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190929/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
+es6/v20191027/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
   with (a) {
   ^^^^^^^^^^
 

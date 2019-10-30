@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20190929/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20191027/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

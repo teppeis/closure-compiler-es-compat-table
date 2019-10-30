@@ -7,7 +7,7 @@ return view[0] === 0n;
 
 };
 ----------------------------------------------------------
-es2016plus/v20190929/2020_features/BigInt/BigUint64Array/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/v20191027/2020_features/BigInt/BigUint64Array/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 view[0] = 0x10000000000000000n;
                              ^
 

@@ -7,7 +7,7 @@ return 123i === 'string123number123';
 
 };
 ----------------------------------------------------------
-esnext/v20190929/proposal__stage_1_/extensible_numeric_literals/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+esnext/v20191027/proposal__stage_1_/extensible_numeric_literals/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 return 123i === 'string123number123';
           ^
 

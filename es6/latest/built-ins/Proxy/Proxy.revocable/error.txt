@@ -12,7 +12,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20190929/built-ins/Proxy/Proxy.revocable/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20191027/built-ins/Proxy/Proxy.revocable/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
     obj.proxy.foo;
     ^^^^^^^^^^^^^
 

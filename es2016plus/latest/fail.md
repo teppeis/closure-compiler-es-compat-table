@@ -99,9 +99,6 @@
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/DataView.prototype.getBigInt64/error.txt))
 - DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/DataView.prototype.getBigUint64/error.txt))
 
-### Promise.allSettled
-- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/Promise.allSettled/out.js))
-
 ### globalThis
 - "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_is_global_object/out.js))
 - "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
