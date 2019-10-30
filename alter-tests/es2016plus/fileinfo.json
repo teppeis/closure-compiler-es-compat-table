@@ -666,9 +666,16 @@
     "test": "Well-formed JSON.stringify"
   },
   {
-    "path": "2020_features/String.prototype.matchAll",
+    "path": "2020_features/String.prototype.matchAll/basic_functionality",
     "category": "2020 features",
-    "test": "String.prototype.matchAll"
+    "test": "String.prototype.matchAll",
+    "subtest": "basic functionality"
+  },
+  {
+    "path": "2020_features/String.prototype.matchAll/throws_on_non-global_regex",
+    "category": "2020 features",
+    "test": "String.prototype.matchAll",
+    "subtest": "throws on non-global regex"
   },
   {
     "path": "2020_features/BigInt/basic_functionality",

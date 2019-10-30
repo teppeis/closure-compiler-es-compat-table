@@ -87,6 +87,11 @@
     "test": "String.prototype.replaceAll"
   },
   {
+    "path": "candidate__stage_3_/Promise.any",
+    "category": "candidate (stage 3)",
+    "test": "Promise.any"
+  },
+  {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
@@ -193,9 +198,231 @@
     "subtest": "ArrayBuffer.prototype.realloc()"
   },
   {
-    "path": "draft__stage_2_/Promise.any",
+    "path": "draft__stage_2_/Map.prototype.upsert/Map.prototype.upsert",
     "category": "draft (stage 2)",
-    "test": "Promise.any"
+    "test": "Map.prototype.upsert",
+    "subtest": "Map.prototype.upsert"
+  },
+  {
+    "path": "draft__stage_2_/Map.prototype.upsert/WeakMap.prototype.upsert",
+    "category": "draft (stage 2)",
+    "test": "Map.prototype.upsert",
+    "subtest": "WeakMap.prototype.upsert"
+  },
+  {
+    "path": "draft__stage_2_/Array.isTemplateObject",
+    "category": "draft (stage 2)",
+    "test": "Array.isTemplateObject"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/instanceof_Iterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "instanceof Iterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/extends_Iterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "extends Iterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.from,_iterable",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.from, iterable"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.from,_iterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.from, iterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.asIndexedPairs",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.asIndexedPairs"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.drop",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.drop"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.every",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.every"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.filter",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.filter"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.find",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.find"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.flatMap",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.flatMap"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.forEach",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.forEach"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.map",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.map"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.reduce",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.reduce"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.some",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.some"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.take",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.take"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype.toArray",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype.toArray"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/Iterator.prototype___toStringTag_",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "Iterator.prototype[@@toStringTag]"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/instanceof_AsyncIterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "instanceof AsyncIterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/extends_AsyncIterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "extends AsyncIterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_async_iterable",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.from, async iterable"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterable",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.from, iterable"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterator",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.from, iterator"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.asIndexedPairs",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.asIndexedPairs"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.drop",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.drop"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.every",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.every"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.filter",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.filter"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.find",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.find"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.flatMap",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.flatMap"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.forEach",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.forEach"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.map",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.map"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.reduce",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.reduce"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.some",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.some"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.take"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype.toArray"
+  },
+  {
+    "path": "draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_",
+    "category": "draft (stage 2)",
+    "test": "Iterator Helpers",
+    "subtest": "AsyncIterator.prototype[@@toStringTag]"
   },
   {
     "path": "proposal__stage_1_/do_expressions",
