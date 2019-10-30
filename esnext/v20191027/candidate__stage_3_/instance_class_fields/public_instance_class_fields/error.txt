@@ -1,0 +1,14 @@
+// candidate (stage 3) / instance class fields / public instance class fields
+module.exports = () => {
+class C {
+x = 'x';
+}
+return new C().x === 'x';
+
+};
+----------------------------------------------------------
+esnext/v20191027/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+x = 'x';
+  ^
+
+1 error(s), 0 warning(s)

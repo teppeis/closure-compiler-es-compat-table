@@ -24,7 +24,7 @@
     "faastjs": "^3.0.11",
     "fs-readdir-recursive": "^1.1.0",
     "glob": "^7.1.5",
-    "google-closure-compiler": "^20190929.0.0",
+    "google-closure-compiler": "^20191027.0.0",
     "humanize-string": "^2.1.0",
     "meow": "^5.0.0",
     "mkdirp": "^0.5.1",
