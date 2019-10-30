@@ -13,18 +13,12 @@ $ git submodule --init update
 $ npm install
 ```
 
-### Required
-
-- Node.js v8+
-- Java 8+
-- Python for [closure-gun](https://www.npmjs.com/package/@teppeis/closure-gun)
-
 ## Update tests
 
 Import new tests from `compat-table`
 
 ```console
-$ ./update-tests.js es6
+$ ./update-tests.js
 ```
 
 ## Run tests and update result
