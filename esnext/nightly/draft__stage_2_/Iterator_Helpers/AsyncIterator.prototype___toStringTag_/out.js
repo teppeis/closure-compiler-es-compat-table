@@ -69,15 +69,7 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 module.exports = function() {
-  var a = "11a2bb".matchAll(/(\d)(\D)/g);
   $jscomp.initSymbol();
-  $jscomp.initSymbolIterator();
-  if (a[Symbol.iterator]() !== a) {
-    return !1;
-  }
-  for (var b = "", c = "", e = "", d; !(d = a.next()).done;) {
-    b += d.value[0], c += d.value[1], e += d.value[2];
-  }
-  return "1a2b" === b && "12" === c && "ab" === e;
+  return "AsyncIterator" === AsyncIterator.prototype[Symbol.toStringTag];
 };
 

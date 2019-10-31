@@ -1,4 +1,4 @@
-// draft (stage 2) / Promise.any
+// candidate (stage 3) / Promise.any
 module.exports = (asyncTestPassed) => {
   Promise.any([
     Promise.resolve(1),
