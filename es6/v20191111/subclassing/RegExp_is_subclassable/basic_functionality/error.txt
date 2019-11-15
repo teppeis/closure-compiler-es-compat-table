@@ -1,0 +1,13 @@
+// subclassing / RegExp is subclassable / basic functionality
+module.exports = () => {
+  class R extends RegExp {}
+  var r = new R("baz","g");
+  return r.global && r.source === "baz";
+
+};
+----------------------------------------------------------
+es6/v20191111/subclassing/RegExp_is_subclassable/basic_functionality/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: RegExp
+  class R extends RegExp {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

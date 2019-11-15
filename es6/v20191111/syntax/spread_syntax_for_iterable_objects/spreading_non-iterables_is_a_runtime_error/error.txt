@@ -1,0 +1,15 @@
+// syntax / spread syntax for iterable objects / spreading non-iterables is a runtime error
+module.exports = () => {
+  try {
+    Math.max(...2);
+  } catch(e) {
+    return Math.max(...[1, 2, 3]) === 3;
+  }
+
+};
+----------------------------------------------------------
+es6/v20191111/syntax/spread_syntax_for_iterable_objects/spreading_non-iterables_is_a_runtime_error/in.js:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Math.max' is not being used.
+    Math.max(...2);
+    ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
