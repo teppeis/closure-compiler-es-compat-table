@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20191027/subclassing/Array_is_subclassable/Array.prototype.slice/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Array
+es6/v20191111/subclassing/Array_is_subclassable/Array.prototype.slice/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Array
   class C extends Array {}
   ^^^^^^^^^^^^^^^^^^^^^^^^
 

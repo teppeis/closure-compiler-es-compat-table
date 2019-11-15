@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20191027/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20191111/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var actualGlobal = Function('return this')();
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
