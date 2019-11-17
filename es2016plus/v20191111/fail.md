@@ -46,8 +46,8 @@
 ## 2018 features
 
 ### object rest/spread properties
-- object rest properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_rest_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_rest_properties/out.js))
-- object spread properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_spread_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_spread_properties/out.js))
+- object rest properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_rest_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_rest_properties/out.js)): https://github.com/google/closure-compiler/issues/3139
+- object spread properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_spread_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/object_rest_spread_properties/object_spread_properties/out.js)): https://github.com/google/closure-compiler/issues/3139
 
 ### s (dotAll) flag for regular expressions
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20191111/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
