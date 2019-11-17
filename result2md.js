@@ -65,23 +65,50 @@ function escapeDirAsUrl(dir) {
 
 // const output = [`# ES2015`];
 const output = [];
-const skipCategories = new Set(["subclassing"]);
-const skipTests = new Set(["shared memory and atomics"]);
-const skipSubtests = new Set([
-  "Reflect.construct, Array subclassing",
-  "Reflect.construct, RegExp subclassing",
-  "Reflect.construct, Function subclassing",
-  "new Function() support",
-  "defaults, new Function() support",
+const skipPathPrefixes = [
+  "subclassing/",
+  "built-ins/Proxy/",
+  "built-ins/typed_arrays/",
+  "misc/Proxy,",
+  "2017_features/shared_memory_and_atomics/",
+  "2016_misc/Proxy",
+  "2017_misc/Proxy",
+  "2017_annex_b/Proxy",
+];
+const skipPaths = new Set([
+  "built-ins/Reflect/Reflect.construct,_Array_subclassing",
+  "built-ins/Reflect/Reflect.construct,_RegExp_subclassing",
+  "built-ins/Reflect/Reflect.construct,_Function_subclassing",
+  "syntax/default_function_parameters/new_Function___support",
+  "syntax/rest_parameters/new_Function___support",
+  "syntax/destructuring,_parameters/new_Function___support",
+  "syntax/destructuring,_parameters/defaults,_new_Function___support",
 ]);
+const refs = [
+  {
+    pattern: new RegExp("^2018_features/object_rest_spread_properties/"),
+    refUrl: "https://github.com/google/closure-compiler/issues/3139",
+  },
+  {
+    pattern: /\biterator_closing\b/,
+    refUrl: "https://github.com/google/closure-compiler/issues/2958",
+  },
+  {
+    pattern: new RegExp("/constructor_requires_new$"),
+    refUrl: "https://github.com/google/closure-compiler/issues/2919",
+  },
+  {
+    pattern: new RegExp("^built-in_extensions/String_static_methods/String.raw$"),
+    refUrl: "https://github.com/google/closure-compiler/issues/3136",
+  },
+];
 let prevCategory = null;
 let prevTest = null;
 failedFileInfo
   .filter(info => !!info)
-  .filter(({ category }) => !skipCategories.has(category.toLowerCase()))
-  .filter(({ test }) => !test.startsWith("Proxy") && !skipTests.has(test))
-  .filter(({ subtest }) => !skipSubtests.has(subtest))
-  .forEach(({ category, test, subtest, url }) => {
+  .filter(({ path }) => !skipPathPrefixes.some(prefix => path.startsWith(prefix)))
+  .filter(({ path }) => !skipPaths.has(path))
+  .forEach(({ path: testPath, category, test, subtest, url }) => {
     if (prevCategory !== category) {
       output.push(`\n## ${humanize(category)}`);
       prevCategory = category;
@@ -90,20 +117,22 @@ failedFileInfo
       output.push(`\n### ${test}`);
       prevTest = test;
     }
-    if (test === "typed arrays") {
-      return;
-    }
     let subtestName = subtest;
     if (!subtest) {
       subtestName = test;
     }
+    let ref = "";
+    const { refUrl } = refs.find(ref => ref.pattern.test(testPath)) || {};
+    if (refUrl) {
+      ref = `: ${refUrl}`;
+    }
     if (/error\.txt$/.test(url)) {
       // compile error
-      output.push(`- ${subtestName} ([compile error](${url}))`);
+      output.push(`- ${subtestName} ([compile error](${url}))${ref}`);
     } else {
       // invalid transpile or not implemented
       const input = `${path.dirname(url)}/in.js`;
-      output.push(`- ${subtestName} ([in](${input})/[out](${url}))`);
+      output.push(`- ${subtestName} ([in](${input})/[out](${url}))${ref}`);
     }
   });
 
