@@ -25,8 +25,8 @@
 
 ### for..of loops
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/with_astral_plane_strings/out.js))
-- iterator closing, break ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_break/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_break/out.js))
-- iterator closing, throw ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_throw/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_throw/out.js))
+- iterator closing, break ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_break/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_break/out.js)): https://github.com/google/closure-compiler/issues/2958
+- iterator closing, throw ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_throw/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/for..of_loops/iterator_closing%2C_throw/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### octal and binary literals
 - octal supported by Number() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/octal_and_binary_literals/octal_supported_by_Number__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/octal_and_binary_literals/octal_supported_by_Number__/out.js))
@@ -46,15 +46,15 @@
 
 ### destructuring, declarations
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/with_astral_plane_strings/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/out.js))
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### destructuring, assignment
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/with_astral_plane_strings/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/out.js))
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### destructuring, parameters
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/with_astral_plane_strings/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/out.js))
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### Unicode code point escapes
 - in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_identifiers/out.js))
@@ -86,7 +86,7 @@
 - computed names, temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/computed_names%2C_temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/computed_names%2C_temporal_dead_zone/out.js))
 - methods aren't enumerable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/methods_arent_enumerable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/methods_arent_enumerable/out.js))
 - implicit strict mode ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/implicit_strict_mode/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/implicit_strict_mode/out.js))
-- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/constructor_requires_new/out.js))
+- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/constructor_requires_new/out.js)): https://github.com/google/closure-compiler/issues/2919
 - extends null ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/extends_null/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/extends_null/out.js))
 - new.target ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/new.target/error.txt))
 
@@ -105,28 +105,26 @@
 
 ## Built ins
 
-### typed arrays
-
 ### Map
-- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/constructor_requires_new/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/iterator_closing/out.js))
+- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/constructor_requires_new/out.js)): https://github.com/google/closure-compiler/issues/2919
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 - Map iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/Map_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/Map_iterator_prototype_chain/out.js))
 - Map[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/Map_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Map/Map_Symbol.species_/out.js))
 
 ### Set
-- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/constructor_requires_new/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/iterator_closing/out.js))
+- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/constructor_requires_new/out.js)): https://github.com/google/closure-compiler/issues/2919
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 - Set iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/Set_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/Set_iterator_prototype_chain/out.js))
 - Set[Symbol.species] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/Set_Symbol.species_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Set/Set_Symbol.species_/out.js))
 
 ### WeakMap
-- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/constructor_requires_new/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/iterator_closing/out.js))
+- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/constructor_requires_new/out.js)): https://github.com/google/closure-compiler/issues/2919
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 - WeakMap.prototype isn't an instance ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/WeakMap.prototype_isnt_an_instance/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakMap/WeakMap.prototype_isnt_an_instance/out.js))
 
 ### WeakSet
-- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/constructor_requires_new/out.js))
-- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/iterator_closing/out.js))
+- constructor requires new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/constructor_requires_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/constructor_requires_new/out.js)): https://github.com/google/closure-compiler/issues/2919
+- iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/WeakSet/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### Reflect
 - Reflect.ownKeys, symbol keys ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Reflect/Reflect.ownKeys%2C_symbol_keys/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-ins/Reflect/Reflect.ownKeys%2C_symbol_keys/out.js))
@@ -199,7 +197,7 @@
 - isn't writable, is configurable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/isnt_writable%2C_is_configurable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/isnt_writable%2C_is_configurable/out.js))
 
 ### String static methods
-- String.raw ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/out.js))
+- String.raw ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/out.js)): https://github.com/google/closure-compiler/issues/3136
 
 ### String.prototype methods
 - String.prototype.normalize ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype.normalize/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype.normalize/out.js))
