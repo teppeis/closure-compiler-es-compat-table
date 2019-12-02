@@ -317,11 +317,6 @@
     "subtest": "Atomics.xor"
   },
   {
-    "path": "2017_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets__ES_2017_semantics_",
-    "category": "2017 misc",
-    "test": "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets (ES 2017 semantics)"
-  },
-  {
     "path": "2017_misc/RegExp_u_flag,_case_folding",
     "category": "2017 misc",
     "test": "RegExp \"u\" flag, case folding"
@@ -517,6 +512,11 @@
     "category": "2018 features",
     "test": "Asynchronous Iterators",
     "subtest": "for-await-of loops"
+  },
+  {
+    "path": "2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets",
+    "category": "2018 misc",
+    "test": "Proxy \"ownKeys\" handler, duplicate keys for non-extensible targets"
   },
   {
     "path": "2018_misc/template_literal_revision",
