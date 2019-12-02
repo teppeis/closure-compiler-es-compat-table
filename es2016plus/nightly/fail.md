@@ -61,6 +61,11 @@
 ### RegExp Unicode Property Escapes
 - RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
 
+## 2018 misc
+
+### Proxy "ownKeys" handler, duplicate keys for non-extensible targets
+- Proxy "ownKeys" handler, duplicate keys for non-extensible targets ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/out.js))
+
 ## 2019 features
 
 ### Array.prototype.{flat, flatMap}
