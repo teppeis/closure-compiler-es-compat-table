@@ -17,7 +17,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[d] = e.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -130,20 +130,20 @@ $jscomp.polyfill("Promise", function(a) {
     }
     this.batch_ = null;
   };
-  d.prototype.asyncThrow_ = function(a) {
+  d.prototype.asyncThrow_ = function(b) {
     this.asyncExecuteFunction(function() {
-      throw a;
+      throw b;
     });
   };
-  var c = function(a) {
+  var c = function(b) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var b = this.createResolveAndReject_();
+    var a = this.createResolveAndReject_();
     try {
-      a(b.resolve, b.reject);
+      b(a.resolve, a.reject);
     } catch (g) {
-      b.reject(g);
+      a.reject(g);
     }
   };
   c.prototype.createResolveAndReject_ = function() {

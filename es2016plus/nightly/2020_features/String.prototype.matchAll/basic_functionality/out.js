@@ -17,7 +17,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -68,6 +68,40 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.polyfill = function(a, b, c, d) {
+  if (b) {
+    c = $jscomp.global;
+    a = a.split(".");
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in c || (c[e] = {});
+      c = c[e];
+    }
+    a = a[a.length - 1];
+    d = c[a];
+    b = b(d);
+    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  }
+};
+$jscomp.polyfill("String.prototype.matchAll", function(a) {
+  return a ? a : function(a) {
+    var b = a instanceof RegExp && !a.global, d = new RegExp(a, a instanceof RegExp ? void 0 : "g"), e = this, f = !1;
+    return {next:function() {
+      var a = {}, c = d.lastIndex;
+      if (f) {
+        return {value:void 0, done:!0};
+      }
+      var g = d.exec(e);
+      if (!g) {
+        return f = !0, {value:void 0, done:!0};
+      }
+      b ? f = !0 : d.lastIndex === c && (d.lastIndex += 1);
+      a.value = g;
+      a.done = !1;
+      return a;
+    }};
+  };
+}, "es_next", "es3");
 module.exports = function() {
   var a = "11a2bb".matchAll(/(\d)(\D)/g);
   $jscomp.initSymbol();
@@ -75,9 +109,9 @@ module.exports = function() {
   if (a[Symbol.iterator]() !== a) {
     return !1;
   }
-  for (var b = "", c = "", e = "", d; !(d = a.next()).done;) {
-    b += d.value[0], c += d.value[1], e += d.value[2];
+  for (var b = "", c = "", d = "", e; !(e = a.next()).done;) {
+    b += e.value[0], c += e.value[1], d += e.value[2];
   }
-  return "1a2b" === b && "12" === c && "ab" === e;
+  return "1a2b" === b && "12" === c && "ab" === d;
 };
 

@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(c) {
   return d ? d.call(c) : $jscomp.arrayIterator(c);
 };
 $jscomp.getGlobal = function(c) {
-  return "undefined" != typeof window && window === c ? c : "undefined" != typeof global && null != global ? global : c;
+  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : c;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;
