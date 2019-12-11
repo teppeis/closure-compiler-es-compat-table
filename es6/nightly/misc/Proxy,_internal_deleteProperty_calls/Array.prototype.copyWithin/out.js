@@ -8,22 +8,22 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[d] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : a;
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, d, b, c) {
+$jscomp.polyfill = function(a, d, b, f) {
   if (d) {
     b = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var f = a[c];
-      f in b || (b[f] = {});
-      b = b[f];
+    for (f = 0; f < a.length - 1; f++) {
+      var c = a[f];
+      c in b || (b[c] = {});
+      b = b[c];
     }
     a = a[a.length - 1];
-    c = b[a];
-    d = d(c);
-    d != c && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+    f = b[a];
+    d = d(f);
+    d != f && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
   }
 };
 $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
@@ -31,21 +31,21 @@ $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
     b = Number(b);
     return Infinity === b || -Infinity === b ? b : b | 0;
   }
-  return a ? a : function(b, c, a) {
+  return a ? a : function(b, a, c) {
     var e = this.length;
     b = d(b);
-    c = d(c);
-    a = void 0 === a ? e : d(a);
+    a = d(a);
+    c = void 0 === c ? e : d(c);
     b = 0 > b ? Math.max(e + b, 0) : Math.min(b, e);
-    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
     a = 0 > a ? Math.max(e + a, 0) : Math.min(a, e);
-    if (b < c) {
-      for (; c < a;) {
-        c in this ? this[b++] = this[c++] : (delete this[b++], c++);
+    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
+    if (b < a) {
+      for (; a < c;) {
+        a in this ? this[b++] = this[a++] : (delete this[b++], a++);
       }
     } else {
-      for (a = Math.min(a, e + c - b), b += a - c; a > c;) {
-        --a in this ? this[--b] = this[a] : delete this[--b];
+      for (c = Math.min(c, e + a - b), b += c - a; c > a;) {
+        --c in this ? this[--b] = this[c] : delete this[--b];
       }
     }
     return this;

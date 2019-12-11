@@ -17,7 +17,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : a;
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -85,21 +85,24 @@ $jscomp.polyfill = function(a, b, c, d) {
 };
 $jscomp.polyfill("String.prototype.matchAll", function(a) {
   return a ? a : function(a) {
-    var b = a instanceof RegExp && !a.global, d = new RegExp(a, a instanceof RegExp ? void 0 : "g"), e = this, f = !1;
-    return {next:function() {
+    var b = a instanceof RegExp && !a.global, d = new RegExp(a, a instanceof RegExp ? void 0 : "g"), e = this, g = !1, f = {next:function() {
       var a = {}, c = d.lastIndex;
-      if (f) {
+      if (g) {
         return {value:void 0, done:!0};
       }
-      var g = d.exec(e);
-      if (!g) {
-        return f = !0, {value:void 0, done:!0};
+      var f = d.exec(e);
+      if (!f) {
+        return g = !0, {value:void 0, done:!0};
       }
-      b ? f = !0 : d.lastIndex === c && (d.lastIndex += 1);
-      a.value = g;
+      b ? g = !0 : d.lastIndex === c && (d.lastIndex += 1);
+      a.value = f;
       a.done = !1;
       return a;
     }};
+    f[Symbol.iterator] = function() {
+      return f;
+    };
+    return f;
   };
 }, "es_next", "es3");
 module.exports = function() {

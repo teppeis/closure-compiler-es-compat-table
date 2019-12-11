@@ -1,15 +1,15 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(b) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : b;
+  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
   try {
-    var b = {}, e = Object.create(new $jscomp.global.Proxy(b, {get:function(f, c, h) {
-      return f == b && "q" == c && h == e;
+    var b = {}, d = Object.create(new $jscomp.global.Proxy(b, {get:function(f, c, k) {
+      return f == b && "q" == c && k == d;
     }}));
-    return !0 === e.q;
+    return !0 === d.q;
   } catch (f) {
     return !1;
   }
@@ -17,9 +17,9 @@ $jscomp.checkEs6ConformanceViaProxy = function() {
 $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
 $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.arrayIteratorImpl = function(b) {
-  var e = 0;
+  var d = 0;
   return function() {
-    return e < b.length ? {done:!1, value:b[e++]} : {done:!0};
+    return d < b.length ? {done:!1, value:b[d++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -29,8 +29,8 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, e, f) {
-  b != Array.prototype && b != Object.prototype && (b[e] = f.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, d, f) {
+  b != Array.prototype && b != Object.prototype && (b[d] = f.value);
 };
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
@@ -38,9 +38,9 @@ $jscomp.initSymbol = function() {
   };
   $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
-$jscomp.SymbolClass = function(b, e) {
+$jscomp.SymbolClass = function(b, d) {
   this.$jscomp$symbol$id_ = b;
-  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:e});
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:d});
 };
 $jscomp.SymbolClass.prototype.toString = function() {
   return this.$jscomp$symbol$id_;
@@ -50,9 +50,9 @@ $jscomp.Symbol = function() {
     if (this instanceof b) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (f || "") + "_" + e++, f);
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (f || "") + "_" + d++, f);
   }
-  var e = 0;
+  var d = 0;
   return b;
 }();
 $jscomp.initSymbolIterator = function() {
@@ -81,40 +81,40 @@ $jscomp.iteratorPrototype = function(b) {
   return b;
 };
 $jscomp.makeIterator = function(b) {
-  var e = "undefined" != typeof Symbol && Symbol.iterator && b[Symbol.iterator];
-  return e ? e.call(b) : $jscomp.arrayIterator(b);
+  var d = "undefined" != typeof Symbol && Symbol.iterator && b[Symbol.iterator];
+  return d ? d.call(b) : $jscomp.arrayIterator(b);
 };
-$jscomp.owns = function(b, e) {
-  return Object.prototype.hasOwnProperty.call(b, e);
+$jscomp.owns = function(b, d) {
+  return Object.prototype.hasOwnProperty.call(b, d);
 };
-$jscomp.polyfill = function(b, e, f, c) {
-  if (e) {
+$jscomp.polyfill = function(b, d, f, c) {
+  if (d) {
     f = $jscomp.global;
     b = b.split(".");
     for (c = 0; c < b.length - 1; c++) {
-      var h = b[c];
-      h in f || (f[h] = {});
-      f = f[h];
+      var k = b[c];
+      k in f || (f[k] = {});
+      f = f[k];
     }
     b = b[b.length - 1];
     c = f[b];
-    e = e(c);
-    e != c && null != e && $jscomp.defineProperty(f, b, {configurable:!0, writable:!0, value:e});
+    d = d(c);
+    d != c && null != d && $jscomp.defineProperty(f, b, {configurable:!0, writable:!0, value:d});
   }
 };
 $jscomp.polyfill("WeakMap", function(b) {
-  function e() {
+  function d() {
     if (!b || !Object.seal) {
       return !1;
     }
     try {
-      var d = Object.seal({}), a = Object.seal({}), l = new b([[d, 2], [a, 3]]);
-      if (2 != l.get(d) || 3 != l.get(a)) {
+      var e = Object.seal({}), a = Object.seal({}), m = new b([[e, 2], [a, 3]]);
+      if (2 != m.get(e) || 3 != m.get(a)) {
         return !1;
       }
-      l.delete(d);
-      l.set(a, 4);
-      return !l.has(d) && 4 == l.get(a);
+      m.delete(e);
+      m.set(a, 4);
+      return !m.has(e) && 4 == m.get(a);
     } catch (p) {
       return !1;
     }
@@ -122,23 +122,23 @@ $jscomp.polyfill("WeakMap", function(b) {
   function f() {
   }
   function c(a) {
-    var d = typeof a;
-    return "object" === d && null !== a || "function" === d;
-  }
-  function h(a) {
-    if (!$jscomp.owns(a, g)) {
-      var d = new f;
-      $jscomp.defineProperty(a, g, {value:d});
-    }
+    var e = typeof a;
+    return "object" === e && null !== a || "function" === e;
   }
   function k(a) {
-    var d = Object[a];
-    d && (Object[a] = function(a) {
+    if (!$jscomp.owns(a, h)) {
+      var e = new f;
+      $jscomp.defineProperty(a, h, {value:e});
+    }
+  }
+  function l(a) {
+    var e = Object[a];
+    e && (Object[a] = function(a) {
       if (a instanceof f) {
         return a;
       }
-      h(a);
-      return d(a);
+      k(a);
+      return e(a);
     });
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
@@ -146,20 +146,20 @@ $jscomp.polyfill("WeakMap", function(b) {
       return b;
     }
   } else {
-    if (e()) {
+    if (d()) {
       return b;
     }
   }
-  var g = "$jscomp_hidden_" + Math.random();
-  k("freeze");
-  k("preventExtensions");
-  k("seal");
+  var h = "$jscomp_hidden_" + Math.random();
+  l("freeze");
+  l("preventExtensions");
+  l("seal");
   var n = 0, a = function(a) {
     this.id_ = (n += Math.random() + 1).toString();
     if (a) {
       a = $jscomp.makeIterator(a);
-      for (var d; !(d = a.next()).done;) {
-        d = d.value, this.set(d[0], d[1]);
+      for (var b; !(b = a.next()).done;) {
+        b = b.value, this.set(b[0], b[1]);
       }
     }
   };
@@ -167,42 +167,42 @@ $jscomp.polyfill("WeakMap", function(b) {
     if (!c(a)) {
       throw Error("Invalid WeakMap key");
     }
-    h(a);
-    if (!$jscomp.owns(a, g)) {
+    k(a);
+    if (!$jscomp.owns(a, h)) {
       throw Error("WeakMap key fail: " + a);
     }
-    a[g][this.id_] = b;
+    a[h][this.id_] = b;
     return this;
   };
   a.prototype.get = function(a) {
-    return c(a) && $jscomp.owns(a, g) ? a[g][this.id_] : void 0;
+    return c(a) && $jscomp.owns(a, h) ? a[h][this.id_] : void 0;
   };
   a.prototype.has = function(a) {
-    return c(a) && $jscomp.owns(a, g) && $jscomp.owns(a[g], this.id_);
+    return c(a) && $jscomp.owns(a, h) && $jscomp.owns(a[h], this.id_);
   };
   a.prototype.delete = function(a) {
-    return c(a) && $jscomp.owns(a, g) && $jscomp.owns(a[g], this.id_) ? delete a[g][this.id_] : !1;
+    return c(a) && $jscomp.owns(a, h) && $jscomp.owns(a[h], this.id_) ? delete a[h][this.id_] : !1;
   };
   return a;
 }, "es6", "es3");
 $jscomp.MapEntry = function() {
 };
 $jscomp.polyfill("Map", function(b) {
-  function e() {
+  function d() {
     if ($jscomp.ASSUME_NO_NATIVE_MAP || !b || "function" != typeof b || !b.prototype.entries || "function" != typeof Object.seal) {
       return !1;
     }
     try {
-      var a = Object.seal({x:4}), d = new b($jscomp.makeIterator([[a, "s"]]));
-      if ("s" != d.get(a) || 1 != d.size || d.get({x:4}) || d.set({x:4}, "t") != d || 2 != d.size) {
+      var a = Object.seal({x:4}), e = new b($jscomp.makeIterator([[a, "s"]]));
+      if ("s" != e.get(a) || 1 != e.size || e.get({x:4}) || e.set({x:4}, "t") != e || 2 != e.size) {
         return !1;
       }
-      var m = d.entries(), c = m.next();
+      var g = e.entries(), c = g.next();
       if (c.done || c.value[0] != a || "s" != c.value[1]) {
         return !1;
       }
-      c = m.next();
-      return c.done || 4 != c.value[0].x || "t" != c.value[1] || !m.next().done ? !1 : !0;
+      c = g.next();
+      return c.done || 4 != c.value[0].x || "t" != c.value[1] || !g.next().done ? !1 : !0;
     } catch (p) {
       return !1;
     }
@@ -212,14 +212,14 @@ $jscomp.polyfill("Map", function(b) {
       return b;
     }
   } else {
-    if (e()) {
+    if (d()) {
       return b;
     }
   }
   $jscomp.initSymbolIterator();
   var f = new WeakMap, c = function(a) {
     this.data_ = {};
-    this.head_ = g();
+    this.head_ = h();
     this.size = 0;
     if (a) {
       a = $jscomp.makeIterator(a);
@@ -230,48 +230,48 @@ $jscomp.polyfill("Map", function(b) {
   };
   c.prototype.set = function(a, b) {
     a = 0 === a ? 0 : a;
-    var d = h(this, a);
-    d.list || (d.list = this.data_[d.id] = []);
-    d.entry ? d.entry.value = b : (d.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:a, value:b}, d.list.push(d.entry), this.head_.previous.next = d.entry, this.head_.previous = d.entry, this.size++);
+    var g = k(this, a);
+    g.list || (g.list = this.data_[g.id] = []);
+    g.entry ? g.entry.value = b : (g.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:a, value:b}, g.list.push(g.entry), this.head_.previous.next = g.entry, this.head_.previous = g.entry, this.size++);
     return this;
   };
   c.prototype.delete = function(a) {
-    a = h(this, a);
+    a = k(this, a);
     return a.entry && a.list ? (a.list.splice(a.index, 1), a.list.length || delete this.data_[a.id], a.entry.previous.next = a.entry.next, a.entry.next.previous = a.entry.previous, a.entry.head = null, this.size--, !0) : !1;
   };
   c.prototype.clear = function() {
     this.data_ = {};
-    this.head_ = this.head_.previous = g();
+    this.head_ = this.head_.previous = h();
     this.size = 0;
   };
   c.prototype.has = function(a) {
-    return !!h(this, a).entry;
+    return !!k(this, a).entry;
   };
   c.prototype.get = function(a) {
-    return (a = h(this, a).entry) && a.value;
+    return (a = k(this, a).entry) && a.value;
   };
   c.prototype.entries = function() {
-    return k(this, function(a) {
+    return l(this, function(a) {
       return [a.key, a.value];
     });
   };
   c.prototype.keys = function() {
-    return k(this, function(a) {
+    return l(this, function(a) {
       return a.key;
     });
   };
   c.prototype.values = function() {
-    return k(this, function(a) {
+    return l(this, function(a) {
       return a.value;
     });
   };
   c.prototype.forEach = function(a, b) {
-    for (var d = this.entries(), c; !(c = d.next()).done;) {
+    for (var g = this.entries(), c; !(c = g.next()).done;) {
       c = c.value, a.call(b, c[1], c[0], this);
     }
   };
   c.prototype[Symbol.iterator] = c.prototype.entries;
-  var h = function(a, b) {
+  var k = function(a, b) {
     var c = b && typeof b;
     "object" == c || "function" == c ? f.has(b) ? c = f.get(b) : (c = "" + ++n, f.set(b, c)) : c = "p_" + b;
     var d = a.data_[c];
@@ -284,7 +284,7 @@ $jscomp.polyfill("Map", function(b) {
       }
     }
     return {id:c, list:d, index:-1, entry:void 0};
-  }, k = function(a, b) {
+  }, l = function(a, b) {
     var c = a.head_;
     return $jscomp.iteratorPrototype(function() {
       if (c) {
@@ -298,7 +298,7 @@ $jscomp.polyfill("Map", function(b) {
       }
       return {done:!0, value:void 0};
     });
-  }, g = function() {
+  }, h = function() {
     var a = {};
     return a.previous = a.next = a.head = a;
   }, n = 0;

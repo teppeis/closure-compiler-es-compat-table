@@ -1,11 +1,11 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.checkStringArgs = function(a, b, c) {
+$jscomp.checkStringArgs = function(a, c, b) {
   if (null == a) {
-    throw new TypeError("The 'this' value for String.prototype." + c + " must not be null or undefined");
+    throw new TypeError("The 'this' value for String.prototype." + b + " must not be null or undefined");
   }
-  if (b instanceof RegExp) {
-    throw new TypeError("First argument to String.prototype." + c + " must not be a regular expression");
+  if (c instanceof RegExp) {
+    throw new TypeError("First argument to String.prototype." + b + " must not be a regular expression");
   }
   return a + "";
 };
@@ -13,40 +13,40 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : a;
+  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, b, c, d) {
-  if (b) {
-    c = $jscomp.global;
+$jscomp.polyfill = function(a, c, b, e) {
+  if (c) {
+    b = $jscomp.global;
     a = a.split(".");
-    for (d = 0; d < a.length - 1; d++) {
-      var e = a[d];
-      e in c || (c[e] = {});
-      c = c[e];
+    for (e = 0; e < a.length - 1; e++) {
+      var d = a[e];
+      d in b || (b[d] = {});
+      b = b[d];
     }
     a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+    e = b[a];
+    c = c(e);
+    c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.polyfill("String.prototype.codePointAt", function(a) {
-  return a ? a : function(b) {
-    var a = $jscomp.checkStringArgs(this, null, "codePointAt"), d = a.length;
-    b = Number(b) || 0;
-    if (0 <= b && b < d) {
-      b |= 0;
-      var e = a.charCodeAt(b);
-      if (55296 > e || 56319 < e || b + 1 === d) {
-        return e;
+  return a ? a : function(a) {
+    var b = $jscomp.checkStringArgs(this, null, "codePointAt"), c = b.length;
+    a = Number(a) || 0;
+    if (0 <= a && a < c) {
+      a |= 0;
+      var d = b.charCodeAt(a);
+      if (55296 > d || 56319 < d || a + 1 === c) {
+        return d;
       }
-      b = a.charCodeAt(b + 1);
-      return 56320 > b || 57343 < b ? e : 1024 * (e - 55296) + b + 9216;
+      a = b.charCodeAt(a + 1);
+      return 56320 > a || 57343 < a ? d : 1024 * (d - 55296) + a + 9216;
     }
   };
 }, "es6", "es3");

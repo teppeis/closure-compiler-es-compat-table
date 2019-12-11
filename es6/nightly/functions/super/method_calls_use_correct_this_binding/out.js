@@ -1,65 +1,87 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
+$jscomp.arrayIteratorImpl = function(a) {
+  var b = 0;
+  return function() {
+    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+  };
+};
+$jscomp.arrayIterator = function(a) {
+  return {next:$jscomp.arrayIteratorImpl(a)};
+};
+$jscomp.makeIterator = function(a) {
+  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+  return b ? b.call(a) : $jscomp.arrayIterator(a);
+};
+$jscomp.arrayFromIterator = function(a) {
+  for (var b, c = []; !(b = a.next()).done;) {
+    c.push(b.value);
+  }
+  return c;
+};
+$jscomp.arrayFromIterable = function(a) {
+  return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
+};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(b) {
-  var a = function() {
+$jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
+  var b = function() {
   };
-  a.prototype = b;
-  return new a;
+  b.prototype = a;
+  return new b;
 };
 $jscomp.underscoreProtoCanBeSet = function() {
-  var b = {a:!0}, a = {};
+  var a = {a:!0}, b = {};
   try {
-    return a.__proto__ = b, a.a;
+    return b.__proto__ = a, b.a;
   } catch (c) {
   }
   return !1;
 };
-$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(b, a) {
-  b.__proto__ = a;
-  if (b.__proto__ !== a) {
-    throw new TypeError(b + " is not extensible");
+$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
   }
-  return b;
+  return a;
 } : null;
-$jscomp.inherits = function(b, a) {
-  b.prototype = $jscomp.objectCreate(a.prototype);
-  b.prototype.constructor = b;
+$jscomp.inherits = function(a, b) {
+  a.prototype = $jscomp.objectCreate(b.prototype);
+  a.prototype.constructor = a;
   if ($jscomp.setPrototypeOf) {
     var c = $jscomp.setPrototypeOf;
-    c(b, a);
+    c(a, b);
   } else {
-    for (c in a) {
+    for (c in b) {
       if ("prototype" != c) {
         if (Object.defineProperties) {
-          var d = Object.getOwnPropertyDescriptor(a, c);
-          d && Object.defineProperty(b, c, d);
+          var d = Object.getOwnPropertyDescriptor(b, c);
+          d && Object.defineProperty(a, c, d);
         } else {
-          b[c] = a[c];
+          a[c] = b[c];
         }
       }
     }
   }
-  b.superClass_ = a.prototype;
+  a.superClass_ = b.prototype;
 };
 module.exports = function() {
-  var b = function() {
+  var a = function() {
   };
-  b.prototype.qux = function(a) {
+  a.prototype.qux = function(a) {
     return this.foo + a;
   };
-  var a = function() {
-    return b.apply(this, arguments) || this;
+  var b = function() {
+    return a.apply(this, arguments) || this;
   };
-  $jscomp.inherits(a, b);
-  a.prototype.qux = function(a) {
-    return b.prototype.qux.call(this, "bar" + a);
+  $jscomp.inherits(b, a);
+  b.prototype.qux = function(b) {
+    return a.prototype.qux.call(this, "bar" + b);
   };
-  a = new a;
-  a.foo = "foo";
-  return "foobarbaz" === a.qux("baz");
+  b = new b;
+  b.foo = "foo";
+  return "foobarbaz" === b.qux("baz");
 };
 

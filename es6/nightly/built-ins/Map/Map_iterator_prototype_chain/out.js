@@ -17,7 +17,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   b != Array.prototype && b != Object.prototype && (b[c] = e.value);
 };
 $jscomp.getGlobal = function(b) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : b;
+  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";

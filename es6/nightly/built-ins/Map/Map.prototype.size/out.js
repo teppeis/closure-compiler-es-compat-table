@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(b) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : b;
+  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
@@ -122,13 +122,13 @@ $jscomp.polyfill("WeakMap", function(b) {
   function e() {
   }
   function c(a) {
-    var f = typeof a;
-    return "object" === f && null !== a || "function" === f;
+    var b = typeof a;
+    return "object" === b && null !== a || "function" === b;
   }
   function k(a) {
     if (!$jscomp.owns(a, h)) {
-      var f = new e;
-      $jscomp.defineProperty(a, h, {value:f});
+      var b = new e;
+      $jscomp.defineProperty(a, h, {value:b});
     }
   }
   function l(a) {

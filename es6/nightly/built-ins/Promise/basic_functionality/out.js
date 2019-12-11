@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(b) {
   return e ? e.call(b) : $jscomp.arrayIterator(b);
 };
 $jscomp.getGlobal = function(b) {
-  return "object" == typeof globalThis ? globalThis : "object" == typeof window ? window : "object" == typeof self ? self : "undefined" != typeof global && null != global ? global : b;
+  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;
@@ -175,8 +175,8 @@ $jscomp.polyfill("Promise", function(b) {
       b.reject(l);
     }
   };
-  c.prototype.then = function(a, d) {
-    function b(a, b) {
+  c.prototype.then = function(a, b) {
+    function d(a, b) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
@@ -189,7 +189,7 @@ $jscomp.polyfill("Promise", function(b) {
       e = a;
       f = b;
     });
-    this.callWhenSettled_(b(a, e), b(d, f));
+    this.callWhenSettled_(d(a, e), d(b, f));
     return g;
   };
   c.prototype.catch = function(a) {
