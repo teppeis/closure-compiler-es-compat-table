@@ -107,3 +107,11 @@
 ### globalThis
 - "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_is_global_object/out.js))
 - "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
+
+### optional chaining operator (?.)
+- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_property_access/error.txt))
+- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
+- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
+
+### nullish coalescing operator (??)
+- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/nullish_coalescing_operator_____/error.txt))

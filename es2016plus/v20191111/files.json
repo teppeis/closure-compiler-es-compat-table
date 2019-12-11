@@ -125,5 +125,9 @@
   "2020_features/BigInt/DataView.prototype.getBigUint64",
   "2020_features/Promise.allSettled",
   "2020_features/globalThis/globalThis_global_property_is_global_object",
-  "2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor"
+  "2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor",
+  "2020_features/optional_chaining_operator___._/optional_property_access",
+  "2020_features/optional_chaining_operator___._/optional_bracket_access",
+  "2020_features/optional_chaining_operator___._/optional_method_call",
+  "2020_features/nullish_coalescing_operator_____"
 ]

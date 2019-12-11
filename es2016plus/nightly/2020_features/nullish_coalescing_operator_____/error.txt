@@ -1,4 +1,4 @@
-// candidate (stage 3) / nullish coalescing operator (??)
+// 2020 features / nullish coalescing operator (??)
 module.exports = () => {
 return (null ?? 42) === 42 &&
 (undefined ?? 42) === 42 &&
@@ -9,7 +9,7 @@ isNaN(NaN ?? 42);
 
 };
 ----------------------------------------------------------
-esnext/nightly/candidate__stage_3_/nullish_coalescing_operator_____/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return (null ?? 42) === 42 &&
                ^
 
