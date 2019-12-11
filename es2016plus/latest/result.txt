@@ -123,5 +123,5 @@
 2020_features/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
 2020_features/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
 2020_features/Promise.allSettled/out.js: [Pass]
-2020_features/globalThis/globalThis_global_property_is_global_object/out.js: Error: eval() and Function() cannot be transpiled
-2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: Error: eval() and Function() cannot be transpiled
+2020_features/globalThis/globalThis_global_property_is_global_object/out.js: ReferenceError: globalThis is not defined
+2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: ReferenceError: globalThis is not defined
