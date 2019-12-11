@@ -1,6 +1,8 @@
 // 2020 features / globalThis / "globalThis" global property has correct property descriptor
 module.exports = () => {
-  throw new Error('eval() and Function() cannot be transpiled');
+  // ensure polyfill insertion
+  // see https://github.com/google/closure-compiler/issues/3519
+  ensureUsed(globalThis);
   var actualGlobal = Function('return this')();
   if (typeof globalThis !== 'object') { return false; }
   if (!('globalThis' in actualGlobal)) { return false; }
