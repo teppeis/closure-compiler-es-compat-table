@@ -7,10 +7,6 @@ candidate__stage_3_/instance_class_fields/computed_instance_class_fields/error.t
 candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt: [CompileError]
 candidate__stage_3_/static_class_fields/computed_static_class_fields/error.txt: [CompileError]
-candidate__stage_3_/optional_chaining_operator___._/optional_property_access/error.txt: [CompileError]
-candidate__stage_3_/optional_chaining_operator___._/optional_bracket_access/error.txt: [CompileError]
-candidate__stage_3_/optional_chaining_operator___._/optional_method_call/error.txt: [CompileError]
-candidate__stage_3_/nullish_coalescing_operator_____/error.txt: [CompileError]
 candidate__stage_3_/numeric_separators/error.txt: [CompileError]
 candidate__stage_3_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 candidate__stage_3_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'

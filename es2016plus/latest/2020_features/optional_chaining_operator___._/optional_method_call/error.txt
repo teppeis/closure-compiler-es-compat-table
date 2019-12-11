@@ -1,4 +1,4 @@
-// candidate (stage 3) / optional chaining operator (?.) / optional method call
+// 2020 features / optional chaining operator (?.) / optional method call
 module.exports = () => {
 var foo = { baz: function () { return 42; } };
 var bar = null;
@@ -6,7 +6,7 @@ return foo?.baz() === 42 && bar?.baz() === undefined;
 
 };
 ----------------------------------------------------------
-esnext/v20191111/candidate__stage_3_/optional_chaining_operator___._/optional_method_call/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/v20191111/2020_features/optional_chaining_operator___._/optional_method_call/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return foo?.baz() === 42 && bar?.baz() === undefined;
             ^
 

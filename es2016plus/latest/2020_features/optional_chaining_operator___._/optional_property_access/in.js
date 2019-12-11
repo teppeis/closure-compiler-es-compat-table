@@ -1,4 +1,4 @@
-// candidate (stage 3) / optional chaining operator (?.) / optional property access
+// 2020 features / optional chaining operator (?.) / optional property access
 module.exports = () => {
 var foo = { baz: 42 };
 var bar = null;
