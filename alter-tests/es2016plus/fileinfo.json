@@ -741,5 +741,28 @@
     "category": "2020 features",
     "test": "globalThis",
     "subtest": "\"globalThis\" global property has correct property descriptor"
+  },
+  {
+    "path": "2020_features/optional_chaining_operator___._/optional_property_access",
+    "category": "2020 features",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional property access"
+  },
+  {
+    "path": "2020_features/optional_chaining_operator___._/optional_bracket_access",
+    "category": "2020 features",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional bracket access"
+  },
+  {
+    "path": "2020_features/optional_chaining_operator___._/optional_method_call",
+    "category": "2020 features",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional method call"
+  },
+  {
+    "path": "2020_features/nullish_coalescing_operator_____",
+    "category": "2020 features",
+    "test": "nullish coalescing operator (??)"
   }
 ]
