@@ -112,6 +112,8 @@ function check(file, cb) {
     setInterval: setInterval,
     clearTimeout: clearTimeout,
     clearInterval: clearInterval,
+    // avoid no side-effects suspicious warnings
+    ensureUsed: function() {},
     // console: console,
   };
 
