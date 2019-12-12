@@ -1,9 +1,9 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
+  var c = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -13,8 +13,8 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
   return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
@@ -26,21 +26,21 @@ $jscomp.initSymbol = function() {
   };
   $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
-$jscomp.SymbolClass = function(a, b) {
+$jscomp.SymbolClass = function(a, c) {
   this.$jscomp$symbol$id_ = a;
-  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
 };
 $jscomp.SymbolClass.prototype.toString = function() {
   return this.$jscomp$symbol$id_;
 };
 $jscomp.Symbol = function() {
-  function a(c) {
+  function a(b) {
     if (this instanceof a) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (c || "") + "_" + b++, c);
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (b || "") + "_" + c++, b);
   }
-  var b = 0;
+  var c = 0;
   return a;
 }();
 $jscomp.initSymbolIterator = function() {
@@ -68,33 +68,36 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  if (b) {
-    c = $jscomp.global;
+$jscomp.polyfill = function(a, c, b, d) {
+  if (c) {
+    b = $jscomp.global;
     a = a.split(".");
     for (d = 0; d < a.length - 1; d++) {
       var e = a[d];
-      e in c || (c[e] = {});
-      c = c[e];
+      e in b || (b[e] = {});
+      b = b[e];
     }
     a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+    d = b[a];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.polyfill("String.prototype.matchAll", function(a) {
   return a ? a : function(a) {
-    var b = a instanceof RegExp && !a.global, d = new RegExp(a, a instanceof RegExp ? void 0 : "g"), e = this, g = !1, f = {next:function() {
-      var a = {}, c = d.lastIndex;
-      if (g) {
+    if (a instanceof RegExp && !a.global) {
+      throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
+    }
+    var b = new RegExp(a, a instanceof RegExp ? void 0 : "g"), c = this, e = !1, f = {next:function() {
+      var a = {}, d = b.lastIndex;
+      if (e) {
         return {value:void 0, done:!0};
       }
-      var f = d.exec(e);
+      var f = b.exec(c);
       if (!f) {
-        return g = !0, {value:void 0, done:!0};
+        return e = !0, {value:void 0, done:!0};
       }
-      b ? g = !0 : d.lastIndex === c && (d.lastIndex += 1);
+      b.lastIndex === d && (b.lastIndex += 1);
       a.value = f;
       a.done = !1;
       return a;
@@ -112,9 +115,9 @@ module.exports = function() {
   if (a[Symbol.iterator]() !== a) {
     return !1;
   }
-  for (var b = "", c = "", d = "", e; !(e = a.next()).done;) {
-    b += e.value[0], c += e.value[1], d += e.value[2];
+  for (var c = "", b = "", d = "", e; !(e = a.next()).done;) {
+    c += e.value[0], b += e.value[1], d += e.value[2];
   }
-  return "1a2b" === b && "12" === c && "ab" === d;
+  return "1a2b" === c && "12" === b && "ab" === d;
 };
 

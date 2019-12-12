@@ -123,8 +123,8 @@
 2020_features/BigInt/DataView.prototype.getBigInt64/error.txt: [CompileError]
 2020_features/BigInt/DataView.prototype.getBigUint64/error.txt: [CompileError]
 2020_features/Promise.allSettled/out.js: [Pass]
-2020_features/globalThis/globalThis_global_property_is_global_object/out.js: ReferenceError: globalThis is not defined
-2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: ReferenceError: globalThis is not defined
+2020_features/globalThis/globalThis_global_property_is_global_object/out.js: [Pass]
+2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: [Pass]
 2020_features/optional_chaining_operator___._/optional_property_access/error.txt: [CompileError]
 2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt: [CompileError]
 2020_features/optional_chaining_operator___._/optional_method_call/error.txt: [CompileError]

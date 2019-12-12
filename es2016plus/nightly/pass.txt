@@ -55,3 +55,5 @@
 2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2020_features/Promise.allSettled/out.js: [Pass]
+2020_features/globalThis/globalThis_global_property_is_global_object/out.js: [Pass]
+2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: [Pass]
