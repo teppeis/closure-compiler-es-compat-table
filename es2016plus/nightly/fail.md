@@ -91,7 +91,6 @@
 ## 2020 features
 
 ### String.prototype.matchAll
-- basic functionality ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/basic_functionality/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/basic_functionality/out.js))
 - throws on non-global regex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/throws_on_non-global_regex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/String.prototype.matchAll/throws_on_non-global_regex/out.js))
 
 ### BigInt

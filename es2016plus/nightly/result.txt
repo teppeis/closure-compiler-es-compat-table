@@ -112,7 +112,7 @@
 2019_misc/JSON_superset/LINE_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/JSON_superset/PARAGRAPH_SEPARATOR_can_appear_in_string_literals/out.js: [Pass]
 2019_misc/Well-formed_JSON.stringify/out.js: [InvalidResult: false]
-2020_features/String.prototype.matchAll/basic_functionality/out.js: ReferenceError: Symbol is not defined
+2020_features/String.prototype.matchAll/basic_functionality/out.js: [Pass]
 2020_features/String.prototype.matchAll/throws_on_non-global_regex/out.js: [InvalidResult: false]
 2020_features/BigInt/basic_functionality/error.txt: [CompileError]
 2020_features/BigInt/constructor/error.txt: [CompileError]

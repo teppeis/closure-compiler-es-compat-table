@@ -84,7 +84,11 @@ $jscomp.polyfill = function(a, c, b, d) {
   }
 };
 $jscomp.polyfill("String.prototype.matchAll", function(a) {
-  return a ? a : function(a) {
+  if (a) {
+    return a;
+  }
+  $jscomp.initSymbolIterator();
+  return function(a) {
     if (a instanceof RegExp && !a.global) {
       throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
     }
