@@ -9,8 +9,86 @@ isNaN(NaN ?? 42);
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
 return (null ?? 42) === 42 &&
-               ^
+        ^
 
-1 error(s), 0 warning(s)
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:4: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
+(undefined ?? 42) === 42 &&
+ ^
+
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
+(false ?? 42) === false &&
+ ^
+
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:6: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
+('' ?? 42) === '' &&
+ ^
+
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:7: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
+(0 ?? 42) === 0 &&
+ ^
+
+es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:8: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Nullish coalescing
+isNaN(NaN ?? 42);
+      ^
+
+0 error(s), 6 warning(s)
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+Unknown precedence for COALESCE
+  Node(SHEQ): es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3:7
+return (null ?? 42) === 42 &&
+  Parent(AND): es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3:7
+return (null ?? 42) === 42 &&
+
+	at com.google.javascript.jscomp.NodeUtil.precedence(NodeUtil.java:1262)
+	at com.google.javascript.jscomp.PeepholeReorderConstantExpression.optimizeSubtree(PeepholeReorderConstantExpression.java:36)
+	at com.google.javascript.jscomp.PeepholeOptimizationsPass$PeepCallback.visit(PeepholeOptimizationsPass.java:80)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:866)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:986)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:860)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:905)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:815)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:803)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:838)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:370)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:380)
+	at com.google.javascript.jscomp.NodeTraversal.traverseScopeRoots(NodeTraversal.java:591)
+	at com.google.javascript.jscomp.NodeTraversal.traverseScopeRoots(NodeTraversal.java:572)
+	at com.google.javascript.jscomp.PeepholeOptimizationsPass.process(PeepholeOptimizationsPass.java:65)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:317)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:232)
+	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2418)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:799)
+	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:473)
+	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:193)
+Caused by: java.lang.IllegalStateException: Unknown precedence for COALESCE
+	... 47 more
