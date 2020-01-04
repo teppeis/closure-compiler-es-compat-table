@@ -3,7 +3,9 @@ ECMAScript compatibility checker for Closure Compiler
 
 [![Build Status](https://travis-ci.org/teppeis/closure-compiler-es-compat-table.svg?branch=master)](https://travis-ci.org/teppeis/closure-compiler-es-compat-table)
 
-Run [kangax's ES compat-table tests](https://kangax.github.io/compat-table/es6/) and store the results.
+Run [kangax's ES compat-table tests](https://kangax.github.io/compat-table/es6/) for [Google Closure Compiler](https://github.com/google/closure-compiler).
+
+Also see [ECMAScript compatibility tracking issue · Issue \#2899 · google/closure\-compiler](https://github.com/google/closure-compiler/issues/2899)
 
 ## Setup
 
