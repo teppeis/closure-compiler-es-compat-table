@@ -34,51 +34,51 @@ isNaN(NaN ?? 42);
       ^
 
 0 error(s), 6 warning(s)
-java.lang.RuntimeException: INTERNAL COMPILER ERROR.
-Please report this problem.
+java.lang.IllegalStateException: AST should not contain Nullish coalescing. Reference node:
+COALESCE 3 [length: 10] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+    NULL 3 [length: 4] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+    NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
 
-Unknown precedence for COALESCE
-  Node(SHEQ): es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3:7
-return (null ?? 42) === 42 &&
-  Parent(AND): es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:3:7
-return (null ?? 42) === 42 &&
+ Parent node:
+SHEQ 3 [length: 19] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+    NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+    COALESCE 3 [length: 10] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+        NULL 3 [length: 4] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+        NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
 
-	at com.google.javascript.jscomp.NodeUtil.precedence(NodeUtil.java:1262)
-	at com.google.javascript.jscomp.PeepholeReorderConstantExpression.optimizeSubtree(PeepholeReorderConstantExpression.java:36)
-	at com.google.javascript.jscomp.PeepholeOptimizationsPass$PeepCallback.visit(PeepholeOptimizationsPass.java:80)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:866)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBlockScope(NodeTraversal.java:986)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:860)
-	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:905)
-	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:815)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:803)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:838)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:978)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:862)
-	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:370)
-	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:380)
-	at com.google.javascript.jscomp.NodeTraversal.traverseScopeRoots(NodeTraversal.java:591)
-	at com.google.javascript.jscomp.NodeTraversal.traverseScopeRoots(NodeTraversal.java:572)
-	at com.google.javascript.jscomp.PeepholeOptimizationsPass.process(PeepholeOptimizationsPass.java:65)
+	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
+	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1861)
+	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1925)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:353)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1769)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
+	at com.google.javascript.jscomp.AstValidator.validateReturn(AstValidator.java:1352)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:223)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
+	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:859)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:995)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:971)
+	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:947)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:412)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1478)
+	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1345)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
+	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
+	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:152)
+	at com.google.javascript.jscomp.AstValidator.validateScript(AstValidator.java:141)
+	at com.google.javascript.jscomp.AstValidator.validateCodeRoot(AstValidator.java:128)
+	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:114)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:317)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:232)
 	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2418)
@@ -90,5 +90,3 @@ return (null ?? 42) === 42 &&
 	at java.lang.Thread.run(Thread.java:748)
 	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:473)
 	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:193)
-Caused by: java.lang.IllegalStateException: Unknown precedence for COALESCE
-	... 47 more
