@@ -1,7 +1,6 @@
 {
   "extends": ["teppeis/node-v12", "teppeis/+prettier"],
   "rules": {
-    "require-await": "off",
     "node/shebang": "off"
   }
 }
