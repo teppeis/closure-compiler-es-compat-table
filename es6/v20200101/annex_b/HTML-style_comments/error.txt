@@ -1,0 +1,22 @@
+// annex b / HTML-style comments
+module.exports = () => {
+--> A comment
+<!-- Another comment
+  var a = 3; <!-- Another comment
+  return a === 3;
+
+};
+----------------------------------------------------------
+es6/v20200101/annex_b/HTML-style_comments/in.js:3: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+--> A comment
+^
+
+es6/v20200101/annex_b/HTML-style_comments/in.js:4: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+<!-- Another comment
+^
+
+es6/v20200101/annex_b/HTML-style_comments/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+  var a = 3; <!-- Another comment
+             ^
+
+0 error(s), 3 warning(s)
