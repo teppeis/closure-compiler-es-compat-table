@@ -1,4 +1,5 @@
 module.exports = function() {
+  ensureUsed(String.prototype.matchAll);
   if ("function" !== typeof String.prototype.matchAll) {
     return !1;
   }
