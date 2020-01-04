@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20191111/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20200101/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   try {
   ^^^^^
 

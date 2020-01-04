@@ -29,7 +29,7 @@ $jscomp.polyfill = function(a, b, c, e) {
 $jscomp.polyfill("Math.log1p", function(a) {
   return a ? a : function(a) {
     a = Number(a);
-    if (0.25 > a && -0.25 < a) {
+    if (0.25 > a && -.25 < a) {
       for (var c = a, b = 1, d = a, f = 0, g = 1; f != d;) {
         c *= a, g *= -1, d = (f = d) + g * c / ++b;
       }

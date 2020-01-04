@@ -90,10 +90,6 @@
 
 ## 2020 features
 
-### String.prototype.matchAll
-- basic functionality ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/String.prototype.matchAll/basic_functionality/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/String.prototype.matchAll/basic_functionality/out.js))
-- throws on non-global regex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/String.prototype.matchAll/throws_on_non-global_regex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/String.prototype.matchAll/throws_on_non-global_regex/out.js))
-
 ### BigInt
 - basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/basic_functionality/error.txt))
 - constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/constructor/error.txt))
@@ -103,10 +99,6 @@
 - BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/BigUint64Array/error.txt))
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/DataView.prototype.getBigInt64/error.txt))
 - DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/BigInt/DataView.prototype.getBigUint64/error.txt))
-
-### globalThis
-- "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_is_global_object/out.js))
-- "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
 
 ### optional chaining operator (?.)
 - optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/optional_chaining_operator___._/optional_property_access/error.txt))

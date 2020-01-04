@@ -4,7 +4,7 @@ return (_ => function.count)(1, 2, 3) === 3;
 
 };
 ----------------------------------------------------------
-esnext/v20191111/strawman__stage_0_/additional_meta_properties/function.count/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+esnext/v20200101/strawman__stage_0_/additional_meta_properties/function.count/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
 return (_ => function.count)(1, 2, 3) === 3;
                      ^
 

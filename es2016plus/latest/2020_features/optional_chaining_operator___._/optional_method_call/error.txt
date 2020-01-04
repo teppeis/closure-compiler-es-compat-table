@@ -6,7 +6,7 @@ return foo?.baz() === 42 && bar?.baz() === undefined;
 
 };
 ----------------------------------------------------------
-es2016plus/v20191111/2020_features/optional_chaining_operator___._/optional_method_call/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/v20200101/2020_features/optional_chaining_operator___._/optional_method_call/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return foo?.baz() === 42 && bar?.baz() === undefined;
             ^
 

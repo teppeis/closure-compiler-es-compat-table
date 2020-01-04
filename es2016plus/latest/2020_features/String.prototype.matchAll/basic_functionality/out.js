@@ -1,9 +1,9 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
+  var c = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -13,8 +13,8 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
   return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
@@ -26,21 +26,21 @@ $jscomp.initSymbol = function() {
   };
   $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
-$jscomp.SymbolClass = function(a, b) {
+$jscomp.SymbolClass = function(a, c) {
   this.$jscomp$symbol$id_ = a;
-  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
 };
 $jscomp.SymbolClass.prototype.toString = function() {
   return this.$jscomp$symbol$id_;
 };
 $jscomp.Symbol = function() {
-  function a(c) {
+  function a(b) {
     if (this instanceof a) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (c || "") + "_" + b++, c);
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (b || "") + "_" + c++, b);
   }
-  var b = 0;
+  var c = 0;
   return a;
 }();
 $jscomp.initSymbolIterator = function() {
@@ -68,6 +68,50 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.polyfill = function(a, c, b, d) {
+  if (c) {
+    b = $jscomp.global;
+    a = a.split(".");
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in b || (b[e] = {});
+      b = b[e];
+    }
+    a = a[a.length - 1];
+    d = b[a];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
+  }
+};
+$jscomp.polyfill("String.prototype.matchAll", function(a) {
+  if (a) {
+    return a;
+  }
+  $jscomp.initSymbolIterator();
+  return function(a) {
+    if (a instanceof RegExp && !a.global) {
+      throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
+    }
+    var b = new RegExp(a, a instanceof RegExp ? void 0 : "g"), c = this, e = !1, f = {next:function() {
+      var a = {}, d = b.lastIndex;
+      if (e) {
+        return {value:void 0, done:!0};
+      }
+      var f = b.exec(c);
+      if (!f) {
+        return e = !0, {value:void 0, done:!0};
+      }
+      b.lastIndex === d && (b.lastIndex += 1);
+      a.value = f;
+      a.done = !1;
+      return a;
+    }};
+    f[Symbol.iterator] = function() {
+      return f;
+    };
+    return f;
+  };
+}, "es_next", "es3");
 module.exports = function() {
   var a = "11a2bb".matchAll(/(\d)(\D)/g);
   $jscomp.initSymbol();
@@ -75,9 +119,9 @@ module.exports = function() {
   if (a[Symbol.iterator]() !== a) {
     return !1;
   }
-  for (var b = "", c = "", e = "", d; !(d = a.next()).done;) {
-    b += d.value[0], c += d.value[1], e += d.value[2];
+  for (var c = "", b = "", d = "", e; !(e = a.next()).done;) {
+    c += e.value[0], b += e.value[1], d += e.value[2];
   }
-  return "1a2b" === b && "12" === c && "ab" === e;
+  return "1a2b" === c && "12" === b && "ab" === d;
 };
 

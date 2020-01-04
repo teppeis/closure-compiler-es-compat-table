@@ -17,7 +17,7 @@ return f(1e6) === "foo" && f(1e6+1) === "bar";
 
 };
 ----------------------------------------------------------
-esnext/v20191111/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/in.js:8: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20200101/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/in.js:8: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return continue g(n - 1);
                ^
 

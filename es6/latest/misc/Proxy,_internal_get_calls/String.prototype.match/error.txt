@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20191111/misc/Proxy,_internal_get_calls/String.prototype.match/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20200101/misc/Proxy,_internal_get_calls/String.prototype.match/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 
