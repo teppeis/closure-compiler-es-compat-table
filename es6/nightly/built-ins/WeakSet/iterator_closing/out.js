@@ -17,7 +17,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -68,6 +75,24 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.polyfill = function(a, b, c, d) {
+  if (b) {
+    c = $jscomp.global;
+    a = a.split(".");
+    for (d = 0; d < a.length - 1; d++) {
+      var g = a[d];
+      g in c || (c[g] = {});
+      c = c[g];
+    }
+    a = a[a.length - 1];
+    d = c[a];
+    b = b(d);
+    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  }
+};
+$jscomp.polyfill("globalThis", function(a) {
+  return a || $jscomp.global;
+}, "es_next", "es3");
 $jscomp.checkEs6ConformanceViaProxy = function() {
   try {
     var a = {}, b = Object.create(new $jscomp.global.Proxy(a, {get:function(c, d, g) {
@@ -84,21 +109,6 @@ $jscomp.makeIterator = function(a) {
   var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  if (b) {
-    c = $jscomp.global;
-    a = a.split(".");
-    for (d = 0; d < a.length - 1; d++) {
-      var g = a[d];
-      g in c || (c[g] = {});
-      c = c[g];
-    }
-    a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
-  }
-};
 $jscomp.owns = function(a, b) {
   return Object.prototype.hasOwnProperty.call(a, b);
 };
@@ -108,13 +118,13 @@ $jscomp.polyfill("WeakMap", function(a) {
       return !1;
     }
     try {
-      var k = Object.seal({}), d = Object.seal({}), b = new a([[k, 2], [d, 3]]);
-      if (2 != b.get(k) || 3 != b.get(d)) {
+      var k = Object.seal({}), b = Object.seal({}), d = new a([[k, 2], [b, 3]]);
+      if (2 != d.get(k) || 3 != d.get(b)) {
         return !1;
       }
-      b.delete(k);
-      b.set(d, 4);
-      return !b.has(k) && 4 == b.get(d);
+      d.delete(k);
+      d.set(b, 4);
+      return !d.has(k) && 4 == d.get(b);
     } catch (m) {
       return !1;
     }

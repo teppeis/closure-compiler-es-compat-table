@@ -1,14 +1,14 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.owns = function(a, d) {
-  return Object.prototype.hasOwnProperty.call(a, d);
+$jscomp.owns = function(a, c) {
+  return Object.prototype.hasOwnProperty.call(a, c);
 };
-$jscomp.assign = "function" == typeof Object.assign ? Object.assign : function(a, d) {
+$jscomp.assign = "function" == typeof Object.assign ? Object.assign : function(a, c) {
   for (var b = 1; b < arguments.length; b++) {
-    var c = arguments[b];
-    if (c) {
-      for (var e in c) {
-        $jscomp.owns(c, e) && (a[e] = c[e]);
+    var d = arguments[b];
+    if (d) {
+      for (var e in d) {
+        $jscomp.owns(d, e) && (a[e] = d[e]);
       }
     }
   }
@@ -18,26 +18,33 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, b) {
-  a != Array.prototype && a != Object.prototype && (a[d] = b.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, d, b, c) {
-  if (d) {
+$jscomp.polyfill = function(a, c, b, d) {
+  if (c) {
     b = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var e = a[c];
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
       e in b || (b[e] = {});
       b = b[e];
     }
     a = a[a.length - 1];
-    c = b[a];
-    d = d(c);
-    d != c && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+    d = b[a];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.polyfill("Object.assign", function(a) {

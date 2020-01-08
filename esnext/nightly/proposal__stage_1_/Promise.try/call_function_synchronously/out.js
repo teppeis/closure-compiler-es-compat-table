@@ -14,7 +14,14 @@ $jscomp.makeIterator = function(b) {
   return e ? e.call(b) : $jscomp.arrayIterator(b);
 };
 $jscomp.getGlobal = function(b) {
-  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
+  b = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
+  for (var e = 0; e < b.length; ++e) {
+    var f = b[e];
+    if (f && f.Math == Math) {
+      return f;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;

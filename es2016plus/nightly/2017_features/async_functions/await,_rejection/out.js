@@ -14,7 +14,14 @@ $jscomp.makeIterator = function(a) {
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;
@@ -528,6 +535,9 @@ $jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
 $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
   return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
+$jscomp.polyfill("globalThis", function(a) {
+  return a || $jscomp.global;
+}, "es_next", "es3");
 module.exports = function(a) {
   (function() {
     var b;

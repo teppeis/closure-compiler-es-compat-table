@@ -1,7 +1,14 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var e = 0; e < a.length; ++e) {
+    var d = a[e];
+    if (d && d.Math == Math) {
+      return d;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
@@ -197,12 +204,12 @@ $jscomp.polyfill("Map", function(a) {
       if ("s" != b.get(c) || 1 != b.size || b.get({x:4}) || b.set({x:4}, "t") != b || 2 != b.size) {
         return !1;
       }
-      var d = b.entries(), f = d.next();
-      if (f.done || f.value[0] != c || "s" != f.value[1]) {
+      var d = b.entries(), e = d.next();
+      if (e.done || e.value[0] != c || "s" != e.value[1]) {
         return !1;
       }
-      f = d.next();
-      return f.done || 4 != f.value[0].x || "t" != f.value[1] || !d.next().done ? !1 : !0;
+      e = d.next();
+      return e.done || 4 != e.value[0].x || "t" != e.value[1] || !d.next().done ? !1 : !0;
     } catch (m) {
       return !1;
     }
@@ -274,16 +281,16 @@ $jscomp.polyfill("Map", function(a) {
   var f = function(a, b) {
     var c = b && typeof b;
     "object" == c || "function" == c ? d.has(b) ? c = d.get(b) : (c = "" + ++l, d.set(b, c)) : c = "p_" + b;
-    var f = a.data_[c];
-    if (f && $jscomp.owns(a.data_, c)) {
-      for (a = 0; a < f.length; a++) {
-        var e = f[a];
-        if (b !== b && e.key !== e.key || b === e.key) {
-          return {id:c, list:f, index:a, entry:e};
+    var e = a.data_[c];
+    if (e && $jscomp.owns(a.data_, c)) {
+      for (a = 0; a < e.length; a++) {
+        var f = e[a];
+        if (b !== b && f.key !== f.key || b === f.key) {
+          return {id:c, list:e, index:a, entry:f};
         }
       }
     }
-    return {id:c, list:f, index:-1, entry:void 0};
+    return {id:c, list:e, index:-1, entry:void 0};
   }, h = function(a, b) {
     var c = a.head_;
     return $jscomp.iteratorPrototype(function() {

@@ -1,41 +1,48 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.owns = function(a, d) {
-  return Object.prototype.hasOwnProperty.call(a, d);
+$jscomp.owns = function(a, b) {
+  return Object.prototype.hasOwnProperty.call(a, b);
 };
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, b) {
-  a != Array.prototype && a != Object.prototype && (a[d] = b.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, d, b, c) {
-  if (d) {
-    b = $jscomp.global;
+$jscomp.polyfill = function(a, b, c, d) {
+  if (b) {
+    c = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var e = a[c];
-      e in b || (b[e] = {});
-      b = b[e];
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in c || (c[e] = {});
+      c = c[e];
     }
     a = a[a.length - 1];
-    c = b[a];
-    d = d(c);
-    d != c && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+    d = c[a];
+    b = b(d);
+    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
   }
 };
 $jscomp.polyfill("Object.values", function(a) {
   return a ? a : function(a) {
-    var b = [], c;
-    for (c in a) {
-      $jscomp.owns(a, c) && b.push(a[c]);
+    var c = [], b;
+    for (b in a) {
+      $jscomp.owns(a, b) && c.push(a[b]);
     }
-    return b;
+    return c;
   };
 }, "es8", "es3");
 module.exports = function() {

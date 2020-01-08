@@ -13,11 +13,18 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, e) {
-  a != Array.prototype && a != Object.prototype && (a[b] = e.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -34,11 +41,11 @@ $jscomp.SymbolClass.prototype.toString = function() {
   return this.$jscomp$symbol$id_;
 };
 $jscomp.Symbol = function() {
-  function a(e) {
+  function a(c) {
     if (this instanceof a) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (e || "") + "_" + b++, e);
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (c || "") + "_" + b++, c);
   }
   var b = 0;
   return a;
@@ -68,21 +75,24 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
-$jscomp.polyfill = function(a, b, e, c) {
+$jscomp.polyfill = function(a, b, c, d) {
   if (b) {
-    e = $jscomp.global;
+    c = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var d = a[c];
-      d in e || (e[d] = {});
-      e = e[d];
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in c || (c[e] = {});
+      c = c[e];
     }
     a = a[a.length - 1];
-    c = e[a];
-    b = b(c);
-    b != c && null != b && $jscomp.defineProperty(e, a, {configurable:!0, writable:!0, value:b});
+    d = c[a];
+    b = b(d);
+    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
   }
 };
+$jscomp.polyfill("globalThis", function(a) {
+  return a || $jscomp.global;
+}, "es_next", "es3");
 $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
   return a ? a : function() {
     return [];
@@ -90,18 +100,18 @@ $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
 }, "es6", "es5");
 $jscomp.polyfill("Reflect.ownKeys", function(a) {
   return a ? a : function(a) {
-    var b = [], c = Object.getOwnPropertyNames(a);
+    var b = [], d = Object.getOwnPropertyNames(a);
     a = Object.getOwnPropertySymbols(a);
-    for (var d = 0; d < c.length; d++) {
-      ("jscomp_symbol_" == c[d].substring(0, 14) ? a : b).push(c[d]);
+    for (var e = 0; e < d.length; e++) {
+      ("jscomp_symbol_" == d[e].substring(0, 14) ? a : b).push(d[e]);
     }
     return b.concat(a);
   };
 }, "es6", "es5");
 $jscomp.polyfill("Object.getOwnPropertyDescriptors", function(a) {
   return a ? a : function(a) {
-    for (var b = {}, c = Reflect.ownKeys(a), d = 0; d < c.length; d++) {
-      b[c[d]] = Object.getOwnPropertyDescriptor(a, c[d]);
+    for (var b = {}, d = Reflect.ownKeys(a), e = 0; e < d.length; e++) {
+      b[d[e]] = Object.getOwnPropertyDescriptor(a, d[e]);
     }
     return b;
   };

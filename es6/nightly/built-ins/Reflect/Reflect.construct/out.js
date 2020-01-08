@@ -5,65 +5,72 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
-  var b = function() {
+  var c = function() {
   };
-  b.prototype = a;
-  return new b;
+  c.prototype = a;
+  return new c;
 };
 $jscomp.construct = function() {
   function a() {
-    function a() {
+    function b() {
     }
-    new a;
-    Reflect.construct(a, [], function() {
+    new b;
+    Reflect.construct(b, [], function() {
     });
-    return new a instanceof a;
+    return new b instanceof b;
   }
   if ("undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
-    var b = Reflect.construct;
-    return function(a, e, c) {
-      a = b(a, e);
-      c && Reflect.setPrototypeOf(a, c.prototype);
-      return a;
+    var c = Reflect.construct;
+    return function(b, a, e) {
+      b = c(b, a);
+      e && Reflect.setPrototypeOf(b, e.prototype);
+      return b;
     };
   }
-  return function(a, b, c) {
-    void 0 === c && (c = a);
+  return function(b, a, c) {
+    void 0 === c && (c = b);
     c = $jscomp.objectCreate(c.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, c, b) || c;
+    return Function.prototype.apply.call(b, c, a) || c;
   };
 }();
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, d) {
-  a != Array.prototype && a != Object.prototype && (a[b] = d.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, b, d, e) {
-  if (b) {
-    d = $jscomp.global;
+$jscomp.polyfill = function(a, c, b, d) {
+  if (c) {
+    b = $jscomp.global;
     a = a.split(".");
-    for (e = 0; e < a.length - 1; e++) {
-      var c = a[e];
-      c in d || (d[c] = {});
-      d = d[c];
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in b || (b[e] = {});
+      b = b[e];
     }
     a = a[a.length - 1];
-    e = d[a];
-    b = b(e);
-    b != e && null != b && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:b});
+    d = b[a];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");
 module.exports = function() {
-  return "foobarbaz" === Reflect.construct(function(a, b, d) {
-    this.qux = a + b + d;
+  return "foobarbaz" === Reflect.construct(function(a, c, b) {
+    this.qux = a + c + b;
   }, ["foo", "bar", "baz"]).qux;
 };
 

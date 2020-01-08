@@ -8,7 +8,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfill = function(a, c, b, d) {
@@ -30,8 +37,8 @@ $jscomp.polyfill("Math.imul", function(a) {
   return a ? a : function(a, b) {
     a = Number(a);
     b = Number(b);
-    var d = a & 65535, c = b & 65535;
-    return d * c + ((a >>> 16 & 65535) * c + d * (b >>> 16 & 65535) << 16 >>> 0) | 0;
+    var c = a & 65535, e = b & 65535;
+    return c * e + ((a >>> 16 & 65535) * e + c * (b >>> 16 & 65535) << 16 >>> 0) | 0;
   };
 }, "es6", "es3");
 module.exports = function() {

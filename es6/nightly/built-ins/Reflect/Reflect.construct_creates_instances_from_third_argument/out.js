@@ -24,38 +24,45 @@ $jscomp.construct = function() {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(a, e, c) {
+    return function(a, e, d) {
       a = b(a, e);
-      c && Reflect.setPrototypeOf(a, c.prototype);
+      d && Reflect.setPrototypeOf(a, d.prototype);
       return a;
     };
   }
-  return function(a, b, c) {
-    void 0 === c && (c = a);
-    c = $jscomp.objectCreate(c.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, c, b) || c;
+  return function(a, b, d) {
+    void 0 === d && (d = a);
+    d = $jscomp.objectCreate(d.prototype || Object.prototype);
+    return Function.prototype.apply.call(a, d, b) || d;
   };
 }();
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, d) {
-  a != Array.prototype && a != Object.prototype && (a[b] = d.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, b, d, e) {
+$jscomp.polyfill = function(a, b, c, e) {
   if (b) {
-    d = $jscomp.global;
+    c = $jscomp.global;
     a = a.split(".");
     for (e = 0; e < a.length - 1; e++) {
-      var c = a[e];
-      c in d || (d[c] = {});
-      d = d[c];
+      var d = a[e];
+      d in c || (c[d] = {});
+      c = c[d];
     }
     a = a[a.length - 1];
-    e = d[a];
+    e = c[a];
     b = b(e);
-    b != e && null != b && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:b});
+    b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
   }
 };
 $jscomp.polyfill("Reflect.construct", function(a) {

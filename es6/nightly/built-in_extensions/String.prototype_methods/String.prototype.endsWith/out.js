@@ -17,7 +17,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfill = function(a, c, b, d) {
@@ -37,16 +44,16 @@ $jscomp.polyfill = function(a, c, b, d) {
 };
 $jscomp.polyfill("String.prototype.endsWith", function(a) {
   return a ? a : function(a, b) {
-    var d = $jscomp.checkStringArgs(this, a, "endsWith");
+    var c = $jscomp.checkStringArgs(this, a, "endsWith");
     a += "";
-    void 0 === b && (b = d.length);
-    b = Math.max(0, Math.min(b | 0, d.length));
-    for (var c = a.length; 0 < c && 0 < b;) {
-      if (d[--b] != a[--c]) {
+    void 0 === b && (b = c.length);
+    b = Math.max(0, Math.min(b | 0, c.length));
+    for (var e = a.length; 0 < e && 0 < b;) {
+      if (c[--b] != a[--e]) {
         return !1;
       }
     }
-    return 0 >= c;
+    return 0 >= e;
   };
 }, "es6", "es3");
 module.exports = function() {

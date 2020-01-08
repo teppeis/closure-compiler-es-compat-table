@@ -22,7 +22,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfill = function(a, b, c, d) {
@@ -44,9 +51,9 @@ $jscomp.polyfill("Object.assign", function(a) {
   return a || $jscomp.assign;
 }, "es6", "es3");
 module.exports = function() {
-  var a = [], b = new Proxy({}, {set:function(c, d, b) {
-    a.push(d);
-    c[d] = b;
+  var a = [], b = new Proxy({}, {set:function(c, b, e) {
+    a.push(b);
+    c[b] = e;
     return !0;
   }});
   Object.assign(b, {foo:1, bar:2});

@@ -1,7 +1,14 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var d = a[c];
+    if (d && d.Math == Math) {
+      return d;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
@@ -60,13 +67,13 @@ $jscomp.polyfill("WeakMap", function(a) {
       return !1;
     }
     try {
-      var h = Object.seal({}), b = Object.seal({}), c = new a([[h, 2], [b, 3]]);
-      if (2 != c.get(h) || 3 != c.get(b)) {
+      var h = Object.seal({}), c = Object.seal({}), b = new a([[h, 2], [c, 3]]);
+      if (2 != b.get(h) || 3 != b.get(c)) {
         return !1;
       }
-      c.delete(h);
-      c.set(b, 4);
-      return !c.has(h) && 4 == c.get(b);
+      b.delete(h);
+      b.set(c, 4);
+      return !b.has(h) && 4 == b.get(c);
     } catch (m) {
       return !1;
     }
