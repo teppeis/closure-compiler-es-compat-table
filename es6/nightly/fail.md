@@ -81,7 +81,6 @@
 - lexical "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/lexical_new.target_binding/error.txt))
 
 ### class
-- computed static accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/computed_static_accessor_properties/error.txt))
 - class name is lexically scoped ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/class_name_is_lexically_scoped/error.txt))
 - computed names, temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/computed_names%2C_temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/computed_names%2C_temporal_dead_zone/out.js))
 - methods aren't enumerable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/methods_arent_enumerable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/methods_arent_enumerable/out.js))
