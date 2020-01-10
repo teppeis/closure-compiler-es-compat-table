@@ -33,60 +33,7 @@ es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js:8: WARNI
 isNaN(NaN ?? 42);
       ^
 
-0 error(s), 6 warning(s)
-java.lang.IllegalStateException: AST should not contain Nullish coalescing. Reference node:
-COALESCE 3 [length: 10] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-    NULL 3 [length: 4] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-    NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
+ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
+Unsupported features: [Nullish coalescing]
 
- Parent node:
-SHEQ 3 [length: 19] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-    NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-    COALESCE 3 [length: 10] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-        NULL 3 [length: 4] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-        NUMBER 42.0 3 [length: 2] [source_file: es2016plus/nightly/2020_features/nullish_coalescing_operator_____/in.js]
-
-	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
-	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1861)
-	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1925)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:353)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1769)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateBinaryOp(AstValidator.java:1768)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:380)
-	at com.google.javascript.jscomp.AstValidator.validateReturn(AstValidator.java:1352)
-	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:223)
-	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
-	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:859)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionBody(AstValidator.java:995)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:971)
-	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:947)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:412)
-	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1478)
-	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1345)
-	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
-	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
-	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:152)
-	at com.google.javascript.jscomp.AstValidator.validateScript(AstValidator.java:141)
-	at com.google.javascript.jscomp.AstValidator.validateCodeRoot(AstValidator.java:128)
-	at com.google.javascript.jscomp.AstValidator.process(AstValidator.java:114)
-	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:317)
-	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:232)
-	at com.google.javascript.jscomp.Compiler.performOptimizations(Compiler.java:2418)
-	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$1(Compiler.java:799)
-	at com.google.javascript.jscomp.CompilerExecutor$2.call(CompilerExecutor.java:102)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:473)
-	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:193)
+1 error(s), 6 warning(s)
