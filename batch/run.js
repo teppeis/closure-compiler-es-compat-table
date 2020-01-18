@@ -102,11 +102,15 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
           return fs.writeFile(output, result[0].src);
         },
         async e => {
-          const message = e
-            .split("\n")
-            .slice(2) // Remove error headers
-            .join("\n");
-          return writeError(input, errorFile, message);
+          if (typeof e === "string") {
+            const message = e
+              .split("\n")
+              .slice(2) // Remove error headers
+              .join("\n");
+            return writeError(input, errorFile, message);
+          } else {
+            console.error(e);
+          }
         }
       )
       .finally(() => {
