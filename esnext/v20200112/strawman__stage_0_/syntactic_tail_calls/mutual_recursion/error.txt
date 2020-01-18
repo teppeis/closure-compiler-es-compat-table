@@ -1,0 +1,24 @@
+// strawman (stage 0) / syntactic tail calls / mutual recursion
+module.exports = () => {
+"use strict";
+function f(n){
+if (n <= 0) {
+return  "foo";
+}
+return continue g(n - 1);
+}
+function g(n){
+if (n <= 0) {
+return  "bar";
+}
+return continue f(n - 1);
+}
+return f(1e6) === "foo" && f(1e6+1) === "bar";
+
+};
+----------------------------------------------------------
+esnext/v20200112/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/in.js:8: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+return continue g(n - 1);
+               ^
+
+1 error(s), 0 warning(s)

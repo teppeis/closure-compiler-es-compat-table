@@ -1,0 +1,16 @@
+// proposal (stage 1) / partial application syntax / runtime evaluation of property access
+module.exports = () => {
+var o = {};
+var p = o.f(?, 'b');
+o = { x: 'c', f: function(a, b) {
+return a + b + this.x;
+} };
+return p('a') === 'abc';
+
+};
+----------------------------------------------------------
+esnext/v20200112/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+var p = o.f(?, 'b');
+            ^
+
+1 error(s), 0 warning(s)

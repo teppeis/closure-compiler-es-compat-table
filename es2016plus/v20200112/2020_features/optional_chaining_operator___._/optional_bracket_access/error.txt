@@ -1,0 +1,13 @@
+// 2020 features / optional chaining operator (?.) / optional bracket access
+module.exports = () => {
+var foo = { baz: 42 };
+var bar = null;
+return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+
+};
+----------------------------------------------------------
+es2016plus/v20200112/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+return foo?.['baz'] === 42 && bar?.['baz'] === undefined;
+            ^
+
+1 error(s), 0 warning(s)
