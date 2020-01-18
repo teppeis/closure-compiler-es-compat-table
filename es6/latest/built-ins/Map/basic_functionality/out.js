@@ -1,7 +1,14 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(b) {
-  return "undefined" != typeof window && window === b ? b : "undefined" != typeof global && null != global ? global : b;
+  b = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
+  for (var c = 0; c < b.length; ++c) {
+    var e = b[c];
+    if (e && e.Math == Math) {
+      return e;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {

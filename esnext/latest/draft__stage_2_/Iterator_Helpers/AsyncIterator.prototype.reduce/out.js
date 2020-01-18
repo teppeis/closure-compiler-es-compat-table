@@ -17,7 +17,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -311,7 +318,7 @@ $jscomp.polyfill("Promise", function(a) {
     this.batch_ = null;
   }
   function c(a) {
-    return a instanceof e ? a : new e(function(b, g) {
+    return a instanceof e ? a : new e(function(b, c) {
       b(a);
     });
   }
@@ -485,24 +492,24 @@ $jscomp.polyfill("Promise", function(a) {
   };
   e.race = function(a) {
     return new e(function(b, d) {
-      for (var e = $jscomp.makeIterator(a), g = e.next(); !g.done; g = e.next()) {
-        c(g.value).callWhenSettled_(b, d);
+      for (var e = $jscomp.makeIterator(a), f = e.next(); !f.done; f = e.next()) {
+        c(f.value).callWhenSettled_(b, d);
       }
     });
   };
   e.all = function(a) {
     var b = $jscomp.makeIterator(a), d = b.next();
     return d.done ? c([]) : new e(function(a, e) {
-      function g(b) {
+      function f(b) {
         return function(c) {
-          f[b] = c;
+          g[b] = c;
           h--;
-          0 == h && a(f);
+          0 == h && a(g);
         };
       }
-      var f = [], h = 0;
+      var g = [], h = 0;
       do {
-        f.push(void 0), h++, c(d.value).callWhenSettled_(g(f.length - 1), e), d = b.next();
+        g.push(void 0), h++, c(d.value).callWhenSettled_(f(g.length - 1), e), d = b.next();
       } while (!d.done);
     });
   };
@@ -708,6 +715,9 @@ $jscomp.AsyncGeneratorWrapper.prototype.rejectAndClose_ = function(a) {
   this.generator_["return"](void 0);
   this.runFrame_();
 };
+$jscomp.polyfill("globalThis", function(a) {
+  return a || $jscomp.global;
+}, "es_next", "es3");
 module.exports = function(a) {
   (function() {
     return new $jscomp.AsyncGeneratorWrapper(function c() {

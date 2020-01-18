@@ -1,7 +1,14 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var e = 0; e < a.length; ++e) {
+    var d = a[e];
+    if (d && d.Math == Math) {
+      return d;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {
@@ -115,7 +122,7 @@ $jscomp.polyfill("WeakMap", function(a) {
       b.delete(k);
       b.set(c, 4);
       return !b.has(k) && 4 == b.get(c);
-    } catch (n) {
+    } catch (m) {
       return !1;
     }
   }
@@ -197,13 +204,13 @@ $jscomp.polyfill("Map", function(a) {
       if ("s" != b.get(c) || 1 != b.size || b.get({x:4}) || b.set({x:4}, "t") != b || 2 != b.size) {
         return !1;
       }
-      var m = b.entries(), d = m.next();
-      if (d.done || d.value[0] != c || "s" != d.value[1]) {
+      var d = b.entries(), e = d.next();
+      if (e.done || e.value[0] != c || "s" != e.value[1]) {
         return !1;
       }
-      d = m.next();
-      return d.done || 4 != d.value[0].x || "t" != d.value[1] || !m.next().done ? !1 : !0;
-    } catch (n) {
+      e = d.next();
+      return e.done || 4 != e.value[0].x || "t" != e.value[1] || !d.next().done ? !1 : !0;
+    } catch (m) {
       return !1;
     }
   }

@@ -39,13 +39,13 @@ $jscomp.polyfill("globalThis", function(a) {
 module.exports = function() {
   var a = !1, b = function() {
   };
-  $jscomp.global.Object.defineProperty(b.prototype, "foo", {configurable:!0, enumerable:!0, get:function() {
+  $jscomp.global.Object.defineProperty(b, "foo", {configurable:!0, enumerable:!0, get:function() {
     return "foo";
   }});
-  $jscomp.global.Object.defineProperty(b.prototype, "bar", {configurable:!0, enumerable:!0, set:function(b) {
+  $jscomp.global.Object.defineProperty(b, "bar", {configurable:!0, enumerable:!0, set:function(b) {
     a = b;
   }});
-  (new b).bar = !0;
-  return "foo" === (new b).foo && a;
+  b.bar = !0;
+  return "foo" === b.foo && a;
 };
 

@@ -4,26 +4,33 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, e, b) {
-  a != Array.prototype && a != Object.prototype && (a[e] = b.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, e, b, c) {
-  if (e) {
+$jscomp.polyfill = function(a, c, b, e) {
+  if (c) {
     b = $jscomp.global;
     a = a.split(".");
-    for (c = 0; c < a.length - 1; c++) {
-      var d = a[c];
+    for (e = 0; e < a.length - 1; e++) {
+      var d = a[e];
       d in b || (b[d] = {});
       b = b[d];
     }
     a = a[a.length - 1];
-    c = b[a];
-    e = e(c);
-    e != c && null != e && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:e});
+    e = b[a];
+    c = c(e);
+    c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
 $jscomp.polyfill("Array.prototype.flat", function(a) {

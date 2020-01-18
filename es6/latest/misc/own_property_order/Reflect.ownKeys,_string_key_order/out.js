@@ -8,22 +8,29 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, b, c, d) {
+$jscomp.polyfill = function(a, b, c, e) {
   if (b) {
     c = $jscomp.global;
     a = a.split(".");
-    for (d = 0; d < a.length - 1; d++) {
-      var e = a[d];
-      e in c || (c[e] = {});
-      c = c[e];
+    for (e = 0; e < a.length - 1; e++) {
+      var d = a[e];
+      d in c || (c[d] = {});
+      c = c[d];
     }
     a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+    e = c[a];
+    b = b(e);
+    b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
   }
 };
 $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
@@ -33,10 +40,10 @@ $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
 }, "es6", "es5");
 $jscomp.polyfill("Reflect.ownKeys", function(a) {
   return a ? a : function(a) {
-    var c = [], d = Object.getOwnPropertyNames(a);
+    var c = [], b = Object.getOwnPropertyNames(a);
     a = Object.getOwnPropertySymbols(a);
-    for (var b = 0; b < d.length; b++) {
-      ("jscomp_symbol_" == d[b].substring(0, 14) ? a : c).push(d[b]);
+    for (var d = 0; d < b.length; d++) {
+      ("jscomp_symbol_" == b[d].substring(0, 14) ? a : c).push(b[d]);
     }
     return c.concat(a);
   };

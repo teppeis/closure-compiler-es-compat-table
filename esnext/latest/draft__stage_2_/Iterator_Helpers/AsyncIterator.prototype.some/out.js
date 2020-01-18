@@ -17,7 +17,14 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[b] = c.value);
 };
 $jscomp.getGlobal = function(a) {
-  return "undefined" != typeof window && window === a ? a : "undefined" != typeof global && null != global ? global : a;
+  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  for (var b = 0; b < a.length; ++b) {
+    var c = a[b];
+    if (c && c.Math == Math) {
+      return c;
+    }
+  }
+  return globalThis;
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -708,6 +715,9 @@ $jscomp.AsyncGeneratorWrapper.prototype.rejectAndClose_ = function(a) {
   this.generator_["return"](void 0);
   this.runFrame_();
 };
+$jscomp.polyfill("globalThis", function(a) {
+  return a || $jscomp.global;
+}, "es_next", "es3");
 module.exports = function(a) {
   (function() {
     return new $jscomp.AsyncGeneratorWrapper(function c() {
