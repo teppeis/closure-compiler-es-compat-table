@@ -223,6 +223,11 @@
 - Number.fromString ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/__BigInt%2C_Number__.fromString/Number.fromString/out.js))
 - BigInt.fromString ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/__BigInt%2C_Number__.fromString/BigInt.fromString/error.txt))
 
+### Object iteration
+- Object.iterateKeys ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateKeys/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateKeys/out.js))
+- Object.iterateValues ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateValues/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateValues/out.js))
+- Object.iterateEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200101/proposal__stage_1_/Object_iteration/Object.iterateEntries/out.js))
+
 ## Strawman (stage 0)
 
 ### bind (::) operator
