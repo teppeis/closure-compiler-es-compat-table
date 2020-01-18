@@ -780,10 +780,16 @@
     "subtest": "defaults, new Function() support"
   },
   {
-    "path": "syntax/destructuring,_parameters/defaults,_arrow_function",
+    "path": "syntax/destructuring,_parameters/aliased_defaults,_arrow_function",
     "category": "syntax",
     "test": "destructuring, parameters",
-    "subtest": "defaults, arrow function"
+    "subtest": "aliased defaults, arrow function"
+  },
+  {
+    "path": "syntax/destructuring,_parameters/shorthand_defaults,_arrow_function",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "shorthand defaults, arrow function"
   },
   {
     "path": "syntax/Unicode_code_point_escapes/in_strings",

@@ -911,6 +911,24 @@
     "subtest": "BigInt.fromString"
   },
   {
+    "path": "proposal__stage_1_/Object_iteration/Object.iterateKeys",
+    "category": "proposal (stage 1)",
+    "test": "Object iteration",
+    "subtest": "Object.iterateKeys"
+  },
+  {
+    "path": "proposal__stage_1_/Object_iteration/Object.iterateValues",
+    "category": "proposal (stage 1)",
+    "test": "Object iteration",
+    "subtest": "Object.iterateValues"
+  },
+  {
+    "path": "proposal__stage_1_/Object_iteration/Object.iterateEntries",
+    "category": "proposal (stage 1)",
+    "test": "Object iteration",
+    "subtest": "Object.iterateEntries"
+  },
+  {
     "path": "strawman__stage_0_/bind______operator/binary_form",
     "category": "strawman (stage 0)",
     "test": "bind (::) operator",
