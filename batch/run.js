@@ -42,6 +42,14 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
       },
     },
     webpackOptions: {
+      resolve: {
+        alias: {
+          "google-closure-compiler-java": path.resolve(
+            __dirname,
+            "google-closure-compiler-java-dummy.js"
+          ),
+        },
+      },
       externals: [
         new RegExp("^aws-sdk/?"),
         // include only compiler and compiler-java
