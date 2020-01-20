@@ -152,6 +152,9 @@ proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js: TypeE
 proposal__stage_1_/Math.seededPRNG/out.js: TypeError: Object #<Object> has no method 'seededPRNG'
 proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString/out.js: TypeError: Object function Number() { [native code] } has no method 'fromString'
 proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [CompileError]
+proposal__stage_1_/Object_iteration/Object.iterateKeys/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateKeys'
+proposal__stage_1_/Object_iteration/Object.iterateValues/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateValues'
+proposal__stage_1_/Object_iteration/Object.iterateEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateEntries'
 strawman__stage_0_/bind______operator/binary_form/error.txt: [CompileError]
 strawman__stage_0_/bind______operator/unary_form/error.txt: [CompileError]
 strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
