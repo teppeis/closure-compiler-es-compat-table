@@ -21,7 +21,7 @@
     "async": "^2.6.3",
     "del": "^5.1.0",
     "execa": "^4.0.0",
-    "faastjs": "^3.1.5",
+    "faastjs": "^4.0.3",
     "fs-readdir-recursive": "^1.1.0",
     "glob": "^7.1.6",
     "google-closure-compiler": "^20200112.0.0",
