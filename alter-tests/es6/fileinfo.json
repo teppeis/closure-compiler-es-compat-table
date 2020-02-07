@@ -966,6 +966,12 @@
     "subtest": "for/for-in loop iteration scope"
   },
   {
+    "path": "bindings/let/for-in_loop_binding_shadowing_parameter",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for-in loop binding shadowing parameter"
+  },
+  {
     "path": "bindings/let/basic_support__strict_mode_",
     "category": "bindings",
     "test": "let",
@@ -1006,6 +1012,12 @@
     "category": "bindings",
     "test": "let",
     "subtest": "for/for-in loop iteration scope (strict mode)"
+  },
+  {
+    "path": "bindings/let/for-in_loop_binding_shadowing_parameter__strict_mode_",
+    "category": "bindings",
+    "test": "let",
+    "subtest": "for-in loop binding shadowing parameter (strict mode)"
   },
   {
     "path": "bindings/block-level_function_declaration",
