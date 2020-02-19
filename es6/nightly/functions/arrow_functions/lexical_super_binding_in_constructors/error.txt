@@ -16,8 +16,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:10: ERROR - [JSC_MISSING_CALL_TO_SUPER] constructor is missing a call to super()
-    constructor () {
-    ^^^^^^^^^^^
+es6/nightly/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:11: ERROR - [JSC_SUPER_CALL_IN_ARROW] closure-compiler does not allow calls to `super()` in arrow functions
+      var callSuper = () => super('foo');
+                            ^^^^^
 
 1 error(s), 0 warning(s)
