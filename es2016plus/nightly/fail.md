@@ -66,6 +66,9 @@
 ### Proxy "ownKeys" handler, duplicate keys for non-extensible targets
 - Proxy "ownKeys" handler, duplicate keys for non-extensible targets ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/out.js))
 
+### template literal revision
+- template literal revision ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/template_literal_revision/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2018_misc/template_literal_revision/out.js))
+
 ## 2019 features
 
 ### Array.prototype.{flat, flatMap}

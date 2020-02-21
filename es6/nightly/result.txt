@@ -48,11 +48,11 @@ syntax/octal_and_binary_literals/octal_supported_by_Number__/out.js: [InvalidRes
 syntax/octal_and_binary_literals/binary_supported_by_Number__/out.js: [InvalidResult: false]
 syntax/template_literals/basic_functionality/out.js: [Pass]
 syntax/template_literals/toString_conversion/out.js: [InvalidResult: false]
-syntax/template_literals/tagged_template_literals/out.js: [Pass]
-syntax/template_literals/passed_array_is_frozen/out.js: [InvalidResult: false]
+syntax/template_literals/tagged_template_literals/out.js: TypeError: Cannot call method 'createTemplateTagFirstArgWithRaw' of undefined
+syntax/template_literals/passed_array_is_frozen/out.js: TypeError: Cannot call method 'createTemplateTagFirstArg' of undefined
 syntax/template_literals/line_break_normalisation/out.js: [Pass]
-syntax/template_literals/TemplateStrings_call_site_caching/out.js: [Pass]
-syntax/template_literals/TemplateStrings_permanent_caching/out.js: [Pass]
+syntax/template_literals/TemplateStrings_call_site_caching/out.js: TypeError: Cannot call method 'createTemplateTagFirstArg' of undefined
+syntax/template_literals/TemplateStrings_permanent_caching/out.js: TypeError: Cannot call method 'createTemplateTagFirstArg' of undefined
 syntax/RegExp_y_and_u_flags/y_flag/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'y'
 syntax/RegExp_y_and_u_flags/y_flag,_lastIndex/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'y'
 syntax/RegExp_y_and_u_flags/u_flag/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'u'

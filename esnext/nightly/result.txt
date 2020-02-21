@@ -30,7 +30,7 @@ draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/
 draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
 draft__stage_2_/Map.prototype.upsert/Map.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
 draft__stage_2_/Map.prototype.upsert/WeakMap.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
-draft__stage_2_/Array.isTemplateObject/out.js: TypeError: Object function Array() { [native code] } has no method 'isTemplateObject'
+draft__stage_2_/Array.isTemplateObject/out.js: TypeError: Cannot call method 'createTemplateTagFirstArg' of undefined
 draft__stage_2_/Iterator_Helpers/instanceof_Iterator/out.js: ReferenceError: Iterator is not defined
 draft__stage_2_/Iterator_Helpers/extends_Iterator/out.js: ReferenceError: Iterator is not defined
 draft__stage_2_/Iterator_Helpers/Iterator.from,_iterable/out.js: ReferenceError: Iterator is not defined
