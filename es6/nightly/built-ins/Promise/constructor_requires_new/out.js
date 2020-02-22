@@ -21,7 +21,7 @@ $jscomp.getGlobal = function(b) {
       return f;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;

@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -247,12 +247,12 @@ $jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, c) {
     if (!d.done) {
       return this.context_.stop_(), d;
     }
-    var e = d.value;
-  } catch (f) {
-    return this.context_.yieldAllIterator_ = null, this.context_.throw_(f), this.nextStep_();
+    var f = d.value;
+  } catch (e) {
+    return this.context_.yieldAllIterator_ = null, this.context_.throw_(e), this.nextStep_();
   }
   this.context_.yieldAllIterator_ = null;
-  c.call(this.context_, e);
+  c.call(this.context_, f);
   return this.nextStep_();
 };
 $jscomp.generator.Engine_.prototype.nextStep_ = function() {
@@ -297,24 +297,6 @@ $jscomp.generator.createGenerator = function(a, b) {
   $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  if (b) {
-    c = $jscomp.global;
-    a = a.split(".");
-    for (d = 0; d < a.length - 1; d++) {
-      var e = a[d];
-      e in c || (c[e] = {});
-      c = c[e];
-    }
-    a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
-  }
-};
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 module.exports = function() {
   function a() {
     return $jscomp.generator.createGenerator(a, function(a) {
@@ -328,8 +310,8 @@ module.exports = function() {
   d &= 7 === c.value && !1 === c.done;
   c = b.next();
   d &= void 0 === c.value && !0 === c.done;
-  return d &= a.constructor === function f() {
-    return $jscomp.generator.createGenerator(f, function(a) {
+  return d &= a.constructor === function e() {
+    return $jscomp.generator.createGenerator(e, function(a) {
       a.jumpToEnd();
     });
   }.constructor;

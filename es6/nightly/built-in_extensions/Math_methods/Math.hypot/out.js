@@ -15,7 +15,7 @@ $jscomp.getGlobal = function(b) {
       return a;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfill = function(b, c, a, d) {

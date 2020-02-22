@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return e;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -75,6 +75,10 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
+$jscomp.makeIterator = function(a) {
+  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+  return b ? b.call(a) : $jscomp.arrayIterator(a);
+};
 $jscomp.polyfill = function(a, b, e, f) {
   if (b) {
     e = $jscomp.global;
@@ -89,13 +93,6 @@ $jscomp.polyfill = function(a, b, e, f) {
     b = b(f);
     b != f && null != b && $jscomp.defineProperty(e, a, {configurable:!0, writable:!0, value:b});
   }
-};
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
-$jscomp.makeIterator = function(a) {
-  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.polyfill("Promise", function(a) {
