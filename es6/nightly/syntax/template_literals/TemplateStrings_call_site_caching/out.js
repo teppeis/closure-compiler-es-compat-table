@@ -1,12 +1,7 @@
-var $jscomp$templatelit$1 = $jscomp.createTemplateTagFirstArg(["foo"]), $jscomp$templatelit$0 = $jscomp.createTemplateTagFirstArg(["foo"]), $jscomp = $jscomp || {};
-$jscomp.scope = {};
-$jscomp.createTemplateTagFirstArg = function(a) {
-  return a.raw = a;
-};
-$jscomp.createTemplateTagFirstArgWithRaw = function(a, b) {
-  a.raw = b;
-  return a;
-};
+var $jscomp$templatelit$1 = ["foo"];
+$jscomp$templatelit$1.raw = $jscomp$templatelit$1.slice();
+var $jscomp$templatelit$0 = ["foo"];
+$jscomp$templatelit$0.raw = $jscomp$templatelit$0.slice();
 module.exports = function() {
   var a = $jscomp$templatelit$0, b = $jscomp$templatelit$1;
   return a === $jscomp$templatelit$0 && a !== b;

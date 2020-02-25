@@ -34,10 +34,7 @@
 
 ### template literals
 - toString conversion ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/toString_conversion/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/toString_conversion/out.js))
-- tagged template literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/tagged_template_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/tagged_template_literals/out.js))
 - passed array is frozen ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/passed_array_is_frozen/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/passed_array_is_frozen/out.js))
-- TemplateStrings call site caching ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/TemplateStrings_call_site_caching/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/TemplateStrings_call_site_caching/out.js))
-- TemplateStrings permanent caching ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/TemplateStrings_permanent_caching/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/TemplateStrings_permanent_caching/out.js))
 
 ### RegExp "y" and "u" flags
 - "y" flag ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/out.js))
