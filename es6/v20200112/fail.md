@@ -71,9 +71,7 @@
 
 ### let
 - temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/temporal_dead_zone/out.js))
-- for-in loop binding shadowing parameter ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/for-in_loop_binding_shadowing_parameter/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/for-in_loop_binding_shadowing_parameter/out.js))
 - temporal dead zone (strict mode) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/temporal_dead_zone__strict_mode_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/temporal_dead_zone__strict_mode_/out.js))
-- for-in loop binding shadowing parameter (strict mode) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/for-in_loop_binding_shadowing_parameter__strict_mode_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200112/bindings/let/for-in_loop_binding_shadowing_parameter__strict_mode_/out.js))
 
 ## Functions
 
