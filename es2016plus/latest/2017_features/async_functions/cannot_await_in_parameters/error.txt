@@ -12,35 +12,35 @@ module.exports = () => {
 
 ----------------------------------------------------------
 java.lang.IllegalStateException: AST should not contain async function. Reference node:
-AWAIT 6 [length: 23] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    CALL 6 [length: 17] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            STRING resolve 6 [length: 7] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
+AWAIT 6 [length: 23] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    CALL 6 [length: 17] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            STRING resolve 6 [length: 7] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
 
  Parent node:
-HOOK 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    SHEQ 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        VOID 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
-    AWAIT 6 [length: 23] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-        CALL 6 [length: 17] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-            GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-                STRING resolve 6 [length: 7] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js]
-    NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20200112/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
+HOOK 6 [length: 27] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    SHEQ 6 [length: 27] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        VOID 6 [length: 27] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            NUMBER 0.0 6 [length: 27] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
+    AWAIT 6 [length: 23] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+        CALL 6 [length: 17] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+            GETPROP 6 [length: 15] [originalname: resolve] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                NAME Promise 6 [length: 7] [originalname: Promise] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+                STRING resolve 6 [length: 7] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js]
+    NAME a 6 [length: 1] [originalname: b] [source_file: es2016plus/v20200204/2017_features/async_functions/cannot_await_in_parameters/in.js] [constant_var_flags: 2]
 
 	at com.google.javascript.jscomp.AstValidator$1.handleViolation(AstValidator.java:91)
-	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1861)
-	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1925)
+	at com.google.javascript.jscomp.AstValidator.violation(AstValidator.java:1862)
+	at com.google.javascript.jscomp.AstValidator.validateFeature(AstValidator.java:1926)
 	at com.google.javascript.jscomp.AstValidator.validateAwait(AstValidator.java:569)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:432)
-	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1776)
+	at com.google.javascript.jscomp.AstValidator.validateTrinaryOp(AstValidator.java:1777)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:331)
-	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1478)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1479)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1345)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1346)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
 	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:859)
@@ -50,7 +50,7 @@ HOOK 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_funct
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:412)
 	at com.google.javascript.jscomp.AstValidator.validateCall(AstValidator.java:1032)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:404)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1345)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1346)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
 	at com.google.javascript.jscomp.AstValidator.validateBlock(AstValidator.java:859)
@@ -58,9 +58,9 @@ HOOK 6 [length: 27] [source_file: es2016plus/v20200112/2017_features/async_funct
 	at com.google.javascript.jscomp.AstValidator.validateFunctionExpressionHelper(AstValidator.java:971)
 	at com.google.javascript.jscomp.AstValidator.validateFunctionExpression(AstValidator.java:947)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:412)
-	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1478)
+	at com.google.javascript.jscomp.AstValidator.validateAssignmentExpression(AstValidator.java:1479)
 	at com.google.javascript.jscomp.AstValidator.validateExpression(AstValidator.java:310)
-	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1345)
+	at com.google.javascript.jscomp.AstValidator.validateExprStmt(AstValidator.java:1346)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:220)
 	at com.google.javascript.jscomp.AstValidator.validateStatement(AstValidator.java:158)
 	at com.google.javascript.jscomp.AstValidator.validateStatements(AstValidator.java:152)

@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200112/subclassing/RegExp_is_subclassable/RegExp.prototype.exec/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: RegExp
+es6/v20200204/subclassing/RegExp_is_subclassable/RegExp.prototype.exec/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: RegExp
   class R extends RegExp {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^
 

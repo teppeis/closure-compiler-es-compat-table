@@ -5,7 +5,7 @@ return 1_000_000.000_001 === 1000000.000001 &&
 
 };
 ----------------------------------------------------------
-esnext/v20200112/candidate__stage_3_/numeric_separators/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+esnext/v20200204/candidate__stage_3_/numeric_separators/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 return 1_000_000.000_001 === 1000000.000001 &&
         ^
 
