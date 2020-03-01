@@ -1,0 +1,17 @@
+// built-ins / Set / constructor requires new
+module.exports = () => {
+  new Set();
+  try {
+    Set();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20200204/built-ins/Set/constructor_requires_new/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Set' is not being used.
+    Set();
+    ^^^^^
+
+0 error(s), 1 warning(s)

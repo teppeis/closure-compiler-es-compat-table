@@ -1,0 +1,16 @@
+// subclassing / miscellaneous subclassables / Set is subclassable
+module.exports = () => {
+  var obj = {};
+  class S extends Set {}
+  var set = new S();
+  set.add(123);
+  set.add(123);
+  return set instanceof S && set.has(123);
+
+};
+----------------------------------------------------------
+es6/v20200204/subclassing/miscellaneous_subclassables/Set_is_subclassable/in.js:4: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Set
+  class S extends Set {}
+  ^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
