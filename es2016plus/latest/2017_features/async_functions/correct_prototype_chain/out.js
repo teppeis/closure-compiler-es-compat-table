@@ -21,7 +21,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;
@@ -535,9 +535,6 @@ $jscomp.asyncExecutePromiseGeneratorFunction = function(a) {
 $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
   return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 module.exports = function() {
   var a = Object.getPrototypeOf(function() {
     return $jscomp.asyncExecutePromiseGeneratorProgram(function(a) {

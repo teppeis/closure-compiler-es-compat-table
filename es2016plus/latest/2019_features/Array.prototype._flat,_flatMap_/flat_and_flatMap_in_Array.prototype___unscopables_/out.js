@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -90,9 +90,6 @@ $jscomp.polyfill = function(a, b, c, e) {
     b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
   }
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 $jscomp.polyfill("Array.prototype.flatMap", function(a) {
   return a ? a : function(a, c) {
     for (var b = [], d = 0; d < this.length; d++) {

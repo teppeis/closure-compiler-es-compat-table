@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -715,9 +715,6 @@ $jscomp.AsyncGeneratorWrapper.prototype.rejectAndClose_ = function(a) {
   this.generator_["return"](void 0);
   this.runFrame_();
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 module.exports = function() {
   return function() {
     return new $jscomp.AsyncGeneratorWrapper(function b() {

@@ -8,7 +8,7 @@ $jscomp.getGlobal = function(a) {
       return d;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.checkEs6ConformanceViaProxy = function() {

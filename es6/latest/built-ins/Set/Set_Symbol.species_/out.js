@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return d;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -75,24 +75,6 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
-$jscomp.polyfill = function(a, e, d, b) {
-  if (e) {
-    d = $jscomp.global;
-    a = a.split(".");
-    for (b = 0; b < a.length - 1; b++) {
-      var g = a[b];
-      g in d || (d[g] = {});
-      d = d[g];
-    }
-    a = a[a.length - 1];
-    b = d[a];
-    e = e(b);
-    e != b && null != e && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:e});
-  }
-};
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 $jscomp.checkEs6ConformanceViaProxy = function() {
   try {
     var a = {}, e = Object.create(new $jscomp.global.Proxy(a, {get:function(d, b, g) {
@@ -111,6 +93,21 @@ $jscomp.makeIterator = function(a) {
 };
 $jscomp.owns = function(a, e) {
   return Object.prototype.hasOwnProperty.call(a, e);
+};
+$jscomp.polyfill = function(a, e, d, b) {
+  if (e) {
+    d = $jscomp.global;
+    a = a.split(".");
+    for (b = 0; b < a.length - 1; b++) {
+      var g = a[b];
+      g in d || (d[g] = {});
+      d = d[g];
+    }
+    a = a[a.length - 1];
+    b = d[a];
+    e = e(b);
+    e != b && null != e && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:e});
+  }
 };
 $jscomp.polyfill("WeakMap", function(a) {
   function e() {

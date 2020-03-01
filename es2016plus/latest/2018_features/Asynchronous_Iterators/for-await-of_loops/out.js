@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -557,9 +557,6 @@ $jscomp.AsyncIteratorFromSyncWrapper = function(a) {
     return Promise.resolve(a["return"](b));
   });
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 module.exports = function(a) {
   var b = {};
   $jscomp.initSymbol();

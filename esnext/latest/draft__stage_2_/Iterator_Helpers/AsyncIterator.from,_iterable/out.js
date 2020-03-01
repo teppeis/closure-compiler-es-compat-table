@@ -21,7 +21,7 @@ $jscomp.getGlobal = function(a) {
       return c;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.ASSUME_ES5 = !1;
@@ -557,9 +557,6 @@ $jscomp.AsyncIteratorFromSyncWrapper = function(a) {
     return Promise.resolve(a["return"](b));
   });
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 module.exports = function(a) {
   var b = AsyncIterator.from([1, 2, 3]);
   if (!("next" in b && b instanceof AsyncIterator)) {

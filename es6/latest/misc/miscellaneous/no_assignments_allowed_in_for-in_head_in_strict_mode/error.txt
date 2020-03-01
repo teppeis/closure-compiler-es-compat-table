@@ -8,7 +8,7 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
 
 ----------------------------------------------------------
-es6/v20200204/misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
+es6/v20200224/misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
   for (var i = 0 in {}) {}
                  ^
 

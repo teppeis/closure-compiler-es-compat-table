@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200204/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20200224/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

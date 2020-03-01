@@ -24,7 +24,7 @@ $jscomp.getGlobal = function(a) {
       return b;
     }
   }
-  return globalThis;
+  throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
@@ -90,9 +90,6 @@ $jscomp.polyfill = function(a, c, b, d) {
     c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
   }
 };
-$jscomp.polyfill("globalThis", function(a) {
-  return a || $jscomp.global;
-}, "es_next", "es3");
 $jscomp.polyfill("Array.from", function(a) {
   return a ? a : function(a, b, d) {
     b = null != b ? b : function(a) {
