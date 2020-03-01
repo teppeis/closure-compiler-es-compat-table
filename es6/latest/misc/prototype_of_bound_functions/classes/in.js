@@ -4,8 +4,7 @@ module.exports = () => {
     class C {}
     if (Object.setPrototypeOf) {
       Object.setPrototypeOf(C, proto);
-    }
-    else {
+    } else {
       C.__proto__ = proto;
     }
     var boundF = Function.prototype.bind.call(C, null);
