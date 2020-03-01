@@ -761,6 +761,12 @@
     "subtest": "optional method call"
   },
   {
+    "path": "2020_features/optional_chaining_operator___._/optional_function_call",
+    "category": "2020 features",
+    "test": "optional chaining operator (?.)",
+    "subtest": "optional function call"
+  },
+  {
     "path": "2020_features/nullish_coalescing_operator_____",
     "category": "2020 features",
     "test": "nullish coalescing operator (??)"
