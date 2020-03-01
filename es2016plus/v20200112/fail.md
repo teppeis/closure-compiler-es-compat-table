@@ -104,6 +104,7 @@
 - optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200112/2020_features/optional_chaining_operator___._/optional_property_access/error.txt))
 - optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200112/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
 - optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200112/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
+- optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200112/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
 
 ### nullish coalescing operator (??)
 - nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200112/2020_features/nullish_coalescing_operator_____/error.txt))
