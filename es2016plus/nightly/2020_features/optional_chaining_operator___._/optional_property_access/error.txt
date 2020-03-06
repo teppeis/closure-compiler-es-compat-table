@@ -6,15 +6,8 @@ return foo?.baz === 42 && bar?.baz === undefined;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_property_access/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Optional chaining
+es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_property_access/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 return foo?.baz === 42 && bar?.baz === undefined;
-          ^
+            ^
 
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_property_access/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Optional chaining
-return foo?.baz === 42 && bar?.baz === undefined;
-                             ^
-
-ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
-Unsupported features: [Optional chaining]
-
-1 error(s), 2 warning(s)
+1 error(s), 0 warning(s)
