@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  a = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
   for (var d = 0; d < a.length; ++d) {
     var e = a[d];
     if (e && e.Math == Math) {
