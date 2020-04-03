@@ -39,31 +39,44 @@ $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, c, e) {
   b != Array.prototype && b != Object.prototype && (b[c] = e.value);
 };
-$jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
+$jscomp.polyfill = function(b, c, e, d) {
+  if (c) {
+    e = $jscomp.global;
+    b = b.split(".");
+    for (d = 0; d < b.length - 1; d++) {
+      var g = b[d];
+      g in e || (e[g] = {});
+      e = e[g];
+    }
+    b = b[b.length - 1];
+    d = e[b];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(e, b, {configurable:!0, writable:!0, value:c});
+  }
+};
 $jscomp.initSymbol = function() {
-  $jscomp.initSymbol = function() {
+};
+$jscomp.polyfill("Symbol", function(b) {
+  if (b) {
+    return b;
+  }
+  $jscomp.initSymbol();
+  var c = function(b, c) {
+    this.$jscomp$symbol$id_ = b;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
   };
-  $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
-};
-$jscomp.SymbolClass = function(b, c) {
-  this.$jscomp$symbol$id_ = b;
-  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
-};
-$jscomp.SymbolClass.prototype.toString = function() {
-  return this.$jscomp$symbol$id_;
-};
-$jscomp.Symbol = function() {
-  function b(e) {
-    if (this instanceof b) {
+  c.prototype.toString = function() {
+    return this.$jscomp$symbol$id_;
+  };
+  var e = 0, d = function(b) {
+    if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (e || "") + "_" + c++, e);
-  }
-  var c = 0;
-  return b;
-}();
+    return new c("jscomp_symbol_" + (b || "") + "_" + e++, b);
+  };
+  return d;
+}, "es6", "es3");
 $jscomp.initSymbolIterator = function() {
-  $jscomp.initSymbol();
   var b = $jscomp.global.Symbol.iterator;
   b || (b = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("Symbol.iterator"));
   "function" != typeof Array.prototype[b] && $jscomp.defineProperty(Array.prototype, b, {configurable:!0, writable:!0, value:function() {
@@ -73,7 +86,6 @@ $jscomp.initSymbolIterator = function() {
   };
 };
 $jscomp.initSymbolAsyncIterator = function() {
-  $jscomp.initSymbol();
   var b = $jscomp.global.Symbol.asyncIterator;
   b || (b = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("Symbol.asyncIterator"));
   $jscomp.initSymbolAsyncIterator = function() {
@@ -93,21 +105,6 @@ $jscomp.makeIterator = function(b) {
 };
 $jscomp.owns = function(b, c) {
   return Object.prototype.hasOwnProperty.call(b, c);
-};
-$jscomp.polyfill = function(b, c, e, d) {
-  if (c) {
-    e = $jscomp.global;
-    b = b.split(".");
-    for (d = 0; d < b.length - 1; d++) {
-      var g = b[d];
-      g in e || (e[g] = {});
-      e = e[g];
-    }
-    b = b[b.length - 1];
-    d = e[b];
-    c = c(d);
-    c != d && null != c && $jscomp.defineProperty(e, b, {configurable:!0, writable:!0, value:c});
-  }
 };
 $jscomp.polyfill("WeakMap", function(b) {
   function c() {
