@@ -27,7 +27,7 @@
     "google-closure-compiler": "^20200204.0.0",
     "humanize-string": "^2.1.0",
     "meow": "^6.1.0",
-    "mkdirp": "^1.0.3",
+    "mkdirp": "^1.0.4",
     "object-assign": "^4.1.1",
     "rimraf": "^3.0.2",
     "semver": "^7.1.3"
