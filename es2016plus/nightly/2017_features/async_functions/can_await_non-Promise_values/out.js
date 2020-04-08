@@ -52,7 +52,7 @@ $jscomp.polyfill("Promise", function(a) {
     this.batch_ = null;
   }
   function c(a) {
-    return a instanceof d ? a : new d(function(b, g) {
+    return a instanceof d ? a : new d(function(b, f) {
       b(a);
     });
   }
@@ -107,8 +107,8 @@ $jscomp.polyfill("Promise", function(a) {
   };
   d.prototype.createResolveAndReject_ = function() {
     function a(a) {
-      return function(g) {
-        c || (c = !0, a.call(b, g));
+      return function(f) {
+        c || (c = !0, a.call(b, f));
       };
     }
     var b = this, c = !1;
@@ -164,12 +164,12 @@ $jscomp.polyfill("Promise", function(a) {
   d.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
       for (var a = 0; a < this.onSettledCallbacks_.length; ++a) {
-        f.asyncExecute(this.onSettledCallbacks_[a]);
+        g.asyncExecute(this.onSettledCallbacks_[a]);
       }
       this.onSettledCallbacks_ = null;
     }
   };
-  var f = new b;
+  var g = new b;
   d.prototype.settleSameAsPromise_ = function(a) {
     var b = this.createResolveAndReject_();
     a.callWhenSettled_(b.resolve, b.reject);
@@ -187,17 +187,17 @@ $jscomp.polyfill("Promise", function(a) {
       return "function" == typeof a ? function(b) {
         try {
           e(a(b));
-        } catch (l) {
-          g(l);
+        } catch (m) {
+          f(m);
         }
       } : b;
     }
-    var e, g, f = new d(function(a, b) {
+    var e, f, l = new d(function(a, b) {
       e = a;
-      g = b;
+      f = b;
     });
-    this.callWhenSettled_(c(a, e), c(b, g));
-    return f;
+    this.callWhenSettled_(c(a, e), c(b, f));
+    return l;
   };
   d.prototype.catch = function(a) {
     return this.then(void 0, a);
@@ -216,7 +216,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
     var d = this;
-    null == this.onSettledCallbacks_ ? f.asyncExecute(c) : this.onSettledCallbacks_.push(c);
+    null == this.onSettledCallbacks_ ? g.asyncExecute(c) : this.onSettledCallbacks_.push(c);
   };
   d.resolve = c;
   d.reject = function(a) {
@@ -226,52 +226,54 @@ $jscomp.polyfill("Promise", function(a) {
   };
   d.race = function(a) {
     return new d(function(b, d) {
-      for (var e = $jscomp.makeIterator(a), g = e.next(); !g.done; g = e.next()) {
-        c(g.value).callWhenSettled_(b, d);
+      for (var e = $jscomp.makeIterator(a), f = e.next(); !f.done; f = e.next()) {
+        c(f.value).callWhenSettled_(b, d);
       }
     });
   };
   d.all = function(a) {
     var b = $jscomp.makeIterator(a), e = b.next();
     return e.done ? c([]) : new d(function(a, d) {
-      function g(b) {
+      function f(b) {
         return function(c) {
-          f[b] = c;
+          g[b] = c;
           h--;
-          0 == h && a(f);
+          0 == h && a(g);
         };
       }
-      var f = [], h = 0;
+      var g = [], h = 0;
       do {
-        f.push(void 0), h++, c(e.value).callWhenSettled_(g(f.length - 1), d), e = b.next();
+        g.push(void 0), h++, c(e.value).callWhenSettled_(f(g.length - 1), d), e = b.next();
       } while (!e.done);
     });
   };
   return d;
 }, "es6", "es3");
+$jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
+  $jscomp.initSymbol = function() {
+  };
+  $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
-$jscomp.polyfill("Symbol", function(a) {
-  if (a) {
-    return a;
-  }
-  $jscomp.initSymbol();
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
-  };
-  b.prototype.toString = function() {
-    return this.$jscomp$symbol$id_;
-  };
-  var c = 0, e = function(a) {
-    if (this instanceof e) {
+$jscomp.SymbolClass = function(a, b) {
+  this.$jscomp$symbol$id_ = a;
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+};
+$jscomp.SymbolClass.prototype.toString = function() {
+  return this.$jscomp$symbol$id_;
+};
+$jscomp.Symbol = function() {
+  function a(c) {
+    if (this instanceof a) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
-  };
-  return e;
-}, "es6", "es3");
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (c || "") + "_" + b++, c);
+  }
+  var b = 0;
+  return a;
+}();
 $jscomp.initSymbolIterator = function() {
+  $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.iterator;
   a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("Symbol.iterator"));
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
@@ -281,6 +283,7 @@ $jscomp.initSymbolIterator = function() {
   };
 };
 $jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.asyncIterator;
   a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("Symbol.asyncIterator"));
   $jscomp.initSymbolAsyncIterator = function() {
@@ -463,8 +466,8 @@ $jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, c) {
       return this.context_.stop_(), e;
     }
     var d = e.value;
-  } catch (f) {
-    return this.context_.yieldAllIterator_ = null, this.context_.throw_(f), this.nextStep_();
+  } catch (g) {
+    return this.context_.yieldAllIterator_ = null, this.context_.throw_(g), this.nextStep_();
   }
   this.context_.yieldAllIterator_ = null;
   c.call(this.context_, d);
@@ -520,10 +523,10 @@ $jscomp.asyncExecutePromiseGenerator = function(a) {
     return a.throw(b);
   }
   return new Promise(function(e, d) {
-    function f(a) {
-      a.done ? e(a.value) : Promise.resolve(a.value).then(b, c).then(f, d);
+    function g(a) {
+      a.done ? e(a.value) : Promise.resolve(a.value).then(b, c).then(g, d);
     }
-    f(a.next());
+    g(a.next());
   });
 };
 $jscomp.asyncExecutePromiseGeneratorFunction = function(a) {

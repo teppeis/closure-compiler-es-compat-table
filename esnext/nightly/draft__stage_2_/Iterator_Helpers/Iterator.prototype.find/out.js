@@ -1,9 +1,9 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
+  var c = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -13,58 +13,45 @@ $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
+  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
-  for (var b = 0; b < a.length; ++b) {
-    var c = a[b];
-    if (c && c.Math == Math) {
-      return c;
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
     }
   }
   throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
-$jscomp.polyfill = function(a, b, c, d) {
-  if (b) {
-    c = $jscomp.global;
-    a = a.split(".");
-    for (d = 0; d < a.length - 1; d++) {
-      var e = a[d];
-      e in c || (c[e] = {});
-      c = c[e];
-    }
-    a = a[a.length - 1];
-    d = c[a];
-    b = b(d);
-    b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
-  }
-};
+$jscomp.SYMBOL_PREFIX = "jscomp_symbol_";
 $jscomp.initSymbol = function() {
+  $jscomp.initSymbol = function() {
+  };
+  $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
 };
-$jscomp.polyfill("Symbol", function(a) {
-  if (a) {
-    return a;
-  }
-  $jscomp.initSymbol();
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
-  };
-  b.prototype.toString = function() {
-    return this.$jscomp$symbol$id_;
-  };
-  var c = 0, d = function(a) {
-    if (this instanceof d) {
+$jscomp.SymbolClass = function(a, c) {
+  this.$jscomp$symbol$id_ = a;
+  $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
+};
+$jscomp.SymbolClass.prototype.toString = function() {
+  return this.$jscomp$symbol$id_;
+};
+$jscomp.Symbol = function() {
+  function a(b) {
+    if (this instanceof a) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
-  };
-  return d;
-}, "es6", "es3");
+    return new $jscomp.SymbolClass($jscomp.SYMBOL_PREFIX + (b || "") + "_" + c++, b);
+  }
+  var c = 0;
+  return a;
+}();
 $jscomp.initSymbolIterator = function() {
+  $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.iterator;
   a || (a = $jscomp.global.Symbol.iterator = $jscomp.global.Symbol("Symbol.iterator"));
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
@@ -74,6 +61,7 @@ $jscomp.initSymbolIterator = function() {
   };
 };
 $jscomp.initSymbolAsyncIterator = function() {
+  $jscomp.initSymbol();
   var a = $jscomp.global.Symbol.asyncIterator;
   a || (a = $jscomp.global.Symbol.asyncIterator = $jscomp.global.Symbol("Symbol.asyncIterator"));
   $jscomp.initSymbolAsyncIterator = function() {
@@ -87,13 +75,13 @@ $jscomp.iteratorPrototype = function(a) {
   };
   return a;
 };
-$jscomp.iteratorFromArray = function(a, b) {
+$jscomp.iteratorFromArray = function(a, c) {
   $jscomp.initSymbolIterator();
   a instanceof String && (a += "");
-  var c = 0, d = {next:function() {
-    if (c < a.length) {
-      var e = c++;
-      return {value:b(e, a[e]), done:!1};
+  var b = 0, d = {next:function() {
+    if (b < a.length) {
+      var e = b++;
+      return {value:c(e, a[e]), done:!1};
     }
     d.next = function() {
       return {done:!0, value:void 0};
@@ -105,26 +93,41 @@ $jscomp.iteratorFromArray = function(a, b) {
   };
   return d;
 };
+$jscomp.polyfill = function(a, c, b, d) {
+  if (c) {
+    b = $jscomp.global;
+    a = a.split(".");
+    for (d = 0; d < a.length - 1; d++) {
+      var e = a[d];
+      e in b || (b[e] = {});
+      b = b[e];
+    }
+    a = a[a.length - 1];
+    d = b[a];
+    c = c(d);
+    c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
+  }
+};
 $jscomp.polyfill("Array.prototype.values", function(a) {
   return a ? a : function() {
-    return $jscomp.iteratorFromArray(this, function(a, c) {
-      return c;
+    return $jscomp.iteratorFromArray(this, function(a, b) {
+      return b;
     });
   };
 }, "es8", "es3");
-$jscomp.findInternal = function(a, b, c) {
+$jscomp.findInternal = function(a, c, b) {
   a instanceof String && (a = String(a));
   for (var d = a.length, e = 0; e < d; e++) {
     var f = a[e];
-    if (b.call(c, f, e, a)) {
+    if (c.call(b, f, e, a)) {
       return {i:e, v:f};
     }
   }
   return {i:-1, v:void 0};
 };
 $jscomp.polyfill("Array.prototype.find", function(a) {
-  return a ? a : function(a, c) {
-    return $jscomp.findInternal(this, a, c).v;
+  return a ? a : function(a, b) {
+    return $jscomp.findInternal(this, a, b).v;
   };
 }, "es6", "es3");
 module.exports = function() {
