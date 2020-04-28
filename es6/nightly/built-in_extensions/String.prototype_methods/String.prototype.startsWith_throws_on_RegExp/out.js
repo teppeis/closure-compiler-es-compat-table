@@ -31,7 +31,7 @@ $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = $jscomp.ISOLATE_POLYFILLS && "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(a, c) {
   var b = $jscomp.propertyToPolyfillSymbol[c];
   if (null == b) {

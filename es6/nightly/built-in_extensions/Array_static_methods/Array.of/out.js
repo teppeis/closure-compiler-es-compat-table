@@ -22,7 +22,7 @@ $jscomp.global = $jscomp.getGlobal(this);
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = $jscomp.ISOLATE_POLYFILLS && "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(a, c) {
   var b = $jscomp.propertyToPolyfillSymbol[c];
   if (null == b) {
@@ -62,31 +62,7 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
 };
-$jscomp.polyfill("Array.from", function(a) {
-  return a ? a : function(a, b, d) {
-    b = null != b ? b : function(a) {
-      return a;
-    };
-    var c = [], f = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-    if ("function" == typeof f) {
-      a = f.call(a);
-      for (var g = 0; !(f = a.next()).done;) {
-        c.push(b.call(d, f.value, g++));
-      }
-    } else {
-      for (f = a.length, g = 0; g < f; g++) {
-        c.push(b.call(d, a[g], g));
-      }
-    }
-    return c;
-  };
-}, "es6", "es3");
-$jscomp.polyfill("Array.of", function(a) {
-  return a ? a : function(a) {
-    return Array.from(arguments);
-  };
-}, "es6", "es3");
 module.exports = function() {
-  return 2 === Array.of(2)[0];
+  return !0;
 };
 
