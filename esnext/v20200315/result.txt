@@ -1,0 +1,203 @@
+candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
+candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js: ReferenceError: FinalizationGroup is not defined
+candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
+candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt: [CompileError]
+candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
+candidate__stage_3_/instance_class_fields/optional_private_instance_class_fields_access/error.txt: [CompileError]
+candidate__stage_3_/instance_class_fields/optional_deep_private_instance_class_fields_access/error.txt: [CompileError]
+candidate__stage_3_/instance_class_fields/computed_instance_class_fields/error.txt: [CompileError]
+candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt: [CompileError]
+candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt: [CompileError]
+candidate__stage_3_/static_class_fields/computed_static_class_fields/error.txt: [CompileError]
+candidate__stage_3_/private_class_methods/private_instance_methods/error.txt: [CompileError]
+candidate__stage_3_/private_class_methods/private_static_methods/error.txt: [CompileError]
+candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt: [CompileError]
+candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
+candidate__stage_3_/numeric_separators/error.txt: [CompileError]
+candidate__stage_3_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
+candidate__stage_3_/Promise.any/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'any'
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_basic_support/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/&&=_basic_support/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/&&=_short-circuiting_behaviour/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/&&=_setter_not_unecessarily_invoked/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_basic_support/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour/error.txt: [CompileError]
+candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked/error.txt: [CompileError]
+candidate__stage_3_/Hashbang_Grammar/out.js: [InvalidResult: false]
+draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
+draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
+draft__stage_2_/Realms/out.js: [InvalidResult: false]
+draft__stage_2_/throw_expressions/logical/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/conditionals/error.txt: [CompileError]
+draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object [object Object] has no method 'intersection'
+draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
+draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
+draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
+draft__stage_2_/Set_methods/Set.prototype.isDisjointFrom/out.js: TypeError: Object [object Object] has no method 'isDisjointFrom'
+draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [object Object] has no method 'isSubsetOf'
+draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
+draft__stage_2_/Map.prototype.upsert/Map.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+draft__stage_2_/Map.prototype.upsert/WeakMap.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+draft__stage_2_/Array.isTemplateObject/out.js: TypeError: Cannot call method 'createTemplateTagFirstArg' of undefined
+draft__stage_2_/Iterator_Helpers/instanceof_Iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/extends_Iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.from,_iterable/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.from,_iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.asIndexedPairs/out.js: TypeError: Object #<Object> has no method 'asIndexedPairs'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.drop/out.js: TypeError: Object #<Object> has no method 'drop'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.every/out.js: TypeError: Object #<Object> has no method 'every'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.filter/out.js: TypeError: Object #<Object> has no method 'filter'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.find/out.js: TypeError: Object #<Object> has no method 'find'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.flatMap/out.js: TypeError: Object #<Object> has no method 'flatMap'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.forEach/out.js: TypeError: Object #<Object> has no method 'forEach'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.map/out.js: TypeError: Object #<Object> has no method 'map'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.reduce/out.js: TypeError: Object #<Object> has no method 'reduce'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.some/out.js: TypeError: Object #<Object> has no method 'some'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.take/out.js: TypeError: Object #<Object> has no method 'take'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.toArray/out.js: TypeError: Object #<Object> has no method 'toArray'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype___toStringTag_/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/instanceof_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/extends_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_async_iterable/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterable/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.asIndexedPairs/out.js: TypeError: Object [object Object] has no method 'asIndexedPairs'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.drop/out.js: TypeError: Object [object Object] has no method 'drop'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.flatMap/out.js: TypeError: Object [object Object] has no method 'flatMap'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.forEach/out.js: TypeError: Object [object Object] has no method 'forEach'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take/out.js: TypeError: Object [object Object] has no method 'take'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray/out.js: TypeError: Object [object Object] has no method 'toArray'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/out.js: ReferenceError: AsyncIterator is not defined
+proposal__stage_1_/do_expressions/error.txt: [CompileError]
+proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
+proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
+proposal__stage_1_/Observable/Observable.prototype.subscribe/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable_constructor_behavior/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.prototype_Symbol.observable_/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.of/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Observable/Observable.from/out.js: ReferenceError: Observable is not defined
+proposal__stage_1_/Frozen_Realms_API/out.js: ReferenceError: Reflect is not defined
+proposal__stage_1_/Math.signbit/out.js: TypeError: Object #<Object> has no method 'signbit'
+proposal__stage_1_/Math_extensions_proposal/Math.clamp/out.js: TypeError: Object #<Object> has no method 'clamp'
+proposal__stage_1_/Math_extensions_proposal/Math.DEG_PER_RAD/out.js: [InvalidResult: false]
+proposal__stage_1_/Math_extensions_proposal/Math.degrees/out.js: TypeError: Object #<Object> has no method 'degrees'
+proposal__stage_1_/Math_extensions_proposal/Math.fscale/out.js: TypeError: Object #<Object> has no method 'fscale'
+proposal__stage_1_/Math_extensions_proposal/Math.RAD_PER_DEG/out.js: [InvalidResult: false]
+proposal__stage_1_/Math_extensions_proposal/Math.radians/out.js: TypeError: Object #<Object> has no method 'radians'
+proposal__stage_1_/Math_extensions_proposal/Math.scale/out.js: TypeError: Object #<Object> has no method 'scale'
+proposal__stage_1_/Promise.try/basic_support/out.js: [InvalidResult: false]
+proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/function_returns_rejected_Promise/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var d = this.createResolveAndReject_(); try { a(d.resolve, d.reject); } catch (h) { d.reject(h); } } has no method 'try'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.of/out.js: TypeError: Object function (a) { this.data_ = {}; this.head_ = f(); this.size = 0; if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { b = b.value, this.set(b[0], b[1]); } } } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Map.from/out.js: TypeError: Object function (b) { this.data_ = {}; this.head_ = f(); this.size = 0; if (b) { b = $jscomp.makeIterator(b); for (var a; !(a = b.next()).done;) { a = a.value, this.set(a[0], a[1]); } } } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.of/out.js: TypeError: Object function (a) { this.map_ = new Map; if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { this.add(b.value); } } this.size = this.map_.size; } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/Set.from/out.js: TypeError: Object function (a) { this.map_ = new Map; if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { this.add(b.value); } } this.size = this.map_.size; } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.of/out.js: TypeError: Object function (a) { this.id_ = (l += Math.random() + 1).toString(); if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { b = b.value, this.set(b[0], b[1]); } } } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakMap.from/out.js: TypeError: Object function (a) { this.id_ = (l += Math.random() + 1).toString(); if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { b = b.value, this.set(b[0], b[1]); } } } has no method 'from'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.of/out.js: TypeError: Object function (a) { this.map_ = new WeakMap; if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { this.add(b.value); } } } has no method 'of'
+proposal__stage_1_/_.of__and__.from__on_collection_constructors/WeakSet.from/out.js: TypeError: Object function (a) { this.map_ = new WeakMap; if (a) { a = $jscomp.makeIterator(a); for (var b; !(b = a.next()).done;) { this.add(b.value); } } } has no method 'from'
+proposal__stage_1_/the_pipeline_operator/error.txt: [CompileError]
+proposal__stage_1_/extensible_numeric_literals/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_left/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_right/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg_with_rest/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/mixed_partial_application/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/runtime_evaluation/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/lexical__this_/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/constructor_partial_application/error.txt: [CompileError]
+proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.freeze_syntax_with_array_literal/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Object.seal_syntax_with_array_literal/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_destructuring/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_destructuring/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_arguments/error.txt: [CompileError]
+proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments/error.txt: [CompileError]
+proposal__stage_1_/String.prototype.codePoints/out.js: TypeError: Object a𠮷b has no method 'codePoints'
+proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastItem/out.js: [InvalidResult: false]
+proposal__stage_1_/Getting_last_item_from_array/Array.prototype.lastIndex/out.js: [InvalidResult: false]
+proposal__stage_1_/Collections_methods/Map.groupBy/out.js: TypeError: Object function (a) { this.data_ = {}; this.head_ = f(); this.size = 0; if (a) { a = $jscomp.makeIterator(a); for (var c; !(c = a.next()).done;) { c = c.value, this.set(c[0], c[1]); } } } has no method 'groupBy'
+proposal__stage_1_/Collections_methods/Map.keyBy/out.js: TypeError: Object function (a) { this.data_ = {}; this.head_ = f(); this.size = 0; if (a) { a = $jscomp.makeIterator(a); for (var c; !(c = a.next()).done;) { c = c.value, this.set(c[0], c[1]); } } } has no method 'keyBy'
+proposal__stage_1_/Collections_methods/Map.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/Map.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+proposal__stage_1_/Collections_methods/Map.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+proposal__stage_1_/Collections_methods/Map.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+proposal__stage_1_/Collections_methods/Map.prototype.findKey/out.js: TypeError: Object [object Object] has no method 'findKey'
+proposal__stage_1_/Collections_methods/Map.prototype.includes/out.js: TypeError: Object [object Object] has no method 'includes'
+proposal__stage_1_/Collections_methods/Map.prototype.keyOf/out.js: TypeError: Object [object Object] has no method 'keyOf'
+proposal__stage_1_/Collections_methods/Map.prototype.mapKeys/out.js: TypeError: Object [object Object] has no method 'mapKeys'
+proposal__stage_1_/Collections_methods/Map.prototype.mapValues/out.js: TypeError: Object [object Object] has no method 'mapValues'
+proposal__stage_1_/Collections_methods/Map.prototype.merge/out.js: TypeError: Object [object Object] has no method 'merge'
+proposal__stage_1_/Collections_methods/Map.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+proposal__stage_1_/Collections_methods/Map.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+proposal__stage_1_/Collections_methods/Set.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
+proposal__stage_1_/Collections_methods/Set.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/Set.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+proposal__stage_1_/Collections_methods/Set.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+proposal__stage_1_/Collections_methods/Set.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+proposal__stage_1_/Collections_methods/Set.prototype.join/out.js: TypeError: Object [object Object] has no method 'join'
+proposal__stage_1_/Collections_methods/Set.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
+proposal__stage_1_/Collections_methods/Set.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+proposal__stage_1_/Collections_methods/Set.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+proposal__stage_1_/Collections_methods/WeakMap.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Collections_methods/WeakSet.prototype.addAll/out.js: TypeError: Object [object Object] has no method 'addAll'
+proposal__stage_1_/Collections_methods/WeakSet.prototype.deleteAll/out.js: TypeError: Object [object Object] has no method 'deleteAll'
+proposal__stage_1_/Math.seededPRNG/out.js: TypeError: Object #<Object> has no method 'seededPRNG'
+proposal__stage_1_/__BigInt,_Number__.fromString/Number.fromString/out.js: TypeError: Object function Number() { [native code] } has no method 'fromString'
+proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [CompileError]
+proposal__stage_1_/Object_iteration/Object.iterateKeys/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateKeys'
+proposal__stage_1_/Object_iteration/Object.iterateValues/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateValues'
+proposal__stage_1_/Object_iteration/Object.iterateEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateEntries'
+strawman__stage_0_/bind______operator/binary_form/error.txt: [CompileError]
+strawman__stage_0_/bind______operator/unary_form/error.txt: [CompileError]
+strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
+strawman__stage_0_/additional_meta_properties/function.callee/error.txt: [CompileError]
+strawman__stage_0_/additional_meta_properties/function.count/error.txt: [CompileError]
+strawman__stage_0_/additional_meta_properties/function.arguments/error.txt: [CompileError]
+strawman__stage_0_/method_parameter_decorators/error.txt: [CompileError]
+strawman__stage_0_/function_expression_decorators/error.txt: [CompileError]
+strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/out.js: ReferenceError: Reflect is not defined
+strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/out.js: ReferenceError: Reflect is not defined
+strawman__stage_0_/zones/Zone/out.js: [InvalidResult: false]
+strawman__stage_0_/zones/Zone.current/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.name/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.parent/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.fork/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.run/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/zones/Zone.prototype.wrap/out.js: ReferenceError: Zone is not defined
+strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileError]
+strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
+strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]
+strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt: [CompileError]
+pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js: ReferenceError: Reflect is not defined
+pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js: ReferenceError: Reflect is not defined
