@@ -4,6 +4,6 @@ module.exports = () => {
   var b = Object.create(a);
   b.foo = 1;
   a.__defineGetter__("foo", function () {})
-  return b.__lookupGetter__("foo") === undefined
+  return b.__lookupGetter__("foo") === void undefined
 
 };

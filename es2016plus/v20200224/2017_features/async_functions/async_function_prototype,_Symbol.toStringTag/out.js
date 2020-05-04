@@ -537,7 +537,7 @@ $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
 };
 module.exports = function() {
   $jscomp.initSymbol();
-  return "AsyncFunction" == Object.getPrototypeOf(function() {
+  return "AsyncFunction" === Object.getPrototypeOf(function() {
     return $jscomp.asyncExecutePromiseGeneratorProgram(function(a) {
       a.jumpToEnd();
     });

@@ -79,6 +79,6 @@ module.exports = function() {
   $jscomp.initSymbol();
   var a = Symbol(), b = Object(a);
   $jscomp.initSymbol();
-  return "object" === typeof b && b instanceof Symbol && b == a && b !== a && b.valueOf() === a;
+  return "object" === typeof b && b instanceof Symbol && b === a && b !== a && b.valueOf() === a;
 };
 

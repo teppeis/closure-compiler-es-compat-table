@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Atomics.or;
+  return "function" === typeof Atomics.or;
 };
 

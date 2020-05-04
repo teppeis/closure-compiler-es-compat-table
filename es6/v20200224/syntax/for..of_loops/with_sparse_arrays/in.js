@@ -3,7 +3,7 @@ module.exports = () => {
   var arr = [,,];
   var count = 0;
   for (var item of arr)
-    count += (item === undefined);
+    count += (item === void undefined);
   return count === 2;
 
 };
