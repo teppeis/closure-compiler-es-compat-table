@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200406/subclassing/miscellaneous_subclassables/String_is_subclassable/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: String
+es6/v20200426/subclassing/miscellaneous_subclassables/String_is_subclassable/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: String
   class C extends String {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^
 

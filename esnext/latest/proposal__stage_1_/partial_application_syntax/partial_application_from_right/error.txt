@@ -8,7 +8,7 @@ return p('a') === 'ab';
 
 };
 ----------------------------------------------------------
-esnext/v20200406/proposal__stage_1_/partial_application_syntax/partial_application_from_right/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+esnext/v20200426/proposal__stage_1_/partial_application_syntax/partial_application_from_right/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
 var p = f(?, 'b');
           ^
 

@@ -7,7 +7,7 @@ return i === 1;
 
 };
 ----------------------------------------------------------
-esnext/v20200406/candidate__stage_3_/Logical_Assignment/&&=_setter_not_unecessarily_invoked/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20200426/candidate__stage_3_/Logical_Assignment/&&=_setter_not_unecessarily_invoked/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 obj.x &&= 2;
          ^
 

@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200406/built-ins/Set/Set.prototype_isnt_an_instance/in.js:6: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Set.prototype.has' is not being used.
+es6/v20200426/built-ins/Set/Set.prototype_isnt_an_instance/in.js:6: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Set.prototype.has' is not being used.
     Set.prototype.has(obj);
     ^^^^^^^^^^^^^^^^^^^^^^
 

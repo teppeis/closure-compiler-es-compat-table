@@ -11,15 +11,15 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d
 
 ----------------------------------------------------------
-es6/v20200406/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: c
+es6/v20200426/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: c
   let {c = c} = {};
            ^
 
-es6/v20200406/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - [JSC_REDECLARED_VARIABLE_ERROR] Illegal redeclared variable: c
+es6/v20200426/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - [JSC_REDECLARED_VARIABLE_ERROR] Illegal redeclared variable: c
   let {c = d, d} = {d:1};
        ^
 
-es6/v20200406/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d
+es6/v20200426/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d
   let {c = d, d} = {d:1};
            ^
 
