@@ -6,9 +6,9 @@ module.exports = () => {
   var item = iterator.next();
   var passed = item.value === "𠮷" && item.done === false;
   item = iterator.next();
-  passed    &= item.value === "𠮶" && item.done === false;
+  passed &= item.value === "𠮶" && item.done === false;
   item = iterator.next();
-  passed    &= item.value === undefined && item.done === true;
+  passed &= item.value === void undefined && item.done === true;
   return passed;
 
 };

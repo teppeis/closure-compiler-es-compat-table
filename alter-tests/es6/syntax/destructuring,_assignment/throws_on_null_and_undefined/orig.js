@@ -9,7 +9,7 @@ module.exports = () => {
       return false;
   }
   try {
-    ({b} = undefined);
+    ({b} = void undefined);
     return false;
   } catch(e) {
     if (!(e instanceof TypeError))

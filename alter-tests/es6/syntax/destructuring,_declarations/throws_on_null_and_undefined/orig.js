@@ -8,7 +8,7 @@ module.exports = () => {
       return false;
   }
   try {
-    var {b} = undefined;
+    var {b} = void undefined;
     return false;
   } catch(e) {
     if (!(e instanceof TypeError))
