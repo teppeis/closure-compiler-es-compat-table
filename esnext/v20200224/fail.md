@@ -9,12 +9,20 @@
 - public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
 - private instance class fields basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
 - private instance class fields initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt))
+- optional private instance class fields access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/optional_private_instance_class_fields_access/error.txt))
+- optional deep private instance class fields access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/optional_deep_private_instance_class_fields_access/error.txt))
 - computed instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/instance_class_fields/computed_instance_class_fields/error.txt))
 
 ### static class fields
 - public static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/static_class_fields/public_static_class_fields/error.txt))
 - private static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/static_class_fields/private_static_class_fields/error.txt))
 - computed static class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/static_class_fields/computed_static_class_fields/error.txt))
+
+### private class methods
+- private instance methods ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/private_class_methods/private_instance_methods/error.txt))
+- private static methods ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/private_class_methods/private_static_methods/error.txt))
+- private accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt))
+- private static accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt))
 
 ### numeric separators
 - numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/numeric_separators/error.txt))
@@ -28,6 +36,20 @@
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
 - RegExp.$1-$9 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.%241-%249/error.txt))
+
+### Logical Assignment
+- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_basic_support/error.txt))
+- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_short-circuiting_behaviour/error.txt))
+- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_setter_not_unecessarily_invoked/error.txt))
+- &&= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/%26%26%3D_basic_support/error.txt))
+- &&= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/%26%26%3D_short-circuiting_behaviour/error.txt))
+- &&= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/%26%26%3D_setter_not_unecessarily_invoked/error.txt))
+- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_basic_support/error.txt))
+- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_short-circuiting_behaviour/error.txt))
+- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Logical_Assignment/__%3D_setter_not_unecessarily_invoked/error.txt))
+
+### Hashbang Grammar
+- Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200224/candidate__stage_3_/Hashbang_Grammar/out.js))
 
 ## Draft (stage 2)
 
