@@ -30,6 +30,18 @@
     "subtest": "private instance class fields initializers"
   },
   {
+    "path": "candidate__stage_3_/instance_class_fields/optional_private_instance_class_fields_access",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "optional private instance class fields access"
+  },
+  {
+    "path": "candidate__stage_3_/instance_class_fields/optional_deep_private_instance_class_fields_access",
+    "category": "candidate (stage 3)",
+    "test": "instance class fields",
+    "subtest": "optional deep private instance class fields access"
+  },
+  {
     "path": "candidate__stage_3_/instance_class_fields/computed_instance_class_fields",
     "category": "candidate (stage 3)",
     "test": "instance class fields",
@@ -52,6 +64,30 @@
     "category": "candidate (stage 3)",
     "test": "static class fields",
     "subtest": "computed static class fields"
+  },
+  {
+    "path": "candidate__stage_3_/private_class_methods/private_instance_methods",
+    "category": "candidate (stage 3)",
+    "test": "private class methods",
+    "subtest": "private instance methods"
+  },
+  {
+    "path": "candidate__stage_3_/private_class_methods/private_static_methods",
+    "category": "candidate (stage 3)",
+    "test": "private class methods",
+    "subtest": "private static methods"
+  },
+  {
+    "path": "candidate__stage_3_/private_class_methods/private_accessor_properties",
+    "category": "candidate (stage 3)",
+    "test": "private class methods",
+    "subtest": "private accessor properties"
+  },
+  {
+    "path": "candidate__stage_3_/private_class_methods/private_static_accessor_properties",
+    "category": "candidate (stage 3)",
+    "test": "private class methods",
+    "subtest": "private static accessor properties"
   },
   {
     "path": "candidate__stage_3_/numeric_separators",
@@ -79,6 +115,65 @@
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
     "subtest": "RegExp.$1-$9"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_basic_support",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "||= basic support"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "||= short-circuiting behaviour"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "||= setter not unecessarily invoked"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/&&=_basic_support",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "&&= basic support"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/&&=_short-circuiting_behaviour",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "&&= short-circuiting behaviour"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/&&=_setter_not_unecessarily_invoked",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "&&= setter not unecessarily invoked"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_basic_support",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "??= basic support"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "??= short-circuiting behaviour"
+  },
+  {
+    "path": "candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked",
+    "category": "candidate (stage 3)",
+    "test": "Logical Assignment",
+    "subtest": "??= setter not unecessarily invoked"
+  },
+  {
+    "path": "candidate__stage_3_/Hashbang_Grammar",
+    "category": "candidate (stage 3)",
+    "test": "Hashbang Grammar"
   },
   {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
