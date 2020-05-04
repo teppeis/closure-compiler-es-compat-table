@@ -7,7 +7,7 @@ module.exports = () => {
   c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
   a >= 0;
   b in {};
-  c == 0;
+  c == 0; // eslint-disable-line eqeqeq
   return passed === 3;
 
 };
@@ -21,7 +21,7 @@ es6/nightly/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9: WARNING - [
   ^^^^^^^
 
 es6/nightly/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
-  c == 0;
+  c == 0; // eslint-disable-line eqeqeq
   ^^^^^^
 
 0 error(s), 3 warning(s)

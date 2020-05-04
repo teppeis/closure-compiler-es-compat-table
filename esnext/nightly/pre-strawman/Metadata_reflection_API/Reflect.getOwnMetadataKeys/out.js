@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Reflect.getOwnMetadataKeys;
+  return "function" === typeof Reflect.getOwnMetadataKeys;
 };
 

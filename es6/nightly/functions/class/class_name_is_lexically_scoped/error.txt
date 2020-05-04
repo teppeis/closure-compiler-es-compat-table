@@ -4,13 +4,13 @@ module.exports = () => {
     method() { return typeof C === "function"; }
   }
   var M = C.prototype.method;
-  C = undefined;
-  return C === undefined && M();
+  C = void undefined;
+  return C === void undefined && M();
 
 };
 ----------------------------------------------------------
 es6/nightly/functions/class/class_name_is_lexically_scoped/in.js:7: ERROR - [CLASS_REASSIGNMENT] Class names defined inside a function cannot be reassigned.
-  C = undefined;
-  ^^^^^^^^^^^^^
+  C = void undefined;
+  ^^^^^^^^^^^^^^^^^^
 
 1 error(s), 0 warning(s)

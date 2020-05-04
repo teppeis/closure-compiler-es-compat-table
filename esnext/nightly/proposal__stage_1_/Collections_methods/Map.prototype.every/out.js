@@ -342,7 +342,7 @@ $jscomp.polyfill("Map", function(a) {
 }, "es6", "es3");
 module.exports = function() {
   return (new Map([[1, 4], [2, 5], [3, 6]])).every(function(a) {
-    return "number" == typeof a;
+    return "number" === typeof a;
   });
 };
 

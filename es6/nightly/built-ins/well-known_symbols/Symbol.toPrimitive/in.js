@@ -7,7 +7,7 @@ module.exports = () => {
   c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
   a >= 0;
   b in {};
-  c == 0;
+  c == 0; // eslint-disable-line eqeqeq
   return passed === 3;
 
 };

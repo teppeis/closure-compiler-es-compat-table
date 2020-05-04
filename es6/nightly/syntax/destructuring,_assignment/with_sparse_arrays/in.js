@@ -2,6 +2,6 @@
 module.exports = () => {
   var a, b;
   [a, , b] = [,,,];
-  return a === undefined && b === undefined;
+  return a === void undefined && b === void undefined;
 
 };

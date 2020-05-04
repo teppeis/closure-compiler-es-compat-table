@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Zone;
+  return "function" === typeof Zone;
 };
 

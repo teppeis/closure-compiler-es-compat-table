@@ -305,7 +305,7 @@ module.exports = function() {
         return a.setCatchFinallyBlocks(2), a.yield(void 0, 4);
       }
       if (2 != a.nextAddress) {
-        throw Error();
+        return a.leaveTryBlock(0);
       }
       a.enterCatchBlock();
       return a.return(!0);
@@ -313,6 +313,6 @@ module.exports = function() {
   }
   var b = a();
   b.next();
-  return b.next().value;
+  return b.throw().value;
 };
 

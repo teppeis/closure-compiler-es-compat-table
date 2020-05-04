@@ -5,7 +5,7 @@ module.exports = () => {
     passed = (new.target === f);
   }();
   (function() {
-    passed &= (new.target === undefined);
+    passed &= (new.target === void undefined);
   }());
   return passed;
 
