@@ -1,0 +1,17 @@
+// built-ins / WeakSet / constructor requires new
+module.exports = () => {
+  new WeakSet();
+  try {
+    WeakSet();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20200426/built-ins/WeakSet/constructor_requires_new/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakSet' is not being used.
+    WeakSet();
+    ^^^^^^^^^
+
+0 error(s), 1 warning(s)

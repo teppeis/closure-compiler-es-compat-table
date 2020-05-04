@@ -1,0 +1,16 @@
+// annex b / RegExp syntax extensions / invalid hexadecimal escapes
+module.exports = () => {
+  return /\x1/.exec("x1")[0] === "x1"
+&& /[\x1]/.exec("x")[0] === "x";
+
+};
+----------------------------------------------------------
+es6/v20200426/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:3: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: Abbreviated hex escape 1
+  return /\x1/.exec("x1")[0] === "x1"
+         ^^^^^
+
+es6/v20200426/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:4: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: ]
+&& /[\x1]/.exec("x")[0] === "x";
+   ^^^^^^^
+
+0 error(s), 2 warning(s)
