@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Zone.prototype.wrap;
+  return "function" === typeof Zone.prototype.wrap;
 };
 

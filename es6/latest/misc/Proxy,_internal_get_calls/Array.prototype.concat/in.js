@@ -3,7 +3,7 @@ module.exports = () => {
 // Array.prototype.concat -> Get -> [[Get]]
   var get = [];
   var arr = [1];
-  arr.constructor = undefined;
+  arr.constructor = void undefined;
   var p = new Proxy(arr, { get: function(o, k) { get.push(k); return o[k]; }});
   Array.prototype.concat.call(p,p);
   return get[0] === "constructor"

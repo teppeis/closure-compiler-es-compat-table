@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Zone.prototype.run;
+  return "function" === typeof Zone.prototype.run;
 };
 

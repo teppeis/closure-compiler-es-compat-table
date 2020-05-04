@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Atomics.add;
+  return "function" === typeof Atomics.add;
 };
 

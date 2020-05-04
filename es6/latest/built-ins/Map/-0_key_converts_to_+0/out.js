@@ -318,6 +318,6 @@ module.exports = function() {
   a.forEach(function(a, d) {
     c = 1 / d;
   });
-  return Infinity === c && "foo" == a.get(0);
+  return Infinity === c && "foo" === a.get(0);
 };
 

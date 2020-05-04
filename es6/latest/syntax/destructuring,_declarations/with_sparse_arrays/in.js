@@ -1,6 +1,6 @@
 // syntax / destructuring, declarations / with sparse arrays
 module.exports = () => {
   var [a, , b] = [,,,];
-  return a === undefined && b === undefined;
+  return a === void undefined && b === void undefined;
 
 };

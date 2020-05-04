@@ -7,7 +7,7 @@ module.exports = () => {
   c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
   a >= 0;
   b in {};
-  c == 0;
+  c === 0;
   return passed === 3;
 
 };

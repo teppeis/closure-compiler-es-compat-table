@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "function" == typeof Reflect.defineMetadata;
+  return "function" === typeof Reflect.defineMetadata;
 };
 

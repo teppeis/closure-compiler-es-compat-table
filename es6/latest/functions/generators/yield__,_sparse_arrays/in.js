@@ -4,11 +4,11 @@ module.exports = () => {
     yield * [,,];
   }());
   var item = iterator.next();
-  var passed = item.value === undefined && item.done === false;
+  var passed = item.value === void undefined && item.done === false;
   item = iterator.next();
-  passed    &= item.value === undefined && item.done === false;
+  passed &= item.value === void undefined && item.done === false;
   item = iterator.next();
-  passed    &= item.value === undefined && item.done === true;
+  passed &= item.value === void undefined && item.done === true;
   return passed;
 
 };
