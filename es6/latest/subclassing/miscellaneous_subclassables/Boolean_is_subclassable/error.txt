@@ -4,11 +4,11 @@ module.exports = () => {
   var c = new C(true);
   return c instanceof Boolean
 && c instanceof C
-&& c === true;
+&& c == true; // eslint-disable-line eqeqeq
 
 };
 ----------------------------------------------------------
-es6/v20200224/subclassing/miscellaneous_subclassables/Boolean_is_subclassable/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Boolean
+es6/v20200315/subclassing/miscellaneous_subclassables/Boolean_is_subclassable/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Boolean
   class C extends Boolean {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

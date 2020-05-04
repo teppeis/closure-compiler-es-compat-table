@@ -94,7 +94,7 @@ module.exports = function() {
   };
   0 <= a;
   b in {};
-  0 === c;
+  0 == c;
   return 3 === d;
 };
 

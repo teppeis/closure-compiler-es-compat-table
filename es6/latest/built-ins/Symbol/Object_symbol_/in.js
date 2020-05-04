@@ -4,7 +4,7 @@ module.exports = () => {
   var symbolObject = Object(symbol);
   return typeof symbolObject === "object" &&
 symbolObject instanceof Symbol &&
-symbolObject === symbol &&
+symbolObject == symbol && // eslint-disable-line eqeqeq
 symbolObject !== symbol &&
 symbolObject.valueOf() === symbol;
 

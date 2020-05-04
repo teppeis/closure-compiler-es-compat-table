@@ -39,7 +39,6 @@
 2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
-2018_misc/template_literal_revision/out.js: [Pass]
 2019_features/Object.fromEntries/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
@@ -59,3 +58,4 @@
 2020_features/Promise.allSettled/out.js: [Pass]
 2020_features/globalThis/globalThis_global_property_is_global_object/out.js: [Pass]
 2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js: [Pass]
+2020_features/nullish_coalescing_operator_____/out.js: [Pass]

@@ -4,7 +4,7 @@ return BigInt("3") === 3n;
 
 };
 ----------------------------------------------------------
-es2016plus/v20200224/2020_features/BigInt/constructor/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/v20200315/2020_features/BigInt/constructor/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 return BigInt("3") === 3n;
                         ^
 

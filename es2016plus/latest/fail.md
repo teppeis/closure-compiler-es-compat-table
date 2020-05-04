@@ -66,6 +66,9 @@
 ### Proxy "ownKeys" handler, duplicate keys for non-extensible targets
 - Proxy "ownKeys" handler, duplicate keys for non-extensible targets ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/out.js))
 
+### template literal revision
+- template literal revision ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/template_literal_revision/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2018_misc/template_literal_revision/out.js))
+
 ## 2019 features
 
 ### Array.prototype.{flat, flatMap}
@@ -105,6 +108,3 @@
 - optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
 - optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
 - optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
-
-### nullish coalescing operator (??)
-- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2020_features/nullish_coalescing_operator_____/error.txt))

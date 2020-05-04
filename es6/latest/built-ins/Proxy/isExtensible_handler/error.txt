@@ -13,7 +13,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200224/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
+es6/v20200315/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
   Object.isExtensible(
   ^^^^^^^^^^^^^^^^^^^^
 
