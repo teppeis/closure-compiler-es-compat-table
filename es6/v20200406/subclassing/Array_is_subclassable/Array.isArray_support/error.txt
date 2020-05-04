@@ -1,0 +1,12 @@
+// subclassing / Array is subclassable / Array.isArray support
+module.exports = () => {
+  class C extends Array {}
+  return Array.isArray(new C());
+
+};
+----------------------------------------------------------
+es6/v20200406/subclassing/Array_is_subclassable/Array.isArray_support/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Array
+  class C extends Array {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

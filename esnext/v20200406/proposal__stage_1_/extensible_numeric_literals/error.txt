@@ -1,0 +1,14 @@
+// proposal (stage 1) / extensible numeric literals
+module.exports = () => {
+function i (str, num) {
+return typeof str + str + typeof num + num;
+}
+return 123i === 'string123number123';
+
+};
+----------------------------------------------------------
+esnext/v20200406/proposal__stage_1_/extensible_numeric_literals/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+return 123i === 'string123number123';
+          ^
+
+1 error(s), 0 warning(s)
