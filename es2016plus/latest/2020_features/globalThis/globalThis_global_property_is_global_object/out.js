@@ -8,7 +8,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   a != Array.prototype && a != Object.prototype && (a[c] = b.value);
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
+  a = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, a];
   for (var c = 0; c < a.length; ++c) {
     var b = a[c];
     if (b && b.Math == Math) {
@@ -35,7 +35,7 @@ $jscomp.polyfill = function(a, c, b, d) {
 };
 $jscomp.polyfill("globalThis", function(a) {
   return a || $jscomp.global;
-}, "es_next", "es3");
+}, "es_2020", "es3");
 module.exports = function() {
   ensureUsed(globalThis);
   var a = Function("return this")();

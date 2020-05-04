@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200315/built-ins/Proxy/has_handler,_instances_of_proxies/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+es6/v20200406/built-ins/Proxy/has_handler,_instances_of_proxies/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
   "foo" in Object.create(new Proxy(proxied, {
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

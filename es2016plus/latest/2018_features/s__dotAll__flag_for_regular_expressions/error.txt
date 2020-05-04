@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200315/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp flag 's'" to targeted output language.
+es2016plus/v20200406/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp flag 's'" to targeted output language.
   const regex = /foo.bar/s;
                 ^^^^^^^^^^
 

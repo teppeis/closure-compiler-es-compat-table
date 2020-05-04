@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(b) {
   return c ? c.call(b) : $jscomp.arrayIterator(b);
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
+  b = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
   for (var c = 0; c < b.length; ++c) {
     var f = b[c];
     if (f && f.Math == Math) {

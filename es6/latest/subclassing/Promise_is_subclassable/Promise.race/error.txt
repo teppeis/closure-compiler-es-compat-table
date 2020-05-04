@@ -18,7 +18,7 @@ module.exports = (asyncTestPassed) => {
 
 };
 ----------------------------------------------------------
-es6/v20200315/subclassing/Promise_is_subclassable/Promise.race/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Promise
+es6/v20200406/subclassing/Promise_is_subclassable/Promise.race/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Promise
   class P extends Promise {}
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

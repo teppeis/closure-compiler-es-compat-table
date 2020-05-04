@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(c) {
   return a ? a.call(c) : $jscomp.arrayIterator(c);
 };
 $jscomp.getGlobal = function(c) {
-  c = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, c];
+  c = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, c];
   for (var a = 0; a < c.length; ++a) {
     var e = c[a];
     if (e && e.Math == Math) {
@@ -282,7 +282,7 @@ $jscomp.polyfill("Promise.allSettled", function(c) {
     });
     return d.all(c);
   };
-}, "es_next", "es3");
+}, "es_2020", "es3");
 module.exports = function(c) {
   Promise.allSettled([Promise.resolve(1), Promise.reject(2), Promise.resolve(3)]).then(function(a) {
     3 === a.length && "fulfilled" === a[0].status && 1 === a[0].value && "rejected" === a[1].status && 2 === a[1].reason && "fulfilled" === a[2].status && 3 === a[2].value && c();

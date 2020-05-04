@@ -6,8 +6,15 @@ return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
 
 };
 ----------------------------------------------------------
-es2016plus/v20200315/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/v20200406/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Optional chaining
 return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
-            ^
+          ^
 
-1 error(s), 0 warning(s)
+es2016plus/v20200406/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Optional chaining
+return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
+                                 ^
+
+ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
+Unsupported features: [Optional chaining]
+
+1 error(s), 2 warning(s)

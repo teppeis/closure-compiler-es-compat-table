@@ -7,7 +7,7 @@ return fuz.bar === 42 && fuz.baz === 33;
 
 };
 ----------------------------------------------------------
-esnext/v20200315/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+esnext/v20200406/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
 ({ fuz.bar, fuz['baz'] } = foo);
       ^
 

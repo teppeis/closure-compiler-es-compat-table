@@ -17,7 +17,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   b != Array.prototype && b != Object.prototype && (b[c] = e.value);
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
+  b = ["object" == typeof globalThis && globalThis, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, b];
   for (var c = 0; c < b.length; ++c) {
     var e = b[c];
     if (e && e.Math == Math) {

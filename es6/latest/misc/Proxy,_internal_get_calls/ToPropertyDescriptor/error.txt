@@ -17,7 +17,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200315/misc/Proxy,_internal_get_calls/ToPropertyDescriptor/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20200406/misc/Proxy,_internal_get_calls/ToPropertyDescriptor/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 
