@@ -30,7 +30,11 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, e) {
-  a != Array.prototype && a != Object.prototype && (a[d] = e.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[d] = e.value;
+  return a;
 };
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};

@@ -222,6 +222,10 @@
 - Array iterator prototype chain ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/out.js))
 - Array.prototype[Symbol.unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/out.js))
 
+### Number properties
+- Number.MIN_SAFE_INTEGER ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Number_properties/Number.MIN_SAFE_INTEGER/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Number_properties/Number.MIN_SAFE_INTEGER/out.js))
+- Number.MAX_SAFE_INTEGER ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Number_properties/Number.MAX_SAFE_INTEGER/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Number_properties/Number.MAX_SAFE_INTEGER/out.js))
+
 ### Math methods
 - Math.fround ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Math_methods/Math.fround/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Math_methods/Math.fround/out.js))
 - Math.cbrt ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Math_methods/Math.cbrt/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/Math_methods/Math.cbrt/out.js))

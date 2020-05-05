@@ -6,7 +6,11 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
-  a != Array.prototype && a != Object.prototype && (a[b] = c.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[b] = c.value;
+  return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
@@ -63,15 +67,15 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Math.log1p", function(a) {
-  return a ? a : function(b) {
-    b = Number(b);
-    if (0.25 > b && -.25 < b) {
-      for (var a = b, e = 1, d = b, f = 0, g = 1; f != d;) {
-        a *= b, g *= -1, d = (f = d) + g * a / ++e;
+  return a ? a : function(a) {
+    a = Number(a);
+    if (0.25 > a && -.25 < a) {
+      for (var c = a, b = 1, d = a, f = 0, g = 1; f != d;) {
+        c *= a, g *= -1, d = (f = d) + g * c / ++b;
       }
       return d;
     }
-    return Math.log(1 + b);
+    return Math.log(1 + a);
   };
 }, "es6", "es3");
 module.exports = function() {

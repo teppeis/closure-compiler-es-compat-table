@@ -38,7 +38,11 @@ $jscomp.construct = function() {
   };
 }();
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, d) {
-  a != Array.prototype && a != Object.prototype && (a[c] = d.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[c] = d.value;
+  return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
@@ -123,15 +127,15 @@ $jscomp.polyfill("Promise", function(a) {
   if (a && !$jscomp.FORCE_POLYFILL_PROMISE) {
     return a;
   }
-  c.prototype.asyncExecute = function(f) {
+  c.prototype.asyncExecute = function(a) {
     if (null == this.batch_) {
       this.batch_ = [];
-      var a = this;
+      var f = this;
       this.asyncExecuteFunction(function() {
-        a.executeBatch_();
+        f.executeBatch_();
       });
     }
-    this.batch_.push(f);
+    this.batch_.push(a);
   };
   var e = $jscomp.global.setTimeout;
   c.prototype.asyncExecuteFunction = function(a) {

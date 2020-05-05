@@ -30,7 +30,11 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, e) {
-  a != Array.prototype && a != Object.prototype && (a[c] = e.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[c] = e.value;
+  return a;
 };
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
@@ -166,15 +170,15 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
   };
-  b.prototype.resolveToNonPromiseObj_ = function(d) {
-    var a = void 0;
+  b.prototype.resolveToNonPromiseObj_ = function(a) {
+    var d = void 0;
     try {
-      a = d.then;
+      d = a.then;
     } catch (h) {
       this.reject_(h);
       return;
     }
-    "function" == typeof a ? this.settleSameAsThenable_(a, d) : this.fulfill_(d);
+    "function" == typeof d ? this.settleSameAsThenable_(d, a) : this.fulfill_(a);
   };
   b.prototype.reject_ = function(a) {
     this.settle_(2, a);

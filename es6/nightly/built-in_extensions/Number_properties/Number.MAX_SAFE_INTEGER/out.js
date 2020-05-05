@@ -6,7 +6,11 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
-  a != Array.prototype && a != Object.prototype && (a[c] = b.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[c] = b.value;
+  return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
@@ -62,9 +66,6 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
 };
-$jscomp.polyfill("Number.MAX_SAFE_INTEGER", function() {
-  return 9007199254740991;
-}, "es6", "es3");
 module.exports = function() {
   return Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1;
 };
