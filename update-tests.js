@@ -139,6 +139,9 @@ function escapePath(str) {
     .replace(/=>/g, "arrow")
     .replace(/['"]/g, "")
     .replace(/ \(([^)]+)\)]/g, " $1")
+    .replace("||=", "Or Or Equals")
+    .replace("&&=", "And And Equals")
+    .replace("??=", "QQ Equals")
     .replace(/[ [\](){}<>`^~|@;:`*?/]/g, "_");
 }
 

@@ -117,55 +117,55 @@
     "subtest": "RegExp.$1-$9"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_basic_support",
+    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "||= basic support"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour",
+    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "||= short-circuiting behaviour"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked",
+    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "||= setter not unecessarily invoked"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/&&=_basic_support",
+    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "&&= basic support"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/&&=_short-circuiting_behaviour",
+    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_short-circuiting_behaviour",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "&&= short-circuiting behaviour"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/&&=_setter_not_unecessarily_invoked",
+    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "&&= setter not unecessarily invoked"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_basic_support",
+    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "??= basic support"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_short-circuiting_behaviour",
+    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "??= short-circuiting behaviour"
   },
   {
-    "path": "candidate__stage_3_/Logical_Assignment/__=_setter_not_unecessarily_invoked",
+    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked",
     "category": "candidate (stage 3)",
     "test": "Logical Assignment",
     "subtest": "??= setter not unecessarily invoked"
