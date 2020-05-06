@@ -66,6 +66,7 @@ $jscomp.polyfill("Number.MIN_SAFE_INTEGER", function() {
   return -9007199254740991;
 }, "es6", "es3");
 module.exports = function() {
+  Number.MIN_SAFE_INTEGER;
   return Number.MIN_SAFE_INTEGER === -(Math.pow(2, 53) - 1);
 };
 
