@@ -38,15 +38,15 @@
 - RegExp.$1-$9 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.%241-%249/error.txt))
 
 ### Logical Assignment
-- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_basic_support/error.txt))
-- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_short-circuiting_behaviour/error.txt))
-- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_setter_not_unecessarily_invoked/error.txt))
-- &&= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/%26%26%3D_basic_support/error.txt))
-- &&= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/%26%26%3D_short-circuiting_behaviour/error.txt))
-- &&= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/%26%26%3D_setter_not_unecessarily_invoked/error.txt))
-- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_basic_support/error.txt))
-- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_short-circuiting_behaviour/error.txt))
-- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/__%3D_setter_not_unecessarily_invoked/error.txt))
+- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support/error.txt))
+- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour/error.txt))
+- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked/error.txt))
+- &&= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support/error.txt))
+- &&= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_short-circuiting_behaviour/error.txt))
+- &&= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked/error.txt))
+- ??= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support/error.txt))
+- ??= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/error.txt))
+- ??= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/error.txt))
 
 ### Hashbang Grammar
 - Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Hashbang_Grammar/out.js))
