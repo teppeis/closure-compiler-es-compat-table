@@ -6,7 +6,7 @@ return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
 
 };
 ----------------------------------------------------------
-esnext/v20200426/strawman__stage_0_/bind______operator/binary_form/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+esnext/v20200504/strawman__stage_0_/bind______operator/binary_form/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 return typeof obj::foo === "function" && obj::foo().garply === "barfoo";
                  ^
 

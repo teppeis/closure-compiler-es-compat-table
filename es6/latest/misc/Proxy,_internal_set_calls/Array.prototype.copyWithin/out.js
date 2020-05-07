@@ -6,7 +6,11 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, b) {
-  a != Array.prototype && a != Object.prototype && (a[d] = b.value);
+  if (a == Array.prototype || a == Object.prototype) {
+    return a;
+  }
+  a[d] = b.value;
+  return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
@@ -31,57 +35,57 @@ var $jscomp$lookupPolyfilledValue = function(a, d) {
   b = a[b];
   return void 0 !== b ? b : a[d];
 };
-$jscomp.polyfill = function(a, d, b, c) {
-  d && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, d, b, c) : $jscomp.polyfillUnisolated(a, d, b, c));
+$jscomp.polyfill = function(a, d, b, e) {
+  d && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, d, b, e) : $jscomp.polyfillUnisolated(a, d, b, e));
 };
-$jscomp.polyfillUnisolated = function(a, d, b, c) {
+$jscomp.polyfillUnisolated = function(a, d, b, e) {
   b = $jscomp.global;
   a = a.split(".");
-  for (c = 0; c < a.length - 1; c++) {
-    var e = a[c];
-    e in b || (b[e] = {});
-    b = b[e];
+  for (e = 0; e < a.length - 1; e++) {
+    var c = a[e];
+    c in b || (b[c] = {});
+    b = b[c];
   }
   a = a[a.length - 1];
-  c = b[a];
-  d = d(c);
-  d != c && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+  e = b[a];
+  d = d(e);
+  d != e && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
 };
-$jscomp.polyfillIsolated = function(a, d, b, c) {
-  var e = a.split(".");
-  a = 1 === e.length;
-  c = e[0];
-  c = !a && c in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < e.length - 1; f++) {
-    var g = e[f];
-    g in c || (c[g] = {});
-    c = c[g];
+$jscomp.polyfillIsolated = function(a, d, b, e) {
+  var c = a.split(".");
+  a = 1 === c.length;
+  e = c[0];
+  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < c.length - 1; f++) {
+    var g = c[f];
+    g in e || (e[g] = {});
+    e = e[g];
   }
-  e = e[e.length - 1];
-  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? c[e] : null;
+  c = c[c.length - 1];
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[c] : null;
   d = d(b);
-  null != d && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:d}) : d !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(c, e, {configurable:!0, writable:!0, value:d})));
+  null != d && (a ? $jscomp.defineProperty($jscomp.polyfills, c, {configurable:!0, writable:!0, value:d}) : d !== b && ($jscomp.propertyToPolyfillSymbol[c] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(c) : $jscomp.POLYFILL_PREFIX + c, c = $jscomp.propertyToPolyfillSymbol[c], $jscomp.defineProperty(e, c, {configurable:!0, writable:!0, value:d})));
 };
 $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
   function d(b) {
     b = Number(b);
     return Infinity === b || -Infinity === b ? b : b | 0;
   }
-  return a ? a : function(b, c, a) {
+  return a ? a : function(b, a, c) {
     var e = this.length;
     b = d(b);
-    c = d(c);
-    a = void 0 === a ? e : d(a);
+    a = d(a);
+    c = void 0 === c ? e : d(c);
     b = 0 > b ? Math.max(e + b, 0) : Math.min(b, e);
-    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
     a = 0 > a ? Math.max(e + a, 0) : Math.min(a, e);
-    if (b < c) {
-      for (; c < a;) {
-        c in this ? this[b++] = this[c++] : (delete this[b++], c++);
+    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
+    if (b < a) {
+      for (; a < c;) {
+        a in this ? this[b++] = this[a++] : (delete this[b++], a++);
       }
     } else {
-      for (a = Math.min(a, e + c - b), b += a - c; a > c;) {
-        --a in this ? this[--b] = this[a] : delete this[--b];
+      for (c = Math.min(c, e + a - b), b += c - a; c > a;) {
+        --c in this ? this[--b] = this[c] : delete this[--b];
       }
     }
     return this;
@@ -89,9 +93,9 @@ $jscomp.polyfill("Array.prototype.copyWithin", function(a) {
 }, "es6", "es3");
 module.exports = function() {
   var a = [];
-  (new Proxy([1, 2, 3, 4, 5, 6], {set:function(d, b, c) {
+  (new Proxy([1, 2, 3, 4, 5, 6], {set:function(d, b, e) {
     a.push(b);
-    d[b] = c;
+    d[b] = e;
     return !0;
   }})).copyWithin(0, 3);
   return "0,1,2" === a + "";

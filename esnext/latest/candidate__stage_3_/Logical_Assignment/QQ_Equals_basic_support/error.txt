@@ -10,7 +10,7 @@ return a === 2 && b === 0 && c === 1;
 
 };
 ----------------------------------------------------------
-esnext/v20200426/candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20200504/candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 a ??= 2;
      ^
 

@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200426/misc/Proxy,_internal_get_calls/ClassDefinitionEvaluation/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20200504/misc/Proxy,_internal_get_calls/ClassDefinitionEvaluation/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   var get = [];
   ^^^^^^^^^^^^^
 
