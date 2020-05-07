@@ -1,0 +1,11 @@
+// strawman (stage 0) / additional meta properties / function.count
+module.exports = () => {
+return (_ => function.count)(1, 2, 3) === 3;
+
+};
+----------------------------------------------------------
+esnext/v20200504/strawman__stage_0_/additional_meta_properties/function.count/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+return (_ => function.count)(1, 2, 3) === 3;
+                     ^
+
+1 error(s), 0 warning(s)

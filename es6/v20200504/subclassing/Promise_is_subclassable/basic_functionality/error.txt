@@ -1,0 +1,29 @@
+// subclassing / Promise is subclassable / basic functionality
+module.exports = (asyncTestPassed) => {
+  class P extends Promise {}
+  var p1 = new P(function(resolve, reject) { resolve("foo"); });
+  var p2 = new P(function(resolve, reject) { reject("quux"); });
+  var score = +(p1 instanceof P);
+  function thenFn(result)  { score += (result === "foo");  check(); }
+  function catchFn(result) { score += (result === "quux"); check(); }
+  function shouldNotRun(result)  { score = -Infinity;   }
+  p1.then(thenFn, shouldNotRun);
+  p2.then(shouldNotRun, catchFn);
+  p1.catch(shouldNotRun);
+  p2.catch(catchFn);
+  p1.then(function() {
+    // P.prototype.then() should return a new P
+    score += p1.then() instanceof P && p1.then() !== p1;
+    check();
+  });
+  function check() {
+    if (score === 5) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+es6/v20200504/subclassing/Promise_is_subclassable/basic_functionality/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Promise
+  class P extends Promise {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)
