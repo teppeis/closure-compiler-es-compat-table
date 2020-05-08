@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var d = 0;
   return function() {
-    return d < a.length ? {done:!1, value:a[d++]} : {done:!0};
+    return d < a.length ? {done:!1, value:a[d++], } : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(a) {
   return d ? d.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
   for (var d = 0; d < a.length; ++d) {
     var e = a[d];
     if (e && e.Math == Math) {

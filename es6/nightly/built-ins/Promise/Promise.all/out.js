@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(b) {
   var c = 0;
   return function() {
-    return c < b.length ? {done:!1, value:b[c++]} : {done:!0};
+    return c < b.length ? {done:!1, value:b[c++], } : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(b) {
   return c ? c.call(b) : $jscomp.arrayIterator(b);
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
   for (var c = 0; c < b.length; ++c) {
     var d = b[c];
     if (d && d.Math == Math) {
@@ -287,11 +287,11 @@ module.exports = function(b) {
     setTimeout(a, 2000, "foo");
   }), new Promise(function(a) {
     setTimeout(a, 1000, "bar");
-  })]), d = Promise.all([new Promise(function(a, b) {
+  }), ]), d = Promise.all([new Promise(function(a, b) {
     setTimeout(b, 2000, "baz");
   }), new Promise(function(a, b) {
     setTimeout(b, 1000, "qux");
-  })]), e = 0;
+  }), ]), e = 0;
   c.then(function(a) {
     e += "foo,bar" === a + "";
     2 === e && b();
