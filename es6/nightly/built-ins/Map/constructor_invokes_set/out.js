@@ -110,14 +110,18 @@ $jscomp.polyfill("Symbol", function(a) {
   return d;
 }, "es6", "es3");
 $jscomp.initSymbolIterator = function() {
-  $jscomp.initSymbolIterator = function() {
-  };
-  var a = Symbol.iterator;
-  a || (a = Symbol.iterator = Symbol("Symbol.iterator"));
+};
+$jscomp.polyfill("Symbol.iterator", function(a) {
+  if (a) {
+    return a;
+  }
+  $jscomp.initSymbolIterator();
+  a = Symbol("Symbol.iterator");
   "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
     return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
   }});
-};
+  return a;
+}, "es6", "es3");
 $jscomp.initSymbolAsyncIterator = function() {
   $jscomp.initSymbolAsyncIterator = function() {
   };
