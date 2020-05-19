@@ -1,0 +1,17 @@
+// candidate (stage 3) / Logical Assignment / ||= basic support
+module.exports = () => {
+let a;
+let b = 0;
+let c = 1;
+a ||= 2;
+b ||= 2;
+c ||= 2;
+return a === 2 && b === 2 && c === 1;
+
+};
+----------------------------------------------------------
+esnext/v20200517/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+a ||= 2;
+     ^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,13 @@
+// subclassing / Function is subclassable / correct prototype chain
+module.exports = () => {
+  class C extends Function {}
+  var c = new C("return 'foo';");
+  return c instanceof C && c instanceof Function && Object.getPrototypeOf(C) === Function;
+
+};
+----------------------------------------------------------
+es6/v20200517/subclassing/Function_is_subclassable/correct_prototype_chain/in.js:3: ERROR - [JSC_CANNOT_CONVERT] This code cannot be converted from ES6. extending native class: Function
+  class C extends Function {}
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

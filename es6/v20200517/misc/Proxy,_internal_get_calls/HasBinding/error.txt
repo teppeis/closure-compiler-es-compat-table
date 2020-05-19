@@ -1,0 +1,22 @@
+// misc / Proxy, internal 'get' calls / HasBinding
+module.exports = () => {
+// HasBinding -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({foo:1}, { get: function(o, k) { get.push(k); return o[k]; }});
+  p[Symbol.unscopables] = p;
+  with(p) {
+    typeof foo;
+  }
+  return get[0] === Symbol.unscopables && get.slice(1) + '' === "foo";
+
+};
+----------------------------------------------------------
+es6/v20200517/misc/Proxy,_internal_get_calls/HasBinding/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'typeof' operator is not being used.
+    typeof foo;
+    ^^^^^^^^^^
+
+es6/v20200517/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
+  with(p) {
+  ^^^^^^^^^
+
+1 error(s), 1 warning(s)
