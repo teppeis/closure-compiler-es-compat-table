@@ -804,6 +804,18 @@
     "subtest": "in identifiers"
   },
   {
+    "path": "syntax/Unicode_code_point_escapes/in_property_key_definitions",
+    "category": "syntax",
+    "test": "Unicode code point escapes",
+    "subtest": "in property key definitions"
+  },
+  {
+    "path": "syntax/Unicode_code_point_escapes/in_property_key_accesses",
+    "category": "syntax",
+    "test": "Unicode code point escapes",
+    "subtest": "in property key accesses"
+  },
+  {
     "path": "syntax/new.target/in_constructors",
     "category": "syntax",
     "test": "new.target",
