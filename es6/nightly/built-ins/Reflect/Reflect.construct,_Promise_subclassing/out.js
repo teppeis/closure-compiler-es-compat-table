@@ -11,32 +11,6 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   c.prototype = a;
   return new c;
 };
-$jscomp.construct = function() {
-  function a() {
-    function a() {
-    }
-    new a;
-    Reflect.construct(a, [], function() {
-    });
-    return new a instanceof a;
-  }
-  if ("undefined" != typeof Reflect && Reflect.construct) {
-    if (a()) {
-      return Reflect.construct;
-    }
-    var c = Reflect.construct;
-    return function(a, e, b) {
-      a = c(a, e);
-      b && Reflect.setPrototypeOf(a, b.prototype);
-      return a;
-    };
-  }
-  return function(a, c, b) {
-    void 0 === b && (b = a);
-    b = $jscomp.objectCreate(b.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, b, c) || b;
-  };
-}();
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, d) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
@@ -55,10 +29,11 @@ $jscomp.getGlobal = function(a) {
   throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NATIVE;
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(a, c) {
   var d = $jscomp.propertyToPolyfillSymbol[c];
   if (null == d) {
@@ -98,6 +73,32 @@ $jscomp.polyfillIsolated = function(a, c, d, e) {
   c = c(d);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, b, {configurable:!0, writable:!0, value:c}) : c !== d && ($jscomp.propertyToPolyfillSymbol[b] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(b) : $jscomp.POLYFILL_PREFIX + b, b = $jscomp.propertyToPolyfillSymbol[b], $jscomp.defineProperty(e, b, {configurable:!0, writable:!0, value:c})));
 };
+$jscomp.construct = function() {
+  function a() {
+    function a() {
+    }
+    new a;
+    Reflect.construct(a, [], function() {
+    });
+    return new a instanceof a;
+  }
+  if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
+    if (a()) {
+      return Reflect.construct;
+    }
+    var c = Reflect.construct;
+    return function(a, e, b) {
+      a = c(a, e);
+      b && Reflect.setPrototypeOf(a, b.prototype);
+      return a;
+    };
+  }
+  return function(a, c, b) {
+    void 0 === b && (b = a);
+    b = $jscomp.objectCreate(b.prototype || Object.prototype);
+    return Function.prototype.apply.call(a, b, c) || b;
+  };
+}();
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");

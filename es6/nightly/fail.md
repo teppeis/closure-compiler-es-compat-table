@@ -89,9 +89,6 @@
 - extends null ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/extends_null/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/extends_null/out.js))
 - new.target ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/class/new.target/error.txt))
 
-### super
-- constructor calls use correct "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/super/constructor_calls_use_correct_new.target_binding/error.txt))
-
 ### generators
 - can't use "this" with new ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/generators/cant_use_this_with_new/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/generators/cant_use_this_with_new/out.js))
 - %GeneratorPrototype% ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/generators/%25GeneratorPrototype%25/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/generators/%25GeneratorPrototype%25/out.js))

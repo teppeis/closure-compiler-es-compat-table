@@ -32,10 +32,11 @@ $jscomp.getGlobal = function(a) {
   throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NATIVE;
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(a, b) {
   var c = $jscomp.propertyToPolyfillSymbol[b];
   if (null == c) {
@@ -81,7 +82,6 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  $jscomp.initSymbol();
   var b = function(a, b) {
     this.$jscomp$symbol$id_ = a;
     $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
@@ -103,20 +103,21 @@ $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
     return a;
   }
-  $jscomp.initSymbolIterator();
   a = Symbol("Symbol.iterator");
-  "function" != typeof Array.prototype[a] && $jscomp.defineProperty(Array.prototype, a, {configurable:!0, writable:!0, value:function() {
-    return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
-  }});
+  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
+    var d = $jscomp.global[b[c]];
+    "function" === typeof d && "function" != typeof d.prototype[a] && $jscomp.defineProperty(d.prototype, a, {configurable:!0, writable:!0, value:function() {
+      return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
+    }});
+  }
   return a;
 }, "es6", "es3");
 $jscomp.initSymbolAsyncIterator = function() {
-  $jscomp.initSymbolAsyncIterator = function() {
-  };
-  Symbol.asyncIterator || (Symbol.asyncIterator = Symbol("Symbol.asyncIterator"));
 };
+$jscomp.polyfill("Symbol.asyncIterator", function(a) {
+  return a ? a : Symbol("Symbol.asyncIterator");
+}, "es9", "es3");
 $jscomp.iteratorPrototype = function(a) {
-  $jscomp.initSymbolIterator();
   a = {next:a};
   a[Symbol.iterator] = function() {
     return this;
@@ -131,7 +132,7 @@ $jscomp.underscoreProtoCanBeSet = function() {
   }
   return !1;
 };
-$jscomp.setPrototypeOf = "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+$jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
   a.__proto__ = b;
   if (a.__proto__ !== b) {
     throw new TypeError(a + " is not extensible");
@@ -335,7 +336,6 @@ $jscomp.generator.Generator_ = function(a) {
   this.return = function(b) {
     return a.return_(b);
   };
-  $jscomp.initSymbolIterator();
   this[Symbol.iterator] = function() {
     return this;
   };
@@ -569,7 +569,6 @@ $jscomp.asyncExecutePromiseGeneratorProgram = function(a) {
   return $jscomp.asyncExecutePromiseGenerator(new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(a)));
 };
 $jscomp.makeAsyncIterator = function(a) {
-  $jscomp.initSymbolAsyncIterator();
   var b = a[Symbol.asyncIterator];
   return void 0 !== b ? b.call(a) : new $jscomp.AsyncIteratorFromSyncWrapper($jscomp.makeIterator(a));
 };
@@ -630,7 +629,6 @@ $jscomp.AsyncGeneratorWrapper = function(a) {
   this.generator_ = a;
   this.delegate_ = null;
   this.executionQueue_ = new $jscomp.AsyncGeneratorWrapper$ExecutionQueue_;
-  $jscomp.initSymbolAsyncIterator();
   this[Symbol.asyncIterator] = function() {
     return this;
   };

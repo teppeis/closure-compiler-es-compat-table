@@ -3,17 +3,6 @@ $jscomp.scope = {};
 $jscomp.owns = function(a, c) {
   return Object.prototype.hasOwnProperty.call(a, c);
 };
-$jscomp.assign = "function" == typeof Object.assign ? Object.assign : function(a, c) {
-  for (var b = 1; b < arguments.length; b++) {
-    var d = arguments[b];
-    if (d) {
-      for (var e in d) {
-        $jscomp.owns(d, e) && (a[e] = d[e]);
-      }
-    }
-  }
-  return a;
-};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
@@ -37,10 +26,11 @@ $jscomp.getGlobal = function(a) {
   throw Error("Cannot find global object");
 };
 $jscomp.global = $jscomp.getGlobal(this);
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NATIVE;
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(a, c) {
   var b = $jscomp.propertyToPolyfillSymbol[c];
   if (null == b) {
@@ -79,6 +69,17 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? d[e] : null;
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
+};
+$jscomp.assign = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Object.assign ? Object.assign : function(a, c) {
+  for (var b = 1; b < arguments.length; b++) {
+    var d = arguments[b];
+    if (d) {
+      for (var e in d) {
+        $jscomp.owns(d, e) && (a[e] = d[e]);
+      }
+    }
+  }
+  return a;
 };
 $jscomp.polyfill("Object.assign", function(a) {
   return a || $jscomp.assign;
