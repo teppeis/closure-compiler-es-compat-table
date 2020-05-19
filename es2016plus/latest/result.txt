@@ -87,7 +87,7 @@
 2018_features/Asynchronous_Iterators/async_generators/out.js: [Pass]
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
 2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets/out.js: ReferenceError: Proxy is not defined
-2018_misc/template_literal_revision/out.js: TypeError: Cannot call method 'createTemplateTagFirstArgWithRaw' of undefined
+2018_misc/template_literal_revision/out.js: [Pass]
 2019_features/Object.fromEntries/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]

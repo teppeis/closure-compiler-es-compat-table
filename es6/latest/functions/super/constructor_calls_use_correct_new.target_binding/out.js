@@ -9,11 +9,30 @@ $jscomp.arrayIteratorImpl = function(a) {
 $jscomp.arrayIterator = function(a) {
   return {next:$jscomp.arrayIteratorImpl(a)};
 };
+$jscomp.makeIterator = function(a) {
+  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+  return b ? b.call(a) : $jscomp.arrayIterator(a);
+};
+$jscomp.arrayFromIterator = function(a) {
+  for (var b, c = []; !(b = a.next()).done;) {
+    c.push(b.value);
+  }
+  return c;
+};
+$jscomp.arrayFromIterable = function(a) {
+  return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
+};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
+$jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
+  var b = function() {
+  };
+  b.prototype = a;
+  return new b;
+};
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
@@ -76,80 +95,49 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   b = b(c);
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
-$jscomp.initSymbol = function() {
-};
-$jscomp.polyfill("Symbol", function(a) {
-  if (a) {
-    return a;
+$jscomp.underscoreProtoCanBeSet = function() {
+  var a = {a:!0}, b = {};
+  try {
+    return b.__proto__ = a, b.a;
+  } catch (c) {
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
-  };
-  b.prototype.toString = function() {
-    return this.$jscomp$symbol$id_;
-  };
-  var c = 0, d = function(a) {
-    if (this instanceof d) {
-      throw new TypeError("Symbol is not a constructor");
-    }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
-  };
-  return d;
-}, "es6", "es3");
-$jscomp.initSymbolIterator = function() {
+  return !1;
 };
-$jscomp.polyfill("Symbol.iterator", function(a) {
-  if (a) {
-    return a;
-  }
-  a = Symbol("Symbol.iterator");
-  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
-    var d = $jscomp.global[b[c]];
-    "function" === typeof d && "function" != typeof d.prototype[a] && $jscomp.defineProperty(d.prototype, a, {configurable:!0, writable:!0, value:function() {
-      return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
-    }});
+$jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
+  a.__proto__ = b;
+  if (a.__proto__ !== b) {
+    throw new TypeError(a + " is not extensible");
   }
   return a;
-}, "es6", "es3");
-$jscomp.initSymbolAsyncIterator = function() {
-};
-$jscomp.iteratorPrototype = function(a) {
-  a = {next:a};
-  a[Symbol.iterator] = function() {
-    return this;
-  };
-  return a;
-};
-$jscomp.iteratorFromArray = function(a, b) {
-  a instanceof String && (a += "");
-  var c = 0, d = {next:function() {
-    if (c < a.length) {
-      var e = c++;
-      return {value:b(e, a[e]), done:!1};
+} : null;
+$jscomp.inherits = function(a, b) {
+  a.prototype = $jscomp.objectCreate(b.prototype);
+  a.prototype.constructor = a;
+  if ($jscomp.setPrototypeOf) {
+    var c = $jscomp.setPrototypeOf;
+    c(a, b);
+  } else {
+    for (c in b) {
+      if ("prototype" != c) {
+        if (Object.defineProperties) {
+          var d = Object.getOwnPropertyDescriptor(b, c);
+          d && Object.defineProperty(a, c, d);
+        } else {
+          a[c] = b[c];
+        }
+      }
     }
-    d.next = function() {
-      return {done:!0, value:void 0};
-    };
-    return d.next();
-  }};
-  d[Symbol.iterator] = function() {
-    return d;
-  };
-  return d;
+  }
+  a.superClass_ = b.prototype;
 };
-$jscomp.polyfill("Array.prototype.values", function(a) {
-  return a ? a : function() {
-    return $jscomp.iteratorFromArray(this, function(a, c) {
-      return c;
-    });
-  };
-}, "es8", "es3");
 module.exports = function() {
-  var a = "";
-  [1, 2, 3].values().forEach(function(b) {
-    return a += b;
-  });
-  return "123" === a;
+  var a, b = function() {
+    a = this.constructor === c;
+  }, c = function() {
+    return b.call(this) || this;
+  };
+  $jscomp.inherits(c, b);
+  new c;
+  return a;
 };
 

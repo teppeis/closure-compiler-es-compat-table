@@ -12,6 +12,6 @@ module.exports = function() {
     return "foo";
   }, valueOf:function() {
     return "bar";
-  }};
+  }, };
 };
 

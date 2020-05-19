@@ -5,11 +5,11 @@ return 1_000_000.000_001 === 1000000.000001 &&
 
 };
 ----------------------------------------------------------
-esnext/v20200504/candidate__stage_3_/numeric_separators/in.js:3: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
+esnext/v20200517/candidate__stage_3_/numeric_separators/in.js:3: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
 return 1_000_000.000_001 === 1000000.000001 &&
        ^
 
-esnext/v20200504/candidate__stage_3_/numeric_separators/in.js:4: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
+esnext/v20200517/candidate__stage_3_/numeric_separators/in.js:4: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
 0b1010_0001_1000_0101 === 0b1010000110000101;
 ^
 

@@ -4,7 +4,7 @@ return BigInt.fromString('42') === 42n;
 
 };
 ----------------------------------------------------------
-esnext/v20200504/proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+esnext/v20200517/proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
 return BigInt.fromString('42') === 42n;
                                      ^
 

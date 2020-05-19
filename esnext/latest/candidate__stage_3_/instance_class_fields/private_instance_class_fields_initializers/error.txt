@@ -10,7 +10,7 @@ return new C().x() === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20200504/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+esnext/v20200517/candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
 #x = 42;
 ^
 

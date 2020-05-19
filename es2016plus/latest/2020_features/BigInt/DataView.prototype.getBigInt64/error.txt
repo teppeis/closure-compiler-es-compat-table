@@ -7,7 +7,7 @@ return view.getBigInt64(0) === 1n;
 
 };
 ----------------------------------------------------------
-es2016plus/v20200504/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. ',' expected
+es2016plus/v20200517/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. ',' expected
 view.setBigInt64(0, 1n);
                      ^
 

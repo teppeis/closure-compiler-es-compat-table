@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(b) {
   var a = 0;
   return function() {
-    return a < b.length ? {done:!1, value:b[a++]} : {done:!0};
+    return a < b.length ? {done:!1, value:b[a++], } : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -14,7 +14,7 @@ $jscomp.makeIterator = function(b) {
   return a ? a.call(b) : $jscomp.arrayIterator(b);
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
   for (var a = 0; a < b.length; ++a) {
     var e = b[a];
     if (e && e.Math == Math) {
@@ -36,10 +36,11 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   b[a] = e.value;
   return b;
 };
+$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
+$jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NATIVE;
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-$jscomp.IS_SYMBOL_NATIVE = "function" === typeof Symbol && "symbol" === typeof Symbol("x");
 var $jscomp$lookupPolyfilledValue = function(b, a) {
   var e = $jscomp.propertyToPolyfillSymbol[a];
   if (null == e) {
