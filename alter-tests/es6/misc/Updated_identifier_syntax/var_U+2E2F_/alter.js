@@ -4,4 +4,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 2: Error
+// EXPECT: 2: ERROR
