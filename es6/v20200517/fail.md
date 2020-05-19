@@ -62,7 +62,6 @@
 
 ### new.target
 - in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200517/syntax/new.target/in_constructors/error.txt))
-- assignment is an early error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/v20200517/syntax/new.target/assignment_is_an_early_error/error.txt))
 
 ## Bindings
 
