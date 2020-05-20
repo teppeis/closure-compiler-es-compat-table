@@ -9,4 +9,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 7: ERROR - Parse error. primary expression expected
+// EXPECT: 7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
