@@ -61,6 +61,18 @@ function checkTimeout(file, cb) {
   });
 }
 
+/**
+ * Compiler doesn't output error code before v20190528.
+ */
+function isOldOutputCompiler() {
+  var match = /^v(\d{8})$/.exec(clVersion);
+  if (!match) {
+    throw new Error("Unexpected clVersion: " + clVersion);
+  }
+  var clVersionNumber = parseInt(match[1], 10);
+  return clVersionNumber < 20190528;
+}
+
 // TODO: check unexpected error
 function checkExpectedError(fileAbs, cb) {
   var dir = path.dirname(fileAbs);
@@ -79,9 +91,16 @@ function checkExpectedError(fileAbs, cb) {
     while ((match = regex.exec(input)) !== null) {
       expectError = true;
       var expect = ":" + match[1];
-      if (error.indexOf(expect) === -1) {
-        return cb(null, errorRelative + ": [NotExpectedCompileError]");
+      if (error.indexOf(expect) > -1) {
+        continue;
       }
+      if (isOldOutputCompiler()) {
+        var oldMatch = /^:\d+: ERROR\b/.exec(expect);
+        if (oldMatch && error.indexOf(oldMatch[0]) > -1) {
+          continue;
+        }
+      }
+      return cb(null, errorRelative + ": [NotExpectedCompileError]");
     }
     if (expectError) {
       return cb(null, fileRelative + ": [Pass]");
