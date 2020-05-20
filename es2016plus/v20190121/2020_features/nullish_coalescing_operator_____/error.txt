@@ -1,0 +1,16 @@
+// 2020 features / nullish coalescing operator (??)
+module.exports = () => {
+return (null ?? 42) === 42 &&
+(undefined ?? 42) === 42 &&
+(false ?? 42) === false &&
+('' ?? 42) === '' &&
+(0 ?? 42) === 0 &&
+isNaN(NaN ?? 42);
+
+};
+----------------------------------------------------------
+es2016plus/v20190121/2020_features/nullish_coalescing_operator_____/in.js:3: ERROR - Parse error. primary expression expected
+return (null ?? 42) === 42 &&
+               ^
+
+1 error(s), 0 warning(s)

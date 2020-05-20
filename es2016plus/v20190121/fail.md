@@ -46,8 +46,8 @@
 ## 2018 features
 
 ### object rest/spread properties
-- object rest properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_rest_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_rest_properties/out.js))
-- object spread properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_spread_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_spread_properties/out.js))
+- object rest properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_rest_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_rest_properties/out.js)): https://github.com/google/closure-compiler/issues/3139
+- object spread properties ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_spread_properties/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/object_rest_spread_properties/object_spread_properties/out.js)): https://github.com/google/closure-compiler/issues/3139
 
 ### s (dotAll) flag for regular expressions
 - s (dotAll) flag for regular expressions ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/s__dotAll__flag_for_regular_expressions/error.txt))
@@ -61,12 +61,19 @@
 ### RegExp Unicode Property Escapes
 - RegExp Unicode Property Escapes ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_features/RegExp_Unicode_Property_Escapes/error.txt))
 
+## 2018 misc
+
+### Proxy "ownKeys" handler, duplicate keys for non-extensible targets
+- Proxy "ownKeys" handler, duplicate keys for non-extensible targets ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2018_misc/Proxy_ownKeys_handler%2C_duplicate_keys_for_non-extensible_targets/out.js))
+
 ## 2019 features
 
 ### Object.fromEntries
 - Object.fromEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/Object.fromEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/Object.fromEntries/out.js))
 
 ### string trimming
+- String.prototype.trimLeft ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimLeft/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimLeft/out.js))
+- String.prototype.trimRight ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimRight/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimRight/out.js))
 - String.prototype.trimStart ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimStart/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimStart/out.js))
 - String.prototype.trimEnd ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimEnd/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_features/string_trimming/String.prototype.trimEnd/out.js))
 
@@ -102,3 +109,35 @@
 
 ### Well-formed JSON.stringify
 - Well-formed JSON.stringify ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Well-formed_JSON.stringify/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2019_misc/Well-formed_JSON.stringify/out.js))
+
+## 2020 features
+
+### String.prototype.matchAll
+- basic functionality ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/String.prototype.matchAll/basic_functionality/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/String.prototype.matchAll/basic_functionality/out.js))
+- throws on non-global regex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/String.prototype.matchAll/throws_on_non-global_regex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/String.prototype.matchAll/throws_on_non-global_regex/out.js))
+
+### BigInt
+- basic functionality ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/basic_functionality/error.txt))
+- constructor ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/constructor/error.txt))
+- BigInt.asUintN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigInt.asUintN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigInt.asUintN/out.js))
+- BigInt.asIntN ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigInt.asIntN/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigInt.asIntN/out.js))
+- BigInt64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigInt64Array/error.txt))
+- BigUint64Array ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/BigUint64Array/error.txt))
+- DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/DataView.prototype.getBigInt64/error.txt))
+- DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/BigInt/DataView.prototype.getBigUint64/error.txt))
+
+### Promise.allSettled
+- Promise.allSettled ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/Promise.allSettled/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/Promise.allSettled/out.js))
+
+### globalThis
+- "globalThis" global property is global object ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/globalThis/globalThis_global_property_is_global_object/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/globalThis/globalThis_global_property_is_global_object/out.js))
+- "globalThis" global property has correct property descriptor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/globalThis/globalThis_global_property_has_correct_property_descriptor/out.js))
+
+### optional chaining operator (?.)
+- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/optional_chaining_operator___._/optional_property_access/error.txt))
+- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
+- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
+- optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
+
+### nullish coalescing operator (??)
+- nullish coalescing operator (??) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20190121/2020_features/nullish_coalescing_operator_____/error.txt))

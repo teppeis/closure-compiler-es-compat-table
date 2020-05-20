@@ -3,7 +3,6 @@ module.exports = () => {
 function *foo() {
 try {
 yield;
-throw new Error();
 }
 catch {
 return true;
@@ -11,11 +10,11 @@ return true;
 }
 var it = foo();
 it.next();
-return it.next().value;
+return it.throw().value;
 
 };
 ----------------------------------------------------------
-es2016plus/v20190121/2019_misc/optional_catch_binding/yield/in.js:8: ERROR - Parse error. '(' expected
+es2016plus/v20190121/2019_misc/optional_catch_binding/yield/in.js:7: ERROR - Parse error. '(' expected
 catch {
       ^
 

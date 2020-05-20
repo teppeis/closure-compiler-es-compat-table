@@ -6,7 +6,7 @@ module.exports = () => {
   };
   var foo = Object.prototype.__lookupGetter__.call(obj, "foo");
   return foo() === "bar"
-&& Object.prototype.__lookupGetter__.call(obj, "qux") === undefined
-&& Object.prototype.__lookupGetter__.call(obj, "baz") === undefined;
+&& Object.prototype.__lookupGetter__.call(obj, "qux") === void undefined
+&& Object.prototype.__lookupGetter__.call(obj, "baz") === void undefined;
 
 };

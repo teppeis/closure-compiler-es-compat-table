@@ -7,7 +7,7 @@ module.exports = () => {
   Object.defineProperty(obj, sym2, { value: 1 });
   var foo = Object.prototype.__lookupGetter__.call(obj, sym);
   return foo() === "bar"
-&& Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
-&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;
+&& Object.prototype.__lookupGetter__.call(obj, sym2) === void undefined
+&& Object.prototype.__lookupGetter__.call(obj, Symbol()) === void undefined;
 
 };
