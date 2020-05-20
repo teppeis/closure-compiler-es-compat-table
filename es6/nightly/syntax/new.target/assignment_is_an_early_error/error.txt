@@ -8,7 +8,7 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 7: Error
+// EXPECT: 7: ERROR
 
 ----------------------------------------------------------
 es6/nightly/syntax/new.target/assignment_is_an_early_error/in.js:7: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target

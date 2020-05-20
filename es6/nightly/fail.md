@@ -57,11 +57,11 @@
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
 
 ### Unicode code point escapes
-- in identifiers ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_identifiers/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_identifiers/out.js))
+- in property key definitions ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_property_key_definitions/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_property_key_definitions/out.js))
+- in property key accesses ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_property_key_accesses/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/Unicode_code_point_escapes/in_property_key_accesses/out.js))
 
 ### new.target
 - in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/new.target/in_constructors/error.txt))
-- assignment is an early error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/new.target/assignment_is_an_early_error/error.txt))
 
 ## Bindings
 

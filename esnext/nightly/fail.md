@@ -3,7 +3,7 @@
 
 ### WeakReferences
 - WeakRef minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js))
-- Finalizers minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js))
+- FinalizationRegistry minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/out.js))
 
 ### instance class fields
 - public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
@@ -249,57 +249,3 @@
 - Object.iterateKeys ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateKeys/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateKeys/out.js))
 - Object.iterateValues ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateValues/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateValues/out.js))
 - Object.iterateEntries ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateEntries/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/proposal__stage_1_/Object_iteration/Object.iterateEntries/out.js))
-
-## Strawman (stage 0)
-
-### bind (::) operator
-- binary form ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/bind______operator/binary_form/error.txt))
-- unary form ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/bind______operator/unary_form/error.txt))
-
-### String.prototype.at
-- String.prototype.at ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/String.prototype.at/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/String.prototype.at/out.js))
-
-### additional meta properties
-- function.callee ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/additional_meta_properties/function.callee/error.txt))
-- function.count ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/additional_meta_properties/function.count/error.txt))
-- function.arguments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/additional_meta_properties/function.arguments/error.txt))
-
-### method parameter decorators
-- method parameter decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/method_parameter_decorators/error.txt))
-
-### function expression decorators
-- function expression decorators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/function_expression_decorators/error.txt))
-
-### Reflect.isCallable / Reflect.isConstructor
-- Reflect.isCallable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/out.js))
-- Reflect.isConstructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/out.js))
-
-### zones
-- Zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone/out.js))
-- Zone.current ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.current/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.current/out.js))
-- Zone.prototype.name ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.name/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.name/out.js))
-- Zone.prototype.parent ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.parent/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.parent/out.js))
-- Zone.prototype.fork ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.fork/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.fork/out.js))
-- Zone.prototype.run ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.run/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.run/out.js))
-- Zone.prototype.wrap ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.wrap/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/zones/Zone.prototype.wrap/out.js))
-
-### syntactic tail calls
-- direct recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt))
-- mutual recursion ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt))
-
-### object shorthand improvements
-- object initializers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt))
-- destructuring assignments ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt))
-
-## Pre strawman
-
-### Metadata reflection API
-- Reflect.defineMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js))
-- Reflect.hasMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js))
-- Reflect.hasOwnMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js))
-- Reflect.getMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js))
-- Reflect.getOwnMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js))
-- Reflect.getMetadataKeys ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js))
-- Reflect.getOwnMetadataKeys ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js))
-- Reflect.deleteMetadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js))
-- Reflect.metadata ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.metadata/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/nightly/pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js))
