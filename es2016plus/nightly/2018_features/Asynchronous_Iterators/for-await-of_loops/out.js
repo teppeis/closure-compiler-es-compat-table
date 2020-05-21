@@ -545,7 +545,7 @@ $jscomp.generator.Generator_ = function(a) {
 };
 $jscomp.generator.createGenerator = function(a, b) {
   b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
-  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  $jscomp.setPrototypeOf && a.prototype && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
 };
 $jscomp.asyncExecutePromiseGenerator = function(a) {
