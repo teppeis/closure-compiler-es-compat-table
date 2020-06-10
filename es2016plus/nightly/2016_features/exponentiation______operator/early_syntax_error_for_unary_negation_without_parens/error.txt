@@ -11,7 +11,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es2016plus/nightly/2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
-  -5 ** 2;
-     ^
+  6|   -5 ** 2;
+          ^
 
 1 error(s), 0 warning(s)

@@ -16,7 +16,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/functions/class/new.target/in.js:5: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    passed = new.target === f;
-             ^^^^^^^^^^
+  5|     passed = new.target === f;
+                  ^^^^^^^^^^
 
 1 error(s), 0 warning(s)

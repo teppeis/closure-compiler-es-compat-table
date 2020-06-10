@@ -9,7 +9,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/bindings/const/temporal_dead_zone/in.js:3: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  var passed = (function(){ try { qux; } catch(e) { return true; }}());
-                                  ^^^
+  3|   var passed = (function(){ try { qux; } catch(e) { return true; }}());
+                                       ^^^
 
 0 error(s), 1 warning(s)

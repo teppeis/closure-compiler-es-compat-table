@@ -12,7 +12,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/syntax/object_literal_extensions/computed_accessors/in.js:6: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'computed getter/setter in an object literal' is not yet implemented.
-      get [x] () { return 1 },
-      ^^^^^^^^^^^^^^^^^^^^^^^
+  6|       get [x] () { return 1 },
+           ^^^^^^^^^^^^^^^^^^^^^^^
 
 1 error(s), 0 warning(s)

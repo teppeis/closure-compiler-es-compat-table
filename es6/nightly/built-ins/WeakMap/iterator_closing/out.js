@@ -170,14 +170,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   function g(a) {
-    var b = Object[a];
-    b && (Object[a] = function(a) {
-      if (a instanceof c) {
-        return a;
-      }
-      e(a);
-      return b(a);
-    });
+    if (!$jscomp.ISOLATE_POLYFILLS) {
+      var b = Object[a];
+      b && (Object[a] = function(a) {
+        if (a instanceof c) {
+          return a;
+        }
+        Object.isExtensible(a) && e(a);
+        return b(a);
+      });
+    }
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
     if (a && $jscomp.ES6_CONFORMANCE) {

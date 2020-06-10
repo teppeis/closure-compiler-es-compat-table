@@ -11,7 +11,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/misc/Proxy,_internal_getOwnPropertyDescriptor_calls/Function.prototype.bind/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  var gopd = [];
-  ^^^^^^^^^^^^^^
+  5|   var gopd = [];
+       ^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

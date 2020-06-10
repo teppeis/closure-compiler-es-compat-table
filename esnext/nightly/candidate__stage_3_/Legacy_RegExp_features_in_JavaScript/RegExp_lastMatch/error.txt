@@ -8,7 +8,7 @@ return RegExp.lastMatch === 'x';
 };
 ----------------------------------------------------------
 esnext/nightly/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
-function () {
-         ^
+  3| function () {
+              ^
 
 1 error(s), 0 warning(s)

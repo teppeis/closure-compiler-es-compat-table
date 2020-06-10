@@ -1,14 +1,5 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
-  return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
-  };
-};
-$jscomp.arrayIterator = function(a) {
-  return {next:$jscomp.arrayIteratorImpl(a)};
-};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
@@ -76,51 +67,6 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   b = b(c);
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
-$jscomp.initSymbol = function() {
-};
-$jscomp.polyfill("Symbol", function(a) {
-  if (a) {
-    return a;
-  }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
-  };
-  b.prototype.toString = function() {
-    return this.$jscomp$symbol$id_;
-  };
-  var c = 0, d = function(a) {
-    if (this instanceof d) {
-      throw new TypeError("Symbol is not a constructor");
-    }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
-  };
-  return d;
-}, "es6", "es3");
-$jscomp.initSymbolIterator = function() {
-};
-$jscomp.polyfill("Symbol.iterator", function(a) {
-  if (a) {
-    return a;
-  }
-  a = Symbol("Symbol.iterator");
-  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
-    var d = $jscomp.global[b[c]];
-    "function" === typeof d && "function" != typeof d.prototype[a] && $jscomp.defineProperty(d.prototype, a, {configurable:!0, writable:!0, value:function() {
-      return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
-    }});
-  }
-  return a;
-}, "es6", "es3");
-$jscomp.initSymbolAsyncIterator = function() {
-};
-$jscomp.iteratorPrototype = function(a) {
-  a = {next:a};
-  a[Symbol.iterator] = function() {
-    return this;
-  };
-  return a;
-};
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
   try {
@@ -136,6 +82,15 @@ $jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Obj
   }
   return a;
 } : null;
+$jscomp.arrayIteratorImpl = function(a) {
+  var b = 0;
+  return function() {
+    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+  };
+};
+$jscomp.arrayIterator = function(a) {
+  return {next:$jscomp.arrayIteratorImpl(a)};
+};
 $jscomp.makeIterator = function(a) {
   var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
   return b ? b.call(a) : $jscomp.arrayIterator(a);
@@ -341,6 +296,51 @@ $jscomp.generator.createGenerator = function(a, b) {
   b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
   $jscomp.setPrototypeOf && a.prototype && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
+};
+$jscomp.initSymbol = function() {
+};
+$jscomp.polyfill("Symbol", function(a) {
+  if (a) {
+    return a;
+  }
+  var b = function(a, b) {
+    this.$jscomp$symbol$id_ = a;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  };
+  b.prototype.toString = function() {
+    return this.$jscomp$symbol$id_;
+  };
+  var c = 0, d = function(a) {
+    if (this instanceof d) {
+      throw new TypeError("Symbol is not a constructor");
+    }
+    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+  };
+  return d;
+}, "es6", "es3");
+$jscomp.initSymbolIterator = function() {
+};
+$jscomp.polyfill("Symbol.iterator", function(a) {
+  if (a) {
+    return a;
+  }
+  a = Symbol("Symbol.iterator");
+  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
+    var d = $jscomp.global[b[c]];
+    "function" === typeof d && "function" != typeof d.prototype[a] && $jscomp.defineProperty(d.prototype, a, {configurable:!0, writable:!0, value:function() {
+      return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
+    }});
+  }
+  return a;
+}, "es6", "es3");
+$jscomp.initSymbolAsyncIterator = function() {
+};
+$jscomp.iteratorPrototype = function(a) {
+  a = {next:a};
+  a[Symbol.iterator] = function() {
+    return this;
+  };
+  return a;
 };
 module.exports = function() {
   var a = function d() {

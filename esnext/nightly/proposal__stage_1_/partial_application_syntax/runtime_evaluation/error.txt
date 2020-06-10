@@ -12,7 +12,7 @@ return p('a') === 'ab';
 };
 ----------------------------------------------------------
 esnext/nightly/proposal__stage_1_/partial_application_syntax/runtime_evaluation/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
-var p = f(?, 'b');
-          ^
+  6| var p = f(?, 'b');
+               ^
 
 1 error(s), 0 warning(s)

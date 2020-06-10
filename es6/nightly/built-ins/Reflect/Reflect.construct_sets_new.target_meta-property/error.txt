@@ -9,7 +9,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    if (new.target === Object) {
-        ^^^^^^^^^^
+  4|     if (new.target === Object) {
+             ^^^^^^^^^^
 
 1 error(s), 0 warning(s)

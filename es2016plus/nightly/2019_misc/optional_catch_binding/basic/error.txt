@@ -11,7 +11,7 @@ return false;
 };
 ----------------------------------------------------------
 es2016plus/nightly/2019_misc/optional_catch_binding/basic/in.js:9: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-return false;
-^^^^^^^^^^^^^
+   9| return false;
+      ^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

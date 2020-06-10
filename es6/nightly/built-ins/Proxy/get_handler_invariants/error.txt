@@ -32,11 +32,11 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Proxy/get_handler_invariants/in.js:16: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
-    proxy.foo;
-    ^^^^^^^^^
+  16|     proxy.foo;
+          ^^^^^^^^^
 
 es6/nightly/built-ins/Proxy/get_handler_invariants/in.js:26: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
-    proxy.bar;
-    ^^^^^^^^^
+  26|     proxy.bar;
+          ^^^^^^^^^
 
 0 error(s), 2 warning(s)

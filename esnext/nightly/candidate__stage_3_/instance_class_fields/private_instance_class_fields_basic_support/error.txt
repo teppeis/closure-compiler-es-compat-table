@@ -14,7 +14,7 @@ return new C(42).x() === 42;
 };
 ----------------------------------------------------------
 esnext/nightly/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
-#x;
-^
+  4| #x;
+     ^
 
 1 error(s), 0 warning(s)

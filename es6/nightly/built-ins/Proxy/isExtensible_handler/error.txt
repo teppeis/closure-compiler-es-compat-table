@@ -14,7 +14,14 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Proxy/isExtensible_handler/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
-  Object.isExtensible(
-  ^^^^^^^^^^^^^^^^^^^^
+   5|   Object.isExtensible(
+        ^^^^^^^^^^^^^^^^^^^^
+   6|     new Proxy(proxied, {
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+  10|     })
+      ^^^^^^
+  11|   );
+      ^^^
 
 0 error(s), 1 warning(s)

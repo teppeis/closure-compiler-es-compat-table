@@ -12,7 +12,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Set/Set.prototype_isnt_an_instance/in.js:6: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Set.prototype.has' is not being used.
-    Set.prototype.has(obj);
-    ^^^^^^^^^^^^^^^^^^^^^^
+  6|     Set.prototype.has(obj);
+         ^^^^^^^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

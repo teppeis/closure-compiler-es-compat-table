@@ -7,7 +7,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/bindings/const/for_loop_statement_scope/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  for(const baz = 0; false;) {}
-                             ^^
+  4|   for(const baz = 0; false;) {}
+                                  ^^
 
 0 error(s), 1 warning(s)

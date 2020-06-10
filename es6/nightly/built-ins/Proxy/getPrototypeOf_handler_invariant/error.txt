@@ -18,7 +18,14 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Proxy/getPrototypeOf_handler_invariant/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
-    Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8|     Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9|       getPrototypeOf: function () {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+  12|       }
+      ^^^^^^^
+  13|     }));
+      ^^^^^^^
 
 0 error(s), 1 warning(s)

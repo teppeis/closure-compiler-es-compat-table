@@ -10,7 +10,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es6/nightly/functions/arrow_functions/correct_precedence/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
-    0 || () => 2";
-    ^
+  4|     0 || () => 2";
+         ^
 
 1 error(s), 0 warning(s)

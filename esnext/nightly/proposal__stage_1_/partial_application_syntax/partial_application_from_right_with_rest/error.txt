@@ -9,7 +9,7 @@ return p('a', 'b') === 'abc';
 };
 ----------------------------------------------------------
 esnext/nightly/proposal__stage_1_/partial_application_syntax/partial_application_from_right_with_rest/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-var p = f(..., 'c');
-              ^
+  6| var p = f(..., 'c');
+                   ^
 
 1 error(s), 0 warning(s)

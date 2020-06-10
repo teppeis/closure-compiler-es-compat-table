@@ -11,7 +11,7 @@ return new C().x() === 42;
 };
 ----------------------------------------------------------
 esnext/nightly/candidate__stage_3_/static_class_fields/private_static_class_fields/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. '[' expected
-static #x = 42;
-       ^
+  4| static #x = 42;
+            ^
 
 1 error(s), 0 warning(s)

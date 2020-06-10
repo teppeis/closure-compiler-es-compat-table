@@ -10,7 +10,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es6/nightly/bindings/let/cannot_be_in_statements__strict_mode_/in.js:5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
-  if(true) let baz = 1;
-               ^^^^^^^
+  5|   if(true) let baz = 1;
+                    ^^^^^^^
 
 1 error(s), 0 warning(s)

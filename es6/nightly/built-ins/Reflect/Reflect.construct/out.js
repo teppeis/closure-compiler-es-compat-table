@@ -73,7 +73,7 @@ $jscomp.polyfillIsolated = function(a, c, b, e) {
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
 };
-$jscomp.construct = function() {
+$jscomp.getConstructImplementation = function() {
   function a() {
     function b() {
     }
@@ -98,7 +98,8 @@ $jscomp.construct = function() {
     c = $jscomp.objectCreate(c.prototype || Object.prototype);
     return Function.prototype.apply.call(b, c, a) || c;
   };
-}();
+};
+$jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");

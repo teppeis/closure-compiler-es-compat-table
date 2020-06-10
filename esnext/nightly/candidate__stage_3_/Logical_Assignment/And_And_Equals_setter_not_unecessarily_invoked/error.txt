@@ -8,7 +8,7 @@ return i === 1;
 };
 ----------------------------------------------------------
 esnext/nightly/candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-obj.x &&= 2;
-         ^
+  5| obj.x &&= 2;
+              ^
 
 1 error(s), 0 warning(s)

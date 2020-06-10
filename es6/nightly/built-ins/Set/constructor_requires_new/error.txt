@@ -11,7 +11,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/Set/constructor_requires_new/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Set' is not being used.
-    Set();
-    ^^^^^
+  5|     Set();
+         ^^^^^
 
 0 error(s), 1 warning(s)

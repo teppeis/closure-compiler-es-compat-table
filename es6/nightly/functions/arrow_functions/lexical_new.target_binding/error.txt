@@ -8,7 +8,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/functions/arrow_functions/lexical_new.target_binding/in.js:4: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    return x => new.target;
-                ^^^^^^^^^^
+  4|     return x => new.target;
+                     ^^^^^^^^^^
 
 1 error(s), 0 warning(s)

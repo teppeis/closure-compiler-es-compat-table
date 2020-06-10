@@ -9,7 +9,11 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/well-known_symbols/Symbol.unscopables/in.js:5: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
-  with (a) {
-  ^^^^^^^^^^
+  5|   with (a) {
+       ^^^^^^^^^^
+  6|     return foo === 1 && typeof bar === "undefined";
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7|   }
+     ^^^
 
 1 error(s), 0 warning(s)

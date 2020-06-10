@@ -12,7 +12,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es6/nightly/syntax/rest_parameters/cant_be_used_in_setters/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. Setter must not have a rest parameter
-      set e(...args) {}
-            ^
+  5|       set e(...args) {}
+                 ^
 
 1 error(s), 0 warning(s)

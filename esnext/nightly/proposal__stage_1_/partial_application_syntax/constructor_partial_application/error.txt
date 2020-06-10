@@ -9,7 +9,7 @@ return p('a').x === 'ab';
 };
 ----------------------------------------------------------
 esnext/nightly/proposal__stage_1_/partial_application_syntax/constructor_partial_application/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
-var p = new F(?, 'b');
-              ^
+  6| var p = new F(?, 'b');
+                   ^
 
 1 error(s), 0 warning(s)

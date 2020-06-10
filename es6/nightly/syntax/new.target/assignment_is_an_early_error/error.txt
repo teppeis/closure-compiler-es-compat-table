@@ -12,7 +12,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es6/nightly/syntax/new.target/assignment_is_an_early_error/in.js:7: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
-  new.target = function(){};
-             ^
+  7|   new.target = function(){};
+                  ^
 
 1 error(s), 0 warning(s)

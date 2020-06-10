@@ -12,7 +12,7 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'instanceof' operator is not being used.
-  obj instanceof C;
-  ^^^^^^^^^^^^^^^^
+   9|   obj instanceof C;
+        ^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

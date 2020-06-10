@@ -10,7 +10,7 @@ module.exports = () => {
 
 ----------------------------------------------------------
 es6/nightly/syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
-  ({a,b}) = {a:3,b:4};
-          ^
+  5|   ({a,b}) = {a:3,b:4};
+               ^
 
 1 error(s), 0 warning(s)

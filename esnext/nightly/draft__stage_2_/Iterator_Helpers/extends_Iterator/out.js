@@ -140,6 +140,33 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   b.prototype = a;
   return new b;
 };
+$jscomp.getConstructImplementation = function() {
+  function a() {
+    function a() {
+    }
+    new a;
+    Reflect.construct(a, [], function() {
+    });
+    return new a instanceof a;
+  }
+  if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
+    if (a()) {
+      return Reflect.construct;
+    }
+    var b = Reflect.construct;
+    return function(a, d, e) {
+      a = b(a, d);
+      e && Reflect.setPrototypeOf(a, e.prototype);
+      return a;
+    };
+  }
+  return function(a, b, e) {
+    void 0 === e && (e = a);
+    e = $jscomp.objectCreate(e.prototype || Object.prototype);
+    return Function.prototype.apply.call(a, e, b) || e;
+  };
+};
+$jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
   try {
@@ -175,6 +202,25 @@ $jscomp.inherits = function(a, b) {
   }
   a.superClass_ = b.prototype;
 };
+$jscomp.polyfill("Reflect.construct", function(a) {
+  return $jscomp.construct;
+}, "es6", "es3");
+$jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
+  if (a) {
+    return a;
+  }
+  if ($jscomp.setPrototypeOf) {
+    var b = $jscomp.setPrototypeOf;
+    return function(a, d) {
+      try {
+        return b(a, d), !0;
+      } catch (e) {
+        return !1;
+      }
+    };
+  }
+  return null;
+}, "es6", "es5");
 module.exports = function() {
   var a = function() {
     return Iterator.apply(this, arguments) || this;

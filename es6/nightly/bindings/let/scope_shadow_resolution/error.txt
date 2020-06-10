@@ -11,7 +11,11 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 es6/nightly/bindings/let/scope_shadow_resolution/in.js:7: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  } catch(e) {
-    ^^^^^^^^^^
+   7|   } catch(e) {
+          ^^^^^^^^^^
+   8|     return false;
+      ^^^^^^^^^^^^^^^^^
+   9|   }
+      ^^^
 
 0 error(s), 1 warning(s)
