@@ -57,7 +57,9 @@ $jscomp.polyfillUnisolated = function(a, b, d, f) {
   a = a.split(".");
   for (f = 0; f < a.length - 1; f++) {
     var c = a[f];
-    c in d || (d[c] = {});
+    if (!(c in d)) {
+      return;
+    }
     d = d[c];
   }
   a = a[a.length - 1];
@@ -72,7 +74,9 @@ $jscomp.polyfillIsolated = function(a, b, d, f) {
   f = !a && f in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < c.length - 1; g++) {
     var e = c[g];
-    e in f || (f[e] = {});
+    if (!(e in f)) {
+      return;
+    }
     f = f[e];
   }
   c = c[c.length - 1];
@@ -123,20 +127,20 @@ $jscomp.polyfill("Promise", function(a) {
     }
     this.batch_ = null;
   };
-  b.prototype.asyncThrow_ = function(e) {
+  b.prototype.asyncThrow_ = function(a) {
     this.asyncExecuteFunction(function() {
-      throw e;
+      throw a;
     });
   };
-  var c = function(e) {
+  var c = function(a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
-    var a = this.createResolveAndReject_();
+    var e = this.createResolveAndReject_();
     try {
-      e(a.resolve, a.reject);
+      a(e.resolve, e.reject);
     } catch (h) {
-      a.reject(h);
+      e.reject(h);
     }
   };
   c.prototype.createResolveAndReject_ = function() {

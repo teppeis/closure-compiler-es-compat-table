@@ -44,7 +44,9 @@ $jscomp.polyfillUnisolated = function(b, c, a, e) {
   b = b.split(".");
   for (e = 0; e < b.length - 1; e++) {
     var d = b[e];
-    d in a || (a[d] = {});
+    if (!(d in a)) {
+      return;
+    }
     a = a[d];
   }
   b = b[b.length - 1];
@@ -59,7 +61,9 @@ $jscomp.polyfillIsolated = function(b, c, a, e) {
   e = !b && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < d.length - 1; f++) {
     var g = d[f];
-    g in e || (e[g] = {});
+    if (!(g in e)) {
+      return;
+    }
     e = e[g];
   }
   d = d[d.length - 1];
@@ -72,7 +76,7 @@ $jscomp.polyfill("Math.hypot", function(b) {
     if (2 > arguments.length) {
       return arguments.length ? Math.abs(arguments[0]) : 0;
     }
-    var a, e, d;
+    var a, c, d;
     for (a = d = 0; a < arguments.length; a++) {
       d = Math.max(d, Math.abs(arguments[a]));
     }
@@ -80,16 +84,16 @@ $jscomp.polyfill("Math.hypot", function(b) {
       if (!d) {
         return d;
       }
-      for (a = e = 0; a < arguments.length; a++) {
-        var c = Number(arguments[a]) / d;
-        e += c * c;
+      for (a = c = 0; a < arguments.length; a++) {
+        var f = Number(arguments[a]) / d;
+        c += f * f;
       }
-      return Math.sqrt(e) * d;
+      return Math.sqrt(c) * d;
     }
-    for (a = e = 0; a < arguments.length; a++) {
-      c = Number(arguments[a]), e += c * c;
+    for (a = c = 0; a < arguments.length; a++) {
+      f = Number(arguments[a]), c += f * f;
     }
-    return Math.sqrt(e);
+    return Math.sqrt(c);
   };
 }, "es6", "es3");
 module.exports = function() {

@@ -72,7 +72,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in c || (c[e] = {});
+    if (!(e in c)) {
+      return;
+    }
     c = c[e];
   }
   a = a[a.length - 1];
@@ -85,9 +87,11 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   a = 1 === e.length;
   d = e[0];
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var g = 0; g < e.length - 1; g++) {
-    var f = e[g];
-    f in d || (d[f] = {});
+  for (var h = 0; h < e.length - 1; h++) {
+    var f = e[h];
+    if (!(f in d)) {
+      return;
+    }
     d = d[f];
   }
   e = e[e.length - 1];
@@ -157,6 +161,9 @@ $jscomp.inherits = function(a, b) {
   }
   a.superClass_ = b.prototype;
 };
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");
@@ -242,13 +249,13 @@ $jscomp.polyfill("WeakMap", function(a) {
       return !1;
     }
     try {
-      var b = Object.seal({}), h = Object.seal({}), c = new a([[b, 2], [h, 3]]);
-      if (2 != c.get(b) || 3 != c.get(h)) {
+      var b = Object.seal({}), g = Object.seal({}), c = new a([[b, 2], [g, 3]]);
+      if (2 != c.get(b) || 3 != c.get(g)) {
         return !1;
       }
       c.delete(b);
-      c.set(h, 4);
-      return !c.has(b) && 4 == c.get(h);
+      c.set(g, 4);
+      return !c.has(b) && 4 == c.get(g);
     } catch (l) {
       return !1;
     }
@@ -265,7 +272,7 @@ $jscomp.polyfill("WeakMap", function(a) {
       $jscomp.defineProperty(a, f, {value:b});
     }
   }
-  function g(a) {
+  function h(a) {
     if (!$jscomp.ISOLATE_POLYFILLS) {
       var b = Object[a];
       b && (Object[a] = function(a) {
@@ -287,10 +294,10 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   var f = "$jscomp_hidden_" + Math.random();
-  g("freeze");
-  g("preventExtensions");
-  g("seal");
-  var k = 0, h = function(a) {
+  h("freeze");
+  h("preventExtensions");
+  h("seal");
+  var k = 0, g = function(a) {
     this.id_ = (k += Math.random() + 1).toString();
     if (a) {
       a = $jscomp.makeIterator(a);
@@ -299,7 +306,7 @@ $jscomp.polyfill("WeakMap", function(a) {
       }
     }
   };
-  h.prototype.set = function(a, b) {
+  g.prototype.set = function(a, b) {
     if (!d(a)) {
       throw Error("Invalid WeakMap key");
     }
@@ -310,16 +317,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     a[f][this.id_] = b;
     return this;
   };
-  h.prototype.get = function(a) {
+  g.prototype.get = function(a) {
     return d(a) && $jscomp.owns(a, f) ? a[f][this.id_] : void 0;
   };
-  h.prototype.has = function(a) {
+  g.prototype.has = function(a) {
     return d(a) && $jscomp.owns(a, f) && $jscomp.owns(a[f], this.id_);
   };
-  h.prototype.delete = function(a) {
+  g.prototype.delete = function(a) {
     return d(a) && $jscomp.owns(a, f) && $jscomp.owns(a[f], this.id_) ? delete a[f][this.id_] : !1;
   };
-  return h;
+  return g;
 }, "es6", "es3");
 $jscomp.MapEntry = function() {
 };
@@ -386,17 +393,17 @@ $jscomp.polyfill("Map", function(a) {
     return (a = e(this, a).entry) && a.value;
   };
   d.prototype.entries = function() {
-    return g(this, function(a) {
+    return h(this, function(a) {
       return [a.key, a.value];
     });
   };
   d.prototype.keys = function() {
-    return g(this, function(a) {
+    return h(this, function(a) {
       return a.key;
     });
   };
   d.prototype.values = function() {
-    return g(this, function(a) {
+    return h(this, function(a) {
       return a.value;
     });
   };
@@ -412,14 +419,14 @@ $jscomp.polyfill("Map", function(a) {
     var e = a.data_[d];
     if (e && $jscomp.owns(a.data_, d)) {
       for (a = 0; a < e.length; a++) {
-        var f = e[a];
-        if (b !== b && f.key !== f.key || b === f.key) {
-          return {id:d, list:e, index:a, entry:f};
+        var g = e[a];
+        if (b !== b && g.key !== g.key || b === g.key) {
+          return {id:d, list:e, index:a, entry:g};
         }
       }
     }
     return {id:d, list:e, index:-1, entry:void 0};
-  }, g = function(a, b) {
+  }, h = function(a, b) {
     var c = a.head_;
     return $jscomp.iteratorPrototype(function() {
       if (c) {

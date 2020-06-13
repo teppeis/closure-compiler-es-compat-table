@@ -44,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in c || (c[e] = {});
+    if (!(e in c)) {
+      return;
+    }
     c = c[e];
   }
   a = a[a.length - 1];
@@ -59,7 +61,9 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < e.length - 1; f++) {
     var g = e[f];
-    g in d || (d[g] = {});
+    if (!(g in d)) {
+      return;
+    }
     d = d[g];
   }
   e = e[e.length - 1];
@@ -67,6 +71,9 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   b = b(c);
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
   try {

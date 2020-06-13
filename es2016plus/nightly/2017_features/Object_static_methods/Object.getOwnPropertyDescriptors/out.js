@@ -44,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, b, e, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var c = a[d];
-    c in e || (e[c] = {});
+    if (!(c in e)) {
+      return;
+    }
     e = e[c];
   }
   a = a[a.length - 1];
@@ -59,7 +61,9 @@ $jscomp.polyfillIsolated = function(a, b, e, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < c.length - 1; f++) {
     var g = c[f];
-    g in d || (d[g] = {});
+    if (!(g in d)) {
+      return;
+    }
     d = d[g];
   }
   c = c[c.length - 1];
@@ -67,6 +71,9 @@ $jscomp.polyfillIsolated = function(a, b, e, d) {
   b = b(e);
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, c, {configurable:!0, writable:!0, value:b}) : b !== e && ($jscomp.propertyToPolyfillSymbol[c] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(c) : $jscomp.POLYFILL_PREFIX + c, c = $jscomp.propertyToPolyfillSymbol[c], $jscomp.defineProperty(d, c, {configurable:!0, writable:!0, value:b})));
 };
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
 $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
   return a ? a : function() {
     return [];

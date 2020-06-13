@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, e) {
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var f = a[e];
-    f in c || (c[f] = {});
+    if (!(f in c)) {
+      return;
+    }
     c = c[f];
   }
   a = a[a.length - 1];
@@ -68,7 +70,9 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < f.length - 1; g++) {
     var d = f[g];
-    d in e || (e[d] = {});
+    if (!(d in e)) {
+      return;
+    }
     e = e[d];
   }
   f = f[f.length - 1];

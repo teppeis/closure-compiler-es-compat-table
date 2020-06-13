@@ -72,7 +72,9 @@ $jscomp.polyfillUnisolated = function(a, b, d, c) {
   a = a.split(".");
   for (c = 0; c < a.length - 1; c++) {
     var e = a[c];
-    e in d || (d[e] = {});
+    if (!(e in d)) {
+      return;
+    }
     d = d[e];
   }
   a = a[a.length - 1];
@@ -87,7 +89,9 @@ $jscomp.polyfillIsolated = function(a, b, d, c) {
   c = !a && c in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < e.length - 1; g++) {
     var f = e[g];
-    f in c || (c[f] = {});
+    if (!(f in c)) {
+      return;
+    }
     c = c[f];
   }
   e = e[e.length - 1];
@@ -157,6 +161,9 @@ $jscomp.inherits = function(a, b) {
   }
   a.superClass_ = b.prototype;
 };
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");
