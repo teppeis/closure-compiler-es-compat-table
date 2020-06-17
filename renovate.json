@@ -1,5 +1,10 @@
 {
   "extends": [
     "@teppeis"
-  ]
+  ],
+  "npm": {
+    "lockFileMaintenance": {
+      "enabled": false
+    }
+  }
 }
