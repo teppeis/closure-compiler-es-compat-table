@@ -15,7 +15,6 @@
   "candidate__stage_3_/private_class_methods/private_accessor_properties",
   "candidate__stage_3_/private_class_methods/private_static_accessor_properties",
   "candidate__stage_3_/numeric_separators",
-  "candidate__stage_3_/String.prototype.replaceAll",
   "candidate__stage_3_/Promise.any",
   "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
   "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9",

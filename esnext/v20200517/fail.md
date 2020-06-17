@@ -27,9 +27,6 @@
 ### numeric separators
 - numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200517/candidate__stage_3_/numeric_separators/error.txt))
 
-### String.prototype.replaceAll
-- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200517/candidate__stage_3_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200517/candidate__stage_3_/String.prototype.replaceAll/out.js))
-
 ### Promise.any
 - Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200517/candidate__stage_3_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20200517/candidate__stage_3_/Promise.any/out.js))
 
