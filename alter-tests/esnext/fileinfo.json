@@ -95,11 +95,6 @@
     "test": "numeric separators"
   },
   {
-    "path": "candidate__stage_3_/String.prototype.replaceAll",
-    "category": "candidate (stage 3)",
-    "test": "String.prototype.replaceAll"
-  },
-  {
     "path": "candidate__stage_3_/Promise.any",
     "category": "candidate (stage 3)",
     "test": "Promise.any"

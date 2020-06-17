@@ -770,5 +770,10 @@
     "path": "2020_features/nullish_coalescing_operator_____",
     "category": "2020 features",
     "test": "nullish coalescing operator (??)"
+  },
+  {
+    "path": "finished__stage_4_/String.prototype.replaceAll",
+    "category": "finished (stage 4)",
+    "test": "String.prototype.replaceAll"
   }
 ]
