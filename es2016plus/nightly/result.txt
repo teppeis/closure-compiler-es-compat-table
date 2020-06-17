@@ -130,3 +130,4 @@
 2020_features/optional_chaining_operator___._/optional_method_call/error.txt: [CompileError]
 2020_features/optional_chaining_operator___._/optional_function_call/error.txt: [CompileError]
 2020_features/nullish_coalescing_operator_____/out.js: [Pass]
+finished__stage_4_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'

@@ -14,7 +14,6 @@ candidate__stage_3_/private_class_methods/private_static_methods/error.txt: [Com
 candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt: [CompileError]
 candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
 candidate__stage_3_/numeric_separators/error.txt: [CompileError]
-candidate__stage_3_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 candidate__stage_3_/Promise.any/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'any'
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]

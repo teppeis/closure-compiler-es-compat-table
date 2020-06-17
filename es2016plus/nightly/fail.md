@@ -104,3 +104,8 @@
 - optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
 - optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
 - optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
+
+## Finished (stage 4)
+
+### String.prototype.replaceAll
+- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/finished__stage_4_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/finished__stage_4_/String.prototype.replaceAll/out.js))
