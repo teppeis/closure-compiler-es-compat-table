@@ -1,0 +1,13 @@
+// 2019 misc / Function.prototype.toString revision / unicode escape sequences in identifiers
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
+  return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;
+
+};
+----------------------------------------------------------
+es2016plus/v20200614/2019_misc/Function.prototype.toString_revision/unicode_escape_sequences_in_identifiers/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,16 @@
+// misc / Proxy, internal 'get' calls / Function.prototype.bind
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // Function.prototype.bind -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
+  Function.prototype.bind.call(p);
+  return get + '' === "length,name";
+
+};
+----------------------------------------------------------
+es6/v20200614/misc/Proxy,_internal_get_calls/Function.prototype.bind/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  5|   var get = [];
+       ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
