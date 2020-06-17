@@ -1,8 +1,5 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.owns = function(a, c) {
-  return Object.prototype.hasOwnProperty.call(a, c);
-};
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
@@ -47,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, c, b, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in b || (b[e] = {});
+    if (!(e in b)) {
+      return;
+    }
     b = b[e];
   }
   a = a[a.length - 1];
@@ -62,13 +61,21 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < e.length - 1; f++) {
     var g = e[f];
-    g in d || (d[g] = {});
+    if (!(g in d)) {
+      return;
+    }
     d = d[g];
   }
   e = e[e.length - 1];
   b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? d[e] : null;
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
+};
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
+$jscomp.owns = function(a, c) {
+  return Object.prototype.hasOwnProperty.call(a, c);
 };
 $jscomp.polyfill("Reflect.deleteProperty", function(a) {
   return a ? a : function(a, b) {

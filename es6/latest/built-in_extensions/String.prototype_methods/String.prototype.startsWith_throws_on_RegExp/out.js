@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, c, b, e) {
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var d = a[e];
-    d in b || (b[d] = {});
+    if (!(d in b)) {
+      return;
+    }
     b = b[d];
   }
   a = a[a.length - 1];
@@ -66,10 +68,12 @@ $jscomp.polyfillIsolated = function(a, c, b, e) {
   a = 1 === d.length;
   e = d[0];
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var g = 0; g < d.length - 1; g++) {
-    var f = d[g];
-    f in e || (e[f] = {});
-    e = e[f];
+  for (var f = 0; f < d.length - 1; f++) {
+    var g = d[f];
+    if (!(g in e)) {
+      return;
+    }
+    e = e[g];
   }
   d = d[d.length - 1];
   b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
@@ -80,14 +84,14 @@ $jscomp.polyfill("String.prototype.startsWith", function(a) {
   return a ? a : function(a, b) {
     var c = $jscomp.checkStringArgs(this, a, "startsWith");
     a += "";
-    var d = c.length, g = a.length;
+    var d = c.length, f = a.length;
     b = Math.max(0, Math.min(b | 0, c.length));
-    for (var f = 0; f < g && b < d;) {
-      if (c[b++] != a[f++]) {
+    for (var g = 0; g < f && b < d;) {
+      if (c[b++] != a[g++]) {
         return !1;
       }
     }
-    return f >= g;
+    return g >= f;
   };
 }, "es6", "es3");
 module.exports = function() {

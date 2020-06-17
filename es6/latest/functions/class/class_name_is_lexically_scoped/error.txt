@@ -9,8 +9,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/functions/class/class_name_is_lexically_scoped/in.js:7: ERROR - [CLASS_REASSIGNMENT] Class names defined inside a function cannot be reassigned.
-  C = void undefined;
-  ^^^^^^^^^^^^^^^^^^
+es6/v20200614/functions/class/class_name_is_lexically_scoped/in.js:7: ERROR - [CLASS_REASSIGNMENT] Class names defined inside a function cannot be reassigned.
+  7|   C = void undefined;
+       ^^^^^^^^^^^^^^^^^^
 
 1 error(s), 0 warning(s)

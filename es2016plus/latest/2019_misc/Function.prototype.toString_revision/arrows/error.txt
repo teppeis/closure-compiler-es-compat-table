@@ -6,8 +6,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200517/2019_misc/Function.prototype.toString_revision/arrows/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  var str = 'a => b';
-  ^^^^^^^^^^^^^^^^^^^
+es2016plus/v20200614/2019_misc/Function.prototype.toString_revision/arrows/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var str = 'a => b';
+       ^^^^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

@@ -8,8 +8,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    if (new.target === Object) {
-        ^^^^^^^^^^
+es6/v20200614/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+  4|     if (new.target === Object) {
+             ^^^^^^^^^^
 
 1 error(s), 0 warning(s)

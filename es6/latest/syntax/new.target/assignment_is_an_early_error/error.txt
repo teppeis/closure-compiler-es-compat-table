@@ -11,8 +11,8 @@ module.exports = () => {
 // EXPECT: 7: ERROR
 
 ----------------------------------------------------------
-es6/v20200517/syntax/new.target/assignment_is_an_early_error/in.js:7: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
-  new.target = function(){};
-             ^
+es6/v20200614/syntax/new.target/assignment_is_an_early_error/in.js:7: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
+  7|   new.target = function(){};
+                  ^
 
 1 error(s), 0 warning(s)

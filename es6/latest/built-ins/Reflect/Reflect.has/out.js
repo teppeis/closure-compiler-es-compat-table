@@ -44,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, c, b, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in b || (b[e] = {});
+    if (!(e in b)) {
+      return;
+    }
     b = b[e];
   }
   a = a[a.length - 1];
@@ -59,7 +61,9 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < e.length - 1; f++) {
     var g = e[f];
-    g in d || (d[g] = {});
+    if (!(g in d)) {
+      return;
+    }
     d = d[g];
   }
   e = e[e.length - 1];
@@ -67,6 +71,9 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
 };
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
 $jscomp.polyfill("Reflect.has", function(a) {
   return a ? a : function(a, b) {
     return b in a;

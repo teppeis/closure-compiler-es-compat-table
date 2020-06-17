@@ -11,12 +11,12 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/syntax/new.target/in_constructors/in.js:5: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    passed = (new.target === f);
-              ^^^^^^^^^^
+es6/v20200614/syntax/new.target/in_constructors/in.js:5: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+  5|     passed = (new.target === f);
+                   ^^^^^^^^^^
 
-es6/v20200517/syntax/new.target/in_constructors/in.js:8: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-    passed &= (new.target === void undefined);
-               ^^^^^^^^^^
+es6/v20200614/syntax/new.target/in_constructors/in.js:8: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+  8|     passed &= (new.target === void undefined);
+                    ^^^^^^^^^^
 
 2 error(s), 0 warning(s)

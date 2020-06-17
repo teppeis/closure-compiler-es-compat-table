@@ -65,7 +65,9 @@ $jscomp.polyfillUnisolated = function(a, d, b, c) {
   a = a.split(".");
   for (c = 0; c < a.length - 1; c++) {
     var e = a[c];
-    e in b || (b[e] = {});
+    if (!(e in b)) {
+      return;
+    }
     b = b[e];
   }
   a = a[a.length - 1];
@@ -80,7 +82,9 @@ $jscomp.polyfillIsolated = function(a, d, b, c) {
   c = !a && c in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < e.length - 1; g++) {
     var f = e[g];
-    f in c || (c[f] = {});
+    if (!(f in c)) {
+      return;
+    }
     c = c[f];
   }
   e = e[e.length - 1];
@@ -170,14 +174,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   function g(a) {
-    var c = Object[a];
-    c && (Object[a] = function(a) {
-      if (a instanceof b) {
-        return a;
-      }
-      e(a);
-      return c(a);
-    });
+    if (!$jscomp.ISOLATE_POLYFILLS) {
+      var c = Object[a];
+      c && (Object[a] = function(a) {
+        if (a instanceof b) {
+          return a;
+        }
+        Object.isExtensible(a) && e(a);
+        return c(a);
+      });
+    }
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
     if (a && $jscomp.ES6_CONFORMANCE) {
@@ -303,24 +309,24 @@ $jscomp.polyfill("Map", function(a) {
     });
   };
   c.prototype.forEach = function(a, c) {
-    for (var b = this.entries(), e; !(e = b.next()).done;) {
-      e = e.value, a.call(c, e[1], e[0], this);
+    for (var b = this.entries(), d; !(d = b.next()).done;) {
+      d = d.value, a.call(c, d[1], d[0], this);
     }
   };
   c.prototype[Symbol.iterator] = c.prototype.entries;
   var e = function(a, c) {
-    var e = c && typeof c;
-    "object" == e || "function" == e ? b.has(c) ? e = b.get(c) : (e = "" + ++k, b.set(c, e)) : e = "p_" + c;
-    var d = a.data_[e];
-    if (d && $jscomp.owns(a.data_, e)) {
-      for (a = 0; a < d.length; a++) {
-        var f = d[a];
+    var d = c && typeof c;
+    "object" == d || "function" == d ? b.has(c) ? d = b.get(c) : (d = "" + ++k, b.set(c, d)) : d = "p_" + c;
+    var e = a.data_[d];
+    if (e && $jscomp.owns(a.data_, d)) {
+      for (a = 0; a < e.length; a++) {
+        var f = e[a];
         if (c !== c && f.key !== f.key || c === f.key) {
-          return {id:e, list:d, index:a, entry:f};
+          return {id:d, list:e, index:a, entry:f};
         }
       }
     }
-    return {id:e, list:d, index:-1, entry:void 0};
+    return {id:d, list:e, index:-1, entry:void 0};
   }, g = function(a, c) {
     var b = a.head_;
     return $jscomp.iteratorPrototype(function() {

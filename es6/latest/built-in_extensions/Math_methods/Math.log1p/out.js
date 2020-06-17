@@ -44,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, e) {
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var d = a[e];
-    d in c || (c[d] = {});
+    if (!(d in c)) {
+      return;
+    }
     c = c[d];
   }
   a = a[a.length - 1];
@@ -59,7 +61,9 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < d.length - 1; f++) {
     var g = d[f];
-    g in e || (e[g] = {});
+    if (!(g in e)) {
+      return;
+    }
     e = e[g];
   }
   d = d[d.length - 1];
@@ -71,8 +75,8 @@ $jscomp.polyfill("Math.log1p", function(a) {
   return a ? a : function(a) {
     a = Number(a);
     if (0.25 > a && -.25 < a) {
-      for (var c = a, b = 1, d = a, f = 0, g = 1; f != d;) {
-        c *= a, g *= -1, d = (f = d) + g * c / ++b;
+      for (var b = a, e = 1, d = a, f = 0, g = 1; f != d;) {
+        b *= a, g *= -1, d = (f = d) + g * b / ++e;
       }
       return d;
     }

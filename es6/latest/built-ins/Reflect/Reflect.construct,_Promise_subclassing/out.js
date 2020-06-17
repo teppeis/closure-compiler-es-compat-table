@@ -5,12 +5,6 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
-$jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
-  var c = function() {
-  };
-  c.prototype = a;
-  return new c;
-};
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, d) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
@@ -50,7 +44,9 @@ $jscomp.polyfillUnisolated = function(a, c, d, e) {
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var b = a[e];
-    b in d || (d[b] = {});
+    if (!(b in d)) {
+      return;
+    }
     d = d[b];
   }
   a = a[a.length - 1];
@@ -65,7 +61,9 @@ $jscomp.polyfillIsolated = function(a, c, d, e) {
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < b.length - 1; g++) {
     var f = b[g];
-    f in e || (e[f] = {});
+    if (!(f in e)) {
+      return;
+    }
     e = e[f];
   }
   b = b[b.length - 1];
@@ -73,7 +71,16 @@ $jscomp.polyfillIsolated = function(a, c, d, e) {
   c = c(d);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, b, {configurable:!0, writable:!0, value:c}) : c !== d && ($jscomp.propertyToPolyfillSymbol[b] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(b) : $jscomp.POLYFILL_PREFIX + b, b = $jscomp.propertyToPolyfillSymbol[b], $jscomp.defineProperty(e, b, {configurable:!0, writable:!0, value:c})));
 };
-$jscomp.construct = function() {
+$jscomp.polyfill("Reflect", function(a) {
+  return a ? a : {};
+}, "es6", "es3");
+$jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
+  var c = function() {
+  };
+  c.prototype = a;
+  return new c;
+};
+$jscomp.getConstructImplementation = function() {
   function a() {
     function a() {
     }
@@ -98,7 +105,8 @@ $jscomp.construct = function() {
     b = $jscomp.objectCreate(b.prototype || Object.prototype);
     return Function.prototype.apply.call(a, b, c) || b;
   };
-}();
+};
+$jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
 $jscomp.polyfill("Reflect.construct", function(a) {
   return $jscomp.construct;
 }, "es6", "es3");
@@ -120,9 +128,9 @@ $jscomp.polyfill("Promise", function(a) {
   function c() {
     this.batch_ = null;
   }
-  function d(f) {
-    return f instanceof b ? f : new b(function(a, b) {
-      a(f);
+  function d(a) {
+    return a instanceof b ? a : new b(function(f, b) {
+      f(a);
     });
   }
   if (a && !$jscomp.FORCE_POLYFILL_PROMISE) {

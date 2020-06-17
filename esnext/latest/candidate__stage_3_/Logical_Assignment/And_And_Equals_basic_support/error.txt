@@ -10,8 +10,8 @@ return typeof a === 'undefined' && b === 0 && c === 2;
 
 };
 ----------------------------------------------------------
-esnext/v20200517/candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-a &&= 2;
-     ^
+esnext/v20200614/candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  6| a &&= 2;
+          ^
 
 1 error(s), 0 warning(s)

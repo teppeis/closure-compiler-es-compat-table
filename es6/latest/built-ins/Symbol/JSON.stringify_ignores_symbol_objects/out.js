@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in c || (c[e] = {});
+    if (!(e in c)) {
+      return;
+    }
     c = c[e];
   }
   a = a[a.length - 1];
@@ -66,10 +68,12 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   a = 1 === e.length;
   d = e[0];
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var g = 0; g < e.length - 1; g++) {
-    var f = e[g];
-    f in d || (d[f] = {});
-    d = d[f];
+  for (var f = 0; f < e.length - 1; f++) {
+    var g = e[f];
+    if (!(g in d)) {
+      return;
+    }
+    d = d[g];
   }
   e = e[e.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
@@ -126,7 +130,7 @@ module.exports = function() {
     var b = {foo:a};
     try {
       b[a] = 1;
-    } catch (f) {
+    } catch (g) {
     }
     var c = [a];
     return '{"foo":{}}' === JSON.stringify(b) && "[{}]" === JSON.stringify(c) && "{}" === JSON.stringify(a);

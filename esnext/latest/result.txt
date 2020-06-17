@@ -89,7 +89,7 @@ proposal__stage_1_/Observable/Observable_constructor_behavior/out.js: ReferenceE
 proposal__stage_1_/Observable/Observable.prototype_Symbol.observable_/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable.of/out.js: ReferenceError: Observable is not defined
 proposal__stage_1_/Observable/Observable.from/out.js: ReferenceError: Observable is not defined
-proposal__stage_1_/Frozen_Realms_API/out.js: ReferenceError: Reflect is not defined
+proposal__stage_1_/Frozen_Realms_API/out.js: TypeError: Cannot read property 'immutableRoot' of undefined
 proposal__stage_1_/Math.signbit/out.js: TypeError: Object #<Object> has no method 'signbit'
 proposal__stage_1_/Math_extensions_proposal/Math.clamp/out.js: TypeError: Object #<Object> has no method 'clamp'
 proposal__stage_1_/Math_extensions_proposal/Math.DEG_PER_RAD/out.js: [InvalidResult: false]
@@ -100,7 +100,7 @@ proposal__stage_1_/Math_extensions_proposal/Math.radians/out.js: TypeError: Obje
 proposal__stage_1_/Math_extensions_proposal/Math.scale/out.js: TypeError: Object #<Object> has no method 'scale'
 proposal__stage_1_/Promise.try/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Promise.try/returns_instance_of_Promise/out.js: TypeError: Object function (c) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { c(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'
-proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (c) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { c(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'
+proposal__stage_1_/Promise.try/call_function_synchronously/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_value/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_throws_exception/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'
 proposal__stage_1_/Promise.try/function_returns_fulfilled_Promise/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'try'

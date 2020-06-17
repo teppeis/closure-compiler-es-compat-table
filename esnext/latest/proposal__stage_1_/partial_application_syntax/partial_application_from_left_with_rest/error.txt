@@ -8,8 +8,8 @@ return p('b', 'c') === 'abc';
 
 };
 ----------------------------------------------------------
-esnext/v20200517/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-var p = f('a', ...);
-                   ^
+esnext/v20200614/proposal__stage_1_/partial_application_syntax/partial_application_from_left_with_rest/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  6| var p = f('a', ...);
+                        ^
 
 1 error(s), 0 warning(s)

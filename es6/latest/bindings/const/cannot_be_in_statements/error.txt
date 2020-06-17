@@ -8,8 +8,8 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
 
 ----------------------------------------------------------
-es6/v20200517/bindings/const/cannot_be_in_statements/in.js:4: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
-  if (true) const baz = 1;
-                  ^^^^^^^
+es6/v20200614/bindings/const/cannot_be_in_statements/in.js:4: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
+  4|   if (true) const baz = 1;
+                       ^^^^^^^
 
 1 error(s), 0 warning(s)

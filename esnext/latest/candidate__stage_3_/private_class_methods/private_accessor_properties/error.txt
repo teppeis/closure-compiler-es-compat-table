@@ -13,8 +13,8 @@ return new C().x() === 42 && y;
 
 };
 ----------------------------------------------------------
-esnext/v20200517/candidate__stage_3_/private_class_methods/private_accessor_properties/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
-get #x() { return 42; }
-    ^
+esnext/v20200614/candidate__stage_3_/private_class_methods/private_accessor_properties/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+  5| get #x() { return 42; }
+         ^
 
 1 error(s), 0 warning(s)

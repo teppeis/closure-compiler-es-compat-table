@@ -10,8 +10,8 @@ return result === 'tromple';
 
 };
 ----------------------------------------------------------
-esnext/v20200517/draft__stage_2_/Generator_function.sent_Meta_Property/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
-result = function.sent;
-                 ^
+esnext/v20200614/draft__stage_2_/Generator_function.sent_Meta_Property/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+  5| result = function.sent;
+                      ^
 
 1 error(s), 0 warning(s)

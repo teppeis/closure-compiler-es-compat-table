@@ -11,8 +11,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200517/2018_features/RegExp_named_capture_groups/in.js:3: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp named groups" to targeted output language.
-  var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+es2016plus/v20200614/2018_features/RegExp_named_capture_groups/in.js:3: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp named groups" to targeted output language.
+  3|   var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1 error(s), 0 warning(s)

@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, e) {
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var f = a[e];
-    f in c || (c[f] = {});
+    if (!(f in c)) {
+      return;
+    }
     c = c[f];
   }
   a = a[a.length - 1];
@@ -68,7 +70,9 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < f.length - 1; g++) {
     var d = f[g];
-    d in e || (e[d] = {});
+    if (!(d in e)) {
+      return;
+    }
     e = e[d];
   }
   f = f[f.length - 1];
@@ -339,7 +343,7 @@ $jscomp.generator.Generator_ = function(a) {
 };
 $jscomp.generator.createGenerator = function(a, b) {
   b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
-  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  $jscomp.setPrototypeOf && a.prototype && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
 };
 $jscomp.checkEs6ConformanceViaProxy = function() {
@@ -387,14 +391,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   function g(a) {
-    var b = Object[a];
-    b && (Object[a] = function(a) {
-      if (a instanceof c) {
-        return a;
-      }
-      f(a);
-      return b(a);
-    });
+    if (!$jscomp.ISOLATE_POLYFILLS) {
+      var b = Object[a];
+      b && (Object[a] = function(a) {
+        if (a instanceof c) {
+          return a;
+        }
+        Object.isExtensible(a) && f(a);
+        return b(a);
+      });
+    }
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
     if (a && $jscomp.ES6_CONFORMANCE) {

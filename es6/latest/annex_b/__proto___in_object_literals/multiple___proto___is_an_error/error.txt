@@ -10,8 +10,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  try {
-  ^^^^^
+es6/v20200614/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   4|   try {
+        ^^^^^
+   5|     eval("({ __proto__ : [], __proto__: {} })");
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+   8|     return true;
+      ^^^^^^^^^^^^^^^^
+   9|   }
+      ^^^
 
 0 error(s), 1 warning(s)

@@ -8,8 +8,8 @@ return p('a', 'c') === 'abc';
 
 };
 ----------------------------------------------------------
-esnext/v20200517/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
-var p = f(?, 'b', ?);
-          ^
+esnext/v20200614/proposal__stage_1_/partial_application_syntax/partial_application_for_any_arg/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+  6| var p = f(?, 'b', ?);
+               ^
 
 1 error(s), 0 warning(s)

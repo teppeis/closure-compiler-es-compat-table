@@ -28,12 +28,12 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/built-ins/Proxy/has_handler_invariants/in.js:16: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
-    'foo' in proxy;
-    ^^^^^^^^^^^^^^
+es6/v20200614/built-ins/Proxy/has_handler_invariants/in.js:16: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+  16|     'foo' in proxy;
+          ^^^^^^^^^^^^^^
 
-es6/v20200517/built-ins/Proxy/has_handler_invariants/in.js:24: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
-    'bar' in proxy;
-    ^^^^^^^^^^^^^^
+es6/v20200614/built-ins/Proxy/has_handler_invariants/in.js:24: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+  24|     'bar' in proxy;
+          ^^^^^^^^^^^^^^
 
 0 error(s), 2 warning(s)

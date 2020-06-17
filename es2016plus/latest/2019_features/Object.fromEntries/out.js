@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, c, e, b) {
   a = a.split(".");
   for (b = 0; b < a.length - 1; b++) {
     var f = a[b];
-    f in e || (e[f] = {});
+    if (!(f in e)) {
+      return;
+    }
     e = e[f];
   }
   a = a[a.length - 1];
@@ -68,7 +70,9 @@ $jscomp.polyfillIsolated = function(a, c, e, b) {
   b = !a && b in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var h = 0; h < f.length - 1; h++) {
     var g = f[h];
-    g in b || (b[g] = {});
+    if (!(g in b)) {
+      return;
+    }
     b = b[g];
   }
   f = f[f.length - 1];
@@ -82,9 +86,9 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var c = function(a, b) {
+  var c = function(a, c) {
     this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
   };
   c.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
@@ -187,14 +191,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   function h(a) {
-    var d = Object[a];
-    d && (Object[a] = function(a) {
-      if (a instanceof e) {
-        return a;
-      }
-      f(a);
-      return d(a);
-    });
+    if (!$jscomp.ISOLATE_POLYFILLS) {
+      var d = Object[a];
+      d && (Object[a] = function(a) {
+        if (a instanceof e) {
+          return a;
+        }
+        Object.isExtensible(a) && f(a);
+        return d(a);
+      });
+    }
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
     if (a && $jscomp.ES6_CONFORMANCE) {

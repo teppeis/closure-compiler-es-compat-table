@@ -15,8 +15,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-    Date.prototype.valueOf(); return false;
-    ^^^^^^^^^^^^^^^^^^^^^^^^
+es6/v20200614/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  7|     Date.prototype.valueOf(); return false;
+         ^^^^^^^^^^^^^^^^^^^^^^^^
 
 0 error(s), 1 warning(s)

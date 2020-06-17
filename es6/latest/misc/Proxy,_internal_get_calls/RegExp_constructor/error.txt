@@ -10,8 +10,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/misc/Proxy,_internal_get_calls/RegExp_constructor/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  RegExp(p);
-  ^^^^^^^^^
+es6/v20200614/misc/Proxy,_internal_get_calls/RegExp_constructor/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  8|   RegExp(p);
+       ^^^^^^^^^
 
 0 error(s), 1 warning(s)

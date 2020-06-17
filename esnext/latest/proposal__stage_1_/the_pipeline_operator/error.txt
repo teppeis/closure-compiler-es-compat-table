@@ -14,8 +14,8 @@ return result === 'Hello, hello!';
 
 };
 ----------------------------------------------------------
-esnext/v20200517/proposal__stage_1_/the_pipeline_operator/in.js:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-|> doubleSay
-  ^
+esnext/v20200614/proposal__stage_1_/the_pipeline_operator/in.js:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  10| |> doubleSay
+        ^
 
 1 error(s), 0 warning(s)

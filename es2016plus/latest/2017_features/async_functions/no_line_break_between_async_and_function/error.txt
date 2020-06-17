@@ -9,8 +9,8 @@ module.exports = () => {
 // EXPECT: 4: ERROR
 
 ----------------------------------------------------------
-es2016plus/v20200517/2017_features/async_functions/no_line_break_between_async_and_function/in.js:4: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  async
-  ^^^^^
+es2016plus/v20200614/2017_features/async_functions/no_line_break_between_async_and_function/in.js:4: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  4|   async
+       ^^^^^
 
 0 error(s), 1 warning(s)

@@ -57,7 +57,9 @@ $jscomp.polyfillUnisolated = function(a, c, e, f) {
   a = a.split(".");
   for (f = 0; f < a.length - 1; f++) {
     var b = a[f];
-    b in e || (e[b] = {});
+    if (!(b in e)) {
+      return;
+    }
     e = e[b];
   }
   a = a[a.length - 1];
@@ -72,7 +74,9 @@ $jscomp.polyfillIsolated = function(a, c, e, f) {
   f = !a && f in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < b.length - 1; g++) {
     var d = b[g];
-    d in f || (f[d] = {});
+    if (!(d in f)) {
+      return;
+    }
     f = f[d];
   }
   b = b[b.length - 1];
@@ -254,14 +258,14 @@ $jscomp.polyfill("Promise", function(a) {
   };
   b.resolve = e;
   b.reject = function(a) {
-    return new b(function(b, d) {
-      d(a);
+    return new b(function(b, c) {
+      c(a);
     });
   };
   b.race = function(a) {
-    return new b(function(b, d) {
-      for (var c = $jscomp.makeIterator(a), f = c.next(); !f.done; f = c.next()) {
-        e(f.value).callWhenSettled_(b, d);
+    return new b(function(b, c) {
+      for (var d = $jscomp.makeIterator(a), f = d.next(); !f.done; f = d.next()) {
+        e(f.value).callWhenSettled_(b, c);
       }
     });
   };

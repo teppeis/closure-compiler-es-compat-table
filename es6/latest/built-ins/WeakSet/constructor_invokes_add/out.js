@@ -69,7 +69,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in c || (c[e] = {});
+    if (!(e in c)) {
+      return;
+    }
     c = c[e];
   }
   a = a[a.length - 1];
@@ -84,7 +86,9 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var g = 0; g < e.length - 1; g++) {
     var f = e[g];
-    f in d || (d[f] = {});
+    if (!(f in d)) {
+      return;
+    }
     d = d[f];
   }
   e = e[e.length - 1];
@@ -125,14 +129,16 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   function g(a) {
-    var b = Object[a];
-    b && (Object[a] = function(a) {
-      if (a instanceof c) {
-        return a;
-      }
-      e(a);
-      return b(a);
-    });
+    if (!$jscomp.ISOLATE_POLYFILLS) {
+      var b = Object[a];
+      b && (Object[a] = function(a) {
+        if (a instanceof c) {
+          return a;
+        }
+        Object.isExtensible(a) && e(a);
+        return b(a);
+      });
+    }
   }
   if ($jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS) {
     if (a && $jscomp.ES6_CONFORMANCE) {

@@ -53,7 +53,9 @@ $jscomp.polyfillUnisolated = function(a, b, c, d) {
   a = a.split(".");
   for (d = 0; d < a.length - 1; d++) {
     var e = a[d];
-    e in c || (c[e] = {});
+    if (!(e in c)) {
+      return;
+    }
     c = c[e];
   }
   a = a[a.length - 1];
@@ -68,7 +70,9 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
   for (var f = 0; f < e.length - 1; f++) {
     var g = e[f];
-    g in d || (d[g] = {});
+    if (!(g in d)) {
+      return;
+    }
     d = d[g];
   }
   e = e[e.length - 1];
@@ -339,7 +343,7 @@ $jscomp.generator.Generator_ = function(a) {
 };
 $jscomp.generator.createGenerator = function(a, b) {
   b = new $jscomp.generator.Generator_(new $jscomp.generator.Engine_(b));
-  $jscomp.setPrototypeOf && $jscomp.setPrototypeOf(b, a.prototype);
+  $jscomp.setPrototypeOf && a.prototype && $jscomp.setPrototypeOf(b, a.prototype);
   return b;
 };
 module.exports = function() {

@@ -10,8 +10,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200517/built-ins/WeakSet/constructor_requires_new/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakSet' is not being used.
-    WeakSet();
-    ^^^^^^^^^
+es6/v20200614/built-ins/WeakSet/constructor_requires_new/in.js:5: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakSet' is not being used.
+  5|     WeakSet();
+         ^^^^^^^^^
 
 0 error(s), 1 warning(s)
