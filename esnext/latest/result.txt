@@ -1,5 +1,5 @@
 candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
-candidate__stage_3_/WeakReferences/Finalizers_minimal_support/out.js: ReferenceError: FinalizationGroup is not defined
+candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/out.js: ReferenceError: FinalizationRegistry is not defined
 candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
@@ -14,7 +14,6 @@ candidate__stage_3_/private_class_methods/private_static_methods/error.txt: [Com
 candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt: [CompileError]
 candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
 candidate__stage_3_/numeric_separators/error.txt: [CompileError]
-candidate__stage_3_/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 candidate__stage_3_/Promise.any/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'any'
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
@@ -171,33 +170,3 @@ proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/error.txt: [C
 proposal__stage_1_/Object_iteration/Object.iterateKeys/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateKeys'
 proposal__stage_1_/Object_iteration/Object.iterateValues/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateValues'
 proposal__stage_1_/Object_iteration/Object.iterateEntries/out.js: TypeError: Object function Object() { [native code] } has no method 'iterateEntries'
-strawman__stage_0_/bind______operator/binary_form/error.txt: [CompileError]
-strawman__stage_0_/bind______operator/unary_form/error.txt: [CompileError]
-strawman__stage_0_/String.prototype.at/out.js: TypeError: Object a𠮷b has no method 'at'
-strawman__stage_0_/additional_meta_properties/function.callee/error.txt: [CompileError]
-strawman__stage_0_/additional_meta_properties/function.count/error.txt: [CompileError]
-strawman__stage_0_/additional_meta_properties/function.arguments/error.txt: [CompileError]
-strawman__stage_0_/method_parameter_decorators/error.txt: [CompileError]
-strawman__stage_0_/function_expression_decorators/error.txt: [CompileError]
-strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isCallable/out.js: ReferenceError: Reflect is not defined
-strawman__stage_0_/Reflect.isCallable___Reflect.isConstructor/Reflect.isConstructor/out.js: ReferenceError: Reflect is not defined
-strawman__stage_0_/zones/Zone/out.js: [InvalidResult: false]
-strawman__stage_0_/zones/Zone.current/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/zones/Zone.prototype.name/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/zones/Zone.prototype.parent/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/zones/Zone.prototype.fork/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/zones/Zone.prototype.run/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/zones/Zone.prototype.wrap/out.js: ReferenceError: Zone is not defined
-strawman__stage_0_/syntactic_tail_calls/direct_recursion/error.txt: [CompileError]
-strawman__stage_0_/syntactic_tail_calls/mutual_recursion/error.txt: [CompileError]
-strawman__stage_0_/object_shorthand_improvements/object_initializers/error.txt: [CompileError]
-strawman__stage_0_/object_shorthand_improvements/destructuring_assignments/error.txt: [CompileError]
-pre-strawman/Metadata_reflection_API/Reflect.defineMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.hasMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.hasOwnMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getMetadataKeys/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.getOwnMetadataKeys/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.deleteMetadata/out.js: ReferenceError: Reflect is not defined
-pre-strawman/Metadata_reflection_API/Reflect.metadata/out.js: ReferenceError: Reflect is not defined

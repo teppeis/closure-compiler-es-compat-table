@@ -8,7 +8,7 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 6: Error
+// EXPECT: 6: ERROR
 
 ----------------------------------------------------------
 java.lang.IllegalStateException: AST should not contain async function. Reference node:

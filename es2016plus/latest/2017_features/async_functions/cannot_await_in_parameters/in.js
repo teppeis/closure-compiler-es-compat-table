@@ -8,4 +8,4 @@ module.exports = () => {
   return false;
 };
 
-// EXPECT: 6: Error
+// EXPECT: 6: ERROR
