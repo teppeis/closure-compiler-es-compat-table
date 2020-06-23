@@ -1,10 +1,10 @@
 module.exports = function() {
-  var b = [], a = new Proxy({}, {getOwnPropertyDescriptor:function(a, c) {
-    b.push(c);
-    return Object.getOwnPropertyDescriptor(a, c);
+  var a = [], c = new Proxy({}, {getOwnPropertyDescriptor:function(d, b) {
+    a.push(b);
+    return Object.getOwnPropertyDescriptor(d, b);
   }});
-  a.foo = 1;
-  a.bar = 1;
-  return "foo,bar" === b + "";
+  c.foo = 1;
+  c.bar = 1;
+  return "foo,bar" === a + "";
 };
 

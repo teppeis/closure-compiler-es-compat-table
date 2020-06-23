@@ -1,13 +1,13 @@
 module.exports = function() {
-  var c = [], a = new Proxy({length:2, 0:"", 1:""}, {get:function(a, b) {
-    c.push(b);
-    return a[b];
+  var b = [], d = new Proxy({length:2, 0:"", 1:""}, {get:function(c, a) {
+    b.push(a);
+    return c[a];
   }});
-  a = new Proxy({raw:a}, {get:function(a, b) {
-    c.push(b);
-    return a[b];
+  d = new Proxy({raw:d}, {get:function(c, a) {
+    b.push(a);
+    return c[a];
   }});
-  String.raw(a);
-  return "raw,length,0,1" === c + "";
+  String.raw(d);
+  return "raw,length,0,1" === b + "";
 };
 

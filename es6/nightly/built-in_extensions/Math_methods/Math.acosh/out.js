@@ -72,9 +72,9 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Math.acosh", function(a) {
-  return a ? a : function(a) {
-    a = Number(a);
-    return Math.log(a + Math.sqrt(a * a - 1));
+  return a ? a : function(b) {
+    b = Number(b);
+    return Math.log(b + Math.sqrt(b * b - 1));
   };
 }, "es6", "es3");
 module.exports = function() {

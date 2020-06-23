@@ -1,9 +1,9 @@
 module.exports = function() {
-  var b = [], a = new Proxy({}, {get:function(a, c) {
-    b.push(c);
-    return a[c];
+  var a = [], d = new Proxy({}, {get:function(c, b) {
+    a.push(b);
+    return c[b];
   }});
-  RegExp.prototype.toString.call(a);
-  return "source,flags" === b + "";
+  RegExp.prototype.toString.call(d);
+  return "source,flags" === a + "";
 };
 

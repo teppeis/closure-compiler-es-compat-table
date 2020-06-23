@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -126,29 +126,29 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 $jscomp.polyfill("Array.from", function(a) {
-  return a ? a : function(a, c, d) {
-    c = null != c ? c : function(a) {
-      return a;
+  return a ? a : function(b, c, d) {
+    c = null != c ? c : function(h) {
+      return h;
     };
-    var b = [], f = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+    var e = [], f = "undefined" != typeof Symbol && Symbol.iterator && b[Symbol.iterator];
     if ("function" == typeof f) {
-      a = f.call(a);
-      for (var g = 0; !(f = a.next()).done;) {
-        b.push(c.call(d, f.value, g++));
+      b = f.call(b);
+      for (var g = 0; !(f = b.next()).done;) {
+        e.push(c.call(d, f.value, g++));
       }
     } else {
-      for (f = a.length, g = 0; g < f; g++) {
-        b.push(c.call(d, a[g], g));
+      for (f = b.length, g = 0; g < f; g++) {
+        e.push(c.call(d, b[g], g));
       }
     }
-    return b;
+    return e;
   };
 }, "es6", "es3");
 module.exports = function() {
   module.exports._ = Symbol.iterator;
   var a = global.__createIterableObject(["foo", "bar", "bal"]);
-  return "food0,bard1,bald2" === Array.from(Object.create(a), function(a, c) {
-    return a + this.baz + c;
+  return "food0,bard1,bald2" === Array.from(Object.create(a), function(b, c) {
+    return b + this.baz + c;
   }, {baz:"d"}) + "";
 };
 

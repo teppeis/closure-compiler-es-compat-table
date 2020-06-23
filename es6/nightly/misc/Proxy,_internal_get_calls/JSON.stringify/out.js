@@ -1,9 +1,9 @@
 module.exports = function() {
-  var b = [], a = new Proxy({}, {get:function(a, c) {
-    b.push(c);
-    return a[c];
+  var a = [], d = new Proxy({}, {get:function(c, b) {
+    a.push(b);
+    return c[b];
   }});
-  JSON.stringify(a);
-  return "toJSON" === b + "";
+  JSON.stringify(d);
+  return "toJSON" === a + "";
 };
 

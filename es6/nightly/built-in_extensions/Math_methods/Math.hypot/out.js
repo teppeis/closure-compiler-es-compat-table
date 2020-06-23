@@ -5,17 +5,17 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, c, a) {
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, d, a) {
   if (b == Array.prototype || b == Object.prototype) {
     return b;
   }
-  b[c] = a.value;
+  b[d] = a.value;
   return b;
 };
 $jscomp.getGlobal = function(b) {
   b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
-  for (var c = 0; c < b.length; ++c) {
-    var a = b[c];
+  for (var d = 0; d < b.length; ++d) {
+    var a = b[d];
     if (a && a.Math == Math) {
       return a;
     }
@@ -28,72 +28,72 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(b, c) {
-  var a = $jscomp.propertyToPolyfillSymbol[c];
+var $jscomp$lookupPolyfilledValue = function(b, d) {
+  var a = $jscomp.propertyToPolyfillSymbol[d];
   if (null == a) {
-    return b[c];
+    return b[d];
   }
   a = b[a];
-  return void 0 !== a ? a : b[c];
+  return void 0 !== a ? a : b[d];
 };
-$jscomp.polyfill = function(b, c, a, e) {
-  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(b, c, a, e) : $jscomp.polyfillUnisolated(b, c, a, e));
+$jscomp.polyfill = function(b, d, a, e) {
+  d && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(b, d, a, e) : $jscomp.polyfillUnisolated(b, d, a, e));
 };
-$jscomp.polyfillUnisolated = function(b, c, a, e) {
+$jscomp.polyfillUnisolated = function(b, d, a, e) {
   a = $jscomp.global;
   b = b.split(".");
   for (e = 0; e < b.length - 1; e++) {
-    var d = b[e];
-    if (!(d in a)) {
+    var c = b[e];
+    if (!(c in a)) {
       return;
     }
-    a = a[d];
+    a = a[c];
   }
   b = b[b.length - 1];
   e = a[b];
-  c = c(e);
-  c != e && null != c && $jscomp.defineProperty(a, b, {configurable:!0, writable:!0, value:c});
+  d = d(e);
+  d != e && null != d && $jscomp.defineProperty(a, b, {configurable:!0, writable:!0, value:d});
 };
-$jscomp.polyfillIsolated = function(b, c, a, e) {
-  var d = b.split(".");
-  b = 1 === d.length;
-  e = d[0];
+$jscomp.polyfillIsolated = function(b, d, a, e) {
+  var c = b.split(".");
+  b = 1 === c.length;
+  e = c[0];
   e = !b && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < d.length - 1; f++) {
-    var g = d[f];
+  for (var f = 0; f < c.length - 1; f++) {
+    var g = c[f];
     if (!(g in e)) {
       return;
     }
     e = e[g];
   }
-  d = d[d.length - 1];
-  a = $jscomp.IS_SYMBOL_NATIVE && "es6" === a ? e[d] : null;
-  c = c(a);
-  null != c && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== a && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
+  c = c[c.length - 1];
+  a = $jscomp.IS_SYMBOL_NATIVE && "es6" === a ? e[c] : null;
+  d = d(a);
+  null != d && (b ? $jscomp.defineProperty($jscomp.polyfills, c, {configurable:!0, writable:!0, value:d}) : d !== a && ($jscomp.propertyToPolyfillSymbol[c] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(c) : $jscomp.POLYFILL_PREFIX + c, c = $jscomp.propertyToPolyfillSymbol[c], $jscomp.defineProperty(e, c, {configurable:!0, writable:!0, value:d})));
 };
 $jscomp.polyfill("Math.hypot", function(b) {
-  return b ? b : function(b) {
+  return b ? b : function(d) {
     if (2 > arguments.length) {
       return arguments.length ? Math.abs(arguments[0]) : 0;
     }
-    var a, c, d;
-    for (a = d = 0; a < arguments.length; a++) {
-      d = Math.max(d, Math.abs(arguments[a]));
-    }
-    if (1e100 < d || 1e-100 > d) {
-      if (!d) {
-        return d;
-      }
-      for (a = c = 0; a < arguments.length; a++) {
-        var f = Number(arguments[a]) / d;
-        c += f * f;
-      }
-      return Math.sqrt(c) * d;
-    }
+    var a, e, c;
     for (a = c = 0; a < arguments.length; a++) {
-      f = Number(arguments[a]), c += f * f;
+      c = Math.max(c, Math.abs(arguments[a]));
     }
-    return Math.sqrt(c);
+    if (1e100 < c || 1e-100 > c) {
+      if (!c) {
+        return c;
+      }
+      for (a = e = 0; a < arguments.length; a++) {
+        var f = Number(arguments[a]) / c;
+        e += f * f;
+      }
+      return Math.sqrt(e) * c;
+    }
+    for (a = e = 0; a < arguments.length; a++) {
+      f = Number(arguments[a]), e += f * f;
+    }
+    return Math.sqrt(e);
   };
 }, "es6", "es3");
 module.exports = function() {

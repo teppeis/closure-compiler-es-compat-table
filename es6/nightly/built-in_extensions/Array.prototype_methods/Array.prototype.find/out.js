@@ -82,8 +82,8 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Array.prototype.find", function(a) {
-  return a ? a : function(a, c) {
-    return $jscomp.findInternal(this, a, c).v;
+  return a ? a : function(b, c) {
+    return $jscomp.findInternal(this, b, c).v;
   };
 }, "es6", "es3");
 module.exports = function() {
@@ -91,8 +91,8 @@ module.exports = function() {
   a.push(b);
   a.push({name:"baz"});
   var c = {};
-  return a.find(function(a, b, f) {
-    return "bar" === a.name && 1 === b && this === c;
+  return a.find(function(e, d, f) {
+    return "bar" === e.name && 1 === d && this === c;
   }, c) === b;
 };
 

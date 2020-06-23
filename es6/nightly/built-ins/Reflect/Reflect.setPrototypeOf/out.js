@@ -95,9 +95,9 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(a, d) {
+    return function(c, d) {
       try {
-        return b(a, d), !0;
+        return b(c, d), !0;
       } catch (e) {
         return !1;
       }

@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var c = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var c = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   c.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var b = 0, d = function(a) {
+  var b = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new c("jscomp_symbol_" + (a || "") + "_" + b++, a);
+    return new c("jscomp_symbol_" + (e || "") + "_" + b++, e);
   };
   return d;
 }, "es6", "es3");
@@ -126,19 +126,19 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 $jscomp.polyfill("Object.is", function(a) {
-  return a ? a : function(a, b) {
-    return a === b ? 0 !== a || 1 / a === 1 / b : a !== a && b !== b;
+  return a ? a : function(c, b) {
+    return c === b ? 0 !== c || 1 / c === 1 / b : c !== c && b !== b;
   };
 }, "es6", "es3");
 $jscomp.polyfill("Array.prototype.includes", function(a) {
-  return a ? a : function(a, b) {
-    var c = this;
-    c instanceof String && (c = String(c));
-    var e = c.length;
+  return a ? a : function(c, b) {
+    var d = this;
+    d instanceof String && (d = String(d));
+    var e = d.length;
     b = b || 0;
     for (0 > b && (b = Math.max(b + e, 0)); b < e; b++) {
-      var f = c[b];
-      if (f === a || Object.is(f, a)) {
+      var f = d[b];
+      if (f === c || Object.is(f, c)) {
         return !0;
       }
     }
@@ -155,8 +155,8 @@ $jscomp.checkStringArgs = function(a, c, b) {
   return a + "";
 };
 $jscomp.polyfill("String.prototype.includes", function(a) {
-  return a ? a : function(a, b) {
-    return -1 !== $jscomp.checkStringArgs(this, a, "includes").indexOf(a, b || 0);
+  return a ? a : function(c, b) {
+    return -1 !== $jscomp.checkStringArgs(this, c, "includes").indexOf(c, b || 0);
   };
 }, "es6", "es3");
 module.exports = function() {

@@ -6,9 +6,9 @@ module.exports = function() {
   "dotAll" in RegExp.prototype && a.push("dotAll");
   "unicode" in RegExp.prototype && a.push("unicode");
   "sticky" in RegExp.prototype && a.push("sticky");
-  var c = [], b = new Proxy({}, {get:function(a, b) {
-    c.push(b);
-    return a[b];
+  var c = [], b = new Proxy({}, {get:function(e, d) {
+    c.push(d);
+    return e[d];
   }});
   Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get.call(b);
   if (a.length !== c.length) {

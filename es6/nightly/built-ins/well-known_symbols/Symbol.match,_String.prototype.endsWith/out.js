@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -135,13 +135,13 @@ $jscomp.checkStringArgs = function(a, b, c) {
   return a + "";
 };
 $jscomp.polyfill("String.prototype.endsWith", function(a) {
-  return a ? a : function(a, c) {
-    var b = $jscomp.checkStringArgs(this, a, "endsWith");
-    a += "";
-    void 0 === c && (c = b.length);
-    c = Math.max(0, Math.min(c | 0, b.length));
-    for (var e = a.length; 0 < e && 0 < c;) {
-      if (b[--c] != a[--e]) {
+  return a ? a : function(b, c) {
+    var d = $jscomp.checkStringArgs(this, b, "endsWith");
+    b += "";
+    void 0 === c && (c = d.length);
+    c = Math.max(0, Math.min(c | 0, d.length));
+    for (var e = b.length; 0 < e && 0 < c;) {
+      if (d[--c] != b[--e]) {
         return !1;
       }
     }

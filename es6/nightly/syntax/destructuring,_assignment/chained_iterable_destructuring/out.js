@@ -16,13 +16,13 @@ $jscomp.makeIterator = function(a) {
 module.exports = function() {
   var a, b;
   var c = $jscomp.makeIterator(function() {
-    var c = [1, 2], d = $jscomp.makeIterator(c);
-    a = d.next().value;
-    b = d.next().value;
-    return c;
+    var d = [1, 2], e = $jscomp.makeIterator(d);
+    a = e.next().value;
+    b = e.next().value;
+    return d;
   }());
-  var e = c.next().value;
+  var f = c.next().value;
   c = c.next().value;
-  return 1 === e && 2 === c && 1 === a && 2 === b;
+  return 1 === f && 2 === c && 1 === a && 2 === b;
 };
 

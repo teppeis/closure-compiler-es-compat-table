@@ -1,9 +1,9 @@
 module.exports = function() {
-  var b = [], a = new Proxy([0, 1, 2, 3], {get:function(a, c) {
-    b.push(c);
-    return a[c];
+  var a = [], d = new Proxy([0, 1, 2, 3], {get:function(c, b) {
+    a.push(b);
+    return c[b];
   }});
-  Array.prototype.shift.call(a);
-  return "length,0,1,2,3" === b + "";
+  Array.prototype.shift.call(d);
+  return "length,0,1,2,3" === a + "";
 };
 

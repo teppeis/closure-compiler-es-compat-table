@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -126,23 +126,23 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 $jscomp.polyfill("String.prototype.matchAll", function(a) {
-  return a ? a : function(a) {
-    if (a instanceof RegExp && !a.global) {
+  return a ? a : function(b) {
+    if (b instanceof RegExp && !b.global) {
       throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
     }
-    var c = new RegExp(a, a instanceof RegExp ? void 0 : "g"), b = this, e = !1, f = {next:function() {
-      var a = {}, d = c.lastIndex;
+    var c = new RegExp(b, b instanceof RegExp ? void 0 : "g"), d = this, e = !1, f = {next:function() {
+      var g = {}, k = c.lastIndex;
       if (e) {
         return {value:void 0, done:!0};
       }
-      var f = c.exec(b);
-      if (!f) {
+      var h = c.exec(d);
+      if (!h) {
         return e = !0, {value:void 0, done:!0};
       }
-      c.lastIndex === d && (c.lastIndex += 1);
-      a.value = f;
-      a.done = !1;
-      return a;
+      c.lastIndex === k && (c.lastIndex += 1);
+      g.value = h;
+      g.done = !1;
+      return g;
     }};
     f[Symbol.iterator] = function() {
       return f;

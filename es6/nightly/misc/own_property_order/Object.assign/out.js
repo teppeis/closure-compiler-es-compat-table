@@ -90,9 +90,9 @@ $jscomp.polyfill("Object.assign", function(a) {
 }, "es6", "es3");
 module.exports = function() {
   var a = "", c = {};
-  "012349 DBACEFGHIJKLMNOPQRST".split("").concat(-1).forEach(function(b) {
-    Object.defineProperty(c, b, {set:function() {
-      a += b;
+  "012349 DBACEFGHIJKLMNOPQRST".split("").concat(-1).forEach(function(d) {
+    Object.defineProperty(c, d, {set:function() {
+      a += d;
     }});
   });
   var b = {2:2, 0:0, 1:1, " ":" ", 9:9, D:"D", B:"B", "-1":"-1"};
@@ -102,8 +102,8 @@ module.exports = function() {
   Object.defineProperty(b, "4", {value:"4", enumerable:!0});
   delete b[2];
   b[2] = !0;
-  "EFGHIJKLMNOPQRST".split("").forEach(function(a) {
-    b[a] = a;
+  "EFGHIJKLMNOPQRST".split("").forEach(function(d) {
+    b[d] = d;
   });
   Object.assign(c, b);
   return "012349 DB-1ACEFGHIJKLMNOPQRST" === a;

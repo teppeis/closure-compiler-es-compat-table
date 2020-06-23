@@ -5,19 +5,19 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, d, b) {
-  if (a == Array.prototype || a == Object.prototype) {
-    return a;
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, e, a) {
+  if (b == Array.prototype || b == Object.prototype) {
+    return b;
   }
-  a[d] = b.value;
-  return a;
+  b[e] = a.value;
+  return b;
 };
-$jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
-  for (var d = 0; d < a.length; ++d) {
-    var b = a[d];
-    if (b && b.Math == Math) {
-      return b;
+$jscomp.getGlobal = function(b) {
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  for (var e = 0; e < b.length; ++e) {
+    var a = b[e];
+    if (a && a.Math == Math) {
+      return a;
     }
   }
   throw Error("Cannot find global object");
@@ -28,81 +28,81 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, d) {
-  var b = $jscomp.propertyToPolyfillSymbol[d];
-  if (null == b) {
-    return a[d];
+var $jscomp$lookupPolyfilledValue = function(b, e) {
+  var a = $jscomp.propertyToPolyfillSymbol[e];
+  if (null == a) {
+    return b[e];
   }
-  b = a[b];
-  return void 0 !== b ? b : a[d];
+  a = b[a];
+  return void 0 !== a ? a : b[e];
 };
-$jscomp.polyfill = function(a, d, b, e) {
-  d && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, d, b, e) : $jscomp.polyfillUnisolated(a, d, b, e));
+$jscomp.polyfill = function(b, e, a, c) {
+  e && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(b, e, a, c) : $jscomp.polyfillUnisolated(b, e, a, c));
 };
-$jscomp.polyfillUnisolated = function(a, d, b, e) {
-  b = $jscomp.global;
-  a = a.split(".");
-  for (e = 0; e < a.length - 1; e++) {
-    var c = a[e];
-    if (!(c in b)) {
+$jscomp.polyfillUnisolated = function(b, e, a, c) {
+  a = $jscomp.global;
+  b = b.split(".");
+  for (c = 0; c < b.length - 1; c++) {
+    var d = b[c];
+    if (!(d in a)) {
       return;
     }
-    b = b[c];
+    a = a[d];
   }
-  a = a[a.length - 1];
-  e = b[a];
-  d = d(e);
-  d != e && null != d && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:d});
+  b = b[b.length - 1];
+  c = a[b];
+  e = e(c);
+  e != c && null != e && $jscomp.defineProperty(a, b, {configurable:!0, writable:!0, value:e});
 };
-$jscomp.polyfillIsolated = function(a, d, b, e) {
-  var c = a.split(".");
-  a = 1 === c.length;
-  e = c[0];
-  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < c.length - 1; f++) {
-    var g = c[f];
-    if (!(g in e)) {
+$jscomp.polyfillIsolated = function(b, e, a, c) {
+  var d = b.split(".");
+  b = 1 === d.length;
+  c = d[0];
+  c = !b && c in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < d.length - 1; f++) {
+    var g = d[f];
+    if (!(g in c)) {
       return;
     }
-    e = e[g];
+    c = c[g];
   }
-  c = c[c.length - 1];
-  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[c] : null;
-  d = d(b);
-  null != d && (a ? $jscomp.defineProperty($jscomp.polyfills, c, {configurable:!0, writable:!0, value:d}) : d !== b && ($jscomp.propertyToPolyfillSymbol[c] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(c) : $jscomp.POLYFILL_PREFIX + c, c = $jscomp.propertyToPolyfillSymbol[c], $jscomp.defineProperty(e, c, {configurable:!0, writable:!0, value:d})));
+  d = d[d.length - 1];
+  a = $jscomp.IS_SYMBOL_NATIVE && "es6" === a ? c[d] : null;
+  e = e(a);
+  null != e && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:e}) : e !== a && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(c, d, {configurable:!0, writable:!0, value:e})));
 };
-$jscomp.polyfill("Array.prototype.copyWithin", function(a) {
-  function d(b) {
-    b = Number(b);
-    return Infinity === b || -Infinity === b ? b : b | 0;
+$jscomp.polyfill("Array.prototype.copyWithin", function(b) {
+  function e(a) {
+    a = Number(a);
+    return Infinity === a || -Infinity === a ? a : a | 0;
   }
-  return a ? a : function(b, a, c) {
-    var e = this.length;
-    b = d(b);
-    a = d(a);
-    c = void 0 === c ? e : d(c);
-    b = 0 > b ? Math.max(e + b, 0) : Math.min(b, e);
-    a = 0 > a ? Math.max(e + a, 0) : Math.min(a, e);
-    c = 0 > c ? Math.max(e + c, 0) : Math.min(c, e);
-    if (b < a) {
-      for (; a < c;) {
-        a in this ? this[b++] = this[a++] : (delete this[b++], a++);
+  return b ? b : function(a, c, d) {
+    var f = this.length;
+    a = e(a);
+    c = e(c);
+    d = void 0 === d ? f : e(d);
+    a = 0 > a ? Math.max(f + a, 0) : Math.min(a, f);
+    c = 0 > c ? Math.max(f + c, 0) : Math.min(c, f);
+    d = 0 > d ? Math.max(f + d, 0) : Math.min(d, f);
+    if (a < c) {
+      for (; c < d;) {
+        c in this ? this[a++] = this[c++] : (delete this[a++], c++);
       }
     } else {
-      for (c = Math.min(c, e + a - b), b += c - a; c > a;) {
-        --c in this ? this[--b] = this[c] : delete this[--b];
+      for (d = Math.min(d, f + c - a), a += d - c; d > c;) {
+        --d in this ? this[--a] = this[d] : delete this[--a];
       }
     }
     return this;
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = require("assert");
-  a.deepEqual([1, 2, 3, 4, 5].copyWithin(), [1, 2, 3, 4, 5]);
-  a.deepEqual([1, 2, 3, 4, 5].copyWithin(2), [1, 2, 1, 2, 3]);
-  a.deepEqual([1, 2, 3, 4, 5].copyWithin(-2), [1, 2, 3, 1, 2]);
-  a.deepEqual([1, 2, 3, 4, 5].copyWithin(1, 3), [1, 4, 5, 4, 5]);
-  a.deepEqual([1, 2, 3, 4, 5].copyWithin(1, 3, 4), [1, 4, 3, 4, 5]);
+  var b = require("assert");
+  b.deepEqual([1, 2, 3, 4, 5].copyWithin(), [1, 2, 3, 4, 5]);
+  b.deepEqual([1, 2, 3, 4, 5].copyWithin(2), [1, 2, 1, 2, 3]);
+  b.deepEqual([1, 2, 3, 4, 5].copyWithin(-2), [1, 2, 3, 1, 2]);
+  b.deepEqual([1, 2, 3, 4, 5].copyWithin(1, 3), [1, 4, 5, 4, 5]);
+  b.deepEqual([1, 2, 3, 4, 5].copyWithin(1, 3, 4), [1, 4, 3, 4, 5]);
   return !0;
 };
 

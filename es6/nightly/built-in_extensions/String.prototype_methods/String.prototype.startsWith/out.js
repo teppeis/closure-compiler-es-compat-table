@@ -45,49 +45,49 @@ var $jscomp$lookupPolyfilledValue = function(a, c) {
   b = a[b];
   return void 0 !== b ? b : a[c];
 };
-$jscomp.polyfill = function(a, c, b, e) {
-  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, e) : $jscomp.polyfillUnisolated(a, c, b, e));
+$jscomp.polyfill = function(a, c, b, d) {
+  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, d) : $jscomp.polyfillUnisolated(a, c, b, d));
 };
-$jscomp.polyfillUnisolated = function(a, c, b, e) {
+$jscomp.polyfillUnisolated = function(a, c, b, d) {
   b = $jscomp.global;
   a = a.split(".");
-  for (e = 0; e < a.length - 1; e++) {
-    var d = a[e];
-    if (!(d in b)) {
+  for (d = 0; d < a.length - 1; d++) {
+    var e = a[d];
+    if (!(e in b)) {
       return;
     }
-    b = b[d];
+    b = b[e];
   }
   a = a[a.length - 1];
-  e = b[a];
-  c = c(e);
-  c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
+  d = b[a];
+  c = c(d);
+  c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
 };
-$jscomp.polyfillIsolated = function(a, c, b, e) {
-  var d = a.split(".");
-  a = 1 === d.length;
-  e = d[0];
-  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < d.length - 1; f++) {
-    var g = d[f];
-    if (!(g in e)) {
+$jscomp.polyfillIsolated = function(a, c, b, d) {
+  var e = a.split(".");
+  a = 1 === e.length;
+  d = e[0];
+  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < e.length - 1; f++) {
+    var g = e[f];
+    if (!(g in d)) {
       return;
     }
-    e = e[g];
+    d = d[g];
   }
-  d = d[d.length - 1];
-  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
+  e = e[e.length - 1];
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? d[e] : null;
   c = c(b);
-  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("String.prototype.startsWith", function(a) {
-  return a ? a : function(a, b) {
-    var c = $jscomp.checkStringArgs(this, a, "startsWith");
-    a += "";
-    var d = c.length, f = a.length;
-    b = Math.max(0, Math.min(b | 0, c.length));
-    for (var g = 0; g < f && b < d;) {
-      if (c[b++] != a[g++]) {
+  return a ? a : function(c, b) {
+    var d = $jscomp.checkStringArgs(this, c, "startsWith");
+    c += "";
+    var e = d.length, f = c.length;
+    b = Math.max(0, Math.min(b | 0, d.length));
+    for (var g = 0; g < f && b < e;) {
+      if (d[b++] != c[g++]) {
         return !1;
       }
     }

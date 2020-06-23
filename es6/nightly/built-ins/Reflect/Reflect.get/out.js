@@ -5,19 +5,19 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
   }
-  a[b] = c.value;
+  a[c] = b.value;
   return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
-  for (var b = 0; b < a.length; ++b) {
-    var c = a[b];
-    if (c && c.Math == Math) {
-      return c;
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
     }
   }
   throw Error("Cannot find global object");
@@ -28,48 +28,48 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, b) {
-  var c = $jscomp.propertyToPolyfillSymbol[b];
-  if (null == c) {
-    return a[b];
+var $jscomp$lookupPolyfilledValue = function(a, c) {
+  var b = $jscomp.propertyToPolyfillSymbol[c];
+  if (null == b) {
+    return a[c];
   }
-  c = a[c];
-  return void 0 !== c ? c : a[b];
+  b = a[b];
+  return void 0 !== b ? b : a[c];
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, d) : $jscomp.polyfillUnisolated(a, b, c, d));
+$jscomp.polyfill = function(a, c, b, e) {
+  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, e) : $jscomp.polyfillUnisolated(a, c, b, e));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, d) {
-  c = $jscomp.global;
+$jscomp.polyfillUnisolated = function(a, c, b, e) {
+  b = $jscomp.global;
   a = a.split(".");
-  for (d = 0; d < a.length - 1; d++) {
-    var e = a[d];
-    if (!(e in c)) {
+  for (e = 0; e < a.length - 1; e++) {
+    var d = a[e];
+    if (!(d in b)) {
       return;
     }
-    c = c[e];
+    b = b[d];
   }
   a = a[a.length - 1];
-  d = c[a];
-  b = b(d);
-  b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  e = b[a];
+  c = c(e);
+  c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
 };
-$jscomp.polyfillIsolated = function(a, b, c, d) {
-  var e = a.split(".");
-  a = 1 === e.length;
-  d = e[0];
-  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < e.length - 1; f++) {
-    var g = e[f];
-    if (!(g in d)) {
+$jscomp.polyfillIsolated = function(a, c, b, e) {
+  var d = a.split(".");
+  a = 1 === d.length;
+  e = d[0];
+  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < d.length - 1; f++) {
+    var g = d[f];
+    if (!(g in e)) {
       return;
     }
-    d = d[g];
+    e = e[g];
   }
-  e = e[e.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
-  b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
+  d = d[d.length - 1];
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
+  c = c(b);
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("Reflect", function(a) {
   return a ? a : {};
@@ -80,23 +80,23 @@ $jscomp.polyfill("Reflect.getOwnPropertyDescriptor", function(a) {
 $jscomp.polyfill("Reflect.getPrototypeOf", function(a) {
   return a || Object.getPrototypeOf;
 }, "es6", "es5");
-$jscomp.findDescriptor = function(a, b) {
+$jscomp.findDescriptor = function(a, c) {
   for (; a;) {
-    var c = Reflect.getOwnPropertyDescriptor(a, b);
-    if (c) {
-      return c;
+    var b = Reflect.getOwnPropertyDescriptor(a, c);
+    if (b) {
+      return b;
     }
     a = Reflect.getPrototypeOf(a);
   }
 };
 $jscomp.polyfill("Reflect.get", function(a) {
-  return a ? a : function(a, c, d) {
+  return a ? a : function(c, b, e) {
     if (2 >= arguments.length) {
-      return a[c];
+      return c[b];
     }
-    var b = $jscomp.findDescriptor(a, c);
-    if (b) {
-      return b.get ? b.get.call(d) : b.value;
+    var d = $jscomp.findDescriptor(c, b);
+    if (d) {
+      return d.get ? d.get.call(e) : d.value;
     }
   };
 }, "es6", "es5");

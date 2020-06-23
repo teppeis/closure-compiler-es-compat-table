@@ -72,8 +72,8 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Number.isFinite", function(a) {
-  return a ? a : function(a) {
-    return "number" !== typeof a ? !1 : !isNaN(a) && Infinity !== a && -Infinity !== a;
+  return a ? a : function(b) {
+    return "number" !== typeof b ? !1 : !isNaN(b) && Infinity !== b && -Infinity !== b;
   };
 }, "es6", "es3");
 module.exports = function() {

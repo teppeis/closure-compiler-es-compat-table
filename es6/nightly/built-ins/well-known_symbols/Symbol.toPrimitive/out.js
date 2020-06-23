@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -127,16 +127,16 @@ $jscomp.iteratorPrototype = function(a) {
 };
 module.exports = function() {
   var a = {}, b = {}, c = {}, d = 0;
-  a[Symbol.toPrimitive] = function(a) {
-    d += "number" === a;
+  a[Symbol.toPrimitive] = function(e) {
+    d += "number" === e;
     return 0;
   };
-  b[Symbol.toPrimitive] = function(a) {
-    d += "string" === a;
+  b[Symbol.toPrimitive] = function(e) {
+    d += "string" === e;
     return 0;
   };
-  c[Symbol.toPrimitive] = function(a) {
-    d += "default" === a;
+  c[Symbol.toPrimitive] = function(e) {
+    d += "default" === e;
     return 0;
   };
   0 <= a;

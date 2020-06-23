@@ -1,9 +1,9 @@
 module.exports = function() {
-  var b = [], a = new Proxy({foo:{}, bar:{}}, {get:function(a, c) {
-    b.push(c);
-    return a[c];
+  var a = [], d = new Proxy({foo:{}, bar:{}}, {get:function(c, b) {
+    a.push(b);
+    return c[b];
   }});
-  Object.defineProperties({}, a);
-  return "foo,bar" === b + "";
+  Object.defineProperties({}, d);
+  return "foo,bar" === a + "";
 };
 

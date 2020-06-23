@@ -75,18 +75,18 @@ $jscomp.polyfill("Number.MAX_SAFE_INTEGER", function() {
   return 9007199254740991;
 }, "es6", "es3");
 $jscomp.polyfill("Number.isFinite", function(a) {
-  return a ? a : function(a) {
-    return "number" !== typeof a ? !1 : !isNaN(a) && Infinity !== a && -Infinity !== a;
+  return a ? a : function(b) {
+    return "number" !== typeof b ? !1 : !isNaN(b) && Infinity !== b && -Infinity !== b;
   };
 }, "es6", "es3");
 $jscomp.polyfill("Number.isInteger", function(a) {
-  return a ? a : function(a) {
-    return Number.isFinite(a) ? a === Math.floor(a) : !1;
+  return a ? a : function(b) {
+    return Number.isFinite(b) ? b === Math.floor(b) : !1;
   };
 }, "es6", "es3");
 $jscomp.polyfill("Number.isSafeInteger", function(a) {
-  return a ? a : function(a) {
-    return Number.isInteger(a) && Math.abs(a) <= Number.MAX_SAFE_INTEGER;
+  return a ? a : function(b) {
+    return Number.isInteger(b) && Math.abs(b) <= Number.MAX_SAFE_INTEGER;
   };
 }, "es6", "es3");
 module.exports = function() {

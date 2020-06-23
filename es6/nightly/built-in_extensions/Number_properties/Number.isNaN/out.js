@@ -72,8 +72,8 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Number.isNaN", function(a) {
-  return a ? a : function(a) {
-    return "number" === typeof a && isNaN(a);
+  return a ? a : function(b) {
+    return "number" === typeof b && isNaN(b);
   };
 }, "es6", "es3");
 module.exports = function() {

@@ -72,15 +72,15 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Math.log1p", function(a) {
-  return a ? a : function(a) {
-    a = Number(a);
-    if (0.25 > a && -.25 < a) {
-      for (var c = a, b = 1, d = a, f = 0, g = 1; f != d;) {
-        c *= a, g *= -1, d = (f = d) + g * c / ++b;
+  return a ? a : function(b) {
+    b = Number(b);
+    if (0.25 > b && -.25 < b) {
+      for (var c = b, e = 1, d = b, f = 0, g = 1; f != d;) {
+        c *= b, g *= -1, d = (f = d) + g * c / ++e;
       }
       return d;
     }
-    return Math.log(1 + a);
+    return Math.log(1 + b);
   };
 }, "es6", "es3");
 $jscomp.polyfill("Math.atanh", function(a) {
@@ -88,9 +88,9 @@ $jscomp.polyfill("Math.atanh", function(a) {
     return a;
   }
   var b = Math.log1p;
-  return function(a) {
-    a = Number(a);
-    return (b(a) - b(-a)) / 2;
+  return function(c) {
+    c = Number(c);
+    return (b(c) - b(-c)) / 2;
   };
 }, "es6", "es3");
 module.exports = function() {

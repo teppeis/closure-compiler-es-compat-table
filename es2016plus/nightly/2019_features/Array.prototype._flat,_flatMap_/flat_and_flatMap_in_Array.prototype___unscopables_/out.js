@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -126,12 +126,12 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 $jscomp.polyfill("Array.prototype.flatMap", function(a) {
-  return a ? a : function(a, c) {
-    for (var b = [], e = 0; e < this.length; e++) {
-      var f = a.call(c, this[e], e, this);
-      Array.isArray(f) ? b.push.apply(b, f) : b.push(f);
+  return a ? a : function(b, c) {
+    for (var d = [], e = 0; e < this.length; e++) {
+      var f = b.call(c, this[e], e, this);
+      Array.isArray(f) ? d.push.apply(d, f) : d.push(f);
     }
-    return b;
+    return d;
   };
 }, "es9", "es5");
 module.exports = function() {

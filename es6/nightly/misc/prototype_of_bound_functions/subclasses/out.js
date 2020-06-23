@@ -101,28 +101,28 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
-    function a() {
+    function c() {
     }
-    new a;
-    Reflect.construct(a, [], function() {
+    new c;
+    Reflect.construct(c, [], function() {
     });
-    return new a instanceof a;
+    return new c instanceof c;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(a, e, d) {
-      a = b(a, e);
-      d && Reflect.setPrototypeOf(a, d.prototype);
-      return a;
+    return function(c, e, d) {
+      c = b(c, e);
+      d && Reflect.setPrototypeOf(c, d.prototype);
+      return c;
     };
   }
-  return function(a, b, d) {
-    void 0 === d && (d = a);
+  return function(c, e, d) {
+    void 0 === d && (d = c);
     d = $jscomp.objectCreate(d.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, d, b) || d;
+    return Function.prototype.apply.call(c, d, e) || d;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
@@ -173,9 +173,9 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(a, e) {
+    return function(c, e) {
       try {
-        return b(a, e), !0;
+        return b(c, e), !0;
       } catch (d) {
         return !1;
       }
@@ -184,13 +184,13 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   return null;
 }, "es6", "es5");
 module.exports = function() {
-  function a(a) {
-    var b = function() {
+  function a(b) {
+    var c = function() {
       return Object.create(null);
     };
-    $jscomp.inherits(b, a);
-    a = Function.prototype.bind.call(b, null);
-    return Object.getPrototypeOf(a) === Object.getPrototypeOf(b);
+    $jscomp.inherits(c, b);
+    b = Function.prototype.bind.call(c, null);
+    return Object.getPrototypeOf(b) === Object.getPrototypeOf(c);
   }
   return a(function() {
   }) && a(Array) && a(null);

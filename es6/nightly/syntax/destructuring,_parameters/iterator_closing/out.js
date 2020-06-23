@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -132,10 +132,10 @@ $jscomp.makeIterator = function(a) {
 module.exports = function() {
   module.exports._ = Symbol.iterator;
   var a = !1;
-  (function(a) {
-    a = $jscomp.makeIterator(a);
-    a.next();
-    a.next();
+  (function(b) {
+    b = $jscomp.makeIterator(b);
+    b.next();
+    b.next();
   })(global.__createIterableObject([1, 2, 3], {"return":function() {
     a = !0;
     return {};
