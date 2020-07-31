@@ -13,7 +13,7 @@ return true;
 
 };
 ----------------------------------------------------------
-esnext/nightly/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+esnext/nightly/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Freezing,_function_arguments/in.js:3:13: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
   3| function foo(# bar, baz #) {
                   ^
 

@@ -5,11 +5,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:3: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: Abbreviated hex escape 1
+es6/nightly/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:3:9: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: Abbreviated hex escape 1
   3|   return /\x1/.exec("x1")[0] === "x1"
               ^^^^^
 
-es6/nightly/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:4: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: ]
+es6/nightly/annex_b/RegExp_syntax_extensions/invalid_hexadecimal_escapes/in.js:4:3: WARNING - [JSC_MALFORMED_REGEXP] Malformed Regular Expression: ]
   4| && /[\x1]/.exec("x")[0] === "x";
         ^^^^^^^
 

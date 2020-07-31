@@ -11,11 +11,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:8: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'typeof' operator is not being used.
+es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:8:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'typeof' operator is not being used.
   8|     typeof foo;
          ^^^^^^^^^^
 
-es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:7: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
+es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:7:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
    7|   with(p) {
         ^^^^^^^^^
    8|     typeof foo;

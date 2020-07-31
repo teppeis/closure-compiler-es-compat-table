@@ -6,11 +6,11 @@ return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
+es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5:10: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
   5| return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
                ^
 
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
+es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/in.js:5:33: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
   5| return foo?.['baz'] === 42 && bar?.['baz'] === void undefined;
                                       ^
 

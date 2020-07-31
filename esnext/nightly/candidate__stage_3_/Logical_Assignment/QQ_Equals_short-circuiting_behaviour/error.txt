@@ -7,7 +7,7 @@ return a === 1 && i === 1;
 
 };
 ----------------------------------------------------------
-esnext/nightly/candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/in.js:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/nightly/candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/in.js:5:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   5| a ??= ++i;
           ^
 

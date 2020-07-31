@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js:3: WARNING - [JSC_INVALID_REGULAR_EXPRESSION_FLAGS] Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js]
+es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js:3:29: WARNING - [JSC_INVALID_REGULAR_EXPRESSION_FLAGS] Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js]
   3|   var re = new RegExp('\\w', 'y');
                                   ^^^
 
