@@ -7,15 +7,12 @@ return view[0] === -0x8000000000000000n;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:5:10: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: bigint
+es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:5:10: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
   5| view[0] = 0x8000000000000000n;
-               ^
+               ^^^^^^^^^^^^^^^^^^^
 
-es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:6:20: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: bigint
+es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:6:19: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
   6| return view[0] === -0x8000000000000000n;
-                         ^
+                        ^^^^^^^^^^^^^^^^^^^^
 
-ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
-Unsupported features: [bigint]
-
-1 error(s), 2 warning(s)
+2 error(s), 0 warning(s)
