@@ -127,20 +127,18 @@ $jscomp.iteratorPrototype = function(a) {
 };
 $jscomp.iteratorFromArray = function(a, b) {
   a instanceof String && (a += "");
-  var c = 0, d = {next:function() {
-    if (c < a.length) {
-      var e = c++;
-      return {value:b(e, a[e]), done:!1};
+  var c = 0, d = !1, e = {next:function() {
+    if (!d && c < a.length) {
+      var f = c++;
+      return {value:b(f, a[f]), done:!1};
     }
-    d.next = function() {
-      return {done:!0, value:void 0};
-    };
-    return d.next();
+    d = !0;
+    return {done:!0, value:void 0};
   }};
-  d[Symbol.iterator] = function() {
-    return d;
+  e[Symbol.iterator] = function() {
+    return e;
   };
-  return d;
+  return e;
 };
 $jscomp.polyfill("Array.prototype.values", function(a) {
   return a ? a : function() {
