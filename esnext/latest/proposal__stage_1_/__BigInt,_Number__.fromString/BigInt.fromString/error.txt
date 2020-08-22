@@ -4,7 +4,7 @@ return BigInt.fromString('42') === 42n;
 
 };
 ----------------------------------------------------------
-esnext/v20200628/proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/in.js:3: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: bigint
+esnext/v20200719/proposal__stage_1_/__BigInt,_Number__.fromString/BigInt.fromString/in.js:3: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: bigint
   3| return BigInt.fromString('42') === 42n;
                                         ^
 

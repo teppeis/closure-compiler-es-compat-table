@@ -9,7 +9,7 @@ return e === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20200628/draft__stage_2_/throw_expressions/arrow_function_bodies/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20200719/draft__stage_2_/throw_expressions/arrow_function_bodies/in.js:3: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   3| var fn = () => throw 42;
                          ^
 

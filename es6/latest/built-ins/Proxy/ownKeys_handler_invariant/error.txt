@@ -34,7 +34,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200628/built-ins/Proxy/ownKeys_handler_invariant/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20200719/built-ins/Proxy/ownKeys_handler_invariant/in.js:7: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
    7|     Object.keys(new Proxy({}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
    8|       ownKeys: function () {
@@ -45,7 +45,7 @@ es6/v20200628/built-ins/Proxy/ownKeys_handler_invariant/in.js:7: WARNING - [JSC_
   11|       }}));
       ^^^^^^^^^^
 
-es6/v20200628/built-ins/Proxy/ownKeys_handler_invariant/in.js:18: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20200719/built-ins/Proxy/ownKeys_handler_invariant/in.js:18: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
   18|     Object.keys(new Proxy(proxied, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   19|       ownKeys: function () {
@@ -55,7 +55,7 @@ es6/v20200628/built-ins/Proxy/ownKeys_handler_invariant/in.js:18: WARNING - [JSC
   21|       }}));
       ^^^^^^^^^^
 
-es6/v20200628/built-ins/Proxy/ownKeys_handler_invariant/in.js:27: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20200719/built-ins/Proxy/ownKeys_handler_invariant/in.js:27: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
   27|     Object.keys(new Proxy(Object.preventExtensions({b:1}), {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   28|       ownKeys: function () {
