@@ -105,7 +105,29 @@
 - optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
 - optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
 
-## Finished (stage 4)
+## 2021 features
 
 ### String.prototype.replaceAll
-- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/finished__stage_4_/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/finished__stage_4_/String.prototype.replaceAll/out.js))
+- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/String.prototype.replaceAll/out.js))
+
+### Promise.any
+- fulfillment ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Promise.any/fulfillment/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Promise.any/fulfillment/out.js))
+- AggregateError ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Promise.any/AggregateError/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Promise.any/AggregateError/out.js))
+
+### WeakReferences
+- WeakRef minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/WeakReferences/WeakRef_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/WeakReferences/WeakRef_minimal_support/out.js))
+- FinalizationRegistry minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/WeakReferences/FinalizationRegistry_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/WeakReferences/FinalizationRegistry_minimal_support/out.js))
+
+### Logical Assignment
+- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/Or_Or_Equals_basic_support/error.txt))
+- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour/error.txt))
+- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked/error.txt))
+- &&= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/And_And_Equals_basic_support/error.txt))
+- &&= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/And_And_Equals_short-circuiting_behaviour/error.txt))
+- &&= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked/error.txt))
+- ??= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/QQ_Equals_basic_support/error.txt))
+- ??= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/error.txt))
+- ??= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/error.txt))
+
+### numeric separators
+- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20200614/2021_features/numeric_separators/error.txt))

@@ -1,5 +1,3 @@
-candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
-candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/out.js: ReferenceError: FinalizationRegistry is not defined
 candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt: [CompileError]
 candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers/error.txt: [CompileError]
@@ -13,19 +11,8 @@ candidate__stage_3_/private_class_methods/private_instance_methods/error.txt: [C
 candidate__stage_3_/private_class_methods/private_static_methods/error.txt: [CompileError]
 candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt: [CompileError]
 candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
-candidate__stage_3_/numeric_separators/error.txt: [CompileError]
-candidate__stage_3_/Promise.any/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'any'
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/And_And_Equals_short-circuiting_behaviour/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/error.txt: [CompileError]
-candidate__stage_3_/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/error.txt: [CompileError]
 candidate__stage_3_/Hashbang_Grammar/out.js: [InvalidResult: false]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
@@ -81,6 +68,9 @@ draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.some/out.js: TypeError:
 draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take/out.js: TypeError: Object [object Object] has no method 'take'
 draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray/out.js: TypeError: Object [object Object] has no method 'toArray'
 draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/_.item__method/Array.prototype.item/out.js: TypeError: Object 1,2,3 has no method 'item'
+draft__stage_2_/_.item__method/String.prototype.item/out.js: TypeError: Object abc has no method 'item'
+draft__stage_2_/_.item__method/%TypedArray%.prototype.item/out.js: [Pass]
 proposal__stage_1_/do_expressions/error.txt: [CompileError]
 proposal__stage_1_/Observable/basic_support/out.js: [InvalidResult: false]
 proposal__stage_1_/Observable/Symbol.observable_well_known_symbol/out.js: [InvalidResult: false]
