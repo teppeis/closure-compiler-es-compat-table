@@ -1,0 +1,12 @@
+// built-ins / well-known symbols / Symbol.species, Promise.prototype.then
+module.exports = () => {
+  var promise      = new Promise(function(resolve){ resolve(42); });
+  var FakePromise1 = promise.constructor = function(exec){ exec(function(){}, function(){}); };
+  var FakePromise2 = function(exec){ exec(function(){}, function(){}); };
+  Object.defineProperty(FakePromise1, Symbol.species, {value: FakePromise2});
+  return promise.then(function(){}) instanceof FakePromise2;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

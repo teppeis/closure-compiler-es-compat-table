@@ -1,0 +1,8 @@
+// built-in extensions / Array static methods / Array.from, array-like objects
+module.exports = () => {
+  return Array.from({ 0: "foo", 1: "bar", length: 2 }) + '' === "foo,bar";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

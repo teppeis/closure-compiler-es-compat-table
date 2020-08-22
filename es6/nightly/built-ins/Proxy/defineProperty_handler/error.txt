@@ -1,0 +1,20 @@
+// built-ins / Proxy / "defineProperty" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.defineProperty(
+    new Proxy(proxied, {
+      defineProperty: function (t, k, d) {
+        passed = t === proxied && k === "foo" && d.value === 5;
+        return true;
+      }
+    }),
+    "foo",
+    { value: 5, configurable: true }
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,31 @@
+// built-ins / typed arrays / constructors require new
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var constructors = [
+    'ArrayBuffer',
+    'DataView',
+    'Int8Array',
+    'Uint8Array',
+    'Uint8ClampedArray',
+    'Int16Array',
+    'Uint16Array',
+    'Int32Array',
+    'Uint32Array',
+    'Float32Array',
+    'Float64Array'
+  ];
+  return constructors.every(function (constructor) {
+    try {
+      if (constructor in global) {
+        global[constructor](constructor === "ArrayBuffer" ? 64 : buffer);
+      }
+      return false;
+    } catch(e) {
+      return true;
+    }
+  });
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

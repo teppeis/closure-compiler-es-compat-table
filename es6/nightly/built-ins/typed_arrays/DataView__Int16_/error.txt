@@ -1,0 +1,11 @@
+// built-ins / typed arrays / DataView (Int16)
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var view = new DataView(buffer);
+  view.setInt16(0, 0x8000);
+  return view.getInt16(0) === -0x8000;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

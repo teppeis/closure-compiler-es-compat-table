@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / JSON.stringify
+module.exports = () => {
+// JSON.stringify -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({}, { get: function(o, k) { get.push(k); return o[k]; }});
+  JSON.stringify(p);
+  return get + '' === "toJSON";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

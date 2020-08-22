@@ -1,0 +1,19 @@
+// 2017 features / async functions / async methods, object literals
+module.exports = (asyncTestPassed) => {
+  var o = {
+    async a(){ return await Promise.resolve("foo"); }
+  };
+  var p = o.a();
+  if (!(p instanceof Promise)) {
+    return false;
+  }
+  p.then(function(result) {
+    if (result === "foo") {
+      asyncTestPassed();
+    }
+  });
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

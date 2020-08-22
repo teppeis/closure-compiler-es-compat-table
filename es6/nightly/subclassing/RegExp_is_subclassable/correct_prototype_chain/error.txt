@@ -1,0 +1,10 @@
+// subclassing / RegExp is subclassable / correct prototype chain
+module.exports = () => {
+  class R extends RegExp {}
+  var r = new R("baz","g");
+  return r instanceof R && r instanceof RegExp && Object.getPrototypeOf(R) === RegExp;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

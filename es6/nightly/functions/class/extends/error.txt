@@ -1,0 +1,11 @@
+// functions / class / extends
+module.exports = () => {
+  class B {}
+  class C extends B {}
+  return new C() instanceof B
+&& B.isPrototypeOf(C);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

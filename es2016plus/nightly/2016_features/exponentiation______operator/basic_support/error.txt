@@ -1,0 +1,8 @@
+// 2016 features / exponentiation (**) operator / basic support
+module.exports = () => {
+  return 2 ** 3 === 8 && -(5 ** 2) === -25 && (-5) ** 2 === 25;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

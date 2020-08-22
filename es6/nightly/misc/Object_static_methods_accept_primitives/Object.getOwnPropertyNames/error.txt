@@ -1,0 +1,10 @@
+// misc / Object static methods accept primitives / Object.getOwnPropertyNames
+module.exports = () => {
+  var s = Object.getOwnPropertyNames('a');
+  return s.length === 2 &&
+((s[0] === 'length' && s[1] === '0') || (s[0] === '0' && s[1] === 'length'));
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

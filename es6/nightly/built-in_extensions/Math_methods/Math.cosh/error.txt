@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.cosh
+module.exports = () => {
+  var nan = Math.cosh(NaN);
+  return Math.cosh(0) === 1
+    && Math.cosh(-0) === 1
+    && Math.cosh(Infinity) === Infinity
+    && Math.cosh(-Infinity) === Infinity
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -4,16 +4,5 @@ return (1n + 2n) === 3n;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/BigInt/basic_functionality/in.js:3:8: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  3| return (1n + 2n) === 3n;
-             ^^
-
-es2016plus/nightly/2020_features/BigInt/basic_functionality/in.js:3:13: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  3| return (1n + 2n) === 3n;
-                  ^^
-
-es2016plus/nightly/2020_features/BigInt/basic_functionality/in.js:3:21: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  3| return (1n + 2n) === 3n;
-                          ^^
-
-3 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

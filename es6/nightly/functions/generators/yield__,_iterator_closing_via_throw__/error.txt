@@ -1,0 +1,24 @@
+// functions / generators / yield *, iterator closing via throw()
+module.exports = () => {
+  module.exports._ = Symbol.iterator;
+  var closed = false;
+  var iter = global.__createIterableObject([1, 2, 3], {
+    'throw': undefined,
+    'return': function() {
+      closed = true;
+      return {done: true};
+    }
+  });
+  var gen = (function*(){
+    try {
+      yield *iter;
+    } catch(e){}
+  })();
+  gen.next();
+  gen['throw']();
+  return closed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

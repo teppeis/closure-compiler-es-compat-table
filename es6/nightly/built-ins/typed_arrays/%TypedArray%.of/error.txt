@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.of
+module.exports = () => {
+  return typeof Int8Array.of === "function" &&
+typeof Uint8Array.of === "function" &&
+typeof Uint8ClampedArray.of === "function" &&
+typeof Int16Array.of === "function" &&
+typeof Uint16Array.of === "function" &&
+typeof Int32Array.of === "function" &&
+typeof Uint32Array.of === "function" &&
+typeof Float32Array.of === "function" &&
+typeof Float64Array.of === "function";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

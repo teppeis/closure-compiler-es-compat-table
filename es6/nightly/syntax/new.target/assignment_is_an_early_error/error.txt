@@ -11,8 +11,5 @@ module.exports = () => {
 // EXPECT: 7: ERROR
 
 ----------------------------------------------------------
-es6/nightly/syntax/new.target/assignment_is_an_early_error/in.js:7:13: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
-  7|   new.target = function(){};
-                  ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

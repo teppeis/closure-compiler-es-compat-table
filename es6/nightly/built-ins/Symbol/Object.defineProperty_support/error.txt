@@ -1,0 +1,15 @@
+// built-ins / Symbol / Object.defineProperty support
+module.exports = () => {
+  var object = {};
+  var symbol = Symbol();
+  var value = {};
+  if (Object.defineProperty) {
+    Object.defineProperty(object, symbol, { value: value });
+    return object[symbol] === value;
+  }
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,8 @@
+// draft (stage 2) / Set methods / Set.prototype.isDisjointFrom
+module.exports = () => {
+  return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

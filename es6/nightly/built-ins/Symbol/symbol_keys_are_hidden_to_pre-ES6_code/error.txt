@@ -1,0 +1,17 @@
+// built-ins / Symbol / symbol keys are hidden to pre-ES6 code
+module.exports = () => {
+  var object = {};
+  var symbol = Symbol();
+  object[symbol] = 1;
+  for (var x in object){}
+  var passed = !x;
+  if (Object.keys && Object.getOwnPropertyNames) {
+    passed &= Object.keys(object).length === 0
+&& Object.getOwnPropertyNames(object).length === 0;
+  }
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

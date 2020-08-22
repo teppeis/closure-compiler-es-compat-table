@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.fround
+module.exports = () => {
+  return Math.fround(0) === 0
+    && Math.fround(-0) === -0
+    && Math.fround(Infinity) === Infinity
+    && Math.fround(-Infinity) === -Infinity
+    && Math.fround(1.5) === 1.5
+    && Math.fround(1.4) !== 1.4;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

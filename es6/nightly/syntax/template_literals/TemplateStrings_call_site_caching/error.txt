@@ -1,0 +1,19 @@
+// syntax / template literals / TemplateStrings call site caching
+module.exports = () => {
+// TemplateStrings caching was changed from per-contents to
+// per-call-site.
+// https://github.com/tc39/ecma262/pull/890
+  function strings(array) {
+    return array;
+  }
+  function getStrings() {
+    return strings`foo`;
+  }
+  var original = getStrings();
+  var other = strings`foo`;
+  return original === getStrings() && original !== other;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

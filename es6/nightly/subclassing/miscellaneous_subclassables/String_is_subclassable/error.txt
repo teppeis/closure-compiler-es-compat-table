@@ -1,0 +1,14 @@
+// subclassing / miscellaneous subclassables / String is subclassable
+module.exports = () => {
+  class C extends String {}
+  var c = new C("golly");
+  return c instanceof String
+&& c instanceof C
+&& c + '' === "golly"
+&& c[0] === "g"
+&& c.length === 5;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,11 @@
+// built-ins / well-known symbols / Symbol.isConcatSpreadable
+module.exports = () => {
+  var a = [], b = [];
+  b[Symbol.isConcatSpreadable] = false;
+  a = a.concat(b);
+  return a[0] === b;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

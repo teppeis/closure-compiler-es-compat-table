@@ -1,0 +1,11 @@
+// subclassing / Function is subclassable / can be used with "new"
+module.exports = () => {
+  class C extends Function {}
+  var c = new C("this.bar = 2;");
+  c.prototype.baz = 3;
+  return new c().bar === 2 && new c().baz === 3;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

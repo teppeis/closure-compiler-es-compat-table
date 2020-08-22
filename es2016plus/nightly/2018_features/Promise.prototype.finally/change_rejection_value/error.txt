@@ -1,0 +1,28 @@
+// 2018 features / Promise.prototype.finally / change rejection value
+module.exports = (asyncTestPassed) => {
+  var score = 0;
+  Promise
+    .reject("foobar")
+    .finally(function() {
+      return Promise.reject("foo");
+    })
+    .catch(function(result) {
+      score += (result === "foo");
+      check();
+      return Promise.reject("foobar");
+    })
+    .finally(function() {
+      throw new Error('bar');
+    })
+    .catch(function(result) {
+      score += (result.message === "bar");
+      check();
+    });
+  function check() {
+    if (score === 2) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

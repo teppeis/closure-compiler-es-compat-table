@@ -1,0 +1,15 @@
+// built-ins / WeakMap / constructor invokes set
+module.exports = () => {
+  var passed = false;
+  var _set = WeakMap.prototype.set;
+  WeakMap.prototype.set = function(k, v) {
+    passed = true;
+  };
+  new WeakMap([ [{ }, 42] ]);
+  WeakMap.prototype.set = _set;
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

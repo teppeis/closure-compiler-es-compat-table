@@ -1,0 +1,11 @@
+// built-ins / Map / Map.prototype.size
+module.exports = () => {
+  var key = {};
+  var map = new Map();
+  map.set(key, 123);
+  return map.size === 1;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

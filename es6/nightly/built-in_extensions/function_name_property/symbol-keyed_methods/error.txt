@@ -1,0 +1,15 @@
+// built-in extensions / function "name" property / symbol-keyed methods
+module.exports = () => {
+  var sym1 = Symbol("foo");
+  var sym2 = Symbol();
+  var o = {
+    [sym1]: function(){},
+    [sym2]: function(){}
+  };
+  return o[sym1].name === "[foo]" &&
+o[sym2].name === "";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

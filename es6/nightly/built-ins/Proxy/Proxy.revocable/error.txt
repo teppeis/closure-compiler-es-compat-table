@@ -12,8 +12,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Proxy/Proxy.revocable/in.js:7:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
-  7|     obj.proxy.foo;
-         ^^^^^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,15 @@
+// built-in extensions / Number properties / Number.isInteger
+module.exports = () => {
+  return Number.isInteger(0) === true
+    && Number.isInteger(1) === true
+    && Number.isInteger(-1) === true
+    && Number.isInteger(0.1) === false
+    && Number.isInteger(NaN) === false
+    && Number.isInteger(Infinity) === false
+    && Number.isInteger(-Infinity) === false
+    && Number.isInteger(null) === false
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

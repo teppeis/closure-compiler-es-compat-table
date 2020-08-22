@@ -1,0 +1,11 @@
+// proposal (stage 1) / Collections methods / Map.keyBy
+module.exports = () => {
+  var map = Map.keyBy(new Set([{ id: 101 }, { id: 102 }]), it => it.id)
+  return map.size === 2
+&& map.get(101).id === 101
+&& map.get(102).id === 102;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

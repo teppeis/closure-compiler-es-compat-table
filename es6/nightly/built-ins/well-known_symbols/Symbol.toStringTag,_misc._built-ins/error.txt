@@ -1,0 +1,10 @@
+// built-ins / well-known symbols / Symbol.toStringTag, misc. built-ins
+module.exports = () => {
+  var s = Symbol.toStringTag;
+  return Math[s] === "Math"
+&& JSON[s] === "JSON";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,12 @@
+// 2016 features / Array.prototype.includes / Array.prototype.includes
+module.exports = () => {
+  return [1, 2, 3].includes(1)
+&& ![1, 2, 3].includes(4)
+&& ![1, 2, 3].includes(1, 1)
+&& [NaN].includes(NaN)
+&& Array(1).includes();
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

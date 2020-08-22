@@ -1,0 +1,11 @@
+// built-in extensions / function "name" property / isn't writable, is configurable
+module.exports = () => {
+  var descriptor = Object.getOwnPropertyDescriptor(function f(){},"name");
+  return descriptor.enumerable   === false &&
+descriptor.writable     === false &&
+descriptor.configurable === true;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

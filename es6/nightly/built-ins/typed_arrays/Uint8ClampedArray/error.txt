@@ -1,0 +1,10 @@
+// built-ins / typed arrays / Uint8ClampedArray
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var view = new Uint8ClampedArray(buffer); view[0] = 0x100;
+  return view[0] === 0xFF;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

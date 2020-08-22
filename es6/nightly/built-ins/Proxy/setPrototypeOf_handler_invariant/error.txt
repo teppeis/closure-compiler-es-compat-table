@@ -1,0 +1,23 @@
+// built-ins / Proxy / "setPrototypeOf" handler invariant
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  Object.setPrototypeOf({},{});
+  // If the target object is not extensible, the argument value must be the
+  // same as the result of [[GetPrototypeOf]] applied to target object.
+  try {
+    Object.setPrototypeOf(
+      new Proxy(Object.preventExtensions({}), {
+        setPrototypeOf: function () {
+          passed = true;
+          return true;
+        }
+      }),{});
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

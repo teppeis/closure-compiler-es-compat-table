@@ -11,8 +11,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/well-known_symbols/Symbol.hasInstance/in.js:9:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'instanceof' operator is not being used.
-   9|   obj instanceof C;
-        ^^^^^^^^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

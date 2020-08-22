@@ -1,0 +1,27 @@
+// misc / own property order / Object.getOwnPropertyNames
+module.exports = () => {
+  var obj = {
+    2: true,
+    0: true,
+    1: true,
+    ' ': true,
+    9: true,
+    D: true,
+    B: true,
+    '-1': true
+  };
+  obj.A = true;
+  obj[3] = true;
+  "EFGHIJKLMNOPQRSTUVWXYZ".split('').forEach(function(key){
+    obj[key] = true;
+  });
+  Object.defineProperty(obj, 'C', { value: true, enumerable: true });
+  Object.defineProperty(obj, '4', { value: true, enumerable: true });
+  delete obj[2];
+  obj[2] = true;
+  return Object.getOwnPropertyNames(obj).join('') === "012349 DB-1AEFGHIJKLMNOPQRSTUVWXYZC";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

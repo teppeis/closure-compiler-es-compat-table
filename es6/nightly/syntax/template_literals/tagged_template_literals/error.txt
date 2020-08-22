@@ -1,0 +1,19 @@
+// syntax / template literals / tagged template literals
+module.exports = () => {
+  var called = false;
+  function fn(parts, a, b) {
+    called = true;
+    return parts instanceof Array &&
+parts[0]     === "foo"      &&
+parts[1]     === "bar\n"    &&
+parts.raw[0] === "foo"      &&
+parts.raw[1] === "bar\\n"   &&
+a === 123                   &&
+b === 456;
+  }
+  return fn `foo${123}bar\n${456}` && called;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

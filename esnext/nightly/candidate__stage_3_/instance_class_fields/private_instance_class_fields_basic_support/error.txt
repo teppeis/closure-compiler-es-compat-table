@@ -13,8 +13,5 @@ return new C(42).x() === 42;
 
 };
 ----------------------------------------------------------
-esnext/nightly/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
-  4| #x;
-     ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

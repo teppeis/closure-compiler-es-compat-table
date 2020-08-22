@@ -1,0 +1,11 @@
+// syntax / destructuring, assignment / with instances of generic iterables
+module.exports = () => {
+  module.exports._ = Symbol.iterator;
+  var a,b,c;
+  [a, b, c] = Object.create(global.__createIterableObject([1, 2]));
+  return a === 1 && b === 2 && c === void undefined;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

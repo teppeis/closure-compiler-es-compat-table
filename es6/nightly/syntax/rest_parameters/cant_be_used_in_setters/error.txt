@@ -11,8 +11,5 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error.
 
 ----------------------------------------------------------
-es6/nightly/syntax/rest_parameters/cant_be_used_in_setters/in.js:5:12: ERROR - [JSC_PARSE_ERROR] Parse error. Setter must not have a rest parameter
-  5|       set e(...args) {}
-                 ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,11 @@
+// proposal (stage 1) / `.of` and `.from` on collection constructors / Set.of
+module.exports = () => {
+  var A = {};
+  var B = {};
+  var C = Set.of(A, B);
+  return C.has(A) + C.has(B);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

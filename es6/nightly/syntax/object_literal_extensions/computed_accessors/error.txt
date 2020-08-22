@@ -11,8 +11,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/syntax/object_literal_extensions/computed_accessors/in.js:6:6: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'computed getter/setter in an object literal' is not yet implemented.
-  6|       get [x] () { return 1 },
-           ^^^^^^^^^^^^^^^^^^^^^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

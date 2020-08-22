@@ -1,0 +1,14 @@
+// built-ins / Map / -0 key converts to +0
+module.exports = () => {
+  var map = new Map();
+  map.set(-0, "foo");
+  var k;
+  map.forEach(function (value, key) {
+    k = 1 / key;
+  });
+  return k === Infinity && map.get(+0) === "foo";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

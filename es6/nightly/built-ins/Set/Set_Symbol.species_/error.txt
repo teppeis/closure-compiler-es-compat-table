@@ -1,0 +1,9 @@
+// built-ins / Set / Set[Symbol.species]
+module.exports = () => {
+  var prop = Object.getOwnPropertyDescriptor(Set, Symbol.species);
+  return 'get' in prop && Set[Symbol.species] === Set;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

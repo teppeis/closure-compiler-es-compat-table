@@ -1,0 +1,19 @@
+// 2017 features / async functions / async arrow functions in methods, classes
+module.exports = (asyncTestPassed) => {
+  function doSomething(callback) {
+    callback();
+  }
+  class C {
+    a(){
+      doSomething(async () => {
+        await 1;
+        asyncTestPassed();
+      });
+    }
+  };
+  var p = new C().a();
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

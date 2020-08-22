@@ -1,0 +1,11 @@
+// draft (stage 2) / ArrayBuffer.prototype.transfer / ArrayBuffer.prototype.transfer()
+module.exports = () => {
+  const buffer1 = new Uint8Array([1, 2]).buffer;
+  const buffer2 = buffer1.transfer();
+  return buffer1.byteLength === 0
+&& buffer2.byteLength === 2;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

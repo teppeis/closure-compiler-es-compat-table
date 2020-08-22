@@ -1,0 +1,11 @@
+// 2021 features / Logical Assignment / ||= setter not unecessarily invoked
+module.exports = () => {
+let i = 1;
+var obj = { get x() { return 1 }, set x(n) { i++; } };
+obj.x ||= 2;
+return i === 1;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

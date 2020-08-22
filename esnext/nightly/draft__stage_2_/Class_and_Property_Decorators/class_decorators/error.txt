@@ -12,8 +12,5 @@ return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
 
 };
 ----------------------------------------------------------
-esnext/nightly/draft__stage_2_/Class_and_Property_Decorators/class_decorators/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. Character '@' (U+0040) is not a valid identifier start char
-  4| @nonconf
-     ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

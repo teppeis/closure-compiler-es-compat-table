@@ -4,8 +4,5 @@ return BigInt("3") === 3n;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  3| return BigInt("3") === 3n;
-                            ^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

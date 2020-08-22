@@ -1,0 +1,19 @@
+// built-ins / Set / iterator closing
+module.exports = () => {
+  module.exports._ = Symbol.iterator;
+  var closed = false;
+  var iter = global.__createIterableObject([1, 2, 3], {
+    'return': function(){ closed = true; return {}; }
+  });
+  var add = Set.prototype.add;
+  Set.prototype.add = function(){ throw 0 };
+  try {
+    new Set(iter);
+  } catch(e){}
+  Set.prototype.add = add;
+  return closed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

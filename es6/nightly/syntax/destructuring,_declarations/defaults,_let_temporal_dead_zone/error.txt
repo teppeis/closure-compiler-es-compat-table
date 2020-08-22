@@ -11,16 +11,5 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d
 
 ----------------------------------------------------------
-es6/nightly/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:4:11: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: c
-  4|   let {c = c} = {};
-                ^
-
-es6/nightly/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5:7: ERROR - [JSC_REDECLARED_VARIABLE_ERROR] Illegal redeclared variable: c
-  5|   let {c = d, d} = {d:1};
-            ^
-
-es6/nightly/syntax/destructuring,_declarations/defaults,_let_temporal_dead_zone/in.js:5:11: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: d
-  5|   let {c = d, d} = {d:1};
-                ^
-
-3 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

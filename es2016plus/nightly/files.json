@@ -131,5 +131,19 @@
   "2020_features/optional_chaining_operator___._/optional_method_call",
   "2020_features/optional_chaining_operator___._/optional_function_call",
   "2020_features/nullish_coalescing_operator_____",
-  "finished__stage_4_/String.prototype.replaceAll"
+  "2021_features/String.prototype.replaceAll",
+  "2021_features/Promise.any/fulfillment",
+  "2021_features/Promise.any/AggregateError",
+  "2021_features/WeakReferences/WeakRef_minimal_support",
+  "2021_features/WeakReferences/FinalizationRegistry_minimal_support",
+  "2021_features/Logical_Assignment/Or_Or_Equals_basic_support",
+  "2021_features/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour",
+  "2021_features/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked",
+  "2021_features/Logical_Assignment/And_And_Equals_basic_support",
+  "2021_features/Logical_Assignment/And_And_Equals_short-circuiting_behaviour",
+  "2021_features/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked",
+  "2021_features/Logical_Assignment/QQ_Equals_basic_support",
+  "2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour",
+  "2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked",
+  "2021_features/numeric_separators"
 ]

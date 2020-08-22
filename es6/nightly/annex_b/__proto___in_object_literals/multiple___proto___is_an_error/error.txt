@@ -10,15 +10,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/annex_b/__proto___in_object_literals/multiple___proto___is_an_error/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-   4|   try {
-        ^^^^^
-   5|     eval("({ __proto__ : [], __proto__: {} })");
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-...
-   8|     return true;
-      ^^^^^^^^^^^^^^^^
-   9|   }
-      ^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

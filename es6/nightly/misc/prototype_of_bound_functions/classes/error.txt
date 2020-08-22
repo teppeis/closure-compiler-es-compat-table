@@ -1,0 +1,20 @@
+// misc / prototype of bound functions / classes
+module.exports = () => {
+  function correctProtoBound(proto) {
+    class C {}
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(C, proto);
+    } else {
+      C.__proto__ = proto;
+    }
+    var boundF = Function.prototype.bind.call(C, null);
+    return Object.getPrototypeOf(boundF) === proto;
+  }
+  return correctProtoBound(Function.prototype)
+&& correctProtoBound({})
+&& correctProtoBound(null);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

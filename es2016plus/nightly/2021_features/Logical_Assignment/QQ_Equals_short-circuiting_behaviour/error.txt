@@ -1,0 +1,11 @@
+// 2021 features / Logical Assignment / ??= short-circuiting behaviour
+module.exports = () => {
+let a = 1;
+let i = 1;
+a ??= ++i;
+return a === 1 && i === 1;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

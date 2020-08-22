@@ -1,0 +1,24 @@
+// 2018 features / Asynchronous Iterators / for-await-of loops
+module.exports = (asyncTestPassed) => {
+  var asyncIterable = {};
+  asyncIterable[Symbol.asyncIterator] = function(){
+    var i = 0;
+    return {
+      next: function(){
+        switch(++i){
+        case 1: return Promise.resolve({done: false, value: 'a'});
+        case 2: return Promise.resolve({done: false, value: 'b'});
+        } return Promise.resolve({done: true});
+      }
+    };
+  };
+  (async function(){
+    var result = '';
+    for await(var value of asyncIterable)result += value;
+    if(result === 'ab')asyncTestPassed();
+  })();
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,9 @@
+// 2018 features / object rest/spread properties / object rest properties
+module.exports = () => {
+  var {a, ...rest} = {a: 1, b: 2, c: 3};
+  return a === 1 && rest.a === void undefined && rest.b === 2 && rest.c === 3;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,18 @@
+// 2019 misc / optional catch binding / yield
+module.exports = () => {
+function *foo() {
+try {
+yield;
+}
+catch {
+return true;
+}
+}
+var it = foo();
+it.next();
+return it.throw().value;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

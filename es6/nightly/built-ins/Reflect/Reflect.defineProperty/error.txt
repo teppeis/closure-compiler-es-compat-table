@@ -1,0 +1,11 @@
+// built-ins / Reflect / Reflect.defineProperty
+module.exports = () => {
+  var obj = {};
+  Reflect.defineProperty(obj, "foo", { value: 123 });
+  return obj.foo === 123 &&
+Reflect.defineProperty(Object.freeze({}), "foo", { value: 123 }) === false;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,12 @@
+// syntax / destructuring, assignment / defaults
+module.exports = () => {
+  var a,b,c,d,e,f;
+  ({a = 1, b = 0, z:c = 3} = {b:2, z:undefined});
+  [d = 0, e = 5, f = 6] = [4,,undefined];
+  return a === 1 && b === 2 && c === 3
+&& d === 4 && e === 5 && f === 6;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

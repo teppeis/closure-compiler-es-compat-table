@@ -1,0 +1,10 @@
+// syntax / spread syntax for iterable objects / with instances of iterables, in calls
+module.exports = () => {
+  module.exports._ = Symbol.iterator;
+  var iterable = global.__createIterableObject([1, 2, 3]);
+  return Math.max(...Object.create(iterable)) === 3;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

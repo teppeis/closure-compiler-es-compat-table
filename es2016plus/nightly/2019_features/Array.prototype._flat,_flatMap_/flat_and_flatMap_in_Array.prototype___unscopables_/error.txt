@@ -1,0 +1,9 @@
+// 2019 features / Array.prototype.{flat, flatMap} / flat and flatMap in Array.prototype[@@unscopables]
+module.exports = () => {
+  return Array.prototype[Symbol.unscopables].flat
+&& Array.prototype[Symbol.unscopables].flatMap;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

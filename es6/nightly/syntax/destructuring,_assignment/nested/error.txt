@@ -1,0 +1,12 @@
+// syntax / destructuring, assignment / nested
+module.exports = () => {
+  var e,f,g,h,i;
+  [e, {x:f, g}] = [9, {x:10}];
+  ({h, x:[i]} = {h:11, x:[12]});
+  return e === 9 && f === 10 && g === void undefined
+&& h === 11 && i === 12;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

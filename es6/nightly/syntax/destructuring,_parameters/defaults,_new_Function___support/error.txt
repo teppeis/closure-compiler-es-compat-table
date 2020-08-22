@@ -7,12 +7,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/syntax/destructuring,_parameters/defaults,_new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  4|   return new Function("{a = 1, b = 0, c = 3, x:d = 0, y:e = 5}",
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5|     "return a === 1 && b === 2 && c === 3 && d === 4 && e === 5;"
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6|   )({b:2, c:undefined, x:4});
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

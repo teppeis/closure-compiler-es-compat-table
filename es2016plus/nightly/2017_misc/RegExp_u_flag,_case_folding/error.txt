@@ -1,0 +1,11 @@
+// 2017 misc / RegExp "u" flag, case folding
+module.exports = () => {
+  return "ſ".match(/\w/iu) && !"ſ".match(/\W/iu)
+&& "\u212a".match(/\w/iu) && !"\u212a".match(/\W/iu)
+&& "\u212a".match(/.\b/iu) && "ſ".match(/.\b/iu)
+&& !"\u212a".match(/.\B/iu) && !"ſ".match(/.\B/iu);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

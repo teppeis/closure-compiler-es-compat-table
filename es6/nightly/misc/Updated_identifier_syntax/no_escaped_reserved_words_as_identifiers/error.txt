@@ -8,8 +8,5 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
 
 ----------------------------------------------------------
-es6/nightly/misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/in.js:4:6: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
-  4|   var v\u0061r;
-           ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

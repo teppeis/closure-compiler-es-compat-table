@@ -14,12 +14,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
-  5|     symbol + "";
-         ^^^^^^^^^^^
-
-es6/nightly/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:10:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
-  10|     symbol + 0;
-          ^^^^^^^^^^
-
-0 error(s), 2 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

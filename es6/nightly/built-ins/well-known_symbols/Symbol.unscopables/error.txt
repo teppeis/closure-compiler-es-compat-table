@@ -8,12 +8,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/well-known_symbols/Symbol.unscopables/in.js:5:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
-  5|   with (a) {
-       ^^^^^^^^^^
-  6|     return foo === 1 && typeof bar === "undefined";
-     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7|   }
-     ^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

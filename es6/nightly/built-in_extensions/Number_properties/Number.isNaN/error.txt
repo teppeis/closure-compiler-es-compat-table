@@ -1,0 +1,12 @@
+// built-in extensions / Number properties / Number.isNaN
+module.exports = () => {
+  return Number.isNaN(NaN) === true
+    &&  Number.isNaN(0) === false
+    &&  Number.isNaN(null) === false
+    &&  Number.isNaN(undefined) === false
+    &&  Number.isNaN('') === false;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

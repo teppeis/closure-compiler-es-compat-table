@@ -1,0 +1,21 @@
+// syntax / destructuring, parameters / throws on null and undefined
+module.exports = () => {
+  var a = 'pass a', b = 'pass b';
+  try {
+    (function({c}){
+      a = c;
+    }(null));
+    return false;
+  } catch(e) {}
+  try {
+    (function({d}){
+      b = d;
+    }(undefined));
+    return false;
+  } catch(e) {}
+  return a === 'pass a' && b === 'pass b';
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

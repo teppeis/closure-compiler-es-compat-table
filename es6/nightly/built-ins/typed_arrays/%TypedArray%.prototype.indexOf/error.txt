@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.indexOf
+module.exports = () => {
+  return typeof Int8Array.prototype.indexOf === "function" &&
+typeof Uint8Array.prototype.indexOf === "function" &&
+typeof Uint8ClampedArray.prototype.indexOf === "function" &&
+typeof Int16Array.prototype.indexOf === "function" &&
+typeof Uint16Array.prototype.indexOf === "function" &&
+typeof Int32Array.prototype.indexOf === "function" &&
+typeof Uint32Array.prototype.indexOf === "function" &&
+typeof Float32Array.prototype.indexOf === "function" &&
+typeof Float64Array.prototype.indexOf === "function";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

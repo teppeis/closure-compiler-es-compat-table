@@ -1,0 +1,12 @@
+// syntax / for..of loops / with sparse arrays
+module.exports = () => {
+  var arr = [,,];
+  var count = 0;
+  for (var item of arr)
+    count += (item === void undefined);
+  return count === 2;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

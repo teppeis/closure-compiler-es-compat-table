@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%[Symbol.species]
+module.exports = () => {
+  return typeof Int8Array[Symbol.species] === "function" &&
+typeof Uint8Array[Symbol.species] === "function" &&
+typeof Uint8ClampedArray[Symbol.species] === "function" &&
+typeof Int16Array[Symbol.species] === "function" &&
+typeof Uint16Array[Symbol.species] === "function" &&
+typeof Int32Array[Symbol.species] === "function" &&
+typeof Uint32Array[Symbol.species] === "function" &&
+typeof Float32Array[Symbol.species] === "function" &&
+typeof Float64Array[Symbol.species] === "function";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

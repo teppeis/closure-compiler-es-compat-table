@@ -7,8 +7,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/functions/class/implicit_strict_mode/in.js:6:10: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  6|   return (0,C.method)();
-               ^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

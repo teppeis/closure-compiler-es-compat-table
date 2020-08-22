@@ -1,0 +1,9 @@
+// built-in extensions / String.prototype methods / String.prototype.normalize
+module.exports = () => {
+  return 'c\u0327\u0301'.normalize('NFC') === '\u1e09'
+    && '\u1e09'.normalize('NFD') === 'c\u0327\u0301';
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

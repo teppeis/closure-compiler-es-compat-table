@@ -1,0 +1,10 @@
+// subclassing / RegExp is subclassable / RegExp.prototype.exec
+module.exports = () => {
+  class R extends RegExp {}
+  var r = new R("baz","g");
+  return r.exec("foobarbaz")[0] === "baz" && r.lastIndex === 9;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

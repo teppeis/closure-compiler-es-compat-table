@@ -1,0 +1,15 @@
+// draft (stage 2) / Iterator Helpers / AsyncIterator.prototype.drop
+module.exports = (asyncTestPassed) => {
+  async function toArray(iterator) {
+    const result = [];
+    for await (const it of iterator) result.push(it);
+    return result;
+  }
+  toArray(async function*() { yield * [1, 2, 3] }().drop(1)).then(it => {
+    if (it.join() === '2,3') asyncTestPassed();
+  });
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

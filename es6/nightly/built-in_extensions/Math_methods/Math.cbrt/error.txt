@@ -1,0 +1,14 @@
+// built-in extensions / Math methods / Math.cbrt
+module.exports = () => {
+  var nan = Math.cbrt(NaN);
+  return Math.cbrt(-1) === -1 
+    && Math.cbrt(64) === 4
+    && Math.cbrt(0) === 0
+    && Math.cbrt(-0) === -0
+    && Math.cbrt(Infinity) === Infinity
+    && Math.cbrt(-Infinity) === -Infinity
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

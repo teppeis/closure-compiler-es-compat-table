@@ -1,0 +1,16 @@
+// functions / generators / sending
+module.exports = () => {
+  var sent;
+  function * generator(){
+    sent = [yield 5, yield 6];
+  };
+  var iterator = generator();
+  iterator.next();
+  iterator.next("foo");
+  iterator.next("bar");
+  return sent[0] === "foo" && sent[1] === "bar";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

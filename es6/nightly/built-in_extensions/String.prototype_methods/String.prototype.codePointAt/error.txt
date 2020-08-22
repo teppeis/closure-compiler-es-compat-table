@@ -1,0 +1,12 @@
+// built-in extensions / String.prototype methods / String.prototype.codePointAt
+module.exports = () => {
+  return 'abc'.codePointAt() === 97
+    && 'abc'.codePointAt(0) === 97
+    && 'abc'.codePointAt(1) === 98
+    && 'abc'.codePointAt(1) === 98
+    && '\uD87E\uDC04'.codePointAt(0) === 0x2F804;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

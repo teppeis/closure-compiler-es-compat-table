@@ -11,16 +11,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:8:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'typeof' operator is not being used.
-  8|     typeof foo;
-         ^^^^^^^^^^
-
-es6/nightly/misc/Proxy,_internal_get_calls/HasBinding/in.js:7:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
-   7|   with(p) {
-        ^^^^^^^^^
-   8|     typeof foo;
-      ^^^^^^^^^^^^^^^
-   9|   }
-      ^^^
-
-1 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

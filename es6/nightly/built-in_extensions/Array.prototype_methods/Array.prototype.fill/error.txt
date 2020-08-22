@@ -1,0 +1,29 @@
+// built-in extensions / Array.prototype methods / Array.prototype.fill
+module.exports = () => {
+  var assert = require('assert');
+  assert.deepEqual(
+    [1, 2, 3].fill(),
+    [undefined, undefined, undefined]
+  );
+  assert.deepEqual(
+    [1, 2, 3].fill(4),
+    [4, 4, 4]
+  );
+  assert.deepEqual(
+    [1, 2, 3].fill(4, 1),
+    [1, 4, 4]
+  );
+  assert.deepEqual(
+    [1, 2, 3].fill(4, 1, 2),
+    [1, 4, 3]
+  );
+  assert.deepEqual(
+    [1, 2, 3].fill(4, -3, -2),
+    [4, 2, 3]
+  );
+  return true;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

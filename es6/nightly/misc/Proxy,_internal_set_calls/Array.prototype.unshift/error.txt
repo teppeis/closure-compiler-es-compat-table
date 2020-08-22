@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'set' calls / Array.prototype.unshift
+module.exports = () => {
+// Array.prototype.unshift -> Set -> [[Set]]
+  var set = [];
+  var p = new Proxy([0,0,,0], { set: function(o, k, v) { set.push(k); o[k] = v; return true; }});
+  p.unshift(0,1);
+  return set + '' === "5,3,2,0,1,length";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

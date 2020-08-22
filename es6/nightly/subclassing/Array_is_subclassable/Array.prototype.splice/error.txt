@@ -1,0 +1,11 @@
+// subclassing / Array is subclassable / Array.prototype.splice
+module.exports = () => {
+  class C extends Array {}
+  var c = new C();
+  c.push(2,4,6);
+  return c.splice(1,2) instanceof C;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

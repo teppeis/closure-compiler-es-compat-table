@@ -1,0 +1,14 @@
+// misc / miscellaneous / function 'length' is configurable
+module.exports = () => {
+  var fn = function(a, b) {};
+  var desc = Object.getOwnPropertyDescriptor(fn, "length");
+  if (desc.configurable) {
+    Object.defineProperty(fn, "length", { value: 1 });
+    return fn.length === 1;
+  }
+  return false;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

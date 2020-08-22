@@ -1,0 +1,12 @@
+// annex b / RegExp.prototype.compile / basic functionality
+module.exports = () => {
+  if (typeof RegExp.prototype.compile !== 'function')
+    return false
+  var rx = /a/;
+  rx.compile('b');
+  return rx.test('b');
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

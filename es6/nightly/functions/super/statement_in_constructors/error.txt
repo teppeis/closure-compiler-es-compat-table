@@ -1,0 +1,16 @@
+// functions / super / statement in constructors
+module.exports = () => {
+  var passed = false;
+  class B {
+    constructor(a) { passed = (a === "barbaz"); }
+  }
+  class C extends B {
+    constructor(a) { super("bar" + a); }
+  }
+  new C("baz");
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

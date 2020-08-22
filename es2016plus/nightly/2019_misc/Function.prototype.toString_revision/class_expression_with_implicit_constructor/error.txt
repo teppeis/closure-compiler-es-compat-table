@@ -6,8 +6,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2019_misc/Function.prototype.toString_revision/class_expression_with_implicit_constructor/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  4|   var str = 'class A {}';
-       ^^^^^^^^^^^^^^^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

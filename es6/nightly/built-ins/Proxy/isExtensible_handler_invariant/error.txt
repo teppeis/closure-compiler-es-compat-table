@@ -25,26 +25,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Proxy/isExtensible_handler_invariant/in.js:8:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
-   8|     Object.isExtensible(new Proxy({}, {
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   9|       isExtensible: function (t) {
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-...
-  12|       }
-      ^^^^^^^
-  13|     }));
-      ^^^^^^^
-
-es6/nightly/built-ins/Proxy/isExtensible_handler_invariant/in.js:17:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isExtensible' is not being used.
-  17|     Object.isExtensible(new Proxy(Object.preventExtensions({}), {
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  18|       isExtensible: function (t) {
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-...
-  20|       }
-      ^^^^^^^
-  21|     }));
-      ^^^^^^^
-
-0 error(s), 2 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

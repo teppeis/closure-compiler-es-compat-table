@@ -10,8 +10,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/misc/Proxy,_internal_get_calls/Date.prototype.toJSON/in.js:6:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
-  6|   var get = [];
-       ^^^^^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

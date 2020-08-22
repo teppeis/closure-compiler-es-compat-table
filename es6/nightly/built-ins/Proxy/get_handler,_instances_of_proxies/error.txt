@@ -1,0 +1,14 @@
+// built-ins / Proxy / "get" handler, instances of proxies
+module.exports = () => {
+  var proxied = { };
+  var proxy = Object.create(new Proxy(proxied, {
+    get: function (t, k, r) {
+      return t === proxied && k === "foo" && r === proxy && 5;
+    }
+  }));
+  return proxy.foo === 5;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

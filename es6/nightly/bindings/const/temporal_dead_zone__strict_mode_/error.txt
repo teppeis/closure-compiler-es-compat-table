@@ -9,8 +9,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/bindings/const/temporal_dead_zone__strict_mode_/in.js:4:34: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  4|   var passed = (function(){ try { qux; } catch(e) { return true; }}());
-                                       ^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

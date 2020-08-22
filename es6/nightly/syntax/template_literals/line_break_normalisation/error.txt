@@ -1,0 +1,16 @@
+// syntax / template literals / line break normalisation
+module.exports = () => {
+  // NOTE: Edit carefully! This code includes various line breaks (CR, LF and CRLF).
+  var cr   = `xy`;
+  var lf   = `x
+y`;
+  var crlf = `x
+y`;
+
+  return cr.length === 3 && lf.length === 3 && crlf.length === 3
+    && cr[1] === lf[1] && lf[1] === crlf[1] && crlf[1] === '\n';
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

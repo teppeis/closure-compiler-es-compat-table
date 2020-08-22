@@ -1,0 +1,9 @@
+// annex b / RegExp syntax extensions / incomplete patterns and quantifiers
+module.exports = () => {
+  return /x{1/.exec("x{1")[0] === "x{1"
+&& /x]1/.exec("x]1")[0] === "x]1";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

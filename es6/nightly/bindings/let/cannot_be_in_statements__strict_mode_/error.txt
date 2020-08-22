@@ -9,8 +9,5 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
 
 ----------------------------------------------------------
-es6/nightly/bindings/let/cannot_be_in_statements__strict_mode_/in.js:5:15: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
-  5|   if(true) let baz = 1;
-                    ^^^^^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

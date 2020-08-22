@@ -1,0 +1,15 @@
+// 2017 annex b / Object.prototype getter/setter methods / __lookupSetter__, prototype chain
+module.exports = () => {
+  var obj = {
+    set foo(baz) { return "bar"; },
+    qux: 1
+  };
+  var foo = Object.prototype.__lookupSetter__.call(Object.create(obj), "foo");
+  return foo() === "bar"
+&& Object.prototype.__lookupSetter__.call(obj, "qux") === void undefined
+&& Object.prototype.__lookupSetter__.call(obj, "baz") === void undefined;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / Object.assign
+module.exports = () => {
+// Object.assign -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({foo:1, bar:2}, { get: function(o, k) { get.push(k); return o[k]; }});
+  Object.assign({}, p);
+  return get + '' === "foo,bar";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

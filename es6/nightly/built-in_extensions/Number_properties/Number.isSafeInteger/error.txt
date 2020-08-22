@@ -1,0 +1,14 @@
+// built-in extensions / Number properties / Number.isSafeInteger
+module.exports = () => {
+  return Number.isSafeInteger(3) === true
+    && Number.isSafeInteger(3.1) === false
+    && Number.isSafeInteger(3.0) === true
+    && Number.isSafeInteger(Math.pow(2, 53)) === false
+    && Number.isSafeInteger(Math.pow(2, 53) - 1) === true
+    && Number.isSafeInteger(NaN) === false
+    && Number.isSafeInteger(Infinity) === false
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

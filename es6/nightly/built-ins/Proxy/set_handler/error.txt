@@ -1,0 +1,16 @@
+// built-ins / Proxy / "set" handler
+module.exports = () => {
+  var proxied = { };
+  var passed = false;
+  var proxy = new Proxy(proxied, {
+    set: function (t, k, v, r) {
+      passed = t === proxied && k + v === "foobar" && r === proxy;
+    }
+  });
+  proxy.foo = "bar";
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

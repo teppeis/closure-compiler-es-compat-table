@@ -1,0 +1,20 @@
+// functions / generators / shorthand generator methods, classes
+module.exports = () => {
+  class C {
+    * generator() {
+      yield 5; yield 6;
+    }
+  };
+  var iterator = new C().generator();
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === 6 && item.done === false;
+  item = iterator.next();
+  passed &= item.value === void undefined && item.done === true;
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

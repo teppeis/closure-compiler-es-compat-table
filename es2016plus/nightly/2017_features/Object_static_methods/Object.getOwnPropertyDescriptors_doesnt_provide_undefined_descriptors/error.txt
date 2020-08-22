@@ -1,0 +1,11 @@
+// 2017 features / Object static methods / Object.getOwnPropertyDescriptors doesn't provide undefined descriptors
+module.exports = () => {
+  var P = new Proxy({a:1}, {
+    getOwnPropertyDescriptor: function(t, k) {}
+  });
+  return !Object.getOwnPropertyDescriptors(P).hasOwnProperty('a');
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

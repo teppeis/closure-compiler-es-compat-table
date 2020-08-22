@@ -1,0 +1,13 @@
+// built-ins / Set / Set.prototype.size
+module.exports = () => {
+  var obj = {};
+  var set = new Set();
+  set.add(123);
+  set.add(123);
+  set.add(456);
+  return set.size === 2;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

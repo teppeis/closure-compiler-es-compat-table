@@ -1,0 +1,12 @@
+// proposal (stage 1) / Math.signbit
+module.exports = () => {
+  return Math.signbit(NaN) === false
+&& Math.signbit(-0) === true
+&& Math.signbit(0) === false
+&& Math.signbit(-42) === true
+&& Math.signbit(42) === false;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,13 @@
+// built-ins / well-known symbols / Symbol.species, Array.prototype.slice
+module.exports = () => {
+  var obj = [];
+  obj.constructor = {};
+  obj.constructor[Symbol.species] = function() {
+    return { foo: 1 };
+  };
+  return Array.prototype.slice.call(obj, 0).foo === 1;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

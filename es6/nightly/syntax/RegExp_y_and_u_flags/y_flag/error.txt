@@ -6,8 +6,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js:3:29: WARNING - [JSC_INVALID_REGULAR_EXPRESSION_FLAGS] Invalid flags to RegExp constructor: STRING y 3 [length: 3] [source_file: es6/nightly/syntax/RegExp_y_and_u_flags/y_flag/in.js]
-  3|   var re = new RegExp('\\w', 'y');
-                                  ^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

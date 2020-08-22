@@ -1,0 +1,18 @@
+// functions / super / is statically bound
+module.exports = () => {
+  class B {
+    qux() { return "bar"; }
+  }
+  class C extends B {
+    qux() { return super.qux() + this.corge; }
+  }
+  var obj = {
+    qux: C.prototype.qux,
+    corge: "ley"
+  };
+  return obj.qux() === "barley";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

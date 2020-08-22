@@ -7,12 +7,5 @@ return view[0] === -0x8000000000000000n;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:5:10: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  5| view[0] = 0x8000000000000000n;
-               ^^^^^^^^^^^^^^^^^^^
-
-es2016plus/nightly/2020_features/BigInt/BigInt64Array/in.js:6:19: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
-  6| return view[0] === -0x8000000000000000n;
-                        ^^^^^^^^^^^^^^^^^^^^
-
-2 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

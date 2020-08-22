@@ -1,0 +1,10 @@
+// 2018 features / object rest/spread properties / object spread properties
+module.exports = () => {
+  var spread = {b: 2, c: 3};
+  var O = {a: 1, ...spread};
+  return O !== spread && (O.a + O.b + O.c) === 6;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

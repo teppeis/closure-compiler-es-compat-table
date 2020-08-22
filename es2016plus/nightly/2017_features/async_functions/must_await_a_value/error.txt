@@ -12,8 +12,5 @@ module.exports = () => {
 // EXPECT: 7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 
 ----------------------------------------------------------
-es2016plus/nightly/2017_features/async_functions/must_await_a_value/in.js:7:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-  7|     await;
-               ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

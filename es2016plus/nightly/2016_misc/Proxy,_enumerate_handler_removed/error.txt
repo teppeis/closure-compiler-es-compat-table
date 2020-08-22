@@ -11,8 +11,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2016_misc/Proxy,_enumerate_handler_removed/in.js:9:23: WARNING - [JSC_SUSPICIOUS_SEMICOLON] If this if/for/while really shouldn't have a body, use {}
-   9|   for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
-                             ^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,25 @@
+// built-ins / Promise / basic functionality
+module.exports = (asyncTestPassed) => {
+  var p1 = new Promise(function(resolve, reject) { resolve("foo"); });
+  var p2 = new Promise(function(resolve, reject) { reject("quux"); });
+  var score = 0;
+  function thenFn(result)  { score += (result === "foo");  check(); }
+  function catchFn(result) { score += (result === "quux"); check(); }
+  function shouldNotRun(result)  { score = -Infinity;   }
+  p1.then(thenFn, shouldNotRun);
+  p2.then(shouldNotRun, catchFn);
+  p1.catch(shouldNotRun);
+  p2.catch(catchFn);
+  p1.then(function() {
+    // Promise.prototype.then() should return a new Promise
+    score += p1.then() !== p1;
+    check();
+  });
+  function check() {
+    if (score === 4) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,13 @@
+// built-in extensions / function "name" property / variables (class)
+module.exports = () => {
+  var foo = class {};
+  var bar = class baz {};
+  var qux = class { static name() {} };
+  return foo.name === "foo" &&
+bar.name === "baz" &&
+typeof qux.name === "function";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

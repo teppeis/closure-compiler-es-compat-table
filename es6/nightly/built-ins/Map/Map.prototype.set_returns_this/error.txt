@@ -1,0 +1,9 @@
+// built-ins / Map / Map.prototype.set returns this
+module.exports = () => {
+  var map = new Map();
+  return map.set(0, 0) === map;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

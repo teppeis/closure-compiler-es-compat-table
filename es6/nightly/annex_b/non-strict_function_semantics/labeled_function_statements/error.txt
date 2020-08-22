@@ -7,8 +7,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/annex_b/non-strict_function_semantics/labeled_function_statements/in.js:5:2: ERROR - [JSC_PARSE_ERROR] Parse error. Lexical declarations are only allowed at top level or inside a block.
-  5|   label: function foo() { return 2; }
-       ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

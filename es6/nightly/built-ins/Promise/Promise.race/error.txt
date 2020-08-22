@@ -1,0 +1,21 @@
+// built-ins / Promise / Promise.race
+module.exports = (asyncTestPassed) => {
+  var fulfills = Promise.race([
+    new Promise(function(resolve)   { setTimeout(resolve,1000,"foo"); }),
+    new Promise(function(_, reject) { setTimeout(reject, 2000,"bar"); }),
+  ]);
+  var rejects = Promise.race([
+    new Promise(function(_, reject) { setTimeout(reject, 1000,"baz"); }),
+    new Promise(function(resolve)   { setTimeout(resolve,2000,"qux"); }),
+  ]);
+  var score = 0;
+  fulfills.then(function(result) { score += (result === "foo"); check(); });
+  rejects.catch(function(result) { score += (result === "baz"); check(); });
+  function check() {
+    if (score === 2) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

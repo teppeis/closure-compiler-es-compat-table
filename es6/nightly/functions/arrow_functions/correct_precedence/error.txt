@@ -9,8 +9,5 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
 
 ----------------------------------------------------------
-es6/nightly/functions/arrow_functions/correct_precedence/in.js:4:4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
-  4|     0 || () => 2";
-         ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

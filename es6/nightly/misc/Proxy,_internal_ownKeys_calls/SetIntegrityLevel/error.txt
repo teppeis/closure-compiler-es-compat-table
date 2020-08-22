@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'ownKeys' calls / SetIntegrityLevel
+module.exports = () => {
+// SetIntegrityLevel -> [[OwnPropertyKeys]]
+  var ownKeysCalled = 0;
+  var p = new Proxy({}, { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+  Object.freeze(p);
+  return ownKeysCalled === 1;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

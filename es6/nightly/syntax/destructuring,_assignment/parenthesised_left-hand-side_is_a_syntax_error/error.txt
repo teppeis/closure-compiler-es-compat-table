@@ -9,8 +9,5 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
 
 ----------------------------------------------------------
-es6/nightly/syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error/in.js:5:10: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
-  5|   ({a,b}) = {a:3,b:4};
-               ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

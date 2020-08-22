@@ -1,0 +1,15 @@
+// built-ins / WeakSet / no WeakSet.prototype.clear method
+module.exports = () => {
+  if (!("clear" in WeakSet.prototype)) {
+    return true;
+  }
+  var s = new WeakSet();
+  var key = {};
+  s.add(key);
+  s.clear();
+  return s.has(key);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

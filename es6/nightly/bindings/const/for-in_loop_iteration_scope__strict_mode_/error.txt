@@ -1,0 +1,13 @@
+// bindings / const / for-in loop iteration scope (strict mode)
+module.exports = () => {
+  'use strict';
+  var scopes = [];
+  for(const i in { a:1, b:1 }) {
+    scopes.push(function(){ return i; });
+  }
+  return (scopes[0]() === "a" && scopes[1]() === "b");
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

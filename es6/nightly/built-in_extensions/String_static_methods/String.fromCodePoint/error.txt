@@ -1,0 +1,11 @@
+// built-in extensions / String static methods / String.fromCodePoint
+module.exports = () => {
+  return String.fromCodePoint() === ''
+    && String.fromCodePoint(42) === '*'
+    && String.fromCodePoint(65, 90) === 'AZ'
+    && String.fromCodePoint(0x2F804) === '\uD87E\uDC04';
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

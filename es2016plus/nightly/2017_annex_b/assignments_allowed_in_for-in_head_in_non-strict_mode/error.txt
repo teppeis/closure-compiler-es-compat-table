@@ -5,8 +5,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js:3:17: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
-  3|   for (var i = 0 in {}) {}
-                      ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

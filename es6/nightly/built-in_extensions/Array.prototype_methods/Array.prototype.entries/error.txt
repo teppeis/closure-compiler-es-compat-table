@@ -1,0 +1,13 @@
+// built-in extensions / Array.prototype methods / Array.prototype.entries
+module.exports = () => {
+  var assert = require('assert');
+  var iter = ['a', 'b'].entries();
+  assert.deepEqual(iter.next(), {value: [0, 'a'], done: false});
+  assert.deepEqual(iter.next(), {value: [1, 'b'], done: false});
+  assert.deepEqual(iter.next(), {value: undefined, done: true});
+  return true;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

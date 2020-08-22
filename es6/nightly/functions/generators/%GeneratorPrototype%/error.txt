@@ -1,0 +1,15 @@
+// functions / generators / %GeneratorPrototype%
+module.exports = () => {
+  function * generatorFn(){}
+  var ownProto = Object.getPrototypeOf(generatorFn());
+  var passed = ownProto === generatorFn.prototype;
+  var sharedProto = Object.getPrototypeOf(ownProto);
+  passed &= sharedProto !== Object.prototype &&
+sharedProto === Object.getPrototypeOf(function*(){}.prototype) &&
+sharedProto.hasOwnProperty('next');
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,30 @@
+// 2016 features / Array.prototype.includes / Array.prototype.includes is generic
+module.exports = () => {
+  var passed = 0;
+  return [].includes.call({
+    get "0"() {
+      passed = NaN;
+      return 'foo';
+    },
+    get "11"() {
+      passed += 1;
+      return 0;
+    },
+    get "19"() {
+      passed += 1;
+      return 'foo';
+    },
+    get "21"() {
+      passed = NaN;
+      return 'foo';
+    },
+    get length() {
+      passed += 1;
+      return 24;
+    }
+  }, 'foo', 6) === true && passed === 3;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

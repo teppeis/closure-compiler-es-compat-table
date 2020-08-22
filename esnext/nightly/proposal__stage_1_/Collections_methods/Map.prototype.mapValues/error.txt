@@ -1,0 +1,12 @@
+// proposal (stage 1) / Collections methods / Map.prototype.mapValues
+module.exports = () => {
+  var map = new Map([[1, 4], [2, 5], [3, 6]]).mapValues((value, key) => value * value);
+  return map.size === 3
+&& map.get(1) === 16
+&& map.get(2) === 25
+&& map.get(3) === 36;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

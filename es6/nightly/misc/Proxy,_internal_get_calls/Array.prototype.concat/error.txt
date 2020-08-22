@@ -1,0 +1,19 @@
+// misc / Proxy, internal 'get' calls / Array.prototype.concat
+module.exports = () => {
+// Array.prototype.concat -> Get -> [[Get]]
+  var get = [];
+  var arr = [1];
+  arr.constructor = void undefined;
+  var p = new Proxy(arr, { get: function(o, k) { get.push(k); return o[k]; }});
+  Array.prototype.concat.call(p,p);
+  return get[0] === "constructor"
+&& get[1] === Symbol.isConcatSpreadable
+&& get[2] === "length"
+&& get[3] === "0"
+&& get[4] === get[1] && get[5] === get[2] && get[6] === get[3]
+&& get.length === 7;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

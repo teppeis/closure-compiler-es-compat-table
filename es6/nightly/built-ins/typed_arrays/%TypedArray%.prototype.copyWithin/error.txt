@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.copyWithin
+module.exports = () => {
+  return typeof Int8Array.prototype.copyWithin === "function" &&
+typeof Uint8Array.prototype.copyWithin === "function" &&
+typeof Uint8ClampedArray.prototype.copyWithin === "function" &&
+typeof Int16Array.prototype.copyWithin === "function" &&
+typeof Uint16Array.prototype.copyWithin === "function" &&
+typeof Int32Array.prototype.copyWithin === "function" &&
+typeof Uint32Array.prototype.copyWithin === "function" &&
+typeof Float32Array.prototype.copyWithin === "function" &&
+typeof Float64Array.prototype.copyWithin === "function";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,11 @@
+// built-in extensions / Date.prototype[Symbol.toPrimitive]
+module.exports = () => {
+  var tp = Date.prototype[Symbol.toPrimitive];
+  return tp.call(Object(2), "number") === 2
+&& tp.call(Object(2), "string") === "2"
+&& tp.call(Object(2), "default") === "2";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,9 @@
+// syntax / spread syntax for iterable objects / with sparse arrays, in array literals
+module.exports = () => {
+  var a = [...[,,]];
+  return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

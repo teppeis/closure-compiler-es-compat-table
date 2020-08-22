@@ -1,0 +1,12 @@
+// built-ins / Map / constructor arguments
+module.exports = () => {
+  var key1 = {};
+  var key2 = {};
+  var map = new Map([[key1, 123], [key2, 456]]);
+  return map.has(key1) && map.get(key1) === 123 &&
+map.has(key2) && map.get(key2) === 456;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

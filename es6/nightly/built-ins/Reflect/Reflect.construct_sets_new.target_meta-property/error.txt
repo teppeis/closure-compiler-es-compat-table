@@ -8,8 +8,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4:8: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
-  4|     if (new.target === Object) {
-             ^^^^^^^^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,10 @@
+// syntax / destructuring, declarations / in for-of loop heads
+module.exports = () => {
+  for(var [i, j, k] of [[1,2,3]]) {
+    return i === 1 && j === 2 && k === 3;
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

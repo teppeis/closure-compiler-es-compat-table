@@ -6,12 +6,5 @@ return foo?.baz() === 42 && bar?.baz() === void undefined;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_method_call/in.js:5:7: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
-  5| return foo?.baz() === 42 && bar?.baz() === void undefined;
-            ^
-
-es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_method_call/in.js:5:28: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Optional chaining.
-  5| return foo?.baz() === 42 && bar?.baz() === void undefined;
-                                 ^
-
-2 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

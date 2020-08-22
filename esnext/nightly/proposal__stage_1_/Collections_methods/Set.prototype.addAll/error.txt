@@ -1,0 +1,12 @@
+// proposal (stage 1) / Collections methods / Set.prototype.addAll
+module.exports = () => {
+  var set = new Set([1, 2]).addAll(2, 3);
+  return set.size === 3
+&& set.has(1)
+&& set.has(2)
+&& set.has(3);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

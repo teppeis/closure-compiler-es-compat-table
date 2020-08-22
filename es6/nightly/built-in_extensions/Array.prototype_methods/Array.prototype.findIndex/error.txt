@@ -1,0 +1,15 @@
+// built-in extensions / Array.prototype methods / Array.prototype.findIndex
+module.exports = () => {
+  var arr = [{name: 'foo'}];
+  var target = {name: 'bar'};
+  arr.push(target);
+  arr.push({name: 'baz'});
+  var obj = {};
+  return arr.findIndex(function(el, idx, ar) {
+    return el.name === 'bar' && idx === 1 && this === obj;
+  }, obj) === 1;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

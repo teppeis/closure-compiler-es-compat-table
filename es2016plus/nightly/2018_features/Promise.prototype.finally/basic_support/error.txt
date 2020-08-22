@@ -1,0 +1,34 @@
+// 2018 features / Promise.prototype.finally / basic support
+module.exports = (asyncTestPassed) => {
+  var p1 = Promise.resolve("foo");
+  var p2 = Promise.reject("bar");
+  var score = 0;
+  function thenFn(result)  {
+    score += (result === "foo");
+    check();
+  }
+  function catchFn(result) {
+    score += (result === "bar");
+    check();
+  }
+  function finallyFn() {
+    score += (arguments.length === 0);
+    check();
+  }
+  p1.then(thenFn);
+  p1.finally(finallyFn);
+  p1.finally(function() {
+    // should return a new Promise
+    score += p1.finally() !== p1;
+    check();
+  });
+  p2.catch(catchFn);
+  p2.finally(finallyFn);
+  function check() {
+    if (score === 5) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

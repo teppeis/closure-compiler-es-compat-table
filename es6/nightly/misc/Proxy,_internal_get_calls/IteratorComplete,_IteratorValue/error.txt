@@ -1,0 +1,23 @@
+// misc / Proxy, internal 'get' calls / IteratorComplete, IteratorValue
+module.exports = () => {
+// IteratorComplete -> Get -> [[Get]]
+// IteratorValue -> Get -> [[Get]]
+  var get = [];
+  var iterable = {};
+  iterable[Symbol.iterator] = function() {
+    return {
+      next: function() {
+        return new Proxy({ value: 2, done: false }, { get: function(o, k) { get.push(k); return o[k]; }});
+      }
+    };
+  }
+  var i = 0;
+  for(var e of iterable) {
+    if (++i >= 2) break;
+  }
+  return get + '' === "done,value,done,value";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

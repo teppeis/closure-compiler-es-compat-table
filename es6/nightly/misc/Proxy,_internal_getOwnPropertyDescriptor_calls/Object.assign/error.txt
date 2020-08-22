@@ -1,0 +1,13 @@
+// misc / Proxy, internal 'getOwnPropertyDescriptor' calls / Object.assign
+module.exports = () => {
+// Object.assign -> [[GetOwnProperty]]
+  var gopd = [];
+  var p = new Proxy({foo:1, bar:2},
+    { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+  Object.assign({}, p);
+  return gopd + '' === "foo,bar";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -10,8 +10,5 @@ module.exports = () => {
 // EXPECT: 6: ERROR - [JSC_REASSIGNED_CONSTANT] Constant reassigned: foo
 
 ----------------------------------------------------------
-es6/nightly/bindings/const/redefining_a_const__strict_mode_/in.js:6:2: ERROR - [JSC_REASSIGNED_CONSTANT] Constant reassigned: foo
-  6|   foo = 2;
-       ^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

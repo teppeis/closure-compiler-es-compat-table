@@ -1,0 +1,17 @@
+// built-in extensions / Array.prototype methods / Array.prototype[Symbol.unscopables]
+module.exports = () => {
+  var unscopables = Array.prototype[Symbol.unscopables];
+  if (!unscopables) {
+    return false;
+  }
+  var ns = "find,findIndex,fill,copyWithin,entries,keys,values".split(",");
+  for (var i = 0; i < ns.length; i++) {
+    if (Array.prototype[ns[i]] && !unscopables[ns[i]]) return false;
+  }
+  return true;
+
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

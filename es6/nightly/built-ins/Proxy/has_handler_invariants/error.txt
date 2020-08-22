@@ -28,12 +28,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Proxy/has_handler_invariants/in.js:16:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
-  16|     'foo' in proxy;
-          ^^^^^^^^^^^^^^
-
-es6/nightly/built-ins/Proxy/has_handler_invariants/in.js:24:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
-  24|     'bar' in proxy;
-          ^^^^^^^^^^^^^^
-
-0 error(s), 2 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

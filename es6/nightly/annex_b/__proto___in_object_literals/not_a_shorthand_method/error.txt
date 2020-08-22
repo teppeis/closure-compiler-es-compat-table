@@ -1,0 +1,11 @@
+// annex b / __proto__ in object literals / not a shorthand method
+module.exports = () => {
+  if (!({ __proto__ : [] } instanceof Array)) {
+    return false;
+  }
+  return !({ __proto__(){} } instanceof Function);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

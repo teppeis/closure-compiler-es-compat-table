@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'get' calls / RegExp.prototype[Symbol.search]
+module.exports = () => {
+// RegExp.prototype[Symbol.search] -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy({ exec: function() { return null; } }, { get: function(o, k) { get.push(k); return o[k]; }});
+  RegExp.prototype[Symbol.search].call(p);
+  return get + '' === "lastIndex,exec,lastIndex";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

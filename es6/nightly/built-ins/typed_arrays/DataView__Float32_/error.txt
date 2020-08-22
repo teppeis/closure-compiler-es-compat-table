@@ -1,0 +1,11 @@
+// built-ins / typed arrays / DataView (Float32)
+module.exports = () => {
+  var buffer = new ArrayBuffer(64);
+  var view = new DataView(buffer);
+  view.setFloat32(0, 0.1);
+  return view.getFloat32(0) === 0.10000000149011612;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,14 @@
+// 2018 features / Asynchronous Iterators / async generators
+module.exports = (asyncTestPassed) => {
+  async function*generator(){
+    yield 42;
+  }
+  var iterator = generator();
+  iterator.next().then(function(step){
+    if(iterator[Symbol.asyncIterator]() === iterator && step.done === false && step.value === 42)asyncTestPassed();
+  });
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

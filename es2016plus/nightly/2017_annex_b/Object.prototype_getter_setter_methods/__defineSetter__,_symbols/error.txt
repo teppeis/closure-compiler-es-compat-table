@@ -1,0 +1,14 @@
+// 2017 annex b / Object.prototype getter/setter methods / __defineSetter__, symbols
+module.exports = () => {
+  var obj = {};
+  var sym = Symbol();
+  function bar(baz) {}
+  Object.prototype.__defineSetter__.call(obj, sym, bar);
+  var prop = Object.getOwnPropertyDescriptor(obj, sym);
+  return prop.set === bar && !prop.writable && prop.configurable
+&& prop.enumerable;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

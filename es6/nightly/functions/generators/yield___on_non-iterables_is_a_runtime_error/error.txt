@@ -1,0 +1,20 @@
+// functions / generators / yield * on non-iterables is a runtime error
+module.exports = () => {
+  var iterator = (function * generator() {
+    yield * [5];
+  }());
+  var item = iterator.next();
+  var passed = item.value === 5 && item.done === false;
+  iterator = (function * generator() {
+    yield * 5;
+  }());
+  try {
+    iterator.next();
+  } catch (e) {
+    return passed;
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

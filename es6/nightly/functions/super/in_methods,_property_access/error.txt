@@ -1,0 +1,15 @@
+// functions / super / in methods, property access
+module.exports = () => {
+  class B {}
+  B.prototype.qux = "foo";
+  B.prototype.corge = "baz";
+  class C extends B {
+    quux(a) { return super.qux + a + super["corge"]; }
+  }
+  C.prototype.qux = "garply";
+  return new C().quux("bar") === "foobarbaz";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

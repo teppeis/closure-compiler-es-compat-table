@@ -8,8 +8,5 @@ return o.f('a') === 'abfalse';
 
 };
 ----------------------------------------------------------
-esnext/nightly/proposal__stage_1_/partial_application_syntax/lexical__this_/in.js:6:15: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
-  6| var o = { f: f(?, 'b') };
-                    ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

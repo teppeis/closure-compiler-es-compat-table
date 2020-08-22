@@ -1,0 +1,13 @@
+// 2017 features / String padding / String.prototype.padStart
+module.exports = () => {
+  return 'hello'.padStart(10) === '     hello'
+&& 'hello'.padStart(10, '1234') === '12341hello'
+&& 'hello'.padStart() === 'hello'
+&& 'hello'.padStart(6, '123') === '1hello'
+&& 'hello'.padStart(3) === 'hello'
+&& 'hello'.padStart(3, '123') === 'hello';
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,18 @@
+// built-ins / Proxy / "apply" handler
+module.exports = () => {
+  var proxied = function(){};
+  var passed = false;
+  var host = {
+    method: new Proxy(proxied, {
+      apply: function (t, thisArg, args) {
+        passed = t === proxied && thisArg === host && args + "" === "foo,bar";
+      }
+    })
+  };
+  host.method("foo", "bar");
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

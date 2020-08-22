@@ -1,0 +1,18 @@
+// built-ins / Proxy / "preventExtensions" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.preventExtensions(
+    new Proxy(proxied, {
+      preventExtensions: function (t) {
+        passed = t === proxied;
+        return Object.preventExtensions(proxied);
+      }
+    })
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

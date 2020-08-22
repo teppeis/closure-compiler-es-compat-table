@@ -1,0 +1,17 @@
+// built-in extensions / Math methods / Math.trunc
+module.exports = () => {
+  var nan = Math.trunc(NaN);
+  return Math.trunc(0) === 0
+    && Math.trunc(-0) === -0
+    && Math.trunc(1.1) === 1
+    && Math.trunc(-1.1) === -1
+    && Math.trunc(0.1) === 0
+    && Math.trunc(-0.1) === -0
+    && Math.trunc(Infinity) === Infinity
+    && Math.trunc(-Infinity) === -Infinity
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

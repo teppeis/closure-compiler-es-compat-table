@@ -1,0 +1,19 @@
+// misc / prototype of bound functions / subclasses
+module.exports = () => {
+  function correctProtoBound(superclass) {
+    class C extends superclass {
+      constructor() {
+        return Object.create(null);
+      }
+    }
+    var boundF = Function.prototype.bind.call(C, null);
+    return Object.getPrototypeOf(boundF) === Object.getPrototypeOf(C);
+  }
+  return correctProtoBound(function(){})
+&& correctProtoBound(Array)
+&& correctProtoBound(null);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

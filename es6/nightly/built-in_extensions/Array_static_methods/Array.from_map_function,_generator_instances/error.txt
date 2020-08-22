@@ -1,0 +1,11 @@
+// built-in extensions / Array static methods / Array.from map function, generator instances
+module.exports = () => {
+  var iterable = (function*(){ yield "foo"; yield "bar"; yield "bal"; }());
+  return Array.from(iterable, function(e, i) {
+    return e + this.baz + i;
+  }, { baz: "d" }) + '' === "food0,bard1,bald2";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

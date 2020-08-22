@@ -1,0 +1,16 @@
+// functions / super / method calls use correct "this" binding
+module.exports = () => {
+  class B {
+    qux(a) { return this.foo + a; }
+  }
+  class C extends B {
+    qux(a) { return super.qux("bar" + a); }
+  }
+  var obj = new C();
+  obj.foo = "foo";
+  return obj.qux("baz") === "foobarbaz";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

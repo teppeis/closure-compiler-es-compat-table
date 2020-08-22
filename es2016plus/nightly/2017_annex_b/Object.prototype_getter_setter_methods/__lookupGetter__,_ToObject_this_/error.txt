@@ -1,0 +1,13 @@
+// 2017 annex b / Object.prototype getter/setter methods / __lookupGetter__, ToObject(this)
+module.exports = () => {
+  __lookupGetter__.call(1, 'key');
+  try {
+    __lookupGetter__.call(null, 'key');
+  } catch(e){
+    return true;
+  }
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

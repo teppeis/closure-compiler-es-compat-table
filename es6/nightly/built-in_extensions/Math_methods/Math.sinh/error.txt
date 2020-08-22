@@ -1,0 +1,13 @@
+// built-in extensions / Math methods / Math.sinh
+module.exports = () => {
+  var nan = Math.sinh(NaN);
+  return Math.sinh(0) === 0
+    && Math.sinh(-0) === -0
+    && Math.sinh(Infinity) === Infinity
+    && Math.sinh(-Infinity) === -Infinity
+    && nan !== nan;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

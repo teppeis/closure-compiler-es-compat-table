@@ -34,35 +34,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/Proxy/ownKeys_handler_invariant/in.js:7:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
-   7|     Object.keys(new Proxy({}, {
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8|       ownKeys: function () {
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-...
-  10|         return [2];
-      ^^^^^^^^^^^^^^^^^^^
-  11|       }}));
-      ^^^^^^^^^^
-
-es6/nightly/built-ins/Proxy/ownKeys_handler_invariant/in.js:18:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
-  18|     Object.keys(new Proxy(proxied, {
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  19|       ownKeys: function () {
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  20|         return [];
-      ^^^^^^^^^^^^^^^^^^
-  21|       }}));
-      ^^^^^^^^^^
-
-es6/nightly/built-ins/Proxy/ownKeys_handler_invariant/in.js:27:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
-  27|     Object.keys(new Proxy(Object.preventExtensions({b:1}), {
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  28|       ownKeys: function () {
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  29|         return ['a'];
-      ^^^^^^^^^^^^^^^^^^^^^
-  30|       }}));
-      ^^^^^^^^^^
-
-0 error(s), 3 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

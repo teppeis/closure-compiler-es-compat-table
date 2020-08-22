@@ -11,8 +11,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2018_features/RegExp_named_capture_groups/in.js:3:15: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp named groups" to targeted output language.
-  3|   var result = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/.exec('2016-03-11');
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

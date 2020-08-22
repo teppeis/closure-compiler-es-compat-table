@@ -7,8 +7,5 @@ return RegExp.lastMatch === 'x';
 }
 };
 ----------------------------------------------------------
-esnext/nightly/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
-  3| function () {
-              ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

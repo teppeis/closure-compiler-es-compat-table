@@ -10,8 +10,5 @@ return a + e === 42;
 
 };
 ----------------------------------------------------------
-esnext/nightly/draft__stage_2_/throw_expressions/logical/in.js:5:15: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
-  5| a = 19 || throw 77;
-                    ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

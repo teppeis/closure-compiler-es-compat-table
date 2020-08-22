@@ -1,0 +1,15 @@
+// built-in extensions / Math methods / Math.log1p
+module.exports = () => {
+  var nan1 = Math.log1p(-2);
+  var nan2 = Math.log1p(NaN);
+  return Math.log1p(-1) === -Infinity
+    && Math.log1p(0) === 0
+    && Math.log1p(-0) === -0
+    && Math.log1p(Infinity) === Infinity
+    && nan1 !== nan1
+    && nan2 !== nan2;
+};
+
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

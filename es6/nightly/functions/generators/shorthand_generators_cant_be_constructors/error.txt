@@ -14,8 +14,5 @@ module.exports = () => {
 };
 
 ----------------------------------------------------------
-es6/nightly/functions/generators/shorthand_generators_cant_be_constructors/in.js:9:4: ERROR - [JSC_PARSE_ERROR] Parse error. Class constructor may not be getter, setter, async, or generator.
-   9|     * constructor() {
-          ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

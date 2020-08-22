@@ -1,0 +1,16 @@
+// built-ins / well-known symbols / Symbol.species, RegExp.prototype[Symbol.split]
+module.exports = () => {
+  var passed = false;
+  var obj = { constructor: {} };
+  obj[Symbol.split] = RegExp.prototype[Symbol.split];
+  obj.constructor[Symbol.species] = function() {
+    passed = true;
+    return /./;
+  };
+  "".split(obj);
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,23 @@
+// built-ins / Proxy / "deleteProperty" handler invariant
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  // A property cannot be reported as deleted, if it exists as a non-configurable
+  // own property of the target object.
+  var proxied = {};
+  Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+  try {
+    delete new Proxy(proxied, {
+      deleteProperty: function () {
+        passed = true;
+        return true;
+      }
+    }).foo;
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

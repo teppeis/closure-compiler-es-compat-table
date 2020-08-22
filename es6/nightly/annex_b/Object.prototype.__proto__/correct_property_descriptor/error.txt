@@ -1,0 +1,14 @@
+// annex b / Object.prototype.__proto__ / correct property descriptor
+module.exports = () => {
+  var desc = Object.getOwnPropertyDescriptor(Object.prototype,"__proto__");
+  var A = function(){};
+  return (desc
+&& "get" in desc
+&& "set" in desc
+&& desc.configurable
+&& !desc.enumerable);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

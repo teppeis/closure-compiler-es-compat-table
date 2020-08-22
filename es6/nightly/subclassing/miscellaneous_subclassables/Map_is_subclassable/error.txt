@@ -1,0 +1,12 @@
+// subclassing / miscellaneous subclassables / Map is subclassable
+module.exports = () => {
+  var key = {};
+  class M extends Map {}
+  var map = new M();
+  map.set(key, 123);
+  return map instanceof M && map.has(key) && map.get(key) === 123;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

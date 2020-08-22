@@ -1,0 +1,14 @@
+// functions / super / expression in constructors
+module.exports = () => {
+  class B {
+    constructor(a) { return ["foo" + a]; }
+  }
+  class C extends B {
+    constructor(a) { return super("bar" + a); }
+  }
+  return new C("baz")[0] === "foobarbaz";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

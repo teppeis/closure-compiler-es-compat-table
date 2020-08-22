@@ -1,0 +1,10 @@
+// built-ins / Reflect / Reflect.construct, Function subclassing
+module.exports = () => {
+  function F(){}
+  var obj = Reflect.construct(Function, ["return 2"], F);
+  return obj() === 2 && obj instanceof F;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

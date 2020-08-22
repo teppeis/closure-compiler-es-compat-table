@@ -1,0 +1,14 @@
+// functions / class / computed static accessor properties
+module.exports = () => {
+  var garply = "foo", grault = "bar", baz = false;
+  class C {
+    static get [garply]() { return "foo"; }
+    static set [grault](x) { baz = x; }
+  }
+  C.bar = true;
+  return C.foo === "foo" && baz;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

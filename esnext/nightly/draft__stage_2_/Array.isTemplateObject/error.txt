@@ -1,0 +1,9 @@
+// draft (stage 2) / Array.isTemplateObject
+module.exports = () => {
+  return !Array.isTemplateObject([])
+&& Array.isTemplateObject((it => it)`a{1}c`);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

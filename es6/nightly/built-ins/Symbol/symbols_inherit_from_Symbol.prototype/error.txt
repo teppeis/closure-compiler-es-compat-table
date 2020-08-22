@@ -1,0 +1,13 @@
+// built-ins / Symbol / symbols inherit from Symbol.prototype
+module.exports = () => {
+  var symbol = Symbol();
+  var passed = symbol.foo === void undefined;
+  Symbol.prototype.foo = 2;
+  passed &= symbol.foo === 2;
+  delete Symbol.prototype.foo;
+  return passed;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

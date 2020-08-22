@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'defineProperty' calls / [[Set]]
+module.exports = () => {
+// [[Set]] -> [[DefineOwnProperty]]
+  var def = [];
+  var p = new Proxy({foo:1, bar:2}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+  p.foo = 2; p.bar = 4;
+  return def + '' === "foo,bar";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

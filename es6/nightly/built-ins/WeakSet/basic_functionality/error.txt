@@ -1,0 +1,12 @@
+// built-ins / WeakSet / basic functionality
+module.exports = () => {
+  var obj1 = {};
+  var weakset = new WeakSet();
+  weakset.add(obj1);
+  weakset.add(obj1);
+  return weakset.has(obj1);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

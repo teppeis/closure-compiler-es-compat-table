@@ -10,8 +10,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/built-ins/WeakMap/constructor_requires_new/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakMap' is not being used.
-  5|     WeakMap();
-         ^^^^^^^^^
-
-0 error(s), 1 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

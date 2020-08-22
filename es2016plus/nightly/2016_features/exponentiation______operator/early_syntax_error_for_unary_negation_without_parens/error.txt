@@ -10,8 +10,5 @@ module.exports = () => {
 // EXPECT: 6: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
 
 ----------------------------------------------------------
-es2016plus/nightly/2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/in.js:6:5: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
-  6|   -5 ** 2;
-          ^
-
-1 error(s), 0 warning(s)
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,8 @@
+// syntax / object literal extensions / string-keyed shorthand methods
+module.exports = () => {
+  return ({ "foo bar"() { return 4; } })["foo bar"]() === 4;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,21 @@
+// built-ins / Proxy / "getOwnPropertyDescriptor" handler
+module.exports = () => {
+  var proxied = {};
+  var fakeDesc = { value: "foo", configurable: true };
+  var returnedDesc = Object.getOwnPropertyDescriptor(
+    new Proxy(proxied, {
+      getOwnPropertyDescriptor: function (t, k) {
+        return t === proxied && k === "foo" && fakeDesc;
+      }
+    }),
+    "foo"
+  );
+  return (returnedDesc.value     === fakeDesc.value
+&& returnedDesc.configurable === fakeDesc.configurable
+&& returnedDesc.writable     === false
+&& returnedDesc.enumerable   === false);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

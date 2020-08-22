@@ -1,0 +1,25 @@
+// functions / generators / yield *, iterator closing
+module.exports = () => {
+  module.exports._ = Symbol.iterator;
+  var closed = '';
+  var iter = __createIterableObject([1, 2, 3], {
+    'return': function(){
+      closed += 'a';
+      return {done: true};
+    }
+  });
+  var gen = (function* generator(){
+    try {
+      yield *iter;
+    } finally {
+      closed += 'b';
+    }
+  })();
+  gen.next();
+  gen['return']();
+  return closed === 'ab';
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

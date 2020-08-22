@@ -1,0 +1,14 @@
+// 2021 features / Promise.any / AggregateError
+module.exports = (asyncTestPassed) => {
+  Promise.any([
+    Promise.reject(1),
+    Promise.reject(2),
+    Promise.reject(3)
+  ]).catch(error => {
+    if (error instanceof AggregateError && error.errors.length === 3) asyncTestPassed();
+  });
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/882c7796-a2a2-4b16-b485-c841650cc1d5/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,0 +1,12 @@
+// misc / Proxy, internal 'deleteProperty' calls / Array.prototype.shift
+module.exports = () => {
+// Array.prototype.shift -> DeletePropertyOrThrow -> [[Delete]]
+  var del = [];
+  var p = new Proxy([0,,0,,0,0], { deleteProperty: function(o, v) { del.push(v); return delete o[v]; }});
+  p.shift();
+  return del + '' === "0,2,5";
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/08cced2c-51be-424b-af7d-756701be9d90/node_modules/google-closure-compiler-linux/compiler EACCES

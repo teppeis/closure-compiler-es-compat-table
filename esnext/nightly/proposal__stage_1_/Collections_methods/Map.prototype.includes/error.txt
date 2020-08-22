@@ -1,0 +1,9 @@
+// proposal (stage 1) / Collections methods / Map.prototype.includes
+module.exports = () => {
+  return new Map([[1, 2], [2, NaN]]).includes(2)
+&& new Map([[1, 2], [2, NaN]]).includes(NaN);
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES

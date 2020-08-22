@@ -1,0 +1,12 @@
+// proposal (stage 1) / Collections methods / Map.prototype.merge
+module.exports = () => {
+  var map = new Map([[1, 4], [2, 5]]).merge(new Map([[2, 7], [3, 6]]));
+  return map.size === 3
+&& map.get(1) === 4
+&& map.get(2) === 7
+&& map.get(3) === 6;
+
+};
+----------------------------------------------------------
+Process spawn error. Is java in the path?
+spawn /tmp/faast/14a8eaef-a77a-40fe-8745-c7606694cbc6/node_modules/google-closure-compiler-linux/compiler EACCES
