@@ -1,9 +1,9 @@
 module.exports = function() {
   var b = [], a = {}, c;
   for (c in{a:1, b:1}) {
-    a.$jscomp$loop$prop$i$1 = c, b.push(function(a) {
+    a.$jscomp$loop$prop$i$1 = c, b.push(function(d) {
       return function() {
-        return a.$jscomp$loop$prop$i$1;
+        return d.$jscomp$loop$prop$i$1;
       };
     }(a)), a = {$jscomp$loop$prop$i$1:a.$jscomp$loop$prop$i$1};
   }

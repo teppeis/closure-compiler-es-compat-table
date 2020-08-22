@@ -64,65 +64,65 @@ var $jscomp$lookupPolyfilledValue = function(a, b) {
   c = a[c];
   return void 0 !== c ? c : a[b];
 };
-$jscomp.polyfill = function(a, b, c, e) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, e) : $jscomp.polyfillUnisolated(a, b, c, e));
+$jscomp.polyfill = function(a, b, c, d) {
+  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, d) : $jscomp.polyfillUnisolated(a, b, c, d));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, e) {
+$jscomp.polyfillUnisolated = function(a, b, c, d) {
   c = $jscomp.global;
   a = a.split(".");
-  for (e = 0; e < a.length - 1; e++) {
-    var d = a[e];
-    if (!(d in c)) {
+  for (d = 0; d < a.length - 1; d++) {
+    var e = a[d];
+    if (!(e in c)) {
       return;
     }
-    c = c[d];
+    c = c[e];
   }
   a = a[a.length - 1];
-  e = c[a];
-  b = b(e);
-  b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  d = c[a];
+  b = b(d);
+  b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
 };
-$jscomp.polyfillIsolated = function(a, b, c, e) {
-  var d = a.split(".");
-  a = 1 === d.length;
-  e = d[0];
-  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < d.length - 1; f++) {
-    var g = d[f];
-    if (!(g in e)) {
+$jscomp.polyfillIsolated = function(a, b, c, d) {
+  var e = a.split(".");
+  a = 1 === e.length;
+  d = e[0];
+  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < e.length - 1; f++) {
+    var g = e[f];
+    if (!(g in d)) {
       return;
     }
-    e = e[g];
+    d = d[g];
   }
-  d = d[d.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
+  e = e[e.length - 1];
+  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
-    function a() {
+    function c() {
     }
-    new a;
-    Reflect.construct(a, [], function() {
+    new c;
+    Reflect.construct(c, [], function() {
     });
-    return new a instanceof a;
+    return new c instanceof c;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(a, e, d) {
-      a = b(a, e);
-      d && Reflect.setPrototypeOf(a, d.prototype);
-      return a;
+    return function(c, d, e) {
+      c = b(c, d);
+      e && Reflect.setPrototypeOf(c, e.prototype);
+      return c;
     };
   }
-  return function(a, b, d) {
-    void 0 === d && (d = a);
-    d = $jscomp.objectCreate(d.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, d, b) || d;
+  return function(c, d, e) {
+    void 0 === e && (e = c);
+    e = $jscomp.objectCreate(e.prototype || Object.prototype);
+    return Function.prototype.apply.call(c, e, d) || e;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
@@ -151,8 +151,8 @@ $jscomp.inherits = function(a, b) {
     for (c in b) {
       if ("prototype" != c) {
         if (Object.defineProperties) {
-          var e = Object.getOwnPropertyDescriptor(b, c);
-          e && Object.defineProperty(a, c, e);
+          var d = Object.getOwnPropertyDescriptor(b, c);
+          d && Object.defineProperty(a, c, d);
         } else {
           a[c] = b[c];
         }
@@ -173,10 +173,10 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(a, e) {
+    return function(c, d) {
       try {
-        return b(a, e), !0;
-      } catch (d) {
+        return b(c, d), !0;
+      } catch (e) {
         return !1;
       }
     };
@@ -184,10 +184,10 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   return null;
 }, "es6", "es5");
 module.exports = function() {
-  var a = !1, b = function(b) {
-    a = "barbaz" === b;
-  }, c = function(a) {
-    return b.call(this, "bar" + a) || this;
+  var a = !1, b = function(d) {
+    a = "barbaz" === d;
+  }, c = function(d) {
+    return b.call(this, "bar" + d) || this;
   };
   $jscomp.inherits(c, b);
   new c("baz");

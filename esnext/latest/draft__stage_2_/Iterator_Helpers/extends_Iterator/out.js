@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -146,28 +146,28 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
-    function a() {
+    function c() {
     }
-    new a;
-    Reflect.construct(a, [], function() {
+    new c;
+    Reflect.construct(c, [], function() {
     });
-    return new a instanceof a;
+    return new c instanceof c;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(a, d, e) {
-      a = b(a, d);
-      e && Reflect.setPrototypeOf(a, e.prototype);
-      return a;
+    return function(c, d, e) {
+      c = b(c, d);
+      e && Reflect.setPrototypeOf(c, e.prototype);
+      return c;
     };
   }
-  return function(a, b, e) {
-    void 0 === e && (e = a);
+  return function(c, d, e) {
+    void 0 === e && (e = c);
     e = $jscomp.objectCreate(e.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, e, b) || e;
+    return Function.prototype.apply.call(c, e, d) || e;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
@@ -218,9 +218,9 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(a, d) {
+    return function(c, d) {
       try {
-        return b(a, d), !0;
+        return b(c, d), !0;
       } catch (e) {
         return !1;
       }

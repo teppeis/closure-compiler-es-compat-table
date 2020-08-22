@@ -1,10 +1,10 @@
 module.exports = function() {
-  var b = [], a = new Proxy({foo:1, bar:2}, {defineProperty:function(a, c, d) {
-    b.push(c);
-    Object.defineProperty(a, c, d);
+  var a = [], e = new Proxy({foo:1, bar:2}, {defineProperty:function(c, b, d) {
+    a.push(b);
+    Object.defineProperty(c, b, d);
     return !0;
   }});
-  Object.freeze(a);
-  return "foo,bar" === b + "";
+  Object.freeze(e);
+  return "foo,bar" === a + "";
 };
 

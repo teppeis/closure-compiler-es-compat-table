@@ -15,9 +15,9 @@ $jscomp.makeIterator = function(a) {
 };
 module.exports = function() {
   for (var a = [], b = {}, d = $jscomp.makeIterator(["a", "b"]), c = d.next(); !c.done; b = {$jscomp$loop$prop$i$2:b.$jscomp$loop$prop$i$2}, c = d.next()) {
-    b.$jscomp$loop$prop$i$2 = c.value, a.push(function(a) {
+    b.$jscomp$loop$prop$i$2 = c.value, a.push(function(e) {
       return function() {
-        return a.$jscomp$loop$prop$i$2;
+        return e.$jscomp$loop$prop$i$2;
       };
     }(b));
   }

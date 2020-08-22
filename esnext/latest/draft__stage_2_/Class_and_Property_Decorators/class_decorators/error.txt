@@ -12,7 +12,7 @@ return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
 
 };
 ----------------------------------------------------------
-esnext/v20200614/draft__stage_2_/Class_and_Property_Decorators/class_decorators/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. Character '@' (U+0040) is not a valid identifier start char
+esnext/v20200628/draft__stage_2_/Class_and_Property_Decorators/class_decorators/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. Character '@' (U+0040) is not a valid identifier start char
   4| @nonconf
      ^
 

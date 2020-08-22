@@ -80,25 +80,25 @@ $jscomp.polyfill("Object.getOwnPropertySymbols", function(a) {
   };
 }, "es6", "es5");
 $jscomp.polyfill("Reflect.ownKeys", function(a) {
-  return a ? a : function(a) {
-    var c = [], b = Object.getOwnPropertyNames(a);
-    a = Object.getOwnPropertySymbols(a);
-    for (var d = 0; d < b.length; d++) {
-      ("jscomp_symbol_" == b[d].substring(0, 14) ? a : c).push(b[d]);
+  return a ? a : function(b) {
+    var c = [], e = Object.getOwnPropertyNames(b);
+    b = Object.getOwnPropertySymbols(b);
+    for (var d = 0; d < e.length; d++) {
+      ("jscomp_symbol_" == e[d].substring(0, 14) ? b : c).push(e[d]);
     }
-    return c.concat(a);
+    return c.concat(b);
   };
 }, "es6", "es5");
 $jscomp.polyfill("Object.getOwnPropertyDescriptors", function(a) {
-  return a ? a : function(a) {
-    for (var c = {}, b = Reflect.ownKeys(a), d = 0; d < b.length; d++) {
-      c[b[d]] = Object.getOwnPropertyDescriptor(a, b[d]);
+  return a ? a : function(b) {
+    for (var c = {}, e = Reflect.ownKeys(b), d = 0; d < e.length; d++) {
+      c[e[d]] = Object.getOwnPropertyDescriptor(b, e[d]);
     }
     return c;
   };
 }, "es8", "es5");
 module.exports = function() {
-  var a = new Proxy({a:1}, {getOwnPropertyDescriptor:function(a, c) {
+  var a = new Proxy({a:1}, {getOwnPropertyDescriptor:function(b, c) {
   }});
   return !Object.getOwnPropertyDescriptors(a).hasOwnProperty("a");
 };

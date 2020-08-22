@@ -1,11 +1,11 @@
 module.exports = function() {
-  var b = [], a = new Proxy({exec:function() {
+  var a = [], d = new Proxy({exec:function() {
     return null;
-  }}, {get:function(a, c) {
-    b.push(c);
-    return a[c];
+  }}, {get:function(c, b) {
+    a.push(b);
+    return c[b];
   }});
-  RegExp.prototype.test.call(a);
-  return "exec" === b + "";
+  RegExp.prototype.test.call(d);
+  return "exec" === a + "";
 };
 

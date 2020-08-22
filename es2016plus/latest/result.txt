@@ -131,8 +131,8 @@
 2020_features/optional_chaining_operator___._/optional_function_call/error.txt: [CompileError]
 2020_features/nullish_coalescing_operator_____/out.js: [Pass]
 2021_features/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
-2021_features/Promise.any/fulfillment/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'any'
-2021_features/Promise.any/AggregateError/out.js: TypeError: Object function (d) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var a = this.createResolveAndReject_(); try { d(a.resolve, a.reject); } catch (h) { a.reject(h); } } has no method 'any'
+2021_features/Promise.any/fulfillment/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var e = this.createResolveAndReject_(); try { a(e.resolve, e.reject); } catch (g) { e.reject(g); } } has no method 'any'
+2021_features/Promise.any/AggregateError/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; var e = this.createResolveAndReject_(); try { a(e.resolve, e.reject); } catch (g) { e.reject(g); } } has no method 'any'
 2021_features/WeakReferences/WeakRef_minimal_support/out.js: ReferenceError: WeakRef is not defined
 2021_features/WeakReferences/FinalizationRegistry_minimal_support/out.js: ReferenceError: FinalizationRegistry is not defined
 2021_features/Logical_Assignment/Or_Or_Equals_basic_support/error.txt: [CompileError]

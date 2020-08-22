@@ -36,55 +36,55 @@ var $jscomp$lookupPolyfilledValue = function(a, c) {
   b = a[b];
   return void 0 !== b ? b : a[c];
 };
-$jscomp.polyfill = function(a, c, b, e) {
-  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, e) : $jscomp.polyfillUnisolated(a, c, b, e));
+$jscomp.polyfill = function(a, c, b, d) {
+  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, d) : $jscomp.polyfillUnisolated(a, c, b, d));
 };
-$jscomp.polyfillUnisolated = function(a, c, b, e) {
+$jscomp.polyfillUnisolated = function(a, c, b, d) {
   b = $jscomp.global;
   a = a.split(".");
-  for (e = 0; e < a.length - 1; e++) {
-    var d = a[e];
-    if (!(d in b)) {
+  for (d = 0; d < a.length - 1; d++) {
+    var e = a[d];
+    if (!(e in b)) {
       return;
     }
-    b = b[d];
+    b = b[e];
   }
   a = a[a.length - 1];
-  e = b[a];
-  c = c(e);
-  c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
+  d = b[a];
+  c = c(d);
+  c != d && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
 };
-$jscomp.polyfillIsolated = function(a, c, b, e) {
-  var d = a.split(".");
-  a = 1 === d.length;
-  e = d[0];
-  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < d.length - 1; f++) {
-    var g = d[f];
-    if (!(g in e)) {
+$jscomp.polyfillIsolated = function(a, c, b, d) {
+  var e = a.split(".");
+  a = 1 === e.length;
+  d = e[0];
+  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < e.length - 1; f++) {
+    var g = e[f];
+    if (!(g in d)) {
       return;
     }
-    e = e[g];
+    d = d[g];
   }
-  d = d[d.length - 1];
-  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
+  e = e[e.length - 1];
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? d[e] : null;
   c = c(b);
-  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d, d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("Object.is", function(a) {
-  return a ? a : function(a, b) {
-    return a === b ? 0 !== a || 1 / a === 1 / b : a !== a && b !== b;
+  return a ? a : function(c, b) {
+    return c === b ? 0 !== c || 1 / c === 1 / b : c !== c && b !== b;
   };
 }, "es6", "es3");
 $jscomp.polyfill("Array.prototype.includes", function(a) {
-  return a ? a : function(a, b) {
-    var c = this;
-    c instanceof String && (c = String(c));
-    var d = c.length;
+  return a ? a : function(c, b) {
+    var d = this;
+    d instanceof String && (d = String(d));
+    var e = d.length;
     b = b || 0;
-    for (0 > b && (b = Math.max(b + d, 0)); b < d; b++) {
-      var f = c[b];
-      if (f === a || Object.is(f, a)) {
+    for (0 > b && (b = Math.max(b + e, 0)); b < e; b++) {
+      var f = d[b];
+      if (f === c || Object.is(f, c)) {
         return !0;
       }
     }
@@ -101,20 +101,20 @@ $jscomp.checkStringArgs = function(a, c, b) {
   return a + "";
 };
 $jscomp.polyfill("String.prototype.includes", function(a) {
-  return a ? a : function(a, b) {
-    return -1 !== $jscomp.checkStringArgs(this, a, "includes").indexOf(a, b || 0);
+  return a ? a : function(c, b) {
+    return -1 !== $jscomp.checkStringArgs(this, c, "includes").indexOf(c, b || 0);
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = [], c = new Proxy({length:3, 0:"", 1:"", 2:"", 3:""}, {get:function(b, c) {
-    a.push(c);
-    return b[c];
+  var a = [], c = new Proxy({length:3, 0:"", 1:"", 2:"", 3:""}, {get:function(b, d) {
+    a.push(d);
+    return b[d];
   }});
   Array.prototype.includes.call(c, {});
   if ("length,0,1,2" === a + "") {
-    return a = [], c = new Proxy({length:4, 0:NaN, 1:"", 2:NaN, 3:""}, {get:function(b, c) {
-      a.push(c);
-      return b[c];
+    return a = [], c = new Proxy({length:4, 0:NaN, 1:"", 2:NaN, 3:""}, {get:function(b, d) {
+      a.push(d);
+      return b[d];
     }}), Array.prototype.includes.call(c, NaN, 1), "length,1,2" === a + "";
   }
 };

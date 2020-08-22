@@ -75,10 +75,10 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Object.entries", function(a) {
-  return a ? a : function(a) {
-    var c = [], b;
-    for (b in a) {
-      $jscomp.owns(a, b) && c.push([b, a[b]]);
+  return a ? a : function(b) {
+    var c = [], d;
+    for (d in b) {
+      $jscomp.owns(b, d) && c.push([d, b[d]]);
     }
     return c;
   };

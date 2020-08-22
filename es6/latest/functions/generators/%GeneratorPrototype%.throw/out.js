@@ -230,8 +230,8 @@ $jscomp.generator.Engine_.prototype.return_ = function(a) {
   this.context_.start_();
   var b = this.context_.yieldAllIterator_;
   if (b) {
-    return this.yieldAllStep_("return" in b ? b["return"] : function(a) {
-      return {value:a, done:!0};
+    return this.yieldAllStep_("return" in b ? b["return"] : function(c) {
+      return {value:c, done:!0};
     }, a, this.context_.return);
   }
   this.context_.return(a);
@@ -307,18 +307,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -348,18 +348,18 @@ $jscomp.iteratorPrototype = function(a) {
 };
 module.exports = function() {
   function a() {
-    var c;
-    return $jscomp.generator.createGenerator(a, function(a) {
-      switch(a.nextAddress) {
+    var d;
+    return $jscomp.generator.createGenerator(a, function(e) {
+      switch(e.nextAddress) {
         case 1:
-          return a.setCatchFinallyBlocks(2), a.yield(5, 4);
+          return e.setCatchFinallyBlocks(2), e.yield(5, 4);
         case 4:
-          return a.yield(6, 5);
+          return e.yield(6, 5);
         case 5:
-          a.leaveTryBlock(0);
+          e.leaveTryBlock(0);
           break;
         case 2:
-          c = a.enterCatchBlock(), b = "foo" === c, a.jumpToEnd();
+          d = e.enterCatchBlock(), b = "foo" === d, e.jumpToEnd();
       }
     });
   }

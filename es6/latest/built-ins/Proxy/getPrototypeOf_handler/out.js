@@ -1,7 +1,7 @@
 module.exports = function() {
-  var b = {}, c = {}, a = new Proxy(b, {getPrototypeOf:function(a) {
-    return a === b && c;
+  var a = {}, b = {}, d = new Proxy(a, {getPrototypeOf:function(c) {
+    return c === a && b;
   }});
-  return Object.getPrototypeOf(a) === c;
+  return Object.getPrototypeOf(d) === b;
 };
 

@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200614/misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel/in.js:6: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
+es6/v20200628/misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel/in.js:6: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
   6|   Object.isFrozen(p);
        ^^^^^^^^^^^^^^^^^^
 

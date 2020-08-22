@@ -10,23 +10,23 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200614/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: foo
+es6/v20200628/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: foo
   5|   if(true) function foo() { return 2; }
                          ^^^
 
-es6/v20200614/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:6: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: bar
+es6/v20200628/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:6: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: bar
   6|   if(false) {} else function bar() { return 3; }
                                   ^^^
 
-es6/v20200614/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:7: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
+es6/v20200628/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:7: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
   7|   if(true) function baz() { return 4; } else {}
                          ^^^
 
-es6/v20200614/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:8: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: qux
+es6/v20200628/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:8: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: qux
   8|   if(false) function qux() { return 5; } else function qux() { return 6; }
                           ^^^
 
-es6/v20200614/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:8: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: qux
+es6/v20200628/annex_b/non-strict_function_semantics/function_statements_in_if-statement_clauses/in.js:8: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: qux
   8|   if(false) function qux() { return 5; } else function qux() { return 6; }
                                                             ^^^
 

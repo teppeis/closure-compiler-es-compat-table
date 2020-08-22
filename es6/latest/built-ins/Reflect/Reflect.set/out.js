@@ -95,9 +95,9 @@ $jscomp.findDescriptor = function(a, b) {
   }
 };
 $jscomp.polyfill("Reflect.set", function(a) {
-  return a ? a : function(a, c, d, e) {
-    var b = $jscomp.findDescriptor(a, c);
-    return b ? b.set ? (b.set.call(3 < arguments.length ? e : a, d), !0) : b.writable && !Object.isFrozen(a) ? (a[c] = d, !0) : !1 : Reflect.isExtensible(a) ? (a[c] = d, !0) : !1;
+  return a ? a : function(b, c, d, e) {
+    var f = $jscomp.findDescriptor(b, c);
+    return f ? f.set ? (f.set.call(3 < arguments.length ? e : b, d), !0) : f.writable && !Object.isFrozen(b) ? (b[c] = d, !0) : !1 : Reflect.isExtensible(b) ? (b[c] = d, !0) : !1;
   };
 }, "es6", "es5");
 module.exports = function() {

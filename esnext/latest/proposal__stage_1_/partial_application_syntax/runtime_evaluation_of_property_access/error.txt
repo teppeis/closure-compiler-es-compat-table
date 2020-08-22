@@ -9,7 +9,7 @@ return p('a') === 'abc';
 
 };
 ----------------------------------------------------------
-esnext/v20200614/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+esnext/v20200628/proposal__stage_1_/partial_application_syntax/runtime_evaluation_of_property_access/in.js:4: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
   4| var p = o.f(?, 'b');
                  ^
 

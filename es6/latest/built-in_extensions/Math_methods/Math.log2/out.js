@@ -72,8 +72,8 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Math.log2", function(a) {
-  return a ? a : function(a) {
-    return Math.log(a) / Math.LN2;
+  return a ? a : function(b) {
+    return Math.log(b) / Math.LN2;
   };
 }, "es6", "es3");
 module.exports = function() {

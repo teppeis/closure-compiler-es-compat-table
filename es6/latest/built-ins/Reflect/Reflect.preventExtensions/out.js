@@ -75,9 +75,9 @@ $jscomp.polyfill("Reflect", function(a) {
   return a ? a : {};
 }, "es6", "es3");
 $jscomp.polyfill("Reflect.preventExtensions", function(a) {
-  return a ? a : $jscomp.ASSUME_ES5 || "function" == typeof Object.preventExtensions ? function(a) {
-    Object.preventExtensions(a);
-    return !Object.isExtensible(a);
+  return a ? a : $jscomp.ASSUME_ES5 || "function" == typeof Object.preventExtensions ? function(b) {
+    Object.preventExtensions(b);
+    return !Object.isExtensible(b);
   } : function() {
     return !1;
   };

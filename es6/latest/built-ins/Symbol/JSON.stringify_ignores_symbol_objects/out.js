@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -126,14 +126,14 @@ $jscomp.iteratorPrototype = function(a) {
   return a;
 };
 module.exports = function() {
-  var a = function(a) {
-    var b = {foo:a};
+  var a = function(d) {
+    var e = {foo:d};
     try {
-      b[a] = 1;
+      e[d] = 1;
     } catch (g) {
     }
-    var c = [a];
-    return '{"foo":{}}' === JSON.stringify(b) && "[{}]" === JSON.stringify(c) && "{}" === JSON.stringify(a);
+    var f = [d];
+    return '{"foo":{}}' === JSON.stringify(e) && "[{}]" === JSON.stringify(f) && "{}" === JSON.stringify(d);
   }, b = Object(Symbol()), c = Object(Symbol());
   Object.defineProperty(c, "toJSON", {enumerable:!1, value:null});
   return a(b) && a(c);

@@ -101,28 +101,28 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
-    function a() {
+    function c() {
     }
-    new a;
-    Reflect.construct(a, [], function() {
+    new c;
+    Reflect.construct(c, [], function() {
     });
-    return new a instanceof a;
+    return new c instanceof c;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(a, e, d) {
-      a = b(a, e);
-      d && Reflect.setPrototypeOf(a, d.prototype);
-      return a;
+    return function(c, e, d) {
+      c = b(c, e);
+      d && Reflect.setPrototypeOf(c, d.prototype);
+      return c;
     };
   }
-  return function(a, b, d) {
-    void 0 === d && (d = a);
+  return function(c, e, d) {
+    void 0 === d && (d = c);
     d = $jscomp.objectCreate(d.prototype || Object.prototype);
-    return Function.prototype.apply.call(a, d, b) || d;
+    return Function.prototype.apply.call(c, d, e) || d;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
@@ -173,9 +173,9 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(a, e) {
+    return function(c, e) {
       try {
-        return b(a, e), !0;
+        return b(c, e), !0;
       } catch (d) {
         return !1;
       }
@@ -186,15 +186,15 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
 module.exports = function() {
   var a = function() {
   };
-  a.prototype.qux = function(a) {
-    return this.foo + a;
+  a.prototype.qux = function(c) {
+    return this.foo + c;
   };
   var b = function() {
     return a.apply(this, arguments) || this;
   };
   $jscomp.inherits(b, a);
-  b.prototype.qux = function(b) {
-    return a.prototype.qux.call(this, "bar" + b);
+  b.prototype.qux = function(c) {
+    return a.prototype.qux.call(this, "bar" + c);
   };
   b = new b;
   b.foo = "foo";

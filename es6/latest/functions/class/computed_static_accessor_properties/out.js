@@ -17,8 +17,8 @@ module.exports = function() {
   $jscomp.global.Object.defineProperty(a, "foo", {configurable:!0, enumerable:!0, get:function() {
     return "foo";
   }});
-  $jscomp.global.Object.defineProperty(a, "bar", {configurable:!0, enumerable:!0, set:function(a) {
-    b = a;
+  $jscomp.global.Object.defineProperty(a, "bar", {configurable:!0, enumerable:!0, set:function(c) {
+    b = c;
   }});
   a.bar = !0;
   return "foo" === a.foo && b;

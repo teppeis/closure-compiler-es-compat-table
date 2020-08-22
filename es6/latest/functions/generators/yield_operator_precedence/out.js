@@ -230,8 +230,8 @@ $jscomp.generator.Engine_.prototype.return_ = function(a) {
   this.context_.start_();
   var b = this.context_.yieldAllIterator_;
   if (b) {
-    return this.yieldAllStep_("return" in b ? b["return"] : function(a) {
-      return {value:a, done:!0};
+    return this.yieldAllStep_("return" in b ? b["return"] : function(c) {
+      return {value:c, done:!0};
     }, a, this.context_.return);
   }
   this.context_.return(a);
@@ -307,18 +307,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(a) {
+  var c = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (a || "") + "_" + c++, a);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
   return d;
 }, "es6", "es3");
@@ -348,12 +348,12 @@ $jscomp.iteratorPrototype = function(a) {
 };
 module.exports = function() {
   function a() {
-    return $jscomp.generator.createGenerator(a, function(a) {
-      if (1 == a.nextAddress) {
-        return a.yield(!1, 2);
+    return $jscomp.generator.createGenerator(a, function(d) {
+      if (1 == d.nextAddress) {
+        return d.yield(!1, 2);
       }
-      b = a.yieldResult;
-      a.jumpToEnd();
+      b = d.yieldResult;
+      d.jumpToEnd();
     });
   }
   var b, c = a();

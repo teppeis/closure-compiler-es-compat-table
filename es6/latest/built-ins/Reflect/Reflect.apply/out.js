@@ -79,8 +79,8 @@ $jscomp.polyfill("Reflect.apply", function(a) {
     return a;
   }
   var b = Function.prototype.apply;
-  return function(a, d, e) {
-    return b.call(a, d, e);
+  return function(c, d, e) {
+    return b.call(c, d, e);
   };
 }, "es6", "es3");
 module.exports = function() {

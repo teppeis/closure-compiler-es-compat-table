@@ -16,7 +16,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200614/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:11: ERROR - [JSC_SUPER_CALL_IN_ARROW] closure-compiler does not allow calls to `super()` in arrow functions
+es6/v20200628/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:11: ERROR - [JSC_SUPER_CALL_IN_ARROW] closure-compiler does not allow calls to `super()` in arrow functions
   11|       var callSuper = () => super('foo');
                                   ^^^^^
 

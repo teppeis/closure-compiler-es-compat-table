@@ -9,11 +9,11 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
 
 ----------------------------------------------------------
-es6/v20200614/syntax/default_function_parameters/temporal_dead_zone/in.js:3: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: a
+es6/v20200628/syntax/default_function_parameters/temporal_dead_zone/in.js:3: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: a
   3|   (function(a=a){}());
                    ^
 
-es6/v20200614/syntax/default_function_parameters/temporal_dead_zone/in.js:4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
+es6/v20200628/syntax/default_function_parameters/temporal_dead_zone/in.js:4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
   4|   (function(a=b,b){}());
                    ^
 

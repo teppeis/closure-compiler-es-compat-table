@@ -1,20 +1,20 @@
 module.exports = function() {
-  var a = !1;
+  var b = !1;
   new Proxy({}, {});
   try {
-    return new (new Proxy({}, {construct:function(b, a) {
+    return new (new Proxy({}, {construct:function(a, c) {
       return {};
     }})), !1;
-  } catch (b) {
+  } catch (a) {
   }
   try {
     return new (new Proxy(function() {
-    }, {construct:function(b, c) {
-      a = !0;
+    }, {construct:function(a, c) {
+      b = !0;
       return 5;
     }})), !1;
-  } catch (b) {
+  } catch (a) {
   }
-  return a;
+  return b;
 };
 

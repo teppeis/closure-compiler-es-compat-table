@@ -1,12 +1,12 @@
 module.exports = function() {
-  function a(a) {
-    var b = function() {
+  function b(c) {
+    var a = function() {
       return 5;
     };
-    Object.setPrototypeOf ? Object.setPrototypeOf(b, a) : b.__proto__ = a;
-    b = Function.prototype.bind.call(b, null);
-    return Object.getPrototypeOf(b) === a;
+    Object.setPrototypeOf ? Object.setPrototypeOf(a, c) : a.__proto__ = c;
+    a = Function.prototype.bind.call(a, null);
+    return Object.getPrototypeOf(a) === c;
   }
-  return a(Function.prototype) && a({}) && a(null);
+  return b(Function.prototype) && b({}) && b(null);
 };
 

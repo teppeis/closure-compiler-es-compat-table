@@ -86,18 +86,18 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var c = function(a, b) {
-    this.$jscomp$symbol$id_ = a;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:b});
+  var c = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   c.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var b = 0, d = function(a) {
+  var b = 0, d = function(e) {
     if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new c("jscomp_symbol_" + (a || "") + "_" + b++, a);
+    return new c("jscomp_symbol_" + (e || "") + "_" + b++, e);
   };
   return d;
 }, "es6", "es3");

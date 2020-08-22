@@ -81,18 +81,18 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("String.prototype.repeat", function(a) {
-  return a ? a : function(a) {
+  return a ? a : function(b) {
     var c = $jscomp.checkStringArgs(this, null, "repeat");
-    if (0 > a || 1342177279 < a) {
+    if (0 > b || 1342177279 < b) {
       throw new RangeError("Invalid count value");
     }
-    a |= 0;
-    for (var b = ""; a;) {
-      if (a & 1 && (b += c), a >>>= 1) {
+    b |= 0;
+    for (var d = ""; b;) {
+      if (b & 1 && (d += c), b >>>= 1) {
         c += c;
       }
     }
-    return b;
+    return d;
   };
 }, "es6", "es3");
 $jscomp.stringPadding = function(a, b) {
@@ -100,9 +100,9 @@ $jscomp.stringPadding = function(a, b) {
   return 0 < b && a ? a.repeat(Math.ceil(b / a.length)).substring(0, b) : "";
 };
 $jscomp.polyfill("String.prototype.padEnd", function(a) {
-  return a ? a : function(a, c) {
-    var b = $jscomp.checkStringArgs(this, null, "padStart");
-    return b + $jscomp.stringPadding(c, a - b.length);
+  return a ? a : function(b, c) {
+    var d = $jscomp.checkStringArgs(this, null, "padStart");
+    return d + $jscomp.stringPadding(c, b - d.length);
   };
 }, "es8", "es3");
 module.exports = function() {
