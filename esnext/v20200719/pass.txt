@@ -1,0 +1,1 @@
+draft__stage_2_/_.item__method/%TypedArray%.prototype.item/out.js: [Pass]
