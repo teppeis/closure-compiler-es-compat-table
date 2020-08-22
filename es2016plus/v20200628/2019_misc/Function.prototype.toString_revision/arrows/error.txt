@@ -1,0 +1,13 @@
+// 2019 misc / Function.prototype.toString revision / arrows
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  var str = 'a => b';
+  return eval('(' + str + ')') + '' === str;
+
+};
+----------------------------------------------------------
+es2016plus/v20200628/2019_misc/Function.prototype.toString_revision/arrows/in.js:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var str = 'a => b';
+       ^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

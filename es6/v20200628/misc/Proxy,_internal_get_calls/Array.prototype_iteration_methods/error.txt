@@ -1,0 +1,31 @@
+// misc / Proxy, internal 'get' calls / Array.prototype iteration methods
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // Array.prototype methods -> Get -> [[Get]]
+  var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
+    'indexOf', 'join', 'lastIndexOf', 'map', 'reduce', 'reduceRight', 'some'];
+  var get;
+  var p = new Proxy({length: 2, 0: '', 1: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+  for(var i = 0; i < methods.length; i+=1) {
+    get = [];
+    Array.prototype[methods[i]].call(p, Function());
+    if (get + '' !== (
+      methods[i] === 'fill' ? "length" :
+        methods[i] === 'every' ? "length,0" :
+          methods[i] === 'lastIndexOf' || methods[i] === 'reduceRight' ? "length,1,0" :
+            "length,0,1"
+    )) {
+      return false;
+    }
+  }
+  return true;
+
+};
+----------------------------------------------------------
+es6/v20200628/misc/Proxy,_internal_get_calls/Array.prototype_iteration_methods/in.js:5: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  5|   var methods = ['copyWithin', 'every', 'fill', 'filter', 'find', 'findIndex', 'forEach',
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6|     'indexOf', 'join', 'lastIndexOf', 'map', 'reduce', 'reduceRight', 'some'];
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

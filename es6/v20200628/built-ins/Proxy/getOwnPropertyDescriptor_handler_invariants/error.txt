@@ -1,0 +1,95 @@
+// built-ins / Proxy / "getOwnPropertyDescriptor" handler invariants
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  // A property cannot be reported as non-existent, if it exists as a non-configurable
+  // own property of the target object.
+  var proxied = {};
+  var proxy = new Proxy(proxied, {
+    getOwnPropertyDescriptor: function () {
+      passed = true;
+      return undefined;
+    }
+  });
+  Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+  try {
+    Object.getOwnPropertyDescriptor(proxy, "foo");
+    return false;
+  } catch(e) {}
+  // A property cannot be reported as non-existent, if it exists as an own property
+  // of the target object and the target object is not extensible.
+  proxied.bar = 3;
+  Object.preventExtensions(proxied);
+  try {
+    Object.getOwnPropertyDescriptor(proxy, "bar");
+    return false;
+  } catch(e) {}
+  // A property cannot be reported as existent, if it does not exists as an own property
+  // of the target object and the target object is not extensible.
+  try {
+    Object.getOwnPropertyDescriptor(new Proxy(proxied, {
+      getOwnPropertyDescriptor: function() {
+        return { value: 2, configurable: true, writable: true, enumerable: true };
+      }}), "baz");
+    return false;
+  } catch(e) {}
+  // A property cannot be reported as non-configurable, if it does not exists as an own
+  // property of the target object or if it exists as a configurable own property of
+  // the target object.
+  try {
+    Object.getOwnPropertyDescriptor(new Proxy({}, {
+      getOwnPropertyDescriptor: function() {
+        return { value: 2, configurable: false, writable: true, enumerable: true };
+      }}), "baz");
+    return false;
+  } catch(e) {}
+  try {
+    Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
+      getOwnPropertyDescriptor: function() {
+        return { value: 1, configurable: false, writable: true, enumerable: true };
+      }}), "baz");
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20200628/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:16: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+  16|     Object.getOwnPropertyDescriptor(proxy, "foo");
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+es6/v20200628/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:24: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+  24|     Object.getOwnPropertyDescriptor(proxy, "bar");
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+es6/v20200628/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:30: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+  30|     Object.getOwnPropertyDescriptor(new Proxy(proxied, {
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  31|       getOwnPropertyDescriptor: function() {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  32|         return { value: 2, configurable: true, writable: true, enumerable: true };
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  33|       }}), "baz");
+      ^^^^^^^^^^^^^^^^^
+
+es6/v20200628/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:40: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+  40|     Object.getOwnPropertyDescriptor(new Proxy({}, {
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  41|       getOwnPropertyDescriptor: function() {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  42|         return { value: 2, configurable: false, writable: true, enumerable: true };
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  43|       }}), "baz");
+      ^^^^^^^^^^^^^^^^^
+
+es6/v20200628/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:47: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+  47|     Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  48|       getOwnPropertyDescriptor: function() {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  49|         return { value: 1, configurable: false, writable: true, enumerable: true };
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  50|       }}), "baz");
+      ^^^^^^^^^^^^^^^^^
+
+0 error(s), 5 warning(s)
