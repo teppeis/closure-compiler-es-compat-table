@@ -1,17 +1,5 @@
 [
   {
-    "path": "candidate__stage_3_/WeakReferences/WeakRef_minimal_support",
-    "category": "candidate (stage 3)",
-    "test": "WeakReferences",
-    "subtest": "WeakRef minimal support"
-  },
-  {
-    "path": "candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support",
-    "category": "candidate (stage 3)",
-    "test": "WeakReferences",
-    "subtest": "FinalizationRegistry minimal support"
-  },
-  {
     "path": "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
     "category": "candidate (stage 3)",
     "test": "instance class fields",
@@ -90,16 +78,6 @@
     "subtest": "private static accessor properties"
   },
   {
-    "path": "candidate__stage_3_/numeric_separators",
-    "category": "candidate (stage 3)",
-    "test": "numeric separators"
-  },
-  {
-    "path": "candidate__stage_3_/Promise.any",
-    "category": "candidate (stage 3)",
-    "test": "Promise.any"
-  },
-  {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
@@ -110,60 +88,6 @@
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
     "subtest": "RegExp.$1-$9"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "||= basic support"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "||= short-circuiting behaviour"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "||= setter not unecessarily invoked"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "&&= basic support"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_short-circuiting_behaviour",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "&&= short-circuiting behaviour"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "&&= setter not unecessarily invoked"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "??= basic support"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "??= short-circuiting behaviour"
-  },
-  {
-    "path": "candidate__stage_3_/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked",
-    "category": "candidate (stage 3)",
-    "test": "Logical Assignment",
-    "subtest": "??= setter not unecessarily invoked"
   },
   {
     "path": "candidate__stage_3_/Hashbang_Grammar",
@@ -490,6 +414,24 @@
     "category": "draft (stage 2)",
     "test": "Iterator Helpers",
     "subtest": "AsyncIterator.prototype[@@toStringTag]"
+  },
+  {
+    "path": "draft__stage_2_/_.item__method/Array.prototype.item",
+    "category": "draft (stage 2)",
+    "test": "`.item` method",
+    "subtest": "Array.prototype.item"
+  },
+  {
+    "path": "draft__stage_2_/_.item__method/String.prototype.item",
+    "category": "draft (stage 2)",
+    "test": "`.item` method",
+    "subtest": "String.prototype.item"
+  },
+  {
+    "path": "draft__stage_2_/_.item__method/%TypedArray%.prototype.item",
+    "category": "draft (stage 2)",
+    "test": "`.item` method",
+    "subtest": "%TypedArray%.prototype.item"
   },
   {
     "path": "proposal__stage_1_/do_expressions",

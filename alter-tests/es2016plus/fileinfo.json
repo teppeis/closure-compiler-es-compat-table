@@ -772,8 +772,91 @@
     "test": "nullish coalescing operator (??)"
   },
   {
-    "path": "finished__stage_4_/String.prototype.replaceAll",
-    "category": "finished (stage 4)",
+    "path": "2021_features/String.prototype.replaceAll",
+    "category": "2021 features",
     "test": "String.prototype.replaceAll"
+  },
+  {
+    "path": "2021_features/Promise.any/fulfillment",
+    "category": "2021 features",
+    "test": "Promise.any",
+    "subtest": "fulfillment"
+  },
+  {
+    "path": "2021_features/Promise.any/AggregateError",
+    "category": "2021 features",
+    "test": "Promise.any",
+    "subtest": "AggregateError"
+  },
+  {
+    "path": "2021_features/WeakReferences/WeakRef_minimal_support",
+    "category": "2021 features",
+    "test": "WeakReferences",
+    "subtest": "WeakRef minimal support"
+  },
+  {
+    "path": "2021_features/WeakReferences/FinalizationRegistry_minimal_support",
+    "category": "2021 features",
+    "test": "WeakReferences",
+    "subtest": "FinalizationRegistry minimal support"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/Or_Or_Equals_basic_support",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "||= basic support"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "||= short-circuiting behaviour"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "||= setter not unecessarily invoked"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/And_And_Equals_basic_support",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "&&= basic support"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/And_And_Equals_short-circuiting_behaviour",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "&&= short-circuiting behaviour"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "&&= setter not unecessarily invoked"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/QQ_Equals_basic_support",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "??= basic support"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "??= short-circuiting behaviour"
+  },
+  {
+    "path": "2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked",
+    "category": "2021 features",
+    "test": "Logical Assignment",
+    "subtest": "??= setter not unecessarily invoked"
+  },
+  {
+    "path": "2021_features/numeric_separators",
+    "category": "2021 features",
+    "test": "numeric separators"
   }
 ]
