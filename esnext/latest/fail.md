@@ -1,10 +1,6 @@
 
 ## Candidate (stage 3)
 
-### WeakReferences
-- WeakRef minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/WeakRef_minimal_support/out.js))
-- FinalizationRegistry minimal support ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/WeakReferences/FinalizationRegistry_minimal_support/out.js))
-
 ### instance class fields
 - public instance class fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/instance_class_fields/public_instance_class_fields/error.txt))
 - private instance class fields basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support/error.txt))
@@ -24,26 +20,9 @@
 - private accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/private_class_methods/private_accessor_properties/error.txt))
 - private static accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/private_class_methods/private_static_accessor_properties/error.txt))
 
-### numeric separators
-- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/numeric_separators/error.txt))
-
-### Promise.any
-- Promise.any ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Promise.any/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Promise.any/out.js))
-
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
 - RegExp.$1-$9 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.%241-%249/error.txt))
-
-### Logical Assignment
-- ||= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_basic_support/error.txt))
-- ||= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_short-circuiting_behaviour/error.txt))
-- ||= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/Or_Or_Equals_setter_not_unecessarily_invoked/error.txt))
-- &&= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_basic_support/error.txt))
-- &&= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_short-circuiting_behaviour/error.txt))
-- &&= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/And_And_Equals_setter_not_unecessarily_invoked/error.txt))
-- ??= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_basic_support/error.txt))
-- ??= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/error.txt))
-- ??= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/error.txt))
 
 ### Hashbang Grammar
 - Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/candidate__stage_3_/Hashbang_Grammar/out.js))
@@ -121,6 +100,10 @@
 - AsyncIterator.prototype.take ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take/out.js))
 - AsyncIterator.prototype.toArray ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray/out.js))
 - AsyncIterator.prototype[@@toStringTag] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/out.js))
+
+### `.item` method
+- Array.prototype.item ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/_.item__method/Array.prototype.item/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/_.item__method/Array.prototype.item/out.js))
+- String.prototype.item ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/_.item__method/String.prototype.item/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/latest/draft__stage_2_/_.item__method/String.prototype.item/out.js))
 
 ## Proposal (stage 1)
 
