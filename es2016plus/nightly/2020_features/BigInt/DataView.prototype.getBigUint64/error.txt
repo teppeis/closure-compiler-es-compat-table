@@ -8,4 +8,4 @@ return view.getBigUint64(0) === 1n;
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/79c6a873-2035-45d5-bf34-816f865ec101/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/08f51849-687f-49b0-bc1a-15cc2e88e7f3/node_modules/google-closure-compiler-linux/compiler EACCES

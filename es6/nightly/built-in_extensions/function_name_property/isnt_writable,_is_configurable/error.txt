@@ -8,4 +8,4 @@ descriptor.configurable === true;
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/ca8527b9-8a47-47d8-857d-2e134b9fd26f/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/7cf7a13a-c4fb-4ce6-ba5e-a4fdf494c729/node_modules/google-closure-compiler-linux/compiler EACCES
