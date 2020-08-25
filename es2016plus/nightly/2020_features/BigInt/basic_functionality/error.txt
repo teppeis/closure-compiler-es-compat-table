@@ -5,4 +5,4 @@ return (1n + 2n) === 3n;
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/08f51849-687f-49b0-bc1a-15cc2e88e7f3/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/7890779b-36f8-4da1-abe5-0ebc5bdf1d60/node_modules/google-closure-compiler-linux/compiler EACCES

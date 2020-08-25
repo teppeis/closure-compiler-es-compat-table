@@ -9,4 +9,4 @@ module.exports = () => {
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/1559710f-fe0c-485d-9d4c-a2db63edd352/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/7fdb947d-a215-4724-940d-c601f2984741/node_modules/google-closure-compiler-linux/compiler EACCES

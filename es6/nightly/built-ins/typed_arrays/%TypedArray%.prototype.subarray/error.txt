@@ -13,4 +13,4 @@ typeof Float64Array.prototype.subarray === "function";
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/7cf7a13a-c4fb-4ce6-ba5e-a4fdf494c729/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/851df2da-8a8b-4032-a151-9d7951eb9241/node_modules/google-closure-compiler-linux/compiler EACCES
