@@ -5,4 +5,4 @@ return Object.isSealed({| foo: 42 |});
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/7fdb947d-a215-4724-940d-c601f2984741/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/cc827f4d-a670-4604-a60a-d6125a188bae/node_modules/google-closure-compiler-linux/compiler EACCES

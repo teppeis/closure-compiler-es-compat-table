@@ -14,4 +14,4 @@ module.exports = (asyncTestPassed) => {
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/7890779b-36f8-4da1-abe5-0ebc5bdf1d60/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/c2c86923-2e2f-4845-9c6a-4e89ded47fe9/node_modules/google-closure-compiler-linux/compiler EACCES

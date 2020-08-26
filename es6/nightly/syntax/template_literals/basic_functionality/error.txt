@@ -7,4 +7,4 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/851df2da-8a8b-4032-a151-9d7951eb9241/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/d4629ac5-5de6-408c-9759-7a35803a6751/node_modules/google-closure-compiler-linux/compiler EACCES
