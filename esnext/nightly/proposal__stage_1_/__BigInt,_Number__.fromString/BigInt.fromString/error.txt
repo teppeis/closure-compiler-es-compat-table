@@ -5,4 +5,4 @@ return BigInt.fromString('42') === 42n;
 };
 ----------------------------------------------------------
 Process spawn error. Is java in the path?
-spawn /tmp/faast/cc827f4d-a670-4604-a60a-d6125a188bae/node_modules/google-closure-compiler-linux/compiler EACCES
+spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
