@@ -7,5 +7,8 @@ return 123i === 'string123number123';
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
+esnext/nightly/proposal__stage_1_/extensible_numeric_literals/in.js:6:10: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+  6| return 123i === 'string123number123';
+               ^
+
+1 error(s), 0 warning(s)

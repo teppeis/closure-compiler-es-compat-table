@@ -9,5 +9,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/functions/class/class_name_is_lexically_scoped/in.js:7:2: ERROR - [CLASS_REASSIGNMENT] Class names defined inside a function cannot be reassigned.
+  7|   C = void undefined;
+       ^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

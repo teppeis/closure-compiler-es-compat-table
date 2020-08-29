@@ -8,5 +8,8 @@ return p('b', 'c').x === 'abc';
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
+esnext/nightly/proposal__stage_1_/partial_application_syntax/constructor_partial_application_with_rest/in.js:6:23: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  6| var p = new F('a', ...);
+                            ^
+
+1 error(s), 0 warning(s)

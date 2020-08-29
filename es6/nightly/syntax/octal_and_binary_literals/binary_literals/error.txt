@@ -1,8 +1,0 @@
-// syntax / octal and binary literals / binary literals
-module.exports = () => {
-  return 0b10 === 2 && 0B10 === 2;
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -1,8 +1,0 @@
-// draft (stage 2) / Iterator Helpers / Iterator.prototype.asIndexedPairs
-module.exports = () => {
-  return Array.from([1, 2, 3].values().asIndexedPairs()).join() === '0,1,1,2,2,3';
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -5,5 +5,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3:16: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp flag 's'" to targeted output language.
+  3|   const regex = /foo.bar/s;
+                     ^^^^^^^^^^
+
+1 error(s), 0 warning(s)

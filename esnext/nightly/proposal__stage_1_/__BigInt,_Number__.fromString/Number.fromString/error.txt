@@ -1,8 +1,0 @@
-// proposal (stage 1) / { BigInt, Number }.fromString / Number.fromString
-module.exports = () => {
-  return Number.fromString('42') === 42;
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES

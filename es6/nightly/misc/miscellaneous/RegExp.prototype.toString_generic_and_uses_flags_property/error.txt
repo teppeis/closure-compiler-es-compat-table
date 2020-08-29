@@ -1,8 +1,0 @@
-// misc / miscellaneous / RegExp.prototype.toString generic and uses "flags" property
-module.exports = () => {
-  return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -5,5 +5,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/in.js:3:17: ERROR - [JSC_PARSE_ERROR] Parse error. for-in statement may not have initializer
+  3|   for (var i = 0 in {}) {}
+                      ^
+
+1 error(s), 0 warning(s)

@@ -10,5 +10,12 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:6:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  6|   var get = [];
+       ^^^^^^^^^^^^^
+
+es6/nightly/misc/Proxy,_internal_get_calls/instanceof_operator/in.js:8:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'instanceof' operator is not being used.
+  8|   ({}) instanceof p;
+       ^^^^^^^^^^^^^^^^^
+
+0 error(s), 2 warning(s)

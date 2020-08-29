@@ -1,8 +1,0 @@
-// draft (stage 2) / Iterator Helpers / AsyncIterator.prototype[@@toStringTag]
-module.exports = () => {
-  return AsyncIterator.prototype[Symbol.toStringTag] === 'AsyncIterator';
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES

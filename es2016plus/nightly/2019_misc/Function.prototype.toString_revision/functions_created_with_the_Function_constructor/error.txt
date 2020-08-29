@@ -7,5 +7,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

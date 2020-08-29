@@ -1,8 +1,0 @@
-// functions / class / anonymous class
-module.exports = () => {
-  return typeof class {} === "function";
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES

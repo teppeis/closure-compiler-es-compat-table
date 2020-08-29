@@ -31,5 +31,12 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/built-ins/Proxy/get_handler_invariants/in.js:16:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+  16|     proxy.foo;
+          ^^^^^^^^^
+
+es6/nightly/built-ins/Proxy/get_handler_invariants/in.js:26:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+  26|     proxy.bar;
+          ^^^^^^^^^
+
+0 error(s), 2 warning(s)

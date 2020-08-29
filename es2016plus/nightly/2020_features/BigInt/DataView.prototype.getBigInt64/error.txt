@@ -7,5 +7,12 @@ return view.getBigInt64(0) === 1n;
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:5:20: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  5| view.setBigInt64(0, 1n);
+                         ^^
+
+es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:6:31: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  6| return view.getBigInt64(0) === 1n;
+                                    ^^
+
+2 error(s), 0 warning(s)

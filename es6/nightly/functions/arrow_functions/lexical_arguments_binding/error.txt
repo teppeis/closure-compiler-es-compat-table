@@ -1,9 +1,0 @@
-// functions / arrow functions / lexical "arguments" binding
-module.exports = () => {
-  var f = (function() { return z => arguments[0]; }(5));
-  return f(6) === 5;
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES

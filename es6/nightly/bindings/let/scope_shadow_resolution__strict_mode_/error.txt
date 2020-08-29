@@ -11,5 +11,12 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/bindings/let/scope_shadow_resolution__strict_mode_/in.js:8:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   8|   } catch(e) {
+          ^^^^^^^^^^
+   9|     return false;
+      ^^^^^^^^^^^^^^^^^
+  10|   }
+      ^^^
+
+0 error(s), 1 warning(s)

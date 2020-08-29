@@ -10,5 +10,8 @@ return result === 'tromple';
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
+esnext/nightly/draft__stage_2_/Generator_function.sent_Meta_Property/in.js:5:17: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+  5| result = function.sent;
+                      ^
+
+1 error(s), 0 warning(s)

@@ -1,8 +1,0 @@
-// 2019 features / Array.prototype.{flat, flatMap} / Array.prototype.flat
-module.exports = () => {
-  return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES

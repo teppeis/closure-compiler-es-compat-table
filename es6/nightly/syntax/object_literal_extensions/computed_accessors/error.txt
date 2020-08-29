@@ -11,5 +11,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/syntax/object_literal_extensions/computed_accessors/in.js:6:6: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'computed getter/setter in an object literal' is not yet implemented.
+  6|       get [x] () { return 1 },
+           ^^^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

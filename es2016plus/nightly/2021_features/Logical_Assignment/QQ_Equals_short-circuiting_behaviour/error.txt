@@ -7,5 +7,8 @@ return a === 1 && i === 1;
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/in.js:5:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  5| a ??= ++i;
+          ^
+
+1 error(s), 0 warning(s)

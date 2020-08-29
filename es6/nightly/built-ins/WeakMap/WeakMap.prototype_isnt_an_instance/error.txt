@@ -11,5 +11,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/built-ins/WeakMap/WeakMap.prototype_isnt_an_instance/in.js:6:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakMap.prototype.has' is not being used.
+  6|     WeakMap.prototype.has(obj);
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

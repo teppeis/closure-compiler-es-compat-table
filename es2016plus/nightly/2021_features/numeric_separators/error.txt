@@ -5,5 +5,12 @@ return 1_000_000.000_001 === 1000000.000001 &&
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2021_features/numeric_separators/in.js:3:7: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
+  3| return 1_000_000.000_001 === 1000000.000001 &&
+            ^
+
+es2016plus/nightly/2021_features/numeric_separators/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: numeric separator.
+  4| 0b1010_0001_1000_0101 === 0b1010000110000101;
+     ^
+
+2 error(s), 0 warning(s)

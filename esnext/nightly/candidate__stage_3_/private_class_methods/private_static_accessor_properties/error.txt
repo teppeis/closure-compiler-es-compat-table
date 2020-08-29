@@ -13,5 +13,8 @@ return new C().x() === 42 && y;
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
+esnext/nightly/candidate__stage_3_/private_class_methods/private_static_accessor_properties/in.js:5:11: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+  5| static get #x() { return 42; }
+                ^
+
+1 error(s), 0 warning(s)

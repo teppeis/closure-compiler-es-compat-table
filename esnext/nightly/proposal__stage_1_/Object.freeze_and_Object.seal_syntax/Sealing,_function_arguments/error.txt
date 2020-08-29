@@ -12,5 +12,8 @@ return true;
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES
+esnext/nightly/proposal__stage_1_/Object.freeze_and_Object.seal_syntax/Sealing,_function_arguments/in.js:3:13: ERROR - [JSC_PARSE_ERROR] Parse error. ')' expected
+  3| function foo(| bar, baz |) {
+                  ^
+
+1 error(s), 0 warning(s)

@@ -15,5 +15,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7:4: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  7|     Date.prototype.valueOf(); return false;
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

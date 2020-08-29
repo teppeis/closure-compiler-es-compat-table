@@ -9,5 +9,12 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
 
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/syntax/default_function_parameters/temporal_dead_zone/in.js:3:14: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: a
+  3|   (function(a=a){}());
+                   ^
+
+es6/nightly/syntax/default_function_parameters/temporal_dead_zone/in.js:4:14: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
+  4|   (function(a=b,b){}());
+                   ^
+
+2 error(s), 0 warning(s)

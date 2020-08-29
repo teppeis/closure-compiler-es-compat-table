@@ -8,5 +8,14 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/syntax/destructuring,_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   return new Function("{a, x:b, y:e}","[c, d]",
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5|     "return a === 1 && b === 2 && c === 3 && "
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6| + "d === 4 && e === void undefined;"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7|   )({a:1, x:2}, [3, 4]);
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

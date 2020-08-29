@@ -10,5 +10,8 @@ return false;
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2019_misc/optional_catch_binding/basic/in.js:9:0: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   9| return false;
+      ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

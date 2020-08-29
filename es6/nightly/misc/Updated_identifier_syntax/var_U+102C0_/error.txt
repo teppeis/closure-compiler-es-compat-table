@@ -5,5 +5,8 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/b608d623-825c-4f21-af4e-22c09ff77b37/node_modules/google-closure-compiler-linux/compiler EACCES
+es6/nightly/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3:6: ERROR - [JSC_PARSE_ERROR] Parse error. Character '?' (U+D800) is not a valid identifier start char
+  3|   var 𐋀;
+           ^
+
+1 error(s), 0 warning(s)

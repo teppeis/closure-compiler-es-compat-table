@@ -11,5 +11,8 @@ module.exports = () => {
 // EXPECT: 6: ERROR
 
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2017_features/async_functions/cannot_await_in_parameters/in.js:6:24: ERROR - [JSC_PARSE_ERROR] Parse error. `await` is illegal in parameter default value.
+  6|   (async function a(b = await Promise.resolve()) {
+                             ^
+
+1 error(s), 0 warning(s)

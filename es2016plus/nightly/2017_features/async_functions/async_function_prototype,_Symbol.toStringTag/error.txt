@@ -1,8 +1,0 @@
-// 2017 features / async functions / async function prototype, Symbol.toStringTag
-module.exports = () => {
-  return Object.getPrototypeOf(async function (){})[Symbol.toStringTag] === "AsyncFunction";
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES

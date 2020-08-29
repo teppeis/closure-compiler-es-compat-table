@@ -1,8 +1,0 @@
-// proposal (stage 1) / Collections methods / Set.prototype.find
-module.exports = () => {
-  return new Set([1, 2, 3]).find(it => !(it % 2)) === 2;
-
-};
-----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/e3b43dc7-71d6-46da-bc1f-f4d1e5779e4a/node_modules/google-closure-compiler-linux/compiler EACCES

@@ -9,5 +9,8 @@ module.exports = () => {
 // EXPECT: 4: ERROR
 
 ----------------------------------------------------------
-Process spawn error. Is java in the path?
-spawn /tmp/faast/05b7e1f8-01db-4539-98fe-7fc928639921/node_modules/google-closure-compiler-linux/compiler EACCES
+es2016plus/nightly/2017_features/async_functions/no_line_break_between_async_and_function/in.js:4:2: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  4|   async
+       ^^^^^
+
+0 error(s), 1 warning(s)
