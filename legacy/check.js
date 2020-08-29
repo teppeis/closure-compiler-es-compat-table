@@ -65,7 +65,10 @@ function checkTimeout(file, cb) {
  * Compiler doesn't output error code before v20190528.
  */
 function isOldOutputCompiler() {
-  var match = /^v(\d{8})$/.exec(clVersion);
+  if (clVersion === "nightly") {
+    return false;
+  }
+  var match = /^v?(\d{8})$/.exec(clVersion);
   if (!match) {
     throw new Error("Unexpected clVersion: " + clVersion);
   }
