@@ -1,6 +1,7 @@
 "use strict";
 
 const child_process = require("child_process");
+const fs = require("fs").promises;
 const { compiler: Compiler } = require("google-closure-compiler");
 const { getNativeImagePath } = require("google-closure-compiler/lib/utils");
 const { promisify } = require("util");
@@ -11,6 +12,8 @@ async function compile(options) {
   // use native binary
   compiler.JAR_PATH = null;
   compiler.javaPath = getNativeImagePath();
+  // To fix bug since google-closure-compiler@20200820
+  await fs.chmod(compiler.javaPath, 0o755);
   return new Promise((resolve, reject) => {
     compiler.run((exitCode, stdout, stderr) => {
       if (exitCode === 0) {
