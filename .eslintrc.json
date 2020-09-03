@@ -1,7 +1,33 @@
 {
   "root": true,
-  "extends": ["teppeis/node-v12", "teppeis/+prettier"],
+  "extends": ["teppeis/node-v14", "teppeis/+prettier"],
   "rules": {
     "node/shebang": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["legacy/*"],
+      "extends": ["teppeis/es5", "teppeis/+node", "teppeis/+prettier"],
+      "rules": {
+        "node/no-unsupported-features/es-builtins": [
+          "error",
+          {
+            "version": "0.10"
+          }
+        ],
+        "node/no-unsupported-features/es-syntax": [
+          "error",
+          {
+            "version": "0.10"
+          }
+        ],
+        "node/no-unsupported-features/node-builtins": [
+          "error",
+          {
+            "version": "0.10"
+          }
+        ]
+      }
+    }
+  ]
 }
