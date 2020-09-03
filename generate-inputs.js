@@ -11,8 +11,8 @@ const rimraf = require("rimraf");
 const { basedir, testDir, alterTestDir, fileList } = init();
 
 fileList
-  .filter(dir => !testDir || `${dir}/`.includes(testDir))
-  .forEach(dir => {
+  .filter((dir) => !testDir || `${dir}/`.includes(testDir))
+  .forEach((dir) => {
     const src = getTestSrc(dir);
     const writeDir = path.join(basedir, dir);
     console.log(writeDir);
@@ -26,10 +26,10 @@ if (!testDir) {
 }
 
 function cleanupDirsForRemovedTests(fileList) {
-  const pathSet = new Set(fileList.map(file => path.join(basedir, file)));
+  const pathSet = new Set(fileList.map((file) => path.join(basedir, file)));
   const files = glob.sync(path.join(basedir, "**/in.js"));
-  const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
-  removedDirs.forEach(dir => {
+  const removedDirs = files.map(path.dirname).filter((dir) => !pathSet.has(dir));
+  removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
     rimraf.sync(dir, { glob: false });
   });
@@ -60,9 +60,9 @@ function getTestSrc(dir) {
   const alterDir = path.join(alterTestDir, dir);
   try {
     return fs.readFileSync(path.join(alterDir, "alter.js"), "utf8");
-  } catch (ignore) {}
+  } catch {}
   try {
     return fs.readFileSync(path.join(alterDir, "orig.js"), "utf8");
-  } catch (ignore) {}
+  } catch {}
   throw new Error(`test file not found: ${dir}`);
 }
