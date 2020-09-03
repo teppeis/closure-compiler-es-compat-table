@@ -35,8 +35,8 @@ const resultFile = fs.readFileSync(path.join(process.cwd(), resultFilePass), "ut
 
 const failedFileInfo = resultFile
   .split("\n")
-  .filter(line => !!line)
-  .map(line => {
+  .filter((line) => !!line)
+  .map((line) => {
     const match = /^([^:]*): (.*)$/.exec(line);
     if (!match) {
       throw new Error(`Invalid result line: ${line}`);
@@ -57,10 +57,7 @@ const failedFileInfo = resultFile
   });
 
 function escapeDirAsUrl(dir) {
-  return dir
-    .split("/")
-    .map(encodeURIComponent)
-    .join("/");
+  return dir.split("/").map(encodeURIComponent).join("/");
 }
 
 // const output = [`# ES2015`];
@@ -105,8 +102,8 @@ const refs = [
 let prevCategory = null;
 let prevTest = null;
 failedFileInfo
-  .filter(info => !!info)
-  .filter(({ path }) => !skipPathPrefixes.some(prefix => path.startsWith(prefix)))
+  .filter((info) => !!info)
+  .filter(({ path }) => !skipPathPrefixes.some((prefix) => path.startsWith(prefix)))
   .filter(({ path }) => !skipPaths.has(path))
   .forEach(({ path: testPath, category, test, subtest, url }) => {
     if (prevCategory !== category) {
@@ -122,7 +119,7 @@ failedFileInfo
       subtestName = test;
     }
     let ref = "";
-    const { refUrl } = refs.find(ref => ref.pattern.test(testPath)) || {};
+    const { refUrl } = refs.find((ref) => ref.pattern.test(testPath)) || {};
     if (refUrl) {
       ref = `: ${refUrl}`;
     }

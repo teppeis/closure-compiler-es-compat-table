@@ -18,10 +18,10 @@ var buildDir = path.join(path.dirname(__dirname), esVersion, clVersion);
 
 var dirs = require(path.join(buildDir, "files.json"));
 var files = dirs
-  .map(function(dir) {
+  .map(function (dir) {
     return path.join(dir, "out.js");
   })
-  .filter(function(file) {
+  .filter(function (file) {
     return !testDir || file.indexOf(testDir) > -1;
   });
 
@@ -30,16 +30,16 @@ var createIterableObjectFunc = fs.readFileSync(
   "utf8"
 );
 
-async.mapSeries(files, checkTimeout, function(err, results) {
+async.mapSeries(files, checkTimeout, function (err, results) {
   if (err) {
     return console.error("check.js", err);
   }
   console.log(
     results
-      .map(function(msg) {
+      .map(function (msg) {
         return msg
           .split("\n")
-          .map(function(line) {
+          .map(function (line) {
             return line.trim();
           })
           .join(" ");
@@ -49,7 +49,7 @@ async.mapSeries(files, checkTimeout, function(err, results) {
 });
 
 function checkTimeout(file, cb) {
-  async.timeout(check, 5000)(file, function(err, msg) {
+  async.timeout(check, 5000)(file, function (err, msg) {
     if (err) {
       if (err.code === "ETIMEDOUT") {
         return cb(null, file + ": [Timeout: asyncTestPassed() is not called for 5s]");
@@ -135,7 +135,7 @@ function check(file, cb) {
     clearTimeout: clearTimeout,
     clearInterval: clearInterval,
     // avoid no side-effects suspicious warnings
-    ensureUsed: function() {},
+    ensureUsed: function () {},
     // console: console,
   };
 
@@ -161,7 +161,7 @@ function check(file, cb) {
       return vm.runInNewContext(
         src,
         assign(context, {
-          callback: function() {
+          callback: function () {
             return cb(null, file + ": [Pass]");
           },
         }),

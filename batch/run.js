@@ -34,7 +34,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
 (async () => {
   const commonOpts = {
     include: [{ path: targetDir, cwd }]
-      .concat(dotDirs.map(dir => ({ path: dir, cwd })))
+      .concat(dotDirs.map((dir) => ({ path: dir, cwd })))
       .map(({ path: dir, cwd }) => ({ path: path.relative(cwd, dir), cwd })),
     packageJson: {
       dependencies: {
@@ -81,7 +81,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
   const files = glob.sync(`${targetDir}/**/in.js`, { dot: true });
   const total = files.length;
   let done = 0;
-  const promises = files.map(input => {
+  const promises = files.map((input) => {
     const output = path.join(path.dirname(input), "out.js");
     const errorFile = path.join(path.dirname(input), "error.txt");
     return m.functions
@@ -95,13 +95,13 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
         language_out: "ECMASCRIPT5",
       })
       .then(
-        async result => {
+        async (result) => {
           if (result[0].error) {
             await writeError(input, errorFile, result[0].error);
           }
           return fs.writeFile(output, result[0].src);
         },
-        async e => {
+        async (e) => {
           if (typeof e === "string") {
             const message = e
               .split("\n")

@@ -58,12 +58,12 @@ ${throws}${initIterator}${this.expr}
 }
 
 const esVersions = cli.input.length > 0 ? [cli.input[0]] : ["es6", "es2016plus", "esnext"];
-esVersions.forEach(esVersion => {
+esVersions.forEach((esVersion) => {
   const { testDir, alterTestDir, data } = init(esVersion);
   const fileList = [];
-  data.tests.forEach(test => {
+  data.tests.forEach((test) => {
     if (test.subtests) {
-      test.subtests.forEach(subtest => {
+      test.subtests.forEach((subtest) => {
         fileList.push(
           writeInputSrcFile(
             subtest.exec,
@@ -88,10 +88,10 @@ esVersions.forEach(esVersion => {
 });
 
 function cleanupDirsForRemovedTests(fileList, alterTestDir) {
-  const pathSet = new Set(fileList.map(file => path.join(alterTestDir, file.path)));
+  const pathSet = new Set(fileList.map((file) => path.join(alterTestDir, file.path)));
   const files = glob.sync(path.join(alterTestDir, "**/orig.js"));
-  const removedDirs = files.map(path.dirname).filter(dir => !pathSet.has(dir));
-  removedDirs.forEach(dir => {
+  const removedDirs = files.map(path.dirname).filter((dir) => !pathSet.has(dir));
+  removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
     rimraf.sync(dir, { glob: false });
   });
@@ -201,7 +201,7 @@ function createTestCode(fn, name) {
 function getExistigSrc(origPath) {
   try {
     return fs.readFileSync(origPath, "utf8");
-  } catch (ignore) {
+  } catch {
     return null;
   }
 }
