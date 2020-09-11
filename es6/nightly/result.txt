@@ -403,7 +403,7 @@ built-ins/Reflect/Reflect.construct_creates_instances_from_third_argument/out.js
 built-ins/Reflect/Reflect.construct,_Array_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_RegExp_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_Function_subclassing/out.js: [InvalidResult: false]
-built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<d> has no method 'createResolveAndReject_'
+built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<e> has no method 'createResolveAndReject_'
 built-ins/Promise/basic_functionality/out.js: [Pass]
 built-ins/Promise/constructor_requires_new/out.js: [Pass]
 built-ins/Promise/Promise.prototype_isnt_an_instance/out.js: [Skip]
