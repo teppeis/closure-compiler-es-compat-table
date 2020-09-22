@@ -28,7 +28,6 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
-$jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL = !0;
 $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
   var c = function() {
   };
@@ -298,7 +297,7 @@ $jscomp.polyfill("Promise", function(a) {
     }
     this.state_ = b;
     this.result_ = f;
-    2 === this.state_ && $jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL && this.scheduleUnhandledRejectionCheck_();
+    2 === this.state_ && this.scheduleUnhandledRejectionCheck_();
     this.executeOnSettledCallbacks_();
   };
   e.prototype.scheduleUnhandledRejectionCheck_ = function() {

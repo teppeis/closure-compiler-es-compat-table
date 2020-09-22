@@ -19,7 +19,6 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
-$jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL = !0;
 $jscomp.getGlobal = function(d) {
   d = ["object" == typeof globalThis && globalThis, d, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
   for (var e = 0; e < d.length; ++e) {
@@ -199,7 +198,7 @@ $jscomp.polyfill("Promise", function(d) {
     }
     this.state_ = a;
     this.result_ = b;
-    2 === this.state_ && $jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL && this.scheduleUnhandledRejectionCheck_();
+    2 === this.state_ && this.scheduleUnhandledRejectionCheck_();
     this.executeOnSettledCallbacks_();
   };
   c.prototype.scheduleUnhandledRejectionCheck_ = function() {
