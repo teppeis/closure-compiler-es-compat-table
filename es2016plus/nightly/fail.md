@@ -104,12 +104,6 @@
 - DataView.prototype.getBigInt64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigInt64/error.txt))
 - DataView.prototype.getBigUint64 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/BigInt/DataView.prototype.getBigUint64/error.txt))
 
-### optional chaining operator (?.)
-- optional property access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_property_access/error.txt))
-- optional bracket access ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_bracket_access/error.txt))
-- optional method call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_method_call/error.txt))
-- optional function call ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2020_features/optional_chaining_operator___._/optional_function_call/error.txt))
-
 ## 2021 features
 
 ### String.prototype.replaceAll
