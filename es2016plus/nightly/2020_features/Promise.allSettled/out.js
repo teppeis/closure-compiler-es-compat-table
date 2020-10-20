@@ -95,7 +95,7 @@ $jscomp.polyfill("Promise", function(c) {
       e(a);
     });
   }
-  if (c && !($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent)) {
+  if (c && !(($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent) && $jscomp.global.Promise && $jscomp.global.Promise.toString().includes("[native code]"))) {
     return c;
   }
   b.prototype.asyncExecute = function(a) {

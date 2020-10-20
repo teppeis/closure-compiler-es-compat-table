@@ -324,8 +324,6 @@ $jscomp.polyfill("Symbol", function(a) {
   };
   return d;
 }, "es6", "es3");
-$jscomp.initSymbolIterator = function() {
-};
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
     return a;
@@ -339,8 +337,6 @@ $jscomp.polyfill("Symbol.iterator", function(a) {
   }
   return a;
 }, "es6", "es3");
-$jscomp.initSymbolAsyncIterator = function() {
-};
 $jscomp.iteratorPrototype = function(a) {
   a = {next:a};
   a[Symbol.iterator] = function() {

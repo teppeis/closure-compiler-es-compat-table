@@ -344,8 +344,6 @@ $jscomp.polyfill("Symbol", function(a) {
   };
   return g;
 }, "es6", "es3");
-$jscomp.initSymbolIterator = function() {
-};
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
     return a;
@@ -359,8 +357,6 @@ $jscomp.polyfill("Symbol.iterator", function(a) {
   }
   return a;
 }, "es6", "es3");
-$jscomp.initSymbolAsyncIterator = function() {
-};
 $jscomp.iteratorPrototype = function(a) {
   a = {next:a};
   a[Symbol.iterator] = function() {
@@ -377,7 +373,7 @@ $jscomp.polyfill("Promise", function(a) {
       f(c);
     });
   }
-  if (a && !($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent)) {
+  if (a && !(($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent) && $jscomp.global.Promise && $jscomp.global.Promise.toString().includes("[native code]"))) {
     return a;
   }
   b.prototype.asyncExecute = function(c) {
