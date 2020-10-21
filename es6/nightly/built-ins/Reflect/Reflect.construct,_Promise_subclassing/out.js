@@ -134,7 +134,7 @@ $jscomp.polyfill("Promise", function(c) {
       d(a);
     });
   }
-  if (c && !(($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent) && $jscomp.global.Promise && $jscomp.global.Promise.toString().includes("[native code]"))) {
+  if (c && (!($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent) || !$jscomp.global.Promise || -1 === $jscomp.global.Promise.toString().indexOf("[native code]"))) {
     return c;
   }
   e.prototype.asyncExecute = function(a) {
