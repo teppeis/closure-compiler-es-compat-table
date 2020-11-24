@@ -14,15 +14,15 @@ $jscomp.makeIterator = function(a) {
   return b ? b.call(a) : $jscomp.arrayIterator(a);
 };
 module.exports = function() {
-  var a, b;
-  var c = $jscomp.makeIterator(function() {
-    var d = [1, 2], e = $jscomp.makeIterator(d);
-    a = e.next().value;
-    b = e.next().value;
-    return d;
-  }());
-  var f = c.next().value;
+  var a = $jscomp;
+  var b = a.makeIterator;
+  var d = [1, 2];
+  var c = $jscomp.makeIterator(d);
+  var e = c.next().value;
   c = c.next().value;
-  return 1 === f && 2 === c && 1 === a && 2 === b;
+  b = b.call(a, d);
+  a = b.next().value;
+  b = b.next().value;
+  return 1 === a && 2 === b && 1 === e && 2 === c;
 };
 
