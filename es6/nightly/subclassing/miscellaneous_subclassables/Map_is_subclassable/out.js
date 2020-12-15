@@ -99,7 +99,7 @@ $jscomp.polyfillIsolated = function(a, b, c, g) {
   h = h[h.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? g[h] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, h, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[h] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(h) : $jscomp.POLYFILL_PREFIX + h, h = $jscomp.propertyToPolyfillSymbol[h], $jscomp.defineProperty(g, h, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, h, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[h] && ($jscomp.propertyToPolyfillSymbol[h] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(h) : $jscomp.POLYFILL_PREFIX + h), h = $jscomp.propertyToPolyfillSymbol[h], $jscomp.defineProperty(g, h, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.getConstructImplementation = function() {
   function a() {

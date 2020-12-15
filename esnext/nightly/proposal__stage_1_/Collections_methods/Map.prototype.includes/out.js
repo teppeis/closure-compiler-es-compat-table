@@ -92,7 +92,7 @@ $jscomp.polyfillIsolated = function(a, d, e, g) {
   h = h[h.length - 1];
   e = $jscomp.IS_SYMBOL_NATIVE && "es6" === e ? g[h] : null;
   d = d(e);
-  null != d && (a ? $jscomp.defineProperty($jscomp.polyfills, h, {configurable:!0, writable:!0, value:d}) : d !== e && ($jscomp.propertyToPolyfillSymbol[h] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(h) : $jscomp.POLYFILL_PREFIX + h, h = $jscomp.propertyToPolyfillSymbol[h], $jscomp.defineProperty(g, h, {configurable:!0, writable:!0, value:d})));
+  null != d && (a ? $jscomp.defineProperty($jscomp.polyfills, h, {configurable:!0, writable:!0, value:d}) : d !== e && (void 0 === $jscomp.propertyToPolyfillSymbol[h] && ($jscomp.propertyToPolyfillSymbol[h] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(h) : $jscomp.POLYFILL_PREFIX + h), h = $jscomp.propertyToPolyfillSymbol[h], $jscomp.defineProperty(g, h, {configurable:!0, writable:!0, value:d})));
 };
 $jscomp.initSymbol = function() {
 };
