@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(b, e, a, c) {
   d = d[d.length - 1];
   a = $jscomp.IS_SYMBOL_NATIVE && "es6" === a ? c[d] : null;
   e = e(a);
-  null != e && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:e}) : e !== a && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(c, d, {configurable:!0, writable:!0, value:e})));
+  null != e && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:e}) : e !== a && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (a = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + a + "$" + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(c, d, {configurable:!0, writable:!0, value:e})));
 };
 $jscomp.polyfill("Array.prototype.copyWithin", function(b) {
   function e(a) {

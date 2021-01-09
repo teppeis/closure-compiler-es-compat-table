@@ -7,19 +7,19 @@ $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, e) {
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, d) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
   }
-  a[b] = e.value;
+  a[b] = d.value;
   return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
   for (var b = 0; b < a.length; ++b) {
-    var e = a[b];
-    if (e && e.Math == Math) {
-      return e;
+    var d = a[b];
+    if (d && d.Math == Math) {
+      return d;
     }
   }
   throw Error("Cannot find global object");
@@ -31,53 +31,53 @@ $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
 var $jscomp$lookupPolyfilledValue = function(a, b) {
-  var e = $jscomp.propertyToPolyfillSymbol[b];
-  if (null == e) {
+  var d = $jscomp.propertyToPolyfillSymbol[b];
+  if (null == d) {
     return a[b];
   }
-  e = a[e];
-  return void 0 !== e ? e : a[b];
+  d = a[d];
+  return void 0 !== d ? d : a[b];
 };
-$jscomp.polyfill = function(a, b, e, g) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, e, g) : $jscomp.polyfillUnisolated(a, b, e, g));
+$jscomp.polyfill = function(a, b, d, g) {
+  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, d, g) : $jscomp.polyfillUnisolated(a, b, d, g));
 };
-$jscomp.polyfillUnisolated = function(a, b, e, g) {
-  e = $jscomp.global;
+$jscomp.polyfillUnisolated = function(a, b, d, g) {
+  d = $jscomp.global;
   a = a.split(".");
   for (g = 0; g < a.length - 1; g++) {
-    var d = a[g];
-    if (!(d in e)) {
+    var e = a[g];
+    if (!(e in d)) {
       return;
     }
-    e = e[d];
+    d = d[e];
   }
   a = a[a.length - 1];
-  g = e[a];
+  g = d[a];
   b = b(g);
-  b != g && null != b && $jscomp.defineProperty(e, a, {configurable:!0, writable:!0, value:b});
+  b != g && null != b && $jscomp.defineProperty(d, a, {configurable:!0, writable:!0, value:b});
 };
-$jscomp.polyfillIsolated = function(a, b, e, g) {
-  var d = a.split(".");
-  a = 1 === d.length;
-  g = d[0];
+$jscomp.polyfillIsolated = function(a, b, d, g) {
+  var e = a.split(".");
+  a = 1 === e.length;
+  g = e[0];
   g = !a && g in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var l = 0; l < d.length - 1; l++) {
-    var c = d[l];
+  for (var l = 0; l < e.length - 1; l++) {
+    var c = e[l];
     if (!(c in g)) {
       return;
     }
     g = g[c];
   }
-  d = d[d.length - 1];
-  e = $jscomp.IS_SYMBOL_NATIVE && "es6" === e ? g[d] : null;
-  b = b(e);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== e && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(g, d, {configurable:!0, writable:!0, value:b})));
+  e = e[e.length - 1];
+  d = $jscomp.IS_SYMBOL_NATIVE && "es6" === d ? g[e] : null;
+  b = b(d);
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && (d = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + d + "$" + e), e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(g, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
   try {
     return b.__proto__ = a, b.a;
-  } catch (e) {
+  } catch (d) {
   }
   return !1;
 };
@@ -148,12 +148,12 @@ $jscomp.generator.Context.prototype.yield = function(a, b) {
 };
 $jscomp.generator.Context.prototype.yieldAll = function(a, b) {
   a = $jscomp.makeIterator(a);
-  var e = a.next();
-  $jscomp.generator.ensureIteratorResultIsObject_(e);
-  if (e.done) {
-    this.yieldResult = e.value, this.nextAddress = b;
+  var d = a.next();
+  $jscomp.generator.ensureIteratorResultIsObject_(d);
+  if (d.done) {
+    this.yieldResult = d.value, this.nextAddress = b;
   } else {
-    return this.yieldAllIterator_ = a, this.yield(e.value, b);
+    return this.yieldAllIterator_ = a, this.yield(d.value, b);
   }
 };
 $jscomp.generator.Context.prototype.jumpTo = function(a) {
@@ -180,8 +180,8 @@ $jscomp.generator.Context.prototype.enterCatchBlock = function(a) {
   this.abruptCompletion_ = null;
   return a;
 };
-$jscomp.generator.Context.prototype.enterFinallyBlock = function(a, b, e) {
-  e ? this.finallyContexts_[e] = this.abruptCompletion_ : this.finallyContexts_ = [this.abruptCompletion_];
+$jscomp.generator.Context.prototype.enterFinallyBlock = function(a, b, d) {
+  d ? this.finallyContexts_[d] = this.abruptCompletion_ : this.finallyContexts_ = [this.abruptCompletion_];
   this.catchAddress_ = a || 0;
   this.finallyAddress_ = b || 0;
 };
@@ -232,8 +232,8 @@ $jscomp.generator.Engine_.prototype.return_ = function(a) {
   this.context_.start_();
   var b = this.context_.yieldAllIterator_;
   if (b) {
-    return this.yieldAllStep_("return" in b ? b["return"] : function(e) {
-      return {value:e, done:!0};
+    return this.yieldAllStep_("return" in b ? b["return"] : function(d) {
+      return {value:d, done:!0};
     }, a, this.context_.return);
   }
   this.context_.return(a);
@@ -247,19 +247,19 @@ $jscomp.generator.Engine_.prototype.throw_ = function(a) {
   this.context_.throw_(a);
   return this.nextStep_();
 };
-$jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, e) {
+$jscomp.generator.Engine_.prototype.yieldAllStep_ = function(a, b, d) {
   try {
     var g = a.call(this.context_.yieldAllIterator_, b);
     $jscomp.generator.ensureIteratorResultIsObject_(g);
     if (!g.done) {
       return this.context_.stop_(), g;
     }
-    var d = g.value;
+    var e = g.value;
   } catch (l) {
     return this.context_.yieldAllIterator_ = null, this.context_.throw_(l), this.nextStep_();
   }
   this.context_.yieldAllIterator_ = null;
-  e.call(this.context_, d);
+  d.call(this.context_, e);
   return this.nextStep_();
 };
 $jscomp.generator.Engine_.prototype.nextStep_ = function() {
@@ -307,12 +307,12 @@ $jscomp.asyncExecutePromiseGenerator = function(a) {
   function b(g) {
     return a.next(g);
   }
-  function e(g) {
+  function d(g) {
     return a.throw(g);
   }
-  return new Promise(function(g, d) {
+  return new Promise(function(g, e) {
     function l(c) {
-      c.done ? g(c.value) : Promise.resolve(c.value).then(b, e).then(l, d);
+      c.done ? g(c.value) : Promise.resolve(c.value).then(b, d).then(l, e);
     }
     l(a.next());
   });
@@ -329,28 +329,28 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(d, l) {
-    this.$jscomp$symbol$id_ = d;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:l});
+  var b = function(l, c) {
+    this.$jscomp$symbol$id_ = l;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var e = 0, g = function(d) {
-    if (this instanceof g) {
+  var d = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", g = 0, e = function(l) {
+    if (this instanceof e) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (d || "") + "_" + e++, d);
+    return new b(d + (l || "") + "_" + g++, l);
   };
-  return g;
+  return e;
 }, "es6", "es3");
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
     return a;
   }
   a = Symbol("Symbol.iterator");
-  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), e = 0; e < b.length; e++) {
-    var g = $jscomp.global[b[e]];
+  for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), d = 0; d < b.length; d++) {
+    var g = $jscomp.global[b[d]];
     "function" === typeof g && "function" != typeof g.prototype[a] && $jscomp.defineProperty(g.prototype, a, {configurable:!0, writable:!0, value:function() {
       return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
     }});
@@ -368,8 +368,8 @@ $jscomp.polyfill("Promise", function(a) {
   function b() {
     this.batch_ = null;
   }
-  function e(c) {
-    return c instanceof d ? c : new d(function(f, h) {
+  function d(c) {
+    return c instanceof e ? c : new e(function(f, h) {
       f(c);
     });
   }
@@ -411,7 +411,7 @@ $jscomp.polyfill("Promise", function(a) {
       throw c;
     });
   };
-  var d = function(c) {
+  var e = function(c) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
@@ -423,7 +423,7 @@ $jscomp.polyfill("Promise", function(a) {
       f.reject(h);
     }
   };
-  d.prototype.createResolveAndReject_ = function() {
+  e.prototype.createResolveAndReject_ = function() {
     function c(k) {
       return function(m) {
         h || (h = !0, k.call(f, m));
@@ -432,11 +432,11 @@ $jscomp.polyfill("Promise", function(a) {
     var f = this, h = !1;
     return {resolve:c(this.resolveTo_), reject:c(this.reject_)};
   };
-  d.prototype.resolveTo_ = function(c) {
+  e.prototype.resolveTo_ = function(c) {
     if (c === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
     } else {
-      if (c instanceof d) {
+      if (c instanceof e) {
         this.settleSameAsPromise_(c);
       } else {
         a: {
@@ -455,7 +455,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }
   };
-  d.prototype.resolveToNonPromiseObj_ = function(c) {
+  e.prototype.resolveToNonPromiseObj_ = function(c) {
     var f = void 0;
     try {
       f = c.then;
@@ -465,13 +465,13 @@ $jscomp.polyfill("Promise", function(a) {
     }
     "function" == typeof f ? this.settleSameAsThenable_(f, c) : this.fulfill_(c);
   };
-  d.prototype.reject_ = function(c) {
+  e.prototype.reject_ = function(c) {
     this.settle_(2, c);
   };
-  d.prototype.fulfill_ = function(c) {
+  e.prototype.fulfill_ = function(c) {
     this.settle_(1, c);
   };
-  d.prototype.settle_ = function(c, f) {
+  e.prototype.settle_ = function(c, f) {
     if (0 != this.state_) {
       throw Error("Cannot settle(" + c + ", " + f + "): Promise already settled in state" + this.state_);
     }
@@ -480,7 +480,7 @@ $jscomp.polyfill("Promise", function(a) {
     2 === this.state_ && this.scheduleUnhandledRejectionCheck_();
     this.executeOnSettledCallbacks_();
   };
-  d.prototype.scheduleUnhandledRejectionCheck_ = function() {
+  e.prototype.scheduleUnhandledRejectionCheck_ = function() {
     var c = this;
     g(function() {
       if (c.notifyUnhandledRejection_()) {
@@ -489,7 +489,7 @@ $jscomp.polyfill("Promise", function(a) {
       }
     }, 1);
   };
-  d.prototype.notifyUnhandledRejection_ = function() {
+  e.prototype.notifyUnhandledRejection_ = function() {
     if (this.isRejectionHandled_) {
       return !1;
     }
@@ -502,7 +502,7 @@ $jscomp.polyfill("Promise", function(a) {
     c.reason = this.result_;
     return h(c);
   };
-  d.prototype.executeOnSettledCallbacks_ = function() {
+  e.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
       for (var c = 0; c < this.onSettledCallbacks_.length; ++c) {
         l.asyncExecute(this.onSettledCallbacks_[c]);
@@ -511,11 +511,11 @@ $jscomp.polyfill("Promise", function(a) {
     }
   };
   var l = new b;
-  d.prototype.settleSameAsPromise_ = function(c) {
+  e.prototype.settleSameAsPromise_ = function(c) {
     var f = this.createResolveAndReject_();
     c.callWhenSettled_(f.resolve, f.reject);
   };
-  d.prototype.settleSameAsThenable_ = function(c, f) {
+  e.prototype.settleSameAsThenable_ = function(c, f) {
     var h = this.createResolveAndReject_();
     try {
       c.call(f, h.resolve, h.reject);
@@ -523,7 +523,7 @@ $jscomp.polyfill("Promise", function(a) {
       h.reject(k);
     }
   };
-  d.prototype.then = function(c, f) {
+  e.prototype.then = function(c, f) {
     function h(n, p) {
       return "function" == typeof n ? function(q) {
         try {
@@ -533,17 +533,17 @@ $jscomp.polyfill("Promise", function(a) {
         }
       } : p;
     }
-    var k, m, t = new d(function(n, p) {
+    var k, m, t = new e(function(n, p) {
       k = n;
       m = p;
     });
     this.callWhenSettled_(h(c, k), h(f, m));
     return t;
   };
-  d.prototype.catch = function(c) {
+  e.prototype.catch = function(c) {
     return this.then(void 0, c);
   };
-  d.prototype.callWhenSettled_ = function(c, f) {
+  e.prototype.callWhenSettled_ = function(c, f) {
     function h() {
       switch(k.state_) {
         case 1:
@@ -560,22 +560,22 @@ $jscomp.polyfill("Promise", function(a) {
     null == this.onSettledCallbacks_ ? l.asyncExecute(h) : this.onSettledCallbacks_.push(h);
     this.isRejectionHandled_ = !0;
   };
-  d.resolve = e;
-  d.reject = function(c) {
-    return new d(function(f, h) {
+  e.resolve = d;
+  e.reject = function(c) {
+    return new e(function(f, h) {
       h(c);
     });
   };
-  d.race = function(c) {
-    return new d(function(f, h) {
+  e.race = function(c) {
+    return new e(function(f, h) {
       for (var k = $jscomp.makeIterator(c), m = k.next(); !m.done; m = k.next()) {
-        e(m.value).callWhenSettled_(f, h);
+        d(m.value).callWhenSettled_(f, h);
       }
     });
   };
-  d.all = function(c) {
+  e.all = function(c) {
     var f = $jscomp.makeIterator(c), h = f.next();
-    return h.done ? e([]) : new d(function(k, m) {
+    return h.done ? d([]) : new e(function(k, m) {
       function t(q) {
         return function(r) {
           n[q] = r;
@@ -585,11 +585,11 @@ $jscomp.polyfill("Promise", function(a) {
       }
       var n = [], p = 0;
       do {
-        n.push(void 0), p++, e(h.value).callWhenSettled_(t(n.length - 1), m), h = f.next();
+        n.push(void 0), p++, d(h.value).callWhenSettled_(t(n.length - 1), m), h = f.next();
       } while (!h.done);
     });
   };
-  return d;
+  return e;
 }, "es6", "es3");
 module.exports = function() {
   return !function() {

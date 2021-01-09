@@ -80,7 +80,7 @@ $jscomp.polyfillIsolated = function(b, a, c, e) {
   d = d[d.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
   a = a(c);
-  null != a && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:a}) : a !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:a})));
+  null != a && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:a}) : a !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (c = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + c + "$" + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:a})));
 };
 $jscomp.polyfill("String.prototype.codePointAt", function(b) {
   return b ? b : function(a) {

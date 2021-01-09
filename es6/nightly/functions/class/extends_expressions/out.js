@@ -1,23 +1,23 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
-  var b = 0;
+  var c = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++], } : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
   return {next:$jscomp.arrayIteratorImpl(a)};
 };
 $jscomp.makeIterator = function(a) {
-  var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return b ? b.call(a) : $jscomp.arrayIterator(a);
+  var c = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
+  return c ? c.call(a) : $jscomp.arrayIterator(a);
 };
 $jscomp.arrayFromIterator = function(a) {
-  for (var b, c = []; !(b = a.next()).done;) {
-    c.push(b.value);
+  for (var c, b = []; !(c = a.next()).done;) {
+    b.push(c.value);
   }
-  return c;
+  return b;
 };
 $jscomp.arrayFromIterable = function(a) {
   return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a));
@@ -30,24 +30,24 @@ $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
 $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
-  var b = function() {
+  var c = function() {
   };
-  b.prototype = a;
-  return new b;
+  c.prototype = a;
+  return new c;
 };
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
   }
-  a[b] = c.value;
+  a[c] = b.value;
   return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
-  for (var b = 0; b < a.length; ++b) {
-    var c = a[b];
-    if (c && c.Math == Math) {
-      return c;
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
     }
   }
   throw Error("Cannot find global object");
@@ -58,33 +58,33 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, b) {
-  var c = $jscomp.propertyToPolyfillSymbol[b];
-  if (null == c) {
-    return a[b];
+var $jscomp$lookupPolyfilledValue = function(a, c) {
+  var b = $jscomp.propertyToPolyfillSymbol[c];
+  if (null == b) {
+    return a[c];
   }
-  c = a[c];
-  return void 0 !== c ? c : a[b];
+  b = a[b];
+  return void 0 !== b ? b : a[c];
 };
-$jscomp.polyfill = function(a, b, c, e) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, e) : $jscomp.polyfillUnisolated(a, b, c, e));
+$jscomp.polyfill = function(a, c, b, e) {
+  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, e) : $jscomp.polyfillUnisolated(a, c, b, e));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, e) {
-  c = $jscomp.global;
+$jscomp.polyfillUnisolated = function(a, c, b, e) {
+  b = $jscomp.global;
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var d = a[e];
-    if (!(d in c)) {
+    if (!(d in b)) {
       return;
     }
-    c = c[d];
+    b = b[d];
   }
   a = a[a.length - 1];
-  e = c[a];
-  b = b(e);
-  b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  e = b[a];
+  c = c(e);
+  c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
 };
-$jscomp.polyfillIsolated = function(a, b, c, e) {
+$jscomp.polyfillIsolated = function(a, c, b, e) {
   var d = a.split(".");
   a = 1 === d.length;
   e = d[0];
@@ -97,71 +97,71 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
     e = e[g];
   }
   d = d[d.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
-  b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
+  c = c(b);
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (b = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + b + "$" + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
-    function c() {
+    function b() {
     }
-    new c;
-    Reflect.construct(c, [], function() {
+    new b;
+    Reflect.construct(b, [], function() {
     });
-    return new c instanceof c;
+    return new b instanceof b;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
       return Reflect.construct;
     }
-    var b = Reflect.construct;
-    return function(c, e, d) {
-      c = b(c, e);
-      d && Reflect.setPrototypeOf(c, d.prototype);
-      return c;
+    var c = Reflect.construct;
+    return function(b, e, d) {
+      b = c(b, e);
+      d && Reflect.setPrototypeOf(b, d.prototype);
+      return b;
     };
   }
-  return function(c, e, d) {
-    void 0 === d && (d = c);
+  return function(b, e, d) {
+    void 0 === d && (d = b);
     d = $jscomp.objectCreate(d.prototype || Object.prototype);
-    return Function.prototype.apply.call(c, d, e) || d;
+    return Function.prototype.apply.call(b, d, e) || d;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
 $jscomp.underscoreProtoCanBeSet = function() {
-  var a = {a:!0}, b = {};
+  var a = {a:!0}, c = {};
   try {
-    return b.__proto__ = a, b.a;
-  } catch (c) {
+    return c.__proto__ = a, c.a;
+  } catch (b) {
   }
   return !1;
 };
-$jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, b) {
-  a.__proto__ = b;
-  if (a.__proto__ !== b) {
+$jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Object.setPrototypeOf ? Object.setPrototypeOf : $jscomp.underscoreProtoCanBeSet() ? function(a, c) {
+  a.__proto__ = c;
+  if (a.__proto__ !== c) {
     throw new TypeError(a + " is not extensible");
   }
   return a;
 } : null;
-$jscomp.inherits = function(a, b) {
-  a.prototype = $jscomp.objectCreate(b.prototype);
+$jscomp.inherits = function(a, c) {
+  a.prototype = $jscomp.objectCreate(c.prototype);
   a.prototype.constructor = a;
   if ($jscomp.setPrototypeOf) {
-    var c = $jscomp.setPrototypeOf;
-    c(a, b);
+    var b = $jscomp.setPrototypeOf;
+    b(a, c);
   } else {
-    for (c in b) {
-      if ("prototype" != c) {
+    for (b in c) {
+      if ("prototype" != b) {
         if (Object.defineProperties) {
-          var e = Object.getOwnPropertyDescriptor(b, c);
-          e && Object.defineProperty(a, c, e);
+          var e = Object.getOwnPropertyDescriptor(c, b);
+          e && Object.defineProperty(a, b, e);
         } else {
-          a[c] = b[c];
+          a[b] = c[b];
         }
       }
     }
   }
-  a.superClass_ = b.prototype;
+  a.superClass_ = c.prototype;
 };
 $jscomp.polyfill("Reflect", function(a) {
   return a ? a : {};
@@ -174,10 +174,10 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
     return a;
   }
   if ($jscomp.setPrototypeOf) {
-    var b = $jscomp.setPrototypeOf;
-    return function(c, e) {
+    var c = $jscomp.setPrototypeOf;
+    return function(b, e) {
       try {
-        return b(c, e), !0;
+        return c(b, e), !0;
       } catch (d) {
         return !1;
       }
@@ -186,11 +186,11 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   return null;
 }, "es6", "es5");
 module.exports = function() {
-  var a, b = a = function() {
-  }, c = function() {
-    return b.apply(this, arguments) || this;
+  var a, c = a = function() {
+  }, b = function() {
+    return c.apply(this, arguments) || this;
   };
-  $jscomp.inherits(c, b);
-  return new c instanceof a && a.isPrototypeOf(c);
+  $jscomp.inherits(b, c);
+  return new b instanceof a && a.isPrototypeOf(b);
 };
 
