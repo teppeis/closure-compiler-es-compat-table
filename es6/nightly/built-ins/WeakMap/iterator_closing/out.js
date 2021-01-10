@@ -70,8 +70,8 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   a = 1 === f.length;
   e = f[0];
   e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var k = 0; k < f.length - 1; k++) {
-    var h = f[k];
+  for (var l = 0; l < f.length - 1; l++) {
+    var h = f[l];
     if (!(h in e)) {
       return;
     }
@@ -80,7 +80,7 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   f = f[f.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[f] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (c = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + c + "$" + f), f = $jscomp.propertyToPolyfillSymbol[f], $jscomp.defineProperty(e, f, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && ($jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + f), f = $jscomp.propertyToPolyfillSymbol[f], $jscomp.defineProperty(e, f, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.initSymbol = function() {
 };
@@ -88,20 +88,20 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(k, h) {
-    this.$jscomp$symbol$id_ = k;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:h});
+  var b = function(f, l) {
+    this.$jscomp$symbol$id_ = f;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:l});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", e = 0, f = function(k) {
-    if (this instanceof f) {
+  var c = 0, e = function(f) {
+    if (this instanceof e) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b(c + (k || "") + "_" + e++, k);
+    return new b("jscomp_symbol_" + (f || "") + "_" + c++, f);
   };
-  return f;
+  return e;
 }, "es6", "es3");
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
@@ -148,13 +148,13 @@ $jscomp.polyfill("WeakMap", function(a) {
       return !1;
     }
     try {
-      var d = Object.seal({}), g = Object.seal({}), l = new a([[d, 2], [g, 3]]);
-      if (2 != l.get(d) || 3 != l.get(g)) {
+      var d = Object.seal({}), g = Object.seal({}), k = new a([[d, 2], [g, 3]]);
+      if (2 != k.get(d) || 3 != k.get(g)) {
         return !1;
       }
-      l.delete(d);
-      l.set(g, 4);
-      return !l.has(d) && 4 == l.get(g);
+      k.delete(d);
+      k.set(g, 4);
+      return !k.has(d) && 4 == k.get(g);
     } catch (p) {
       return !1;
     }
@@ -171,15 +171,15 @@ $jscomp.polyfill("WeakMap", function(a) {
       $jscomp.defineProperty(d, h, {value:g});
     }
   }
-  function k(d) {
+  function l(d) {
     if (!$jscomp.ISOLATE_POLYFILLS) {
       var g = Object[d];
-      g && (Object[d] = function(l) {
-        if (l instanceof c) {
-          return l;
+      g && (Object[d] = function(k) {
+        if (k instanceof c) {
+          return k;
         }
-        Object.isExtensible(l) && f(l);
-        return g(l);
+        Object.isExtensible(k) && f(k);
+        return g(k);
       });
     }
   }
@@ -193,9 +193,9 @@ $jscomp.polyfill("WeakMap", function(a) {
     }
   }
   var h = "$jscomp_hidden_" + Math.random();
-  k("freeze");
-  k("preventExtensions");
-  k("seal");
+  l("freeze");
+  l("preventExtensions");
+  l("seal");
   var n = 0, m = function(d) {
     this.id_ = (n += Math.random() + 1).toString();
     if (d) {

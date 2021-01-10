@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   e = e[e.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && (c = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + c + "$" + e), e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e), e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
@@ -309,20 +309,20 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(f, g) {
-    this.$jscomp$symbol$id_ = f;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:g});
+  var b = function(e, f) {
+    this.$jscomp$symbol$id_ = e;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", d = 0, e = function(f) {
-    if (this instanceof e) {
+  var c = 0, d = function(e) {
+    if (this instanceof d) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b(c + (f || "") + "_" + d++, f);
+    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
   };
-  return e;
+  return d;
 }, "es6", "es3");
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
