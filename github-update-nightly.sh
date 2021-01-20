@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-git checkout "$TRAVIS_BRANCH"
+git checkout "$GITHUB_REF"
 
 curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -20,8 +20,8 @@ fi
 
 echo "Updated"
 git diff
-git config --global user.email "travis@travis-ci.org"
-git config --global user.name "Travis CI"
+git config --local user.name "GitHub Actions Bot"
+git config --local user.email "github-actions-bot@users.noreply.github.com"
 git add .
-git commit --message "update nightly result with $version (travis: $TRAVIS_BUILD_NUMBER) [skip ci]" > /dev/null
-git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" "HEAD:master"
+git commit --message "update nightly result with $version (build: $GITHUB_RUN_ID:$GITHUB_RUN_NUMBER) [skip ci]" > /dev/null
+git push "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git" "HEAD:master"
