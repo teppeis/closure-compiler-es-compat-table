@@ -1,13 +1,12 @@
 name: Check and update Closure Compiler Nightly Build
 
 on:
-  push:
   schedule:
     - cron: "0 11,23 * * *"
 
 jobs:
-  ci:
-    name: Check and update Closure Compiler Nightly Build
+  update:
+    name: Check and update
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,4 +15,4 @@ jobs:
           node-version: "14"
       - run: npm ci
       - run: npm test
-      - run: ./travis-update-nightly.sh
+      - run: ./github-update-nightly.sh
