@@ -31,7 +31,10 @@ if (!esVersion) {
 }
 const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
 const fileInfo = require(path.join(alterTestDir, "fileinfo.json"));
-const resultFile = fs.readFileSync(path.join(process.cwd(), resultFilePass), "utf8");
+const resultFile = fs.readFileSync(
+  path.join(process.cwd(), resultFilePass),
+  "utf8"
+);
 
 const failedFileInfo = resultFile
   .split("\n")
@@ -95,7 +98,9 @@ const refs = [
     refUrl: "https://github.com/google/closure-compiler/issues/2919",
   },
   {
-    pattern: new RegExp("^built-in_extensions/String_static_methods/String.raw$"),
+    pattern: new RegExp(
+      "^built-in_extensions/String_static_methods/String.raw$"
+    ),
     refUrl: "https://github.com/google/closure-compiler/issues/3136",
   },
 ];
@@ -103,7 +108,9 @@ let prevCategory = null;
 let prevTest = null;
 failedFileInfo
   .filter((info) => !!info)
-  .filter(({ path }) => !skipPathPrefixes.some((prefix) => path.startsWith(prefix)))
+  .filter(
+    ({ path }) => !skipPathPrefixes.some((prefix) => path.startsWith(prefix))
+  )
   .filter(({ path }) => !skipPaths.has(path))
   .forEach(({ path: testPath, category, test, subtest, url }) => {
     if (prevCategory !== category) {

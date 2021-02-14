@@ -1,5 +1,4 @@
-ECMAScript compatibility checker for Closure Compiler
-====
+# ECMAScript compatibility checker for Closure Compiler
 
 [![Build Status](https://travis-ci.org/teppeis/closure-compiler-es-compat-table.svg?branch=master)](https://travis-ci.org/teppeis/closure-compiler-es-compat-table)
 

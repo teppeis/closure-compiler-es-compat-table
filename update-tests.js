@@ -46,7 +46,9 @@ class TestCode {
       this.useEval && !ignoreEval
         ? `throw new Error('eval() and Function() cannot be transpiled');\n`
         : "";
-    const initIterator = this.useCreateIterable ? "module.exports._ = Symbol.iterator;\n" : "";
+    const initIterator = this.useCreateIterable
+      ? "module.exports._ = Symbol.iterator;\n"
+      : "";
     // Use arrow function to enable EarlyEs6ToEs3Converter for Symbol polyfill
     // @see https://github.com/google/closure-compiler/issues/2881#issuecomment-381416295
     const src = `// ${this.name}
@@ -57,7 +59,8 @@ ${throws}${initIterator}${this.expr}
   }
 }
 
-const esVersions = cli.input.length > 0 ? [cli.input[0]] : ["es6", "es2016plus", "esnext"];
+const esVersions =
+  cli.input.length > 0 ? [cli.input[0]] : ["es6", "es2016plus", "esnext"];
 esVersions.forEach((esVersion) => {
   const { testDir, alterTestDir, data } = init(esVersion);
   const fileList = [];
@@ -76,21 +79,31 @@ esVersions.forEach((esVersion) => {
       });
     } else {
       fileList.push(
-        writeInputSrcFile(test.exec, test.category, test.name, { testDir, alterTestDir })
+        writeInputSrcFile(test.exec, test.category, test.name, {
+          testDir,
+          alterTestDir,
+        })
       );
     }
   });
 
   if (!testDir) {
-    fs.writeFileSync(path.join(alterTestDir, "fileinfo.json"), JSON.stringify(fileList, null, 2));
+    fs.writeFileSync(
+      path.join(alterTestDir, "fileinfo.json"),
+      JSON.stringify(fileList, null, 2)
+    );
     cleanupDirsForRemovedTests(fileList, alterTestDir);
   }
 });
 
 function cleanupDirsForRemovedTests(fileList, alterTestDir) {
-  const pathSet = new Set(fileList.map((file) => path.join(alterTestDir, file.path)));
+  const pathSet = new Set(
+    fileList.map((file) => path.join(alterTestDir, file.path))
+  );
   const files = glob.sync(path.join(alterTestDir, "**/orig.js"));
-  const removedDirs = files.map(path.dirname).filter((dir) => !pathSet.has(dir));
+  const removedDirs = files
+    .map(path.dirname)
+    .filter((dir) => !pathSet.has(dir));
   removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
     rimraf.sync(dir, { glob: false });

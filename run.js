@@ -64,7 +64,9 @@ const opts = {
   }
   targetDir = targetDir || "";
   if (!skipCompile && !skipCheck) {
-    console.log(`Target: ${esVer}/${closureVer}${targetDir ? `/${targetDir}` : ""}`);
+    console.log(
+      `Target: ${esVer}/${closureVer}${targetDir ? `/${targetDir}` : ""}`
+    );
     console.log("Generate inputs");
     await execa("./generate-inputs.js", [], {
       ...opts,
@@ -85,7 +87,10 @@ const opts = {
       } else {
         console.log("Compile (Native)");
       }
-      await execa("node", ["./batch/run.js", path.join(esVer, closureVer)], { ...opts, env });
+      await execa("node", ["./batch/run.js", path.join(esVer, closureVer)], {
+        ...opts,
+        env,
+      });
     }
   }
   if (!skipCheck) {
@@ -93,8 +98,12 @@ const opts = {
     await execa("./check.sh", [esVer, targetDir], opts);
   }
   console.log("Generate fail.md");
-  const { stdout } = await execa("./result2md.js", [path.join(esVer, closureVer, "result.txt")], {
-    cwd: __dirname,
-  });
+  const { stdout } = await execa(
+    "./result2md.js",
+    [path.join(esVer, closureVer, "result.txt")],
+    {
+      cwd: __dirname,
+    }
+  );
   fs.writeFileSync(path.join(__dirname, esVer, closureVer, "fail.md"), stdout);
 })();
