@@ -21,14 +21,19 @@ fileList
   });
 
 if (!testDir) {
-  fs.writeFileSync(path.join(basedir, "files.json"), JSON.stringify(fileList, null, 2));
+  fs.writeFileSync(
+    path.join(basedir, "files.json"),
+    JSON.stringify(fileList, null, 2)
+  );
   cleanupDirsForRemovedTests(fileList);
 }
 
 function cleanupDirsForRemovedTests(fileList) {
   const pathSet = new Set(fileList.map((file) => path.join(basedir, file)));
   const files = glob.sync(path.join(basedir, "**/in.js"));
-  const removedDirs = files.map(path.dirname).filter((dir) => !pathSet.has(dir));
+  const removedDirs = files
+    .map(path.dirname)
+    .filter((dir) => !pathSet.has(dir));
   removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
     rimraf.sync(dir, { glob: false });
@@ -52,7 +57,9 @@ function init() {
   const basedir = path.join(__dirname, esVersion, clVersion);
   const testDir = process.env.TEST_DIR;
   const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
-  const fileList = require(path.join(alterTestDir, "fileinfo.json")).map(({ path }) => path);
+  const fileList = require(path.join(alterTestDir, "fileinfo.json")).map(
+    ({ path }) => path
+  );
   return { basedir, testDir, alterTestDir, fileList };
 }
 

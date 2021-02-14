@@ -52,7 +52,10 @@ function checkTimeout(file, cb) {
   async.timeout(check, 5000)(file, function (err, msg) {
     if (err) {
       if (err.code === "ETIMEDOUT") {
-        return cb(null, file + ": [Timeout: asyncTestPassed() is not called for 5s]");
+        return cb(
+          null,
+          file + ": [Timeout: asyncTestPassed() is not called for 5s]"
+        );
       } else {
         return cb(err);
       }
