@@ -9,12 +9,10 @@
 
 ### default function parameters
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/default_function_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/default_function_parameters/arguments_object_interaction/out.js))
-- temporal dead zone ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/default_function_parameters/temporal_dead_zone/error.txt))
 
 ### rest parameters
 - function 'length' property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/function_length_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/function_length_property/out.js))
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/arguments_object_interaction/out.js))
-- can't be used in setters ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/cant_be_used_in_setters/error.txt))
 
 ### spread syntax for iterable objects
 - with sparse arrays, in array literals ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/spread_syntax_for_iterable_objects/with_sparse_arrays%2C_in_array_literals/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/spread_syntax_for_iterable_objects/with_sparse_arrays%2C_in_array_literals/out.js))
@@ -49,12 +47,10 @@
 ### destructuring, declarations
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/with_astral_plane_strings/out.js))
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
-- defaults, let temporal dead zone ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_declarations/defaults%2C_let_temporal_dead_zone/error.txt))
 
 ### destructuring, assignment
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/with_astral_plane_strings/out.js))
 - iterator closing ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/iterator_closing/out.js)): https://github.com/google/closure-compiler/issues/2958
-- parenthesised left-hand-side is a syntax error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_assignment/parenthesised_left-hand-side_is_a_syntax_error/error.txt))
 
 ### destructuring, parameters
 - with astral plane strings ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/with_astral_plane_strings/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/destructuring%2C_parameters/with_astral_plane_strings/out.js))
@@ -66,28 +62,20 @@
 
 ### new.target
 - in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/new.target/in_constructors/error.txt))
-- assignment is an early error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/new.target/assignment_is_an_early_error/error.txt))
 
 ## Bindings
 
 ### const
-- cannot be in statements ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/cannot_be_in_statements/error.txt))
-- redefining a const is an error ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/redefining_a_const_is_an_error/error.txt))
 - temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/temporal_dead_zone/out.js))
-- cannot be in statements (strict mode) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/cannot_be_in_statements__strict_mode_/error.txt))
-- redefining a const (strict mode) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/redefining_a_const__strict_mode_/error.txt))
 - temporal dead zone (strict mode) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/temporal_dead_zone__strict_mode_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/const/temporal_dead_zone__strict_mode_/out.js))
 
 ### let
-- cannot be in statements ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/cannot_be_in_statements/error.txt))
 - temporal dead zone ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/temporal_dead_zone/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/temporal_dead_zone/out.js))
-- cannot be in statements (strict mode) ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/cannot_be_in_statements__strict_mode_/error.txt))
 - temporal dead zone (strict mode) ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/temporal_dead_zone__strict_mode_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/bindings/let/temporal_dead_zone__strict_mode_/out.js))
 
 ## Functions
 
 ### arrow functions
-- no line break between params and <code>=></code> ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/no_line_break_between_params_and_arrow/error.txt))
 - no "prototype" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/no_prototype_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/no_prototype_property/out.js))
 - lexical "super" binding in constructors ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/lexical_super_binding_in_constructors/error.txt))
 - lexical "new.target" binding ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/functions/arrow_functions/lexical_new.target_binding/error.txt))
@@ -264,11 +252,9 @@
 ### Updated identifier syntax
 - var ⸯ; ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/Updated_identifier_syntax/var_U%2B2E2F_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/Updated_identifier_syntax/var_U%2B2E2F_/out.js))
 - var 𐋀; ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/Updated_identifier_syntax/var_U%2B102C0_/error.txt))
-- no escaped reserved words as identifiers ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/Updated_identifier_syntax/no_escaped_reserved_words_as_identifiers/error.txt))
 
 ### miscellaneous
 - duplicate property names in strict mode ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/duplicate_property_names_in_strict_mode/error.txt))
-- no assignments allowed in for-in head in strict mode ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/no_assignments_allowed_in_for-in_head_in_strict_mode/error.txt))
 - accessors aren't constructors ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/accessors_arent_constructors/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/accessors_arent_constructors/out.js))
 - RegExp constructor can alter flags ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/RegExp_constructor_can_alter_flags/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/RegExp_constructor_can_alter_flags/out.js))
 - RegExp.prototype.toString generic and uses "flags" property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/RegExp.prototype.toString_generic_and_uses_flags_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/misc/miscellaneous/RegExp.prototype.toString_generic_and_uses_flags_property/out.js))
