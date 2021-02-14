@@ -5,6 +5,8 @@ $jscomp.ASSUME_NO_NATIVE_MAP = !1;
 $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
+$jscomp.FORCE_POLYFILL_PROMISE = !1;
+$jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL = !0;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
@@ -547,7 +549,6 @@ $jscomp.AsyncGeneratorWrapper.prototype.rejectAndClose_ = function(a) {
   this.generator_["return"](void 0);
   this.runFrame_();
 };
-$jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.polyfill("Promise", function(a) {
   function b() {
     this.batch_ = null;
@@ -599,6 +600,7 @@ $jscomp.polyfill("Promise", function(a) {
     this.state_ = 0;
     this.result_ = void 0;
     this.onSettledCallbacks_ = [];
+    this.isRejectionHandled_ = !1;
     var g = this.createResolveAndReject_();
     try {
       d(g.resolve, g.reject);
@@ -660,7 +662,30 @@ $jscomp.polyfill("Promise", function(a) {
     }
     this.state_ = d;
     this.result_ = g;
+    2 === this.state_ && $jscomp.ENABLE_UNHANDLED_REJECTION_POLYFILL && this.scheduleUnhandledRejectionCheck_();
     this.executeOnSettledCallbacks_();
+  };
+  e.prototype.scheduleUnhandledRejectionCheck_ = function() {
+    var d = this;
+    f(function() {
+      if (d.notifyUnhandledRejection_()) {
+        var g = $jscomp.global.console;
+        "undefined" !== typeof g && g.error(d.result_);
+      }
+    }, 1);
+  };
+  e.prototype.notifyUnhandledRejection_ = function() {
+    if (this.isRejectionHandled_) {
+      return !1;
+    }
+    var d = $jscomp.global.CustomEvent, g = $jscomp.global.Event, h = $jscomp.global.dispatchEvent;
+    if ("undefined" === typeof h) {
+      return !0;
+    }
+    "function" === typeof d ? d = new d("unhandledrejection", {cancelable:!0}) : "function" === typeof g ? d = new g("unhandledrejection", {cancelable:!0}) : (d = $jscomp.global.document.createEvent("CustomEvent"), d.initCustomEvent("unhandledrejection", !1, !0, d));
+    d.promise = this;
+    d.reason = this.result_;
+    return h(d);
   };
   e.prototype.executeOnSettledCallbacks_ = function() {
     if (null != this.onSettledCallbacks_) {
@@ -718,6 +743,7 @@ $jscomp.polyfill("Promise", function(a) {
     }
     var k = this;
     null == this.onSettledCallbacks_ ? l.asyncExecute(h) : this.onSettledCallbacks_.push(h);
+    this.isRejectionHandled_ = !0;
   };
   e.resolve = c;
   e.reject = function(d) {
