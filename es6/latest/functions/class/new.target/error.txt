@@ -15,7 +15,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20200920/functions/class/new.target/in.js:5:13: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20200927/functions/class/new.target/in.js:5:13: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
   5|     passed = new.target === f;
                   ^^^^^^^^^^
 
