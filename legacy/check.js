@@ -80,7 +80,7 @@ function isOldOutputCompiler() {
 }
 
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 // TODO: check unexpected error
@@ -95,7 +95,7 @@ function checkExpectedError(fileAbs, cb) {
     var input = fs.readFileSync(inputFile, "utf8");
     // `EXPECT: [LINE]: [ERROR_MESSAGE]`
     // ex) EXPECT: 4: ERROR - Illegal variable reference before declaration: a
-    // 
+    //
     // Sample error
     // - foo/bar/in.js:6: ERROR - [JSC_PARSE_ERROR] Parse error. `await` is illegal in parameter default value.
     // column added from v20200830
@@ -105,7 +105,9 @@ function checkExpectedError(fileAbs, cb) {
     var expectError = false;
     while ((match = regex.exec(input)) !== null) {
       expectError = true;
-      var expect = new RegExp(":" + match[1] + ':\\d+: ' + escapeRegExp(match[2]));
+      var expect = new RegExp(
+        ":" + match[1] + ":\\d+: " + escapeRegExp(match[2])
+      );
       if (expect.test(error)) {
         continue;
       }
