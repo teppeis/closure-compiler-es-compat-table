@@ -1,0 +1,21 @@
+// functions / generators / shorthand generators can't be constructors
+module.exports = () => {
+  class C {
+    * generator() {
+      yield 5; yield 6;
+    }
+  };
+  class D {
+    * constructor() {
+      return {};
+    }
+  }
+  return false;
+};
+
+----------------------------------------------------------
+es6/v20200927/functions/generators/shorthand_generators_cant_be_constructors/in.js:9:4: ERROR - [JSC_PARSE_ERROR] Parse error. Class constructor may not be getter, setter, async, or generator.
+   9|     * constructor() {
+          ^
+
+1 error(s), 0 warning(s)

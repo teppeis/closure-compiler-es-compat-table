@@ -1,0 +1,39 @@
+// built-ins / Proxy / "has" handler invariants
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  // A property cannot be reported as non-existent, if it exists as a
+  // non-configurable own property of the target object.
+  var proxied = {};
+  var proxy = new Proxy(proxied, {
+    has: function () {
+      passed = true;
+      return false;
+    }
+  });
+  Object.defineProperty(proxied, "foo", { value: 2, writable: true, enumerable: true });
+  try {
+    'foo' in proxy;
+    return false;
+  } catch(e) {}
+  // A property cannot be reported as non-existent, if it exists as an
+  // own property of the target object and the target object is not extensible.
+  proxied.bar = 2;
+  Object.preventExtensions(proxied);
+  try {
+    'bar' in proxy;
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20200927/built-ins/Proxy/has_handler_invariants/in.js:16:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+  16|     'foo' in proxy;
+          ^^^^^^^^^^^^^^
+
+es6/v20200927/built-ins/Proxy/has_handler_invariants/in.js:24:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+  24|     'bar' in proxy;
+          ^^^^^^^^^^^^^^
+
+0 error(s), 2 warning(s)
