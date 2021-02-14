@@ -1,0 +1,13 @@
+// 2019 misc / Function.prototype.toString revision / methods and computed property names
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  var str = '[ /\x2A a \x2A/ "f" /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
+  return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;
+
+};
+----------------------------------------------------------
+es2016plus/v20200920/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var str = '[ /\x2A a \x2A/ "f" /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

@@ -1,0 +1,14 @@
+// bindings / let / for loop statement scope (strict mode)
+module.exports = () => {
+  'use strict';
+  let baz = 1;
+  for(let baz = 0; false;) {}
+  return baz === 1;
+
+};
+----------------------------------------------------------
+es6/v20200920/bindings/let/for_loop_statement_scope__strict_mode_/in.js:5:27: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  5|   for(let baz = 0; false;) {}
+                                ^^
+
+0 error(s), 1 warning(s)

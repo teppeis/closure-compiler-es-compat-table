@@ -1,0 +1,17 @@
+// built-ins / WeakMap / constructor requires new
+module.exports = () => {
+  new WeakMap();
+  try {
+    WeakMap();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20200920/built-ins/WeakMap/constructor_requires_new/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakMap' is not being used.
+  5|     WeakMap();
+         ^^^^^^^^^
+
+0 error(s), 1 warning(s)

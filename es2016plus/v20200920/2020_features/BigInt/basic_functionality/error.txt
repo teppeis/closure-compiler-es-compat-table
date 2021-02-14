@@ -1,0 +1,19 @@
+// 2020 features / BigInt / basic functionality
+module.exports = () => {
+return (1n + 2n) === 3n;
+
+};
+----------------------------------------------------------
+es2016plus/v20200920/2020_features/BigInt/basic_functionality/in.js:3:8: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  3| return (1n + 2n) === 3n;
+             ^^
+
+es2016plus/v20200920/2020_features/BigInt/basic_functionality/in.js:3:13: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  3| return (1n + 2n) === 3n;
+                  ^^
+
+es2016plus/v20200920/2020_features/BigInt/basic_functionality/in.js:3:21: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  3| return (1n + 2n) === 3n;
+                          ^^
+
+3 error(s), 0 warning(s)
