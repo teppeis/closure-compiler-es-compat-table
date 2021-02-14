@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200719/2018_features/RegExp_Unicode_Property_Escapes/in.js:3: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp unicode property escape" to targeted output language.
+es2016plus/v20200830/2018_features/RegExp_Unicode_Property_Escapes/in.js:3:27: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp unicode property escape" to targeted output language.
   3|   const regexGreekSymbol = /\p{Script=Greek}/u;
                                 ^^^^^^^^^^^^^^^^^^^
 
