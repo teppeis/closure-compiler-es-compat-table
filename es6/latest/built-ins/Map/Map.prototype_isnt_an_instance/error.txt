@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20201102/built-ins/Map/Map.prototype_isnt_an_instance/in.js:6:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Map.prototype.has' is not being used.
+es6/v20201207/built-ins/Map/Map.prototype_isnt_an_instance/in.js:6:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Map.prototype.has' is not being used.
   6|     Map.prototype.has(obj);
          ^^^^^^^^^^^^^^^^^^^^^^
 
