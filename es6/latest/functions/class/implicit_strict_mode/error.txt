@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210106/functions/class/implicit_strict_mode/in.js:6:10: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+es6/v20210202/functions/class/implicit_strict_mode/in.js:6:10: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
   6|   return (0,C.method)();
                ^
 
