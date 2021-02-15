@@ -66,40 +66,40 @@ var $jscomp$lookupPolyfilledValue = function(a, b) {
   c = a[c];
   return void 0 !== c ? c : a[b];
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, d) : $jscomp.polyfillUnisolated(a, b, c, d));
+$jscomp.polyfill = function(a, b, c, e) {
+  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, e) : $jscomp.polyfillUnisolated(a, b, c, e));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, d) {
+$jscomp.polyfillUnisolated = function(a, b, c, e) {
   c = $jscomp.global;
   a = a.split(".");
-  for (d = 0; d < a.length - 1; d++) {
-    var e = a[d];
-    if (!(e in c)) {
+  for (e = 0; e < a.length - 1; e++) {
+    var d = a[e];
+    if (!(d in c)) {
       return;
     }
-    c = c[e];
+    c = c[d];
   }
   a = a[a.length - 1];
-  d = c[a];
-  b = b(d);
-  b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  e = c[a];
+  b = b(e);
+  b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
 };
-$jscomp.polyfillIsolated = function(a, b, c, d) {
-  var e = a.split(".");
-  a = 1 === e.length;
-  d = e[0];
-  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < e.length - 1; f++) {
-    var g = e[f];
-    if (!(g in d)) {
+$jscomp.polyfillIsolated = function(a, b, c, e) {
+  var d = a.split(".");
+  a = 1 === d.length;
+  e = d[0];
+  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < d.length - 1; f++) {
+    var g = d[f];
+    if (!(g in e)) {
       return;
     }
-    d = d[g];
+    e = e[g];
   }
-  e = e[e.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
+  d = d[d.length - 1];
+  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
@@ -115,16 +115,16 @@ $jscomp.getConstructImplementation = function() {
       return Reflect.construct;
     }
     var b = Reflect.construct;
-    return function(c, d, e) {
-      c = b(c, d);
-      e && Reflect.setPrototypeOf(c, e.prototype);
+    return function(c, e, d) {
+      c = b(c, e);
+      d && Reflect.setPrototypeOf(c, d.prototype);
       return c;
     };
   }
-  return function(c, d, e) {
-    void 0 === e && (e = c);
-    e = $jscomp.objectCreate(e.prototype || Object.prototype);
-    return Function.prototype.apply.call(c, e, d) || e;
+  return function(c, e, d) {
+    void 0 === d && (d = c);
+    d = $jscomp.objectCreate(d.prototype || Object.prototype);
+    return Function.prototype.apply.call(c, d, e) || d;
   };
 };
 $jscomp.construct = {valueOf:$jscomp.getConstructImplementation}.valueOf();
@@ -153,8 +153,8 @@ $jscomp.inherits = function(a, b) {
     for (c in b) {
       if ("prototype" != c) {
         if (Object.defineProperties) {
-          var d = Object.getOwnPropertyDescriptor(b, c);
-          d && Object.defineProperty(a, c, d);
+          var e = Object.getOwnPropertyDescriptor(b, c);
+          e && Object.defineProperty(a, c, e);
         } else {
           a[c] = b[c];
         }
@@ -175,10 +175,10 @@ $jscomp.polyfill("Reflect.setPrototypeOf", function(a) {
   }
   if ($jscomp.setPrototypeOf) {
     var b = $jscomp.setPrototypeOf;
-    return function(c, d) {
+    return function(c, e) {
       try {
-        return b(c, d), !0;
-      } catch (e) {
+        return b(c, e), !0;
+      } catch (d) {
         return !1;
       }
     };
@@ -197,7 +197,7 @@ module.exports = function() {
   $jscomp.inherits(b, a);
   b.prototype.baz = function() {
     var c = this;
-    return function(d) {
+    return function(e) {
       return a.prototype.qux.call(c);
     };
   };

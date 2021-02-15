@@ -47,40 +47,40 @@ var $jscomp$lookupPolyfilledValue = function(a, b) {
   c = a[c];
   return void 0 !== c ? c : a[b];
 };
-$jscomp.polyfill = function(a, b, c, d) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, d) : $jscomp.polyfillUnisolated(a, b, c, d));
+$jscomp.polyfill = function(a, b, c, e) {
+  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, e) : $jscomp.polyfillUnisolated(a, b, c, e));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, d) {
+$jscomp.polyfillUnisolated = function(a, b, c, e) {
   c = $jscomp.global;
   a = a.split(".");
-  for (d = 0; d < a.length - 1; d++) {
-    var e = a[d];
-    if (!(e in c)) {
+  for (e = 0; e < a.length - 1; e++) {
+    var d = a[e];
+    if (!(d in c)) {
       return;
     }
-    c = c[e];
+    c = c[d];
   }
   a = a[a.length - 1];
-  d = c[a];
-  b = b(d);
-  b != d && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  e = c[a];
+  b = b(e);
+  b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
 };
-$jscomp.polyfillIsolated = function(a, b, c, d) {
-  var e = a.split(".");
-  a = 1 === e.length;
-  d = e[0];
-  d = !a && d in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
-  for (var f = 0; f < e.length - 1; f++) {
-    var g = e[f];
-    if (!(g in d)) {
+$jscomp.polyfillIsolated = function(a, b, c, e) {
+  var d = a.split(".");
+  a = 1 === d.length;
+  e = d[0];
+  e = !a && e in $jscomp.polyfills ? $jscomp.polyfills : $jscomp.global;
+  for (var f = 0; f < d.length - 1; f++) {
+    var g = d[f];
+    if (!(g in e)) {
       return;
     }
-    d = d[g];
+    e = e[g];
   }
-  e = e[e.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[e] : null;
+  d = d[d.length - 1];
+  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== c && ($jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + e, e = $jscomp.propertyToPolyfillSymbol[e], $jscomp.defineProperty(d, e, {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), d = $jscomp.propertyToPolyfillSymbol[d], $jscomp.defineProperty(e, d, {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.initSymbol = function() {
 };
@@ -88,20 +88,20 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(e, f) {
-    this.$jscomp$symbol$id_ = e;
+  var b = function(d, f) {
+    this.$jscomp$symbol$id_ = d;
     $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:f});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var c = 0, d = function(e) {
-    if (this instanceof d) {
+  var c = 0, e = function(d) {
+    if (this instanceof e) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (e || "") + "_" + c++, e);
+    return new b("jscomp_symbol_" + (d || "") + "_" + c++, d);
   };
-  return d;
+  return e;
 }, "es6", "es3");
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {
@@ -109,8 +109,8 @@ $jscomp.polyfill("Symbol.iterator", function(a) {
   }
   a = Symbol("Symbol.iterator");
   for (var b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "), c = 0; c < b.length; c++) {
-    var d = $jscomp.global[b[c]];
-    "function" === typeof d && "function" != typeof d.prototype[a] && $jscomp.defineProperty(d.prototype, a, {configurable:!0, writable:!0, value:function() {
+    var e = $jscomp.global[b[c]];
+    "function" === typeof e && "function" != typeof e.prototype[a] && $jscomp.defineProperty(e.prototype, a, {configurable:!0, writable:!0, value:function() {
       return $jscomp.iteratorPrototype($jscomp.arrayIteratorImpl(this));
     }});
   }
@@ -128,14 +128,14 @@ $jscomp.polyfill("String.prototype.matchAll", function(a) {
     if (b instanceof RegExp && !b.global) {
       throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
     }
-    var c = new RegExp(b, b instanceof RegExp ? void 0 : "g"), d = this, e = !1, f = {next:function() {
+    var c = new RegExp(b, b instanceof RegExp ? void 0 : "g"), e = this, d = !1, f = {next:function() {
       var g = {}, k = c.lastIndex;
-      if (e) {
+      if (d) {
         return {value:void 0, done:!0};
       }
-      var h = c.exec(d);
+      var h = c.exec(e);
       if (!h) {
-        return e = !0, {value:void 0, done:!0};
+        return d = !0, {value:void 0, done:!0};
       }
       c.lastIndex === k && (c.lastIndex += 1);
       g.value = h;
@@ -153,9 +153,9 @@ module.exports = function() {
   if (a[Symbol.iterator]() !== a) {
     return !1;
   }
-  for (var b = "", c = "", d = "", e; !(e = a.next()).done;) {
-    b += e.value[0], c += e.value[1], d += e.value[2];
+  for (var b = "", c = "", e = "", d; !(d = a.next()).done;) {
+    b += d.value[0], c += d.value[1], e += d.value[2];
   }
-  return "1a2b" === b && "12" === c && "ab" === d;
+  return "1a2b" === b && "12" === c && "ab" === e;
 };
 
