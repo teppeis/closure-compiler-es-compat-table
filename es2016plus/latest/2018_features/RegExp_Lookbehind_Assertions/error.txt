@@ -5,15 +5,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20200927/2018_features/RegExp_Lookbehind_Assertions/in.js:3:9: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
+es2016plus/v20201006/2018_features/RegExp_Lookbehind_Assertions/in.js:3:9: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
   3|   return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
               ^^^^^^^^^
 
-es2016plus/v20200927/2018_features/RegExp_Lookbehind_Assertions/in.js:3:33: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
+es2016plus/v20201006/2018_features/RegExp_Lookbehind_Assertions/in.js:3:33: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
   3|   return /(?<=a)b/.test('ab') && /(?<!a)b/.test('cb') &&
                                       ^^^^^^^^^
 
-es2016plus/v20200927/2018_features/RegExp_Lookbehind_Assertions/in.js:4:1: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
+es2016plus/v20201006/2018_features/RegExp_Lookbehind_Assertions/in.js:4:1: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp Lookbehind" to targeted output language.
   4| !/(?<=a)b/.test('b');
       ^^^^^^^^^
 

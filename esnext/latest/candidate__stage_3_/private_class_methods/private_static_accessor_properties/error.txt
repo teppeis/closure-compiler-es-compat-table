@@ -13,7 +13,7 @@ return new C().x() === 42 && y;
 
 };
 ----------------------------------------------------------
-esnext/v20200927/candidate__stage_3_/private_class_methods/private_static_accessor_properties/in.js:5:11: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+esnext/v20201006/candidate__stage_3_/private_class_methods/private_static_accessor_properties/in.js:5:11: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
   5| static get #x() { return 42; }
                 ^
 

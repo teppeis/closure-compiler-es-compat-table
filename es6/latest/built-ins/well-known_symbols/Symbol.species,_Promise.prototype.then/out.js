@@ -15,6 +15,7 @@ $jscomp.ASSUME_NO_NATIVE_SET = !1;
 $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
+$jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, d, f) {
   if (b == Array.prototype || b == Object.prototype) {
     return b;
@@ -139,7 +140,7 @@ $jscomp.polyfill("Promise", function(b) {
       e(a);
     });
   }
-  if (b && !$jscomp.FORCE_POLYFILL_PROMISE) {
+  if (b && !($jscomp.FORCE_POLYFILL_PROMISE || $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION && "undefined" === typeof $jscomp.global.PromiseRejectionEvent)) {
     return b;
   }
   d.prototype.asyncExecute = function(a) {
