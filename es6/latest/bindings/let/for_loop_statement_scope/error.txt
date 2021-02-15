@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20201006/bindings/let/for_loop_statement_scope/in.js:4:27: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20201102/bindings/let/for_loop_statement_scope/in.js:4:27: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   for(let baz = 0; false;) {}
                                 ^^
 

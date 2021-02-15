@@ -12,7 +12,7 @@ module.exports = () => {
 // EXPECT: 7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
 
 ----------------------------------------------------------
-es2016plus/v20201006/2017_features/async_functions/must_await_a_value/in.js:7:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/v20201102/2017_features/async_functions/must_await_a_value/in.js:7:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   7|     await;
                ^
 

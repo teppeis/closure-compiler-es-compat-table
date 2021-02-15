@@ -11,7 +11,7 @@ module.exports = () => {
 // EXPECT: 6: ERROR
 
 ----------------------------------------------------------
-es2016plus/v20201006/2017_features/async_functions/cannot_await_in_parameters/in.js:6:24: ERROR - [JSC_PARSE_ERROR] Parse error. `await` is illegal in parameter default value.
+es2016plus/v20201102/2017_features/async_functions/cannot_await_in_parameters/in.js:6:24: ERROR - [JSC_PARSE_ERROR] Parse error. `await` is illegal in parameter default value.
   6|   (async function a(b = await Promise.resolve()) {
                              ^
 
