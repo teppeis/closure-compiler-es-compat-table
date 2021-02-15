@@ -1,0 +1,27 @@
+// built-ins / well-known symbols / Symbol.toPrimitive
+module.exports = () => {
+  var a = {}, b = {}, c = {};
+  var passed = 0;
+  a[Symbol.toPrimitive] = function(hint) { passed += hint === "number";  return 0; };
+  b[Symbol.toPrimitive] = function(hint) { passed += hint === "string";  return 0; };
+  c[Symbol.toPrimitive] = function(hint) { passed += hint === "default"; return 0; };
+  a >= 0;
+  b in {};
+  c == 0; // eslint-disable-line eqeqeq
+  return passed === 3;
+
+};
+----------------------------------------------------------
+es6/v20201207/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'ge' operator is not being used.
+  8|   a >= 0;
+       ^^^^^^
+
+es6/v20201207/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+   9|   b in {};
+        ^^^^^^^
+
+es6/v20201207/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
+  10|   c == 0; // eslint-disable-line eqeqeq
+        ^^^^^^
+
+0 error(s), 3 warning(s)

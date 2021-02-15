@@ -1,0 +1,17 @@
+// 2021 features / Logical Assignment / ??= basic support
+module.exports = () => {
+let a;
+let b = 0;
+let c = 1;
+a ??= 2;
+b ??= 2;
+c ??= 2;
+return a === 2 && b === 0 && c === 1;
+
+};
+----------------------------------------------------------
+es2016plus/v20201207/2021_features/Logical_Assignment/QQ_Equals_basic_support/in.js:6:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  6| a ??= 2;
+          ^
+
+1 error(s), 0 warning(s)
