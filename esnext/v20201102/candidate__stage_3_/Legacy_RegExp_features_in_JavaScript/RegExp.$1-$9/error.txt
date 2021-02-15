@@ -1,0 +1,15 @@
+// candidate (stage 3) / Legacy RegExp features in JavaScript / RegExp.$1-$9
+module.exports = () => {
+function () {
+for (var i = 1; i < 10; i++) {
+if (!(('$' + i) in RegExp)) return false;
+}
+return true;
+}
+};
+----------------------------------------------------------
+esnext/v20201102/candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
+  3| function () {
+              ^
+
+1 error(s), 0 warning(s)

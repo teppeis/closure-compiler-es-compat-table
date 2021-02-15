@@ -1,0 +1,15 @@
+// built-ins / Reflect / Reflect.construct sets new.target meta-property
+module.exports = () => {
+  return Reflect.construct(function(a, b, c) {
+    if (new.target === Object) {
+      this.qux = a + b + c;
+    }
+  }, ["foo", "bar", "baz"], Object).qux === "foobarbaz";
+
+};
+----------------------------------------------------------
+es6/v20201102/built-ins/Reflect/Reflect.construct_sets_new.target_meta-property/in.js:4:8: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+  4|     if (new.target === Object) {
+             ^^^^^^^^^^
+
+1 error(s), 0 warning(s)
