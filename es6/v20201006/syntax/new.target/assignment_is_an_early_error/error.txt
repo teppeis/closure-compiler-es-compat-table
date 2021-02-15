@@ -1,0 +1,18 @@
+// syntax / new.target / assignment is an early error
+module.exports = () => {
+  var passed = false;
+  new function f() {
+    passed = (new.target === f);
+  }();
+  new.target = function(){};
+  return false;
+};
+
+// EXPECT: 7: ERROR
+
+----------------------------------------------------------
+es6/v20201006/syntax/new.target/assignment_is_an_early_error/in.js:7:13: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
+  7|   new.target = function(){};
+                  ^
+
+1 error(s), 0 warning(s)
