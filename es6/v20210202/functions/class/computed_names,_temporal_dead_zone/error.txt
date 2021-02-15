@@ -1,0 +1,21 @@
+// functions / class / computed names, temporal dead zone
+module.exports = () => {
+  try {
+    var B = class C {
+      [C](){}
+    }
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20210202/functions/class/computed_names,_temporal_dead_zone/in.js:7:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   7|   } catch(e) {
+          ^^^^^^^^^^
+   8|     return true;
+      ^^^^^^^^^^^^^^^^
+   9|   }
+      ^^^
+
+0 error(s), 1 warning(s)
