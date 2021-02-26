@@ -129,18 +129,15 @@ $jscomp.polyfill("String.prototype.matchAll", function(a) {
       throw new TypeError("RegExp passed into String.prototype.matchAll() must have global tag.");
     }
     var c = new RegExp(b, b instanceof RegExp ? void 0 : "g"), d = this, e = !1, f = {next:function() {
-      var g = {}, k = c.lastIndex;
       if (e) {
         return {value:void 0, done:!0};
       }
-      var h = c.exec(d);
-      if (!h) {
+      var g = c.exec(d);
+      if (!g) {
         return e = !0, {value:void 0, done:!0};
       }
-      c.lastIndex === k && (c.lastIndex += 1);
-      g.value = h;
-      g.done = !1;
-      return g;
+      "" === g[0] && (c.lastIndex += 1);
+      return {value:g, done:!1};
     }};
     f[Symbol.iterator] = function() {
       return f;
