@@ -1,0 +1,22 @@
+// misc / miscellaneous / built-in prototypes are not instances
+module.exports = () => {
+  try {
+    RegExp.prototype.exec(); return false;
+  } catch(e) {}
+  try {
+    Date.prototype.valueOf(); return false;
+  } catch(e) {}
+  if (![Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError].every(function (E) {
+    return Object.prototype.toString.call(E.prototype) === '[object Object]';
+  })) {
+    return false;
+  }
+  return true;
+
+};
+----------------------------------------------------------
+es6/v20210302/misc/miscellaneous/built-in_prototypes_are_not_instances/in.js:7:4: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  7|     Date.prototype.valueOf(); return false;
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

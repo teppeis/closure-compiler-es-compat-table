@@ -1,0 +1,14 @@
+// 2019 misc / Function.prototype.toString revision / functions created with the Function constructor
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+  var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
+  return fn + '' === str;
+
+};
+----------------------------------------------------------
+es2016plus/v20210302/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
