@@ -129,6 +129,7 @@
 2020_features/optional_chaining_operator___._/optional_bracket_access/out.js: [Pass]
 2020_features/optional_chaining_operator___._/optional_method_call/out.js: [Pass]
 2020_features/optional_chaining_operator___._/optional_function_call/out.js: [Pass]
+2020_features/optional_chaining_operator___._/spread_parameters_after_optional_chaining/out.js: [Pass]
 2020_features/nullish_coalescing_operator_____/out.js: [Pass]
 2021_features/String.prototype.replaceAll/out.js: TypeError: Object q=query+string+parameters has no method 'replaceAll'
 2021_features/Promise.any/fulfillment/out.js: TypeError: Object function (a) { this.state_ = 0; this.result_ = void 0; this.onSettledCallbacks_ = []; this.isRejectionHandled_ = !1; var c = this.createResolveAndReject_(); try { a(c.resolve, c.reject); } catch (g) { c.reject(g); } } has no method 'any'
