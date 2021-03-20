@@ -767,6 +767,12 @@
     "subtest": "optional function call"
   },
   {
+    "path": "2020_features/optional_chaining_operator___._/spread_parameters_after_optional_chaining",
+    "category": "2020 features",
+    "test": "optional chaining operator (?.)",
+    "subtest": "spread parameters after optional chaining"
+  },
+  {
     "path": "2020_features/nullish_coalescing_operator_____",
     "category": "2020 features",
     "test": "nullish coalescing operator (??)"
