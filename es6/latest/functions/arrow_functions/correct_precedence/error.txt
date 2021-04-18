@@ -9,7 +9,7 @@ module.exports = () => {
 // EXPECT: 4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
 
 ----------------------------------------------------------
-es6/v20210302/functions/arrow_functions/correct_precedence/in.js:4:4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
+es6/v20210406/functions/arrow_functions/correct_precedence/in.js:4:4: ERROR - [JSC_PARSE_ERROR] Parse error. invalid arrow function parameters
   4|     0 || () => 2";
          ^
 

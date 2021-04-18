@@ -5,7 +5,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210302/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3:6: ERROR - [JSC_PARSE_ERROR] Parse error. Character '?' (U+D800) is not a valid identifier start char
+es6/v20210406/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3:6: ERROR - [JSC_PARSE_ERROR] Parse error. Character '?' (U+D800) is not a valid identifier start char
   3|   var 𐋀;
            ^
 

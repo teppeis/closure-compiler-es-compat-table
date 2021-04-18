@@ -7,15 +7,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210302/annex_b/HTML-style_comments/in.js:3:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20210406/annex_b/HTML-style_comments/in.js:3:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
   3| --> A comment
      ^
 
-es6/v20210302/annex_b/HTML-style_comments/in.js:4:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20210406/annex_b/HTML-style_comments/in.js:4:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
   4| <!-- Another comment
      ^
 
-es6/v20210302/annex_b/HTML-style_comments/in.js:5:13: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
+es6/v20210406/annex_b/HTML-style_comments/in.js:5:13: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
   5|   var a = 3; <!-- Another comment
                   ^
 
