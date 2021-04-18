@@ -17,6 +17,8 @@ candidate__stage_3_/Hashbang_Grammar/out.js: [InvalidResult: false]
 candidate__stage_3_/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: TypeError: Object 1,2,3 has no method 'at'
 candidate__stage_3_/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js: TypeError: Object abc has no method 'at'
 candidate__stage_3_/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__/out.js: [InvalidResult: false]
+candidate__stage_3_/Class_static_initialization_blocks/error.txt: [CompileError]
+candidate__stage_3_/Ergonomic_brand_checks_for_private_fields/error.txt: [CompileError]
 draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 draft__stage_2_/Realms/out.js: [InvalidResult: false]

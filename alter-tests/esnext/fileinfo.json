@@ -113,6 +113,16 @@
     "subtest": "%TypedArray%.prototype.at()"
   },
   {
+    "path": "candidate__stage_3_/Class_static_initialization_blocks",
+    "category": "candidate (stage 3)",
+    "test": "Class static initialization blocks"
+  },
+  {
+    "path": "candidate__stage_3_/Ergonomic_brand_checks_for_private_fields",
+    "category": "candidate (stage 3)",
+    "test": "Ergonomic brand checks for private fields"
+  },
+  {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",
     "category": "draft (stage 2)",
     "test": "Generator function.sent Meta Property"

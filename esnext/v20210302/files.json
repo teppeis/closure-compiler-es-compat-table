@@ -18,6 +18,8 @@
   "candidate__stage_3_/.at___method_on_the_built-in_indexables/Array.prototype.at__",
   "candidate__stage_3_/.at___method_on_the_built-in_indexables/String.prototype.at__",
   "candidate__stage_3_/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__",
+  "candidate__stage_3_/Class_static_initialization_blocks",
+  "candidate__stage_3_/Ergonomic_brand_checks_for_private_fields",
   "draft__stage_2_/Generator_function.sent_Meta_Property",
   "draft__stage_2_/Class_and_Property_Decorators/class_decorators",
   "draft__stage_2_/Realms",
