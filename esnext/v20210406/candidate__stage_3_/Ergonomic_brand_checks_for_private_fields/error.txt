@@ -1,0 +1,17 @@
+// candidate (stage 3) / Ergonomic brand checks for private fields
+module.exports = () => {
+class A {
+#x;
+static check(obj) {
+return #x in obj;
+}
+}
+return A.check(new A) && !A.check({});
+
+};
+----------------------------------------------------------
+esnext/v20210406/candidate__stage_3_/Ergonomic_brand_checks_for_private_fields/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+  4| #x;
+     ^
+
+1 error(s), 0 warning(s)

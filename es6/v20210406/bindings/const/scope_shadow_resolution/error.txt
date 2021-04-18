@@ -1,0 +1,21 @@
+// bindings / const / scope shadow resolution
+module.exports = () => {
+  try {
+    { const bar = 456; }
+    const bar = 123;
+    return bar === 123;
+  } catch(e) {
+    return false;
+  }
+
+};
+----------------------------------------------------------
+es6/v20210406/bindings/const/scope_shadow_resolution/in.js:7:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   7|   } catch(e) {
+          ^^^^^^^^^^
+   8|     return false;
+      ^^^^^^^^^^^^^^^^^
+   9|   }
+      ^^^
+
+0 error(s), 1 warning(s)

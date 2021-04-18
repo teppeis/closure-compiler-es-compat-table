@@ -1,0 +1,31 @@
+// built-ins / Proxy / "getPrototypeOf" handler invariant
+module.exports = () => {
+  var passed = false;
+  new Proxy({},{});
+  // If the target object is not extensible, [[GetPrototypeOf]] applied to the proxy object
+  // must return the same value as [[GetPrototypeOf]] applied to the proxy object's target object.
+  try {
+    Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+      getPrototypeOf: function () {
+        passed = true;
+        return {};
+      }
+    }));
+    return false;
+  } catch(e) {}
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20210406/built-ins/Proxy/getPrototypeOf_handler_invariant/in.js:8:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getPrototypeOf' is not being used.
+   8|     Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9|       getPrototypeOf: function () {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+  12|       }
+      ^^^^^^^
+  13|     }));
+      ^^^^^^^
+
+0 error(s), 1 warning(s)
