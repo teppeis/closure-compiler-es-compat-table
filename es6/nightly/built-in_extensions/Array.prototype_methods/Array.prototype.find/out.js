@@ -1,10 +1,10 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
-$jscomp.findInternal = function(a, b, c) {
+$jscomp.findInternal = function(a, c, b) {
   a instanceof String && (a = String(a));
   for (var e = a.length, d = 0; d < e; d++) {
     var f = a[d];
-    if (b.call(c, f, d, a)) {
+    if (c.call(b, f, d, a)) {
       return {i:d, v:f};
     }
   }
@@ -17,19 +17,19 @@ $jscomp.SIMPLE_FROUND_POLYFILL = !1;
 $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
-$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, b, c) {
+$jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
   if (a == Array.prototype || a == Object.prototype) {
     return a;
   }
-  a[b] = c.value;
+  a[c] = b.value;
   return a;
 };
 $jscomp.getGlobal = function(a) {
   a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
-  for (var b = 0; b < a.length; ++b) {
-    var c = a[b];
-    if (c && c.Math == Math) {
-      return c;
+  for (var c = 0; c < a.length; ++c) {
+    var b = a[c];
+    if (b && b.Math == Math) {
+      return b;
     }
   }
   throw Error("Cannot find global object");
@@ -40,33 +40,33 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, b) {
-  var c = $jscomp.propertyToPolyfillSymbol[b];
-  if (null == c) {
-    return a[b];
+var $jscomp$lookupPolyfilledValue = function(a, c) {
+  var b = $jscomp.propertyToPolyfillSymbol[c];
+  if (null == b) {
+    return a[c];
   }
-  c = a[c];
-  return void 0 !== c ? c : a[b];
+  b = a[b];
+  return void 0 !== b ? b : a[c];
 };
-$jscomp.polyfill = function(a, b, c, e) {
-  b && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, b, c, e) : $jscomp.polyfillUnisolated(a, b, c, e));
+$jscomp.polyfill = function(a, c, b, e) {
+  c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, e) : $jscomp.polyfillUnisolated(a, c, b, e));
 };
-$jscomp.polyfillUnisolated = function(a, b, c, e) {
-  c = $jscomp.global;
+$jscomp.polyfillUnisolated = function(a, c, b, e) {
+  b = $jscomp.global;
   a = a.split(".");
   for (e = 0; e < a.length - 1; e++) {
     var d = a[e];
-    if (!(d in c)) {
+    if (!(d in b)) {
       return;
     }
-    c = c[d];
+    b = b[d];
   }
   a = a[a.length - 1];
-  e = c[a];
-  b = b(e);
-  b != e && null != b && $jscomp.defineProperty(c, a, {configurable:!0, writable:!0, value:b});
+  e = b[a];
+  c = c(e);
+  c != e && null != c && $jscomp.defineProperty(b, a, {configurable:!0, writable:!0, value:c});
 };
-$jscomp.polyfillIsolated = function(a, b, c, e) {
+$jscomp.polyfillIsolated = function(a, c, b, e) {
   var d = a.split(".");
   a = 1 === d.length;
   e = d[0];
@@ -79,22 +79,22 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
     e = e[g];
   }
   d = d[d.length - 1];
-  c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
-  b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && ($jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:b})));
+  b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
+  c = c(b);
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (b = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + b + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("Array.prototype.find", function(a) {
-  return a ? a : function(b, c) {
-    return $jscomp.findInternal(this, b, c).v;
+  return a ? a : function(c, b) {
+    return $jscomp.findInternal(this, c, b).v;
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = [{name:"foo"}], b = {name:"bar"};
-  a.push(b);
+  var a = [{name:"foo"}], c = {name:"bar"};
+  a.push(c);
   a.push({name:"baz"});
-  var c = {};
+  var b = {};
   return a.find(function(e, d, f) {
-    return "bar" === e.name && 1 === d && this === c;
-  }, c) === b;
+    return "bar" === e.name && 1 === d && this === b;
+  }, b) === c;
 };
 

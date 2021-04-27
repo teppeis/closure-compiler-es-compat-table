@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(a, b, d, e) {
   f = f[f.length - 1];
   d = $jscomp.IS_SYMBOL_NATIVE && "es6" === d ? e[f] : null;
   b = b(d);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && ($jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + f), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (d = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + d + "$" + f), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
@@ -329,20 +329,20 @@ $jscomp.polyfill("Symbol", function(a) {
   if (a) {
     return a;
   }
-  var b = function(f, k) {
-    this.$jscomp$symbol$id_ = f;
-    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:k});
+  var b = function(k, c) {
+    this.$jscomp$symbol$id_ = k;
+    $jscomp.defineProperty(this, "description", {configurable:!0, writable:!0, value:c});
   };
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var d = 0, e = function(f) {
-    if (this instanceof e) {
+  var d = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", e = 0, f = function(k) {
+    if (this instanceof f) {
       throw new TypeError("Symbol is not a constructor");
     }
-    return new b("jscomp_symbol_" + (f || "") + "_" + d++, f);
+    return new b(d + (k || "") + "_" + e++, k);
   };
-  return e;
+  return f;
 }, "es6", "es3");
 $jscomp.polyfill("Symbol.iterator", function(a) {
   if (a) {

@@ -403,7 +403,7 @@ built-ins/Reflect/Reflect.construct_creates_instances_from_third_argument/out.js
 built-ins/Reflect/Reflect.construct,_Array_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_RegExp_subclassing/out.js: [InvalidResult: false]
 built-ins/Reflect/Reflect.construct,_Function_subclassing/out.js: [InvalidResult: false]
-built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<e> has no method 'createResolveAndReject_'
+built-ins/Reflect/Reflect.construct,_Promise_subclassing/out.js: TypeError: Object #<f> has no method 'createResolveAndReject_'
 built-ins/Promise/basic_functionality/out.js: [Pass]
 built-ins/Promise/constructor_requires_new/out.js: [Pass]
 built-ins/Promise/Promise.prototype_isnt_an_instance/out.js: [Skip]
@@ -423,7 +423,7 @@ built-ins/Symbol/new_Symbol___throws/out.js: [Pass]
 built-ins/Symbol/Object_symbol_/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_primitives/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_objects/out.js: [InvalidResult: false]
-built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (e) { if (this instanceof d) { throw new TypeError("Symbol is not a constructor"); } return new b("jscomp_symbol_" + (e || "") + "_" + c++, e); } has no method 'for'
+built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (f) { if (this instanceof e) { throw new TypeError("Symbol is not a constructor"); } return new b(c + (f || "") + "_" + d++, f); } has no method 'for'
 built-ins/well-known_symbols/Symbol.hasInstance/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.isConcatSpreadable/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.iterator,_existence/out.js: [Pass]
@@ -447,7 +447,7 @@ built-ins/well-known_symbols/Symbol.match,_String.prototype.includes/out.js: Typ
 built-ins/well-known_symbols/Symbol.toPrimitive/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.toStringTag/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins/out.js: ReferenceError: arguments is not defined
-built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins/out.js: TypeError: Property 'jscomp_symbol_Symbol.iterator_0' of object  is not a function
+built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins/out.js: TypeError: Property 'jscomp_symbol_495896851_Symbol.iterator_0' of object  is not a function
 built-ins/well-known_symbols/Symbol.toStringTag,_misc._built-ins/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.unscopables/error.txt: [CompileError]
 built-in_extensions/Object_static_methods/Object.assign/out.js: [Pass]
@@ -481,8 +481,8 @@ built-in_extensions/String.prototype_methods/String.prototype.startsWith_throws_
 built-in_extensions/String.prototype_methods/String.prototype.endsWith/out.js: [Pass]
 built-in_extensions/String.prototype_methods/String.prototype.endsWith_throws_on_RegExp/out.js: [Pass]
 built-in_extensions/String.prototype_methods/String.prototype.includes/out.js: [Pass]
-built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/out.js: TypeError: Property 'jscomp_symbol_Symbol.iterator_0' of object abc is not a function
-built-in_extensions/String.prototype_methods/String_iterator_prototype_chain/out.js: TypeError: Property 'jscomp_symbol_Symbol.iterator_0' of object  is not a function
+built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/out.js: TypeError: Property 'jscomp_symbol_759603934_Symbol.iterator_0' of object abc is not a function
+built-in_extensions/String.prototype_methods/String_iterator_prototype_chain/out.js: TypeError: Property 'jscomp_symbol_34538560_Symbol.iterator_0' of object  is not a function
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype.flags/out.js: [InvalidResult: false]
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.match_/out.js: [InvalidResult: false]
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.replace_/out.js: [InvalidResult: false]
