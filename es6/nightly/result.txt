@@ -447,7 +447,7 @@ built-ins/well-known_symbols/Symbol.match,_String.prototype.includes/out.js: Typ
 built-ins/well-known_symbols/Symbol.toPrimitive/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.toStringTag/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.toStringTag_affects_existing_built-ins/out.js: ReferenceError: arguments is not defined
-built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins/out.js: TypeError: Property 'jscomp_symbol_942215285_Symbol.iterator_0' of object  is not a function
+built-ins/well-known_symbols/Symbol.toStringTag,_new_built-ins/out.js: TypeError: Property 'jscomp_symbol_360264234_Symbol.iterator_0' of object  is not a function
 built-ins/well-known_symbols/Symbol.toStringTag,_misc._built-ins/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.unscopables/error.txt: [CompileError]
 built-in_extensions/Object_static_methods/Object.assign/out.js: [Pass]
@@ -481,8 +481,8 @@ built-in_extensions/String.prototype_methods/String.prototype.startsWith_throws_
 built-in_extensions/String.prototype_methods/String.prototype.endsWith/out.js: [Pass]
 built-in_extensions/String.prototype_methods/String.prototype.endsWith_throws_on_RegExp/out.js: [Pass]
 built-in_extensions/String.prototype_methods/String.prototype.includes/out.js: [Pass]
-built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/out.js: TypeError: Property 'jscomp_symbol_347220446_Symbol.iterator_0' of object abc is not a function
-built-in_extensions/String.prototype_methods/String_iterator_prototype_chain/out.js: TypeError: Property 'jscomp_symbol_336468711_Symbol.iterator_0' of object  is not a function
+built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/out.js: TypeError: Property 'jscomp_symbol_651284408_Symbol.iterator_0' of object abc is not a function
+built-in_extensions/String.prototype_methods/String_iterator_prototype_chain/out.js: TypeError: Property 'jscomp_symbol_816508280_Symbol.iterator_0' of object  is not a function
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype.flags/out.js: [InvalidResult: false]
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.match_/out.js: [InvalidResult: false]
 built-in_extensions/RegExp.prototype_properties/RegExp.prototype_Symbol.replace_/out.js: [InvalidResult: false]
