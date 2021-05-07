@@ -1,0 +1,15 @@
+// candidate (stage 3) / Class static initialization blocks
+module.exports = () => {
+let ok = false;
+class A {
+static { ok = true; }
+}
+return ok;
+
+};
+----------------------------------------------------------
+esnext/v20210505/candidate__stage_3_/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+  5| static { ok = true; }
+            ^
+
+1 error(s), 0 warning(s)

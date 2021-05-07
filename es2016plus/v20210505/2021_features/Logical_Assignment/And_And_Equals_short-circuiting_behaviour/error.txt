@@ -1,0 +1,14 @@
+// 2021 features / Logical Assignment / &&= short-circuiting behaviour
+module.exports = () => {
+let a;
+let i = 1;
+a &&= ++i;
+return typeof a === 'undefined' && i === 1;
+
+};
+----------------------------------------------------------
+es2016plus/v20210505/2021_features/Logical_Assignment/And_And_Equals_short-circuiting_behaviour/in.js:5:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  5| a &&= ++i;
+          ^
+
+1 error(s), 0 warning(s)
