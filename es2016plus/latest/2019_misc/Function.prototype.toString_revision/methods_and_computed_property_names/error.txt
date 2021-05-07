@@ -6,7 +6,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20210406/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20210505/2019_misc/Function.prototype.toString_revision/methods_and_computed_property_names/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   var str = '[ /\x2A a \x2A/ "f" /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

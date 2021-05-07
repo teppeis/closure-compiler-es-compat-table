@@ -14,7 +14,7 @@ module.exports = () => {
 };
 
 ----------------------------------------------------------
-es6/v20210406/functions/generators/shorthand_generators_cant_be_constructors/in.js:9:4: ERROR - [JSC_PARSE_ERROR] Parse error. Class constructor may not be getter, setter, async, or generator.
+es6/v20210505/functions/generators/shorthand_generators_cant_be_constructors/in.js:9:4: ERROR - [JSC_PARSE_ERROR] Parse error. Class constructor may not be getter, setter, async, or generator.
    9|     * constructor() {
           ^
 

@@ -7,11 +7,11 @@ return view[0] === 0n;
 
 };
 ----------------------------------------------------------
-es2016plus/v20210406/2020_features/BigInt/BigUint64Array/in.js:5:10: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+es2016plus/v20210505/2020_features/BigInt/BigUint64Array/in.js:5:10: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
   5| view[0] = 0x10000000000000000n;
                ^^^^^^^^^^^^^^^^^^^^
 
-es2016plus/v20210406/2020_features/BigInt/BigUint64Array/in.js:6:19: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+es2016plus/v20210505/2020_features/BigInt/BigUint64Array/in.js:6:19: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
   6| return view[0] === 0n;
                         ^^
 
