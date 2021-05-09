@@ -191,10 +191,14 @@ function check(file, cb) {
     }
   } catch (err) {
     // console.error(err.stack);
-    return cb(null, file + ": " + err);
+    return cb(null, file + ": " + normalizeError(String(err)));
   } finally {
     // console.log('context', context);
   }
+}
+
+function normalizeError(err) {
+  return err.replace(/jscomp_symbol_\d+_Symbol/g, 'jscomp_symbol_XXXXXXXXX_Symbol');
 }
 
 function isAsyncTest(src) {
