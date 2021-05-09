@@ -198,7 +198,10 @@ function check(file, cb) {
 }
 
 function normalizeError(err) {
-  return err.replace(/jscomp_symbol_\d+_Symbol/g, 'jscomp_symbol_XXXXXXXXX_Symbol');
+  return err.replace(
+    /jscomp_symbol_\d+_Symbol/g,
+    "jscomp_symbol_XXXXXXXXX_Symbol"
+  );
 }
 
 function isAsyncTest(src) {
