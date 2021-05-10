@@ -1,6 +1,6 @@
 # ECMAScript compatibility checker for Closure Compiler
 
-[![Build Status](https://travis-ci.org/teppeis/closure-compiler-es-compat-table.svg?branch=master)](https://travis-ci.org/teppeis/closure-compiler-es-compat-table)
+[![Test](https://github.com/teppeis/closure-compiler-es-compat-table/actions/workflows/test.yml/badge.svg)](https://github.com/teppeis/closure-compiler-es-compat-table/actions/workflows/test.yml)
 
 Run [kangax's ES compat-table tests](https://kangax.github.io/compat-table/es6/) for [Google Closure Compiler](https://github.com/google/closure-compiler).
 
