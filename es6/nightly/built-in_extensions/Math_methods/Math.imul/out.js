@@ -73,15 +73,7 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
   c = c(b);
   null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:c}) : c !== b && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && (b = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + b + "$" + e), $jscomp.defineProperty(d, $jscomp.propertyToPolyfillSymbol[e], {configurable:!0, writable:!0, value:c})));
 };
-$jscomp.polyfill("Math.imul", function(a) {
-  return a ? a : function(c, b) {
-    c = Number(c);
-    b = Number(b);
-    var d = c & 65535, e = b & 65535;
-    return d * e + ((c >>> 16 & 65535) * e + d * (b >>> 16 & 65535) << 16 >>> 0) | 0;
-  };
-}, "es6", "es3");
 module.exports = function() {
-  return 0 === Math.imul(0, 0) && 8 === Math.imul(2, 4);
+  return !0;
 };
 
