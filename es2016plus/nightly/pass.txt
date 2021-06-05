@@ -66,3 +66,4 @@
 2020_features/optional_chaining_operator___._/optional_function_call/out.js: [Pass]
 2020_features/optional_chaining_operator___._/spread_parameters_after_optional_chaining/out.js: [Pass]
 2020_features/nullish_coalescing_operator_____/out.js: [Pass]
+2021_features/numeric_separators/out.js: [Pass]

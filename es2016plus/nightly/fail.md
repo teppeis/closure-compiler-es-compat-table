@@ -122,6 +122,3 @@
 - ??= basic support ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_basic_support/error.txt))
 - ??= short-circuiting behaviour ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/error.txt))
 - ??= setter not unecessarily invoked ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/error.txt))
-
-### numeric separators
-- numeric separators ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/numeric_separators/error.txt))
