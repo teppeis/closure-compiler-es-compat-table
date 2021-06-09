@@ -101,9 +101,6 @@
 
 ## 2021 features
 
-### String.prototype.replaceAll
-- String.prototype.replaceAll ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/String.prototype.replaceAll/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/String.prototype.replaceAll/out.js))
-
 ### Promise.any
 - fulfillment ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Promise.any/fulfillment/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Promise.any/fulfillment/out.js))
 - AggregateError ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Promise.any/AggregateError/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2021_features/Promise.any/AggregateError/out.js))
