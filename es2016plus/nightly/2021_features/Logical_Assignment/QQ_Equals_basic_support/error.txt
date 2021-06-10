@@ -10,8 +10,19 @@ return a === 2 && b === 0 && c === 1;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_basic_support/in.js:6:5: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_basic_support/in.js:6:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Logical assignments
   6| a ??= 2;
-          ^
+     ^
 
-1 error(s), 0 warning(s)
+es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_basic_support/in.js:7:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Logical assignments
+  7| b ??= 2;
+     ^
+
+es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_basic_support/in.js:8:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Logical assignments
+  8| c ??= 2;
+     ^
+
+ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
+Unsupported features: [Logical assignments]
+
+1 error(s), 3 warning(s)
