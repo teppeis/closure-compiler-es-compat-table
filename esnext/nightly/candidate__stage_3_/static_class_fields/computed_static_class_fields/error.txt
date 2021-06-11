@@ -7,8 +7,49 @@ return C.x === 42;
 
 };
 ----------------------------------------------------------
-esnext/nightly/candidate__stage_3_/static_class_fields/computed_static_class_fields/in.js:4:13: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
-  4| static ['x'] = 42;
-                  ^
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
 
-1 error(s), 0 warning(s)
+com.google.javascript.rhino.Node cannot be cast to com.google.javascript.rhino.Node$StringNode
+  Node(CLASS): esnext/nightly/candidate__stage_3_/static_class_fields/computed_static_class_fields/in.js:3:0
+class C {
+  Parent(BLOCK): esnext/nightly/candidate__stage_3_/static_class_fields/computed_static_class_fields/in.js:2:23
+module.exports = () => {
+
+	at com.google.javascript.jscomp.Compiler.throwInternalError(Compiler.java:2851)
+	at com.google.javascript.jscomp.NodeTraversal.throwUnexpectedException(NodeTraversal.java:442)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:486)
+	at com.google.javascript.jscomp.NodeTraversal.access$400(NodeTraversal.java:38)
+	at com.google.javascript.jscomp.NodeTraversal$Builder.traverseRoots(NodeTraversal.java:406)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:492)
+	at com.google.javascript.jscomp.StrictModeCheck.process(StrictModeCheck.java:98)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:317)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:232)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1141)
+	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:939)
+	at com.google.javascript.jscomp.Compiler.lambda$stage1Passes$5(Compiler.java:850)
+	at com.google.javascript.jscomp.CompilerExecutor.lambda$runInCompilerThread$0(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:519)
+	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:192)
+Caused by: java.lang.ClassCastException: com.google.javascript.rhino.Node cannot be cast to com.google.javascript.rhino.Node$StringNode
+	at com.google.javascript.rhino.Node.getString(Node.java:1082)
+	at com.google.javascript.jscomp.StrictModeCheck.checkObjectLiteralOrClass(StrictModeCheck.java:187)
+	at com.google.javascript.jscomp.StrictModeCheck.visit(StrictModeCheck.java:111)
+	at com.google.javascript.jscomp.NodeTraversal.handleClass(NodeTraversal.java:982)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:927)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:792)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:835)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:1016)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:780)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:832)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:482)
+	... 16 more
