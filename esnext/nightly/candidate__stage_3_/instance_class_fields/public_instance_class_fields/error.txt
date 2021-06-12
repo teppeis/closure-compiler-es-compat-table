@@ -7,49 +7,11 @@ return new C().x === 'x';
 
 };
 ----------------------------------------------------------
-java.lang.RuntimeException: INTERNAL COMPILER ERROR.
-Please report this problem.
+esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:4:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Public class fields
+  4| x = 'x';
+     ^
 
-Unexpected class member: [MEMBER_FIELD_DEF x 4:0  [length: 8] [source_file: esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js]]
-  Node(CLASS): esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:3:0
-class C {
-  Parent(BLOCK): esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js:2:23
-module.exports = () => {
+ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
+Unsupported features: [Public class fields]
 
-	at com.google.javascript.jscomp.Compiler.throwInternalError(Compiler.java:2851)
-	at com.google.javascript.jscomp.NodeTraversal.throwUnexpectedException(NodeTraversal.java:442)
-	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:462)
-	at com.google.javascript.jscomp.NodeTraversal.access$200(NodeTraversal.java:38)
-	at com.google.javascript.jscomp.NodeTraversal$Builder.traverse(NodeTraversal.java:398)
-	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:468)
-	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:443)
-	at com.google.javascript.jscomp.Es6RewriteClass.process(Es6RewriteClass.java:80)
-	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:317)
-	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:232)
-	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1141)
-	at com.google.javascript.jscomp.Compiler.performChecksAndTranspilation(Compiler.java:939)
-	at com.google.javascript.jscomp.Compiler.lambda$stage1Passes$5(Compiler.java:850)
-	at com.google.javascript.jscomp.CompilerExecutor.lambda$runInCompilerThread$0(CompilerExecutor.java:101)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.lang.Thread.run(Thread.java:834)
-	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:519)
-	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:192)
-Caused by: java.lang.IllegalStateException: Unexpected class member: [MEMBER_FIELD_DEF x 4:0  [length: 8] [source_file: esnext/nightly/candidate__stage_3_/instance_class_fields/public_instance_class_fields/in.js]]
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:589)
-	at com.google.javascript.jscomp.Es6RewriteClass.visitClass(Es6RewriteClass.java:165)
-	at com.google.javascript.jscomp.Es6RewriteClass.visit(Es6RewriteClass.java:110)
-	at com.google.javascript.jscomp.NodeTraversal.handleClass(NodeTraversal.java:982)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:841)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
-	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:927)
-	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:792)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:835)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:879)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:1016)
-	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:780)
-	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:832)
-	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:459)
-	... 17 more
+1 error(s), 1 warning(s)
