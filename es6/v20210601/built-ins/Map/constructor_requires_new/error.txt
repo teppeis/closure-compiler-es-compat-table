@@ -1,0 +1,17 @@
+// built-ins / Map / constructor requires new
+module.exports = () => {
+  new Map();
+  try {
+    Map();
+    return false;
+  } catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20210601/built-ins/Map/constructor_requires_new/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Map' is not being used.
+  5|     Map();
+         ^^^^^
+
+0 error(s), 1 warning(s)
