@@ -3,7 +3,7 @@ module.exports = () => {
   var o = {
     * "foo bar"() {
       yield 5; yield 6;
-    },
+    }
   };
   var iterator = o["foo bar"]();
   var item = iterator.next();

@@ -12,7 +12,7 @@ module.exports = () => {
     D: true,
     B: true,
     // Negative integers are treated as other names
-    '-1': true,
+    '-1': true
   };
   // Other string names are added in order of creation
   obj.A = true;

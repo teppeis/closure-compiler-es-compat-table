@@ -1,83 +1,5 @@
 [
   {
-    "path": "candidate__stage_3_/instance_class_fields/public_instance_class_fields",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "public instance class fields"
-  },
-  {
-    "path": "candidate__stage_3_/instance_class_fields/private_instance_class_fields_basic_support",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "private instance class fields basic support"
-  },
-  {
-    "path": "candidate__stage_3_/instance_class_fields/private_instance_class_fields_initializers",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "private instance class fields initializers"
-  },
-  {
-    "path": "candidate__stage_3_/instance_class_fields/optional_private_instance_class_fields_access",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "optional private instance class fields access"
-  },
-  {
-    "path": "candidate__stage_3_/instance_class_fields/optional_deep_private_instance_class_fields_access",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "optional deep private instance class fields access"
-  },
-  {
-    "path": "candidate__stage_3_/instance_class_fields/computed_instance_class_fields",
-    "category": "candidate (stage 3)",
-    "test": "instance class fields",
-    "subtest": "computed instance class fields"
-  },
-  {
-    "path": "candidate__stage_3_/static_class_fields/public_static_class_fields",
-    "category": "candidate (stage 3)",
-    "test": "static class fields",
-    "subtest": "public static class fields"
-  },
-  {
-    "path": "candidate__stage_3_/static_class_fields/private_static_class_fields",
-    "category": "candidate (stage 3)",
-    "test": "static class fields",
-    "subtest": "private static class fields"
-  },
-  {
-    "path": "candidate__stage_3_/static_class_fields/computed_static_class_fields",
-    "category": "candidate (stage 3)",
-    "test": "static class fields",
-    "subtest": "computed static class fields"
-  },
-  {
-    "path": "candidate__stage_3_/private_class_methods/private_instance_methods",
-    "category": "candidate (stage 3)",
-    "test": "private class methods",
-    "subtest": "private instance methods"
-  },
-  {
-    "path": "candidate__stage_3_/private_class_methods/private_static_methods",
-    "category": "candidate (stage 3)",
-    "test": "private class methods",
-    "subtest": "private static methods"
-  },
-  {
-    "path": "candidate__stage_3_/private_class_methods/private_accessor_properties",
-    "category": "candidate (stage 3)",
-    "test": "private class methods",
-    "subtest": "private accessor properties"
-  },
-  {
-    "path": "candidate__stage_3_/private_class_methods/private_static_accessor_properties",
-    "category": "candidate (stage 3)",
-    "test": "private class methods",
-    "subtest": "private static accessor properties"
-  },
-  {
     "path": "candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
     "category": "candidate (stage 3)",
     "test": "Legacy RegExp features in JavaScript",
@@ -121,6 +43,18 @@
     "path": "candidate__stage_3_/Ergonomic_brand_checks_for_private_fields",
     "category": "candidate (stage 3)",
     "test": "Ergonomic brand checks for private fields"
+  },
+  {
+    "path": "candidate__stage_3_/Object.hasOwn/Basic_functionality",
+    "category": "candidate (stage 3)",
+    "test": "Object.hasOwn",
+    "subtest": "Basic functionality"
+  },
+  {
+    "path": "candidate__stage_3_/Object.hasOwn/ToObject_called_before_ToPropertyKey",
+    "category": "candidate (stage 3)",
+    "test": "Object.hasOwn",
+    "subtest": "ToObject called before ToPropertyKey"
   },
   {
     "path": "draft__stage_2_/Generator_function.sent_Meta_Property",

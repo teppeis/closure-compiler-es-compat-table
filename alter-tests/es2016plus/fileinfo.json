@@ -864,5 +864,83 @@
     "path": "2021_features/numeric_separators",
     "category": "2021 features",
     "test": "numeric separators"
+  },
+  {
+    "path": "2022_features/instance_class_fields/public_instance_class_fields",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "public instance class fields"
+  },
+  {
+    "path": "2022_features/instance_class_fields/private_instance_class_fields_basic_support",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "private instance class fields basic support"
+  },
+  {
+    "path": "2022_features/instance_class_fields/private_instance_class_fields_initializers",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "private instance class fields initializers"
+  },
+  {
+    "path": "2022_features/instance_class_fields/optional_private_instance_class_fields_access",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "optional private instance class fields access"
+  },
+  {
+    "path": "2022_features/instance_class_fields/optional_deep_private_instance_class_fields_access",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "optional deep private instance class fields access"
+  },
+  {
+    "path": "2022_features/instance_class_fields/computed_instance_class_fields",
+    "category": "2022 features",
+    "test": "instance class fields",
+    "subtest": "computed instance class fields"
+  },
+  {
+    "path": "2022_features/static_class_fields/public_static_class_fields",
+    "category": "2022 features",
+    "test": "static class fields",
+    "subtest": "public static class fields"
+  },
+  {
+    "path": "2022_features/static_class_fields/private_static_class_fields",
+    "category": "2022 features",
+    "test": "static class fields",
+    "subtest": "private static class fields"
+  },
+  {
+    "path": "2022_features/static_class_fields/computed_static_class_fields",
+    "category": "2022 features",
+    "test": "static class fields",
+    "subtest": "computed static class fields"
+  },
+  {
+    "path": "2022_features/private_class_methods/private_instance_methods",
+    "category": "2022 features",
+    "test": "private class methods",
+    "subtest": "private instance methods"
+  },
+  {
+    "path": "2022_features/private_class_methods/private_static_methods",
+    "category": "2022 features",
+    "test": "private class methods",
+    "subtest": "private static methods"
+  },
+  {
+    "path": "2022_features/private_class_methods/private_accessor_properties",
+    "category": "2022 features",
+    "test": "private class methods",
+    "subtest": "private accessor properties"
+  },
+  {
+    "path": "2022_features/private_class_methods/private_static_accessor_properties",
+    "category": "2022 features",
+    "test": "private class methods",
+    "subtest": "private static accessor properties"
   }
 ]

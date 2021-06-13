@@ -2,7 +2,7 @@
 module.exports = () => {
   var a = {
     toString: function() { return "foo"; },
-    valueOf: function() { return "bar"; },
+    valueOf: function() { return "bar"; }
   };
   return `${a}` === "foo";
 

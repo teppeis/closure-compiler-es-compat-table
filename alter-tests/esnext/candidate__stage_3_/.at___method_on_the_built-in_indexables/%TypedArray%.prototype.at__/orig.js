@@ -9,7 +9,7 @@ module.exports = () => {
     'Int32Array',
     'Uint32Array',
     'Float32Array',
-    'Float64Array',
+    'Float64Array'
   ].every(function (TypedArray) {
     var Constructor = globalThis[TypedArray];
     if (typeof Constructor !== 'function') {
