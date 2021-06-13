@@ -7,7 +7,7 @@ return C.x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20210505/2022_features/static_class_fields/computed_static_class_fields/in.js:4:13: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+es2016plus/v20210601/2022_features/static_class_fields/computed_static_class_fields/in.js:4:13: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
   4| static ['x'] = 42;
                   ^
 

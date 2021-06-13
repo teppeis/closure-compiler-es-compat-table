@@ -360,11 +360,11 @@ module.exports = function(b) {
     setTimeout(c, 1000, "foo");
   }), new Promise(function(c, l) {
     setTimeout(l, 2000, "bar");
-  }), ])), f = Promise.race(global.__createIterableObject([new Promise(function(c, l) {
+  })])), f = Promise.race(global.__createIterableObject([new Promise(function(c, l) {
     setTimeout(l, 1000, "baz");
   }), new Promise(function(c) {
     setTimeout(c, 2000, "qux");
-  }), ])), g = 0;
+  })])), g = 0;
   d.then(function(c) {
     g += "foo" === c;
     2 === g && b();

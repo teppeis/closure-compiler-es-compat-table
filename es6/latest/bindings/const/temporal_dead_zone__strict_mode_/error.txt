@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210505/bindings/const/temporal_dead_zone__strict_mode_/in.js:4:34: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+es6/v20210601/bindings/const/temporal_dead_zone__strict_mode_/in.js:4:34: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
   4|   var passed = (function(){ try { qux; } catch(e) { return true; }}());
                                        ^^^
 

@@ -76,7 +76,7 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
 $jscomp.polyfill("Math.log1p", function(a) {
   return a ? a : function(b) {
     b = Number(b);
-    if (0.25 > b && -.25 < b) {
+    if (0.25 > b && -0.25 < b) {
       for (var c = b, e = 1, d = b, f = 0, g = 1; f != d;) {
         c *= b, g *= -1, d = (f = d) + g * c / ++e;
       }

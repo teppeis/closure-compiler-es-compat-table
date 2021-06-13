@@ -13,7 +13,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210505/built-ins/Proxy/ownKeys_handler/in.js:5:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es6/v20210601/built-ins/Proxy/ownKeys_handler/in.js:5:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
    5|   Object.keys(
         ^^^^^^^^^^^^
    6|     new Proxy(proxied, {

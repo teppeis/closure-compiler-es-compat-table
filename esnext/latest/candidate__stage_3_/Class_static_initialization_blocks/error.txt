@@ -8,7 +8,7 @@ return ok;
 
 };
 ----------------------------------------------------------
-esnext/v20210505/candidate__stage_3_/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
+esnext/v20210601/candidate__stage_3_/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. '(' expected
   5| static { ok = true; }
             ^
 

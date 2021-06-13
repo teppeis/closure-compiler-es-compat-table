@@ -11,7 +11,7 @@ return A.check(new A) && !A.check({});
 
 };
 ----------------------------------------------------------
-esnext/v20210505/candidate__stage_3_/Ergonomic_brand_checks_for_private_fields/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+esnext/v20210601/candidate__stage_3_/Ergonomic_brand_checks_for_private_fields/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
   4| #x;
      ^
 
