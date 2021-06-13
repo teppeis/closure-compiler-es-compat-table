@@ -1,0 +1,17 @@
+// 2022 features / instance class fields / computed instance class fields
+module.exports = () => {
+class C {
+['x'] = 42;
+}
+return new C().x === 42;
+
+};
+----------------------------------------------------------
+es2016plus/nightly/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Public class fields
+  4| ['x'] = 42;
+     ^
+
+ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
+Unsupported features: [Public class fields]
+
+1 error(s), 1 warning(s)

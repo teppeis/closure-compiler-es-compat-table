@@ -3,7 +3,7 @@ module.exports = () => {
   var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
   var obj = {
     1: true,
-    A: true,
+    A: true
   };
   obj.B = true;
   obj[sym1] = true;

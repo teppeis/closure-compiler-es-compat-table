@@ -146,7 +146,7 @@ $jscomp.polyfill("Array.prototype.keys", function(a) {
   };
 }, "es6", "es3");
 module.exports = function() {
-  var a = {2:!0, 0:!0, 1:!0, " ":!0, 9:!0, D:!0, B:!0, "-1":!0, A:!0, 3:!0, };
+  var a = {2:!0, 0:!0, 1:!0, " ":!0, 9:!0, D:!0, B:!0, "-1":!0, A:!0, 3:!0};
   "EFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(function(d) {
     a[d] = !0;
   });

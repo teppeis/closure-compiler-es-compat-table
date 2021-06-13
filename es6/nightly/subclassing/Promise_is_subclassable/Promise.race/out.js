@@ -421,11 +421,11 @@ module.exports = function(a) {
     setTimeout(l, 1000, "foo");
   }), new Promise(function(l, b) {
     setTimeout(b, 2000, "bar");
-  }), ]), g = c.race([new Promise(function(l, b) {
+  })]), g = c.race([new Promise(function(l, b) {
     setTimeout(b, 1000, "baz");
   }), new Promise(function(l) {
     setTimeout(l, 2000, "qux");
-  }), ]), e = +(d instanceof c);
+  })]), e = +(d instanceof c);
   d.then(function(l) {
     e += "foo" === l;
     3 === e && a();

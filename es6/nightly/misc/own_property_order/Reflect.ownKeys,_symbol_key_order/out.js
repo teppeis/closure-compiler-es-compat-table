@@ -142,7 +142,7 @@ $jscomp.polyfill("Reflect.ownKeys", function(a) {
   };
 }, "es6", "es5");
 module.exports = function() {
-  var a = Symbol(), b = Symbol(), d = Symbol(), c = {1:!0, A:!0, B:!0, };
+  var a = Symbol(), b = Symbol(), d = Symbol(), c = {1:!0, A:!0, B:!0};
   c[a] = !0;
   c[2] = !0;
   c[b] = !0;

@@ -146,5 +146,18 @@
   "2021_features/Logical_Assignment/QQ_Equals_basic_support",
   "2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour",
   "2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked",
-  "2021_features/numeric_separators"
+  "2021_features/numeric_separators",
+  "2022_features/instance_class_fields/public_instance_class_fields",
+  "2022_features/instance_class_fields/private_instance_class_fields_basic_support",
+  "2022_features/instance_class_fields/private_instance_class_fields_initializers",
+  "2022_features/instance_class_fields/optional_private_instance_class_fields_access",
+  "2022_features/instance_class_fields/optional_deep_private_instance_class_fields_access",
+  "2022_features/instance_class_fields/computed_instance_class_fields",
+  "2022_features/static_class_fields/public_static_class_fields",
+  "2022_features/static_class_fields/private_static_class_fields",
+  "2022_features/static_class_fields/computed_static_class_fields",
+  "2022_features/private_class_methods/private_instance_methods",
+  "2022_features/private_class_methods/private_static_methods",
+  "2022_features/private_class_methods/private_accessor_properties",
+  "2022_features/private_class_methods/private_static_accessor_properties"
 ]

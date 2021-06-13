@@ -318,11 +318,11 @@ module.exports = function(c) {
     setTimeout(b, 2000, "foo");
   }), new Promise(function(b) {
     setTimeout(b, 1000, "bar");
-  }), ]), f = Promise.all([new Promise(function(b, m) {
+  })]), f = Promise.all([new Promise(function(b, m) {
     setTimeout(m, 2000, "baz");
   }), new Promise(function(b, m) {
     setTimeout(m, 1000, "qux");
-  }), ]), h = 0;
+  })]), h = 0;
   e.then(function(b) {
     h += "foo,bar" === b + "";
     2 === h && c();

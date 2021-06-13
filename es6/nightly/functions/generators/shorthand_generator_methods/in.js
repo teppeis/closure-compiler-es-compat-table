@@ -3,7 +3,7 @@ module.exports = () => {
   var o = {
     * generator() {
       yield 5; yield 6;
-    },
+    }
   };
   var iterator = o.generator();
   var item = iterator.next();

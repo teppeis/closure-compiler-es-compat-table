@@ -4,6 +4,7 @@ class A {
 #x;
 static check(obj) {
 return #x in obj;
+rhino1_7: false
 }
 }
 return A.check(new A) && !A.check({});
