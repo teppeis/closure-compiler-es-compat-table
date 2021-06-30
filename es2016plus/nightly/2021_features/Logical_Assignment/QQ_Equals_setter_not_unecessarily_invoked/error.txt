@@ -7,11 +7,8 @@ return i === 1;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/in.js:5:0: WARNING - [JSC_PARSE_ERROR] Parse error. This language feature is not currently supported by the compiler: Logical assignments
+es2016plus/nightly/2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/in.js:5:0: ERROR - [JSC_UNSUPPORTED_LANGUAGE_FEATURE] This language feature is not currently supported by the compiler: Logical assignments.
   5| obj.x ??= 2;
      ^
 
-ERROR - [JSC_FEATURES_NOT_SUPPORTED_BY_PASS] Attempted to run pass "markUntranspilableFeaturesAsRemoved" on input with features it does not support. Running pass anyway.
-Unsupported features: [Logical assignments]
-
-1 error(s), 1 warning(s)
+1 error(s), 0 warning(s)
