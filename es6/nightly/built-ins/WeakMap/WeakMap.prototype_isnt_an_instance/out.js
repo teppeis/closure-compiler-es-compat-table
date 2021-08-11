@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var d = a[b];
     if (d && d.Math == Math) {
@@ -26,7 +26,7 @@ $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscom
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -126,7 +126,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   }
   function f(c) {
     if (!$jscomp.owns(c, h)) {
-      var g = new d;
+      var g = new d();
       $jscomp.defineProperty(c, h, {value:g});
     }
   }
@@ -187,7 +187,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   return m;
 }, "es6", "es3");
 module.exports = function() {
-  new WeakMap;
+  new WeakMap();
   var a = {};
   try {
     WeakMap.prototype.has(a);

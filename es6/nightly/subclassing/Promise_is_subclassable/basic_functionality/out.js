@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(b) {
   var c = 0;
   return function() {
-    return c < b.length ? {done:!1, value:b[c++], } : {done:!0};
+    return c < b.length ? {done:!1, value:b[c++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -33,7 +33,7 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var c = function() {
   };
   c.prototype = b;
-  return new c;
+  return new c();
 };
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(b, c, d) {
   if (b == Array.prototype || b == Object.prototype) {
@@ -43,7 +43,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return b;
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var c = 0; c < b.length; ++c) {
     var d = b[c];
     if (d && d.Math == Math) {
@@ -105,10 +105,10 @@ $jscomp.getConstructImplementation = function() {
   function b() {
     function d() {
     }
-    new d;
+    new d();
     Reflect.construct(d, [], function() {
     });
-    return new d instanceof d;
+    return new d() instanceof d;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (b()) {
@@ -331,7 +331,7 @@ $jscomp.polyfill("Promise", function(b) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var m = new c;
+  var m = new c();
   e.prototype.settleSameAsPromise_ = function(a) {
     var f = this.createResolveAndReject_();
     a.callWhenSettled_(f.resolve, f.reject);

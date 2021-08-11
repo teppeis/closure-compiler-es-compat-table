@@ -15,7 +15,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var c = a[b];
     if (c && c.Math == Math) {
@@ -91,7 +91,7 @@ $jscomp.setPrototypeOf = $jscomp.TRUST_ES6_POLYFILLS && "function" == typeof Obj
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -217,7 +217,7 @@ $jscomp.generator.Context.PropertyIterator.prototype.getNext = function() {
   return null;
 };
 $jscomp.generator.Engine_ = function(a) {
-  this.context_ = new $jscomp.generator.Context;
+  this.context_ = new $jscomp.generator.Context();
   this.program_ = a;
 };
 $jscomp.generator.Engine_.prototype.next_ = function(a) {
@@ -388,12 +388,12 @@ $jscomp.AsyncIteratorFromSyncWrapper = function(a) {
     return Promise.resolve(a["return"](b));
   });
 };
-$jscomp.AsyncGeneratorWrapper$ActionEnum = {YIELD_VALUE:0, YIELD_STAR:1, AWAIT_VALUE:2, };
+$jscomp.AsyncGeneratorWrapper$ActionEnum = {YIELD_VALUE:0, YIELD_STAR:1, AWAIT_VALUE:2,};
 $jscomp.AsyncGeneratorWrapper$ActionRecord = function(a, b) {
   this.action = a;
   this.value = b;
 };
-$jscomp.AsyncGeneratorWrapper$GeneratorMethod = {NEXT:"next", THROW:"throw", RETURN:"return", };
+$jscomp.AsyncGeneratorWrapper$GeneratorMethod = {NEXT:"next", THROW:"throw", RETURN:"return",};
 $jscomp.AsyncGeneratorWrapper$ExecutionFrame_ = function(a, b, c, f) {
   this.method = a;
   this.param = b;
@@ -427,7 +427,7 @@ $jscomp.AsyncGeneratorWrapper$ExecutionQueue_.prototype.enqueue = function(a) {
 $jscomp.AsyncGeneratorWrapper = function(a) {
   this.generator_ = a;
   this.delegate_ = null;
-  this.executionQueue_ = new $jscomp.AsyncGeneratorWrapper$ExecutionQueue_;
+  this.executionQueue_ = new $jscomp.AsyncGeneratorWrapper$ExecutionQueue_();
   this[Symbol.asyncIterator] = function() {
     return this;
   };
@@ -691,7 +691,7 @@ $jscomp.polyfill("Promise", function(a) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var k = new b;
+  var k = new b();
   e.prototype.settleSameAsPromise_ = function(d) {
     var g = this.createResolveAndReject_();
     d.callWhenSettled_(g.resolve, g.reject);

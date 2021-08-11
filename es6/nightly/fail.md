@@ -33,7 +33,6 @@
 - binary supported by Number() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/octal_and_binary_literals/binary_supported_by_Number__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/octal_and_binary_literals/binary_supported_by_Number__/out.js))
 
 ### template literals
-- toString conversion ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/toString_conversion/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/toString_conversion/out.js))
 - passed array is frozen ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/passed_array_is_frozen/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/template_literals/passed_array_is_frozen/out.js))
 
 ### RegExp "y" and "u" flags

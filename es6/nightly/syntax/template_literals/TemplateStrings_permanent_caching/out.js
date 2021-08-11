@@ -11,7 +11,7 @@ var $jscomp$templatelit$1380106873$0 = $jscomp.createTemplateTagFirstArg(["foo"]
 module.exports = function() {
   var a = $jscomp$templatelit$1380106873$0, b = new function() {
     return $jscomp$templatelit$1380106873$0;
-  };
+  }();
   return a === $jscomp$templatelit$1380106873$0 && a === b;
 };
 

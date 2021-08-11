@@ -15,7 +15,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return c;
 };
 $jscomp.getGlobal = function(c) {
-  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var f = 0; f < c.length; ++f) {
     var e = c[f];
     if (e && e.Math == Math) {
@@ -80,16 +80,16 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var f = function() {
   };
   f.prototype = c;
-  return new f;
+  return new f();
 };
 $jscomp.getConstructImplementation = function() {
   function c() {
     function e() {
     }
-    new e;
+    new e();
     Reflect.construct(e, [], function() {
     });
-    return new e instanceof e;
+    return new e() instanceof e;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (c()) {
@@ -115,7 +115,7 @@ $jscomp.polyfill("Reflect.construct", function(c) {
 $jscomp.arrayIteratorImpl = function(c) {
   var f = 0;
   return function() {
-    return f < c.length ? {done:!1, value:c[f++], } : {done:!0};
+    return f < c.length ? {done:!1, value:c[f++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(c) {
@@ -271,7 +271,7 @@ $jscomp.polyfill("Promise", function(c) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var l = new f;
+  var l = new f();
   b.prototype.settleSameAsPromise_ = function(a) {
     var d = this.createResolveAndReject_();
     a.callWhenSettled_(d.resolve, d.reject);

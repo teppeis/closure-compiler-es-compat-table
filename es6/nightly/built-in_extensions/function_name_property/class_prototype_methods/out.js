@@ -3,6 +3,6 @@ module.exports = function() {
   };
   a.prototype.foo = function() {
   };
-  return "foo" === (new a).foo.name;
+  return "foo" === (new a()).foo.name;
 };
 

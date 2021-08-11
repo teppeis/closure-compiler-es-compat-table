@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(b) {
   var c = 0;
   return function() {
-    return c < b.length ? {done:!1, value:b[c++], } : {done:!0};
+    return c < b.length ? {done:!1, value:b[c++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -21,7 +21,7 @@ $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var c = 0; c < b.length; ++c) {
     var d = b[c];
     if (d && d.Math == Math) {
@@ -232,7 +232,7 @@ $jscomp.polyfill("Promise", function(b) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var l = new c;
+  var l = new c();
   e.prototype.settleSameAsPromise_ = function(a) {
     var f = this.createResolveAndReject_();
     a.callWhenSettled_(f.resolve, f.reject);
@@ -336,7 +336,7 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var c = function() {
   };
   c.prototype = b;
-  return new c;
+  return new c();
 };
 $jscomp.underscoreProtoCanBeSet = function() {
   var b = {a:!0}, c = {};

@@ -3,7 +3,7 @@ module.exports = function() {
   new (new Proxy(Function, {get:function(c, b) {
     a.push(b);
     return c[b];
-  }}));
+  }}))();
   return "prototype" === a + "";
 };
 

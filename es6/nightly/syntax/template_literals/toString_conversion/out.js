@@ -8,10 +8,10 @@ $jscomp.createTemplateTagFirstArgWithRaw = function(a, b) {
   return a;
 };
 module.exports = function() {
-  return "foo" === "" + {toString:function() {
+  return "foo" === String({toString:function() {
     return "foo";
   }, valueOf:function() {
     return "bar";
-  }};
+  }});
 };
 

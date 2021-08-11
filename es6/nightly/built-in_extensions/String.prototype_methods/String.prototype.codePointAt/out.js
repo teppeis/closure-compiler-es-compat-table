@@ -24,7 +24,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return b;
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var a = 0; a < b.length; ++a) {
     var c = b[a];
     if (c && c.Math == Math) {
