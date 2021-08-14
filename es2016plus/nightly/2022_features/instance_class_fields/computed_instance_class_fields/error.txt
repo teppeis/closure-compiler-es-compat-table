@@ -7,8 +7,8 @@ return new C().x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for ES_NEXT_IN mode or better: Public class fields.
+es2016plus/nightly/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
   4| ['x'] = 42;
-     ^
+     ^^^^^^^^^^^
 
 1 error(s), 0 warning(s)
