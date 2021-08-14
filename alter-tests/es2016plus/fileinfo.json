@@ -942,5 +942,10 @@
     "category": "2022 features",
     "test": "private class methods",
     "subtest": "private static accessor properties"
+  },
+  {
+    "path": "2022_features/Ergonomic_brand_checks_for_private_fields",
+    "category": "2022 features",
+    "test": "Ergonomic brand checks for private fields"
   }
 ]
