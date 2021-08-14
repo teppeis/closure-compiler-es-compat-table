@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20210601/misc/Proxy,_internal_get_calls/HasBinding/in.js:7:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
+es6/v20210808/misc/Proxy,_internal_get_calls/HasBinding/in.js:7:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
    7|   with(p) {
         ^^^^^^^^^
    8|     typeof foo;
