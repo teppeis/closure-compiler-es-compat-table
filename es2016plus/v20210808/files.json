@@ -159,5 +159,6 @@
   "2022_features/private_class_methods/private_instance_methods",
   "2022_features/private_class_methods/private_static_methods",
   "2022_features/private_class_methods/private_accessor_properties",
-  "2022_features/private_class_methods/private_static_accessor_properties"
+  "2022_features/private_class_methods/private_static_accessor_properties",
+  "2022_features/Ergonomic_brand_checks_for_private_fields"
 ]

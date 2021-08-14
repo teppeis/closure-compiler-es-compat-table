@@ -159,3 +159,4 @@
 2022_features/private_class_methods/private_static_methods/error.txt: [CompileError]
 2022_features/private_class_methods/private_accessor_properties/error.txt: [CompileError]
 2022_features/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
+2022_features/Ergonomic_brand_checks_for_private_fields/error.txt: [CompileError]
