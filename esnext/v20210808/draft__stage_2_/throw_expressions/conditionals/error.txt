@@ -1,0 +1,16 @@
+// draft (stage 2) / throw expressions / conditionals
+module.exports = () => {
+true ? 42 : throw 21;
+try {
+false ? 42 : throw 21;
+} catch (e) {
+return e === 21;
+}
+
+};
+----------------------------------------------------------
+esnext/v20210808/draft__stage_2_/throw_expressions/conditionals/in.js:3:17: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  3| true ? 42 : throw 21;
+                      ^
+
+1 error(s), 0 warning(s)

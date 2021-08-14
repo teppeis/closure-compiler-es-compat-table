@@ -1,0 +1,64 @@
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
+candidate__stage_3_/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
+candidate__stage_3_/Hashbang_Grammar/out.js: [InvalidResult: false]
+candidate__stage_3_/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: TypeError: Object 1,2,3 has no method 'at'
+candidate__stage_3_/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js: TypeError: Object abc has no method 'at'
+candidate__stage_3_/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__/out.js: [InvalidResult: false]
+candidate__stage_3_/Class_static_initialization_blocks/error.txt: [CompileError]
+candidate__stage_3_/Ergonomic_brand_checks_for_private_fields/error.txt: [CompileError]
+candidate__stage_3_/Object.hasOwn/Basic_functionality/out.js: TypeError: Object function Object() { [native code] } has no method 'hasOwn'
+candidate__stage_3_/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js: [InvalidResult: false]
+draft__stage_2_/Generator_function.sent_Meta_Property/error.txt: [CompileError]
+draft__stage_2_/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
+draft__stage_2_/Realms/out.js: [InvalidResult: false]
+draft__stage_2_/throw_expressions/logical/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/parameter_initializers/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
+draft__stage_2_/throw_expressions/conditionals/error.txt: [CompileError]
+draft__stage_2_/Set_methods/Set.prototype.intersection/out.js: TypeError: Object [object Object] has no method 'intersection'
+draft__stage_2_/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
+draft__stage_2_/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
+draft__stage_2_/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
+draft__stage_2_/Set_methods/Set.prototype.isDisjointFrom/out.js: TypeError: Object [object Object] has no method 'isDisjointFrom'
+draft__stage_2_/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [object Object] has no method 'isSubsetOf'
+draft__stage_2_/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
+draft__stage_2_/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
+draft__stage_2_/Map.prototype.upsert/Map.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+draft__stage_2_/Map.prototype.upsert/WeakMap.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+draft__stage_2_/Array.isTemplateObject/out.js: TypeError: Object function Array() { [native code] } has no method 'isTemplateObject'
+draft__stage_2_/Iterator_Helpers/instanceof_Iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/extends_Iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.from,_iterable/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.from,_iterator/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.asIndexedPairs/out.js: TypeError: Object #<Object> has no method 'asIndexedPairs'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.drop/out.js: TypeError: Object #<Object> has no method 'drop'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.every/out.js: TypeError: Object #<Object> has no method 'every'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.filter/out.js: TypeError: Object #<Object> has no method 'filter'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.find/out.js: TypeError: Object #<Object> has no method 'find'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.flatMap/out.js: TypeError: Object #<Object> has no method 'flatMap'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.forEach/out.js: TypeError: Object #<Object> has no method 'forEach'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.map/out.js: TypeError: Object #<Object> has no method 'map'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.reduce/out.js: TypeError: Object #<Object> has no method 'reduce'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.some/out.js: TypeError: Object #<Object> has no method 'some'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.take/out.js: TypeError: Object #<Object> has no method 'take'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype.toArray/out.js: TypeError: Object #<Object> has no method 'toArray'
+draft__stage_2_/Iterator_Helpers/Iterator.prototype___toStringTag_/out.js: ReferenceError: Iterator is not defined
+draft__stage_2_/Iterator_Helpers/instanceof_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/extends_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_async_iterable/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterable/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.from,_iterator/out.js: ReferenceError: AsyncIterator is not defined
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.asIndexedPairs/out.js: TypeError: Object [object Object] has no method 'asIndexedPairs'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.drop/out.js: TypeError: Object [object Object] has no method 'drop'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.flatMap/out.js: TypeError: Object [object Object] has no method 'flatMap'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.forEach/out.js: TypeError: Object [object Object] has no method 'forEach'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.take/out.js: TypeError: Object [object Object] has no method 'take'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype.toArray/out.js: TypeError: Object [object Object] has no method 'toArray'
+draft__stage_2_/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/out.js: ReferenceError: AsyncIterator is not defined

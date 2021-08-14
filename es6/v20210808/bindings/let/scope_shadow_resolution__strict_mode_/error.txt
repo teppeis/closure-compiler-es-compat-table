@@ -1,0 +1,22 @@
+// bindings / let / scope shadow resolution (strict mode)
+module.exports = () => {
+  'use strict';
+  try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+  } catch(e) {
+    return false;
+  }
+
+};
+----------------------------------------------------------
+es6/v20210808/bindings/let/scope_shadow_resolution__strict_mode_/in.js:8:4: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+   8|   } catch(e) {
+          ^^^^^^^^^^
+   9|     return false;
+      ^^^^^^^^^^^^^^^^^
+  10|   }
+      ^^^
+
+0 error(s), 1 warning(s)

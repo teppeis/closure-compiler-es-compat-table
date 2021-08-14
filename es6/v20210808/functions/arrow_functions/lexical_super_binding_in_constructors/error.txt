@@ -1,0 +1,23 @@
+// functions / arrow functions / lexical "super" binding in constructors
+module.exports = () => {
+  var received;
+  class B {
+    constructor (arg) {
+      received = arg;
+    }
+  }
+  class C extends B {
+    constructor () {
+      var callSuper = () => super('foo');
+      callSuper();
+    }
+  }
+  return new C instanceof C && received === 'foo'
+
+};
+----------------------------------------------------------
+es6/v20210808/functions/arrow_functions/lexical_super_binding_in_constructors/in.js:11:28: ERROR - [JSC_SUPER_CALL_IN_ARROW] closure-compiler does not allow calls to `super()` in arrow functions
+  11|       var callSuper = () => super('foo');
+                                  ^^^^^
+
+1 error(s), 0 warning(s)
