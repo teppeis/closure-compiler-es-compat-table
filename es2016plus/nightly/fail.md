@@ -125,3 +125,6 @@
 - private static methods ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2022_features/private_class_methods/private_static_methods/error.txt))
 - private accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2022_features/private_class_methods/private_accessor_properties/error.txt))
 - private static accessor properties ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2022_features/private_class_methods/private_static_accessor_properties/error.txt))
+
+### Ergonomic brand checks for private fields
+- Ergonomic brand checks for private fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/nightly/2022_features/Ergonomic_brand_checks_for_private_fields/error.txt))
