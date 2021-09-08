@@ -1,0 +1,23 @@
+// Stage 3 / Hashbang Grammar
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  try {
+    return !eval('#!/wash/your/hands');
+  } catch (e) {
+    return false
+  }
+
+};
+----------------------------------------------------------
+esnext/v20210906/Stage_3/Hashbang_Grammar/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   try {
+       ^^^^^
+  5|     return !eval('#!/wash/your/hands');
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+  7|     return false
+     ^^^^^^^^^^^^^^^^
+  8|   }
+     ^^^
+
+0 error(s), 1 warning(s)

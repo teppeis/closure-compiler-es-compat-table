@@ -1,0 +1,20 @@
+// 2022 features / private class methods / private static accessor properties
+module.exports = () => {
+var y = false;
+class C {
+static get #x() { return 42; }
+static set #x(x) { y = x; }
+x() {
+C.#x = true;
+return C.#x;
+}
+}
+return new C().x() === 42 && y;
+
+};
+----------------------------------------------------------
+es2016plus/v20210906/2022_features/private_class_methods/private_static_accessor_properties/in.js:5:11: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+  5| static get #x() { return 42; }
+                ^
+
+1 error(s), 0 warning(s)

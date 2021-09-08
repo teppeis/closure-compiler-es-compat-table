@@ -1,0 +1,18 @@
+// 2020 features / BigInt / BigUint64Array
+module.exports = () => {
+var buffer = new ArrayBuffer(64);
+var view = new BigUint64Array(buffer);
+view[0] = 0x10000000000000000n;
+return view[0] === 0n;
+
+};
+----------------------------------------------------------
+es2016plus/v20210906/2020_features/BigInt/BigUint64Array/in.js:5:10: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  5| view[0] = 0x10000000000000000n;
+               ^^^^^^^^^^^^^^^^^^^^
+
+es2016plus/v20210906/2020_features/BigInt/BigUint64Array/in.js:6:19: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  6| return view[0] === 0n;
+                        ^^
+
+2 error(s), 0 warning(s)
