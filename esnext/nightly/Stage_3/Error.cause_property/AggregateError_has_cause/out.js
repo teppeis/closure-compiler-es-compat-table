@@ -140,7 +140,7 @@ $jscomp.polyfill("AggregateError", function(a) {
   $jscomp.inherits(a, Error);
   a.prototype.name = "AggregateError";
   return a;
-}, "es_next", "es3");
+}, "es_2021", "es3");
 module.exports = function() {
   var a = new AggregateError([], "error", {cause:"cause"});
   return a.hasOwnProperty("cause") && "cause" === a.cause;

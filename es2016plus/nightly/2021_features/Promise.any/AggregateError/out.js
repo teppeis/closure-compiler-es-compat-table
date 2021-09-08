@@ -386,7 +386,7 @@ $jscomp.polyfill("AggregateError", function(b) {
   $jscomp.inherits(b, Error);
   b.prototype.name = "AggregateError";
   return b;
-}, "es_next", "es3");
+}, "es_2021", "es3");
 $jscomp.polyfill("Promise.any", function(b) {
   return b ? b : function(c) {
     c instanceof Array || (c = Array.from(c));
@@ -402,7 +402,7 @@ $jscomp.polyfill("Promise.any", function(b) {
       return d;
     });
   };
-}, "es_next", "es3");
+}, "es_2021", "es3");
 module.exports = function(b) {
   Promise.any([Promise.reject(1), Promise.reject(2), Promise.reject(3)]).catch(function(c) {
     c instanceof AggregateError && 3 === c.errors.length && b();
