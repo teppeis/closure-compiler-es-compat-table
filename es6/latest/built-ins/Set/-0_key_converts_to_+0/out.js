@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var g = 0; g < a.length; ++g) {
     var e = a[g];
     if (e && e.Math == Math) {
@@ -26,7 +26,7 @@ $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscom
 $jscomp.arrayIteratorImpl = function(a) {
   var g = 0;
   return function() {
-    return g < a.length ? {done:!1, value:a[g++], } : {done:!0};
+    return g < a.length ? {done:!1, value:a[g++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -167,7 +167,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   }
   function h(c) {
     if (!$jscomp.owns(c, k)) {
-      var f = new e;
+      var f = new e();
       $jscomp.defineProperty(c, k, {value:f});
     }
   }
@@ -258,7 +258,7 @@ $jscomp.polyfill("Map", function(a) {
       return a;
     }
   }
-  var e = new WeakMap, b = function(d) {
+  var e = new WeakMap(), b = function(d) {
     this.data_ = {};
     this.head_ = k();
     this.size = 0;
@@ -273,7 +273,7 @@ $jscomp.polyfill("Map", function(a) {
     d = 0 === d ? 0 : d;
     var f = h(this, d);
     f.list || (f.list = this.data_[f.id] = []);
-    f.entry ? f.entry.value = c : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:d, value:c, }, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
+    f.entry ? f.entry.value = c : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:d, value:c,}, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
     return this;
   };
   b.prototype.delete = function(d) {
@@ -375,7 +375,7 @@ $jscomp.polyfill("Set", function(a) {
     }
   }
   var e = function(b) {
-    this.map_ = new Map;
+    this.map_ = new Map();
     if (b) {
       b = $jscomp.makeIterator(b);
       for (var h; !(h = b.next()).done;) {
@@ -419,7 +419,7 @@ $jscomp.polyfill("Set", function(a) {
   return e;
 }, "es6", "es3");
 module.exports = function() {
-  var a = new Set;
+  var a = new Set();
   a.add(-0);
   var g;
   a.forEach(function(e) {

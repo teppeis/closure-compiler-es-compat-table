@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -24,7 +24,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var d = a[b];
     if (d && d.Math == Math) {
@@ -258,7 +258,7 @@ $jscomp.generator.Context.PropertyIterator.prototype.getNext = function() {
   return null;
 };
 $jscomp.generator.Engine_ = function(a) {
-  this.context_ = new $jscomp.generator.Context;
+  this.context_ = new $jscomp.generator.Context();
   this.program_ = a;
 };
 $jscomp.generator.Engine_.prototype.next_ = function(a) {
@@ -510,7 +510,7 @@ $jscomp.polyfill("Promise", function(a) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var l = new b;
+  var l = new b();
   e.prototype.settleSameAsPromise_ = function(c) {
     var f = this.createResolveAndReject_();
     c.callWhenSettled_(f.resolve, f.reject);

@@ -4,7 +4,7 @@ module.exports = function() {
   try {
     return new (new Proxy({}, {construct:function(a, c) {
       return {};
-    }})), !1;
+    }}))(), !1;
   } catch (a) {
   }
   try {
@@ -12,7 +12,7 @@ module.exports = function() {
     }, {construct:function(a, c) {
       b = !0;
       return 5;
-    }})), !1;
+    }}))(), !1;
   } catch (a) {
   }
   return b;

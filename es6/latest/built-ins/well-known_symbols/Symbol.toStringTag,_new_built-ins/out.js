@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -24,7 +24,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var g = a[b];
     if (g && g.Math == Math) {
@@ -258,7 +258,7 @@ $jscomp.generator.Context.PropertyIterator.prototype.getNext = function() {
   return null;
 };
 $jscomp.generator.Engine_ = function(a) {
-  this.context_ = new $jscomp.generator.Context;
+  this.context_ = new $jscomp.generator.Context();
   this.program_ = a;
 };
 $jscomp.generator.Engine_.prototype.next_ = function(a) {
@@ -384,7 +384,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   }
   function h(e) {
     if (!$jscomp.owns(e, c)) {
-      var k = new g;
+      var k = new g();
       $jscomp.defineProperty(e, c, {value:k});
     }
   }
@@ -475,7 +475,7 @@ $jscomp.polyfill("Map", function(a) {
       return a;
     }
   }
-  var g = new WeakMap, f = function(d) {
+  var g = new WeakMap(), f = function(d) {
     this.data_ = {};
     this.head_ = c();
     this.size = 0;
@@ -490,7 +490,7 @@ $jscomp.polyfill("Map", function(a) {
     d = 0 === d ? 0 : d;
     var k = h(this, d);
     k.list || (k.list = this.data_[k.id] = []);
-    k.entry ? k.entry.value = e : (k.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:d, value:e, }, k.list.push(k.entry), this.head_.previous.next = k.entry, this.head_.previous = k.entry, this.size++);
+    k.entry ? k.entry.value = e : (k.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:d, value:e,}, k.list.push(k.entry), this.head_.previous.next = k.entry, this.head_.previous = k.entry, this.size++);
     return this;
   };
   f.prototype.delete = function(d) {
@@ -592,7 +592,7 @@ $jscomp.polyfill("Set", function(a) {
     }
   }
   var g = function(f) {
-    this.map_ = new Map;
+    this.map_ = new Map();
     if (f) {
       f = $jscomp.makeIterator(f);
       for (var h; !(h = f.next()).done;) {
@@ -781,7 +781,7 @@ $jscomp.polyfill("Promise", function(a) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var n = new b;
+  var n = new b();
   h.prototype.settleSameAsPromise_ = function(c) {
     var l = this.createResolveAndReject_();
     c.callWhenSettled_(l.resolve, l.reject);
@@ -865,7 +865,7 @@ $jscomp.polyfill("Promise", function(a) {
 module.exports = function() {
   var a = !0, b = Symbol.toStringTag;
   [[String, "String Iterator"], [Array, "Array Iterator"], [Map, "Map Iterator"], [Set, "Set Iterator"]].forEach(function(g) {
-    var f = Object.getPrototypeOf((new g[0])[Symbol.iterator]());
+    var f = Object.getPrototypeOf((new g[0]())[Symbol.iterator]());
     a = a && f.hasOwnProperty(b) && f[b] === g[1];
   });
   return a = a && "GeneratorFunction" === Object.getPrototypeOf(function f() {

@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -24,7 +24,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var c = a[b];
     if (c && c.Math == Math) {
@@ -140,16 +140,16 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var b = function() {
   };
   b.prototype = a;
-  return new b;
+  return new b();
 };
 $jscomp.getConstructImplementation = function() {
   function a() {
     function c() {
     }
-    new c;
+    new c();
     Reflect.construct(c, [], function() {
     });
-    return new c instanceof c;
+    return new c() instanceof c;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
@@ -231,7 +231,7 @@ module.exports = function() {
     return Iterator.apply(this, arguments) || this;
   };
   $jscomp.inherits(a, Iterator);
-  a = new a;
+  a = new a();
   return a[Symbol.iterator]() === a;
 };
 

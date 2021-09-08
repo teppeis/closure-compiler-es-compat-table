@@ -1,4 +1,4 @@
 module.exports = function() {
-  return "anonymous" === (new Function).name;
+  return "anonymous" === (new Function()).name;
 };
 

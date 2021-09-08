@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(c) {
   var b = 0;
   return function() {
-    return b < c.length ? {done:!1, value:c[b++], } : {done:!0};
+    return b < c.length ? {done:!1, value:c[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(c) {
@@ -21,7 +21,7 @@ $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
 $jscomp.getGlobal = function(c) {
-  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < c.length; ++b) {
     var f = c[b];
     if (f && f.Math == Math) {
@@ -232,7 +232,7 @@ $jscomp.polyfill("Promise", function(c) {
       this.onSettledCallbacks_ = null;
     }
   };
-  var l = new b;
+  var l = new b();
   d.prototype.settleSameAsPromise_ = function(a) {
     var e = this.createResolveAndReject_();
     a.callWhenSettled_(e.resolve, e.reject);

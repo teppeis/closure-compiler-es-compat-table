@@ -75,8 +75,8 @@
 2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupGetter__/out.js: ReferenceError: Proxy is not defined
 2017_annex_b/Proxy_internal_calls,_getter_setter_methods/__lookupSetter__/out.js: ReferenceError: Proxy is not defined
 2017_annex_b/assignments_allowed_in_for-in_head_in_non-strict_mode/error.txt: [CompileError]
-2018_features/object_rest_spread_properties/object_rest_properties/out.js: TypeError: Object function Object() { [native code] } has no method 'assign'
-2018_features/object_rest_spread_properties/object_spread_properties/out.js: TypeError: Object function Object() { [native code] } has no method 'assign'
+2018_features/object_rest_spread_properties/object_rest_properties/out.js: [Pass]
+2018_features/object_rest_spread_properties/object_spread_properties/out.js: [Pass]
 2018_features/Promise.prototype.finally/basic_support/out.js: [Pass]
 2018_features/Promise.prototype.finally/dont_change_resolution_value/out.js: [Pass]
 2018_features/Promise.prototype.finally/change_rejection_value/out.js: [Pass]

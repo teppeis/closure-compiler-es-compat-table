@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var c = 0;
   return function() {
-    return c < a.length ? {done:!1, value:a[c++], } : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -33,7 +33,7 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var c = function() {
   };
   c.prototype = a;
-  return new c;
+  return new c();
 };
 $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defineProperties ? Object.defineProperty : function(a, c, b) {
   if (a == Array.prototype || a == Object.prototype) {
@@ -43,7 +43,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var c = 0; c < a.length; ++c) {
     var b = a[c];
     if (b && b.Math == Math) {
@@ -105,10 +105,10 @@ $jscomp.getConstructImplementation = function() {
   function a() {
     function b() {
     }
-    new b;
+    new b();
     Reflect.construct(b, [], function() {
     });
-    return new b instanceof b;
+    return new b() instanceof b;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (a()) {
@@ -266,7 +266,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   }
   function h(d) {
     if (!$jscomp.owns(d, l)) {
-      var f = new b;
+      var f = new b();
       $jscomp.defineProperty(d, l, {value:f});
     }
   }
@@ -357,7 +357,7 @@ $jscomp.polyfill("Map", function(a) {
       return a;
     }
   }
-  var b = new WeakMap, g = function(e) {
+  var b = new WeakMap(), g = function(e) {
     this.data_ = {};
     this.head_ = l();
     this.size = 0;
@@ -372,7 +372,7 @@ $jscomp.polyfill("Map", function(a) {
     e = 0 === e ? 0 : e;
     var f = h(this, e);
     f.list || (f.list = this.data_[f.id] = []);
-    f.entry ? f.entry.value = d : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:e, value:d, }, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
+    f.entry ? f.entry.value = d : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:e, value:d,}, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
     return this;
   };
   g.prototype.delete = function(e) {
@@ -449,7 +449,7 @@ module.exports = function() {
     return $jscomp.construct(Map, arguments, this.constructor);
   };
   $jscomp.inherits(c, Map);
-  var b = new c;
+  var b = new c();
   b.set(a, 123);
   return b instanceof c && b.has(a) && 123 === b.get(a);
 };

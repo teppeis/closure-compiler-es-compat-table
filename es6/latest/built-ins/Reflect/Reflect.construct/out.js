@@ -15,7 +15,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return b;
 };
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var c = 0; c < b.length; ++c) {
     var a = b[c];
     if (a && a.Math == Math) {
@@ -80,16 +80,16 @@ $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create 
   var c = function() {
   };
   c.prototype = b;
-  return new c;
+  return new c();
 };
 $jscomp.getConstructImplementation = function() {
   function b() {
     function a() {
     }
-    new a;
+    new a();
     Reflect.construct(a, [], function() {
     });
-    return new a instanceof a;
+    return new a() instanceof a;
   }
   if ($jscomp.TRUST_ES6_POLYFILLS && "undefined" != typeof Reflect && Reflect.construct) {
     if (b()) {

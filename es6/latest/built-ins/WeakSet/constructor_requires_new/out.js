@@ -1,7 +1,7 @@
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var c = 0; c < a.length; ++c) {
     var d = a[c];
     if (d && d.Math == Math) {
@@ -26,7 +26,7 @@ $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscom
 $jscomp.arrayIteratorImpl = function(a) {
   var c = 0;
   return function() {
-    return c < a.length ? {done:!1, value:a[c++], } : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -126,7 +126,7 @@ $jscomp.polyfill("WeakMap", function(a) {
   }
   function f(e) {
     if (!$jscomp.owns(e, h)) {
-      var g = new d;
+      var g = new d();
       $jscomp.defineProperty(e, h, {value:g});
     }
   }
@@ -213,7 +213,7 @@ $jscomp.polyfill("WeakSet", function(a) {
     }
   }
   var d = function(b) {
-    this.map_ = new WeakMap;
+    this.map_ = new WeakMap();
     if (b) {
       b = $jscomp.makeIterator(b);
       for (var f; !(f = b.next()).done;) {
@@ -234,7 +234,7 @@ $jscomp.polyfill("WeakSet", function(a) {
   return d;
 }, "es6", "es3");
 module.exports = function() {
-  new WeakSet;
+  new WeakSet();
   try {
     return WeakSet(), !1;
   } catch (a) {

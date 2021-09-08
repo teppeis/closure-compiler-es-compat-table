@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++], } : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -24,7 +24,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global, ];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
   for (var b = 0; b < a.length; ++b) {
     var c = a[b];
     if (c && c.Math == Math) {
@@ -126,7 +126,7 @@ $jscomp.iteratorPrototype = function(a) {
 module.exports = function() {
   var a = Symbol.toStringTag, b = !0;
   [[Array.prototype, []], [String.prototype, ""], [$jscomp$arguments, $jscomp$arguments], [Function.prototype, function() {
-  }], [Error.prototype, Error()], [Boolean.prototype, !0], [Number.prototype, 2], [Date.prototype, new Date], [RegExp.prototype, /./]].forEach(function(c) {
+  }], [Error.prototype, Error()], [Boolean.prototype, !0], [Number.prototype, 2], [Date.prototype, new Date()], [RegExp.prototype, /./]].forEach(function(c) {
     c[0][a] = "foo";
     b &= "[object foo]" === Object.prototype.toString.call(c[1]);
     delete c[0][a];

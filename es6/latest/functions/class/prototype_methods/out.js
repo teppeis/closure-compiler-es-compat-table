@@ -4,6 +4,6 @@ module.exports = function() {
   a.prototype.method = function() {
     return 2;
   };
-  return "function" === typeof a.prototype.method && 2 === (new a).method();
+  return "function" === typeof a.prototype.method && 2 === (new a()).method();
 };
 

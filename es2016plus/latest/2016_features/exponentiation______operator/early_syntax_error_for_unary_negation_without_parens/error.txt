@@ -10,7 +10,7 @@ module.exports = () => {
 // EXPECT: 6: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
 
 ----------------------------------------------------------
-es2016plus/v20210808/2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/in.js:6:5: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
+es2016plus/v20210906/2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/in.js:6:5: ERROR - [JSC_PARSE_ERROR] Parse error. Unary operator '-' requires parentheses before '**'
   6|   -5 ** 2;
           ^
 
