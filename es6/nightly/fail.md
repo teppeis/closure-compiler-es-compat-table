@@ -192,9 +192,6 @@
 - class static methods ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/class_static_methods/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/class_static_methods/out.js))
 - isn't writable, is configurable ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/isnt_writable%2C_is_configurable/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/function_name_property/isnt_writable%2C_is_configurable/out.js))
 
-### String static methods
-- String.raw ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String_static_methods/String.raw/out.js)): https://github.com/google/closure-compiler/issues/3136
-
 ### String.prototype methods
 - String.prototype.normalize ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype.normalize/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype.normalize/out.js))
 - String.prototype[Symbol.iterator] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/built-in_extensions/String.prototype_methods/String.prototype_Symbol.iterator_/out.js))
