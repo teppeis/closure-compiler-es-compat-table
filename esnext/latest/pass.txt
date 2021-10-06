@@ -1,0 +1,8 @@
+Stage_3/Error.cause_property/Error.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/EvalError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/RangeError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/ReferenceError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/SyntaxError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/TypeError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/URIError.prototype_lacks_cause/out.js: [Pass]
+Stage_3/Error.cause_property/AggregateError.prototype_lacks_cause/out.js: [Pass]

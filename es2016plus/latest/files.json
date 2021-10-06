@@ -160,5 +160,11 @@
   "2022_features/private_class_methods/private_static_methods",
   "2022_features/private_class_methods/private_accessor_properties",
   "2022_features/private_class_methods/private_static_accessor_properties",
-  "2022_features/Ergonomic_brand_checks_for_private_fields"
+  "2022_features/Ergonomic_brand_checks_for_private_fields",
+  "2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__",
+  "2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__",
+  "2022_features/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__",
+  "2022_features/Object.hasOwn/Basic_functionality",
+  "2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey",
+  "2022_features/Class_static_initialization_blocks"
 ]
