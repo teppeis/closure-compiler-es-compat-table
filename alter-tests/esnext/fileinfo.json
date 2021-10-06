@@ -22,41 +22,6 @@
     "test": "Hashbang Grammar"
   },
   {
-    "path": "Stage_3/.at___method_on_the_built-in_indexables/Array.prototype.at__",
-    "category": "Stage 3",
-    "test": ".at() method on the built-in indexables",
-    "subtest": "Array.prototype.at()"
-  },
-  {
-    "path": "Stage_3/.at___method_on_the_built-in_indexables/String.prototype.at__",
-    "category": "Stage 3",
-    "test": ".at() method on the built-in indexables",
-    "subtest": "String.prototype.at()"
-  },
-  {
-    "path": "Stage_3/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__",
-    "category": "Stage 3",
-    "test": ".at() method on the built-in indexables",
-    "subtest": "%TypedArray%.prototype.at()"
-  },
-  {
-    "path": "Stage_3/Class_static_initialization_blocks",
-    "category": "Stage 3",
-    "test": "Class static initialization blocks"
-  },
-  {
-    "path": "Stage_3/Object.hasOwn/Basic_functionality",
-    "category": "Stage 3",
-    "test": "Object.hasOwn",
-    "subtest": "Basic functionality"
-  },
-  {
-    "path": "Stage_3/Object.hasOwn/ToObject_called_before_ToPropertyKey",
-    "category": "Stage 3",
-    "test": "Object.hasOwn",
-    "subtest": "ToObject called before ToPropertyKey"
-  },
-  {
     "path": "Stage_3/Array_find_from_last/Array.prototype.findLast",
     "category": "Stage 3",
     "test": "Array find from last",
@@ -75,10 +40,22 @@
     "subtest": "Error has cause"
   },
   {
+    "path": "Stage_3/Error.cause_property/Error.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "Error.prototype lacks cause"
+  },
+  {
     "path": "Stage_3/Error.cause_property/EvalError_has_cause",
     "category": "Stage 3",
     "test": "Error.cause property",
     "subtest": "EvalError has cause"
+  },
+  {
+    "path": "Stage_3/Error.cause_property/EvalError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "EvalError.prototype lacks cause"
   },
   {
     "path": "Stage_3/Error.cause_property/RangeError_has_cause",
@@ -87,10 +64,22 @@
     "subtest": "RangeError has cause"
   },
   {
+    "path": "Stage_3/Error.cause_property/RangeError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "RangeError.prototype lacks cause"
+  },
+  {
     "path": "Stage_3/Error.cause_property/ReferenceError_has_cause",
     "category": "Stage 3",
     "test": "Error.cause property",
     "subtest": "ReferenceError has cause"
+  },
+  {
+    "path": "Stage_3/Error.cause_property/ReferenceError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "ReferenceError.prototype lacks cause"
   },
   {
     "path": "Stage_3/Error.cause_property/SyntaxError_has_cause",
@@ -99,10 +88,22 @@
     "subtest": "SyntaxError has cause"
   },
   {
+    "path": "Stage_3/Error.cause_property/SyntaxError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "SyntaxError.prototype lacks cause"
+  },
+  {
     "path": "Stage_3/Error.cause_property/TypeError_has_cause",
     "category": "Stage 3",
     "test": "Error.cause property",
     "subtest": "TypeError has cause"
+  },
+  {
+    "path": "Stage_3/Error.cause_property/TypeError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "TypeError.prototype lacks cause"
   },
   {
     "path": "Stage_3/Error.cause_property/URIError_has_cause",
@@ -111,10 +112,22 @@
     "subtest": "URIError has cause"
   },
   {
+    "path": "Stage_3/Error.cause_property/URIError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "URIError.prototype lacks cause"
+  },
+  {
     "path": "Stage_3/Error.cause_property/AggregateError_has_cause",
     "category": "Stage 3",
     "test": "Error.cause property",
     "subtest": "AggregateError has cause"
+  },
+  {
+    "path": "Stage_3/Error.cause_property/AggregateError.prototype_lacks_cause",
+    "category": "Stage 3",
+    "test": "Error.cause property",
+    "subtest": "AggregateError.prototype lacks cause"
   },
   {
     "path": "Stage_2/Generator_function.sent_Meta_Property",

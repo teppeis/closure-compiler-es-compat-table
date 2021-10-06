@@ -1,4 +1,4 @@
-// Stage 3 / Object.hasOwn / ToObject called before ToPropertyKey
+// 2022 features / Object.hasOwn / ToObject called before ToPropertyKey
 module.exports = () => {
   var ok = !!Object.hasOwn;
   try {

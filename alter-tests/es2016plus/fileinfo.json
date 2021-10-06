@@ -947,5 +947,40 @@
     "path": "2022_features/Ergonomic_brand_checks_for_private_fields",
     "category": "2022 features",
     "test": "Ergonomic brand checks for private fields"
+  },
+  {
+    "path": "2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__",
+    "category": "2022 features",
+    "test": ".at() method on the built-in indexables",
+    "subtest": "Array.prototype.at()"
+  },
+  {
+    "path": "2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__",
+    "category": "2022 features",
+    "test": ".at() method on the built-in indexables",
+    "subtest": "String.prototype.at()"
+  },
+  {
+    "path": "2022_features/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__",
+    "category": "2022 features",
+    "test": ".at() method on the built-in indexables",
+    "subtest": "%TypedArray%.prototype.at()"
+  },
+  {
+    "path": "2022_features/Object.hasOwn/Basic_functionality",
+    "category": "2022 features",
+    "test": "Object.hasOwn",
+    "subtest": "Basic functionality"
+  },
+  {
+    "path": "2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey",
+    "category": "2022 features",
+    "test": "Object.hasOwn",
+    "subtest": "ToObject called before ToPropertyKey"
+  },
+  {
+    "path": "2022_features/Class_static_initialization_blocks",
+    "category": "2022 features",
+    "test": "Class static initialization blocks"
   }
 ]

@@ -1,4 +1,4 @@
-// Stage 3 / Class static initialization blocks
+// 2022 features / Class static initialization blocks
 module.exports = () => {
 let ok = false;
 class A {
