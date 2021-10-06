@@ -1,4 +1,4 @@
-// Stage 3 / Class static initialization blocks
+// 2022 features / Class static initialization blocks
 module.exports = () => {
 let ok = false;
 class A {
@@ -8,7 +8,7 @@ return ok;
 
 };
 ----------------------------------------------------------
-esnext/nightly/Stage_3/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/nightly/2022_features/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
   5| static { ok = true; }
             ^
 
