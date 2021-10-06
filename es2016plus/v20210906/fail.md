@@ -124,3 +124,15 @@
 
 ### Ergonomic brand checks for private fields
 - Ergonomic brand checks for private fields ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Ergonomic_brand_checks_for_private_fields/error.txt))
+
+### .at() method on the built-in indexables
+- Array.prototype.at() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js))
+- String.prototype.at() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js))
+- %TypedArray%.prototype.at() ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/%25TypedArray%25.prototype.at__/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/.at___method_on_the_built-in_indexables/%25TypedArray%25.prototype.at__/out.js))
+
+### Object.hasOwn
+- Basic functionality ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Object.hasOwn/Basic_functionality/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Object.hasOwn/Basic_functionality/out.js))
+- ToObject called before ToPropertyKey ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js))
+
+### Class static initialization blocks
+- Class static initialization blocks ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20210906/2022_features/Class_static_initialization_blocks/error.txt))
