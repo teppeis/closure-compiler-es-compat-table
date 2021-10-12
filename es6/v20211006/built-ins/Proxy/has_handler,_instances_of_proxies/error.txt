@@ -1,0 +1,25 @@
+// built-ins / Proxy / "has" handler, instances of proxies
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  "foo" in Object.create(new Proxy(proxied, {
+    has: function (t, k) {
+      passed = t === proxied && k === "foo";
+    }
+  }));
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20211006/built-ins/Proxy/has_handler,_instances_of_proxies/in.js:5:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+   5|   "foo" in Object.create(new Proxy(proxied, {
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   6|     has: function (t, k) {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+   8|     }
+      ^^^^^
+   9|   }));
+      ^^^^^
+
+0 error(s), 1 warning(s)
