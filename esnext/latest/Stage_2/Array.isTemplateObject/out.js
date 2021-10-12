@@ -7,8 +7,8 @@ $jscomp.createTemplateTagFirstArgWithRaw = function(a, b) {
   a.raw = b;
   return a;
 };
-var $jscomp$templatelit$m1412361804$0 = $jscomp.createTemplateTagFirstArg(["a{1}c"]);
+var $jscomp$templatelit$677627102$0 = $jscomp.createTemplateTagFirstArg(["a{1}c"]);
 module.exports = function() {
-  return !Array.isTemplateObject([]) && Array.isTemplateObject($jscomp$templatelit$m1412361804$0);
+  return !Array.isTemplateObject([]) && Array.isTemplateObject($jscomp$templatelit$677627102$0);
 };
 
