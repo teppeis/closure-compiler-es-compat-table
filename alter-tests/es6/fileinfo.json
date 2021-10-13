@@ -792,6 +792,12 @@
     "subtest": "shorthand defaults, arrow function"
   },
   {
+    "path": "syntax/destructuring,_parameters/duplicate_identifier",
+    "category": "syntax",
+    "test": "destructuring, parameters",
+    "subtest": "duplicate identifier"
+  },
+  {
     "path": "syntax/Unicode_code_point_escapes/in_strings",
     "category": "syntax",
     "test": "Unicode code point escapes",

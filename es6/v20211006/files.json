@@ -131,6 +131,7 @@
   "syntax/destructuring,_parameters/defaults,_new_Function___support",
   "syntax/destructuring,_parameters/aliased_defaults,_arrow_function",
   "syntax/destructuring,_parameters/shorthand_defaults,_arrow_function",
+  "syntax/destructuring,_parameters/duplicate_identifier",
   "syntax/Unicode_code_point_escapes/in_strings",
   "syntax/Unicode_code_point_escapes/in_identifiers",
   "syntax/Unicode_code_point_escapes/in_property_key_definitions",

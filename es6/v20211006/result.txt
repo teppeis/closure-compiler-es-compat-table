@@ -130,6 +130,7 @@ syntax/destructuring,_parameters/defaults,_separate_scope/out.js: [Pass]
 syntax/destructuring,_parameters/defaults,_new_Function___support/out.js: Error: eval() and Function() cannot be transpiled
 syntax/destructuring,_parameters/aliased_defaults,_arrow_function/out.js: [Pass]
 syntax/destructuring,_parameters/shorthand_defaults,_arrow_function/out.js: [Pass]
+syntax/destructuring,_parameters/duplicate_identifier/out.js: [Pass]
 syntax/Unicode_code_point_escapes/in_strings/out.js: [Pass]
 syntax/Unicode_code_point_escapes/in_identifiers/out.js: [Pass]
 syntax/Unicode_code_point_escapes/in_property_key_definitions/out.js: [InvalidResult: false]
