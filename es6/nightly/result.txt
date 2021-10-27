@@ -8,7 +8,7 @@ syntax/default_function_parameters/temporal_dead_zone/out.js: [Pass]
 syntax/default_function_parameters/separate_scope/out.js: [Pass]
 syntax/default_function_parameters/new_Function___support/out.js: Error: eval() and Function() cannot be transpiled
 syntax/rest_parameters/basic_functionality/out.js: [Pass]
-syntax/rest_parameters/function_length_property/out.js: [InvalidResult: false]
+syntax/rest_parameters/function_length_property/out.js: [Pass]
 syntax/rest_parameters/arguments_object_interaction/out.js: [InvalidResult: false]
 syntax/rest_parameters/cant_be_used_in_setters/out.js: [Pass]
 syntax/rest_parameters/new_Function___support/out.js: Error: eval() and Function() cannot be transpiled

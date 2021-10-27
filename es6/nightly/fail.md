@@ -11,7 +11,6 @@
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/default_function_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/default_function_parameters/arguments_object_interaction/out.js))
 
 ### rest parameters
-- function 'length' property ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/function_length_property/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/function_length_property/out.js))
 - arguments object interaction ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/arguments_object_interaction/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es6/nightly/syntax/rest_parameters/arguments_object_interaction/out.js))
 
 ### spread syntax for iterable objects
