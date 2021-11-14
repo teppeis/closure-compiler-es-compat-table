@@ -63,13 +63,13 @@
 
 ## 2019 features
 
+### Symbol.prototype.description
+- undefined description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_features/Symbol.prototype.description/undefined_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_features/Symbol.prototype.description/undefined_description/out.js))
+
 ### Array.prototype.{flat, flatMap}
 - flat and flatMap in Array.prototype[@@unscopables] ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_features/Array.prototype._flat%2C_flatMap_/flat_and_flatMap_in_Array.prototype___unscopables_/out.js))
 
 ## 2019 misc
-
-### Symbol.prototype.description
-- undefined description ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_misc/Symbol.prototype.description/undefined_description/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_misc/Symbol.prototype.description/undefined_description/out.js))
 
 ### Function.prototype.toString revision
 - functions created with the Function constructor ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js))
@@ -136,3 +136,13 @@
 
 ### Class static initialization blocks
 - Class static initialization blocks ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Class_static_initialization_blocks/error.txt))
+
+### Error.cause property
+- Error has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/Error_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/Error_has_cause/out.js))
+- EvalError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/EvalError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/EvalError_has_cause/out.js))
+- RangeError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/RangeError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/RangeError_has_cause/out.js))
+- ReferenceError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/ReferenceError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/ReferenceError_has_cause/out.js))
+- SyntaxError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/SyntaxError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/SyntaxError_has_cause/out.js))
+- TypeError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/TypeError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/TypeError_has_cause/out.js))
+- URIError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/URIError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/URIError_has_cause/out.js))
+- AggregateError has cause ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/AggregateError_has_cause/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20211006/2022_features/Error.cause_property/AggregateError_has_cause/out.js))

@@ -88,6 +88,9 @@
 2018_features/Asynchronous_Iterators/for-await-of_loops/out.js: [Pass]
 2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets/out.js: ReferenceError: Proxy is not defined
 2018_misc/template_literal_revision/out.js: [Pass]
+2019_features/Symbol.prototype.description/basic/out.js: [Pass]
+2019_features/Symbol.prototype.description/empty_description/out.js: [Pass]
+2019_features/Symbol.prototype.description/undefined_description/out.js: [InvalidResult: false]
 2019_features/Object.fromEntries/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimLeft/out.js: [Pass]
 2019_features/string_trimming/String.prototype.trimRight/out.js: [Pass]
@@ -99,9 +102,6 @@
 2019_misc/optional_catch_binding/basic/out.js: [Pass]
 2019_misc/optional_catch_binding/await/out.js: [Pass]
 2019_misc/optional_catch_binding/yield/out.js: [Pass]
-2019_misc/Symbol.prototype.description/basic/out.js: [Pass]
-2019_misc/Symbol.prototype.description/empty_description/out.js: [Pass]
-2019_misc/Symbol.prototype.description/undefined_description/out.js: [InvalidResult: false]
 2019_misc/Function.prototype.toString_revision/functions_created_with_the_Function_constructor/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/arrows/out.js: Error: eval() and Function() cannot be transpiled
 2019_misc/Function.prototype.toString_revision/_native_code_/out.js: Error: Funtion#toString() is not supported
@@ -166,3 +166,19 @@
 2022_features/Object.hasOwn/Basic_functionality/out.js: TypeError: Object function Object() { [native code] } has no method 'hasOwn'
 2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js: [InvalidResult: false]
 2022_features/Class_static_initialization_blocks/error.txt: [CompileError]
+2022_features/Error.cause_property/Error_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/Error.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/EvalError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/EvalError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/RangeError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/RangeError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/ReferenceError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/ReferenceError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/SyntaxError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/SyntaxError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/TypeError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/TypeError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/URIError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/URIError.prototype_lacks_cause/out.js: [Pass]
+2022_features/Error.cause_property/AggregateError_has_cause/out.js: [InvalidResult: false]
+2022_features/Error.cause_property/AggregateError.prototype_lacks_cause/out.js: [Pass]
