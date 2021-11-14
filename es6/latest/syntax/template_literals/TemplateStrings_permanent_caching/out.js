@@ -7,11 +7,11 @@ $jscomp.createTemplateTagFirstArgWithRaw = function(a, b) {
   a.raw = b;
   return a;
 };
-var $jscomp$templatelit$m1810766490$0 = $jscomp.createTemplateTagFirstArg(["foo"]);
+var $jscomp$templatelit$m1699780124$0 = $jscomp.createTemplateTagFirstArg(["foo"]);
 module.exports = function() {
-  var a = $jscomp$templatelit$m1810766490$0, b = new function() {
-    return $jscomp$templatelit$m1810766490$0;
+  var a = $jscomp$templatelit$m1699780124$0, b = new function() {
+    return $jscomp$templatelit$m1699780124$0;
   }();
-  return a === $jscomp$templatelit$m1810766490$0 && a === b;
+  return a === $jscomp$templatelit$m1699780124$0 && a === b;
 };
 
