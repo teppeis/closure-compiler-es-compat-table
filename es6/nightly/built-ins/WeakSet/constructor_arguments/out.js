@@ -96,7 +96,7 @@ $jscomp.polyfillIsolated = function(a, b, c, d) {
   f = f[f.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? d[f] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (c = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + c + "$" + f), $jscomp.defineProperty(d, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (c = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + c + "$" + f), $jscomp.defineProperty(d, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.owns = function(a, b) {
   return Object.prototype.hasOwnProperty.call(a, b);

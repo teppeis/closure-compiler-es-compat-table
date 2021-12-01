@@ -80,7 +80,7 @@ $jscomp.polyfillIsolated = function(a, b, d, c) {
   f = f[f.length - 1];
   d = $jscomp.IS_SYMBOL_NATIVE && "es6" === d ? c[f] : null;
   b = b(d);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (d = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + d + "$" + f), $jscomp.defineProperty(c, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (d = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + d + "$" + f), $jscomp.defineProperty(c, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.initSymbol = function() {
 };
@@ -95,7 +95,7 @@ $jscomp.polyfill("Symbol", function(a) {
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var d = "jscomp_symbol_" + (1E9 * Math.random() >>> 0) + "_", c = 0, f = function(h) {
+  var d = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", c = 0, f = function(h) {
     if (this instanceof f) {
       throw new TypeError("Symbol is not a constructor");
     }

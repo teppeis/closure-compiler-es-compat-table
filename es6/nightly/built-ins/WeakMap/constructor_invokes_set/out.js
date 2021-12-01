@@ -99,7 +99,7 @@ $jscomp.polyfillIsolated = function(a, b, d, e) {
   f = f[f.length - 1];
   d = $jscomp.IS_SYMBOL_NATIVE && "es6" === d ? e[f] : null;
   b = b(d);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (d = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + d + "$" + f), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, f, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[f] && (d = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[f] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(f) : $jscomp.POLYFILL_PREFIX + d + "$" + f), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[f], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("WeakMap", function(a) {
   function b() {

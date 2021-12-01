@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(c, f, e, h) {
   b = b[b.length - 1];
   e = $jscomp.IS_SYMBOL_NATIVE && "es6" === e ? h[b] : null;
   f = f(e);
-  null != f && (c ? $jscomp.defineProperty($jscomp.polyfills, b, {configurable:!0, writable:!0, value:f}) : f !== e && (void 0 === $jscomp.propertyToPolyfillSymbol[b] && (e = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[b] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(b) : $jscomp.POLYFILL_PREFIX + e + "$" + b), $jscomp.defineProperty(h, $jscomp.propertyToPolyfillSymbol[b], {configurable:!0, writable:!0, value:f})));
+  null != f && (c ? $jscomp.defineProperty($jscomp.polyfills, b, {configurable:!0, writable:!0, value:f}) : f !== e && (void 0 === $jscomp.propertyToPolyfillSymbol[b] && (e = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[b] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(b) : $jscomp.POLYFILL_PREFIX + e + "$" + b), $jscomp.defineProperty(h, $jscomp.propertyToPolyfillSymbol[b], {configurable:!0, writable:!0, value:f})));
 };
 $jscomp.polyfill("Reflect", function(c) {
   return c ? c : {};

@@ -84,7 +84,7 @@ $jscomp.polyfillIsolated = function(c, b, f, g) {
   d = d[d.length - 1];
   f = $jscomp.IS_SYMBOL_NATIVE && "es6" === f ? g[d] : null;
   b = b(f);
-  null != b && (c ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== f && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (f = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + f + "$" + d), $jscomp.defineProperty(g, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:b})));
+  null != b && (c ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== f && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (f = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + f + "$" + d), $jscomp.defineProperty(g, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Promise", function(c) {
   function b() {
