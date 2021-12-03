@@ -81,7 +81,7 @@ $jscomp.polyfillIsolated = function(a, c, b, e) {
   d = d[d.length - 1];
   b = $jscomp.IS_SYMBOL_NATIVE && "es6" === b ? e[d] : null;
   c = c(b);
-  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (b = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + b + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:c})));
+  null != c && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== b && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (b = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + b + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("Array.prototype.find", function(a) {
   return a ? a : function(c, b) {

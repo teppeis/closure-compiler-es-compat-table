@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(a, b, d, g) {
   e = e[e.length - 1];
   d = $jscomp.IS_SYMBOL_NATIVE && "es6" === d ? g[e] : null;
   b = b(d);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && (d = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + d + "$" + e), $jscomp.defineProperty(g, $jscomp.propertyToPolyfillSymbol[e], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, e, {configurable:!0, writable:!0, value:b}) : b !== d && (void 0 === $jscomp.propertyToPolyfillSymbol[e] && (d = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[e] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(e) : $jscomp.POLYFILL_PREFIX + d + "$" + e), $jscomp.defineProperty(g, $jscomp.propertyToPolyfillSymbol[e], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.underscoreProtoCanBeSet = function() {
   var a = {a:!0}, b = {};
@@ -336,7 +336,7 @@ $jscomp.polyfill("Symbol", function(a) {
   b.prototype.toString = function() {
     return this.$jscomp$symbol$id_;
   };
-  var d = "jscomp_symbol_" + (1e9 * Math.random() >>> 0) + "_", g = 0, e = function(k) {
+  var d = "jscomp_symbol_" + (1E9 * Math.random() >>> 0) + "_", g = 0, e = function(k) {
     if (this instanceof e) {
       throw new TypeError("Symbol is not a constructor");
     }
