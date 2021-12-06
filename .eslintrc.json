@@ -7,7 +7,7 @@
   "overrides": [
     {
       "files": ["legacy/*"],
-      "extends": ["teppeis/es5", "teppeis/+node", "teppeis/+prettier"],
+      "extends": ["teppeis/es5", "teppeis/+prettier"],
       "rules": {
         "node/no-unsupported-features/es-builtins": [
           "error",
@@ -28,6 +28,10 @@
           }
         ]
       }
+    },
+    {
+      "files": ["*.mjs"],
+      "extends": ["teppeis/+module", "teppeis/+prettier"]
     }
   ]
 }

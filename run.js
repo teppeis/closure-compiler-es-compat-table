@@ -99,7 +99,7 @@ const opts = {
   }
   console.log("Generate fail.md");
   const { stdout } = await execa(
-    "./result2md.js",
+    "./result2md.mjs",
     [path.join(esVer, closureVer, "result.txt")],
     {
       cwd: __dirname,

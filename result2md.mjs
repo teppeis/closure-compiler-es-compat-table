@@ -1,19 +1,23 @@
 #!/usr/bin/env node
 
-"use strict";
+import fs from "fs";
+import humanize from "humanize-string";
+import meow from "meow";
+import { createRequire } from "module";
+import path from "path";
+import url from "url";
 
-const fs = require("fs");
-const path = require("path");
-const meow = require("meow");
-const humanize = require("humanize-string");
+const require = createRequire(import.meta.url);
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const cli = meow(
   `
 	Usage
-	  $ result2md.js RESULT
+	  $ result2md.mjs RESULT
 
 	Examples
-    $ ./runjs es6/v20180402/result.txt
+    $ ./result2md.mjs es6/v20180402/result.txt
 `,
   {
     flags: {},
