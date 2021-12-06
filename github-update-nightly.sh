@@ -8,9 +8,9 @@ nodebrew install 0.10
 
 version=$(npm show google-closure-compiler@nightly --json|jq -r .version)
 
-./run.js es6/nightly
-./run.js es2016plus/nightly
-./run.js esnext/nightly
+./run.mjs es6/nightly
+./run.mjs es2016plus/nightly
+./run.mjs esnext/nightly
 ./replace-lambda-stacktrace.sh
 
 if [ -z "$(git status --porcelain)" ]; then

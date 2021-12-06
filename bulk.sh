@@ -3,7 +3,7 @@
 reset () {
     echo "update $1"
     rm -rf "$1"
-    ./run.js "$1"
+    ./run.mjs "$1"
     git add "$1"
     git ci -m "update $1"
 }

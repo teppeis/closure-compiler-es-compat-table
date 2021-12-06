@@ -10,9 +10,9 @@
     "alter-tests"
   ],
   "scripts": {
-    "es2016plus": "./run.js es2016plus",
-    "es6": "./run.js es6",
-    "esnext": "./run.js esnext",
+    "es2016plus": "./run.mjs es2016plus",
+    "es6": "./run.mjs es6",
+    "esnext": "./run.mjs esnext",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
