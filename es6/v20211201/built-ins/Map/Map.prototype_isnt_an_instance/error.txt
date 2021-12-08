@@ -1,0 +1,18 @@
+// built-ins / Map / Map.prototype isn't an instance
+module.exports = () => {
+  new Map();
+  var obj = {};
+  try {
+    Map.prototype.has(obj);
+  }
+  catch(e) {
+    return true;
+  }
+
+};
+----------------------------------------------------------
+es6/v20211201/built-ins/Map/Map.prototype_isnt_an_instance/in.js:6:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Map.prototype.has' is not being used.
+  6|     Map.prototype.has(obj);
+         ^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

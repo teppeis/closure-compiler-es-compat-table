@@ -1,0 +1,12 @@
+// misc / Updated identifier syntax / var 𐋀;
+module.exports = () => {
+  var 𐋀;
+  return true;
+
+};
+----------------------------------------------------------
+es6/v20211201/misc/Updated_identifier_syntax/var_U+102C0_/in.js:3:6: ERROR - [JSC_PARSE_ERROR] Parse error. Character '?' (U+D800) is not a valid identifier start char
+  3|   var 𐋀;
+           ^
+
+1 error(s), 0 warning(s)
