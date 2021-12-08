@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import execa from "execa";
+import { execa } from "execa";
 import fs from "fs";
 import meow from "meow";
 import { createRequire } from "module";
