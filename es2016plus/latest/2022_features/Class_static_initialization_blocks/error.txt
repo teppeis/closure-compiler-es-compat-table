@@ -8,7 +8,7 @@ return ok;
 
 };
 ----------------------------------------------------------
-es2016plus/v20211107/2022_features/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/v20211201/2022_features/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
   5| static { ok = true; }
             ^
 

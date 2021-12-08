@@ -459,24 +459,22 @@ $jscomp.polyfill("Promise", function(a) {
   e.prototype.resolveTo_ = function(c) {
     if (c === this) {
       this.reject_(new TypeError("A Promise cannot resolve to itself"));
+    } else if (c instanceof e) {
+      this.settleSameAsPromise_(c);
     } else {
-      if (c instanceof e) {
-        this.settleSameAsPromise_(c);
-      } else {
-        a: {
-          switch(typeof c) {
-            case "object":
-              var f = null != c;
-              break a;
-            case "function":
-              f = !0;
-              break a;
-            default:
-              f = !1;
-          }
+      a: {
+        switch(typeof c) {
+          case "object":
+            var f = null != c;
+            break a;
+          case "function":
+            f = !0;
+            break a;
+          default:
+            f = !1;
         }
-        f ? this.resolveToNonPromiseObj_(c) : this.fulfill_(c);
       }
+      f ? this.resolveToNonPromiseObj_(c) : this.fulfill_(c);
     }
   };
   e.prototype.resolveToNonPromiseObj_ = function(c) {

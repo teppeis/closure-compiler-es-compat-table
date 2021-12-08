@@ -8,7 +8,7 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_DUPLICATE_PARAM] Parse error. Duplicate parameter name "id"
 
 ----------------------------------------------------------
-es6/v20211107/syntax/destructuring,_parameters/duplicate_identifier/in.js:5:26: ERROR - [JSC_DUPLICATE_PARAM] Parse error. Duplicate parameter name "id"
+es6/v20211201/syntax/destructuring,_parameters/duplicate_identifier/in.js:5:26: ERROR - [JSC_DUPLICATE_PARAM] Parse error. Duplicate parameter name "id"
   5|   var f = function f([id, id]) { return id };
                                ^
 

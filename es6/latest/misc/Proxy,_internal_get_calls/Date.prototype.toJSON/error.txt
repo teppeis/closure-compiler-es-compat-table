@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20211107/misc/Proxy,_internal_get_calls/Date.prototype.toJSON/in.js:6:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20211201/misc/Proxy,_internal_get_calls/Date.prototype.toJSON/in.js:6:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   6|   var get = [];
        ^^^^^^^^^^^^^
 

@@ -7,7 +7,7 @@ return C.x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20211107/2022_features/static_class_fields/computed_static_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
+es2016plus/v20211201/2022_features/static_class_fields/computed_static_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
   4| static ['x'] = 42;
      ^^^^^^^^^^^^^^^^^^
 
