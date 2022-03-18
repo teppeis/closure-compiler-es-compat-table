@@ -26,7 +26,7 @@
     "@teppeis/closure-gun": "^2.0.0",
     "async": "^2.6.3",
     "del": "^6.0.0",
-    "execa": "^6.0.0",
+    "execa": "^6.1.0",
     "faastjs": "^6.1.5",
     "fs-readdir-recursive": "^1.1.0",
     "glob": "^7.2.0",
