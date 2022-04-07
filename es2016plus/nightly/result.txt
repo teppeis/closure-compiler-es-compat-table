@@ -160,7 +160,7 @@
 2022_features/private_class_methods/private_accessor_properties/error.txt: [CompileError]
 2022_features/private_class_methods/private_static_accessor_properties/error.txt: [CompileError]
 2022_features/Ergonomic_brand_checks_for_private_fields/error.txt: [CompileError]
-2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: TypeError: Object 1,2,3 has no method 'at'
+2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: TypeError: Object #<Object> has no method 'trunc'
 2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js: TypeError: Object abc has no method 'at'
 2022_features/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__/out.js: [InvalidResult: false]
 2022_features/Object.hasOwn/Basic_functionality/out.js: TypeError: Object function Object() { [native code] } has no method 'hasOwn'
