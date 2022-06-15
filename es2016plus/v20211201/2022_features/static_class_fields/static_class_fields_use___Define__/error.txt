@@ -1,0 +1,11 @@
+// 2022 features / static class fields / static class fields use [[Define]]
+module.exports = () => {
+return (class X { static name = "name"; }).name === 'name';
+
+};
+----------------------------------------------------------
+es2016plus/v20211201/2022_features/static_class_fields/static_class_fields_use___Define__/in.js:3:18: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
+  3| return (class X { static name = "name"; }).name === 'name';
+                       ^^^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

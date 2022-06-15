@@ -3,6 +3,7 @@
   "2016_features/exponentiation______operator/assignment",
   "2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens",
   "2016_features/Array.prototype.includes/Array.prototype.includes",
+  "2016_features/Array.prototype.includes/Array.prototype.includes_handles_sparse_arrays",
   "2016_features/Array.prototype.includes/Array.prototype.includes_is_generic",
   "2016_features/Array.prototype.includes/%TypedArray%.prototype.includes",
   "2016_misc/generator_functions_cant_be_used_with_new",
@@ -46,7 +47,7 @@
   "2017_features/shared_memory_and_atomics/Atomics.compareExchange",
   "2017_features/shared_memory_and_atomics/Atomics.exchange",
   "2017_features/shared_memory_and_atomics/Atomics.wait",
-  "2017_features/shared_memory_and_atomics/Atomics.wake",
+  "2017_features/shared_memory_and_atomics/Atomics.notify",
   "2017_features/shared_memory_and_atomics/Atomics.isLockFree",
   "2017_features/shared_memory_and_atomics/Atomics.load",
   "2017_features/shared_memory_and_atomics/Atomics.or",
@@ -154,6 +155,7 @@
   "2022_features/instance_class_fields/optional_deep_private_instance_class_fields_access",
   "2022_features/instance_class_fields/computed_instance_class_fields",
   "2022_features/static_class_fields/public_static_class_fields",
+  "2022_features/static_class_fields/static_class_fields_use___Define__",
   "2022_features/static_class_fields/private_static_class_fields",
   "2022_features/static_class_fields/computed_static_class_fields",
   "2022_features/private_class_methods/private_instance_methods",
@@ -182,5 +184,7 @@
   "2022_features/Error.cause_property/URIError_has_cause",
   "2022_features/Error.cause_property/URIError.prototype_lacks_cause",
   "2022_features/Error.cause_property/AggregateError_has_cause",
-  "2022_features/Error.cause_property/AggregateError.prototype_lacks_cause"
+  "2022_features/Error.cause_property/AggregateError.prototype_lacks_cause",
+  "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it",
+  "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags"
 ]
