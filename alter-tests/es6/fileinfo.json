@@ -2567,10 +2567,16 @@
     "subtest": "Symbol.hasInstance"
   },
   {
-    "path": "built-ins/well-known_symbols/Symbol.isConcatSpreadable",
+    "path": "built-ins/well-known_symbols/Symbol.isConcatSpreadable,_non-spreadable_array",
     "category": "built-ins",
     "test": "well-known symbols",
-    "subtest": "Symbol.isConcatSpreadable"
+    "subtest": "Symbol.isConcatSpreadable, non-spreadable array"
+  },
+  {
+    "path": "built-ins/well-known_symbols/Symbol.isConcatSpreadable,_spreadable_object_with_poisoned_getter",
+    "category": "built-ins",
+    "test": "well-known symbols",
+    "subtest": "Symbol.isConcatSpreadable, spreadable object with poisoned getter"
   },
   {
     "path": "built-ins/well-known_symbols/Symbol.iterator,_existence",
@@ -3057,6 +3063,12 @@
     "category": "built-in extensions",
     "test": "Array.prototype methods",
     "subtest": "Array.prototype.entries"
+  },
+  {
+    "path": "built-in_extensions/Array.prototype_methods/Array.prototype.splice",
+    "category": "built-in extensions",
+    "test": "Array.prototype methods",
+    "subtest": "Array.prototype.splice"
   },
   {
     "path": "built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.iterator_",

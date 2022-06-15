@@ -1,8 +1,7 @@
-// misc / Proxy, internal 'get' calls / RegExp.prototype.flags
+// 2022 features / RegExp Match Indices (`hasIndices` / `d` flag) / shows up in flags
 module.exports = () => {
-// RegExp.prototype.flags -> Get -> [[Get]]
-  var expected = [];
-  // Sorted alphabetically by shortname – "gimsuy".
+  var expected = ['hasIndices'];
+  // Sorted alphabetically by shortname – "dgimsuy".
   if ('global' in RegExp.prototype) expected.push('global');
   if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
   if ('multiline' in RegExp.prototype) expected.push('multiline');

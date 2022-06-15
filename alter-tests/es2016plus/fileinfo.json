@@ -24,6 +24,12 @@
     "subtest": "Array.prototype.includes"
   },
   {
+    "path": "2016_features/Array.prototype.includes/Array.prototype.includes_handles_sparse_arrays",
+    "category": "2016 features",
+    "test": "Array.prototype.includes",
+    "subtest": "Array.prototype.includes handles sparse arrays"
+  },
+  {
     "path": "2016_features/Array.prototype.includes/Array.prototype.includes_is_generic",
     "category": "2016 features",
     "test": "Array.prototype.includes",
@@ -275,10 +281,10 @@
     "subtest": "Atomics.wait"
   },
   {
-    "path": "2017_features/shared_memory_and_atomics/Atomics.wake",
+    "path": "2017_features/shared_memory_and_atomics/Atomics.notify",
     "category": "2017 features",
     "test": "shared memory and atomics",
-    "subtest": "Atomics.wake"
+    "subtest": "Atomics.notify"
   },
   {
     "path": "2017_features/shared_memory_and_atomics/Atomics.isLockFree",
@@ -908,6 +914,12 @@
     "subtest": "public static class fields"
   },
   {
+    "path": "2022_features/static_class_fields/static_class_fields_use___Define__",
+    "category": "2022 features",
+    "test": "static class fields",
+    "subtest": "static class fields use [[Define]]"
+  },
+  {
     "path": "2022_features/static_class_fields/private_static_class_fields",
     "category": "2022 features",
     "test": "static class fields",
@@ -1078,5 +1090,17 @@
     "category": "2022 features",
     "test": "Error.cause property",
     "subtest": "AggregateError.prototype lacks cause"
+  },
+  {
+    "path": "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it",
+    "category": "2022 features",
+    "test": "RegExp Match Indices (`hasIndices` / `d` flag)",
+    "subtest": "constructor supports it"
+  },
+  {
+    "path": "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags",
+    "category": "2022 features",
+    "test": "RegExp Match Indices (`hasIndices` / `d` flag)",
+    "subtest": "shows up in flags"
   }
 ]
