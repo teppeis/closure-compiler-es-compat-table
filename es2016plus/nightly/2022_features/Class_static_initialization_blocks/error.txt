@@ -8,8 +8,48 @@ return ok;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2022_features/Class_static_initialization_blocks/in.js:5:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
-  5| static { ok = true; }
-            ^
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
 
-1 error(s), 0 warning(s)
+com.google.javascript.rhino.Node cannot be cast to com.google.javascript.rhino.Node$StringNode
+  Node(CLASS): es2016plus/nightly/2022_features/Class_static_initialization_blocks/in.js:4:0
+class A {
+  Parent(BLOCK): es2016plus/nightly/2022_features/Class_static_initialization_blocks/in.js:2:23
+module.exports = () => {
+
+	at com.google.javascript.jscomp.Compiler.throwInternalError(Compiler.java:2885)
+	at com.google.javascript.jscomp.NodeTraversal.throwUnexpectedException(NodeTraversal.java:445)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:489)
+	at com.google.javascript.jscomp.NodeTraversal$Builder.traverseRoots(NodeTraversal.java:409)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:495)
+	at com.google.javascript.jscomp.StrictModeCheck.process(StrictModeCheck.java:98)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:240)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:179)
+	at com.google.javascript.jscomp.Compiler.check(Compiler.java:1189)
+	at com.google.javascript.jscomp.Compiler.performChecks(Compiler.java:994)
+	at com.google.javascript.jscomp.Compiler.lambda$stage1Passes$4(Compiler.java:903)
+	at com.google.javascript.jscomp.CompilerExecutor.lambda$runInCompilerThread$0(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:597)
+	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:194)
+Caused by: java.lang.ClassCastException: com.google.javascript.rhino.Node cannot be cast to com.google.javascript.rhino.Node$StringNode
+	at com.google.javascript.rhino.Node.getString(Node.java:1265)
+	at com.google.javascript.jscomp.StrictModeCheck.checkObjectLiteralOrClass(StrictModeCheck.java:187)
+	at com.google.javascript.jscomp.StrictModeCheck.visit(StrictModeCheck.java:111)
+	at com.google.javascript.jscomp.NodeTraversal.handleClass(NodeTraversal.java:953)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:812)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:898)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:763)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:806)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:987)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:751)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:803)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseRoots(NodeTraversal.java:485)
+	... 15 more
