@@ -1,0 +1,19 @@
+// Stage 2 / throw expressions / parameter initializers
+module.exports = () => {
+function fn (arg = throw 42) {
+return arg;
+}
+if (fn(21) !== 21) return false;
+try {
+fn();
+} catch (e) {
+return e === 42;
+}
+
+};
+----------------------------------------------------------
+esnext/v20220104/Stage_2/throw_expressions/parameter_initializers/in.js:3:24: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  3| function fn (arg = throw 42) {
+                             ^
+
+1 error(s), 0 warning(s)
