@@ -2,6 +2,7 @@
 2016_features/exponentiation______operator/assignment/out.js: [Pass]
 2016_features/exponentiation______operator/early_syntax_error_for_unary_negation_without_parens/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes/out.js: [Pass]
+2016_features/Array.prototype.includes/Array.prototype.includes_handles_sparse_arrays/out.js: [Pass]
 2016_features/Array.prototype.includes/Array.prototype.includes_is_generic/out.js: [Pass]
 2016_features/Array.prototype.includes/%TypedArray%.prototype.includes/out.js: ReferenceError: Int8Array is not defined
 2016_misc/generator_functions_cant_be_used_with_new/out.js: [InvalidResult: undefined]
@@ -21,7 +22,7 @@
 2017_features/trailing_commas_in_function_syntax/in_argument_lists/out.js: [Pass]
 2017_features/async_functions/return/out.js: [Pass]
 2017_features/async_functions/throw/out.js: [Pass]
-2017_features/async_functions/no_line_break_between_async_and_function/out.js: ReferenceError: async is not defined
+2017_features/async_functions/no_line_break_between_async_and_function/out.js: [Pass]
 2017_features/async_functions/no_prototype_property/out.js: [InvalidResult: false]
 2017_features/async_functions/await/out.js: [Pass]
 2017_features/async_functions/await,_rejection/out.js: [Pass]
@@ -45,7 +46,7 @@
 2017_features/shared_memory_and_atomics/Atomics.compareExchange/out.js: ReferenceError: Atomics is not defined
 2017_features/shared_memory_and_atomics/Atomics.exchange/out.js: ReferenceError: Atomics is not defined
 2017_features/shared_memory_and_atomics/Atomics.wait/out.js: ReferenceError: Atomics is not defined
-2017_features/shared_memory_and_atomics/Atomics.wake/out.js: ReferenceError: Atomics is not defined
+2017_features/shared_memory_and_atomics/Atomics.notify/out.js: ReferenceError: Atomics is not defined
 2017_features/shared_memory_and_atomics/Atomics.isLockFree/out.js: ReferenceError: Atomics is not defined
 2017_features/shared_memory_and_atomics/Atomics.load/out.js: ReferenceError: Atomics is not defined
 2017_features/shared_memory_and_atomics/Atomics.or/out.js: ReferenceError: Atomics is not defined
@@ -153,6 +154,7 @@
 2022_features/instance_class_fields/optional_deep_private_instance_class_fields_access/error.txt: [CompileError]
 2022_features/instance_class_fields/computed_instance_class_fields/error.txt: [CompileError]
 2022_features/static_class_fields/public_static_class_fields/error.txt: [CompileError]
+2022_features/static_class_fields/static_class_fields_use___Define__/error.txt: [CompileError]
 2022_features/static_class_fields/private_static_class_fields/error.txt: [CompileError]
 2022_features/static_class_fields/computed_static_class_fields/error.txt: [CompileError]
 2022_features/private_class_methods/private_instance_methods/error.txt: [CompileError]
@@ -182,3 +184,5 @@
 2022_features/Error.cause_property/URIError.prototype_lacks_cause/out.js: [Pass]
 2022_features/Error.cause_property/AggregateError_has_cause/out.js: [InvalidResult: false]
 2022_features/Error.cause_property/AggregateError.prototype_lacks_cause/out.js: [Pass]
+2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'd'
+2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags/out.js: ReferenceError: Proxy is not defined

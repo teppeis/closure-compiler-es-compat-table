@@ -426,7 +426,8 @@ built-ins/Symbol/JSON.stringify_ignores_symbol_primitives/out.js: [InvalidResult
 built-ins/Symbol/JSON.stringify_ignores_symbol_objects/out.js: [InvalidResult: false]
 built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (f) { if (this instanceof e) { throw new TypeError("Symbol is not a constructor"); } return new b(c + (f || "") + "_" + d++, f); } has no method 'for'
 built-ins/well-known_symbols/Symbol.hasInstance/out.js: [InvalidResult: false]
-built-ins/well-known_symbols/Symbol.isConcatSpreadable/out.js: [InvalidResult: false]
+built-ins/well-known_symbols/Symbol.isConcatSpreadable,_non-spreadable_array/out.js: [InvalidResult: false]
+built-ins/well-known_symbols/Symbol.isConcatSpreadable,_spreadable_object_with_poisoned_getter/out.js: [InvalidResult: null]
 built-ins/well-known_symbols/Symbol.iterator,_existence/out.js: [Pass]
 built-ins/well-known_symbols/Symbol.iterator,_arguments_object/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.species,_existence/out.js: [InvalidResult: false]
@@ -508,6 +509,7 @@ built-in_extensions/Array.prototype_methods/Array.prototype.fill/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.keys/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.values/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype.entries/out.js: [Pass]
+built-in_extensions/Array.prototype_methods/Array.prototype.splice/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.iterator_/out.js: [Pass]
 built-in_extensions/Array.prototype_methods/Array_iterator_prototype_chain/out.js: TypeError: Cannot call method 'hasOwnProperty' of null
 built-in_extensions/Array.prototype_methods/Array.prototype_Symbol.unscopables_/out.js: [InvalidResult: false]

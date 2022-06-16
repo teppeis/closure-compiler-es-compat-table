@@ -2,8 +2,8 @@
 module.exports = () => {
   async function a() {}
   async
-    function b() {}
+    function b() {await 0}
   return false;
 };
 
-// EXPECT: 4: ERROR
+// EXPECT: 5: ERROR
