@@ -2,7 +2,7 @@
 module.exports = () => {
 // RegExp.prototype.flags -> Get -> [[Get]]
   var expected = [];
-  // Sorted alphabetically by shortname – "gumsuy".
+  // Sorted alphabetically by shortname – "gimsuy".
   if ('global' in RegExp.prototype) expected.push('global');
   if ('ignoreCase' in RegExp.prototype) expected.push('ignoreCase');
   if ('multiline' in RegExp.prototype) expected.push('multiline');
