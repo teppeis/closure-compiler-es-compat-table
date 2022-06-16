@@ -2,15 +2,15 @@
 module.exports = () => {
   async function a() {}
   async
-    function b() {}
+    function b() {await 0}
   return false;
 };
 
-// EXPECT: 4: ERROR
+// EXPECT: 5: ERROR
 
 ----------------------------------------------------------
-es2016plus/nightly/2017_features/async_functions/no_line_break_between_async_and_function/in.js:4:2: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
-  4|   async
-       ^^^^^
+es2016plus/nightly/2017_features/async_functions/no_line_break_between_async_and_function/in.js:5:18: ERROR - [JSC_PARSE_ERROR] Parse error. 'await' used in a non-async function context
+  5|     function b() {await 0}
+                       ^
 
-0 error(s), 1 warning(s)
+1 error(s), 0 warning(s)

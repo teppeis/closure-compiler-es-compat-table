@@ -108,6 +108,6 @@ $jscomp.polyfill("String.prototype.includes", function(b) {
   };
 }, "es6", "es3");
 module.exports = function() {
-  return [1, 2, 3].includes(1) && ![1, 2, 3].includes(4) && ![1, 2, 3].includes(1, 1) && [NaN].includes(NaN);
+  return [, ].includes() && Array(1).includes();
 };
 
