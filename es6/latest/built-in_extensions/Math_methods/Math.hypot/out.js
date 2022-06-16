@@ -71,7 +71,7 @@ $jscomp.polyfillIsolated = function(b, c, a, e) {
   d = d[d.length - 1];
   a = $jscomp.IS_SYMBOL_NATIVE && "es6" === a ? e[d] : null;
   c = c(a);
-  null != c && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== a && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (a = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + a + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:c})));
+  null != c && (b ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:c}) : c !== a && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (a = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + a + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:c})));
 };
 $jscomp.polyfill("Math.hypot", function(b) {
   return b ? b : function(c) {
@@ -82,7 +82,7 @@ $jscomp.polyfill("Math.hypot", function(b) {
     for (a = d = 0; a < arguments.length; a++) {
       d = Math.max(d, Math.abs(arguments[a]));
     }
-    if (1e100 < d || 1e-100 > d) {
+    if (1E100 < d || 1E-100 > d) {
       if (!d) {
         return d;
       }

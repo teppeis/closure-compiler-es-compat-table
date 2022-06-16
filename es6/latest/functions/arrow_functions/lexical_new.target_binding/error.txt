@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20211201/functions/arrow_functions/lexical_new.target_binding/in.js:4:16: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
+es6/v20220104/functions/arrow_functions/lexical_new.target_binding/in.js:4:16: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'new.target' is not yet implemented.
   4|     return x => new.target;
                      ^^^^^^^^^^
 

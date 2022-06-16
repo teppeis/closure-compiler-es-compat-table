@@ -10,7 +10,7 @@ return false;
 
 };
 ----------------------------------------------------------
-es2016plus/v20211201/2019_misc/optional_catch_binding/basic/in.js:9:0: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20220104/2019_misc/optional_catch_binding/basic/in.js:9:0: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
    9| return false;
       ^^^^^^^^^^^^^
 

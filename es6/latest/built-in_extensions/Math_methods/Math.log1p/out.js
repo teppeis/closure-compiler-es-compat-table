@@ -71,12 +71,12 @@ $jscomp.polyfillIsolated = function(a, b, c, e) {
   d = d[d.length - 1];
   c = $jscomp.IS_SYMBOL_NATIVE && "es6" === c ? e[d] : null;
   b = b(c);
-  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (c = 1e9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + c + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:b})));
+  null != b && (a ? $jscomp.defineProperty($jscomp.polyfills, d, {configurable:!0, writable:!0, value:b}) : b !== c && (void 0 === $jscomp.propertyToPolyfillSymbol[d] && (c = 1E9 * Math.random() >>> 0, $jscomp.propertyToPolyfillSymbol[d] = $jscomp.IS_SYMBOL_NATIVE ? $jscomp.global.Symbol(d) : $jscomp.POLYFILL_PREFIX + c + "$" + d), $jscomp.defineProperty(e, $jscomp.propertyToPolyfillSymbol[d], {configurable:!0, writable:!0, value:b})));
 };
 $jscomp.polyfill("Math.log1p", function(a) {
   return a ? a : function(b) {
     b = Number(b);
-    if (0.25 > b && -0.25 < b) {
+    if (.25 > b && -.25 < b) {
       for (var c = b, e = 1, d = b, f = 0, g = 1; f != d;) {
         c *= b, g *= -1, d = (f = d) + g * c / ++e;
       }
