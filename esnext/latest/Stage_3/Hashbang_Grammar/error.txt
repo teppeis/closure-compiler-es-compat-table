@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20220202/Stage_3/Hashbang_Grammar/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+esnext/v20220301/Stage_3/Hashbang_Grammar/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   try {
        ^^^^^
   5|     return !eval('#!/wash/your/hands');

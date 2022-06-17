@@ -9,7 +9,7 @@ module.exports = () => {
 // EXPECT: 5: ERROR
 
 ----------------------------------------------------------
-es2016plus/v20220202/2017_features/async_functions/no_line_break_between_async_and_function/in.js:5:18: ERROR - [JSC_PARSE_ERROR] Parse error. 'await' used in a non-async function context
+es2016plus/v20220301/2017_features/async_functions/no_line_break_between_async_and_function/in.js:5:18: ERROR - [JSC_PARSE_ERROR] Parse error. 'await' used in a non-async function context
   5|     function b() {await 0}
                        ^
 
