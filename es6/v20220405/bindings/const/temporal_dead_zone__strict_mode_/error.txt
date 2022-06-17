@@ -1,0 +1,16 @@
+// bindings / const / temporal dead zone (strict mode)
+module.exports = () => {
+  'use strict';
+  var passed = (function(){ try { qux; } catch(e) { return true; }}());
+  function fn() { passed &= qux === 456; }
+  const qux = 456;
+  fn();
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20220405/bindings/const/temporal_dead_zone__strict_mode_/in.js:4:34: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  4|   var passed = (function(){ try { qux; } catch(e) { return true; }}());
+                                       ^^^
+
+0 error(s), 1 warning(s)

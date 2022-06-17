@@ -1,0 +1,17 @@
+// Stage 2 / throw expressions / logical
+module.exports = () => {
+var a, b;
+try {
+a = 19 || throw 77;
+b = 88 && throw 23;
+} catch (e) {
+return a + e === 42;
+}
+
+};
+----------------------------------------------------------
+esnext/v20220405/Stage_2/throw_expressions/logical/in.js:5:15: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  5| a = 19 || throw 77;
+                    ^
+
+1 error(s), 0 warning(s)
