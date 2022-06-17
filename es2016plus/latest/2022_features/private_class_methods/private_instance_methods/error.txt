@@ -10,7 +10,7 @@ return new C().x() === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220301/2022_features/private_class_methods/private_instance_methods/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+es2016plus/v20220405/2022_features/private_class_methods/private_instance_methods/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
   4| #x() { return 42; }
      ^
 
