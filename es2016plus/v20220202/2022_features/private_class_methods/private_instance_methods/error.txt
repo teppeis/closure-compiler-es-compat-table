@@ -1,0 +1,17 @@
+// 2022 features / private class methods / private instance methods
+module.exports = () => {
+class C {
+#x() { return 42; }
+x() {
+return this.#x();
+}
+}
+return new C().x() === 42;
+
+};
+----------------------------------------------------------
+es2016plus/v20220202/2022_features/private_class_methods/private_instance_methods/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+  4| #x() { return 42; }
+     ^
+
+1 error(s), 0 warning(s)
