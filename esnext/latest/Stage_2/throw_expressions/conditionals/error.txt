@@ -9,7 +9,7 @@ return e === 21;
 
 };
 ----------------------------------------------------------
-esnext/v20220104/Stage_2/throw_expressions/conditionals/in.js:3:17: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20220202/Stage_2/throw_expressions/conditionals/in.js:3:17: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   3| true ? 42 : throw 21;
                       ^
 
