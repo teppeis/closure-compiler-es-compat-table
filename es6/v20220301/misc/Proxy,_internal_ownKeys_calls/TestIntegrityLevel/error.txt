@@ -1,0 +1,15 @@
+// misc / Proxy, internal 'ownKeys' calls / TestIntegrityLevel
+module.exports = () => {
+// TestIntegrityLevel -> [[OwnPropertyKeys]]
+  var ownKeysCalled = 0;
+  var p = new Proxy(Object.preventExtensions({}), { ownKeys: function(o) { ownKeysCalled++; return Object.keys(o); }});
+  Object.isFrozen(p);
+  return ownKeysCalled === 1;
+
+};
+----------------------------------------------------------
+es6/v20220301/misc/Proxy,_internal_ownKeys_calls/TestIntegrityLevel/in.js:6:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.isFrozen' is not being used.
+  6|   Object.isFrozen(p);
+       ^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

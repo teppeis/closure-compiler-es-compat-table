@@ -1,0 +1,18 @@
+// syntax / default function parameters / new Function() support
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  return new Function("a = 1", "b = 2",
+    "return a === 3 && b === 2;"
+  )(3);
+
+};
+----------------------------------------------------------
+es6/v20220301/syntax/default_function_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   return new Function("a = 1", "b = 2",
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5|     "return a === 3 && b === 2;"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6|   )(3);
+     ^^^^^^^
+
+0 error(s), 1 warning(s)
