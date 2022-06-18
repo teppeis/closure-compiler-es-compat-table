@@ -10,7 +10,7 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. No newline allowed before '=>'
 
 ----------------------------------------------------------
-es6/v20220405/functions/arrow_functions/no_line_break_between_params_and_arrow/in.js:5:6: ERROR - [JSC_PARSE_ERROR] Parse error. No newline allowed before '=>'
+es6/v20220502/functions/arrow_functions/no_line_break_between_params_and_arrow/in.js:5:6: ERROR - [JSC_PARSE_ERROR] Parse error. No newline allowed before '=>'
   5|       => 2;
            ^
 

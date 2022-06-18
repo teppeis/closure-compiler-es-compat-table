@@ -7,7 +7,7 @@ return new C().x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220405/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
+es2016plus/v20220502/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
   4| ['x'] = 42;
      ^^^^^^^^^^^
 

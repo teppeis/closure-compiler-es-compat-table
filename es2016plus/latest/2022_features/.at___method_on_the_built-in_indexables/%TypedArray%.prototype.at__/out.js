@@ -76,6 +76,31 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
 $jscomp.polyfill("globalThis", function(a) {
   return a || $jscomp.global;
 }, "es_2020", "es3");
+$jscomp.atMethod = function(a) {
+  a = Math.trunc(a) || 0;
+  0 > a && (a += this.length);
+  if (!(0 > a || a >= this.length)) {
+    return this[a];
+  }
+};
+$jscomp.polyfill("Array.prototype.at", function(a) {
+  return a ? a : $jscomp.atMethod;
+}, "es_next", "es5");
+$jscomp.typedArrayAt = function(a) {
+  return a ? a : $jscomp.atMethod;
+};
+$jscomp.polyfill("Int8Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Uint8Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Uint8ClampedArray.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Int16Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Uint16Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Int32Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Uint32Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Float32Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("Float64Array.prototype.at", $jscomp.typedArrayAt, "es_next", "es5");
+$jscomp.polyfill("String.prototype.at", function(a) {
+  return a ? a : $jscomp.atMethod;
+}, "es_next", "es5");
 module.exports = function() {
   return "Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" ").every(function(a) {
     a = globalThis[a];
