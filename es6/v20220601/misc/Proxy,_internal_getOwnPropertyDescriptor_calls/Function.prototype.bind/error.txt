@@ -1,0 +1,17 @@
+// misc / Proxy, internal 'getOwnPropertyDescriptor' calls / Function.prototype.bind
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // Function.prototype.bind -> HasOwnProperty -> [[GetOwnProperty]]
+  var gopd = [];
+  var p = new Proxy(Function(),
+    { getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }});
+  p.bind();
+  return gopd + '' === "length";
+
+};
+----------------------------------------------------------
+es6/v20220601/misc/Proxy,_internal_getOwnPropertyDescriptor_calls/Function.prototype.bind/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  5|   var gopd = [];
+       ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

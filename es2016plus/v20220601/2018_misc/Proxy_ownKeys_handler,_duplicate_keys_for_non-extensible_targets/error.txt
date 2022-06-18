@@ -1,0 +1,21 @@
+// 2018 misc / Proxy "ownKeys" handler, duplicate keys for non-extensible targets
+module.exports = () => {
+  var p = new Proxy({}, {
+    ownKeys() {
+      return ["a", "a"];
+    }
+  });
+  try {
+    Object.keys(p);
+  } catch (e) {
+    return e instanceof TypeError
+  }
+  return false;
+
+};
+----------------------------------------------------------
+es2016plus/v20220601/2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets/in.js:9:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+   9|     Object.keys(p);
+          ^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
