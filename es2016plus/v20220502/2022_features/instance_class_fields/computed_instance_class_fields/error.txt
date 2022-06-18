@@ -1,0 +1,14 @@
+// 2022 features / instance class fields / computed instance class fields
+module.exports = () => {
+class C {
+['x'] = 42;
+}
+return new C().x === 42;
+
+};
+----------------------------------------------------------
+es2016plus/v20220502/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_CANNOT_CONVERT_YET] ES6 transpilation of 'Public class fields' is not yet implemented.
+  4| ['x'] = 42;
+     ^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

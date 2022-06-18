@@ -1,0 +1,18 @@
+// syntax / rest parameters / can't be used in setters
+module.exports = () => {
+  return (function (...args) {
+    var obj = {
+      set e(...args) {}
+    };
+    return true;
+  }());
+};
+
+// EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error.
+
+----------------------------------------------------------
+es6/v20220502/syntax/rest_parameters/cant_be_used_in_setters/in.js:5:12: ERROR - [JSC_PARSE_ERROR] Parse error. Setter must not have a rest parameter
+  5|       set e(...args) {}
+                 ^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,12 @@
+// 2018 features / s (dotAll) flag for regular expressions
+module.exports = () => {
+  const regex = /foo.bar/s;
+  return regex.test('foo\nbar');
+
+};
+----------------------------------------------------------
+es2016plus/v20220502/2018_features/s__dotAll__flag_for_regular_expressions/in.js:3:16: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp flag 's'" to targeted output language.
+  3|   const regex = /foo.bar/s;
+                     ^^^^^^^^^^
+
+1 error(s), 0 warning(s)
