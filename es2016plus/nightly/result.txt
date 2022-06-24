@@ -165,8 +165,8 @@
 2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: TypeError: Object #<Object> has no method 'trunc'
 2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js: TypeError: Object #<Object> has no method 'trunc'
 2022_features/.at___method_on_the_built-in_indexables/%TypedArray%.prototype.at__/out.js: [InvalidResult: false]
-2022_features/Object.hasOwn/Basic_functionality/out.js: TypeError: Object function Object() { [native code] } has no method 'hasOwn'
-2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js: [InvalidResult: false]
+2022_features/Object.hasOwn/Basic_functionality/out.js: [Pass]
+2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js: [Pass]
 2022_features/Class_static_initialization_blocks/error.txt: [CompileError]
 2022_features/Error.cause_property/Error_has_cause/out.js: [InvalidResult: false]
 2022_features/Error.cause_property/Error.prototype_lacks_cause/out.js: [Pass]
