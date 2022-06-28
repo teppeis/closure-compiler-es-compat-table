@@ -83,6 +83,8 @@
 2021_features/Logical_Assignment/QQ_Equals_short-circuiting_behaviour/out.js: [Pass]
 2021_features/Logical_Assignment/QQ_Equals_setter_not_unecessarily_invoked/out.js: [Pass]
 2021_features/numeric_separators/out.js: [Pass]
+2022_features/.at___method_on_the_built-in_indexables/Array.prototype.at__/out.js: [Pass]
+2022_features/.at___method_on_the_built-in_indexables/String.prototype.at__/out.js: [Pass]
 2022_features/Object.hasOwn/Basic_functionality/out.js: [Pass]
 2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/out.js: [Pass]
 2022_features/Error.cause_property/Error.prototype_lacks_cause/out.js: [Pass]
