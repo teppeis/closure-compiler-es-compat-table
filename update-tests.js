@@ -100,7 +100,7 @@ function cleanupDirsForRemovedTests(fileList, alterTestDir) {
   const pathSet = new Set(
     fileList.map((file) => path.join(alterTestDir, file.path))
   );
-  const files = glob.sync(path.join(alterTestDir, "**/orig.js"));
+  const files = glob.sync(path.join(alterTestDir, "**/orig.js"), {dot: true});
   const removedDirs = files
     .map(path.dirname)
     .filter((dir) => !pathSet.has(dir));
