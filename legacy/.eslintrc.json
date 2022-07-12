@@ -2,7 +2,6 @@
   "root": true,
   "extends": ["teppeis/es5", "teppeis/+node", "teppeis/+prettier"],
   "rules": {
-    "n/no-unsupported-features": ["error", { "version": "0.10.0" }],
     "n/no-unsupported-features/es-builtins": [
       "error",
       {
@@ -10,6 +9,12 @@
       }
     ],
     "n/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "version": "0.10"
+      }
+    ],
+    "n/no-unsupported-features/node-builtins": [
       "error",
       {
         "version": "0.10"
