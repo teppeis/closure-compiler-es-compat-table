@@ -1,0 +1,54 @@
+// 2022 features / Class static initialization blocks
+module.exports = () => {
+let ok = false;
+class A {
+static { ok = true; }
+}
+return ok;
+
+};
+----------------------------------------------------------
+java.lang.RuntimeException: INTERNAL COMPILER ERROR.
+Please report this problem.
+
+Unexpected class member: [BLOCK 5:7  [length: 14] [source_file: es2016plus/v20220719/2022_features/Class_static_initialization_blocks/in.js]]
+  Node(CLASS): es2016plus/v20220719/2022_features/Class_static_initialization_blocks/in.js:4:0
+class A {
+  Parent(BLOCK): es2016plus/v20220719/2022_features/Class_static_initialization_blocks/in.js:2:23
+module.exports = () => {
+
+	at com.google.javascript.jscomp.Compiler.throwInternalError(Compiler.java:2891)
+	at com.google.javascript.jscomp.NodeTraversal.throwUnexpectedException(NodeTraversal.java:445)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:465)
+	at com.google.javascript.jscomp.NodeTraversal$Builder.traverse(NodeTraversal.java:401)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:471)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:426)
+	at com.google.javascript.jscomp.Es6RewriteClass.process(Es6RewriteClass.java:68)
+	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:240)
+	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:179)
+	at com.google.javascript.jscomp.Compiler.performTranspilationAndOptimizations(Compiler.java:2577)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$5(Compiler.java:934)
+	at com.google.javascript.jscomp.CompilerExecutor.lambda$runInCompilerThread$0(CompilerExecutor.java:101)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+	at com.oracle.svm.core.thread.JavaThreads.threadStartRoutine(JavaThreads.java:597)
+	at com.oracle.svm.core.posix.thread.PosixJavaThreads.pthreadStartRoutine(PosixJavaThreads.java:194)
+Caused by: java.lang.IllegalStateException: Unexpected class member: [BLOCK 5:7  [length: 14] [source_file: es2016plus/v20220719/2022_features/Class_static_initialization_blocks/in.js]]
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:590)
+	at com.google.javascript.jscomp.Es6RewriteClass.visitClass(Es6RewriteClass.java:155)
+	at com.google.javascript.jscomp.Es6RewriteClass.visit(Es6RewriteClass.java:98)
+	at com.google.javascript.jscomp.NodeTraversal.handleClass(NodeTraversal.java:953)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:812)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseFunction(NodeTraversal.java:898)
+	at com.google.javascript.jscomp.NodeTraversal.handleFunction(NodeTraversal.java:763)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:806)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:850)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:987)
+	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:751)
+	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:803)
+	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:462)
+	... 15 more

@@ -1,0 +1,25 @@
+// built-ins / Symbol / cannot coerce to string or number
+module.exports = () => {
+  var symbol = Symbol();
+  try {
+    symbol + "";
+    return false;
+  }
+  catch(e) {}
+  try {
+    symbol + 0;
+    return false;
+  } catch(e) {}
+  return true;
+
+};
+----------------------------------------------------------
+es6/v20220719/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
+  5|     symbol + "";
+         ^^^^^^^^^^^
+
+es6/v20220719/built-ins/Symbol/cannot_coerce_to_string_or_number/in.js:10:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
+  10|     symbol + 0;
+          ^^^^^^^^^^
+
+0 error(s), 2 warning(s)
