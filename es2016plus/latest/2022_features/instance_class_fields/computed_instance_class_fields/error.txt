@@ -7,7 +7,7 @@ return new C().x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220601/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
+es2016plus/v20220719/2022_features/instance_class_fields/computed_instance_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
   4| ['x'] = 42;
      ^
 

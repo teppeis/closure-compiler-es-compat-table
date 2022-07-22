@@ -54,15 +54,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:16:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20220719/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:16:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
   16|     Object.getOwnPropertyDescriptor(proxy, "foo");
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:24:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20220719/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:24:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
   24|     Object.getOwnPropertyDescriptor(proxy, "bar");
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:30:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20220719/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:30:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
   30|     Object.getOwnPropertyDescriptor(new Proxy(proxied, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   31|       getOwnPropertyDescriptor: function() {
@@ -72,7 +72,7 @@ es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:
   33|       }}), "baz");
       ^^^^^^^^^^^^^^^^^
 
-es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:40:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20220719/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:40:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
   40|     Object.getOwnPropertyDescriptor(new Proxy({}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   41|       getOwnPropertyDescriptor: function() {
@@ -82,7 +82,7 @@ es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:
   43|       }}), "baz");
       ^^^^^^^^^^^^^^^^^
 
-es6/v20220601/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:47:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
+es6/v20220719/built-ins/Proxy/getOwnPropertyDescriptor_handler_invariants/in.js:47:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.getOwnPropertyDescriptor' is not being used.
   47|     Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   48|       getOwnPropertyDescriptor: function() {

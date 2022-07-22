@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20220601/misc/Proxy,_internal_get_calls/Array.prototype.toString/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20220719/misc/Proxy,_internal_get_calls/Array.prototype.toString/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   5|   var get = [];
        ^^^^^^^^^^^^^
 
