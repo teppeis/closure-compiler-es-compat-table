@@ -1,0 +1,17 @@
+// 2022 features / Object.hasOwn / ToObject called before ToPropertyKey
+module.exports = () => {
+  var ok = !!Object.hasOwn;
+  try {
+    Object.hasOwn(null, { toString: function () { ok = false } });
+    return false;
+  } catch (e) {
+    return ok;
+  }
+
+};
+----------------------------------------------------------
+es2016plus/v20220803/2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.hasOwn' is not being used.
+  5|     Object.hasOwn(null, { toString: function () { ok = false } });
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

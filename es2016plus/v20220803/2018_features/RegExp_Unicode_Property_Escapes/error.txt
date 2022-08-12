@@ -1,0 +1,12 @@
+// 2018 features / RegExp Unicode Property Escapes
+module.exports = () => {
+  const regexGreekSymbol = /\p{Script=Greek}/u;
+  return regexGreekSymbol.test('π');
+
+};
+----------------------------------------------------------
+es2016plus/v20220803/2018_features/RegExp_Unicode_Property_Escapes/in.js:3:27: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2018 feature "RegExp unicode property escape" to targeted output language.
+  3|   const regexGreekSymbol = /\p{Script=Greek}/u;
+                                ^^^^^^^^^^^^^^^^^^^
+
+1 error(s), 0 warning(s)

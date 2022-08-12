@@ -1,0 +1,20 @@
+// syntax / default function parameters / temporal dead zone
+module.exports = () => {
+  (function(a=a){}());
+  (function(a=b,b){}());
+  return false;
+};
+
+// EXPECT: 3: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: a
+// EXPECT: 4: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
+
+----------------------------------------------------------
+es6/v20220803/syntax/default_function_parameters/temporal_dead_zone/in.js:3:14: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: a
+  3|   (function(a=a){}());
+                   ^
+
+es6/v20220803/syntax/default_function_parameters/temporal_dead_zone/in.js:4:14: ERROR - [JSC_REFERENCE_BEFORE_DECLARE_ERROR] Illegal variable reference before declaration: b
+  4|   (function(a=b,b){}());
+                   ^
+
+2 error(s), 0 warning(s)

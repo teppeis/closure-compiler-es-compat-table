@@ -1,0 +1,27 @@
+// built-ins / Proxy / "ownKeys" handler
+module.exports = () => {
+  var proxied = {};
+  var passed = false;
+  Object.keys(
+    new Proxy(proxied, {
+      ownKeys: function (t) {
+        passed = t === proxied; return [];
+      }
+    })
+  );
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20220803/built-ins/Proxy/ownKeys_handler/in.js:5:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+   5|   Object.keys(
+        ^^^^^^^^^^^^
+   6|     new Proxy(proxied, {
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+  10|     })
+      ^^^^^^
+  11|   );
+      ^^^
+
+0 error(s), 1 warning(s)
