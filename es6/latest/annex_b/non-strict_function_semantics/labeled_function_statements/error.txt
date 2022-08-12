@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20220719/annex_b/non-strict_function_semantics/labeled_function_statements/in.js:5:2: ERROR - [JSC_PARSE_ERROR] Parse error. Lexical declarations are only allowed at top level or inside a block.
+es6/v20220803/annex_b/non-strict_function_semantics/labeled_function_statements/in.js:5:2: ERROR - [JSC_PARSE_ERROR] Parse error. Lexical declarations are only allowed at top level or inside a block.
   5|   label: function foo() { return 2; }
        ^
 

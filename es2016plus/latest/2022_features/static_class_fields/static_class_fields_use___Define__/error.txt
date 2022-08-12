@@ -4,7 +4,7 @@ return (class X { static name = "name"; }).name === 'name';
 
 };
 ----------------------------------------------------------
-es2016plus/v20220719/2022_features/static_class_fields/static_class_fields_use___Define__/in.js:3:18: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
+es2016plus/v20220803/2022_features/static_class_fields/static_class_fields_use___Define__/in.js:3:18: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
   3| return (class X { static name = "name"; }).name === 'name';
                        ^
 

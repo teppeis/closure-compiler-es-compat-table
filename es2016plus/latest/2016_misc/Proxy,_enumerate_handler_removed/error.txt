@@ -11,7 +11,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20220719/2016_misc/Proxy,_enumerate_handler_removed/in.js:9:23: WARNING - [JSC_SUSPICIOUS_SEMICOLON] If this if/for/while really shouldn't have a body, use {}
+es2016plus/v20220803/2016_misc/Proxy,_enumerate_handler_removed/in.js:9:23: WARNING - [JSC_SUSPICIOUS_SEMICOLON] If this if/for/while really shouldn't have a body, use {}
    9|   for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
                              ^
 
