@@ -20,6 +20,7 @@ const cli = meow(
     $ ./result2md.mjs es6/v20180402/result.txt
 `,
   {
+    importMeta: import.meta,
     flags: {},
   }
 );
