@@ -1,9 +1,6 @@
 Stage_3/Realms/out.js: [InvalidResult: false]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
-Stage_3/Hashbang_Grammar/out.js: Error: eval() and Function() cannot be transpiled
-Stage_3/Array_find_from_last/Array.prototype.findLast/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLast'
-Stage_3/Array_find_from_last/Array.prototype.findLastIndex/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLastIndex'
 Stage_2/Generator_function.sent_Meta_Property/error.txt: [CompileError]
 Stage_2/Class_and_Property_Decorators/class_decorators/error.txt: [CompileError]
 Stage_2/throw_expressions/logical/error.txt: [CompileError]

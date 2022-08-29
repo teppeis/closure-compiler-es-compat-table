@@ -144,3 +144,12 @@
 ### RegExp Match Indices (`hasIndices` / `d` flag)
 - constructor supports it ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it/out.js))
 - shows up in flags ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags/out.js))
+
+## 2023 features
+
+### Array find from last
+- Array.prototype.findLast ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Array_find_from_last/Array.prototype.findLast/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Array_find_from_last/Array.prototype.findLast/out.js))
+- Array.prototype.findLastIndex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Array_find_from_last/Array.prototype.findLastIndex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Array_find_from_last/Array.prototype.findLastIndex/out.js))
+
+### Hashbang Grammar
+- Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/v20220803/2023_features/Hashbang_Grammar/out.js))

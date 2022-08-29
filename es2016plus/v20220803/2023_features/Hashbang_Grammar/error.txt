@@ -1,4 +1,4 @@
-// Stage 3 / Hashbang Grammar
+// 2023 features / Hashbang Grammar
 module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   try {
@@ -9,7 +9,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-esnext/v20220803/Stage_3/Hashbang_Grammar/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es2016plus/v20220803/2023_features/Hashbang_Grammar/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   try {
        ^^^^^
   5|     return !eval('#!/wash/your/hands');

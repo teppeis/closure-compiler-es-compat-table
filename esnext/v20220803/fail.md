@@ -8,13 +8,6 @@
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
 - RegExp.$1-$9 ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.%241-%249/error.txt))
 
-### Hashbang Grammar
-- Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Hashbang_Grammar/out.js))
-
-### Array find from last
-- Array.prototype.findLast ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Array_find_from_last/Array.prototype.findLast/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Array_find_from_last/Array.prototype.findLast/out.js))
-- Array.prototype.findLastIndex ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Array_find_from_last/Array.prototype.findLastIndex/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20220803/Stage_3/Array_find_from_last/Array.prototype.findLastIndex/out.js))
-
 ## Stage 2
 
 ### Generator function.sent Meta Property
