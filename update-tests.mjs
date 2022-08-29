@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 
-"use strict";
+import { Linter } from "eslint";
+import fs from "fs";
+import glob from "glob";
+import meow from "meow";
+import mkdirp from "mkdirp";
+import { createRequire } from "module";
+import path from "path";
+import rimraf from "rimraf";
+import { fileURLToPath } from "url";
 
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
-const { Linter } = require("eslint");
-const meow = require("meow");
-const glob = require("glob");
-const rimraf = require("rimraf");
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const require = createRequire(import.meta.url);
 
 const cli = meow(
   `

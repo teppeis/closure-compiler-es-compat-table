@@ -26,6 +26,7 @@ const cli = meow(
     $ ./runjs es6/v20180402/syntax/rest_parameters/basic_functionality
 `,
   {
+    importMeta: import.meta,
     flags: {
       skipCompile: {
         type: "boolean",
