@@ -186,3 +186,6 @@
 2022_features/Error.cause_property/AggregateError.prototype_lacks_cause/out.js: [Pass]
 2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'd'
 2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags/out.js: ReferenceError: Proxy is not defined
+2023_features/Array_find_from_last/Array.prototype.findLast/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLast'
+2023_features/Array_find_from_last/Array.prototype.findLastIndex/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLastIndex'
+2023_features/Hashbang_Grammar/out.js: Error: eval() and Function() cannot be transpiled
