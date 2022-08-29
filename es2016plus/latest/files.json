@@ -186,5 +186,8 @@
   "2022_features/Error.cause_property/AggregateError_has_cause",
   "2022_features/Error.cause_property/AggregateError.prototype_lacks_cause",
   "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/constructor_supports_it",
-  "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags"
+  "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags",
+  "2023_features/Array_find_from_last/Array.prototype.findLast",
+  "2023_features/Array_find_from_last/Array.prototype.findLastIndex",
+  "2023_features/Hashbang_Grammar"
 ]

@@ -1,4 +1,4 @@
-// Stage 3 / Hashbang Grammar
+// 2023 features / Hashbang Grammar
 module.exports = () => {
   throw new Error('eval() and Function() cannot be transpiled');
   try {
