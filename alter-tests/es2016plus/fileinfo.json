@@ -1102,5 +1102,22 @@
     "category": "2022 features",
     "test": "RegExp Match Indices (`hasIndices` / `d` flag)",
     "subtest": "shows up in flags"
+  },
+  {
+    "path": "2023_features/Array_find_from_last/Array.prototype.findLast",
+    "category": "2023 features",
+    "test": "Array find from last",
+    "subtest": "Array.prototype.findLast"
+  },
+  {
+    "path": "2023_features/Array_find_from_last/Array.prototype.findLastIndex",
+    "category": "2023 features",
+    "test": "Array find from last",
+    "subtest": "Array.prototype.findLastIndex"
+  },
+  {
+    "path": "2023_features/Hashbang_Grammar",
+    "category": "2023 features",
+    "test": "Hashbang Grammar"
   }
 ]

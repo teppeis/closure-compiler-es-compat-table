@@ -17,23 +17,6 @@
     "subtest": "RegExp.$1-$9"
   },
   {
-    "path": "Stage_3/Hashbang_Grammar",
-    "category": "Stage 3",
-    "test": "Hashbang Grammar"
-  },
-  {
-    "path": "Stage_3/Array_find_from_last/Array.prototype.findLast",
-    "category": "Stage 3",
-    "test": "Array find from last",
-    "subtest": "Array.prototype.findLast"
-  },
-  {
-    "path": "Stage_3/Array_find_from_last/Array.prototype.findLastIndex",
-    "category": "Stage 3",
-    "test": "Array find from last",
-    "subtest": "Array.prototype.findLastIndex"
-  },
-  {
     "path": "Stage_2/Generator_function.sent_Meta_Property",
     "category": "Stage 2",
     "test": "Generator function.sent Meta Property"
