@@ -24,6 +24,7 @@ const cli = meow(
 `,
   {
     flags: {},
+    importMeta: import.meta,
   }
 );
 
