@@ -1,0 +1,14 @@
+// 2022 features / static class fields / public static class fields
+module.exports = () => {
+class C {
+static x = 'x';
+}
+return C.x === 'x';
+
+};
+----------------------------------------------------------
+es2016plus/v20220905/2022_features/static_class_fields/public_static_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
+  4| static x = 'x';
+     ^
+
+1 error(s), 0 warning(s)

@@ -1,0 +1,16 @@
+// syntax / destructuring, assignment / parenthesised left-hand-side is a syntax error
+module.exports = () => {
+  var a, b;
+  ({a,b} = {a:1,b:2});
+  ({a,b}) = {a:3,b:4};
+  return false;
+};
+
+// EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
+
+----------------------------------------------------------
+es6/v20220905/syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error/in.js:5:10: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
+  5|   ({a,b}) = {a:3,b:4};
+               ^
+
+1 error(s), 0 warning(s)
