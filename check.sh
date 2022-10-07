@@ -18,7 +18,7 @@ resultDir="$basedir/$ES_VERSION/$closureVer"
 resultTmp=$(mktemp closure-compat-check-result.XXXXX)
 resultFile="$resultDir/result.txt"
 rm -f "$LOG"
-nodebrew exec 0.10 -- \
+ASDF_NODEJS_VERSION=0.10.48 \
     ES_VERSION="$ES_VERSION" \
     CL_VERSION="$closureVer" \
     TEST_DIR="$TEST_DIR" \
