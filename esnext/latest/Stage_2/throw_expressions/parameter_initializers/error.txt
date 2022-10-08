@@ -12,7 +12,7 @@ return e === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20220905/Stage_2/throw_expressions/parameter_initializers/in.js:3:24: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20221004/Stage_2/throw_expressions/parameter_initializers/in.js:3:24: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   3| function fn (arg = throw 42) {
                              ^
 

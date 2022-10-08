@@ -9,11 +9,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20220905/misc/Proxy,_internal_get_calls/ToPrimitive/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20221004/misc/Proxy,_internal_get_calls/ToPrimitive/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   5|   var get = [];
        ^^^^^^^^^^^^^
 
-es6/v20220905/misc/Proxy,_internal_get_calls/ToPrimitive/in.js:7:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
+es6/v20221004/misc/Proxy,_internal_get_calls/ToPrimitive/in.js:7:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'add' operator is not being used.
   7|   p + 3;
        ^^^^^
 
