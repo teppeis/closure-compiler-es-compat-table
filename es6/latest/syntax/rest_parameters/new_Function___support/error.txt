@@ -7,7 +7,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20220803/syntax/rest_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20220905/syntax/rest_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   return new Function("a", "...b",
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   5|     "return b instanceof Array && a+b === 'foobar,baz';"

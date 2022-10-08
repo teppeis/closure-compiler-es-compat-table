@@ -7,7 +7,7 @@ return C.x === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220803/2022_features/static_class_fields/computed_static_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
+es2016plus/v20220905/2022_features/static_class_fields/computed_static_class_fields/in.js:4:0: ERROR - [JSC_LANGUAGE_FEATURE] This language feature is only supported for UNSTABLE mode or better: Public class fields.
   4| static ['x'] = 42;
      ^
 

@@ -10,7 +10,7 @@ return new C().x() === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220803/2022_features/private_class_methods/private_static_methods/in.js:4:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/v20220905/2022_features/private_class_methods/private_static_methods/in.js:4:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
   4| static #x() { return 42; }
             ^
 

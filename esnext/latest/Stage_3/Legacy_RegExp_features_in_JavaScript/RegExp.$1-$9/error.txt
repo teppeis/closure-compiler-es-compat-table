@@ -8,7 +8,7 @@ return true;
 }
 };
 ----------------------------------------------------------
-esnext/v20220803/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
+esnext/v20220905/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
   3| function () {
               ^
 

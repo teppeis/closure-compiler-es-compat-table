@@ -4,7 +4,7 @@ return BigInt("3") === 3n;
 
 };
 ----------------------------------------------------------
-es2016plus/v20220803/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+es2016plus/v20220905/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
   3| return BigInt("3") === 3n;
                             ^^
 
