@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -e -o pipefail
 
 if [ $# -lt 1 ] || [ $# -gt 2 ]; then
     {
@@ -18,11 +20,17 @@ resultDir="$basedir/$ES_VERSION/$closureVer"
 resultTmp=$(mktemp closure-compat-check-result.XXXXX)
 resultFile="$resultDir/result.txt"
 rm -f "$LOG"
+
+# `asdf exec` is required.
+# This script is called by Node.js process (run.mjs) that is executed by asdf.
+# asdf add `~/.asdf/installs/nodejs/16.17.0/bin` to `PATH` of the Node process,
+# so `node` without `asdf exec` executes Node v16.17.0
+# even if ASDF_NODEJS_VERSION is specified.
 ASDF_NODEJS_VERSION=0.10.48 \
     ES_VERSION="$ES_VERSION" \
     CL_VERSION="$closureVer" \
     TEST_DIR="$TEST_DIR" \
-    node "$basedir/legacy/check.js" > "$resultTmp"
+    asdf exec node "$basedir/legacy/check.js" > "$resultTmp"
 
 if [ -z "$TEST_DIR" ]; then
     cp "$resultTmp" "$resultFile"
