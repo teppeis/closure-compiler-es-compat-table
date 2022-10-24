@@ -2,7 +2,9 @@
 
 git checkout "$GITHUB_REF"
 
+
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.10.2
+echo "legacy_version_file = yes" > $HOME/.asdfrc
 source $HOME/.asdf/asdf.sh
 sudo apt-get install dirmngr gpg curl gawk
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
