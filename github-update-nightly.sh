@@ -6,6 +6,7 @@ git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.10.2
 source $HOME/.asdf/asdf.sh
 sudo apt-get install dirmngr gpg curl gawk
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs
 asdf install nodejs 0.10.48
 
 version=$(npm show google-closure-compiler@nightly --json|jq -r .version)
