@@ -4,7 +4,7 @@ git checkout "$GITHUB_REF"
 
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.10.2
 source $HOME/.asdf/asdf.sh
-apt-get install dirmngr gpg curl gawk
+sudo apt-get install dirmngr gpg curl gawk
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs 0.10.48
 
