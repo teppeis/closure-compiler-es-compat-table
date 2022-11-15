@@ -1,0 +1,11 @@
+// built-ins / Symbol / JSON.stringify ignores symbol primitives
+module.exports = () => {
+  var object = { foo: Symbol() };
+  object[Symbol()] = 1;
+  var array = [Symbol()];
+  return JSON.stringify(object) === '{}' && JSON.stringify(array) === '[null]' && JSON.stringify(Symbol()) === void undefined;
+
+};
+----------------------------------------------------------
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

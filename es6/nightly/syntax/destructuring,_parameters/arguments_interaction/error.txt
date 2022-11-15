@@ -1,0 +1,11 @@
+// syntax / destructuring, parameters / 'arguments' interaction
+module.exports = () => {
+  return (function({a, x:b, y:e}, [c, d]) {
+    return arguments[0].a === 1 && arguments[0].x === 2
+&& !("y" in arguments[0]) && arguments[1] + '' === "3,4";
+  }({a:1, x:2}, [3, 4]));
+
+};
+----------------------------------------------------------
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

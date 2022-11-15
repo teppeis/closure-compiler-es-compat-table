@@ -9,8 +9,5 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
 
 ----------------------------------------------------------
-es6/nightly/bindings/const/cannot_be_in_statements__strict_mode_/in.js:5:15: ERROR - [JSC_DECLARATION_NOT_DIRECTLY_IN_BLOCK] Block-scoped declaration not directly within block: baz
-  5|   if(true) let baz = 1;
-                    ^^^^^^^
-
-1 error(s), 0 warning(s)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

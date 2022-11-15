@@ -1,0 +1,16 @@
+// built-ins / typed arrays / %TypedArray%.prototype.indexOf
+module.exports = () => {
+  return typeof Int8Array.prototype.indexOf === "function" &&
+typeof Uint8Array.prototype.indexOf === "function" &&
+typeof Uint8ClampedArray.prototype.indexOf === "function" &&
+typeof Int16Array.prototype.indexOf === "function" &&
+typeof Uint16Array.prototype.indexOf === "function" &&
+typeof Int32Array.prototype.indexOf === "function" &&
+typeof Uint32Array.prototype.indexOf === "function" &&
+typeof Float32Array.prototype.indexOf === "function" &&
+typeof Float64Array.prototype.indexOf === "function";
+
+};
+----------------------------------------------------------
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

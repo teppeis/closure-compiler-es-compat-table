@@ -7,16 +7,5 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/nightly/annex_b/HTML-style_comments/in.js:3:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
-  3| --> A comment
-     ^
-
-es6/nightly/annex_b/HTML-style_comments/in.js:4:0: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
-  4| <!-- Another comment
-     ^
-
-es6/nightly/annex_b/HTML-style_comments/in.js:5:13: WARNING - [JSC_PARSE_ERROR] Parse error. In some cases, '<!--' and '-->' are treated as a '//' for legacy reasons. Removing this from your code is safe for all browsers currently in use.
-  5|   var a = 3; <!-- Another comment
-                  ^
-
-0 error(s), 3 warning(s)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

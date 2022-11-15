@@ -1,0 +1,9 @@
+// 2016 misc / nested rest destructuring, declarations
+module.exports = () => {
+  var [x, ...[y, ...z]] = [1,2,3,4];
+  return x === 1 && y === 2 && z + '' === '3,4';
+
+};
+----------------------------------------------------------
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)

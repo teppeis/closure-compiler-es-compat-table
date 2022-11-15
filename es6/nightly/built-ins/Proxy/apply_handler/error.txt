@@ -1,0 +1,18 @@
+// built-ins / Proxy / "apply" handler
+module.exports = () => {
+  var proxied = function(){};
+  var passed = false;
+  var host = {
+    method: new Proxy(proxied, {
+      apply: function (t, thisArg, args) {
+        passed = t === proxied && thisArg === host && args + "" === "foo,bar";
+      }
+    })
+  };
+  host.method("foo", "bar");
+  return passed;
+
+};
+----------------------------------------------------------
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/d5fab9bb-d68d-4561-bc67-db6eb44aae72/node_modules/google-closure-compiler-linux/compiler)

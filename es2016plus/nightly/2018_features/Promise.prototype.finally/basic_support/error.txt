@@ -1,0 +1,34 @@
+// 2018 features / Promise.prototype.finally / basic support
+module.exports = (asyncTestPassed) => {
+  var p1 = Promise.resolve("foo");
+  var p2 = Promise.reject("bar");
+  var score = 0;
+  function thenFn(result)  {
+    score += (result === "foo");
+    check();
+  }
+  function catchFn(result) {
+    score += (result === "bar");
+    check();
+  }
+  function finallyFn() {
+    score += (arguments.length === 0);
+    check();
+  }
+  p1.then(thenFn);
+  p1.finally(finallyFn);
+  p1.finally(function() {
+    // should return a new Promise
+    score += p1.finally() !== p1;
+    check();
+  });
+  p2.catch(catchFn);
+  p2.finally(finallyFn);
+  function check() {
+    if (score === 5) asyncTestPassed();
+  }
+
+};
+----------------------------------------------------------
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)

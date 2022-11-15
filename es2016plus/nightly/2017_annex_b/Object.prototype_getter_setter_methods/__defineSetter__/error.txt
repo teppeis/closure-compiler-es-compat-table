@@ -1,0 +1,13 @@
+// 2017 annex b / Object.prototype getter/setter methods / __defineSetter__
+module.exports = () => {
+  var obj = {};
+  function bar() {}
+  Object.prototype.__defineSetter__.call(obj, "foo", bar);
+  var prop = Object.getOwnPropertyDescriptor(obj, "foo");
+  return prop.set === bar && !prop.writable && prop.configurable
+&& prop.enumerable;
+
+};
+----------------------------------------------------------
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)
+/tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/affc83cb-e8ca-4052-9729-ae954a4b1174/node_modules/google-closure-compiler-linux/compiler)
