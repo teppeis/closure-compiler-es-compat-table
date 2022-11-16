@@ -1,4 +1,4 @@
-Stage_3/Realms/error.txt: [CompileError]
+Stage_3/Realms/out.js: [InvalidResult: false]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
 Stage_2/Generator_function.sent_Meta_Property/error.txt: [CompileError]
@@ -7,50 +7,50 @@ Stage_2/throw_expressions/logical/error.txt: [CompileError]
 Stage_2/throw_expressions/parameter_initializers/error.txt: [CompileError]
 Stage_2/throw_expressions/arrow_function_bodies/error.txt: [CompileError]
 Stage_2/throw_expressions/conditionals/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.intersection/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.union/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.difference/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.symmetricDifference/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.isDisjointFrom/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.isSubsetOf/error.txt: [CompileError]
-Stage_2/Set_methods/Set.prototype.isSupersetOf/error.txt: [CompileError]
-Stage_2/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/error.txt: [CompileError]
-Stage_2/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/error.txt: [CompileError]
-Stage_2/Map.prototype.upsert/Map.prototype.upsert/error.txt: [CompileError]
-Stage_2/Map.prototype.upsert/WeakMap.prototype.upsert/error.txt: [CompileError]
-Stage_2/Array.isTemplateObject/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/instanceof_Iterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/extends_Iterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.from,_iterable/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.from,_iterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.asIndexedPairs/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.drop/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.every/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.filter/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.find/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.flatMap/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.forEach/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.map/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.reduce/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.some/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.take/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype.toArray/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/Iterator.prototype___toStringTag_/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/instanceof_AsyncIterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/extends_AsyncIterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.from,_async_iterable/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.from,_iterable/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.from,_iterator/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.asIndexedPairs/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.drop/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.every/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.filter/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.find/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.flatMap/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.forEach/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.map/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.reduce/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.some/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.take/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype.toArray/error.txt: [CompileError]
-Stage_2/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/error.txt: [CompileError]
+Stage_2/Set_methods/Set.prototype.intersection/out.js: TypeError: Object [object Object] has no method 'intersection'
+Stage_2/Set_methods/Set.prototype.union/out.js: TypeError: Object [object Object] has no method 'union'
+Stage_2/Set_methods/Set.prototype.difference/out.js: TypeError: Object [object Object] has no method 'difference'
+Stage_2/Set_methods/Set.prototype.symmetricDifference/out.js: TypeError: Object [object Object] has no method 'symmetricDifference'
+Stage_2/Set_methods/Set.prototype.isDisjointFrom/out.js: TypeError: Object [object Object] has no method 'isDisjointFrom'
+Stage_2/Set_methods/Set.prototype.isSubsetOf/out.js: TypeError: Object [object Object] has no method 'isSubsetOf'
+Stage_2/Set_methods/Set.prototype.isSupersetOf/out.js: TypeError: Object [object Object] has no method 'isSupersetOf'
+Stage_2/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.transfer__/out.js: ReferenceError: Uint8Array is not defined
+Stage_2/ArrayBuffer.prototype.transfer/ArrayBuffer.prototype.realloc__/out.js: ReferenceError: ArrayBuffer is not defined
+Stage_2/Map.prototype.upsert/Map.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+Stage_2/Map.prototype.upsert/WeakMap.prototype.upsert/out.js: TypeError: Object [object Object] has no method 'upsert'
+Stage_2/Array.isTemplateObject/out.js: TypeError: Object function Array() { [native code] } has no method 'isTemplateObject'
+Stage_2/Iterator_Helpers/instanceof_Iterator/out.js: ReferenceError: Iterator is not defined
+Stage_2/Iterator_Helpers/extends_Iterator/out.js: ReferenceError: Iterator is not defined
+Stage_2/Iterator_Helpers/Iterator.from,_iterable/out.js: ReferenceError: Iterator is not defined
+Stage_2/Iterator_Helpers/Iterator.from,_iterator/out.js: ReferenceError: Iterator is not defined
+Stage_2/Iterator_Helpers/Iterator.prototype.asIndexedPairs/out.js: TypeError: Object #<Object> has no method 'asIndexedPairs'
+Stage_2/Iterator_Helpers/Iterator.prototype.drop/out.js: TypeError: Object #<Object> has no method 'drop'
+Stage_2/Iterator_Helpers/Iterator.prototype.every/out.js: TypeError: Object #<Object> has no method 'every'
+Stage_2/Iterator_Helpers/Iterator.prototype.filter/out.js: TypeError: Object #<Object> has no method 'filter'
+Stage_2/Iterator_Helpers/Iterator.prototype.find/out.js: TypeError: Object #<Object> has no method 'find'
+Stage_2/Iterator_Helpers/Iterator.prototype.flatMap/out.js: TypeError: Object #<Object> has no method 'flatMap'
+Stage_2/Iterator_Helpers/Iterator.prototype.forEach/out.js: TypeError: Object #<Object> has no method 'forEach'
+Stage_2/Iterator_Helpers/Iterator.prototype.map/out.js: TypeError: Object #<Object> has no method 'map'
+Stage_2/Iterator_Helpers/Iterator.prototype.reduce/out.js: TypeError: Object #<Object> has no method 'reduce'
+Stage_2/Iterator_Helpers/Iterator.prototype.some/out.js: TypeError: Object #<Object> has no method 'some'
+Stage_2/Iterator_Helpers/Iterator.prototype.take/out.js: TypeError: Object #<Object> has no method 'take'
+Stage_2/Iterator_Helpers/Iterator.prototype.toArray/out.js: TypeError: Object #<Object> has no method 'toArray'
+Stage_2/Iterator_Helpers/Iterator.prototype___toStringTag_/out.js: ReferenceError: Iterator is not defined
+Stage_2/Iterator_Helpers/instanceof_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+Stage_2/Iterator_Helpers/extends_AsyncIterator/out.js: ReferenceError: AsyncIterator is not defined
+Stage_2/Iterator_Helpers/AsyncIterator.from,_async_iterable/out.js: ReferenceError: AsyncIterator is not defined
+Stage_2/Iterator_Helpers/AsyncIterator.from,_iterable/out.js: ReferenceError: AsyncIterator is not defined
+Stage_2/Iterator_Helpers/AsyncIterator.from,_iterator/out.js: ReferenceError: AsyncIterator is not defined
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.asIndexedPairs/out.js: TypeError: Object [object Object] has no method 'asIndexedPairs'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.drop/out.js: TypeError: Object [object Object] has no method 'drop'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.every/out.js: TypeError: Object [object Object] has no method 'every'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.filter/out.js: TypeError: Object [object Object] has no method 'filter'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.find/out.js: TypeError: Object [object Object] has no method 'find'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.flatMap/out.js: TypeError: Object [object Object] has no method 'flatMap'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.forEach/out.js: TypeError: Object [object Object] has no method 'forEach'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.map/out.js: TypeError: Object [object Object] has no method 'map'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.reduce/out.js: TypeError: Object [object Object] has no method 'reduce'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.some/out.js: TypeError: Object [object Object] has no method 'some'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.take/out.js: TypeError: Object [object Object] has no method 'take'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype.toArray/out.js: TypeError: Object [object Object] has no method 'toArray'
+Stage_2/Iterator_Helpers/AsyncIterator.prototype___toStringTag_/out.js: ReferenceError: AsyncIterator is not defined

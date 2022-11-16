@@ -13,5 +13,8 @@ return new C(42).x() === 42;
 
 };
 ----------------------------------------------------------
-/tmp/faast/172df142-c2d8-47c2-98c1-c28578c18297/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/172df142-c2d8-47c2-98c1-c28578c18297/node_modules/google-closure-compiler-linux/compiler)
-/tmp/faast/172df142-c2d8-47c2-98c1-c28578c18297/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/172df142-c2d8-47c2-98c1-c28578c18297/node_modules/google-closure-compiler-linux/compiler)
+es2016plus/nightly/2022_features/instance_class_fields/private_instance_class_fields_basic_support/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+  4| #x;
+     ^
+
+1 error(s), 0 warning(s)

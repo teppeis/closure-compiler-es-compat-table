@@ -1,9 +1,0 @@
-// syntax / spread syntax for iterable objects / with sparse arrays, in function calls
-module.exports = () => {
-  var a = Array(...[,,]);
-  return "0" in a && "1" in a && '' + a[0] + a[1] === "undefinedundefined";
-
-};
-----------------------------------------------------------
-/tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler)
-/tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler)

@@ -1,8 +1,0 @@
-// built-in extensions / Number properties / Number.parseFloat
-module.exports = () => {
-  return Number.parseFloat('3.14') === 3.14;
-};
-
-----------------------------------------------------------
-/tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler)
-/tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/91a95ce6-63dc-430b-b8b0-6705f8cdc079/node_modules/google-closure-compiler-linux/compiler)

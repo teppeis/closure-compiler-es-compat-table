@@ -7,5 +7,8 @@ return RegExp.lastMatch === 'x';
 }
 };
 ----------------------------------------------------------
-/tmp/faast/29b08278-d4c8-459e-b76a-ce2b21eb5a7e/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /tmp/faast/29b08278-d4c8-459e-b76a-ce2b21eb5a7e/node_modules/google-closure-compiler-linux/compiler)
-/tmp/faast/29b08278-d4c8-459e-b76a-ce2b21eb5a7e/node_modules/google-closure-compiler-linux/compiler: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /tmp/faast/29b08278-d4c8-459e-b76a-ce2b21eb5a7e/node_modules/google-closure-compiler-linux/compiler)
+esnext/nightly/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
+  3| function () {
+              ^
+
+1 error(s), 0 warning(s)
