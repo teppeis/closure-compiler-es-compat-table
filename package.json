@@ -29,7 +29,7 @@
     "execa": "^6.1.0",
     "faastjs": "^6.3.9",
     "fs-readdir-recursive": "^1.1.0",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "google-closure-compiler": "^20221004.0.0",
     "humanize-string": "^3.0.0",
     "meow": "^10.1.5",
