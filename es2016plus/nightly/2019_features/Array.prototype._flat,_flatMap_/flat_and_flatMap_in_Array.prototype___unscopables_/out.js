@@ -125,10 +125,11 @@ $jscomp.iteratorPrototype = function(a) {
 };
 $jscomp.polyfill("Array.prototype.flatMap", function(a) {
   return a ? a : function(b, c) {
-    for (var d = [], e = 0; e < this.length; e++) {
-      var f = b.call(c, this[e], e, this);
-      Array.isArray(f) ? d.push.apply(d, f) : d.push(f);
-    }
+    var d = [];
+    Array.prototype.forEach.call(this, function(e, f) {
+      e = b.call(c, e, f, this);
+      Array.isArray(e) ? d.push.apply(d, e) : d.push(e);
+    });
     return d;
   };
 }, "es9", "es5");

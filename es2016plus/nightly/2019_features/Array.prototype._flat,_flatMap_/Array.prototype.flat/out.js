@@ -76,10 +76,10 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
 $jscomp.polyfill("Array.prototype.flat", function(a) {
   return a ? a : function(c) {
     c = void 0 === c ? 1 : c;
-    for (var b = [], d = 0; d < this.length; d++) {
-      var e = this[d];
-      Array.isArray(e) && 0 < c ? (e = Array.prototype.flat.call(e, c - 1), b.push.apply(b, e)) : b.push(e);
-    }
+    var b = [];
+    Array.prototype.forEach.call(this, function(d) {
+      Array.isArray(d) && 0 < c ? (d = Array.prototype.flat.call(d, c - 1), b.push.apply(b, d)) : b.push(d);
+    });
     return b;
   };
 }, "es9", "es5");
