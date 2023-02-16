@@ -84,7 +84,13 @@ $jscomp.arrayIterator = function(a) {
 };
 $jscomp.makeIterator = function(a) {
   var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return b ? b.call(a) : $jscomp.arrayIterator(a);
+  if (b) {
+    return b.call(a);
+  }
+  if ("number" == typeof a.length) {
+    return $jscomp.arrayIterator(a);
+  }
+  throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 $jscomp.objectCreate = $jscomp.ASSUME_ES5 || "function" == typeof Object.create ? Object.create : function(a) {
   var b = function() {

@@ -125,7 +125,13 @@ $jscomp.iteratorPrototype = function(b) {
 };
 $jscomp.makeIterator = function(b) {
   var d = "undefined" != typeof Symbol && Symbol.iterator && b[Symbol.iterator];
-  return d ? d.call(b) : $jscomp.arrayIterator(b);
+  if (d) {
+    return d.call(b);
+  }
+  if ("number" == typeof b.length) {
+    return $jscomp.arrayIterator(b);
+  }
+  throw Error(String(b) + " is not an iterable or ArrayLike");
 };
 $jscomp.polyfill("Promise", function(b) {
   function d() {

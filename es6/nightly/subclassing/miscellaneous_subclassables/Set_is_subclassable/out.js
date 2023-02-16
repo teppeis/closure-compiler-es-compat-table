@@ -11,7 +11,13 @@ $jscomp.arrayIterator = function(a) {
 };
 $jscomp.makeIterator = function(a) {
   var d = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return d ? d.call(a) : $jscomp.arrayIterator(a);
+  if (d) {
+    return d.call(a);
+  }
+  if ("number" == typeof a.length) {
+    return $jscomp.arrayIterator(a);
+  }
+  throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 $jscomp.arrayFromIterator = function(a) {
   for (var d, b = []; !(d = a.next()).done;) {

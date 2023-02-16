@@ -34,7 +34,13 @@ $jscomp.arrayIterator = function(a) {
 };
 $jscomp.makeIterator = function(a) {
   var c = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return c ? c.call(a) : $jscomp.arrayIterator(a);
+  if (c) {
+    return c.call(a);
+  }
+  if ("number" == typeof a.length) {
+    return $jscomp.arrayIterator(a);
+  }
+  throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;

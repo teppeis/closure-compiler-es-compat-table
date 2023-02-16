@@ -137,7 +137,13 @@ $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
 $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.makeIterator = function(a) {
   var g = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return g ? g.call(a) : $jscomp.arrayIterator(a);
+  if (g) {
+    return g.call(a);
+  }
+  if ("number" == typeof a.length) {
+    return $jscomp.arrayIterator(a);
+  }
+  throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 $jscomp.owns = function(a, g) {
   return Object.prototype.hasOwnProperty.call(a, g);
