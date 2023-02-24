@@ -424,7 +424,7 @@ built-ins/Symbol/new_Symbol___throws/out.js: [Pass]
 built-ins/Symbol/Object_symbol_/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_primitives/out.js: [InvalidResult: false]
 built-ins/Symbol/JSON.stringify_ignores_symbol_objects/out.js: [InvalidResult: false]
-built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (f) { if (this instanceof e) { throw new TypeError("Symbol is not a constructor"); } return new b(c + (f || "") + "_" + d++, f); } has no method 'for'
+built-ins/Symbol/global_symbol_registry/out.js: TypeError: Object function (f) { if (this instanceof e) { throw new TypeError("Symbol is not a constructor"); } return new c(b + (f || "") + "_" + d++, f); } has no method 'for'
 built-ins/well-known_symbols/Symbol.hasInstance/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.isConcatSpreadable,_non-spreadable_array/out.js: [InvalidResult: false]
 built-ins/well-known_symbols/Symbol.isConcatSpreadable,_spreadable_object_with_poisoned_getter/out.js: [InvalidResult: null]
