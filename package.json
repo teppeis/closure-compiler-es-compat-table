@@ -35,7 +35,7 @@
     "meow": "^10.1.5",
     "mkdirp": "^1.0.4",
     "object-assign": "^4.1.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.4.1",
     "semver": "^7.3.8"
   },
   "devDependencies": {
