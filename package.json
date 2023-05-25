@@ -36,7 +36,7 @@
     "mkdirp": "^1.0.4",
     "object-assign": "^4.1.1",
     "rimraf": "^3.0.2",
-    "semver": "^7.3.8"
+    "semver": "^7.5.1"
   },
   "devDependencies": {
     "eslint": "^8.41.0",
