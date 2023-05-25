@@ -153,3 +153,11 @@
 
 ### Hashbang Grammar
 - Hashbang Grammar ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2023_features/Hashbang_Grammar/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/2023_features/Hashbang_Grammar/out.js))
+
+## Finished (stage 4)
+
+### RegExp `v` flag
+- set notations ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/set_notations/error.txt))
+- properties of Strings ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/properties_of_Strings/error.txt))
+- constructor supports it ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/constructor_supports_it/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/constructor_supports_it/out.js))
+- shows up in flags ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/shows_up_in_flags/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/es2016plus/latest/finished__stage_4_/RegExp__v__flag/shows_up_in_flags/out.js))

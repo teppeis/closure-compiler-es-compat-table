@@ -189,5 +189,9 @@
   "2022_features/RegExp_Match_Indices___hasIndices_____d__flag_/shows_up_in_flags",
   "2023_features/Array_find_from_last/Array.prototype.findLast",
   "2023_features/Array_find_from_last/Array.prototype.findLastIndex",
-  "2023_features/Hashbang_Grammar"
+  "2023_features/Hashbang_Grammar",
+  "finished__stage_4_/RegExp__v__flag/set_notations",
+  "finished__stage_4_/RegExp__v__flag/properties_of_Strings",
+  "finished__stage_4_/RegExp__v__flag/constructor_supports_it",
+  "finished__stage_4_/RegExp__v__flag/shows_up_in_flags"
 ]
