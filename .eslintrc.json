@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["teppeis/node-v14", "teppeis/+prettier"],
+  "extends": ["teppeis/node-v18", "teppeis/+prettier"],
   "rules": {
     "n/shebang": "off"
   },
