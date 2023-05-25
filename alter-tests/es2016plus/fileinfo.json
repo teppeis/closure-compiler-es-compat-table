@@ -1119,5 +1119,29 @@
     "path": "2023_features/Hashbang_Grammar",
     "category": "2023 features",
     "test": "Hashbang Grammar"
+  },
+  {
+    "path": "finished__stage_4_/RegExp__v__flag/set_notations",
+    "category": "finished (stage 4)",
+    "test": "RegExp `v` flag",
+    "subtest": "set notations"
+  },
+  {
+    "path": "finished__stage_4_/RegExp__v__flag/properties_of_Strings",
+    "category": "finished (stage 4)",
+    "test": "RegExp `v` flag",
+    "subtest": "properties of Strings"
+  },
+  {
+    "path": "finished__stage_4_/RegExp__v__flag/constructor_supports_it",
+    "category": "finished (stage 4)",
+    "test": "RegExp `v` flag",
+    "subtest": "constructor supports it"
+  },
+  {
+    "path": "finished__stage_4_/RegExp__v__flag/shows_up_in_flags",
+    "category": "finished (stage 4)",
+    "test": "RegExp `v` flag",
+    "subtest": "shows up in flags"
   }
 ]

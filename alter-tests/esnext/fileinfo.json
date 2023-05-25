@@ -1,8 +1,8 @@
 [
   {
-    "path": "Stage_3/Realms",
+    "path": "Stage_3/ShadowRealm",
     "category": "Stage 3",
-    "test": "Realms"
+    "test": "ShadowRealm"
   },
   {
     "path": "Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch",
