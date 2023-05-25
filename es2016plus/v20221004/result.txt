@@ -189,3 +189,7 @@
 2023_features/Array_find_from_last/Array.prototype.findLast/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLast'
 2023_features/Array_find_from_last/Array.prototype.findLastIndex/out.js: TypeError: Object [object Object],[object Object],[object Object],[object Object] has no method 'findLastIndex'
 2023_features/Hashbang_Grammar/out.js: Error: eval() and Function() cannot be transpiled
+finished__stage_4_/RegExp__v__flag/set_notations/error.txt: [CompileError]
+finished__stage_4_/RegExp__v__flag/properties_of_Strings/error.txt: [CompileError]
+finished__stage_4_/RegExp__v__flag/constructor_supports_it/out.js: SyntaxError: Invalid flags supplied to RegExp constructor 'v'
+finished__stage_4_/RegExp__v__flag/shows_up_in_flags/out.js: ReferenceError: Proxy is not defined

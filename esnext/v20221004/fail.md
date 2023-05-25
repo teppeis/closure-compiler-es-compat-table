@@ -1,8 +1,8 @@
 
 ## Stage 3
 
-### Realms
-- Realms ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20221004/Stage_3/Realms/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20221004/Stage_3/Realms/out.js))
+### ShadowRealm
+- ShadowRealm ([in](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20221004/Stage_3/ShadowRealm/in.js)/[out](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20221004/Stage_3/ShadowRealm/out.js))
 
 ### Legacy RegExp features in JavaScript
 - RegExp "lastMatch" ([compile error](https://github.com/teppeis/closure-compiler-es6-compat-table/blob/master/esnext/v20221004/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt))
