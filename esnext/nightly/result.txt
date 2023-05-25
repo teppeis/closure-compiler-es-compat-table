@@ -1,4 +1,4 @@
-Stage_3/Realms/out.js: [InvalidResult: false]
+Stage_3/ShadowRealm/out.js: [InvalidResult: false]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/error.txt: [CompileError]
 Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp.$1-$9/error.txt: [CompileError]
 Stage_2/Generator_function.sent_Meta_Property/error.txt: [CompileError]
