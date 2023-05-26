@@ -7,7 +7,7 @@ import meow from "meow";
 import mkdirp from "mkdirp";
 import { createRequire } from "module";
 import path from "path";
-import rimraf from "rimraf";
+import { rimraf } from "rimraf";
 import { fileURLToPath } from "url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
