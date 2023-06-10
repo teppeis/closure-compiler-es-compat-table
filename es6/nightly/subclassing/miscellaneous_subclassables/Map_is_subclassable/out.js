@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var c = 0;
   return function() {
-    return c < a.length ? {done:!1, value:a[c++],} : {done:!0};
+    return c < a.length ? {done:!1, value:a[c++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -49,7 +49,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return a;
 };
 $jscomp.getGlobal = function(a) {
-  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
+  a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
   for (var c = 0; c < a.length; ++c) {
     var b = a[c];
     if (b && b.Math == Math) {
@@ -380,7 +380,7 @@ $jscomp.polyfill("Map", function(a) {
     e = 0 === e ? 0 : e;
     var f = h(this, e);
     f.list || (f.list = this.data_[f.id] = []);
-    f.entry ? f.entry.value = d : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:e, value:d,}, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
+    f.entry ? f.entry.value = d : (f.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:e, value:d}, f.list.push(f.entry), this.head_.previous.next = f.entry, this.head_.previous = f.entry, this.size++);
     return this;
   };
   g.prototype.delete = function(e) {

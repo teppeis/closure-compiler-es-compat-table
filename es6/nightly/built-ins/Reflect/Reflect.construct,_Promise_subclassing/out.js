@@ -15,7 +15,7 @@ $jscomp.defineProperty = $jscomp.ASSUME_ES5 || "function" == typeof Object.defin
   return c;
 };
 $jscomp.getGlobal = function(c) {
-  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
+  c = ["object" == typeof globalThis && globalThis, c, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
   for (var f = 0; f < c.length; ++f) {
     var e = c[f];
     if (e && e.Math == Math) {
@@ -117,7 +117,7 @@ $jscomp.polyfill("Reflect.construct", function(c) {
 $jscomp.arrayIteratorImpl = function(c) {
   var f = 0;
   return function() {
-    return f < c.length ? {done:!1, value:c[f++],} : {done:!0};
+    return f < c.length ? {done:!1, value:c[f++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(c) {
