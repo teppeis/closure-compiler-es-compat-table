@@ -484,8 +484,8 @@ $jscomp.polyfill("Map", function(a) {
     }
   }
   var g = new WeakMap(), f = function(d) {
-    this.data_ = {};
-    this.head_ = c();
+    this[0] = {};
+    this[1] = c();
     this.size = 0;
     if (d) {
       d = $jscomp.makeIterator(d);
@@ -497,17 +497,17 @@ $jscomp.polyfill("Map", function(a) {
   f.prototype.set = function(d, e) {
     d = 0 === d ? 0 : d;
     var k = h(this, d);
-    k.list || (k.list = this.data_[k.id] = []);
-    k.entry ? k.entry.value = e : (k.entry = {next:this.head_, previous:this.head_.previous, head:this.head_, key:d, value:e}, k.list.push(k.entry), this.head_.previous.next = k.entry, this.head_.previous = k.entry, this.size++);
+    k.list || (k.list = this[0][k.id] = []);
+    k.entry ? k.entry.value = e : (k.entry = {next:this[1], previous:this[1].previous, head:this[1], key:d, value:e}, k.list.push(k.entry), this[1].previous.next = k.entry, this[1].previous = k.entry, this.size++);
     return this;
   };
   f.prototype.delete = function(d) {
     d = h(this, d);
-    return d.entry && d.list ? (d.list.splice(d.index, 1), d.list.length || delete this.data_[d.id], d.entry.previous.next = d.entry.next, d.entry.next.previous = d.entry.previous, d.entry.head = null, this.size--, !0) : !1;
+    return d.entry && d.list ? (d.list.splice(d.index, 1), d.list.length || delete this[0][d.id], d.entry.previous.next = d.entry.next, d.entry.next.previous = d.entry.previous, d.entry.head = null, this.size--, !0) : !1;
   };
   f.prototype.clear = function() {
-    this.data_ = {};
-    this.head_ = this.head_.previous = c();
+    this[0] = {};
+    this[1] = this[1].previous = c();
     this.size = 0;
   };
   f.prototype.has = function(d) {
@@ -540,8 +540,8 @@ $jscomp.polyfill("Map", function(a) {
   var h = function(d, e) {
     var k = e && typeof e;
     "object" == k || "function" == k ? g.has(e) ? k = g.get(e) : (k = "" + ++l, g.set(e, k)) : k = "p_" + e;
-    var m = d.data_[k];
-    if (m && $jscomp.owns(d.data_, k)) {
+    var m = d[0][k];
+    if (m && $jscomp.owns(d[0], k)) {
       for (d = 0; d < m.length; d++) {
         var p = m[d];
         if (e !== e && p.key !== p.key || e === p.key) {
@@ -551,10 +551,10 @@ $jscomp.polyfill("Map", function(a) {
     }
     return {id:k, list:m, index:-1, entry:void 0};
   }, n = function(d, e) {
-    var k = d.head_;
+    var k = d[1];
     return $jscomp.iteratorPrototype(function() {
       if (k) {
-        for (; k.head != d.head_;) {
+        for (; k.head != d[1];) {
           k = k.previous;
         }
         for (; k.next != k.head;) {
