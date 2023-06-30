@@ -1,8 +1,8 @@
 module.exports = function() {
-  for (var a = [], b = {$jscomp$loop$prop$i$2:0}; 2 > b.$jscomp$loop$prop$i$2; b = {$jscomp$loop$prop$i$2:b.$jscomp$loop$prop$i$2}, b.$jscomp$loop$prop$i$2++) {
+  for (var a = [], b = {$jscomp$loop$prop$i$1220393404$2:0}; 2 > b.$jscomp$loop$prop$i$1220393404$2; b = {$jscomp$loop$prop$i$1220393404$2:b.$jscomp$loop$prop$i$1220393404$2}, b.$jscomp$loop$prop$i$1220393404$2++) {
     a.push(function(d) {
       return function() {
-        return d.$jscomp$loop$prop$i$2;
+        return d.$jscomp$loop$prop$i$1220393404$2;
       };
     }(b));
   }
@@ -10,11 +10,11 @@ module.exports = function() {
   a = [];
   var c = {}, e;
   for (e in{a:1, b:1}) {
-    c.$jscomp$loop$prop$i$0$4 = e, a.push(function(d) {
+    c.$jscomp$loop$prop$i$1220393404$0$1220393404$4 = e, a.push(function(d) {
       return function() {
-        return d.$jscomp$loop$prop$i$0$4;
+        return d.$jscomp$loop$prop$i$1220393404$0$1220393404$4;
       };
-    }(c)), c = {$jscomp$loop$prop$i$0$4:c.$jscomp$loop$prop$i$0$4};
+    }(c)), c = {$jscomp$loop$prop$i$1220393404$0$1220393404$4:c.$jscomp$loop$prop$i$1220393404$0$1220393404$4};
   }
   return b &= "a" === a[0]() && "b" === a[1]();
 };
