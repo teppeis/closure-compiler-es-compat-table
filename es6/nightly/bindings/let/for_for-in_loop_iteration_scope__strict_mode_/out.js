@@ -10,11 +10,11 @@ module.exports = function() {
   a = [];
   var c = {}, e;
   for (e in{a:1, b:1}) {
-    c.$jscomp$loop$prop$i$1220393404$0$1220393404$4 = e, a.push(function(d) {
+    c = {$jscomp$loop$prop$i$1220393404$0$1220393404$4:c.$jscomp$loop$prop$i$1220393404$0$1220393404$4}, c.$jscomp$loop$prop$i$1220393404$0$1220393404$4 = e, a.push(function(d) {
       return function() {
         return d.$jscomp$loop$prop$i$1220393404$0$1220393404$4;
       };
-    }(c)), c = {$jscomp$loop$prop$i$1220393404$0$1220393404$4:c.$jscomp$loop$prop$i$1220393404$0$1220393404$4};
+    }(c));
   }
   return b &= "a" === a[0]() && "b" === a[1]();
 };
