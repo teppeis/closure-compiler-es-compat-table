@@ -4,7 +4,7 @@ return BigInt("3") === 3n;
 
 };
 ----------------------------------------------------------
-es2016plus/nightly/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+es2016plus/nightly/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2020 feature "bigint" to targeted output language.
   3| return BigInt("3") === 3n;
                             ^^
 
