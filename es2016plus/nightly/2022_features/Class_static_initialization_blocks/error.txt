@@ -47,7 +47,7 @@ Caused by: java.lang.IllegalStateException: Unexpected class member: (BLOCK 5:7 
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:905)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:953)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:953)
-	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:1131)
+	at com.google.javascript.jscomp.NodeTraversal.traverseChildren(NodeTraversal.java:1136)
 	at com.google.javascript.jscomp.NodeTraversal.handleScript(NodeTraversal.java:847)
 	at com.google.javascript.jscomp.NodeTraversal.traverseBranch(NodeTraversal.java:902)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:526)
