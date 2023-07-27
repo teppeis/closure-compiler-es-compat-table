@@ -22,7 +22,7 @@ module.exports = () => {
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:529)
 	at com.google.javascript.jscomp.NodeTraversal$Builder.traverse(NodeTraversal.java:465)
 	at com.google.javascript.jscomp.NodeTraversal.traverse(NodeTraversal.java:535)
-	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:446)
+	at com.google.javascript.jscomp.TranspilationPasses.processTranspile(TranspilationPasses.java:470)
 	at com.google.javascript.jscomp.Es6RewriteClass.process(Es6RewriteClass.java:68)
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:240)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:179)
