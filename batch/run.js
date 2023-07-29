@@ -4,7 +4,7 @@ const { faastAws, faastLocal } = require("faastjs");
 const funcs = require("./functions");
 const path = require("path");
 const fs = require("fs").promises;
-const glob = require("glob");
+const { glob } = require("glob");
 const del = require("del");
 
 if (process.argv.length < 3) {
@@ -46,7 +46,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
         alias: {
           "google-closure-compiler-java": path.resolve(
             __dirname,
-            "google-closure-compiler-java-dummy.js",
+            "google-closure-compiler-java-dummy.js"
           ),
         },
       },
@@ -111,7 +111,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
           } else {
             console.error(e);
           }
-        },
+        }
       )
       .finally(() => {
         console.log(`[${++done}/${total}] ${input}`);

@@ -4,7 +4,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const glob = require("glob");
+const { glob } = require("glob");
 const rimraf = require("rimraf");
 
 const { basedir, testDir, alterTestDir, fileList } = init();
@@ -22,7 +22,7 @@ fileList
 if (!testDir) {
   fs.writeFileSync(
     path.join(basedir, "files.json"),
-    JSON.stringify(fileList, null, 2),
+    JSON.stringify(fileList, null, 2)
   );
   cleanupDirsForRemovedTests(fileList);
 }
@@ -57,7 +57,7 @@ function init() {
   const testDir = process.env.TEST_DIR;
   const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
   const fileList = require(path.join(alterTestDir, "fileinfo.json")).map(
-    ({ path }) => path,
+    ({ path }) => path
   );
   return { basedir, testDir, alterTestDir, fileList };
 }
