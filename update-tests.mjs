@@ -4,7 +4,6 @@ import { Linter } from "eslint";
 import fs from "fs";
 import glob from "glob";
 import meow from "meow";
-import mkdirp from "mkdirp";
 import { createRequire } from "module";
 import path from "path";
 import { rimraf } from "rimraf";
@@ -121,7 +120,7 @@ function init(esVersion) {
   }
   const testDir = process.env.TEST_DIR;
   const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
-  mkdirp.sync(alterTestDir);
+  fs.mkdirSync(alterTestDir, { recursive: true });
   const data = require(`./compat-table/data-${esVersion}`);
   return { testDir, alterTestDir, data };
 }
@@ -191,7 +190,7 @@ function generateTestJsSrc(fn, name, origPath) {
         console.error("changed test:", name);
       }
     }
-    mkdirp.sync(path.dirname(origPath));
+    fs.mkdirSync(path.dirname(origPath), { recursive: true });
     fs.writeFileSync(origPath, testCode.toString());
   } else if (Array.isArray(fn) && fn.length > 0) {
     // NOTE: not used now

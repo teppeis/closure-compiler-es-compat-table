@@ -33,7 +33,6 @@
     "google-closure-compiler": "^20230502.0.0",
     "humanize-string": "^3.0.0",
     "meow": "^10.1.5",
-    "mkdirp": "^1.0.4",
     "object-assign": "^4.1.1",
     "rimraf": "^5.0.1",
     "semver": "^7.5.4"

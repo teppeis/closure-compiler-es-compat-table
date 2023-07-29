@@ -4,7 +4,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const mkdirp = require("mkdirp");
 const glob = require("glob");
 const rimraf = require("rimraf");
 
@@ -16,7 +15,7 @@ fileList
     const src = getTestSrc(dir);
     const writeDir = path.join(basedir, dir);
     console.log(writeDir);
-    mkdirp.sync(writeDir);
+    fs.mkdirSync(writeDir, { recursive: true });
     fs.writeFileSync(path.join(writeDir, "in.js"), src);
   });
 
