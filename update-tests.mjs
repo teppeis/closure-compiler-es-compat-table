@@ -2,7 +2,7 @@
 
 import { Linter } from "eslint";
 import fs from "fs";
-import glob from "glob";
+import { glob } from "glob";
 import meow from "meow";
 import { createRequire } from "module";
 import path from "path";

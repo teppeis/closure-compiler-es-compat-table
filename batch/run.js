@@ -4,7 +4,7 @@ const { faastAws, faastLocal } = require("faastjs");
 const funcs = require("./functions");
 const path = require("path");
 const fs = require("fs").promises;
-const glob = require("glob");
+const { glob } = require("glob");
 const del = require("del");
 
 if (process.argv.length < 3) {
