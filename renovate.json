@@ -1,5 +1,5 @@
 {
-  "extends": ["@teppeis"],
+  "extends": ["github>teppeis/renovate-config"],
   "npm": {
     "lockFileMaintenance": {
       "enabled": false
