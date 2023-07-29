@@ -37,7 +37,7 @@ const cli = meow(
         default: false,
       },
     },
-  }
+  },
 );
 
 if (cli.input.length !== 1) {
@@ -70,7 +70,7 @@ const opts = {
   targetDir = targetDir || "";
   if (!skipCompile && !skipCheck) {
     console.log(
-      `Target: ${esVer}/${closureVer}${targetDir ? `/${targetDir}` : ""}`
+      `Target: ${esVer}/${closureVer}${targetDir ? `/${targetDir}` : ""}`,
     );
     console.log("Generate inputs");
     await execa("./generate-inputs.js", [], {
@@ -108,7 +108,7 @@ const opts = {
     [path.join(esVer, closureVer, "result.txt")],
     {
       cwd: __dirname,
-    }
+    },
   );
   fs.writeFileSync(path.join(__dirname, esVer, closureVer, "fail.md"), stdout);
 })();

@@ -22,7 +22,7 @@ const cli = meow(
   {
     importMeta: import.meta,
     flags: {},
-  }
+  },
 );
 
 if (cli.input.length !== 1) {
@@ -38,7 +38,7 @@ const alterTestDir = path.join(__dirname, "alter-tests", esVersion);
 const fileInfo = require(path.join(alterTestDir, "fileinfo.json"));
 const resultFile = fs.readFileSync(
   path.join(process.cwd(), resultFilePass),
-  "utf8"
+  "utf8",
 );
 
 const failedFileInfo = resultFile
@@ -104,7 +104,7 @@ const refs = [
   },
   {
     pattern: new RegExp(
-      "^built-in_extensions/String_static_methods/String.raw$"
+      "^built-in_extensions/String_static_methods/String.raw$",
     ),
     refUrl: "https://github.com/google/closure-compiler/issues/3136",
   },
@@ -114,7 +114,7 @@ let prevTest = null;
 failedFileInfo
   .filter((info) => !!info)
   .filter(
-    ({ path }) => !skipPathPrefixes.some((prefix) => path.startsWith(prefix))
+    ({ path }) => !skipPathPrefixes.some((prefix) => path.startsWith(prefix)),
   )
   .filter(({ path }) => !skipPaths.has(path))
   .forEach(({ path: testPath, category, test, subtest, url }) => {

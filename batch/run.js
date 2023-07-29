@@ -46,7 +46,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
         alias: {
           "google-closure-compiler-java": path.resolve(
             __dirname,
-            "google-closure-compiler-java-dummy.js"
+            "google-closure-compiler-java-dummy.js",
           ),
         },
       },
@@ -111,7 +111,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
           } else {
             console.error(e);
           }
-        }
+        },
       )
       .finally(() => {
         console.log(`[${++done}/${total}] ${input}`);
