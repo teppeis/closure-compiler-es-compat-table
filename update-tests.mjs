@@ -25,7 +25,7 @@ const cli = meow(
   {
     flags: {},
     importMeta: import.meta,
-  }
+  },
 );
 
 if (cli.input.length > 2) {
@@ -77,8 +77,8 @@ esVersions.forEach((esVersion) => {
             test.category,
             test.name,
             { testDir, alterTestDir },
-            subtest.name
-          )
+            subtest.name,
+          ),
         );
       });
     } else {
@@ -86,7 +86,7 @@ esVersions.forEach((esVersion) => {
         writeInputSrcFile(test.exec, test.category, test.name, {
           testDir,
           alterTestDir,
-        })
+        }),
       );
     }
   });
@@ -94,7 +94,7 @@ esVersions.forEach((esVersion) => {
   if (!testDir) {
     fs.writeFileSync(
       path.join(alterTestDir, "fileinfo.json"),
-      JSON.stringify(fileList, null, 2)
+      JSON.stringify(fileList, null, 2),
     );
     cleanupDirsForRemovedTests(fileList, alterTestDir);
   }
@@ -102,7 +102,7 @@ esVersions.forEach((esVersion) => {
 
 function cleanupDirsForRemovedTests(fileList, alterTestDir) {
   const pathSet = new Set(
-    fileList.map((file) => path.join(alterTestDir, file.path))
+    fileList.map((file) => path.join(alterTestDir, file.path)),
   );
   const files = glob.sync(path.join(alterTestDir, "**/orig.js"), { dot: true });
   const removedDirs = files
