@@ -20,10 +20,10 @@ $jscomp.makeIterator = function(a) {
   throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 module.exports = function() {
-  for (var a = [], b = $jscomp.makeIterator(["a", "b"]), d = b.next(), c = {}; !d.done; c = {$jscomp$loop$prop$i$774377480$1:c.$jscomp$loop$prop$i$774377480$1}, d = b.next()) {
-    c.$jscomp$loop$prop$i$774377480$1 = d.value, a.push(function(e) {
+  for (var a = [], b = $jscomp.makeIterator(["a", "b"]), d = b.next(), c = {}; !d.done; c = {i$jscomp$3:c.i$jscomp$3}, d = b.next()) {
+    c.i$jscomp$3 = d.value, a.push(function(e) {
       return function() {
-        return e.$jscomp$loop$prop$i$774377480$1;
+        return e.i$jscomp$3;
       };
     }(c));
   }
