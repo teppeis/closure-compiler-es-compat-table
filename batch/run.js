@@ -68,7 +68,7 @@ const dotDirs = glob.sync(`${targetDir}/**/.*/`, { dot: true });
         ...commonOpts,
         region: "ap-northeast-1",
         awsLambdaOptions: {
-          Runtime: "nodejs10.x",
+          Runtime: "nodejs18.x",
         },
       })
     : await faastLocal(funcs, commonOpts);

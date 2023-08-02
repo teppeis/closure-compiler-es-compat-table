@@ -12,8 +12,6 @@ async function compile(options) {
   // use native binary
   compiler.JAR_PATH = null;
   compiler.javaPath = getNativeImagePath();
-  // To fix bug since google-closure-compiler@20200820
-  await fs.chmod(compiler.javaPath, 0o755);
   return new Promise((resolve, reject) => {
     compiler.run((exitCode, stdout, stderr) => {
       if (exitCode === 0) {
