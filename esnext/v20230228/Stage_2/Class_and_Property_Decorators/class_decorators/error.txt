@@ -1,0 +1,19 @@
+// Stage 2 / Class and Property Decorators / class decorators
+module.exports = () => {
+class A {
+@nonconf
+get B() {}
+}
+function nonconf(target, name, descriptor) {
+descriptor.configurable = false;
+return descriptor;
+}
+return Object.getOwnPropertyDescriptor(A.prototype, "B").configurable === false;
+
+};
+----------------------------------------------------------
+esnext/v20230228/Stage_2/Class_and_Property_Decorators/class_decorators/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. Character '@' (U+0040) is not a valid identifier start char
+  4| @nonconf
+     ^
+
+1 error(s), 0 warning(s)

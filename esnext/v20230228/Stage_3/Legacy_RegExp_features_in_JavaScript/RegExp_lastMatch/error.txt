@@ -1,0 +1,14 @@
+// Stage 3 / Legacy RegExp features in JavaScript / RegExp "lastMatch"
+module.exports = () => {
+function () {
+var re = /\w/;
+re.exec('x');
+return RegExp.lastMatch === 'x';
+}
+};
+----------------------------------------------------------
+esnext/v20230228/Stage_3/Legacy_RegExp_features_in_JavaScript/RegExp_lastMatch/in.js:3:9: ERROR - [JSC_PARSE_ERROR] Parse error. 'identifier' expected
+  3| function () {
+              ^
+
+1 error(s), 0 warning(s)

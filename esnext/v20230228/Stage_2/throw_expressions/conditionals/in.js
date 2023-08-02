@@ -1,0 +1,10 @@
+// Stage 2 / throw expressions / conditionals
+module.exports = () => {
+true ? 42 : throw 21;
+try {
+false ? 42 : throw 21;
+} catch (e) {
+return e === 21;
+}
+
+};

@@ -1,0 +1,16 @@
+// misc / Proxy, internal 'get' calls / ClassDefinitionEvaluation
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  // ClassDefinitionEvaluation -> Get -> [[Get]]
+  var get = [];
+  var p = new Proxy(Function(), { get: function(o, k) { get.push(k); return o[k]; }});
+  class C extends p {}
+  return get + '' === "prototype";
+
+};
+----------------------------------------------------------
+es6/v20230103/misc/Proxy,_internal_get_calls/ClassDefinitionEvaluation/in.js:5:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  5|   var get = [];
+       ^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)
