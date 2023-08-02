@@ -31,11 +31,11 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20221004/built-ins/Proxy/get_handler_invariants/in.js:16:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20221102/built-ins/Proxy/get_handler_invariants/in.js:16:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
   16|     proxy.foo;
                 ^^^
 
-es6/v20221004/built-ins/Proxy/get_handler_invariants/in.js:26:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
+es6/v20221102/built-ins/Proxy/get_handler_invariants/in.js:26:10: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'getprop' operator is not being used.
   26|     proxy.bar;
                 ^^^
 
