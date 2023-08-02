@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20221102/built-ins/WeakMap/constructor_requires_new/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakMap' is not being used.
+es6/v20230103/built-ins/WeakMap/constructor_requires_new/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'WeakMap' is not being used.
   5|     WeakMap();
          ^^^^^^^^^
 

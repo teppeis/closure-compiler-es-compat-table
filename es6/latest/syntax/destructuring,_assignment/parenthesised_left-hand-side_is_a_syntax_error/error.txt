@@ -9,7 +9,7 @@ module.exports = () => {
 // EXPECT: 5: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
 
 ----------------------------------------------------------
-es6/v20221102/syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error/in.js:5:10: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
+es6/v20230103/syntax/destructuring,_assignment/parenthesised_left-hand-side_is_a_syntax_error/in.js:5:10: ERROR - [JSC_PARSE_ERROR] Parse error. invalid assignment target
   5|   ({a,b}) = {a:3,b:4};
                ^
 

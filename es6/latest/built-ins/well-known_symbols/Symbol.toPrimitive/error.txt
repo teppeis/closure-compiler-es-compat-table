@@ -12,15 +12,15 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20221102/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'ge' operator is not being used.
+es6/v20230103/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:8:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'ge' operator is not being used.
   8|   a >= 0;
        ^^^^^^
 
-es6/v20221102/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
+es6/v20230103/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:9:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'in' operator is not being used.
    9|   b in {};
         ^^^^^^^
 
-es6/v20221102/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
+es6/v20230103/built-ins/well-known_symbols/Symbol.toPrimitive/in.js:10:2: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the 'eq' operator is not being used.
   10|   c == 0; // eslint-disable-line eqeqeq
         ^^^^^^
 
