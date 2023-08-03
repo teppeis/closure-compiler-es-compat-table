@@ -14,7 +14,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20230228/2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets/in.js:9:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
+es2016plus/v20230411/2018_misc/Proxy_ownKeys_handler,_duplicate_keys_for_non-extensible_targets/in.js:9:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.keys' is not being used.
    9|     Object.keys(p);
           ^^^^^^^^^^^^^^
 
