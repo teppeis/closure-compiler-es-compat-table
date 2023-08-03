@@ -10,7 +10,7 @@ return new C().x() === 42;
 
 };
 ----------------------------------------------------------
-es2016plus/v20230411/2022_features/static_class_fields/private_static_class_fields/in.js:4:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+es2016plus/v20230502/2022_features/static_class_fields/private_static_class_fields/in.js:4:7: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
   4| static #x = 42;
             ^
 

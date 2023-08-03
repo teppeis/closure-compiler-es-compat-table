@@ -10,7 +10,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es2016plus/v20230411/2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.hasOwn' is not being used.
+es2016plus/v20230502/2022_features/Object.hasOwn/ToObject_called_before_ToPropertyKey/in.js:5:4: WARNING - [JSC_USELESS_CODE] Suspicious code. The result of the extern function call 'Object.hasOwn' is not being used.
   5|     Object.hasOwn(null, { toString: function () { ok = false } });
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
