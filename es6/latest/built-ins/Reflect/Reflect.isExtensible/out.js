@@ -30,13 +30,15 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, c) {
-  var b = $jscomp.propertyToPolyfillSymbol[c];
-  if (null == b) {
-    return a[c];
+var $jscomp$lookupPolyfilledValue = function(a, c, b) {
+  if (!b || null != a) {
+    b = $jscomp.propertyToPolyfillSymbol[c];
+    if (null == b) {
+      return a[c];
+    }
+    b = a[b];
+    return void 0 !== b ? b : a[c];
   }
-  b = a[b];
-  return void 0 !== b ? b : a[c];
 };
 $jscomp.polyfill = function(a, c, b, d) {
   c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, d) : $jscomp.polyfillUnisolated(a, c, b, d));

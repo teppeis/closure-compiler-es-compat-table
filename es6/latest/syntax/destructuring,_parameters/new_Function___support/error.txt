@@ -8,7 +8,7 @@ module.exports = () => {
 
 };
 ----------------------------------------------------------
-es6/v20230206/syntax/destructuring,_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+es6/v20230228/syntax/destructuring,_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
   4|   return new Function("{a, x:b, y:e}","[c, d]",
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   5|     "return a === 1 && b === 2 && c === 3 && "

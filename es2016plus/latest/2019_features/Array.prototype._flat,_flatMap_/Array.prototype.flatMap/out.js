@@ -30,13 +30,15 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, c) {
-  var b = $jscomp.propertyToPolyfillSymbol[c];
-  if (null == b) {
-    return a[c];
+var $jscomp$lookupPolyfilledValue = function(a, c, b) {
+  if (!b || null != a) {
+    b = $jscomp.propertyToPolyfillSymbol[c];
+    if (null == b) {
+      return a[c];
+    }
+    b = a[b];
+    return void 0 !== b ? b : a[c];
   }
-  b = a[b];
-  return void 0 !== b ? b : a[c];
 };
 $jscomp.polyfill = function(a, c, b, d) {
   c && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, c, b, d) : $jscomp.polyfillUnisolated(a, c, b, d));
@@ -75,10 +77,11 @@ $jscomp.polyfillIsolated = function(a, c, b, d) {
 };
 $jscomp.polyfill("Array.prototype.flatMap", function(a) {
   return a ? a : function(c, b) {
-    for (var d = [], e = 0; e < this.length; e++) {
-      var f = c.call(b, this[e], e, this);
-      Array.isArray(f) ? d.push.apply(d, f) : d.push(f);
-    }
+    var d = [];
+    Array.prototype.forEach.call(this, function(e, f) {
+      e = c.call(b, e, f, this);
+      Array.isArray(e) ? d.push.apply(d, e) : d.push(e);
+    });
     return d;
   };
 }, "es9", "es5");

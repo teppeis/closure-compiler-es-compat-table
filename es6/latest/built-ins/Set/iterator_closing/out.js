@@ -39,13 +39,15 @@ $jscomp.TRUST_ES6_POLYFILLS = !$jscomp.ISOLATE_POLYFILLS || $jscomp.IS_SYMBOL_NA
 $jscomp.polyfills = {};
 $jscomp.propertyToPolyfillSymbol = {};
 $jscomp.POLYFILL_PREFIX = "$jscp$";
-var $jscomp$lookupPolyfilledValue = function(a, g) {
-  var e = $jscomp.propertyToPolyfillSymbol[g];
-  if (null == e) {
-    return a[g];
+var $jscomp$lookupPolyfilledValue = function(a, g, e) {
+  if (!e || null != a) {
+    e = $jscomp.propertyToPolyfillSymbol[g];
+    if (null == e) {
+      return a[g];
+    }
+    e = a[e];
+    return void 0 !== e ? e : a[g];
   }
-  e = a[e];
-  return void 0 !== e ? e : a[g];
 };
 $jscomp.polyfill = function(a, g, e, b) {
   g && ($jscomp.ISOLATE_POLYFILLS ? $jscomp.polyfillIsolated(a, g, e, b) : $jscomp.polyfillUnisolated(a, g, e, b));
@@ -137,7 +139,13 @@ $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS = !1;
 $jscomp.ES6_CONFORMANCE = $jscomp.USE_PROXY_FOR_ES6_CONFORMANCE_CHECKS && $jscomp.checkEs6ConformanceViaProxy();
 $jscomp.makeIterator = function(a) {
   var g = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
-  return g ? g.call(a) : $jscomp.arrayIterator(a);
+  if (g) {
+    return g.call(a);
+  }
+  if ("number" == typeof a.length) {
+    return $jscomp.arrayIterator(a);
+  }
+  throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 $jscomp.owns = function(a, g) {
   return Object.prototype.hasOwnProperty.call(a, g);
