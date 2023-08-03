@@ -1,0 +1,15 @@
+// bindings / let / temporal dead zone
+module.exports = () => {
+  var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+  function fn() { passed &= qux === 456; }
+  let qux = 456;
+  fn();
+  return passed;
+
+};
+----------------------------------------------------------
+es6/v20230206/bindings/let/temporal_dead_zone/in.js:3:35: WARNING - [JSC_USELESS_CODE] Suspicious code. This code lacks side-effects. Is there a bug?
+  3|   var passed = (function(){ try {  qux; } catch(e) { return true; }}());
+                                        ^^^
+
+0 error(s), 1 warning(s)

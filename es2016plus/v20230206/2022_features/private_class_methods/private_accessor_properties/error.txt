@@ -1,0 +1,20 @@
+// 2022 features / private class methods / private accessor properties
+module.exports = () => {
+var y = false;
+class C {
+get #x() { return 42; }
+set #x(x) { y = x; }
+x() {
+this.#x = true;
+return this.#x;
+}
+}
+return new C().x() === 42 && y;
+
+};
+----------------------------------------------------------
+es2016plus/v20230206/2022_features/private_class_methods/private_accessor_properties/in.js:5:4: ERROR - [JSC_PARSE_ERROR] Parse error. Semi-colon expected
+  5| get #x() { return 42; }
+         ^
+
+1 error(s), 0 warning(s)
