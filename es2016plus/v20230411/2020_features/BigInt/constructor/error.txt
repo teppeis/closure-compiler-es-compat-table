@@ -1,0 +1,11 @@
+// 2020 features / BigInt / constructor
+module.exports = () => {
+return BigInt("3") === 3n;
+
+};
+----------------------------------------------------------
+es2016plus/v20230411/2020_features/BigInt/constructor/in.js:3:23: ERROR - [JSC_BIGINT_TRANSPILATION] transpilation of BigInt is not supported
+  3| return BigInt("3") === 3n;
+                            ^^
+
+1 error(s), 0 warning(s)

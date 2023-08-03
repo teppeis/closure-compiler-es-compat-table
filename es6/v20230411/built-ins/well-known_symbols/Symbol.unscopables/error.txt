@@ -1,0 +1,19 @@
+// built-ins / well-known symbols / Symbol.unscopables
+module.exports = () => {
+  var a = { foo: 1, bar: 2 };
+  a[Symbol.unscopables] = { bar: true };
+  with (a) {
+    return foo === 1 && typeof bar === "undefined";
+  }
+
+};
+----------------------------------------------------------
+es6/v20230411/built-ins/well-known_symbols/Symbol.unscopables/in.js:5:2: ERROR - [JSC_USE_OF_WITH] The with statement cannot be used in strict mode.
+  5|   with (a) {
+       ^^^^^^^^^^
+  6|     return foo === 1 && typeof bar === "undefined";
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7|   }
+     ^^^
+
+1 error(s), 0 warning(s)

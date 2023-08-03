@@ -1,0 +1,17 @@
+// 2022 features / instance class fields / optional private instance class fields access
+module.exports = () => {
+class C {
+#x = 42;
+x(o = this){
+return o?.#x;
+}
+}
+return new C().x() === 42 && new C().x(null) === void 0;
+
+};
+----------------------------------------------------------
+es2016plus/v20230411/2022_features/instance_class_fields/optional_private_instance_class_fields_access/in.js:4:0: ERROR - [JSC_PARSE_ERROR] Parse error. '}' expected
+  4| #x = 42;
+     ^
+
+1 error(s), 0 warning(s)
