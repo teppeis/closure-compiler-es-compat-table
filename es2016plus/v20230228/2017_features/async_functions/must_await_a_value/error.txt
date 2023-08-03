@@ -1,0 +1,19 @@
+// 2017 features / async functions / must await a value
+module.exports = () => {
+  async function a() {
+    await Promise.resolve();
+  }
+  (async function a() {
+    await;
+  }());
+  return false;
+};
+
+// EXPECT: 7: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+
+----------------------------------------------------------
+es2016plus/v20230228/2017_features/async_functions/must_await_a_value/in.js:7:10: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+  7|     await;
+               ^
+
+1 error(s), 0 warning(s)

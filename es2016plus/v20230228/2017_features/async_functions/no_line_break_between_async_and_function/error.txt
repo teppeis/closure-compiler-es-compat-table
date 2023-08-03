@@ -1,0 +1,16 @@
+// 2017 features / async functions / no line break between async and function
+module.exports = () => {
+  async function a() {}
+  async
+    function b() {await 0}
+  return false;
+};
+
+// EXPECT: 5: ERROR
+
+----------------------------------------------------------
+es2016plus/v20230228/2017_features/async_functions/no_line_break_between_async_and_function/in.js:5:18: ERROR - [JSC_PARSE_ERROR] Parse error. await must be inside asynchronous function
+  5|     function b() {await 0}
+                       ^
+
+1 error(s), 0 warning(s)
