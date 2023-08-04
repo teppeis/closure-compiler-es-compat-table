@@ -2,10 +2,9 @@
 
 "use strict";
 
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 const { glob } = require("glob");
-const rimraf = require("rimraf");
 
 const { basedir, testDir, alterTestDir, fileList } = init();
 
@@ -35,7 +34,7 @@ function cleanupDirsForRemovedTests(fileList) {
     .filter((dir) => !pathSet.has(dir));
   removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
-    rimraf.sync(dir, { glob: false });
+    fs.rmSync(dir, { recursive: true, force: true });
   });
 }
 
