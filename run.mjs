@@ -92,7 +92,7 @@ const opts = {
       } else {
         console.log("Compile (Native)");
       }
-      await execa("node", ["./batch/run.js", path.join(esVer, closureVer)], {
+      await execa("node", ["./batch/run.mjs", path.join(esVer, closureVer)], {
         ...opts,
         env,
       });
