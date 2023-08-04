@@ -1,4 +1,4 @@
-import del from "del";
+import { deleteSync } from "del";
 import { faastAws, faastLocal } from "faastjs";
 import { globSync } from "glob";
 import { promises as fs } from "node:fs";
@@ -74,7 +74,7 @@ const m = process.env.AWS
       },
     })
   : await faastLocal(funcs, commonOpts);
-await del(`${targetDir}/**/(out.js|error.txt)`, { dot: true });
+deleteSync(`${targetDir}/**/(out.js|error.txt)`, { dot: true });
 // const files = [
 //   targetDir + '/2016_features/Array.prototype.includes/Array.prototype.includes/in.js',
 //   targetDir + '/2018_features/RegExp_named_capture_groups/in.js',
