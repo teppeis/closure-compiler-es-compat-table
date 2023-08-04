@@ -1,0 +1,21 @@
+// syntax / destructuring, parameters / new Function() support
+module.exports = () => {
+  throw new Error('eval() and Function() cannot be transpiled');
+  return new Function("{a, x:b, y:e}","[c, d]",
+    "return a === 1 && b === 2 && c === 3 && "
++ "d === 4 && e === void undefined;"
+  )({a:1, x:2}, [3, 4]);
+
+};
+----------------------------------------------------------
+es6/v20230802/syntax/destructuring,_parameters/new_Function___support/in.js:4:2: WARNING - [JSC_UNREACHABLE_CODE] unreachable code
+  4|   return new Function("{a, x:b, y:e}","[c, d]",
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5|     "return a === 1 && b === 2 && c === 3 && "
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6| + "d === 4 && e === void undefined;"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7|   )({a:1, x:2}, [3, 4]);
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+0 error(s), 1 warning(s)

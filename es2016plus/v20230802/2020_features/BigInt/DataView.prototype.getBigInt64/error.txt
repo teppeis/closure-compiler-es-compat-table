@@ -1,0 +1,18 @@
+// 2020 features / BigInt / DataView.prototype.getBigInt64
+module.exports = () => {
+var buffer = new ArrayBuffer(64);
+var view = new DataView(buffer);
+view.setBigInt64(0, 1n);
+return view.getBigInt64(0) === 1n;
+
+};
+----------------------------------------------------------
+es2016plus/v20230802/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:5:20: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2020 feature "bigint" to targeted output language.
+  5| view.setBigInt64(0, 1n);
+                         ^^
+
+es2016plus/v20230802/2020_features/BigInt/DataView.prototype.getBigInt64/in.js:6:31: ERROR - [JSC_UNTRANSPILABLE] Cannot convert ECMASCRIPT_2020 feature "bigint" to targeted output language.
+  6| return view.getBigInt64(0) === 1n;
+                                    ^^
+
+2 error(s), 0 warning(s)
