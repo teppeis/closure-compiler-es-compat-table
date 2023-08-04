@@ -1,7 +1,6 @@
 "use strict";
 
 const child_process = require("child_process");
-const fs = require("fs").promises;
 const { compiler: Compiler } = require("google-closure-compiler");
 const { getNativeImagePath } = require("google-closure-compiler/lib/utils");
 const { promisify } = require("util");
