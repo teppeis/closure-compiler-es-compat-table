@@ -10,7 +10,7 @@ return a + e === 42;
 
 };
 ----------------------------------------------------------
-esnext/v20230502/Stage_2/throw_expressions/logical/in.js:5:15: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
+esnext/v20230802/Stage_2/throw_expressions/logical/in.js:5:15: ERROR - [JSC_PARSE_ERROR] Parse error. primary expression expected
   5| a = 19 || throw 77;
                     ^
 

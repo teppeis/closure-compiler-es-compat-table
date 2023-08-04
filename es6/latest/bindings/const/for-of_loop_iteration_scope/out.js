@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(a) {
   var b = 0;
   return function() {
-    return b < a.length ? {done:!1, value:a[b++],} : {done:!0};
+    return b < a.length ? {done:!1, value:a[b++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(a) {
@@ -20,12 +20,12 @@ $jscomp.makeIterator = function(a) {
   throw Error(String(a) + " is not an iterable or ArrayLike");
 };
 module.exports = function() {
-  for (var a = [], b = {}, d = $jscomp.makeIterator(["a", "b"]), c = d.next(); !c.done; b = {$jscomp$loop$prop$i$2:b.$jscomp$loop$prop$i$2}, c = d.next()) {
-    b.$jscomp$loop$prop$i$2 = c.value, a.push(function(e) {
+  for (var a = [], b = $jscomp.makeIterator(["a", "b"]), d = b.next(), c = {}; !d.done; c = {i$jscomp$3:c.i$jscomp$3}, d = b.next()) {
+    c.i$jscomp$3 = d.value, a.push(function(e) {
       return function() {
-        return e.$jscomp$loop$prop$i$2;
+        return e.i$jscomp$3;
       };
-    }(b));
+    }(c));
   }
   return "a" === a[0]() && "b" === a[1]();
 };

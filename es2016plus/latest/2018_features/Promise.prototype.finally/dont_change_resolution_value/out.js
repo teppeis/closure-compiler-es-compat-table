@@ -3,7 +3,7 @@ $jscomp.scope = {};
 $jscomp.arrayIteratorImpl = function(b) {
   var e = 0;
   return function() {
-    return e < b.length ? {done:!1, value:b[e++],} : {done:!0};
+    return e < b.length ? {done:!1, value:b[e++]} : {done:!0};
   };
 };
 $jscomp.arrayIterator = function(b) {
@@ -27,7 +27,7 @@ $jscomp.ISOLATE_POLYFILLS = !1;
 $jscomp.FORCE_POLYFILL_PROMISE = !1;
 $jscomp.FORCE_POLYFILL_PROMISE_WHEN_NO_UNHANDLED_REJECTION = !1;
 $jscomp.getGlobal = function(b) {
-  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global,];
+  b = ["object" == typeof globalThis && globalThis, b, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
   for (var e = 0; e < b.length; ++e) {
     var c = b[e];
     if (c && c.Math == Math) {
