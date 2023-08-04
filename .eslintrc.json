@@ -2,7 +2,6 @@
   "root": true,
   "extends": ["teppeis/node-v18", "teppeis/+prettier"],
   "rules": {
-    "import/no-unresolved": [2, { "ignore": ["^meow$"] }],
     "n/shebang": "off"
   },
   "overrides": [

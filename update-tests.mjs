@@ -1,34 +1,38 @@
 #!/usr/bin/env node
 
 import { Linter } from "eslint";
-import fs from "fs";
 import { glob } from "glob";
-import meow from "meow";
-import { createRequire } from "module";
-import path from "path";
-import { rimraf } from "rimraf";
-import { fileURLToPath } from "url";
+import fs from "node:fs";
+import { createRequire } from "node:module";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseArgs } from "node:util";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const require = createRequire(import.meta.url);
 
-const cli = meow(
-  `
-	Usage
-	  $ update-tests.js [ES_VERSION]
+function showHelpAndExit() {
+  console.error(
+    `
+Usage
+  $ update-tests.js [ES_VERSION]
 
-	Examples
-    $ ./update-tests.js
-    $ ./update-tests.js es6
-`,
-  {
-    flags: {},
-    importMeta: import.meta,
+Examples
+  $ ./update-tests.js
+  $ ./update-tests.js es6`,
+  );
+  process.exit(1);
+}
+
+const { positionals, values } = parseArgs({
+  options: {
+    help: { type: "boolean", short: "h" },
   },
-);
+  allowPositionals: true,
+});
 
-if (cli.input.length > 2) {
-  cli.showHelp();
+if (positionals.length > 2 || values.help) {
+  showHelpAndExit();
 }
 
 const linter = new Linter();
@@ -62,8 +66,9 @@ ${throws}${initIterator}${this.expr}
   }
 }
 
-const esVersions =
-  cli.input.length > 0 ? [cli.input[0]] : ["es6", "es2016plus", "esnext"];
+const esVersions = positionals[0]
+  ? [positionals[0]]
+  : ["es6", "es2016plus", "esnext"];
 esVersions.forEach((esVersion) => {
   const { testDir, alterTestDir, data } = init(esVersion);
   const fileList = [];
@@ -109,7 +114,7 @@ function cleanupDirsForRemovedTests(fileList, alterTestDir) {
     .filter((dir) => !pathSet.has(dir));
   removedDirs.forEach((dir) => {
     console.log(`rm: ${path.relative(__dirname, dir)}`);
-    rimraf.sync(dir, { glob: false });
+    fs.rmSync(dir, { recursive: true, force: true });
   });
 }
 

@@ -1,34 +1,40 @@
 #!/usr/bin/env node
 
-import fs from "fs";
 import humanize from "humanize-string";
-import meow from "meow";
-import { createRequire } from "module";
-import path from "path";
-import url from "url";
+import fs from "node:fs";
+import { createRequire } from "node:module";
+import path from "node:path";
+import url from "node:url";
+import { parseArgs } from "node:util";
 
 const require = createRequire(import.meta.url);
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const cli = meow(
-  `
-	Usage
-	  $ result2md.mjs RESULT
-
-	Examples
-    $ ./result2md.mjs es6/v20180402/result.txt
-`,
-  {
-    importMeta: import.meta,
-    flags: {},
+const { positionals, values } = parseArgs({
+  options: {
+    help: { type: "boolean", short: "h" },
   },
-);
+  allowPositionals: true,
+});
 
-if (cli.input.length !== 1) {
-  cli.showHelp();
+function showHelpAndExit() {
+  console.error(
+    `
+Usage
+  $ result2md.mjs RESULT
+
+Examples
+  $ ./result2md.mjs es6/v20180402/result.txt`,
+  );
+  process.exit(1);
 }
-const resultFilePass = cli.input[0];
+
+if (positionals.length !== 1 || values.help) {
+  showHelpAndExit();
+}
+
+const resultFilePass = positionals[0];
 const match = /^(es[^/]+)\/([^/]+)/.exec(resultFilePass);
 const [, esVersion, clVersion] = match;
 if (!esVersion) {
