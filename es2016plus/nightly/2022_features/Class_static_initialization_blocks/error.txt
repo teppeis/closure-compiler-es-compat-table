@@ -27,7 +27,7 @@ module.exports = () => {
 	at com.google.javascript.jscomp.PhaseOptimizer$NamedPass.process(PhaseOptimizer.java:240)
 	at com.google.javascript.jscomp.PhaseOptimizer.process(PhaseOptimizer.java:179)
 	at com.google.javascript.jscomp.Compiler.performTranspilationAndOptimizations(Compiler.java:2969)
-	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$7(Compiler.java:1031)
+	at com.google.javascript.jscomp.Compiler.lambda$stage2Passes$7(Compiler.java:1028)
 	at com.google.javascript.jscomp.CompilerExecutor.lambda$runInCompilerThread$0(CompilerExecutor.java:100)
 	at java.base@17.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
