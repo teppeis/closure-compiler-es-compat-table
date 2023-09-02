@@ -36,7 +36,7 @@ module.exports = () => {
 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)
 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)
 Caused by: java.lang.IllegalStateException: Unexpected class member: (BLOCK 5:7  [length: 14] [source_file: es2016plus/nightly/2022_features/Class_static_initialization_blocks/in.js])
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:590)
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:601)
 	at com.google.javascript.jscomp.Es6RewriteClass.visitClass(Es6RewriteClass.java:155)
 	at com.google.javascript.jscomp.Es6RewriteClass.visit(Es6RewriteClass.java:98)
 	at com.google.javascript.jscomp.NodeTraversal.handleClass(NodeTraversal.java:1048)
