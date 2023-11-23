@@ -503,9 +503,52 @@
     "test": "RegExp Lookbehind Assertions"
   },
   {
-    "path": "2018_features/RegExp_Unicode_Property_Escapes",
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/basic",
     "category": "2018 features",
-    "test": "RegExp Unicode Property Escapes"
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "basic"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_11",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 11"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_12",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 12"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_12.1",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 12.1"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_13",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 13"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_14",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 14"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_15",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 15"
+  },
+  {
+    "path": "2018_features/RegExp_Unicode_Property_Escapes/Unicode_15.1",
+    "category": "2018 features",
+    "test": "RegExp Unicode Property Escapes",
+    "subtest": "Unicode 15.1"
   },
   {
     "path": "2018_features/Asynchronous_Iterators/async_generators",
@@ -1121,27 +1164,33 @@
     "test": "Hashbang Grammar"
   },
   {
-    "path": "finished__stage_4_/RegExp__v__flag/set_notations",
-    "category": "finished (stage 4)",
+    "path": "2024_features/RegExp__v__flag/set_notations",
+    "category": "2024 features",
     "test": "RegExp `v` flag",
     "subtest": "set notations"
   },
   {
-    "path": "finished__stage_4_/RegExp__v__flag/properties_of_Strings",
-    "category": "finished (stage 4)",
+    "path": "2024_features/RegExp__v__flag/properties_of_Strings",
+    "category": "2024 features",
     "test": "RegExp `v` flag",
     "subtest": "properties of Strings"
   },
   {
-    "path": "finished__stage_4_/RegExp__v__flag/constructor_supports_it",
-    "category": "finished (stage 4)",
+    "path": "2024_features/RegExp__v__flag/constructor_supports_it",
+    "category": "2024 features",
     "test": "RegExp `v` flag",
     "subtest": "constructor supports it"
   },
   {
-    "path": "finished__stage_4_/RegExp__v__flag/shows_up_in_flags",
-    "category": "finished (stage 4)",
+    "path": "2024_features/RegExp__v__flag/shows_up_in_flags",
+    "category": "2024 features",
     "test": "RegExp `v` flag",
     "subtest": "shows up in flags"
+  },
+  {
+    "path": "2024_features/RegExp__v__flag/Unicode_15.1",
+    "category": "2024 features",
+    "test": "RegExp `v` flag",
+    "subtest": "Unicode 15.1"
   }
 ]

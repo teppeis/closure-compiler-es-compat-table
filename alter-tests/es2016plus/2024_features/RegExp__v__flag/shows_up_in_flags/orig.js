@@ -1,4 +1,4 @@
-// finished (stage 4) / RegExp `v` flag / shows up in flags
+// 2024 features / RegExp `v` flag / shows up in flags
 module.exports = () => {
   var flags = [];
   var p = new Proxy({}, { get: function(o, k) { flags.push(k); return o[k]; }});
