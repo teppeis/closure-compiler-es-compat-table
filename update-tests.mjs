@@ -154,16 +154,16 @@ function escapePath(str) {
   // valid: #$%=~-,_.+
   // invalid: [](){}`^~|@;:`*?"<>
   return str
-    .replace("\u{2E2F}", "U+2E2F")
-    .replace("\u{102C0}", "U+102C0")
-    .replace(/<\/?code>/g, "")
-    .replace(/=>/g, "arrow")
-    .replace(/['"]/g, "")
-    .replace(/ \(([^)]+)\)]/g, " $1")
-    .replace("||=", "Or Or Equals")
-    .replace("&&=", "And And Equals")
-    .replace("??=", "QQ Equals")
-    .replace(/[ [\](){}<>`^~|@;:`*?/]/g, "_");
+    .replaceAll("\u{2E2F}", "U+2E2F")
+    .replaceAll("\u{102C0}", "U+102C0")
+    .replaceAll(/<\/?code>/g, "")
+    .replaceAll("=>", "arrow")
+    .replaceAll(/['"]/g, "")
+    .replaceAll(/ \(([^)]+)\)]/g, " $1")
+    .replaceAll("||=", "Or Or Equals")
+    .replaceAll("&&=", "And And Equals")
+    .replaceAll("??=", "QQ Equals")
+    .replaceAll(/[ [\](){}<>`^~|@;:`*?/]/g, "_");
 }
 
 function format(src) {
@@ -215,7 +215,7 @@ function createTestCode(fn, name) {
     expr = match[1];
   }
   // remove indent for template literal test code
-  expr = expr.replace(/^\s*/gm, "");
+  expr = expr.replaceAll(/^\s*/gm, "");
   return new TestCode(expr, name);
 }
 

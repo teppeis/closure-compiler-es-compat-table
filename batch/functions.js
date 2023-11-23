@@ -1,9 +1,9 @@
 "use strict";
 
-const child_process = require("child_process");
+const child_process = require("node:child_process");
 const { compiler: Compiler } = require("google-closure-compiler");
 const { getNativeImagePath } = require("google-closure-compiler/lib/utils");
-const { promisify } = require("util");
+const { promisify } = require("node:util");
 
 async function compile(options) {
   options = { ...options, json_streams: "OUT" };
