@@ -33,7 +33,7 @@
     "google-closure-compiler": "^20230802.0.0",
     "humanize-string": "^3.0.0",
     "object-assign": "^4.1.1",
-    "semver": "^7.6.2"
+    "semver": "^7.6.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
